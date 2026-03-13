@@ -1,0 +1,89 @@
+{
+  "doc_id": "nuscale_fsar_sim",
+  "doc_name": "NuScale FSAR Simulation (Chapter 15)",
+  "tree": [
+    {
+      "title": "Chapter 15: Transient and Accident Analysis",
+      "node_id": "ch15",
+      "page_index": 1,
+      "summary": "원자로 과도 상태 및 사고 시나리오에 대한 포괄적 안전 해석. 다양한 사고 유형에서 핵연료 피복재 온도, DNBR 등의 안전 지표를 평가한다.",
+      "text": "Chapter 15 provides a comprehensive safety analysis of all anticipated operational occurrences and postulated accident conditions for the NuScale Power Module. Safety analysis confirms that all fuel design limits, including peak clad temperature (PCT) and departure from nucleate boiling ratio (DNBR), remain within acceptable limits during design basis events.",
+      "nodes": [
+        {
+          "title": "15.1 Introduction to Accident Analysis Methodology",
+          "node_id": "ch15_s1",
+          "page_index": 3,
+          "summary": "사고 해석 방법론 소개. 결정론적 안전 해석 방법, 코드 시스템(TRACE, RELAP5-3D), 초기 조건 및 경계 조건 설정 기준을 설명한다.",
+          "text": "The accident analysis methodology employs conservative deterministic methods consistent with NRC regulations and regulatory guides. The primary thermal-hydraulic analysis codes are TRACE and RELAP5-3D, validated against experimental data. Initial conditions are set at the most adverse values within the design basis to maximize calculated consequences. Key parameters include: core power (102% nominal), coolant inlet temperature (+2°F above nominal), reactor coolant system pressure (-30 psig below nominal).",
+          "nodes": []
+        },
+        {
+          "title": "15.2 Decrease in Heat Removal by Secondary System",
+          "node_id": "ch15_s2",
+          "page_index": 15,
+          "summary": "이차측 열제거 감소 사고 해석. 주증기관 격리 밸브(MSIV) 폐쇄 시나리오를 포함한다.",
+          "text": "A decrease in secondary system heat removal results in a decrease in steam generator heat transfer, causing coolant heatup and potential pressurization of the RCS. The most limiting event in this category is the main steam isolation valve (MSIV) closure. Analysis shows that reactor trip occurs via High RCS Pressure signal. Peak RCS pressure remains below 110% design pressure limit of 2200 psia.",
+          "nodes": []
+        },
+        {
+          "title": "15.3 Decrease in Reactor Coolant System Flow Rate (LOCA-adjacent)",
+          "node_id": "ch15_s3",
+          "page_index": 28,
+          "summary": "냉각재 유량 감소 사고. 냉각재 펌프 정지(RCP Trip) 사고를 포함하며, 핵연료 피복재 온도 한계치 평가를 수행한다.",
+          "text": "Decrease in reactor coolant flow rate events include complete loss of forced reactor coolant flow (RCP trip). For NuScale, the RCP trip event results in coastdown of coolant flow. The reactor trips on Low Coolant Flow signal. Safety analysis demonstrates: (1) Peak Clad Temperature (PCT) = 1,082°F, which is below the 10 CFR 50.46 limit of 2,200°F. (2) Maximum local oxidation = 0.3%, below 17% limit. (3) Core-wide oxidation = 0.02%, below 1% limit. The minimum DNBR remains above the design limit throughout the transient.",
+          "nodes": []
+        },
+        {
+          "title": "15.4 Reactivity and Power Distribution Anomalies",
+          "node_id": "ch15_s4",
+          "page_index": 45,
+          "summary": "반응도 및 출력 분포 이상 사고. 제어봉 이탈 사고(RCCA Ejection) 포함.",
+          "text": "Reactivity anomalies include control rod ejection accidents. The RCCA ejection results in rapid positive reactivity insertion. Safety analysis shows peak fuel enthalpy remains below 280 cal/g, consistent with NRC RG 1.77 acceptance criterion. Peak linear heat generation rate (LHGR) is bounded by the fuel design limit.",
+          "nodes": []
+        },
+        {
+          "title": "15.5 Loss of Coolant Accidents (LOCA)",
+          "node_id": "ch15_s5",
+          "page_index": 62,
+          "summary": "냉각재 상실 사고(LOCA). 소형파단(SBLOCA), 대형파단(LBLOCA)을 포함한다. 10 CFR 50.46 수락 기준을 만족하는지 평가한다.",
+          "text": "Loss of Coolant Accidents analyzed include small break (SBLOCA) and large break (LBLOCA) scenarios. The Emergency Core Cooling System (ECCS) response is modeled including passive safety injection. For the design basis LOCA: Peak Clad Temperature (PCT) = 1,648°F (well below 2,200°F 10 CFR 50.46 limit). Maximum local cladding oxidation = 4.8% (below 17% limit). The core remains coolable as demonstrated by stable long-term cooling calculations.",
+          "nodes": []
+        }
+      ]
+    },
+    {
+      "title": "Chapter 16: Technical Specifications",
+      "node_id": "ch16",
+      "page_index": 100,
+      "summary": "기술 지침서. 원자로 운전 한계치, 안전 관련 계통의 감시 주기, 운전 요건 등을 규정한다.",
+      "text": "Chapter 16 establishes Technical Specifications (Tech Specs) as the legally binding operational requirements for the NuScale Power Plant. These specifications define limiting conditions for operation (LCO), surveillance requirements (SR), and actions required when LCOs are not met.",
+      "nodes": [
+        {
+          "title": "16.1 Safety Limits and Limiting Safety System Settings",
+          "node_id": "ch16_s1",
+          "page_index": 102,
+          "summary": "안전 한계치 및 안전 계통 설정값. 핵연료 피복재 최고 온도(PCT) 2,200°F, DNBR 최소값 등을 규정한다.",
+          "text": "Safety Limits (SL) are established to protect the integrity of barriers against fission product release. The fuel cladding integrity safety limit is: Peak Clad Temperature ≤ 2,200°F (1,204°C) as required by 10 CFR 50.46. This limit applies during all design basis events including LOCA. Departure from Nucleate Boiling Ratio (DNBR) Safety Limit: DNBR ≥ 1.20. Reactor Coolant System Pressure Safety Limit: ≤ 2,420 psia.",
+          "text_extended": "Limiting Safety System Settings (LSSS) define the automatic protective action setpoints: High RCS Pressure Trip: 1,950 psia; Low RCS Pressure Trip: 1,650 psia; Low Coolant Flow Trip: 90% of rated flow; High Neutron Flux Trip: 108% of rated power.",
+          "nodes": []
+        },
+        {
+          "title": "16.2 Limiting Conditions for Operation - Reactor Coolant System",
+          "node_id": "ch16_s2",
+          "page_index": 115,
+          "summary": "원자로 냉각재 계통 운전 제한 조건. RCP 운전 요건, 냉각재 온도/압력 한계 등을 포함한다.",
+          "text": "LCO 3.4.1 - RCS Pressure-Temperature (P-T) Limits: RCS pressure and RCS temperature shall be maintained within the P-T limits specified. LCO 3.4.2 - RCS Leakage: RCS unidentified leakage shall be ≤ 0.1 gpm. LCO 3.4.7 - Reactor Coolant Pump: All required RCPs shall be OPERABLE and in operation during Modes 1 and 2. Required Action: If one RCP is inoperable, initiate action to place the unit in Mode 3 (Hot Standby) within 4 hours.",
+          "nodes": []
+        },
+        {
+          "title": "16.3 Limiting Conditions for Operation - Instrumentation",
+          "node_id": "ch16_s3",
+          "page_index": 130,
+          "summary": "계측 계통 운전 제한 조건. 원자로 보호 계통(RPS)의 계측 채널 요건을 규정한다.",
+          "text": "LCO 3.3.1 - Reactor Protection System (RPS) Instrumentation: The RPS shall have the minimum specified number of OPERABLE channels for each function. For RCP Coolant Flow - Low: 2 out of 3 channels shall be OPERABLE. Surveillance Requirement SR 3.3.1.2: Perform CHANNEL FUNCTIONAL TEST every 18 months.",
+          "nodes": []
+        }
+      ]
+    }
+  ]
+}

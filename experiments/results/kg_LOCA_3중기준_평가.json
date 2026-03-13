@@ -1,0 +1,56 @@
+{
+  "question": "냉각재 상실 사고(LOCA) 시나리오에서 10 CFR 50.46의 세 가지 수락 기준 (핵연료 피복재 온도 2,200°F, 최대 국부 산화율 17%, 냉각가능성 유지)이 모두 만족되는지 FSAR 분석 결과를 기반으로 종합 평가하시오.",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_fsar_sim_ch15_s5": {
+      "node_id": "nuscale_fsar_sim_ch15_s5",
+      "title": "15.5 Loss of Coolant Accidents (LOCA)",
+      "summary": "15.5 섹션에서는 소규모 및 대규모 냉각재 손실 사고(LOCA)에 대한 분석을 다루며, 비상 핵심 냉각 시스템(ECCS)의 반응을 모델링합니다. 설계 기준 LOCA에서 피크 클래드 온도는 1,648°F로 2,200°F의 한도 이하이며, 최대 국소 클래드 산화율은 4.8%로 17% 한도 이하입니다. 핵심은 안정적인 장기 냉각 계산을 통해 냉각 가능성을 유지합니다.",
+      "modality": "text",
+      "source_doc": "nuscale_fsar_sim",
+      "page_range": "62",
+      "hop": 1
+    },
+    "nuscale_fsar_sim_ch16_s1": {
+      "node_id": "nuscale_fsar_sim_ch16_s1",
+      "title": "16.1 Safety Limits and Limiting Safety System Settings",
+      "summary": "안전 한계(Safety Limits, SL)는 핵분열 생성물의 방출을 방지하기 위해 장벽의 무결성을 보호하기 위해 설정된다. 연료 피복의 무결성을 위한 안전 한계는 최고 피복 온도가 2,200°F(1,204°C) 이하이어야 하며, 이는 모든 설계 기준 사건에서 적용된다. 또한, 핵반응로 냉각 시스템 압력 안전 한계는 2,420 psia 이하로 설정된다.",
+      "modality": "text",
+      "source_doc": "nuscale_fsar_sim",
+      "page_range": "102",
+      "hop": 1
+    },
+    "nuscale_fsar_sim_ch15": {
+      "node_id": "nuscale_fsar_sim_ch15",
+      "title": "Chapter 15: Transient and Accident Analysis",
+      "summary": "15장에서는 NuScale 전력 모듈의 예상 운영 상황과 가정된 사고 조건에 대한 포괄적인 안전 분석을 제공합니다. 안전 분석 결과, 설계 기준 사건 동안 모든 연료 설계 한계가 허용 범위 내에 유지됨을 확인했습니다.",
+      "modality": "text",
+      "source_doc": "nuscale_fsar_sim",
+      "page_range": "1",
+      "hop": 2
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_fsar_sim_ch15_s5",
+      "target": "nuscale_fsar_sim_ch16_s1",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "reasoning": "섹션 A에서 LOCA 시나리오에 대한 분석 결과가 10 CFR 50.46의 세 가지 수락 기준을 모두 만족한다고 명시하고 있으며, 섹션 B에서는 이러한 기준이 LOCA와 같은 설계 기준 사건에 적용된다고 설명하고 있습니다. 따라서 섹션 A의 결과는 섹션 B의 수락 기준을 지지합니다."
+    },
+    {
+      "source": "nuscale_fsar_sim_ch15",
+      "target": "nuscale_fsar_sim_ch15_s5",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "reasoning": "섹션 A에서 제공하는 안전 분석 결과는 핵연료 피복재 온도와 국부 산화율이 설계 기준 사건 동안 허용 한계 내에 있음을 확인합니다. 섹션 B에서는 LOCA 시나리오에 대한 구체적인 분석 결과를 제시하며, 10 CFR 50.46의 세 가지 수락 기준이 모두 만족됨을 보여줍니다. 따라서 두 섹션은 서로를 지지하는 관계에 있습니다."
+    },
+    {
+      "source": "nuscale_fsar_sim_ch15",
+      "target": "nuscale_fsar_sim_ch16_s1",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "reasoning": "섹션 A에서는 NuScale Power Module의 안전 분석 결과가 모든 연료 설계 한계가 허용 가능한 범위 내에 있음을 확인하고 있습니다. 섹션 B는 10 CFR 50.46에 따른 피복재 온도 및 DNBR의 안전 한계를 명시하고 있으며, 이는 섹션 A의 분석 결과와 일치하여 LOCA 시나리오에서 세 가지 수락 기준이 모두 만족된다는 것을 뒷받침합니다."
+    }
+  ]
+}
