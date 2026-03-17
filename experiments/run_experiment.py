@@ -46,7 +46,7 @@ def run_experiment(question: str, doc_ids: list[str], env: PageIndexEnvironment,
 
     agent = GWMAgent(
         environment=env,
-        model="gpt-4o-mini",
+        model="gpt-4.1",
         max_hops=4,
         top_k=2,
     )
@@ -86,7 +86,7 @@ def main():
     print("=" * 60)
 
     # ── 환경 설정 ────────────────────────────────────────────────
-    env = PageIndexEnvironment(model="gpt-4o-mini")
+    env = PageIndexEnvironment(model="gpt-4.1")
 
     # 샘플 FSAR 트리 로드 (사전 생성된 트리 JSON)
     tree_path = ROOT / "experiments/sample_fsar_tree.json"

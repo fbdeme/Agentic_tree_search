@@ -29,7 +29,7 @@ class PageIndexEnvironment:
     관련 문서 섹션(Observation)을 반환합니다.
     """
 
-    def __init__(self, model: str = "gpt-4o-mini"):
+    def __init__(self, model: str = "gpt-4.1"):
         self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         self.model = model
         self.documents: dict[str, dict] = {}  # doc_id -> tree 구조
@@ -38,14 +38,15 @@ class PageIndexEnvironment:
     # -----------------------------------------------------------
     # 문서 등록
     # -----------------------------------------------------------
-    def register_tree(self, doc_id: str, tree: list, doc_name: str = "") -> None:
+    def register_tree(self, doc_id: str, tree: list, doc_name: str = "",
+                      pdf_path: str = "") -> None:
         """
-        이미 생성된 PageIndex 트리를 환경에 등록합니다.
-        (JSON 파일로 저장된 트리를 로드할 때 사용)
+        Register a pre-generated PageIndex tree into the environment.
         """
         self.documents[doc_id] = {
             "tree": tree,
             "name": doc_name or doc_id,
+            "pdf_path": pdf_path,
         }
         # 모든 노드를 플랫하게 캐싱
         self._cache_nodes(doc_id, tree)
@@ -109,11 +110,15 @@ class PageIndexEnvironment:
         query: str,
         doc_ids: Optional[list[str]] = None,
         top_k: int = 3,
+        exclude_node_ids: Optional[set[str]] = None,
     ) -> list[dict]:
         """
         쿼리에 가장 관련도 높은 노드를 트리에서 선택합니다.
         GPT가 트리 구조를 보고 가장 관련있는 node_id를 선택 (Agentic Retrieval).
-        
+
+        Args:
+            exclude_node_ids: 이미 탐색한 노드 ID 집합 (format: "{doc_id}_{node_id}")
+
         Returns:
             [{"node_id": "...", "doc_id": "...", "title": "...", "content": "..."}, ...]
         """
@@ -122,12 +127,20 @@ class PageIndexEnvironment:
 
         tree_summary = self.get_tree_summary(doc_ids)
 
+        exclude_instruction = ""
+        if exclude_node_ids:
+            exclude_list = ", ".join(sorted(exclude_node_ids))
+            exclude_instruction = (
+                f"\n\n⚠️ The following nodes have already been explored and MUST be excluded:\n{exclude_list}\n"
+                f"Select only NEW nodes not in the above list."
+            )
+
         prompt = (
-            f"다음은 문서의 계층적 트리 구조입니다:\n{tree_summary}\n\n"
-            f"검색 쿼리: {query}\n\n"
-            f"위 쿼리와 가장 관련성 높은 노드 최대 {top_k}개를 선택하세요.\n"
-            f"응답은 반드시 JSON 배열로만 출력하세요:\n"
-            f'[{{"doc_id": "...", "node_id": "...", "reason": "선택 이유"}}]'
+            f"Below is the hierarchical tree structure of the document:\n{tree_summary}\n\n"
+            f"Search query: {query}\n\n"
+            f"Select up to {top_k} nodes most relevant to the query above.{exclude_instruction}\n"
+            f"Respond ONLY as a JSON array:\n"
+            f'[{{"doc_id": "...", "node_id": "...", "reason": "reason for selection"}}]'
         )
 
         response = self.client.chat.completions.create(
@@ -135,7 +148,7 @@ class PageIndexEnvironment:
             messages=[
                 {
                     "role": "system",
-                    "content": "당신은 기술 문서 탐색 전문가입니다. 쿼리와 가장 관련있는 섹션을 정확히 선택하세요.",
+                    "content": "You are a technical document exploration expert. Select the sections most relevant to the query accurately.",
                 },
                 {"role": "user", "content": prompt},
             ],
@@ -164,6 +177,7 @@ class PageIndexEnvironment:
                         "title": node.get("title", ""),
                         "content": node.get("text", node.get("summary", "")),
                         "page_range": f"{node.get('start_index', node.get('page_index', '?'))}",
+                        "references": node.get("references", []),
                         "reason": sel.get("reason", ""),
                     }
                 )

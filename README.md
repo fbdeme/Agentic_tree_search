@@ -50,7 +50,7 @@ Agentic_tree_search/
 │   ├── environment/pageindex_env.py # World (PageIndex 트리 탐색)
 │   ├── agent/
 │   │   ├── gwm_agent.py            # GWM State-Action-Transition
-│   │   └── reasoning.py            # GPT-4o-mini 추론 모듈
+│   │   └── reasoning.py            # GPT-4.1 추론 모듈
 │   └── utils/visualize.py          # KG 시각화
 │
 └── experiments/
@@ -71,7 +71,7 @@ Agentic_tree_search/
 ```bash
 cd pageindex_core
 # .env에 CHATGPT_API_KEY=sk-... 설정됨
-python run_pageindex.py --pdf_path /path/to/fsar.pdf --model gpt-4o-mini
+python run_pageindex.py --pdf_path /path/to/fsar.pdf --model gpt-4.1
 ```
 
 생성된 트리 JSON을 `experiments/run_experiment.py`에서 로드하여 사용합니다.

@@ -26,7 +26,7 @@ RELATION_TYPES = [
 
 @dataclass
 class KGNode:
-    """지식그래프 노드 - 탐색된 문서 섹션 하나를 표현"""
+    """Knowledge graph node - represents a single explored document section"""
     node_id: str
     title: str
     content: str
@@ -34,7 +34,8 @@ class KGNode:
     modality: str = "text"        # text | table | image
     source_doc: str = ""
     page_range: str = ""
-    hop: int = 0                   # 몇 번째 Hop에서 발견됐는지
+    hop: int = 0
+    references: list = field(default_factory=list)  # [{type, id, page, caption}]
 
     def to_dict(self) -> dict:
         return {
@@ -129,30 +130,30 @@ class DynamicSubKG:
         현재 KG 상태를 LLM이 읽을 수 있는 텍스트로 변환.
         최종 답변 생성 및 다음 탐색 계획 수립에 사용.
         """
-        lines = [f"=== 현재까지 구축된 지식그래프 (Hop {self.current_hop}) ===\n"]
-        lines.append(f"[질의] {self.question}\n")
-        lines.append(f"[노드 수] {len(self.nodes)}  [엣지 수] {len(self.edges)}\n")
+        lines = [f"=== Knowledge Graph constructed so far (Hop {self.current_hop}) ===\n"]
+        lines.append(f"[Query] {self.question}\n")
+        lines.append(f"[Nodes] {len(self.nodes)}  [Edges] {len(self.edges)}\n")
 
-        lines.append("\n--- 노드 목록 ---")
+        lines.append("\n--- Node List ---")
         for nid, node in self.nodes.items():
             content_preview = node.content[:max_content_len] + "..." \
                 if len(node.content) > max_content_len else node.content
             lines.append(
                 f"\n[{nid}] ({node.modality}, Hop {node.hop}) {node.title}\n"
-                f"  출처: {node.source_doc} p.{node.page_range}\n"
-                f"  내용: {content_preview}"
+                f"  Source: {node.source_doc} p.{node.page_range}\n"
+                f"  Content: {content_preview}"
             )
 
-        lines.append("\n\n--- 관계 (엣지) 목록 ---")
+        lines.append("\n\n--- Relationship (Edge) List ---")
         if self.edges:
             for e in self.edges:
                 lines.append(
                     f"  [{e.source_id}] --({e.relation})--> [{e.target_id}]"
-                    f"  (신뢰도: {e.confidence:.2f})"
-                    + (f"\n    근거: {e.reasoning}" if e.reasoning else "")
+                    f"  (confidence: {e.confidence:.2f})"
+                    + (f"\n    reasoning: {e.reasoning}" if e.reasoning else "")
                 )
         else:
-            lines.append("  (아직 관계 없음)")
+            lines.append("  (no relationships yet)")
 
         return "\n".join(lines)
 

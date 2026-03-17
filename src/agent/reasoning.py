@@ -1,8 +1,8 @@
 """
-ReasoningModule: OpenAI GPT 기반 추론 모듈
-- 새로 탐색된 노드에서 엔티티/주요 내용 추출
-- 노드 간 관계(엣지) 추론
-- 최종 답변 생성
+ReasoningModule: OpenAI GPT-based reasoning module
+- Extract entities/key content from newly explored nodes
+- Infer relationships (edges) between nodes
+- Generate final answers
 """
 
 import json
@@ -15,14 +15,14 @@ load_dotenv()
 
 
 class ReasoningModule:
-    """GPT-4o-mini 기반 추론 모듈"""
+    """GPT-4.1 based reasoning module"""
 
-    def __init__(self, model: str = "gpt-4o-mini"):
+    def __init__(self, model: str = "gpt-4.1"):
         self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         self.model = model
 
     def _call(self, system: str, user: str, max_tokens: int = 1024) -> str:
-        """OpenAI API 호출 헬퍼"""
+        """OpenAI API call helper"""
         response = self.client.chat.completions.create(
             model=self.model,
             messages=[
@@ -35,38 +35,36 @@ class ReasoningModule:
         return response.choices[0].message.content.strip()
 
     # -----------------------------------------------------------
-    # 1. 다음 탐색 계획 수립
+    # 1. Plan next search
     # -----------------------------------------------------------
     def plan_next_search(self, question: str, kg_context: str, tree_summary: str) -> str:
         """
-        현재 KG 상태와 문서 트리를 보고, 다음에 탐색할 섹션을 결정합니다.
-        GWM의 Action 단계에 해당.
+        Analyze current KG state and document tree to decide which section to explore next.
+        Corresponds to the Action step in GWM.
         """
         system = (
-            "당신은 규제 문서를 체계적으로 탐색하는 AI 에이전트입니다. "
-            "현재까지 수집한 증거(지식그래프)와 문서 구조(트리)를 분석하여, "
-            "사용자의 질의에 답하기 위해 다음에 탐색해야 할 섹션을 결정하세요.\n"
-            "응답은 반드시 다음 JSON 형식으로만 출력하세요:\n"
-            '{"next_search_query": "탐색할 내용", '
-            '"target_section": "탐색할 섹션 제목 또는 키워드", '
-            '"reasoning": "이 섹션을 탐색하는 이유"}'
+            "You are an AI agent that systematically explores regulatory documents. "
+            "Analyze the evidence collected so far (knowledge graph) and the document structure (tree) "
+            "to determine which section to explore next to answer the user's query.\n"
+            "Respond ONLY in the following JSON format:\n"
+            '{"next_search_query": "content to search for", '
+            '"target_section": "target section title or keywords", '
+            '"reasoning": "reason for exploring this section"}'
         )
         user = (
-            f"[사용자 질의]\n{question}\n\n"
-            f"[현재 지식그래프]\n{kg_context}\n\n"
-            f"[문서 트리 구조 요약]\n{tree_summary}"
+            f"[User Query]\n{question}\n\n"
+            f"[Current Knowledge Graph]\n{kg_context}\n\n"
+            f"[Document Tree Structure Summary]\n{tree_summary}"
         )
         raw = self._call(system, user, max_tokens=512)
-        # JSON 추출 시도
         try:
-            # 마크다운 코드블록 제거
             cleaned = re.sub(r"```json\s*|\s*```", "", raw).strip()
             return json.loads(cleaned).get("next_search_query", raw)
         except Exception:
             return raw
 
     # -----------------------------------------------------------
-    # 2. 노드 간 관계 추론
+    # 2. Infer relations between nodes
     # -----------------------------------------------------------
     def infer_relation(
         self,
@@ -77,8 +75,8 @@ class ReasoningModule:
         question: str,
     ) -> dict:
         """
-        두 노드 간의 관계를 추론합니다.
-        GWM의 Transition(KG 업데이트) 단계에서 엣지를 생성할 때 사용.
+        Infer the logical relationship between two nodes.
+        Used during the GWM Transition (KG update) step to create edges.
 
         Returns:
             {"relation": "SATISFIES", "confidence": 0.9, "reasoning": "..."}
@@ -90,18 +88,18 @@ class ReasoningModule:
         ]
 
         system = (
-            "당신은 원자력 규제 문서 분석 전문가입니다. "
-            "두 문서 섹션 사이의 논리적 관계를 분석하세요.\n"
-            f"가능한 관계 유형: {', '.join(VALID_RELATIONS)}\n"
-            "- NONE: 두 섹션 사이에 의미 있는 관계가 없음\n"
-            "응답은 반드시 다음 JSON 형식으로만 출력하세요:\n"
-            '{"relation": "관계유형", "confidence": 0.0~1.0, '
-            '"reasoning": "한국어로 관계 성립 근거를 2~3문장으로 설명"}'
+            "You are an expert in nuclear regulatory document analysis. "
+            "Analyze the logical relationship between two document sections.\n"
+            f"Possible relation types: {', '.join(VALID_RELATIONS)}\n"
+            "- NONE: No meaningful relationship between the two sections\n"
+            "Respond ONLY in the following JSON format:\n"
+            '{"relation": "RELATION_TYPE", "confidence": 0.0~1.0, '
+            '"reasoning": "Explain the basis for this relationship in 2-3 sentences"}'
         )
         user = (
-            f"[분석 목적 질의]\n{question}\n\n"
-            f"[섹션 A] {node_a_title}\n{node_a_content[:600]}\n\n"
-            f"[섹션 B] {node_b_title}\n{node_b_content[:600]}"
+            f"[Analysis Purpose Query]\n{question}\n\n"
+            f"[Section A] {node_a_title}\n{node_a_content[:600]}\n\n"
+            f"[Section B] {node_b_title}\n{node_b_content[:600]}"
         )
         raw = self._call(system, user, max_tokens=512)
         try:
@@ -114,37 +112,77 @@ class ReasoningModule:
             return {"relation": "REFERENCES", "confidence": 0.5, "reasoning": raw}
 
     # -----------------------------------------------------------
-    # 3. 최종 답변 생성
+    # 3. Generate final answer
     # -----------------------------------------------------------
-    def generate_answer(self, question: str, kg_context: str, trajectory: list[str]) -> str:
+    def generate_answer(
+        self,
+        question: str,
+        kg_context: str,
+        trajectory: list[str],
+        reference_images: list[str] | None = None,
+    ) -> str:
         """
-        완성된 KG와 탐색 궤적을 컨텍스트로 최종 답변을 생성합니다.
+        Generate a final answer using the completed KG, exploration trajectory,
+        and optionally referenced Figure/Table images (VLM).
+
+        Args:
+            reference_images: List of base64-encoded JPEG images of referenced
+                              Figures/Tables from the document.
         """
         trajectory_str = "\n".join(
             [f"  Hop {i+1}: {step}" for i, step in enumerate(trajectory)]
         )
+
         system = (
-            "당신은 원자력 규제 심사 전문가 AI입니다. "
-            "에이전트가 여러 문서 섹션을 탐색하며 구축한 지식그래프를 바탕으로, "
-            "사용자 질의에 대한 정확하고 근거 있는 답변을 생성하세요.\n"
-            "답변에는 반드시 다음을 포함하세요:\n"
-            "1. 핵심 결론 (명확하게)\n"
-            "2. 근거 노드와 관계 경로 인용\n"
-            "3. 불확실한 사항이 있으면 명시\n"
-            "한국어로 답변하세요."
+            "You are an expert AI for nuclear regulatory review. "
+            "Based on the knowledge graph constructed by the agent through exploring multiple document sections, "
+            "generate an accurate and evidence-based answer to the user's query.\n"
         )
-        user = (
-            f"[사용자 질의]\n{question}\n\n"
-            f"[탐색 궤적 (Trajectory)]\n{trajectory_str}\n\n"
-            f"[구축된 지식그래프]\n{kg_context}"
+        if reference_images:
+            system += (
+                "You are also provided with images of referenced Figures and Tables from the document. "
+                "Use these visual materials to provide a more accurate and complete answer.\n"
+            )
+        system += (
+            "Your answer must include:\n"
+            "1. Core conclusion (stated clearly)\n"
+            "2. Key evidence citations with node IDs\n"
+            "3. Explicit mention of any uncertainties\n"
+            "Be concise. Answer in English. Keep your answer under 300 words."
         )
-        return self._call(system, user, max_tokens=1500)
+
+        user_text = (
+            f"[User Query]\n{question}\n\n"
+            f"[Exploration Trajectory]\n{trajectory_str}\n\n"
+            f"[Constructed Knowledge Graph]\n{kg_context}"
+        )
+
+        if reference_images:
+            # Use vision API with images
+            from src.utils.vision import build_vision_content
+
+            if reference_images:
+                user_text += f"\n\n[Referenced Figures/Tables: {len(reference_images)} image(s) attached below]"
+
+            content = build_vision_content(user_text, reference_images)
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": content},
+                ],
+                max_tokens=800,
+                temperature=0.1,
+            )
+            return response.choices[0].message.content.strip()
+        else:
+            return self._call(system, user_text, max_tokens=800)
 
     # -----------------------------------------------------------
-    # 4. 노드 요약 생성
+    # 4. Generate node summary
     # -----------------------------------------------------------
     def summarize_node(self, title: str, content: str) -> str:
-        """긴 섹션 내용을 2~3문장으로 요약"""
-        system = "문서 섹션을 2~3문장으로 간결하게 한국어로 요약하세요."
-        user = f"[섹션 제목] {title}\n\n[내용]\n{content[:2000]}"
+        """Summarize a long document section in 2-3 sentences"""
+        system = "Summarize the document section concisely in 2-3 sentences in English."
+        user = f"[Section Title] {title}\n\n[Content]\n{content[:2000]}"
         return self._call(system, user, max_tokens=200)
