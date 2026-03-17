@@ -55,25 +55,34 @@ class GWMAgent:
         print(f"   최대 Hop: {self.max_hops}  |  Top-K: {self.top_k}")
         print(f"{'='*60}\n")
 
-        # G_0: 빈 지식그래프 초기화
+        # G_0: Empty knowledge graph initialization
         kg = DynamicSubKG(question=question)
         trajectory: list[str] = []
         current_query = question
+        actual_hops = 0
 
         for hop in range(1, self.max_hops + 1):
             kg.current_hop = hop
             print(f"\n🔍 [Hop {hop}/{self.max_hops}] 탐색 시작")
             print(f"   현재 KG: {kg}")
 
-            # ── Action: 탐색 계획 수립 ──────────────────────────────
+            # ── Action: Plan next search + check sufficiency ────────
             if hop > 1:
                 tree_summary = self.env.get_tree_summary(doc_ids)
-                current_query = self.reasoning.plan_next_search(
+                plan = self.reasoning.plan_next_search(
                     question=question,
                     kg_context=kg.to_context_string(max_content_len=400),
                     tree_summary=tree_summary[:2000],
                 )
-                print(f"   📋 다음 탐색 쿼리: {current_query}")
+
+                if plan["sufficient"]:
+                    print(f"   ✅ Evidence sufficient — stopping early at hop {hop}")
+                    print(f"      Reason: {plan['reasoning'][:100]}")
+                    trajectory.append(f"Hop {hop}: Early stop — evidence sufficient")
+                    break
+
+                current_query = plan["next_search_query"]
+                print(f"   📋 Next query: {current_query}")
 
             # ── Action: PageIndex 환경 탐색 ────────────────────────
             retrieved = self.env.search_relevant_nodes(
@@ -161,7 +170,8 @@ class GWMAgent:
                             f"--{relation}({confidence:.2f})--> [{node_b.node_id[:25]}]"
                         )
 
-            trajectory.append(f"Hop {hop}: " + " | ".join(hop_log) if hop_log else f"Hop {hop}: 신규 노드 없음")
+            trajectory.append(f"Hop {hop}: " + " | ".join(hop_log) if hop_log else f"Hop {hop}: no new nodes")
+            actual_hops = hop
 
         # ── Collect referenced Figure/Table images ────────────────
         reference_images = self._collect_reference_images(kg, doc_ids)
@@ -185,7 +195,7 @@ class GWMAgent:
             "answer": answer,
             "kg": kg,
             "trajectory": trajectory,
-            "hops_used": self.max_hops,
+            "hops_used": actual_hops,
         }
 
     def _collect_reference_images(

@@ -37,19 +37,26 @@ class ReasoningModule:
     # -----------------------------------------------------------
     # 1. Plan next search
     # -----------------------------------------------------------
-    def plan_next_search(self, question: str, kg_context: str, tree_summary: str) -> str:
+    def plan_next_search(self, question: str, kg_context: str, tree_summary: str) -> dict:
         """
-        Analyze current KG state and document tree to decide which section to explore next.
-        Corresponds to the Action step in GWM.
+        Analyze current KG state and document tree to decide:
+        1) Whether the collected evidence is sufficient to answer the query
+        2) If not, which section to explore next
+
+        Returns:
+            {"sufficient": bool, "next_search_query": str, "reasoning": str}
         """
         system = (
             "You are an AI agent that systematically explores regulatory documents. "
-            "Analyze the evidence collected so far (knowledge graph) and the document structure (tree) "
-            "to determine which section to explore next to answer the user's query.\n"
+            "Analyze the evidence collected so far (knowledge graph) and the document structure (tree).\n\n"
+            "First, judge whether the current evidence is SUFFICIENT to fully answer the user's query. "
+            "Consider: Are all key facts, numerical values, and regulatory references found? "
+            "Are there obvious gaps or missing cross-references?\n\n"
+            "If sufficient, set sufficient=true. If not, determine which section to explore next.\n"
             "Respond ONLY in the following JSON format:\n"
-            '{"next_search_query": "content to search for", '
-            '"target_section": "target section title or keywords", '
-            '"reasoning": "reason for exploring this section"}'
+            '{"sufficient": true/false, '
+            '"next_search_query": "content to search for (empty string if sufficient)", '
+            '"reasoning": "why evidence is sufficient OR why this section should be explored next"}'
         )
         user = (
             f"[User Query]\n{question}\n\n"
@@ -59,9 +66,14 @@ class ReasoningModule:
         raw = self._call(system, user, max_tokens=512)
         try:
             cleaned = re.sub(r"```json\s*|\s*```", "", raw).strip()
-            return json.loads(cleaned).get("next_search_query", raw)
+            result = json.loads(cleaned)
+            return {
+                "sufficient": result.get("sufficient", False),
+                "next_search_query": result.get("next_search_query", ""),
+                "reasoning": result.get("reasoning", ""),
+            }
         except Exception:
-            return raw
+            return {"sufficient": False, "next_search_query": raw, "reasoning": ""}
 
     # -----------------------------------------------------------
     # 2. Infer relations between nodes
