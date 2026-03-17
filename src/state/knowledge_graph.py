@@ -136,12 +136,16 @@ class DynamicSubKG:
 
         lines.append("\n--- Node List ---")
         for nid, node in self.nodes.items():
-            content_preview = node.content[:max_content_len] + "..." \
-                if len(node.content) > max_content_len else node.content
+            # Prefer summary (concise, contains key facts) over truncated content
+            if node.summary:
+                display_text = node.summary
+            else:
+                display_text = node.content[:max_content_len] + "..." \
+                    if len(node.content) > max_content_len else node.content
             lines.append(
                 f"\n[{nid}] ({node.modality}, Hop {node.hop}) {node.title}\n"
                 f"  Source: {node.source_doc} p.{node.page_range}\n"
-                f"  Content: {content_preview}"
+                f"  Summary: {display_text}"
             )
 
         lines.append("\n\n--- Relationship (Edge) List ---")

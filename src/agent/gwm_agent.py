@@ -71,8 +71,8 @@ class GWMAgent:
                 tree_summary = self.env.get_tree_summary(doc_ids)
                 plan = self.reasoning.plan_next_search(
                     question=question,
-                    kg_context=kg.to_context_string(max_content_len=400),
-                    tree_summary=tree_summary[:2000],
+                    kg_context=kg.to_context_string(max_content_len=800),
+                    tree_summary=tree_summary[:3000],
                 )
 
                 if plan["sufficient"]:
