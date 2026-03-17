@@ -4,29 +4,29 @@
 
 ### 1.1 Research Motivation
 
-Final Safety Analysis Reports (FSARs) used in nuclear power plant design and regulatory approval are massive documents spanning tens of thousands of pages, containing heterogeneous multimodal information including text, engineering tables, and complex system diagrams. The nuclear regulatory review process involves cross-referencing and verifying information across these documents to demonstrate design safety—a labor-intensive process prone to human error. In safety-critical domains like nuclear engineering, all intermediate decision-making steps must be transparent, inspectable, and architecturally guarantee human oversight. Therefore, developing automated decision-support tools that simultaneously improve both the efficiency and reliability of regulatory review is essential.
+Final Safety Analysis Reports (FSARs) used in nuclear power plant design and regulatory approval are massive documents spanning tens of thousands of pages, containing heterogeneous multimodal information including text, engineering tables, and complex system diagrams. The nuclear regulatory review process involves cross-referencing and verifying information across these documents to demonstrate design safety—a labor-intensive process prone to human error. In safety-critical domains like nuclear engineering, all intermediate decision-making steps must be transparent, inspectable, and architecturally guarantee human oversight [2]. Therefore, developing automated decision-support tools that simultaneously improve both the efficiency and reliability of regulatory review is essential.
 
 ### 1.2 Limitations of Existing Approaches
 
-Large Language Model (LLM)-based Retrieval-Augmented Generation (RAG) techniques have been actively adopted to address these challenges. The MAM-RAG framework proposed specialized agents operating in parallel for text, tables, and images to preserve structural information across modalities, achieving high fact retrieval performance. However, existing RAG-based approaches share fundamental limitations:
+Large Language Model (LLM)-based Retrieval-Augmented Generation (RAG) techniques have been actively adopted to address these challenges. The MAM-RAG framework [1] proposed specialized agents operating in parallel for text, tables, and images to preserve structural information across modalities, achieving high fact retrieval performance. However, existing RAG-based approaches share fundamental limitations:
 
 - **Multi-hop Reasoning Limitations**: Current RAG systems perform well on single-hop queries but lack the ability to logically synthesize evidence scattered across multiple documents and modalities to determine regulatory compliance—undermining answer reliability.
-- **Inefficiency of Static Knowledge Graphs and Vector DBs**: GraphRAG and LightRAG approaches require massive pre-computation costs and fail to fully capture the complex hierarchical structure of domain-specific documents. Vector DB-based approaches fragment context through artificial chunking and fail to reflect domain-specific relevance that differs from semantic similarity.
+- **Inefficiency of Static Knowledge Graphs and Vector DBs**: GraphRAG [3] constructs document-wide knowledge graphs through pre-computation, while LightRAG [4] improves efficiency through dual-level (low-level entity and high-level topic) retrieval. However, both still require massive pre-computation costs and fail to fully capture the complex hierarchical structure of domain-specific documents. Vector DB-based approaches fragment context through artificial chunking and fail to reflect domain-specific relevance that differs from semantic similarity.
 
 ### 1.3 Proposed Methodology and Contributions
 
-This research proposes an architecture that combines the Graph World Model (GWM) concept for unified modeling of unstructured and graph-structured data with the PageIndex framework for active exploration via hierarchical tree structures. Moving beyond conventional single-shot vector retrieval, the agent explores a multimodal document environment where the original document structure (Table of Contents) is preserved, dynamically constructing a query-purpose-dependent short-term memory in the form of a Dynamic Sub-Knowledge Graph (Sub-KG) in real-time.
+This research proposes an architecture that combines the Graph World Model (GWM) [5] State-Action-Transition framework for unified modeling of unstructured and graph-structured data with the PageIndex framework [6] for active exploration via hierarchical tree structures. Moving beyond conventional single-shot vector retrieval, the agent explores a multimodal document environment where the original document structure (Table of Contents) is preserved, dynamically constructing a query-purpose-dependent short-term memory in the form of a Dynamic Sub-Knowledge Graph (Sub-KG) in real-time.
 
 The core contributions are:
 
 - **Vectorless Agent-based Exploration**: Using PageIndex's tree index without chunk splitting or vector embeddings, the LLM actively selects and extracts relevant nodes—mimicking how human experts navigate documents via table of contents. This prevents context fragmentation and maintains multimodal information integrity.
-- **Regulatory Domain-Specific Dynamic Sub-KG Construction**: Overcoming GraphRAG's pre-computation inefficiency, the agent collects only necessary evidence (nodes) during exploration and defines logical relationships between them using academically validated regulatory-specific edge types (SATISFIES, VIOLATES, SUPPORTS, etc.).
+- **Regulatory Domain-Specific Dynamic Sub-KG Construction**: Overcoming GraphRAG's pre-computation inefficiency, the agent collects only necessary evidence (nodes) during exploration and defines logical relationships between them using a two-tier edge ontology: structural edges (REFERENCES, SPECIFIES) forming the backbone of exploration paths, and semantic edges (SATISFIES, VIOLATES, SUPPORTS, etc.) grounded in systems engineering and argumentation theory for regulatory judgment.
 - **Vision-Augmented Answer Generation**: Referenced Figures and Tables are rendered as images from the original PDF and passed to a Vision Language Model (GPT-4.1) during final answer generation, preserving full visual fidelity of engineering diagrams, P&T curves, and structured tables without OCR-induced information loss.
 - **Complete Traceability**: The dynamic KG generation process transparently records which document section (Node ID) the agent referenced and through which logical path (Trajectory) it reached its conclusion—providing inspectable intermediate artifacts required in safety-critical domains.
 
 ## 2. Method
 
-The core pipeline applies the GWM framework adapted for PageIndex-based multimodal regulatory document retrieval. The agent's reasoning process is modeled as a cyclic loop of State, Action, and Transition.
+The core pipeline adapts GWM's [5] State-Action-Transition framework for PageIndex-based multimodal regulatory document retrieval. The agent's reasoning process is modeled as a cyclic loop of State, Action, and Transition.
 
 ### 2.1 Environment (World): PageIndex-based Multimodal Document Tree
 
@@ -47,28 +47,37 @@ Tree Node Example:
 }
 ```
 
-### 2.2 State (Short-term Memory): Dynamic Knowledge Graph with Domain-Specific Edges
+### 2.2 State (Short-term Memory): Dynamic Knowledge Graph with Two-Tier Edge Ontology
 
 The agent state $s_t$ at time $t$ is defined as a dynamic knowledge graph $G_t = (V_t, E_t)$ serving as the agent's short-term memory. Nodes $V_t$ represent document sections (evidence) collected through PageIndex environment exploration, along with their associated multimodal references.
 
-The edge set $E_t$ is defined using a domain-specific edge ontology grounded in systems engineering and argumentation theory:
+The edge set $E_t$ is defined using a two-tier domain-specific ontology. **Structural edges** model the document's physical and hierarchical connectivity, forming the backbone of multi-hop exploration paths. **Semantic edges**, grounded in systems engineering and argumentation theory, capture the logical and causal judgments required for regulatory review.
+
+**Tier 1: Structural Edges** — Document connectivity enabling multi-hop traversal
 
 | Edge Type | Academic Basis | Domain Application |
 |-----------|---------------|-------------------|
-| SATISFIES / VIOLATES | SysML requirements traceability standards | Explicit judgment of whether a design node meets or violates a regulatory requirement node |
-| SUPPORTS / CONTRADICTS | Argumentation Mining frameworks, Textual Entailment | Cross-verification of whether evidence from multiple documents supports or contradicts each other |
-| LEADS_TO | Causal Knowledge Graph event-outcome modeling | Tracking causal relationships in system diagrams and accident analysis reports |
-| IS_PREREQUISITE_OF | Prerequisite concept learning models | Connecting precondition documents that must be reviewed before a given regulation |
+| REFERENCES | Citation network modeling [17] | Section A cites or cross-references Section B. Forms the backbone paths upon which higher-order semantic edges are built |
+| SPECIFIES | SysML `<<refine>>` stereotype [7] | Section A provides detailed specifications for the general description in Section B. Complements PageIndex's physical tree hierarchy with a semantically reconstructed logical hierarchy |
 
-The initial state $s_0$ begins as an empty graph containing only the user's query, with logical structure forming progressively through the edges defined above. Edge creation requires a minimum confidence threshold of 0.4 to prevent spurious relationships from LLM hallucinations.
+**Tier 2: Semantic Edges** — Regulatory judgment relations for multi-hop reasoning
+
+| Edge Type | Academic Basis | Domain Application |
+|-----------|---------------|-------------------|
+| SATISFIES / VIOLATES | SysML requirements traceability [7], Construction regulatory ontology [8] | Explicit judgment of whether a design result node meets or violates a regulatory requirement node |
+| SUPPORTS / CONTRADICTS | Argumentation Mining [9], Textual Entailment [10] | Cross-verification of whether evidence from multiple documents supports or contradicts each other |
+| LEADS_TO | Causal Knowledge Graph event-outcome modeling [11] | Tracking causal relationships in system diagrams and accident analysis reports |
+| IS_PREREQUISITE_OF | Prerequisite concept learning [12] | Connecting precondition documents that must be reviewed before a given regulation |
+
+This two-tier design reflects a key empirical finding: in single-hop factual queries, structural edges (REFERENCES, SPECIFIES) dominate as the agent navigates between related document sections; in composite multi-hop queries requiring regulatory compliance judgment, semantic edges (SATISFIES, SUPPORTS, etc.) emerge as the agent synthesizes evidence across sections. The initial state $s_0$ begins as an empty graph containing only the user's query, with logical structure forming progressively through both tiers. Edge creation requires a minimum confidence threshold of 0.4 to prevent spurious relationships from LLM hallucinations.
 
 ### 2.3 Action (Exploration): Tree Index-based Active Exploration
 
-The agent's action $a_t$ explores the environment to discover new evidence based on the current state $s_t$. Rather than passive vector similarity-based retrieval, the LLM agent analyzes PageIndex's tree index (ToC) and actively selects the most relevant node_ids in the context of the knowledge graph being constructed (Agentic Retrieval). Previously explored nodes are explicitly excluded from selection to ensure each hop discovers new information.
+The agent's action $a_t$ explores the environment to discover new evidence based on the current state $s_t$. In GWM's [5] taxonomy, actions are classified as *intended actions* $a_d$ (directly related to specific graph structures) and *unintended actions* $a_u$ (indirectly related through semantic similarity, e.g., RAG with embedding-based retrieval). While GWM models RAG as an unintended action using embedding similarity to retrieve relevant nodes, this research implements the action as an **intended action**: the LLM agent directly analyzes PageIndex's tree index (ToC)—a concrete graph structure—and actively selects the most relevant node_ids in the context of the knowledge graph being constructed (Agentic Retrieval). This eliminates pre-computed embeddings while leveraging the document's hierarchical structure as an explicit navigation map. Previously explored nodes are excluded from selection to ensure each hop discovers new information.
 
 ### 2.4 Transition (Memory Update): Short-term Memory Update and Relationship Inference
 
-The state transition function $f_{tr}(s_t, a_t) \rightarrow s_{t+1}$ integrates newly collected raw content (text, table, image references) into the short-term memory graph. When new nodes are added, the LLM-based reasoning module analyzes logical consistency between new and existing KG nodes to generate domain-specific edges. Relationship inference is performed for all node pairs—both between new and existing nodes, and among new nodes themselves—ensuring edges are generated even in the first hop.
+The state transition function $f_{tr}(s_t, a_t) \rightarrow s_{t+1}$ integrates newly collected raw content (text, table, image references) into the short-term memory graph. When new nodes are added, the LLM-based reasoning module analyzes logical consistency between new and existing KG nodes to generate domain-specific edges from both structural and semantic tiers. Relationship inference is performed for all node pairs—both between new and existing nodes, and among new nodes themselves—ensuring edges are generated even in the first hop.
 
 ### 2.5 Vision-Augmented Answer Generation
 
@@ -87,14 +96,14 @@ Pipeline:
 
 ### 3.1 Nuclear Regulatory Multi-hop Q&A Benchmark
 
-- **Need for a New Benchmark**: Existing nuclear benchmarks (NQuAD, NuclearQA) and the MAM-RAG benchmark are biased toward single-hop fact extraction, making them unsuitable for evaluating the multi-hop reasoning capabilities central to this research.
+- **Need for a New Benchmark**: Existing nuclear benchmarks (NQuAD [14], NuclearQA [15]) and the MAM-RAG benchmark [1] are biased toward single-hop fact extraction, making them unsuitable for evaluating the multi-hop reasoning capabilities central to this research.
 - **Benchmark Design**: A "Composite Multi-hop Reasoning" benchmark is constructed based on NuScale FSAR data (100 questions), requiring cross-verification and synthesis across multiple text passages, tables, and diagrams to determine regulatory compliance.
   - Question type distribution: text_only (30), table_only (20), image_only (20), composite (30)
   - Source documents: NuScale FSAR Chapter 01 (Introduction), Chapter 05 (Reactor Coolant System)
 
 ### 3.2 Performance Evaluation
 
-**Quantitative Evaluation (RAGAs Framework)**: End-to-end answer quality is measured using the RAGAs framework with the following metrics:
+**Quantitative Evaluation (RAGAs Framework [16])**: End-to-end answer quality is measured using the RAGAs framework with the following metrics:
 
 | Metric | Description | Method |
 |--------|-------------|--------|
@@ -105,7 +114,7 @@ Pipeline:
 
 **Supplementary Metric**: Keyword Hit Rate measures the fraction of expected answer keywords present in the agent's response.
 
-**Ablation Study**: The proposed PageIndex-based dynamic exploration agent (GWM) is compared against vector DB-based MAM-RAG baseline, GraphRAG, and LightRAG to demonstrate that dynamic exploration with domain-specific edges achieves superior efficiency and accuracy in regulatory document multi-hop reasoning without massive pre-built KG construction.
+**Ablation Study**: The proposed PageIndex-based dynamic exploration agent (GWM) is compared against vector DB-based MAM-RAG baseline [1], GraphRAG [3], and LightRAG [4] to demonstrate that dynamic exploration with domain-specific edges achieves superior efficiency and accuracy in regulatory document multi-hop reasoning without massive pre-built KG construction.
 
 ### 3.3 Preliminary Results
 
@@ -118,12 +127,12 @@ Pilot evaluation on NuScale FSAR data with GPT-4.1:
 
 Key findings from preliminary experiments:
 - The agent successfully constructs knowledge graphs with 7-8 nodes and 7-19 edges per query
-- SUPPORTS and SPECIFIES edges emerge naturally in composite questions requiring cross-section analysis
+- Structural edges (REFERENCES, SPECIFIES) dominate in single-hop factual queries, while semantic edges (SUPPORTS) emerge in composite multi-hop questions—validating the two-tier edge design
 - Vision-augmented answer generation improves factual correctness for questions involving engineering diagrams and data tables
 
 ## 4. Conclusion
 
-This research proposes a novel agent architecture combining PageIndex's hierarchical tree index with GWM's dynamic knowledge graph construction and academically validated domain-specific edge ontology for solving the complex multi-hop reasoning problem in multimodal regulatory documents. The proposed framework addresses the massive cost problem of static KG construction (GraphRAG, LightRAG) while emulating human experts' document exploration through purpose-driven information collection and logical relationship inference. By providing all intermediate reasoning steps as a transparent knowledge graph and integrating vision-based analysis of referenced figures and tables, the system ensures the high reliability and inspectability demanded in safety-critical domains.
+This research proposes a novel agent architecture combining PageIndex's hierarchical tree index with GWM's State-Action-Transition framework and a two-tier domain-specific edge ontology for solving the complex multi-hop reasoning problem in multimodal regulatory documents. Unlike GWM's modeling of RAG as an unintended action via embedding similarity, this research implements document exploration as an intended action through direct structural navigation of the PageIndex tree—eliminating pre-computed embeddings while enabling purpose-driven information collection. The proposed framework addresses the massive cost problem of static KG construction (GraphRAG, LightRAG) while emulating human experts' document exploration through logical relationship inference. By providing all intermediate reasoning steps as a transparent knowledge graph and integrating vision-based analysis of referenced figures and tables, the system ensures the high reliability and inspectability demanded in safety-critical domains.
 
 ## 5. References
 
@@ -139,22 +148,24 @@ This research proposes a novel agent architecture combining PageIndex's hierarch
 
 [6] PageIndex Documentation. "PageIndex: Next-Generation Vectorless, Reasoning-based RAG". https://pageindex.ai/
 
-[7] Friedenthal, S., Moore, A., & Steiner, R. (2014). A Practical Guide to SysML. Morgan Kaufmann.
+[7] Friedenthal, S., Moore, A., & Steiner, R. (2014). A Practical Guide to SysML: The Systems Modeling Language (3rd ed.). Morgan Kaufmann.
 
-[8] Zhong, B., et al. (2012). Ontology-based semantic modeling of regulation constraint for automated construction quality compliance checking. Automation in Construction.
+[8] Zhong, B., Ding, L., Luo, H., Zhou, Y., Hu, Y., & Hu, H. (2012). Ontology-based semantic modeling of regulation constraint for automated construction quality compliance checking. Automation in Construction, 28, 58-70.
 
-[9] Peldszus, A., & Stede, M. (2013). From argument diagrams to argumentation mining in texts. IJCINI.
+[9] Peldszus, A., & Stede, M. (2013). From argument diagrams to argumentation mining in texts: A survey. International Journal of Cognitive Informatics and Natural Intelligence (IJCINI), 7(1), 1-31.
 
-[10] Cabrio, E., & Villata, S. (2012). Combining textual entailment and argumentation theory. ACL.
+[10] Cabrio, E., & Villata, S. (2012). Combining textual entailment and argumentation theory for supporting online debates interactions. Proceedings of the 50th Annual Meeting of the Association for Computational Linguistics (ACL).
 
-[11] Hassanzadeh, O., et al. (2019). Answering Binary Causal Questions Through Large-Scale Text Mining. IJCAI.
+[11] Hassanzadeh, O., Bhattacharjya, D., Feblowitz, M., Srinivas, K., Perrone, M., Sohrabi, S., & Katz, M. (2019). Answering Binary Causal Questions Through Large-Scale Text Mining: An Evaluation Using Cause-Effect Pairs from Human Experts. Proceedings of the 28th International Joint Conference on Artificial Intelligence (IJCAI).
 
-[12] Pan, L., et al. (2017). Prerequisite Relation Learning for Concepts in MOOCs. ACL.
+[12] Pan, L., Li, C., Li, J., & Tang, J. (2017). Prerequisite Relation Learning for Concepts in MOOCs. Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (ACL).
 
-[13] Jain, A., et al. (2020). NukeBERT: A Pre-trained language model for Low Resource Nuclear Domain. arXiv:2003.13821.
+[13] Jain, A., Meenachi, N. M., & Venkatraman, B. (2020). NukeBERT: A Pre-trained language model for Low Resource Nuclear Domain. arXiv:2003.13821.
 
-[14] Acharya, A., et al. (2023). NuclearQA: A Human-Made Benchmark for Language Models for the Nuclear Domain. arXiv:2310.10920.
+[14] Acharya, A., Munikoti, S., Hellinger, A., et al. (2023). NuclearQA: A Human-Made Benchmark for Language Models for the Nuclear Domain. arXiv:2310.10920.
 
-[15] Es, S., et al. (2024). RAGAs: Automated Evaluation of Retrieval Augmented Generation. EACL.
+[15] Es, S., James, J., Anke, L. E., et al. (2024). RAGAs: Automated Evaluation of Retrieval Augmented Generation. Proceedings of EACL: System Demonstrations.
 
 [16] PageIndex Blog. "Do We Still Need OCR?" https://pageindex.ai/blog/do-we-need-ocr
+
+[17] Garfield, E. (1979). Citation Indexing: Its Theory and Application in Science, Technology, and Humanities. Wiley.
