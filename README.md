@@ -1,77 +1,93 @@
-# Agentic Tree Search: GWM 기반 다중 모달 규제 문서 탐색 에이전트
+# Agentic Tree Search
 
-GWM(Graph World Model)의 State-Action-Transition 루프를 실제 구현하고,
-**PageIndex 오픈소스**를 환경(World)으로 활용하는 실험 프레임워크입니다.
+GWM (Graph World Model) based multimodal agent for multi-hop regulatory document exploration.
 
-## 핵심 아키텍처
+Implements GWM's State-Action-Transition loop with **PageIndex** as the environment (World), dynamically constructing a knowledge graph from NuScale FSAR documents.
+
+## Architecture
 
 ```
-[사용자 질의]
+[User Query]
       ↓
-┌─────────────────────────── GWM Agent ─────────────────────────────┐
-│  State (Short-term Memory)          Action (Exploration)           │
-│  ┌──────────────────────┐           ┌────────────────────────────┐ │
-│  │   Dynamic Sub-KG     │ ←──────── │   PageIndex Tree Search   │ │
-│  │   (NetworkX DiGraph) │           │   (Agentic Retrieval)     │ │
-│  └──────────────────────┘           └────────────────────────────┘ │
-│                    ↑                                                │
-│          Transition (GPT 관계 추론 → 엣지 생성)                    │
-└───────────────────────────────────────────────────────────────────┘
-      ↓ (4-hop 반복 후)
-[최종 답변 + KG 시각화]
+┌──────────────────────── GWM Agent ────────────────────────────┐
+│                                                                │
+│  State (Short-term Memory)       Action (Exploration)          │
+│  ┌─────────────────────┐         ┌───────────────────────────┐ │
+│  │  Dynamic Sub-KG      │ ←───── │  PageIndex Tree Search    │ │
+│  │  (NetworkX DiGraph)  │        │  (Agentic Retrieval)      │ │
+│  │  + References        │        │  + Dynamic Termination    │ │
+│  └─────────────────────┘         └───────────────────────────┘ │
+│           ↑                                                    │
+│    Transition (GPT-4.1 edge inference)                         │
+│    Structural: REFERENCES, SPECIFIES                           │
+│    Semantic:   SATISFIES, VIOLATES, SUPPORTS, CONTRADICTS,     │
+│                LEADS_TO, IS_PREREQUISITE_OF                    │
+└────────────────────────────────────────────────────────────────┘
+      ↓ (dynamic termination or max hops)
+[Vision-Augmented Answer Generation]
+  Text KG context + Referenced Figure/Table images → GPT-4.1 Vision
 ```
 
-## 빠른 시작
+## Quick Start
 
 ```bash
-# 1. 가상환경 활성화
+# 1. Activate virtual environment
 source .venv/bin/activate
 
-# 2. 실험 실행 (시뮬레이션 트리 사용)
-python experiments/run_experiment.py
+# 2. Build PageIndex trees from FSAR PDFs (one-time)
+PYTHONPATH=pageindex_core:$PYTHONPATH python experiments/build_trees.py
 
-# 3. 결과 확인
-open experiments/results/  # PNG + JSON
+# 3. Run evaluation (RAGAs framework)
+PYTHONPATH=pageindex_core:$PYTHONPATH python experiments/evaluate.py --start 1 --end 5
 
-# 4. 실제 PDF → PageIndex 트리 생성
-cd pageindex_core
-python run_pageindex.py --pdf_path ../experiments/your_doc.pdf
+# 4. Run predefined experiments (simulated tree)
+PYTHONPATH=pageindex_core:$PYTHONPATH python experiments/run_experiment.py
 ```
 
-## 프로젝트 구조
+## Key Features
+
+- **Vectorless Retrieval**: No embeddings or chunking. LLM reasons over PageIndex tree structure (ToC) to select relevant sections.
+- **Dynamic Sub-KG**: Knowledge graph built on-the-fly during exploration with domain-specific edges grounded in systems engineering and argumentation theory.
+- **Two-Tier Edge Ontology**: Structural edges (REFERENCES, SPECIFIES) form exploration paths; Semantic edges (SATISFIES, SUPPORTS, etc.) capture regulatory judgment.
+- **Vision RAG**: Referenced Figures and Tables are rendered from PDF pages and passed to GPT-4.1 vision for multimodal answer generation.
+- **Dynamic Termination**: Agent stops exploring when evidence is sufficient (PageIndex-style iterative retrieval).
+- **RAGAs Evaluation**: Faithfulness, Answer Relevancy, Context Recall, Factual Correctness on 100-question NuScale FSAR benchmark.
+
+## Project Structure
 
 ```
 Agentic_tree_search/
-├── pageindex_core/          # PageIndex 오픈소스 (GitHub 클론)
-│   └── run_pageindex.py     # PDF → Tree JSON 생성
-│
 ├── src/
-│   ├── state/knowledge_graph.py    # Dynamic Sub-KG (G_t)
-│   ├── environment/pageindex_env.py # World (PageIndex 트리 탐색)
-│   ├── agent/
-│   │   ├── gwm_agent.py            # GWM State-Action-Transition
-│   │   └── reasoning.py            # GPT-4.1 추론 모듈
-│   └── utils/visualize.py          # KG 시각화
-│
-└── experiments/
-    ├── sample_fsar_tree.json       # NuScale FSAR 시뮬레이션 트리
-    ├── run_experiment.py           # 실험 실행 스크립트
-    └── results/                    # 출력 (PNG, JSON)
+│   ├── agent/                  # GWM agent + GPT-4.1 reasoning
+│   ├── environment/            # PageIndex tree environment
+│   ├── state/                  # Dynamic Sub-KG (NetworkX)
+│   └── utils/                  # Visualization + Vision (PDF rendering)
+├── experiments/
+│   ├── build_trees.py          # PDF → tree + Figure/Table metadata
+│   ├── evaluate.py             # RAGAs benchmark evaluation
+│   └── run_experiment.py       # Predefined experiments
+├── data/
+│   ├── documents/              # Source PDFs (gitignored)
+│   ├── qa_dataset/             # 100-question benchmark
+│   └── trees/                  # Generated PageIndex trees
+├── docs/
+│   ├── research_proposal.md    # Research proposal
+│   ├── history.md              # Development history
+│   └── todo.md                 # Task tracking
+└── pageindex_core/             # PageIndex library (cloned)
 ```
 
-## 실험 시나리오
+## Docs
 
-| 실험 | 질의 요약 | 기대 홉 수 |
-|------|-----------|-----------|
-| 1 | RCP 정지 사고 PCT vs. Tech Specs 한계치 | 4 hop |
-| 2 | LOCA 10 CFR 50.46 3중 수락 기준 | 4 hop |
+| File | Purpose |
+|------|---------|
+| `docs/research_proposal.md` | Academic research proposal with methodology, edge ontology, and preliminary results |
+| `docs/history.md` | Version-by-version development log — design decisions, issues found, resolutions |
+| `docs/todo.md` | Prioritized task tracking — update when starting/completing tasks |
 
-## PageIndex 오픈소스 사용법
+## References
 
-```bash
-cd pageindex_core
-# .env에 CHATGPT_API_KEY=sk-... 설정됨
-python run_pageindex.py --pdf_path /path/to/fsar.pdf --model gpt-4.1
-```
-
-생성된 트리 JSON을 `experiments/run_experiment.py`에서 로드하여 사용합니다.
+- [Graph World Model (GWM)](https://arxiv.org/abs/2505.xxxxx) — State-Action-Transition framework
+- [PageIndex](https://pageindex.ai/) — Vectorless reasoning-based RAG
+- [RAGAs](https://docs.ragas.io/) — RAG evaluation framework
+- [NuScale FSAR](https://www.nrc.gov/) — Source regulatory documents
