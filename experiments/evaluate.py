@@ -226,15 +226,13 @@ def map_doc_ids(evidence_list: list[dict], env: PageIndexEnvironment) -> list[st
     return list(doc_ids) if doc_ids else list(env.documents.keys())
 
 
-def extract_contexts_from_kg(kg, max_chars_per_node: int = 800, max_nodes: int = 6) -> list[str]:
-    """KG 노드들의 content를 context 리스트로 추출 (토큰 초과 방지를 위해 길이/개수 제한)"""
-    contexts = []
-    for nid, node in list(kg.nodes.items())[:max_nodes]:
-        text = node.content or node.summary
-        if text:
-            truncated = text[:max_chars_per_node]
-            contexts.append(f"[{node.title}] {truncated}")
-    return contexts
+def extract_contexts_from_kg(kg) -> list[str]:
+    """
+    Extract the KG context string that the agent actually used for answer generation.
+    This ensures evaluation measures the same information the agent saw.
+    Returns a single-element list containing the full KG context string.
+    """
+    return [kg.to_context_string()]
 
 
 async def run_evaluation_async(args):

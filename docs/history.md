@@ -98,10 +98,50 @@ Added dynamic termination condition and fixed KG context truncation.
 
 ---
 
+## v0.2.3 — Context Alignment + Grounded Answers (`TBD`)
+
+**Date**: 2026-03-18
+
+Fixed structural mismatch between agent's view and RAGAs evaluation context.
+
+### Root Cause Analysis
+
+Three separate information views existed:
+1. **Agent reads**: full node content (thousands of chars) during exploration
+2. **Agent answers from**: `kg.to_context_string()` = summaries + edges
+3. **RAGAs evaluates against**: `extract_contexts_from_kg()` = content[:800] (truncated)
+
+Agent → evaluation mismatch caused RAGAs to judge "no evidence" for information the agent actually saw and used.
+
+### Changes
+- **Context alignment**: `extract_contexts_from_kg()` now returns `kg.to_context_string()` — same context agent used for answer generation
+- **Grounded answer generation**: Prompt updated to require quoting specific evidence from KG and prohibit claims not in the provided context
+
+### Results (Q1-Q5)
+| Metric | Before | After |
+|--------|--------|-------|
+| Faithfulness | 0.15 | **0.77** |
+| Context Recall | 0.00 | **0.40** |
+| Factual Correctness | 0.30 | **0.47** |
+| Keyword Hit | 55% | **60%** |
+
+### Deep Dive: Why Q003-Q005 Context Recall Still 0.0
+
+| Question | Root Cause | Type |
+|----------|-----------|------|
+| Q003 (AC/DC power) | KG has the answer but summary wording differs from expected answer. RAGAs sentence matching too strict. | Evaluation limitation |
+| Q004 (SG config) | Expected answer has factual error ("outside RPV" → actually inside). Agent answer is more accurate. | Dataset error |
+| Q005 (CNV pressure) | "sub-atmospheric" info is in Ch.01 Introduction, but agent only searched Ch.05. Cross-chapter search failed. | **Search failure** |
+
+Q005 is the most critical finding — it demonstrates the tree_summary truncation problem causing cross-document search failure.
+
+---
+
 ## Known Issues (Unresolved)
 
-1. **Tree summary truncation**: 866 nodes → text summary far exceeds context limit. LLM only sees first portion of document tree. Need hierarchical drill-down or paginated tree search.
-2. **Faithfulness metric instability**: RAGAs Faithfulness frequently times out or fails due to long context. Need further optimization of context passed to evaluator.
-3. **Single-document tree search bottleneck**: When multiple documents are registered, their combined tree summaries may exceed limits, making cross-document search unreliable.
-4. **No semantic edge emergence in text_only questions**: SATISFIES/VIOLATES edges require regulatory compliance judgment questions, which are underrepresented in current QA dataset.
-5. **PageIndex node page ranges**: Only `page_index` (start) is stored, not `end_index`. This limits accurate page range rendering for Vision RAG.
+1. **Tree summary truncation → cross-chapter search failure**: 866 nodes in Ch.01 + 26 in Ch.05 far exceed 3000 char tree_summary limit. LLM only sees first portion, missing relevant sections in other chapters. **Confirmed by Q005**: CNV sub-atmospheric pressure info in Ch.01 was invisible when agent searched Ch.05.
+2. **Faithfulness metric instability**: RAGAs Faithfulness frequently times out when KG has many edges (>12). Context + answer tokens exceed evaluator's output limit.
+3. **RAGAs Context Recall sentence matching strictness**: Semantically equivalent but differently worded text scores 0.0. Agent answer can be correct while Context Recall is 0.
+4. **QA dataset errors**: Q004 expected answer contains factual error (SG "outside" RPV → actually inside). Need dataset review.
+5. **No semantic edge emergence in text_only questions**: SATISFIES/VIOLATES edges require regulatory compliance judgment questions, underrepresented in current QA dataset.
+6. **PageIndex node page ranges**: Only `page_index` (start) is stored, not `end_index`. Limits page range rendering accuracy.

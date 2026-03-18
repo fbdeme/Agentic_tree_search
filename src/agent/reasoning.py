@@ -156,10 +156,12 @@ class ReasoningModule:
                 "Use these visual materials to provide a more accurate and complete answer.\n"
             )
         system += (
-            "Your answer must include:\n"
-            "1. Core conclusion (stated clearly)\n"
-            "2. Key evidence citations with node IDs\n"
-            "3. Explicit mention of any uncertainties\n"
+            "Your answer must:\n"
+            "1. State the core conclusion directly\n"
+            "2. Quote or paraphrase the specific evidence from the knowledge graph that supports your conclusion "
+            "(include the exact values, terms, and node IDs)\n"
+            "3. Mention any uncertainties explicitly\n"
+            "Ground every claim in the provided context. Do not add information not found in the knowledge graph.\n"
             "Be concise. Answer in English. Keep your answer under 300 words."
         )
 
