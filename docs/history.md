@@ -137,11 +137,56 @@ Q005 is the most critical finding — it demonstrates the tree_summary truncatio
 
 ---
 
+## v0.3.0 — Tool-based Exploration (browse/read/search) (`d6311a0`)
+
+**Date**: 2026-03-18
+
+Replaced monolithic tree-summary search with file-system-like tool-based exploration.
+
+### Root Cause Addressed
+
+Previous search dumped entire tree summary (217K chars) into a single prompt, truncated to 3000 chars — only 1.4% visible. Ch.05 was completely invisible. This is like running `tree / | head -40` and asking "find a file here."
+
+### Changes
+- **Three exploration tools**:
+  - `browse(doc_id, node_id)`: list children of a node (like `ls`)
+  - `read(doc_id, node_id)`: get full content (like `cat`)
+  - `search(keyword)`: keyword search across all nodes (like `grep`)
+- **LLM selects tools** at each hop via JSON-based tool-use pattern
+- **Prompt strategy**: search with MULTIPLE keyword variants (question terms + likely answer terms)
+- **Skip already-read nodes**: prevent redundant reads across hops
+- **Legacy search preserved** for backward compatibility
+
+### Results (Q1-Q5)
+| Metric | tree-summary (v0.2.3) | tool-use (v0.3.0) |
+|--------|----------------------|-------------------|
+| Answer Relevancy | 0.92 | **0.91** |
+| Context Recall | 0.40 | **0.40** |
+| Faithfulness | 0.77 | 0.34 |
+| Factual Correctness | 0.47 | **0.37** |
+| Keyword Hit | 60% | 45% |
+
+### Key Findings
+- **Q003 Context Recall 0.00 → 1.00**: diverse keyword search found evidence across sections
+- **Q005 Context Recall 0.00 → 1.00**: `search("vacuum")` successfully called; Ch.05 context sufficient
+- **Q004**: cross-chapter search worked — found Ch.05 Steam Generators directly
+- **Q002**: dynamic termination at hop 3 (sufficient evidence)
+- **Faithfulness dropped**: agent reads large parent nodes (Preface, Chapter overview) → bloated context → RAGAs claim verification harder. Need to enforce "don't read large parent nodes" rule.
+- **browse under-utilized**: agent predominantly uses search, rarely drills down with browse
+
+### Issues Found
+- **"Power Output" node unreachable by search**: Q001's key node (0006) has title "Power Output" but no "thermal output" in summary/text first 800 chars. search("thermal output") returns 1 match (different node). Need to improve search to match title+summary+text holistically.
+- **Large node reads waste context**: Preface (14K chars), Chapter overview nodes pollute KG with generic content, reducing signal-to-noise for RAGAs evaluation.
+
+---
+
 ## Known Issues (Unresolved)
 
-1. **Tree summary truncation → cross-chapter search failure**: 866 nodes in Ch.01 + 26 in Ch.05 far exceed 3000 char tree_summary limit. LLM only sees first portion, missing relevant sections in other chapters. **Confirmed by Q005**: CNV sub-atmospheric pressure info in Ch.01 was invisible when agent searched Ch.05.
-2. **Faithfulness metric instability**: RAGAs Faithfulness frequently times out when KG has many edges (>12). Context + answer tokens exceed evaluator's output limit.
-3. **RAGAs Context Recall sentence matching strictness**: Semantically equivalent but differently worded text scores 0.0. Agent answer can be correct while Context Recall is 0.
+1. **~~Tree summary truncation~~** → Resolved by tool-based exploration (v0.3.0)
+2. **Faithfulness metric instability**: RAGAs Faithfulness drops when agent reads large parent nodes. Context becomes bloated and claim verification fails/times out.
+3. **RAGAs Context Recall sentence matching strictness**: Semantically equivalent but differently worded text scores 0.0.
 4. **QA dataset errors**: Q004 expected answer contains factual error (SG "outside" RPV → actually inside). Need dataset review.
-5. **No semantic edge emergence in text_only questions**: SATISFIES/VIOLATES edges require regulatory compliance judgment questions, underrepresented in current QA dataset.
-6. **PageIndex node page ranges**: Only `page_index` (start) is stored, not `end_index`. Limits page range rendering accuracy.
+5. **No semantic edge emergence in text_only questions**: SATISFIES/VIOLATES edges require regulatory compliance judgment questions.
+6. **PageIndex node page ranges**: Only `page_index` (start) stored, not `end_index`.
+7. **Search keyword mismatch**: Agent searches question terms, but key information may be expressed with different vocabulary in the document. Need synonym expansion or multi-keyword fallback.
+8. **browse tool under-utilized**: Agent defaults to search-heavy strategy. May need few-shot examples or stronger prompting for hierarchical drill-down.

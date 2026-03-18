@@ -12,12 +12,12 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 - [ ] Fix Faithfulness metric timeout — consider further context/answer truncation or switching to a lighter evaluator model
 - [ ] Validate that Vision RAG improves image_only question scores vs text-only baseline
 
-### Search (Action) Enhancement — CRITICAL (confirmed by Q005 failure)
-- [ ] Fix tree summary truncation (866 nodes exceed 3000 char limit) — **Q005 root cause**: agent couldn't find Ch.01 "sub-atmospheric" info while searching Ch.05
-  - Option A: Hierarchical drill-down (top-level first → drill into selected subtree)
-  - Option B: Paginated tree search (show tree in chunks)
-  - Option C: Two-stage search (coarse chapter selection → fine node selection within chapter)
-- [ ] Multi-document search reliability — ensure both Ch.01 and Ch.05 trees are visible to LLM
+### Search (Action) Enhancement
+- [x] ~~Fix tree summary truncation~~ → Replaced with tool-based exploration (v0.3.0)
+- [x] ~~Multi-document search reliability~~ → search() spans all documents (v0.3.0)
+- [ ] Prevent agent from reading large parent nodes (Preface, Chapter overview) — causes Faithfulness drop
+- [ ] Improve search keyword strategy — agent searches question terms but key info uses different vocabulary (e.g., "thermal output" vs "160 MWt")
+- [ ] Encourage browse tool usage — agent defaults to search-only, rarely does hierarchical drill-down
 - [ ] Store `end_index` in tree nodes (not just `page_index`) for accurate page range
 
 ### Data Quality
@@ -33,12 +33,10 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 ## Medium Priority
 
 ### Action Tooling (Search Enhancement v2)
-- [ ] Implement multi-tool Action pattern:
-  - `tree_search` — current approach (ToC-based reasoning)
-  - `text_search` — BM25/keyword search for specific values and terms
-  - `graph_query` — Neo4j Cypher queries on already-built KG
-  - `follow_ref` — follow node's Figure/Table references
-- [ ] Agent selects which tool to use per hop based on query type
+- [x] ~~Implement multi-tool Action pattern~~ → browse/read/search implemented (v0.3.0)
+- [ ] Add `follow_ref` tool — follow node's Figure/Table references as navigation
+- [ ] Add `graph_query` tool — query already-built KG relationships
+- [ ] Add few-shot examples to tool-use prompt for browse-based hierarchical exploration
 
 ### Vision Pipeline
 - [ ] Benchmark Vision vs text-only on image_only questions (Q051-Q070)
@@ -88,6 +86,8 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 - [x] Context alignment: RAGAs evaluation uses same context as agent (v0.2.3)
 - [x] Grounded answer generation: agent quotes evidence from KG (v0.2.3)
 - [x] Root cause analysis of Context Recall / Factual Correctness issues (v0.2.3)
+- [x] Tool-based exploration: browse/read/search replacing tree-summary search (v0.3.0)
+- [x] Verified Figure/Table references present in both Ch.01 (829 nodes) and Ch.05 (21 nodes)
 - [x] RAGAs evaluation framework integration
 - [x] Exclude already-explored nodes in search
 - [x] Unified edge inference (new↔existing + new↔new pairs)
