@@ -7,16 +7,17 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 ## High Priority
 
 ### Evaluation
-- [ ] Run full 100-question benchmark evaluation
-- [ ] Analyze results by question type (text_only, table_only, image_only, composite)
-- [ ] Fix Faithfulness metric timeout — consider further context/answer truncation or switching to a lighter evaluator model
-- [ ] Validate that Vision RAG improves image_only question scores vs text-only baseline
+- [x] ~~Run full 100-question benchmark evaluation~~ → Completed (v0.3.1), 99/100 success
+- [x] ~~Analyze results by question type~~ → See history.md v0.3.1 for full breakdown
+- [ ] Fix Faithfulness metric timeout — only 54/99 scored (45% failure rate). Consider lighter evaluator model or shorter context.
+- [ ] Investigate image_only low Factual Correctness (0.13) — is Vision RAG extracting useful info from diagrams?
+- [ ] Address Factual Correctness structural limitation — agent's detailed answers penalized vs terse expected answers
 
 ### Search (Action) Enhancement
 - [x] ~~Fix tree summary truncation~~ → Replaced with tool-based exploration (v0.3.0)
 - [x] ~~Multi-document search reliability~~ → search() spans all documents (v0.3.0)
-- [ ] Prevent agent from reading large parent nodes (Preface, Chapter overview) — causes Faithfulness drop
-- [ ] Improve search keyword strategy — agent searches question terms but key info uses different vocabulary (e.g., "thermal output" vs "160 MWt")
+- [x] ~~BM25 search ranking~~ → Replaces naive keyword match, specific nodes rank higher (v0.3.1)
+- [ ] Improve search keyword strategy — agent searches question terms but key info uses different vocabulary
 - [ ] Encourage browse tool usage — agent defaults to search-only, rarely does hierarchical drill-down
 - [ ] Store `end_index` in tree nodes (not just `page_index`) for accurate page range
 
@@ -96,3 +97,5 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 - [x] Dynamic termination condition (sufficient evidence → early stop)
 - [x] Summary-based KG context (fix content truncation issue)
 - [x] Research proposal with updated methodology (docs/research_proposal.md)
+- [x] BM25 search ranking replacing naive keyword match (v0.3.1)
+- [x] Full 100-question benchmark: 58 min (4x parallel), 99/100 success (v0.3.1)

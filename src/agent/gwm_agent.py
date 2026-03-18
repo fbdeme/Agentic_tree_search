@@ -258,7 +258,7 @@ class GWMAgent:
                 if results:
                     print(f"   🔎 search(\"{keyword}\"): {len(results)} matches")
                     for r in results[:3]:
-                        print(f"      [{r['doc_id']}::{r['node_id']}] {r['title'][:40]} (in {r['match_in']})")
+                        print(f"      [{r['doc_id']}::{r['node_id']}] {r['title'][:40]} (score={r.get('score', '?')})")
                     for r in results[:self.top_k]:
                         nodes_to_read.add((r["doc_id"], r["node_id"]))
 

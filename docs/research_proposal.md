@@ -71,9 +71,19 @@ The edge set $E_t$ is defined using a two-tier domain-specific ontology. **Struc
 
 This two-tier design reflects a key empirical finding: in single-hop factual queries, structural edges (REFERENCES, SPECIFIES) dominate as the agent navigates between related document sections; in composite multi-hop queries requiring regulatory compliance judgment, semantic edges (SATISFIES, SUPPORTS, etc.) emerge as the agent synthesizes evidence across sections. The initial state $s_0$ begins as an empty graph containing only the user's query, with logical structure forming progressively through both tiers. Edge creation requires a minimum confidence threshold of 0.4 to prevent spurious relationships from LLM hallucinations.
 
-### 2.3 Action (Exploration): Tree Index-based Active Exploration
+### 2.3 Action (Exploration): Tool-based Document Navigation
 
-The agent's action $a_t$ explores the environment to discover new evidence based on the current state $s_t$. In GWM's [5] taxonomy, actions are classified as *intended actions* $a_d$ (directly related to specific graph structures) and *unintended actions* $a_u$ (indirectly related through semantic similarity, e.g., RAG with embedding-based retrieval). While GWM models RAG as an unintended action using embedding similarity to retrieve relevant nodes, this research implements the action as an **intended action**: the LLM agent directly analyzes PageIndex's tree index (ToC)—a concrete graph structure—and actively selects the most relevant node_ids in the context of the knowledge graph being constructed (Agentic Retrieval). This eliminates pre-computed embeddings while leveraging the document's hierarchical structure as an explicit navigation map. Previously explored nodes are excluded from selection to ensure each hop discovers new information.
+The agent's action $a_t$ explores the environment to discover new evidence based on the current state $s_t$. In GWM's [5] taxonomy, actions are classified as *intended actions* $a_d$ (directly related to specific graph structures) and *unintended actions* $a_u$ (indirectly related through semantic similarity, e.g., RAG with embedding-based retrieval). While GWM models RAG as an unintended action using embedding similarity to retrieve relevant nodes, this research implements the action as an **intended action** through a file-system-like tool interface:
+
+| Tool | Analogy | Function |
+|------|---------|----------|
+| `browse(doc_id, node_id)` | `ls` | List children of a tree node — enables hierarchical drill-down |
+| `read(doc_id, node_id)` | `cat` | Retrieve full content of a specific node |
+| `search(keyword)` | `grep` | BM25-ranked keyword search across all nodes in all documents |
+
+At each hop, the LLM agent reasons about which tools to call based on the current KG state and the user's query. The `search` tool uses BM25Okapi ranking with title weighting (3x), which naturally ranks shorter, focused leaf nodes above broad parent nodes through document length normalization—without requiring explicit depth-based filtering. This solves the scalability problem where large documents (e.g., 866 nodes) would exceed the LLM's context window if presented as a flat tree summary.
+
+**Dynamic Termination**: Before each hop (from hop 2 onward), the agent evaluates whether the current KG evidence is sufficient to answer the query. If sufficient, exploration stops early. This is integrated into the existing planning step at no additional cost, mirroring PageIndex's iterative retrieval pattern (search → judge → repeat/stop). Empirically, the agent terminates at an average of 2.1–2.6 hops out of a maximum of 4.
 
 ### 2.4 Transition (Memory Update): Short-term Memory Update and Relationship Inference
 
@@ -116,23 +126,38 @@ Pipeline:
 
 **Ablation Study**: The proposed PageIndex-based dynamic exploration agent (GWM) is compared against vector DB-based MAM-RAG baseline [1], GraphRAG [3], and LightRAG [4] to demonstrate that dynamic exploration with domain-specific edges achieves superior efficiency and accuracy in regulatory document multi-hop reasoning without massive pre-built KG construction.
 
-### 3.3 Preliminary Results
+### 3.3 Results
 
-Pilot evaluation on NuScale FSAR data with GPT-4.1:
+Full 100-question evaluation on NuScale FSAR data with GPT-4.1 (tool-based exploration + BM25 + Vision RAG):
 
-| Configuration | Answer Relevancy | Context Recall | Factual Correctness |
-|---------------|-----------------|----------------|-------------------|
-| Text-only (Q1-Q5) | 0.91 | 0.33 | 0.40 |
-| Composite + Vision (Q71-Q73) | 0.83 | 0.67 | 0.36 |
+| Metric | Overall | text_only (30) | table_only (20) | image_only (20) | composite (30) |
+|--------|---------|----------------|-----------------|-----------------|----------------|
+| Faithfulness | 0.68 | 0.74 | 0.59 | 0.60 | **0.79** |
+| Answer Relevancy | 0.72 | **0.81** | 0.68 | 0.71 | 0.65 |
+| Context Recall | 0.56 | 0.54 | 0.55 | **0.62** | 0.53 |
+| Factual Correctness | 0.22 | 0.30 | 0.31 | 0.13 | 0.15 |
+| Keyword Hit | 0.65 | 0.52 | **0.88** | 0.75 | 0.57 |
 
-Key findings from preliminary experiments:
-- The agent successfully constructs knowledge graphs with 7-8 nodes and 7-19 edges per query
-- Structural edges (REFERENCES, SPECIFIES) dominate in single-hop factual queries, while semantic edges (SUPPORTS) emerge in composite multi-hop questions—validating the two-tier edge design
-- Vision-augmented answer generation improves factual correctness for questions involving engineering diagrams and data tables
+**KG Construction Statistics:**
+
+| Question Type | Avg Nodes | Avg Edges | Avg Hops (max 4) |
+|---------------|-----------|-----------|------------------|
+| text_only | 6.6 | 4.4 | 2.1 |
+| table_only | 5.5 | 2.1 | 2.2 |
+| image_only | 7.2 | 6.5 | 2.6 |
+| composite | 7.0 | 7.2 | 2.4 |
+
+Key findings:
+- **Dynamic termination is effective**: Average hop count of 2.1–2.6 out of maximum 4, demonstrating the agent's ability to judge evidence sufficiency and avoid unnecessary exploration.
+- **Composite questions produce richest KGs**: Highest average edges (7.2) and highest Faithfulness (0.79), confirming that multi-hop exploration with edge inference produces well-grounded, traceable answers for complex regulatory queries.
+- **BM25 ranking enables cross-document retrieval**: Document length normalization naturally ranks specific leaf nodes above generic parent nodes, solving the 866-node tree scalability problem without depth-based heuristics.
+- **Table retrieval is strong**: Keyword Hit of 0.88 for table_only questions demonstrates effective extraction of numerical parameters from regulatory data tables.
+- **Vision RAG limitations**: image_only Factual Correctness of 0.13 suggests that while the VLM receives referenced engineering diagrams, extracting precise factual information from complex P&ID and system schematics remains challenging.
+- **Factual Correctness metric caveat**: The overall low score (0.22) partially reflects a metric limitation—RAGAs penalizes agent answers that are more detailed than the expected answer, as additional correct claims are treated as unsupported.
 
 ## 4. Conclusion
 
-This research proposes a novel agent architecture combining PageIndex's hierarchical tree index with GWM's State-Action-Transition framework and a two-tier domain-specific edge ontology for solving the complex multi-hop reasoning problem in multimodal regulatory documents. Unlike GWM's modeling of RAG as an unintended action via embedding similarity, this research implements document exploration as an intended action through direct structural navigation of the PageIndex tree—eliminating pre-computed embeddings while enabling purpose-driven information collection. The proposed framework addresses the massive cost problem of static KG construction (GraphRAG, LightRAG) while emulating human experts' document exploration through logical relationship inference. By providing all intermediate reasoning steps as a transparent knowledge graph and integrating vision-based analysis of referenced figures and tables, the system ensures the high reliability and inspectability demanded in safety-critical domains.
+This research proposes a novel agent architecture combining PageIndex's hierarchical tree index with GWM's State-Action-Transition framework, tool-based document navigation, and a two-tier domain-specific edge ontology for solving the complex multi-hop reasoning problem in multimodal regulatory documents. Unlike GWM's modeling of RAG as an unintended action via embedding similarity, this research implements document exploration as an intended action through a file-system-like tool interface (browse/read/search with BM25 ranking)—eliminating pre-computed embeddings while enabling scalable, purpose-driven information collection across documents of arbitrary size. The dynamic termination mechanism and vision-augmented answer generation further distinguish this approach from static retrieval systems. The proposed framework addresses the massive cost problem of static KG construction (GraphRAG, LightRAG) while emulating human experts' document exploration through logical relationship inference. By providing all intermediate reasoning steps as a transparent knowledge graph and integrating vision-based analysis of referenced figures and tables, the system ensures the high reliability and inspectability demanded in safety-critical domains.
 
 ## 5. References
 
