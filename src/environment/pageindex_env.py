@@ -1,8 +1,9 @@
 """
-PageIndexEnvironment: PageIndex 오픈소스를 활용한 문서 탐색 환경
-- PDF → 계층적 트리 인덱스 생성 (pageindex_core 사용)
-- 트리를 순회하여 관련 노드 탐색
-- GWM의 World(Environment) 역할
+PageIndexEnvironment: Document exploration environment using PageIndex tree index.
+Provides file-system-like tools for agent navigation:
+  - browse(node_id): list children of a node (like `ls`)
+  - read(node_id): get full content of a node (like `cat`)
+  - search(keyword): find nodes containing keyword (like `grep`)
 """
 
 import sys
@@ -16,94 +17,216 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# pageindex_core 경로 추가 (프로젝트 루트에서 상대 경로)
 PAGEINDEX_PATH = Path(__file__).parent.parent.parent / "pageindex_core"
 sys.path.insert(0, str(PAGEINDEX_PATH))
 
 
 class PageIndexEnvironment:
     """
-    PageIndex 기반의 문서 탐색 환경.
-    
-    GWM의 World에 해당하며, 에이전트의 Action을 받아
-    관련 문서 섹션(Observation)을 반환합니다.
+    PageIndex-based document exploration environment.
+    Serves as GWM's World, providing tools for agent Actions.
     """
 
     def __init__(self, model: str = "gpt-4.1"):
         self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         self.model = model
-        self.documents: dict[str, dict] = {}  # doc_id -> tree 구조
-        self.node_cache: dict[str, dict] = {}  # node_id -> node dict
+        self.documents: dict[str, dict] = {}    # doc_id -> {tree, name, pdf_path}
+        self.node_cache: dict[str, dict] = {}   # "doc_id::node_id" -> node dict
+        self.parent_map: dict[str, str] = {}    # "doc_id::node_id" -> "doc_id::parent_node_id"
 
     # -----------------------------------------------------------
-    # 문서 등록
+    # Document registration
     # -----------------------------------------------------------
     def register_tree(self, doc_id: str, tree: list, doc_name: str = "",
                       pdf_path: str = "") -> None:
-        """
-        Register a pre-generated PageIndex tree into the environment.
-        """
         self.documents[doc_id] = {
             "tree": tree,
             "name": doc_name or doc_id,
             "pdf_path": pdf_path,
         }
-        # 모든 노드를 플랫하게 캐싱
         self._cache_nodes(doc_id, tree)
-        print(f"[Environment] 문서 등록됨: {doc_id} ({len(self.node_cache)} 노드 캐싱)")
+        print(f"[Environment] Registered: {doc_id} ({len(self.node_cache)} nodes cached)")
 
-    def _cache_nodes(self, doc_id: str, nodes: list, depth: int = 0) -> None:
-        """트리를 DFS로 순회하며 모든 노드를 캐싱"""
+    def _cache_nodes(self, doc_id: str, nodes: list, depth: int = 0,
+                     parent_key: str = "") -> None:
         for node in nodes:
             nid = node.get("node_id", "")
             if nid:
-                self.node_cache[f"{doc_id}::{nid}"] = {
+                cache_key = f"{doc_id}::{nid}"
+                self.node_cache[cache_key] = {
                     **node,
                     "doc_id": doc_id,
                     "depth": depth,
                 }
+                if parent_key:
+                    self.parent_map[cache_key] = parent_key
             sub = node.get("nodes", [])
             if sub:
-                self._cache_nodes(doc_id, sub, depth + 1)
+                self._cache_nodes(doc_id, sub, depth + 1,
+                                  parent_key=f"{doc_id}::{nid}" if nid else parent_key)
 
     # -----------------------------------------------------------
-    # 트리 요약 (LLM 탐색 계획 수립용)
+    # Tool 1: browse — list children of a node (like `ls`)
     # -----------------------------------------------------------
-    def get_tree_summary(self, doc_ids: Optional[list[str]] = None) -> str:
+    def browse(self, doc_id: str = None, node_id: str = None) -> list[dict]:
         """
-        등록된 문서(들)의 트리 구조를 LLM이 읽기 쉬운 텍스트로 변환.
-        에이전트가 다음 탐색 계획을 세울 때 사용.
-        """
-        if doc_ids is None:
-            doc_ids = list(self.documents.keys())
+        List children of a node. If node_id is None, returns root-level nodes.
+        Like `ls` in a file system.
 
-        lines = []
-        for doc_id in doc_ids:
-            if doc_id not in self.documents:
+        Returns:
+            [{"doc_id", "node_id", "title", "page_index", "summary", "n_children"}, ...]
+        """
+        if doc_id is None:
+            # List all documents and their root nodes
+            results = []
+            for did, doc in self.documents.items():
+                for node in doc["tree"]:
+                    results.append(self._node_listing(did, node))
+            return results
+
+        if doc_id not in self.documents:
+            return []
+
+        if node_id is None:
+            # Root level of this document
+            return [self._node_listing(doc_id, n)
+                    for n in self.documents[doc_id]["tree"]]
+
+        # Children of specific node
+        cache_key = f"{doc_id}::{node_id}"
+        if cache_key not in self.node_cache:
+            return []
+
+        node = self.node_cache[cache_key]
+        children = node.get("nodes", [])
+        return [self._node_listing(doc_id, c) for c in children]
+
+    def _node_listing(self, doc_id: str, node: dict) -> dict:
+        return {
+            "doc_id": doc_id,
+            "node_id": node.get("node_id", ""),
+            "title": node.get("title", "Untitled"),
+            "page_index": node.get("page_index", 0),
+            "summary": (node.get("summary", "") or "")[:150],
+            "n_children": len(node.get("nodes", [])),
+        }
+
+    # -----------------------------------------------------------
+    # Tool 2: read — get full content of a node (like `cat`)
+    # -----------------------------------------------------------
+    def read(self, doc_id: str, node_id: str) -> Optional[dict]:
+        """
+        Get full content of a specific node.
+        Like `cat` in a file system.
+
+        Returns:
+            {"doc_id", "node_id", "title", "content", "summary",
+             "page_range", "references", "n_children"}
+        """
+        cache_key = f"{doc_id}::{node_id}"
+        node = self.node_cache.get(cache_key)
+        if not node:
+            return None
+
+        return {
+            "doc_id": doc_id,
+            "node_id": node_id,
+            "title": node.get("title", ""),
+            "content": node.get("text", node.get("summary", "")),
+            "summary": node.get("summary", ""),
+            "page_range": str(node.get("start_index", node.get("page_index", "?"))),
+            "references": node.get("references", []),
+            "n_children": len(node.get("nodes", [])),
+        }
+
+    # -----------------------------------------------------------
+    # Tool 3: search — keyword search across all nodes (like `grep`)
+    # -----------------------------------------------------------
+    def search(self, keyword: str, doc_ids: Optional[list[str]] = None,
+               max_results: int = 5) -> list[dict]:
+        """
+        Search for keyword across all node titles, summaries, and text.
+        Like `grep` in a file system.
+
+        Returns:
+            [{"doc_id", "node_id", "title", "page_index", "match_in", "snippet"}, ...]
+        """
+        keyword_lower = keyword.lower()
+        results = []
+
+        for cache_key, node in self.node_cache.items():
+            doc_id = node.get("doc_id", "")
+            if doc_ids and doc_id not in doc_ids:
                 continue
-            doc = self.documents[doc_id]
-            lines.append(f"\n📄 문서: {doc['name']} (id={doc_id})")
-            lines.append(self._tree_to_text(doc["tree"], indent=0))
-        return "\n".join(lines)
 
-    def _tree_to_text(self, nodes: list, indent: int = 0) -> str:
-        lines = []
-        prefix = "  " * indent
-        for node in nodes:
-            nid = node.get("node_id", "?")
-            title = node.get("title", "Untitled")
-            summary = node.get("summary", "")[:100]
-            page = node.get("page_index") or node.get("start_index", "?")
-            lines.append(f"{prefix}[{nid}] p.{page} {title}")
-            if summary:
-                lines.append(f"{prefix}    → {summary}")
-            sub = node.get("nodes", [])
-            if sub:
-                lines.append(self._tree_to_text(sub, indent + 1))
-        return "\n".join(lines)
+            # Search in title, summary, text
+            title = node.get("title", "")
+            summary = node.get("summary", "")
+            text = node.get("text", "")
+
+            match_in = None
+            snippet = ""
+
+            if keyword_lower in title.lower():
+                match_in = "title"
+                snippet = title
+            elif keyword_lower in (summary or "").lower():
+                match_in = "summary"
+                idx = summary.lower().find(keyword_lower)
+                start = max(0, idx - 50)
+                snippet = summary[start:idx + len(keyword) + 50]
+            elif keyword_lower in (text or "").lower():
+                match_in = "text"
+                idx = text.lower().find(keyword_lower)
+                start = max(0, idx - 50)
+                snippet = text[start:idx + len(keyword) + 50]
+
+            if match_in:
+                results.append({
+                    "doc_id": doc_id,
+                    "node_id": node.get("node_id", ""),
+                    "title": title,
+                    "page_index": node.get("page_index", 0),
+                    "match_in": match_in,
+                    "snippet": snippet.strip(),
+                })
+
+            if len(results) >= max_results:
+                break
+
+        return results
 
     # -----------------------------------------------------------
-    # 노드 탐색 (핵심: GWM Action → Observation)
+    # Tool descriptions for LLM tool-use
+    # -----------------------------------------------------------
+    def get_tool_descriptions(self) -> str:
+        """Return tool descriptions for the LLM to choose from."""
+        docs = []
+        for did, doc in self.documents.items():
+            docs.append(f"  - {did}: {doc['name']}")
+
+        return f"""You have access to three tools for exploring regulatory documents:
+
+Available documents:
+{chr(10).join(docs)}
+
+Tools:
+1. browse(doc_id, node_id)
+   - Lists the children of a node (like `ls` in a file system)
+   - Use doc_id=null, node_id=null to see root-level nodes of all documents
+   - Use node_id=null to see root-level nodes of a specific document
+   - Use both to drill down into a specific section
+
+2. read(doc_id, node_id)
+   - Returns the full content of a specific node (like `cat`)
+   - Use this when you've identified a relevant section and want to read it
+
+3. search(keyword)
+   - Searches for a keyword across all node titles, summaries, and text (like `grep`)
+   - Use this when you know a specific term, value, or concept to find"""
+
+    # -----------------------------------------------------------
+    # Legacy: search_relevant_nodes (for backward compatibility)
     # -----------------------------------------------------------
     def search_relevant_nodes(
         self,
@@ -112,16 +235,7 @@ class PageIndexEnvironment:
         top_k: int = 3,
         exclude_node_ids: Optional[set[str]] = None,
     ) -> list[dict]:
-        """
-        쿼리에 가장 관련도 높은 노드를 트리에서 선택합니다.
-        GPT가 트리 구조를 보고 가장 관련있는 node_id를 선택 (Agentic Retrieval).
-
-        Args:
-            exclude_node_ids: 이미 탐색한 노드 ID 집합 (format: "{doc_id}_{node_id}")
-
-        Returns:
-            [{"node_id": "...", "doc_id": "...", "title": "...", "content": "..."}, ...]
-        """
+        """Legacy method — kept for backward compatibility."""
         if doc_ids is None:
             doc_ids = list(self.documents.keys())
 
@@ -183,10 +297,34 @@ class PageIndexEnvironment:
                 )
         return results
 
-    def get_node_content(self, doc_id: str, node_id: str) -> Optional[dict]:
-        """특정 node_id의 전체 내용 반환"""
-        cache_key = f"{doc_id}::{node_id}"
-        return self.node_cache.get(cache_key)
+    def get_tree_summary(self, doc_ids: Optional[list[str]] = None) -> str:
+        """Legacy: full tree summary text."""
+        if doc_ids is None:
+            doc_ids = list(self.documents.keys())
+        lines = []
+        for doc_id in doc_ids:
+            if doc_id not in self.documents:
+                continue
+            doc = self.documents[doc_id]
+            lines.append(f"\n📄 {doc['name']} (id={doc_id})")
+            lines.append(self._tree_to_text(doc["tree"], indent=0))
+        return "\n".join(lines)
+
+    def _tree_to_text(self, nodes: list, indent: int = 0) -> str:
+        lines = []
+        prefix = "  " * indent
+        for node in nodes:
+            nid = node.get("node_id", "?")
+            title = node.get("title", "Untitled")
+            summary = node.get("summary", "")[:100]
+            page = node.get("page_index") or node.get("start_index", "?")
+            lines.append(f"{prefix}[{nid}] p.{page} {title}")
+            if summary:
+                lines.append(f"{prefix}    → {summary}")
+            sub = node.get("nodes", [])
+            if sub:
+                lines.append(self._tree_to_text(sub, indent + 1))
+        return "\n".join(lines)
 
     @property
     def doc_count(self) -> int:

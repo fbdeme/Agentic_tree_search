@@ -1,24 +1,52 @@
 """
-GWMAgent: Graph World Model 기반 다중 홉 문서 탐색 에이전트
-- State: DynamicSubKG (동적 지식그래프)
-- Action: PageIndex 환경에서 관련 노드 탐색
-- Transition: KG에 노드/엣지 추가 + 관계 추론
+GWMAgent: Graph World Model based multi-hop document exploration agent.
+- State: DynamicSubKG (dynamic knowledge graph)
+- Action: Tool-based exploration (browse, read, search)
+- Transition: Add nodes/edges to KG + relationship inference
 """
 
 import json
 import os
+import re
 from typing import Optional
 from src.state.knowledge_graph import DynamicSubKG, KGNode, KGEdge
 from src.environment.pageindex_env import PageIndexEnvironment
 from src.agent.reasoning import ReasoningModule
 
 
+TOOL_USE_SYSTEM = """You are an AI agent exploring regulatory documents to answer a user's question.
+You navigate documents like a file system using three tools:
+
+{tool_descriptions}
+
+Respond ONLY in JSON format:
+{{
+    "thinking": "your reasoning about what to do next",
+    "actions": [
+        {{"tool": "browse", "doc_id": "...", "node_id": "...or null"}},
+        {{"tool": "read", "doc_id": "...", "node_id": "..."}},
+        {{"tool": "search", "keyword": "..."}}
+    ]
+}}
+
+Strategy:
+1. FIRST HOP: Always start with search() using key technical terms from the question.
+   Try MULTIPLE keyword variants — both the question's phrasing AND likely answer terms.
+   Example: for "What is the internal pressure of the CNV?", search both
+   "containment pressure" AND "sub-atmospheric" AND "vacuum".
+2. Use browse() to explore the tree hierarchy when search isn't finding results.
+3. Use read() to get full content of nodes identified by search or browse.
+4. Do NOT read large parent nodes (Preface, Chapter overview) — drill down to specific subsections.
+5. Do NOT re-read nodes you've already explored.
+6. Return 1-3 actions per step."""
+
+
 class GWMAgent:
     """
-    GWM State-Action-Transition 루프 구현.
-    
-    에이전트는 빈 그래프 G_0에서 시작하여
-    max_hops 번의 탐색을 통해 점진적으로 KG를 구축합니다.
+    GWM State-Action-Transition loop with tool-based exploration.
+
+    The agent starts with an empty graph G_0 and progressively builds a KG
+    through multi-hop exploration using browse/read/search tools.
     """
 
     def __init__(
@@ -35,80 +63,56 @@ class GWMAgent:
         self.reasoning = ReasoningModule(model=model)
 
     # -----------------------------------------------------------
-    # 메인 루프: run()
+    # Main loop: run()
     # -----------------------------------------------------------
     def run(self, question: str, doc_ids: Optional[list[str]] = None) -> dict:
-        """
-        사용자 질의에 대한 GWM 멀티-홉 추론 실행.
-
-        Returns:
-            {
-                "answer": str,
-                "kg": DynamicSubKG,
-                "trajectory": list[str],
-                "hops_used": int,
-            }
-        """
         print(f"\n{'='*60}")
-        print(f"🤖 GWM Agent 시작")
-        print(f"   질의: {question}")
-        print(f"   최대 Hop: {self.max_hops}  |  Top-K: {self.top_k}")
+        print(f"🤖 GWM Agent (tool-use)")
+        print(f"   Query: {question}")
+        print(f"   Max hops: {self.max_hops}")
         print(f"{'='*60}\n")
 
-        # G_0: Empty knowledge graph initialization
         kg = DynamicSubKG(question=question)
         trajectory: list[str] = []
-        current_query = question
         actual_hops = 0
+        already_read: set[str] = set()
 
         for hop in range(1, self.max_hops + 1):
             kg.current_hop = hop
-            print(f"\n🔍 [Hop {hop}/{self.max_hops}] 탐색 시작")
-            print(f"   현재 KG: {kg}")
+            print(f"\n🔍 [Hop {hop}/{self.max_hops}]")
+            print(f"   KG: {kg}")
 
-            # ── Action: Plan next search + check sufficiency ────────
+            # ── Check sufficiency (hop 2+) ────────────────────────
             if hop > 1:
-                tree_summary = self.env.get_tree_summary(doc_ids)
                 plan = self.reasoning.plan_next_search(
                     question=question,
-                    kg_context=kg.to_context_string(max_content_len=800),
-                    tree_summary=tree_summary[:3000],
+                    kg_context=kg.to_context_string(),
+                    tree_summary="(use tools to explore)",
                 )
-
                 if plan["sufficient"]:
-                    print(f"   ✅ Evidence sufficient — stopping early at hop {hop}")
-                    print(f"      Reason: {plan['reasoning'][:100]}")
+                    print(f"   ✅ Evidence sufficient — stopping at hop {hop}")
                     trajectory.append(f"Hop {hop}: Early stop — evidence sufficient")
                     break
 
-                current_query = plan["next_search_query"]
-                print(f"   📋 Next query: {current_query}")
+            # ── Action: Tool-based exploration ────────────────────
+            tool_actions = self._plan_tool_actions(question, kg, doc_ids)
+            retrieved = self._execute_tools(tool_actions, doc_ids, already_read)
 
-            # ── Action: PageIndex 환경 탐색 ────────────────────────
-            retrieved = self.env.search_relevant_nodes(
-                query=current_query,
-                doc_ids=doc_ids,
-                top_k=self.top_k,
-                exclude_node_ids=set(kg.nodes.keys()),
-            )
             if not retrieved:
-                print(f"   ⚠️  Hop {hop}: 관련 노드를 찾지 못했습니다.")
-                trajectory.append(f"Hop {hop}: 관련 섹션 없음 (쿼리: {current_query})")
+                print(f"   ⚠️  No new nodes found")
+                trajectory.append(f"Hop {hop}: no results")
                 continue
 
+            # ── Transition: Add nodes + infer edges ───────────────
             hop_log = []
             new_nodes: list[KGNode] = []
 
-            # ── Transition: KG 노드 추가 ───────────────────────────
             for r in retrieved:
                 node_id = f"{r['doc_id']}_{r['node_id']}"
                 if kg.has_node(node_id):
-                    print(f"   ↩️  이미 탐색된 노드 스킵: [{node_id}]")
                     continue
 
-                # 요약 생성
                 summary = self.reasoning.summarize_node(r["title"], r["content"])
-
                 new_node = KGNode(
                     node_id=node_id,
                     title=r["title"],
@@ -118,70 +122,59 @@ class GWMAgent:
                     page_range=r["page_range"],
                     references=r.get("references", []),
                 )
-                added = kg.add_node(new_node)
-                if added:
+                if kg.add_node(new_node):
                     new_nodes.append(new_node)
-                    hop_log.append(f"노드 추가: [{node_id}] {r['title']}")
-                    print(f"   ✅ 노드 추가: [{node_id}] {r['title'][:50]}")
-                    print(f"      요약: {summary[:100]}")
+                    hop_log.append(f"node: [{node_id}] {r['title'][:40]}")
+                    print(f"   ✅ Node: [{node_id}] {r['title'][:50]}")
 
-            # ── Transition: 엣지 생성 (관계 추론) ─────────────────
-            # 비교 대상 쌍 수집: (new↔existing) + (new↔new)
+            # Edge inference: new↔existing + new↔new
             existing_nodes = [
-                n for nid, n in kg.nodes.items() if nid not in [nn.node_id for nn in new_nodes]
+                n for nid, n in kg.nodes.items()
+                if nid not in [nn.node_id for nn in new_nodes]
             ]
 
-            pairs_to_compare = []
-            # 1) 새 노드 ↔ 기존 노드 (기존 노드 최대 3개)
-            for new_node in new_nodes:
-                for existing_node in existing_nodes[:3]:
-                    pairs_to_compare.append((new_node, existing_node))
-            # 2) 새 노드 ↔ 새 노드 (Hop 1에서도 관계 추론 보장)
+            pairs = []
+            for nn in new_nodes:
+                for en in existing_nodes[:3]:
+                    pairs.append((nn, en))
             for i, na in enumerate(new_nodes):
                 for nb in new_nodes[i + 1:]:
-                    pairs_to_compare.append((na, nb))
+                    pairs.append((na, nb))
 
-            for node_a, node_b in pairs_to_compare:
-                rel_result = self.reasoning.infer_relation(
+            for node_a, node_b in pairs:
+                rel = self.reasoning.infer_relation(
                     node_a_title=node_a.title,
                     node_a_content=node_a.content,
                     node_b_title=node_b.title,
                     node_b_content=node_b.content,
                     question=question,
                 )
-                relation = rel_result.get("relation", "NONE")
-                confidence = rel_result.get("confidence", 0.5)
-                reasoning_text = rel_result.get("reasoning", "")
-
+                relation = rel.get("relation", "NONE")
+                confidence = rel.get("confidence", 0.5)
                 if relation != "NONE" and confidence >= 0.4:
                     edge = KGEdge(
                         source_id=node_a.node_id,
                         target_id=node_b.node_id,
                         relation=relation,
                         confidence=confidence,
-                        reasoning=reasoning_text,
+                        reasoning=rel.get("reasoning", ""),
                     )
                     if kg.add_edge(edge):
-                        hop_log.append(
-                            f"edge: [{node_a.node_id}] --{relation}--> [{node_b.node_id}]"
-                        )
-                        print(
-                            f"   🔗 Edge: [{node_a.node_id[:25]}] "
-                            f"--{relation}({confidence:.2f})--> [{node_b.node_id[:25]}]"
-                        )
+                        hop_log.append(f"edge: {relation}")
+                        print(f"   🔗 {node_a.node_id[:20]} --{relation}--> {node_b.node_id[:20]}")
 
             trajectory.append(f"Hop {hop}: " + " | ".join(hop_log) if hop_log else f"Hop {hop}: no new nodes")
             actual_hops = hop
 
-        # ── Collect referenced Figure/Table images ────────────────
+        # ── Collect reference images ──────────────────────────────
         reference_images = self._collect_reference_images(kg, doc_ids)
 
-        # ── Generate final answer ────────────────────────────────
+        # ── Generate final answer ─────────────────────────────────
         print(f"\n{'='*60}")
-        print(f"📝 Generating final answer...")
-        print(f"   Final KG: {kg}")
+        print(f"📝 Final answer generation...")
+        print(f"   KG: {kg}")
         if reference_images:
-            print(f"   📷 Referenced images: {len(reference_images)}")
+            print(f"   📷 Images: {len(reference_images)}")
         print(f"{'='*60}")
 
         answer = self.reasoning.generate_answer(
@@ -198,15 +191,98 @@ class GWMAgent:
             "hops_used": actual_hops,
         }
 
+    # -----------------------------------------------------------
+    # Tool-based action planning
+    # -----------------------------------------------------------
+    def _plan_tool_actions(self, question: str, kg: DynamicSubKG,
+                           doc_ids: Optional[list[str]]) -> list[dict]:
+        """LLM decides which tools to call based on current state."""
+        system = TOOL_USE_SYSTEM.format(
+            tool_descriptions=self.env.get_tool_descriptions()
+        )
+
+        explored = list(kg.nodes.keys())
+        explored_str = ", ".join(explored) if explored else "(none)"
+
+        user = (
+            f"Question: {question}\n\n"
+            f"Already explored nodes: {explored_str}\n\n"
+            f"Current knowledge:\n{kg.to_context_string()}\n\n"
+            f"What tools should I call next to find the answer?"
+        )
+
+        response = self.reasoning._call(system, user, max_tokens=512)
+
+        try:
+            cleaned = re.sub(r"```json\s*|\s*```", "", response).strip()
+            result = json.loads(cleaned)
+            actions = result.get("actions", [])
+            thinking = result.get("thinking", "")
+            if thinking:
+                print(f"   💭 {thinking[:100]}")
+            return actions
+        except Exception:
+            # Fallback: search with the question
+            return [{"tool": "search", "keyword": question.split()[0]}]
+
+    def _execute_tools(self, actions: list[dict],
+                       doc_ids: Optional[list[str]],
+                       already_read: set[str] = None) -> list[dict]:
+        """Execute tool actions and return retrieved nodes to add to KG."""
+        if already_read is None:
+            already_read = set()
+
+        retrieved = []
+        nodes_to_read = set()
+
+        for action in actions:
+            tool = action.get("tool", "")
+
+            if tool == "browse":
+                doc_id = action.get("doc_id")
+                node_id = action.get("node_id")
+                results = self.env.browse(doc_id, node_id)
+                if results:
+                    print(f"   📂 browse({doc_id}, {node_id}): {len(results)} items")
+                    for r in results[:5]:
+                        print(f"      [{r['node_id']}] {r['title'][:50]} ({r['n_children']} children)")
+
+            elif tool == "read":
+                doc_id = action.get("doc_id", "")
+                node_id = action.get("node_id", "")
+                nodes_to_read.add((doc_id, node_id))
+
+            elif tool == "search":
+                keyword = action.get("keyword", "")
+                results = self.env.search(keyword, doc_ids)
+                if results:
+                    print(f"   🔎 search(\"{keyword}\"): {len(results)} matches")
+                    for r in results[:3]:
+                        print(f"      [{r['doc_id']}::{r['node_id']}] {r['title'][:40]} (in {r['match_in']})")
+                    for r in results[:self.top_k]:
+                        nodes_to_read.add((r["doc_id"], r["node_id"]))
+
+        # Read queued nodes (skip already read)
+        for doc_id, node_id in nodes_to_read:
+            key = f"{doc_id}_{node_id}"
+            if key in already_read:
+                continue
+            already_read.add(key)
+
+            node_data = self.env.read(doc_id, node_id)
+            if node_data and node_data.get("content"):
+                retrieved.append(node_data)
+                print(f"   📖 read({doc_id}, {node_id}): {node_data['title'][:50]}")
+
+        return retrieved
+
+    # -----------------------------------------------------------
+    # Collect reference images for VLM
+    # -----------------------------------------------------------
     def _collect_reference_images(
         self, kg, doc_ids: list[str] | None, max_images: int = 6
     ) -> list[str]:
-        """
-        Collect unique referenced Figure/Table page images from all KG nodes.
-        Returns list of base64-encoded JPEG images.
-        """
-        # Gather unique (doc_id, page) pairs from references
-        ref_pages: dict[str, set[int]] = {}  # doc_id -> set of page numbers
+        ref_pages: dict[str, set[int]] = {}
         for nid, node in kg.nodes.items():
             for ref in node.references:
                 doc_id = node.source_doc
@@ -219,7 +295,6 @@ class GWMAgent:
         if not ref_pages:
             return []
 
-        # Render images using PDF paths from environment
         from src.utils.vision import render_pdf_pages
 
         all_images = []
