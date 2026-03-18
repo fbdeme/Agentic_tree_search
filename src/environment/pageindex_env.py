@@ -33,6 +33,7 @@ class PageIndexEnvironment:
         self.documents: dict[str, dict] = {}    # doc_id -> {tree, name, pdf_path}
         self.node_cache: dict[str, dict] = {}   # "doc_id::node_id" -> node dict
         self.parent_map: dict[str, str] = {}    # "doc_id::node_id" -> "doc_id::parent_node_id"
+        self._bm25_index = None                 # Built lazily on first search
 
     # -----------------------------------------------------------
     # Document registration
@@ -140,59 +141,90 @@ class PageIndexEnvironment:
         }
 
     # -----------------------------------------------------------
-    # Tool 3: search — keyword search across all nodes (like `grep`)
+    # Tool 3: search — BM25-ranked keyword search (like `grep | sort`)
     # -----------------------------------------------------------
+    def _build_bm25_index(self) -> None:
+        """Build BM25 index over all cached nodes. Called lazily on first search."""
+        from rank_bm25 import BM25Okapi
+
+        self._bm25_keys = []     # cache_keys in index order
+        self._bm25_corpus = []   # tokenized documents
+
+        for cache_key, node in self.node_cache.items():
+            title = node.get("title", "")
+            summary = node.get("summary", "") or ""
+            text = node.get("text", "") or ""
+            # Combine all searchable text, weight title higher by repeating
+            combined = f"{title} {title} {title} {summary} {text}"
+            tokens = combined.lower().split()
+            self._bm25_keys.append(cache_key)
+            self._bm25_corpus.append(tokens)
+
+        self._bm25_index = BM25Okapi(self._bm25_corpus)
+
     def search(self, keyword: str, doc_ids: Optional[list[str]] = None,
                max_results: int = 5) -> list[dict]:
         """
-        Search for keyword across all node titles, summaries, and text.
-        Like `grep` in a file system.
+        BM25-ranked search across all node titles, summaries, and text.
+
+        BM25 naturally handles:
+        - Term frequency: nodes mentioning the keyword more often score higher
+        - Document length normalization: shorter, focused nodes score higher
+          than long parent nodes with the same keyword count
+        - IDF: rare terms across the corpus get higher weight
 
         Returns:
-            [{"doc_id", "node_id", "title", "page_index", "match_in", "snippet"}, ...]
+            [{"doc_id", "node_id", "title", "page_index", "score", "snippet"}, ...]
         """
-        keyword_lower = keyword.lower()
-        results = []
+        if self._bm25_index is None:
+            self._build_bm25_index()
 
-        for cache_key, node in self.node_cache.items():
+        query_tokens = keyword.lower().split()
+        scores = self._bm25_index.get_scores(query_tokens)
+
+        # Pair scores with cache keys and sort descending
+        scored = sorted(zip(scores, self._bm25_keys), reverse=True)
+
+        results = []
+        for score, cache_key in scored:
+            if score <= 0:
+                break
+            if len(results) >= max_results:
+                break
+
+            node = self.node_cache[cache_key]
             doc_id = node.get("doc_id", "")
             if doc_ids and doc_id not in doc_ids:
                 continue
 
-            # Search in title, summary, text
+            # Extract snippet around keyword
             title = node.get("title", "")
-            summary = node.get("summary", "")
-            text = node.get("text", "")
+            summary = node.get("summary", "") or ""
+            text = node.get("text", "") or ""
+            keyword_lower = keyword.lower()
 
-            match_in = None
             snippet = ""
-
             if keyword_lower in title.lower():
-                match_in = "title"
                 snippet = title
-            elif keyword_lower in (summary or "").lower():
-                match_in = "summary"
+            elif keyword_lower in summary.lower():
                 idx = summary.lower().find(keyword_lower)
                 start = max(0, idx - 50)
                 snippet = summary[start:idx + len(keyword) + 50]
-            elif keyword_lower in (text or "").lower():
-                match_in = "text"
+            elif keyword_lower in text.lower():
                 idx = text.lower().find(keyword_lower)
                 start = max(0, idx - 50)
                 snippet = text[start:idx + len(keyword) + 50]
+            else:
+                snippet = title  # BM25 matched on tokenized terms
 
-            if match_in:
-                results.append({
-                    "doc_id": doc_id,
-                    "node_id": node.get("node_id", ""),
-                    "title": title,
-                    "page_index": node.get("page_index", 0),
-                    "match_in": match_in,
-                    "snippet": snippet.strip(),
-                })
-
-            if len(results) >= max_results:
-                break
+            results.append({
+                "doc_id": doc_id,
+                "node_id": node.get("node_id", ""),
+                "title": title,
+                "page_index": node.get("page_index", 0),
+                "score": round(float(score), 2),
+                "snippet": snippet.strip(),
+            })
 
         return results
 
