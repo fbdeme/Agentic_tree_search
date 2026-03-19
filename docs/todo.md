@@ -18,7 +18,7 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 - [x] ~~Fix tree summary truncation~~ → Replaced with tool-based exploration (v0.3.0)
 - [x] ~~Multi-document search reliability~~ → search() spans all documents (v0.3.0)
 - [x] ~~BM25 search ranking~~ → Replaces naive keyword match, specific nodes rank higher (v0.3.1)
-- [ ] Improve search keyword strategy — agent searches question terms but key info uses different vocabulary
+- [ ] **Action history / search memory**: Agent repeats same keywords across hops (Q035: "pressurizer volume" × 4 hops). Need to pass previous search queries + results in prompt so agent tries different keywords. Could be simple (search log in prompt) or structural (action history as State extension). See history.md v0.4.1 analysis.
 - [ ] Encourage browse tool usage — agent defaults to search-only, rarely does hierarchical drill-down
 - [ ] Store `end_index` in tree nodes (not just `page_index`) for accurate page range
 
@@ -105,3 +105,6 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 - [x] BM25 caption indexing: reference captions now searchable (v0.3.2)
 - [x] Root cause analysis: Faithfulness N/A = answer length + KG size, not images (v0.3.2)
 - [x] Description-first two-stage edge inference — CONTRADICTS/SATISFIES/SEMANTIC now emerge (v0.4.0)
+- [x] Structured table extraction via PyMuPDF find_tables() (v0.4.1)
+- [x] Table data passed directly in answer context (not via VLM image) (v0.4.1)
+- [x] Figure/Table split: tables as text, figures as VLM images (v0.4.1)

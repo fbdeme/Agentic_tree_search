@@ -306,12 +306,51 @@ Q003 alone produced 45 edges including CONTRADICTS and SATISFIES — types that 
 
 ---
 
+---
+
+## v0.4.1 — Structured Table Extraction + Table/Figure Split (`4f35255`, `TBD`)
+
+**Date**: 2026-03-19
+
+### Root Cause: Table Data Unreachable
+
+table_only Q031-Q035 all scored AR=0.0, FC=0.0. Investigation revealed:
+
+1. **PDF text extraction corrupts table cells**: PyMuPDF `get_text()` merges adjacent cells — "635Cold Leg" instead of "635 | Cold Leg". BM25 tokenizer (`text.split()`) creates token "635cold", making `search("635")` return 0 results.
+
+2. **PageIndex doesn't handle tables specially**: `add_node_text()` simply concatenates page text. No table detection or structuring.
+
+3. **PyMuPDF `find_tables()` exists**: Extracts clean structured rows/columns as DataFrames.
+
+### Changes
+- **Structured table extraction** in `build_trees.py`: `find_tables()` + `to_pandas()` → pipe-delimited text stored as `structured_text` in table references
+- **BM25 index includes structured_text**: `search("635")` now finds results
+- **`read()` appends structured tables**: Node content includes clean table data
+- **`generate_answer()` receives table context**: `_collect_table_context()` passes deduplicated structured tables directly in KG context
+- **Figure/Table split for VLM**: `_collect_reference_images()` excludes table pages (tables passed as text), giving more image slots to figures
+
+### Results (Q31-Q35, table_only)
+
+| Question | Before (v0.4.0) | After |
+|----------|-----------------|-------|
+| Q031 (Hot Leg 635) | AR=0.0 FC=0.0 | **AR=0.85 FC=0.50** |
+| Q032 (Cold Leg 578) | AR=0.0 FC=0.0 | **AR=0.81 FC=0.50** |
+| Q033 (Core 89) | AR=0.0 FC=0.0 | **AR=0.79 FC=0.40** |
+| Q034 (SG 621) | AR=0.0 FC=0.0 | **AR=0.84 FC=0.50** |
+| Q035 (PZR 578) | AR=0.0 FC=0.0 | AR=0.0 FC=0.0 (search keyword repetition) |
+
+### Q035 Failure Analysis
+Agent searched "pressurizer volume" / "PZR volume" across all 4 hops but never tried "RCS volumes" (which returns System Evaluation node with Table 5.1-1 at score=15.21). Root cause: **agent repeats same search keywords because it has no memory of previous search attempts.** `search("RCS volumes")` would have found the answer immediately.
+
+---
+
 ## Known Issues (Unresolved)
 
-1. **Factual Correctness structurally low**: RAGAs penalizes extra claims. Metric limitation.
-2. **Faithfulness timeout**: Correlated with answer length + KG size. Large KGs (>40 edges like Q003) will likely worsen this.
-3. **image_only FactCorr still low**: Correct figures now delivered, but Vision wording differs from expected answer.
-4. **QA dataset errors**: Q004 expected answer contains factual error.
-5. **browse tool under-utilized**: Agent defaults to search-heavy strategy.
-6. **KGNode.to_dict() missing references**: Not serialized to JSON exports.
-7. **Edge explosion**: Q003 produced 45 edges (12 nodes × pairwise). May need edge count limits or selective pairing.
+1. **Search keyword repetition**: Agent repeats same keywords across hops (no action history). Need search history in prompt or action memory module. See todo.md.
+2. **Factual Correctness structurally low**: RAGAs penalizes extra claims. Metric limitation.
+3. **Faithfulness timeout**: Correlated with answer length + KG size.
+4. **image_only FactCorr still low**: Vision wording differs from expected answer.
+5. **QA dataset errors**: Q004 expected answer contains factual error.
+6. **browse tool under-utilized**: Agent defaults to search-heavy strategy.
+7. **KGNode.to_dict() missing references**: Not serialized to JSON exports.
+8. **Edge explosion**: Q003 produced 45 edges. May need limits.
