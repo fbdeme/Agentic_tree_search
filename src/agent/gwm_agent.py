@@ -167,7 +167,7 @@ class GWMAgent:
             actual_hops = hop
 
         # ── Collect reference images ──────────────────────────────
-        reference_images = self._collect_reference_images(kg, doc_ids)
+        reference_images = self._collect_reference_images(kg, doc_ids, question=question)
 
         # ── Generate final answer ─────────────────────────────────
         print(f"\n{'='*60}")
@@ -280,39 +280,78 @@ class GWMAgent:
     # Collect reference images for VLM
     # -----------------------------------------------------------
     def _collect_reference_images(
-        self, kg, doc_ids: list[str] | None, max_images: int = 6
+        self, kg, doc_ids: list[str] | None, question: str = "",
+        max_images: int = 6,
     ) -> list[str]:
-        ref_pages: dict[str, set[int]] = {}
+        """
+        Collect referenced Figure/Table images relevant to the question.
+        Uses BM25 scoring of reference captions against the question
+        to select the most relevant images instead of blindly taking all.
+        """
+        # Gather all references with their captions
+        all_refs = []
         for nid, node in kg.nodes.items():
             for ref in node.references:
                 doc_id = node.source_doc
                 page = ref.get("page")
+                caption = ref.get("caption", "")
+                ref_id = ref.get("id", "")
                 if doc_id and page:
-                    if doc_id not in ref_pages:
-                        ref_pages[doc_id] = set()
-                    ref_pages[doc_id].add(page)
+                    all_refs.append({
+                        "doc_id": doc_id,
+                        "page": page,
+                        "caption": caption,
+                        "ref_id": ref_id,
+                    })
 
-        if not ref_pages:
+        if not all_refs:
+            return []
+
+        # Deduplicate by (doc_id, page)
+        seen = set()
+        unique_refs = []
+        for ref in all_refs:
+            key = (ref["doc_id"], ref["page"])
+            if key not in seen:
+                seen.add(key)
+                unique_refs.append(ref)
+
+        # Rank by relevance to question using simple keyword overlap
+        question_terms = set(question.lower().split())
+        for ref in unique_refs:
+            caption_terms = set(ref["caption"].lower().split())
+            ref_id_terms = set(ref["ref_id"].lower().replace("-", " ").split())
+            overlap = len(question_terms & (caption_terms | ref_id_terms))
+            ref["relevance"] = overlap
+
+        unique_refs.sort(key=lambda r: -r["relevance"])
+        selected = unique_refs[:max_images]
+
+        if not selected:
             return []
 
         from src.utils.vision import render_pdf_pages
 
+        # Group by doc_id for batch rendering
+        by_doc: dict[str, list[int]] = {}
+        for ref in selected:
+            by_doc.setdefault(ref["doc_id"], []).append(ref["page"])
+
         all_images = []
-        for doc_id, pages in ref_pages.items():
+        for doc_id, pages in by_doc.items():
             pdf_path = self.env.documents.get(doc_id, {}).get("pdf_path", "")
             if not pdf_path or not os.path.isfile(pdf_path):
                 continue
 
-            sorted_pages = sorted(pages)[:max_images - len(all_images)]
-            if not sorted_pages:
-                break
-
-            rendered = render_pdf_pages(pdf_path, sorted_pages)
+            rendered = render_pdf_pages(pdf_path, sorted(pages))
             for r in rendered:
                 all_images.append(r["base64"])
-                print(f"   📷 Rendered: {doc_id} p.{r['page']}")
-
-            if len(all_images) >= max_images:
-                break
+                # Find caption for this page
+                caption = next(
+                    (ref["ref_id"] for ref in selected
+                     if ref["doc_id"] == doc_id and ref["page"] == r["page"]),
+                    ""
+                )
+                print(f"   📷 Rendered: {doc_id} p.{r['page']} ({caption})")
 
         return all_images
