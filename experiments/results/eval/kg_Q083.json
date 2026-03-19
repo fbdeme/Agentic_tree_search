@@ -1,0 +1,148 @@
+{
+  "question": "Describe the physical dimensions of the RPV.",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch05_0014": {
+      "node_id": "nuscale_ch05_0014",
+      "title": "Reactor Vessel",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module's reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel surrounded by a containment vessel. The RPV is a critical pressure-retaining component that forms part of the reactor coolant pressure boundary, supporting various systems and ensuring containment of fission products, with materials and fabrication standards adhering to ASME Boiler and Pressure Vessel Code requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
+      "hop": 1
+    },
+    "nuscale_ch05_0018": {
+      "node_id": "nuscale_ch05_0018",
+      "title": "References",
+      "summary": "This section outlines the requirements and procedures for inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fasteners for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It specifies compliance with ASME BPVC and NQA-1 standards for handling and storage, as well as measures to maintain a dry, controlled environment during shipment. Key references for these requirements are also listed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "74",
+      "hop": 1
+    },
+    "nuscale_ch05_0015": {
+      "node_id": "nuscale_ch05_0015",
+      "title": "Reactor Vessel Materials",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module’s reactor pressure vessel (RPV), which houses the core, steam generators, and pressurizer, and serves as a key barrier to fission product release. The RPV and its components are constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure integrity and safety throughout the plant’s design life.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
+      "hop": 1
+    },
+    "nuscale_ch05_0013": {
+      "node_id": "nuscale_ch05_0013",
+      "title": "References",
+      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as tables summarizing relevant ASME code cases for materials and safety components.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "46",
+      "hop": 1
+    },
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the NuScale pressurizer, including low alloy steel for the baffle plate with stainless steel and nickel-based cladding for corrosion protection, and austenitic stainless steel or Ni-Cr-Fe alloys for heater assemblies. All materials are selected for compatibility with operating environments and comply with relevant BPVC Section II specifications.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 2
+    },
+    "nuscale_ch05_0017": {
+      "node_id": "nuscale_ch05_0017",
+      "title": "Reactor Vessel Integrity",
+      "summary": "This section outlines the procedures and regulatory compliance measures for maintaining the integrity of the NuScale reactor vessel. It details the development of operating procedures to ensure pressure-temperature limits are not exceeded, evaluates the vessel’s resistance to pressurized thermal shock and upper-shelf energy degradation over its 60-year design life, and confirms that all criteria remain within regulatory limits.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "73",
+      "hop": 2
+    },
+    "nuscale_ch05_0024": {
+      "node_id": "nuscale_ch05_0024",
+      "title": "Pressurizer",
+      "summary": "The pressurizer, integrated into the upper region of the reactor vessel and separated by a baffle plate, regulates Reactor Coolant System (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering reactor trips or safety system actuations, with instrumentation providing real-time monitoring and control.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "124",
+      "hop": 3
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0015",
+      "relation": "SEMANTIC",
+      "confidence": 0.9,
+      "description": "Section A and Section B both provide identical introductory descriptions of the reactor pressure vessel (RPV), but neither contains information about the physical dimensions of the RPV, so they are related only by repeating the same general context."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0015",
+      "relation": "SEMANTIC",
+      "confidence": 0.8,
+      "description": "Section A provides references and procedural requirements for the handling and inspection of the RPV, while Section B gives a general description of the RPV's function and components, with both sections connected by their focus on the RPV as a physical object but neither providing its physical dimensions."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0013",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references ASME NQA-1-2008/1a-2009 Addenda as a requirement for RPV shipment and installation, while Section B lists the same ASME NQA-1-2008/1a-2009 Addenda as a reference for quality assurance, indicating both sections are connected through reliance on the same regulatory standard."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A references specific components and materials of the RPV upper shell and head, while Section B provides a general description of the RPV's function and integration within the NuScale Power Module, connecting them through their discussion of the RPV's structure and role."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0018",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes specific components and materials of the RPV upper shell and head, while Section B discusses the handling, shipment, and inspection requirements for the entire RPV, with both sections referencing different aspects of the RPV's physical structure relevant to its dimensions."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0015",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A references the materials and components of the RPV upper shell and head, while Section B provides a general description of the RPV as a pressure-retaining vessel within the reactor coolant system, connecting them through their discussion of RPV structure and materials."
+    },
+    {
+      "source": "nuscale_ch05_0017",
+      "target": "nuscale_ch05_0014",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A discusses operating procedures to ensure reactor vessel integrity under pressure-temperature limits, while Section B provides a general description of the reactor pressure vessel (RPV) as a component of the reactor coolant system, connecting them through the context of RPV operational requirements but not directly addressing physical dimensions."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0017",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A describes specific components and materials of the RPV upper shell and head, which are physical parts relevant to the RPV's dimensions, while Section B discusses operational procedures to ensure the RPV operates within pressure-temperature limits, thus both sections are connected through their focus on the RPV but address different aspects (physical design vs. operational integrity)."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0014",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the pressurizer as an integral part of the reactor vessel, while Section B provides a general description of the reactor vessel, establishing that the pressurizer's physical dimensions are inherently linked to those of the RPV."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0018",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the pressurizer as an integral part of the reactor vessel, establishing a physical connection, while Section B discusses requirements for the reactor vessel itself; thus, Section A provides specific details about a component that is part of the general system described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0015",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the pressurizer as an integral part of the reactor vessel, while Section B provides a general description of the reactor pressure vessel (RPV) and its components, indicating that the pressurizer is contained within the RPV."
+    }
+  ]
+}

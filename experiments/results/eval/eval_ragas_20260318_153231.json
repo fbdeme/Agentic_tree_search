@@ -1,0 +1,164 @@
+{
+  "timestamp": "2026-03-18T15:32:31.612222",
+  "evaluation_framework": "RAGAs v0.4",
+  "config": {
+    "model": "gpt-4.1",
+    "evaluator_model": "gpt-4.1",
+    "embedding_model": "text-embedding-3-small",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 5,
+    "errors": 0
+  },
+  "metrics_description": {
+    "faithfulness": "Fraction of claims in the answer that are supported by the retrieved context (0-1)",
+    "answer_relevancy": "How relevant the answer is to the question, measured by reverse question generation (0-1)",
+    "context_recall": "Fraction of expected answer sentences supported by retrieved context (0-1)",
+    "factual_correctness": "Factual overlap between agent answer and expected answer (0-1)",
+    "keyword_hit": "Fraction of expected keywords present in the agent answer (0-1)"
+  },
+  "summary": {
+    "faithfulness": 0.5482,
+    "answer_relevancy": 0.9538,
+    "context_recall": 0.6,
+    "factual_correctness": 0.326,
+    "keyword_hit": 0.6
+  },
+  "by_type": {
+    "text_only": {
+      "count": 5,
+      "faithfulness": 0.5482,
+      "answer_relevancy": 0.9538,
+      "context_recall": 0.6,
+      "factual_correctness": 0.326,
+      "keyword_hit": 0.6
+    }
+  },
+  "results": [
+    {
+      "id": "Q001",
+      "type": "text_only",
+      "question": "What is the thermal output of the NuScale Power Module (NPM)?",
+      "expected_answer": "Each NPM has a thermal output of 160 MWt, resulting in a total of 1,920 MWt based on 12 modules.",
+      "agent_answer": "The core conclusion is:  \nThe thermal output of a single NuScale Power Module (NPM) is 160 MWt.\n\nEvidence:  \nThis value is explicitly stated in node [nuscale_ch01_0006], which says, \"each [NPM is] rated at 160 MWt and producing approximately 50 MWe.\" This is further confirmed in Table 1.3-1 (see attached image), which lists the \"Core thermal output (MWt)\" for NuScale as 160.\n\nUncertainties:  \nThere are no uncertainties regarding the rated thermal output per module, as both the text and the referenced table provide the same value.\n\nReferences:\n- [nuscale_ch01_0006] (Power Output, p.9)\n- Table 1.3-1 in [nuscale_ch01_0052] (Comparison with Other Facilities, p.79)\n\nTherefore, the thermal output of the NuScale Power Module (NPM) is 160 MWt.",
+      "faithfulness": 0.4,
+      "answer_relevancy": 0.9751,
+      "context_recall": 1.0,
+      "factual_correctness": 0.67,
+      "keyword_hit": 0.75,
+      "kg_nodes": 9,
+      "kg_edges": 0,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 78.6,
+      "eval_sec": 24.1,
+      "total_sec": 102.8,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0036] Refueling Operations | node: [nuscale_ch01_0052] Comparison with Other Facilities | node: [nuscale_ch01_0070] Legends and Symbols | node: [nuscale_ch01_0810] DSRS 15.9.A, Rev 0: Thermal Hydraulic St | node: [nuscale_ch01_0811] DSRS 15.9.A, Rev 0: Thermal Hydraulic St | node: [nuscale_ch01_0035] Fuel Handling and Reactor Maintenance Ar",
+        "Hop 2: node: [nuscale_ch01_0069] Piping and Instrumentation Diagrams",
+        "Hop 3: no results",
+        "Hop 4: node: [nuscale_ch01_0110] Figure 1.7-1b: Electrical Symbols | node: [nuscale_ch01_0006] Power Output"
+      ]
+    },
+    {
+      "id": "Q002",
+      "type": "text_only",
+      "question": "How many NPMs can be operated in a single Reactor Building at the NuScale power plant?",
+      "expected_answer": "A single Reactor Building can operate from 1 to a maximum of 12 Nuclear Power Modules (NPMs).",
+      "agent_answer": "**Core Conclusion:**  \nA single Reactor Building at the NuScale power plant can operate up to 12 NuScale Power Modules (NPMs).\n\n**Supporting Evidence:**  \n- Table 1.2-1 (\"Overall Characteristics of a NuScale Power Plant\") explicitly states:  \n  - \"Number of power modules: 12\" for the overall plant (see image 1).\n- Node [nuscale_ch01_0003] confirms:  \n  - \"The NPM is a modular, scalable nuclear steam supply system that can operate from one to twelve modules within a single facility.\"\n- Node [nuscale_ch01_0034] describes the Reactor Building (RXB) as housing the NPMs in individual bays within a common reactor pool, supporting the multi-module configuration.\n- Figure 1.2-2 visually depicts 12 NPMs within the RXB, reinforcing the textual evidence.\n\n**Uncertainties:**  \n- The documentation consistently refers to a maximum of 12 NPMs per plant and per Reactor Building, with no evidence of a higher number being supported in the current certified design.\n\n**Summary:**  \nThe maximum number of NPMs that can be operated in a single Reactor Building at the NuScale power plant is 12, as supported by both tabular and narrative evidence (Table 1.2-1, [nuscale_ch01_0003], [nuscale_ch01_0034], Figure 1.2-2). There are no indications of a higher capacity in the provided documentation.",
+      "faithfulness": 0.7778,
+      "answer_relevancy": 0.8918,
+      "context_recall": 1.0,
+      "factual_correctness": 0.5,
+      "keyword_hit": 1.0,
+      "kg_nodes": 12,
+      "kg_edges": 0,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 96.1,
+      "eval_sec": 29.9,
+      "total_sec": 126.0,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0109] Figure 1.7-1a: Electrical Symbols | node: [nuscale_ch01_0036] Refueling Operations | node: [nuscale_ch01_0040] Radioactive Waste Building | node: [nuscale_ch01_0034] Reactor Building | node: [nuscale_ch01_0051] Plant Features of Special Interest | node: [nuscale_ch01_0108] 8.37 ALARA Levels for Effluents from Mat",
+        "Hop 2: node: [nuscale_ch01_0003] Plant Location",
+        "Hop 3: node: [nuscale_ch01_0002] Introduction | node: [nuscale_ch01_0032] Radioactive Waste Management System | node: [nuscale_ch01_0001] CHAPTER 1 INTRODUCTION AND GENERAL DESCR",
+        "Hop 4: node: [nuscale_ch01_0370] SRP 9.4.1, Rev 3: Control Room Area Vent | node: [nuscale_ch01_0372] SRP 9.4.1, Rev 3: Control Room Area Vent"
+      ]
+    },
+    {
+      "id": "Q003",
+      "type": "text_only",
+      "question": "In the NuScale design, is AC or DC power required for safety shutdown and cooling?",
+      "expected_answer": "The NuScale design does not require AC or DC power for safety shutdown and cooling.",
+      "agent_answer": "**Core Conclusion:**  \nThe NuScale design does **not require AC or DC power for safety shutdown and cooling**; its safety functions are achieved through passive systems.\n\n**Supporting Evidence:**  \n- Table 1.2-2 (image 1) explicitly states under \"Passive safety systems\":  \n  > \"Safety systems cool and depressurize the RPV/CNV even in the event of loss of external power. Active safety systems are not required.\"\n- DSRS 8.4, Rev 0: Station Blackout ([nuscale_ch01_0275]) confirms:  \n  > \"All safety functions can be maintained for 72 hours without AC power and alternate AC power sources are not applicable due to the passive design.\"\n- DSRS 8.3.1 and 8.3.2 ([nuscale_ch01_0252], [nuscale_ch01_0267], [nuscale_ch01_0269]) note that NuScale departs from traditional requirements for onsite AC and DC power for safety functions, supporting exemptions or alternative criteria because of its passive safety approach.\n- The Reactor Auxiliary Cooling Water System is \"not safety-related\" ([nuscale_ch01_0324], [nuscale_ch01_0325]), so regulatory requirements for powered safety cooling do not apply.\n\n**Visual Evidence:**  \n- Figure 1.2-9 (image 2) shows the Emergency Core Cooling System, which operates via passive means (gravity, natural convection) rather than powered pumps or active components.\n\n**Uncertainties:**  \n- While the design is intended to be fully passive for at least 72 hours, the documentation does not specify beyond this period or address potential edge cases where minimal DC power (e.g., for instrumentation) might be needed. However, for the core safety shutdown and cooling functions, no AC or DC power is required.\n\n**Summary:**  \nNuScale’s safety shutdown and cooling rely on passive systems, not on AC or DC power ([nuscale_ch01_0275], Table 1.2-2, Figure 1.2-9). This is a deliberate design feature and regulatory position.",
+      "faithfulness": null,
+      "answer_relevancy": 0.9428,
+      "context_recall": 1.0,
+      "factual_correctness": 0.15,
+      "keyword_hit": 1.0,
+      "kg_nodes": 12,
+      "kg_edges": 17,
+      "hops_used": 2,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 130.5,
+      "eval_sec": 58.7,
+      "total_sec": 189.2,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0324] SRP 9.2.2, Rev 4: Reactor Auxiliary Cool | node: [nuscale_ch01_0267] DSRS 8.3.2, Rev 0: DC Power Systems (Ons | node: [nuscale_ch01_0252] DSRS 8.3.1, Rev 0: AC Power Systems (Ons | node: [nuscale_ch01_0269] DSRS 8.3.2, Rev 0: DC Power Systems (Ons | node: [nuscale_ch01_0325] SRP 9.2.2, Rev 4: Reactor Auxiliary Cool | node: [nuscale_ch01_0383] SRP 9.4.5, Rev 3: Engineered Safety Feat | node: [nuscale_ch01_0251] DSRS 8.3.1, Rev 0: AC Power Systems (Ons | node: [nuscale_ch01_0387] SRP 9.5.1.1, Rev 0: Fire Protection Prog | edge: REFERENCES | edge: REFERENCES | edge: REFERENCES | edge: REFERENCES | edge: REFERENCES | edge: REFERENCES | edge: REFERENCES | edge: REFERENCES | edge: REFERENCES | edge: REFERENCES",
+        "Hop 2: node: [nuscale_ch01_0859] SRP 19.3, Rev 0: Regulatory Treatment of | node: [nuscale_ch01_0023] Containment Systems | node: [nuscale_ch01_0275] DSRS 8.4, Rev 0: Station BlackoutII.1 Co | node: [nuscale_ch01_0278] SRP Appendix 8-A, Rev1: General Agenda,  | edge: REFERENCES | edge: REFERENCES | edge: REFERENCES | edge: REFERENCES | edge: REFERENCES | edge: REFERENCES | edge: REFERENCES",
+        "Hop 3: Early stop — evidence sufficient"
+      ]
+    },
+    {
+      "id": "Q004",
+      "type": "text_only",
+      "question": "What is the design configuration of NuScale's steam generator?",
+      "expected_answer": "The NuScale steam generator is designed as a small helical coil located outside the reactor pressure boundary.",
+      "agent_answer": "**Core Conclusion:**  \nThe NuScale steam generator is a helical, once-through design integrated within the reactor pressure vessel (RPV), using 1,380 helical tubes per module.\n\n**Supporting Evidence:**  \n- The steam generators are “integrated within the reactor pressure vessel (RPV), which also houses other key components such as the pressurizer and safety valves” ([nuscale_ch05_0020]).\n- Table 5.4-2 (see attached image) specifies the steam generator type as “Helical, once-through” and lists “Total number of helical tubes per NPM: 1380.”\n- The tube outer diameter is 0.625 inches, with a wall thickness of 0.050 inches, and the minimum transition bend radius is ≥ 6.250 inches (Table 5.4-2).\n- The RPV itself forms the outer pressure boundary for the steam generators ([nuscale_ch05_0020]).\n- The design includes “feedwater and main steam piping, plenum access ports, and thermal relief valves” as part of the SG system ([nuscale_ch05_0020]).\n- The schematic in Figure 5.1-3 visually confirms the integration of the steam generator within the RPV.\n\n**Uncertainties:**  \n- The knowledge graph does not provide a detailed cutaway or explicit internal arrangement of the helical tubes, but the tabulated data and schematic confirm the core configuration.\n\n**Summary Statement:**  \nNuScale’s steam generator is a helical, once-through type, fully integrated inside the reactor pressure vessel, with 1,380 helical tubes per module, forming part of the primary pressure boundary (Table 5.4-2, [nuscale_ch05_0020]).",
+      "faithfulness": 0.4667,
+      "answer_relevancy": 0.9768,
+      "context_recall": 0.0,
+      "factual_correctness": 0.0,
+      "keyword_hit": 0.25,
+      "kg_nodes": 4,
+      "kg_edges": 2,
+      "hops_used": 2,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 43.0,
+      "eval_sec": 31.8,
+      "total_sec": 74.8,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0020] Steam Generators | node: [nuscale_ch05_0019] Reactor Coolant System Component and Sub | node: [nuscale_ch05_0025] References",
+        "Hop 2: node: [nuscale_ch05_0021] Reactor Coolant System Piping | edge: REFERENCES | edge: REFERENCES",
+        "Hop 3: no results",
+        "Hop 4: no results"
+      ]
+    },
+    {
+      "id": "Q005",
+      "type": "text_only",
+      "question": "What is the internal pressure condition of the NuScale containment vessel (CNV) during normal operation?",
+      "expected_answer": "The NuScale containment vessel maintains a sub-atmospheric condition during normal operation.",
+      "agent_answer": "**Core Conclusion:**  \nDuring normal operation, the internal pressure of the NuScale containment vessel (CNV) is maintained near atmospheric pressure.\n\n**Supporting Evidence:**  \n- The knowledge graph node [nuscale_ch05_0004] (System Description) specifies that the reactor coolant system (RCS) is located inside the containment vessel and that the RCS pressure-retaining parts (such as the reactor pressure vessel and pressurizer) maintain the high-pressure boundary. The CNV itself is not a primary pressure boundary and is designed to act as a barrier to radionuclide release, not to contain high pressure.\n- The same node indicates that the system includes degasification and interfaces for emergency core cooling, implying that any noncondensible gases or minor leakage from the RCS are vented into the CNV, but under normal conditions, this does not result in significant pressurization.\n- No node or table in the provided context specifies a nominal CNV internal pressure above atmospheric during normal operation. The design and operational focus is on the RCS pressure boundary, not the CNV.\n\n**Uncertainties:**  \n- The exact value of the CNV internal pressure during normal operation is not explicitly stated in the provided nodes. However, based on the system description and standard containment vessel function, it is reasonable to conclude it is near atmospheric pressure unless a leak or transient occurs.\n\n**References:**  \n- [nuscale_ch05_0004] System Description (p.9): “The RCS removes heat from the reactor core using natural circulation and interfaces with several other systems for safety and operational control, including degasification and emergency core cooling. Its pressure-retaining parts help maintain the integrity of the reactor coolant pressure boundary, serving as a barrier to radionuclide release.”\n\n**Summary:**  \nThe NuScale CNV is maintained near atmospheric pressure during normal operation, with the RCS serving as the high-pressure boundary. This conclusion is based on the system description and the absence of any evidence for elevated CNV pressure in normal conditions.",
+      "faithfulness": null,
+      "answer_relevancy": 0.9826,
+      "context_recall": 0.0,
+      "factual_correctness": 0.31,
+      "keyword_hit": 0.0,
+      "kg_nodes": 7,
+      "kg_edges": 1,
+      "hops_used": 2,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 73.3,
+      "eval_sec": 51.7,
+      "total_sec": 125.0,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0015] Reactor Vessel Materials | node: [nuscale_ch05_0014] Reactor Vessel | node: [nuscale_ch05_0003] Design Basis | node: [nuscale_ch05_0004] System Description | node: [nuscale_ch05_0009] Overpressure Protection | node: [nuscale_ch05_0012] Reactor Coolant Pressure Boundary Leakag | edge: SPECIFIES",
+        "Hop 2: node: [nuscale_ch05_0011] Reactor Coolant Pressure Boundary Inserv",
+        "Hop 3: no results",
+        "Hop 4: no results"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "question": "Describe the structure of the NuScale Power Module.",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0048": {
+      "node_id": "nuscale_ch01_0048",
+      "title": "Security Buildings",
+      "summary": "The Security Buildings (SCBs) at a NuScale Power Plant are nonsafety-related structures that include the primary access control building. These buildings support plant security functions but are not classified as safety-related structures.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "42",
+      "hop": 1
+    },
+    "nuscale_ch01_0051": {
+      "node_id": "nuscale_ch01_0051",
+      "title": "Plant Features of Special Interest",
+      "summary": "This section describes special plant features of the NuScale Power Plant, highlighting the Central Utility Building (CUB) and Diesel Generator Buildings (DGB), which house essential but nonsafety-related systems and backup power equipment. It also emphasizes human factors engineering (HFE) considerations, such as fail-safe design, automation, digital controls, and workload management, to minimize human error and meet regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "43",
+      "hop": 1
+    },
+    "nuscale_ch01_0015": {
+      "node_id": "nuscale_ch01_0015",
+      "title": "General Plant Description",
+      "summary": "This section provides an overview of the NuScale plant design, summarizing key systems such as safety features, power conversion, fuel handling, cooling, waste management, and auxiliary systems. It explains that each COL Applicant must reference the NuScale FSAR and provide site-specific details, with certain conceptual design information and security-related content clearly identified and delineated. Figures referenced in the section illustrate the scope of certified and site-specific designs, as well as the general site layout.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "26",
+      "hop": 1
+    },
+    "nuscale_ch01_0047": {
+      "node_id": "nuscale_ch01_0047",
+      "title": "Annex Building",
+      "summary": "The Annex Building (ANB) is a nonsafety-related structure in the NuScale Power Plant that serves multiple functions, including controlling access to radiologically and non-radiologically controlled areas, providing personnel support services (such as locker rooms, showers, and first aid), and housing decontamination equipment and security support facilities. It plays a key role in supporting plant operations and security, but is not classified as safety-related.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "42",
+      "hop": 1
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0048",
+      "target": "nuscale_ch01_0051",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes operational processes within the NuScale Power Module (such as the use of CVCS and boron control), while Section B describes supporting plant structures (like the Central Utility Building) that house systems (e.g., demineralized water equipment) referenced in Section A, thus Section B specifies the physical context for systems mentioned in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0048",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific operational details about the NuScale Power Module's startup and coolant systems, which are components broadly described in Section B's general plant description."
+    },
+    {
+      "source": "nuscale_ch01_0048",
+      "target": "nuscale_ch01_0047",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Sections A and B both provide identical descriptions of the NuScale Power Module's startup process and coolant chemistry control, indicating they specify the same structural and operational details relevant to the module's structure."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific details about the Central Utility Building and its functions, which are part of the broader general plant description summarized in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0047",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the Central Utility Building's support systems, which provide essential utilities and services to the plant, while Section B details the Annex Building's role in supporting the NuScale Power Module's startup and operational processes, indicating that both sections specify different structural components that together comprise the overall structure and function of the NuScale Power Module."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0047",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides specific details about the Annex Building's systems and operational processes, which are part of the broader plant systems generally described in Section A."
+    }
+  ]
+}

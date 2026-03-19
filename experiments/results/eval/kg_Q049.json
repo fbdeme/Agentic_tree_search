@@ -1,0 +1,102 @@
+{
+  "question": "What is the definition of the acronym RCPB?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0439": {
+      "node_id": "nuscale_ch01_0439",
+      "title": "SRP 10.4.6, Rev 3: Condensate Cleanup SystemII.2 Maintain indirect cycle PWR water quality to avoid corrosion-induced failure of the reactor coolant pressure boundary (GDC 14)",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for the Condensate Cleanup System, specifically regarding maintaining indirect cycle PWR water quality to prevent corrosion-induced failure of the reactor coolant pressure boundary (GDC 14). The NuScale design conforms to this requirement, noting that its steam generator configuration results in different secondary chemistry requirements compared to traditional designs.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "263",
+      "hop": 1
+    },
+    "nuscale_ch01_0363": {
+      "node_id": "nuscale_ch01_0363",
+      "title": "DSRS 9.3.4, Rev 0: Chemical and Volume Control System (PWR) (Including Boron Recovery System)II.7 Prevention of CVCS Holdup Tank Wall Buckling/Failure; CVCS Venting and Draining",
+      "summary": "This section reviews the NuScale Chemical and Volume Control System (CVCS) design's conformance with regulatory criteria, specifically regarding the prevention of holdup tank wall buckling/failure and venting/draining capabilities. It notes that while some acceptance criteria are not applicable due to differences in the NuScale design (such as the absence of holdup tanks subject to vacuum conditions), the system will include appropriate venting and draining features as required. Overall, the NuScale CVCS partially conforms to the relevant regulatory requirements for this aspect.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "251",
+      "hop": 1
+    },
+    "nuscale_ch01_0438": {
+      "node_id": "nuscale_ch01_0438",
+      "title": "SRP 10.4.6, Rev 3: Condensate Cleanup SystemII.1 Maintain direct cycle BWR plant water quality to avoid corrosion-induced failure of the reactor coolant pressure boundary (GDC 14)",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for various systems, noting that certain requirements are not applicable due to design differences (e.g., BWR-only criteria). For the Condensate Cleanup System, NuScale confirms that BWR-specific water quality requirements do not apply, while for PWR systems, it conforms to corrosion prevention criteria, with secondary chemistry requirements differing due to the unique steam generator design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "263",
+      "hop": 1
+    },
+    "nuscale_ch01_0123": {
+      "node_id": "nuscale_ch01_0123",
+      "title": "Table 1.9-2: Conformance with Regulatory Guides (Continued)",
+      "summary": "This section of the NuScale Final Safety Analysis Report summarizes the reactor's conformance with various NRC Regulatory Guides, indicating whether each guide is fully, partially, or not applicable to the NuScale design. It provides brief explanations for partial or non-applicability, referencing relevant standards and sections of the report for further details.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "136",
+      "hop": 1
+    },
+    "nuscale_ch01_0014": {
+      "node_id": "nuscale_ch01_0014",
+      "title": "Acronyms and Abbreviations",
+      "summary": "This section explains the conventions used for identifying and numbering tables, figures, and pages within the NuScale Final Safety Analysis Report (FSAR), as well as the handling of proprietary and sensitive information. It clarifies that sensitive content is withheld from public disclosure and that a separate public version of the FSAR is provided with such material removed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "10",
+      "hop": 2
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0439",
+      "target": "nuscale_ch01_0363",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B references the components of the RCPB and their classification, while Section A discusses the importance of maintaining water quality to avoid corrosion-induced failure of the reactor coolant pressure boundary, thus both sections are connected through their focus on the integrity and classification of the RCPB."
+    },
+    {
+      "source": "nuscale_ch01_0439",
+      "target": "nuscale_ch01_0438",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A and Section B both reference the reactor coolant pressure boundary (RCPB) in the context of maintaining water quality to avoid corrosion-induced failure, with Section A addressing indirect cycle PWRs and Section B addressing direct cycle BWRs, thus connecting them through the shared regulatory concern for RCPB integrity."
+    },
+    {
+      "source": "nuscale_ch01_0439",
+      "target": "nuscale_ch01_0123",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A discusses the importance of maintaining water quality to avoid corrosion-induced failure of the reactor coolant pressure boundary (RCPB), while Section B lists regulatory conformance including references to sections (such as 5.2 and 5.3) that typically define and discuss the RCPB, thus Section A's mention of RCPB is contextually connected to Section B's regulatory references where its definition would be found."
+    },
+    {
+      "source": "nuscale_ch01_0363",
+      "target": "nuscale_ch01_0438",
+      "relation": "SEMANTIC",
+      "confidence": 0.8,
+      "description": "Both Section A and Section B reference the reactor coolant pressure boundary (RCPB) in the context of system design and regulatory conformance, but neither provides a definition for the acronym RCPB."
+    },
+    {
+      "source": "nuscale_ch01_0363",
+      "target": "nuscale_ch01_0123",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A mentions the RCPB in the context of system boundaries and quality classification, while Section B provides regulatory conformance information that includes seismic and quality assurance classifications relevant to RCPB components, thus both sections are connected through the regulatory classification and design requirements for RCPB-related systems."
+    },
+    {
+      "source": "nuscale_ch01_0014",
+      "target": "nuscale_ch01_0439",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A is intended to provide definitions for acronyms such as RCPB, which is the subject of the analysis question, while Section B discusses regulatory criteria related to the reactor coolant pressure boundary (RCPB), thus both sections are connected through the term RCPB."
+    },
+    {
+      "source": "nuscale_ch01_0014",
+      "target": "nuscale_ch01_0363",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A is intended to provide definitions for acronyms such as RCPB, while Section B uses the acronym RCPB in the context of regulatory conformance without defining it."
+    }
+  ]
+}

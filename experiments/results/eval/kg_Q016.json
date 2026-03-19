@@ -1,0 +1,79 @@
+{
+  "question": "Describe the design characteristics of the steam generator (SG).",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch05_0021": {
+      "node_id": "nuscale_ch05_0021",
+      "title": "Reactor Coolant System Piping",
+      "summary": "The section discusses the design and degradation assessment of the NuScale reactor coolant system's steam generator (SG) tubing. It notes that the primary degradation observed in similar operating reactors is wear from flow-induced vibration or foreign objects, and that NuScale's design—with its helical tubing and novel support structure—does not increase risk compared to existing designs. Prototypic testing and standard SG program guidelines are deemed sufficient, with wear remaining the most likely degradation mechanism and secondary corrosion risks assessed as low.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "104",
+      "hop": 1
+    },
+    "nuscale_ch05_0019": {
+      "node_id": "nuscale_ch05_0019",
+      "title": "Reactor Coolant System Component and Subsystem Design",
+      "summary": "This section describes the design of the NuScale Power Module’s Reactor Coolant System (RCS) components and subsystems, including the reactor pressure vessel, steam generators, safety and emergency valves, and associated piping. It details how these components are integrated within the module, outlines their boundaries between primary and secondary systems, and references other sections for specific design bases and descriptions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
+      "hop": 1
+    },
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the construction of the pressurizer and its components in the NuScale reactor, specifying alloys and standards for each part to ensure corrosion resistance and compatibility with operating environments. It references relevant sections of the BPVC (Boiler and Pressure Vessel Code) and lists the applicable material specifications for components such as the baffle plate, heater bundles, cover plate, and bolting.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 1
+    },
+    "nuscale_ch05_0020": {
+      "node_id": "nuscale_ch05_0020",
+      "title": "Steam Generators",
+      "summary": "Each NuScale Power Module’s reactor pressure vessel contains two integral steam generators, which are part of the reactor coolant system and share the vessel’s pressure boundary. The steam generator system includes feedwater and main steam piping, thermal relief valves, and access ports, with the reactor pressure vessel itself forming the shell and pressure boundary for the steam generators. The design ensures separation between the primary and secondary sides, with specific components forming the reactor coolant pressure boundary.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
+      "hop": 1
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0021",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides a general overview of the reactor coolant system components, including the steam generators, while Section A specifies detailed design characteristics and operational experience relevant to the steam generator tubing."
+    },
+    {
+      "source": "nuscale_ch05_0021",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A discusses specific operational experience and design considerations (such as tube wear and foreign object risks) for SG tubing, while Section B provides a general overview of the steam generator's integration and components within the reactor system, thus Section A specifies detailed design characteristics that elaborate on the general description in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0025",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A provides a general overview of the reactor coolant system components, including the steam generators, while Section B focuses specifically on the materials and design details of the pressurizer, another component within the same system."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the reactor coolant system components, including the steam generators, while Section B focuses specifically on the steam generators as one of those components."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the pressurizer materials and components, which are part of the reactor pressure vessel (RPV) detailed in Section B, where the steam generators (SGs) are also identified as integral RPV components, thus connecting both sections through their shared inclusion in the RPV design."
+    }
+  ]
+}

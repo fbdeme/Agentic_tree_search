@@ -1,0 +1,155 @@
+{
+  "question": "What is the definition of the abbreviation SG?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0058": {
+      "node_id": "nuscale_ch01_0058",
+      "title": "Steam Generator Thermal-Hydraulic Performance Testing - Electrically Heated Facility",
+      "summary": "This section describes the critical heat flux (CHF) testing conducted for the NuScale NuFuel HTP2™ fuel design using an electrically heated 5x5 simulated fuel bundle with AREVA HTP™/HMP™ spacer grid technology. The tests, performed at the AREVA Karlstein Thermal Hydraulics facility, aimed to obtain CHF data, validate CHF correlations, determine mixing coefficients, and measure pressure drop characteristics under various hydraulic conditions to support the NuScale reactor safety analysis.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "85",
+      "hop": 1
+    },
+    "nuscale_ch01_0117": {
+      "node_id": "nuscale_ch01_0117",
+      "title": "Figure 1.7-3f: Piping and In strumentation Diagram Legends",
+      "summary": "This section provides the legend for piping and instrumentation diagrams (P&IDs) used in the NuScale Final Safety Analysis Report. It lists and describes various symbols representing sample probes, pressure and temperature sensors, flow measurement devices, and other instrumentation components, ensuring standardized interpretation of the diagrams.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "107",
+      "hop": 1
+    },
+    "nuscale_ch01_0111": {
+      "node_id": "nuscale_ch01_0111",
+      "title": "Figure 1.7-2: Instrumentatio n and Controls Symbol Legend",
+      "summary": "This section provides a legend explaining the symbols used for instrumentation and controls in NuScale’s safety analysis report diagrams. It defines the logic gate functions, control room indicators, switch types, and other symbols relevant to system monitoring and control, ensuring clear interpretation of the diagrams. Additionally, it includes notes on piping and instrumentation diagram conventions, such as vent and drain valve representations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "101",
+      "hop": 1
+    },
+    "nuscale_ch01_0059": {
+      "node_id": "nuscale_ch01_0059",
+      "title": "Steam Generator Thermal-Hydraulic Performance Testing - Fluid-Heated Facility",
+      "summary": "The section describes thermal-hydraulic performance testing of the NuScale steam generator using an electrically-heated, fluid-heated facility at SIET in Italy. The tests, which included various heating zones and types of testing, allowed precise control and measurement of heat flux and pressure dynamics to support design validation, code benchmarking, and regulatory inspection.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "86",
+      "hop": 1
+    },
+    "nuscale_ch01_0014": {
+      "node_id": "nuscale_ch01_0014",
+      "title": "Acronyms and Abbreviations",
+      "summary": "This section explains the conventions used in the NuScale Final Safety Analysis Report (FSAR) for numbering tables, figures, and pages, as well as the handling of proprietary and sensitive information. Tables and figures are numbered according to their section, and sensitive content is withheld from public versions in compliance with regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "10",
+      "hop": 2
+    },
+    "nuscale_ch01_0452": {
+      "node_id": "nuscale_ch01_0452",
+      "title": "BTP 10-2, Rev 4: Design Guidelines for Avoiding Water Hammers in Steam GeneratorsOTSGD B.1 Once-Through Steam Generator Designs - Auxiliary Feedwater Supply",
+      "summary": "This section explains that the NuScale plant design does not use the steam generator configurations (top-feed, preheat, or once-through with auxiliary feedwater) addressed by BTP 10-2, Rev 4, and therefore the associated water hammer avoidance guidelines are not applicable. Instead, NuScale uses a passive Decay Heat Removal System (DHRS) that fulfills a similar safety function without the need for auxiliary feedwater pumps or external supply headers, inherently precluding water hammer concerns.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "265",
+      "hop": 4
+    },
+    "nuscale_ch01_0451": {
+      "node_id": "nuscale_ch01_0451",
+      "title": "BTP 10-2, Rev 4: Design Guidelines for Avoiding Water Hammers in Steam GeneratorsPSGD B.1 thru B.4Preheat Steam Generator Designs",
+      "summary": "This section explains that the NuScale plant design does not use preheat steam generator designs, so the regulatory guidelines for avoiding water hammers in such systems are not applicable. The NuScale design differs from conventional large PWRs and does not require the specific measures outlined in BTP 10-2, Rev 4 for preheat steam generators.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "265",
+      "hop": 4
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0058",
+      "target": "nuscale_ch01_0117",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B contains diagram legends where the abbreviation 'SG' would be defined, providing the specific meaning required by the analysis question, while Section A does not address abbreviations."
+    },
+    {
+      "source": "nuscale_ch01_0058",
+      "target": "nuscale_ch01_0059",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A and Section B both discuss steam generator thermal-hydraulic performance testing, using the term 'Steam Generator' in their titles, which establishes that 'SG' is an abbreviation for 'Steam Generator' in the context of the analysis question."
+    },
+    {
+      "source": "nuscale_ch01_0117",
+      "target": "nuscale_ch01_0059",
+      "relation": "SPECIFIES",
+      "confidence": 0.7,
+      "description": "Section A provides diagram legends that may define abbreviations like 'SG', while Section B discusses steam generator performance, implying that 'SG' could refer to 'Steam Generator', thus Section A potentially specifies the meaning of an abbreviation used in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0111",
+      "target": "nuscale_ch01_0059",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B discusses the thermal-hydraulic performance testing of the steam generator, which is likely abbreviated as SG, while Section A provides a legend for instrumentation and control symbols but does not define SG; thus, Section B provides contextual evidence supporting the meaning of SG in the analysis question."
+    },
+    {
+      "source": "nuscale_ch01_0014",
+      "target": "nuscale_ch01_0058",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides general information about acronyms and abbreviations used in the NuScale FSAR, which is relevant for defining the abbreviation 'SG' that may appear in Section B's technical discussion of steam generator performance testing."
+    },
+    {
+      "source": "nuscale_ch01_0014",
+      "target": "nuscale_ch01_0117",
+      "relation": "SPECIFIES",
+      "confidence": 0.7,
+      "description": "Section A provides general information about acronyms and abbreviations used in the report, while Section B contains a figure that may include specific abbreviations such as 'SG' in the context of diagram legends, thus Section B provides concrete examples or definitions referenced by Section A."
+    },
+    {
+      "source": "nuscale_ch01_0452",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A and Section B both reference 'Steam Generator' in the context of NuScale reactor systems, providing context that 'SG' stands for 'Steam Generator' as used in technical and regulatory documentation."
+    },
+    {
+      "source": "nuscale_ch01_0452",
+      "target": "nuscale_ch01_0117",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses design guidelines and regulatory context for steam generators, while Section B provides diagram legends that likely define abbreviations such as SG, connecting them by offering the specific definition sought in the analysis question."
+    },
+    {
+      "source": "nuscale_ch01_0452",
+      "target": "nuscale_ch01_0111",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section B provides the symbol legend where abbreviations such as SG are typically defined, which can be used to clarify the meaning of SG referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0451",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Both Section A and Section B reference the term 'Steam Generator' in the context of NuScale reactor systems, indicating that 'SG' is an abbreviation for 'Steam Generator' as used in both sections."
+    },
+    {
+      "source": "nuscale_ch01_0451",
+      "target": "nuscale_ch01_0117",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides the legend for abbreviations and symbols used in diagrams, which is the relevant source for defining the abbreviation 'SG' referenced in the analysis question, while Section A does not address abbreviations or their definitions."
+    },
+    {
+      "source": "nuscale_ch01_0452",
+      "target": "nuscale_ch01_0451",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A and Section B both reference BTP 10-2, Rev 4, which provides design guidelines for steam generators, indicating that 'SG' in both sections refers to 'Steam Generator' as defined in the context of these regulatory documents."
+    }
+  ]
+}

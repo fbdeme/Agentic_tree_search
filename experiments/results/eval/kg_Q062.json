@@ -1,0 +1,176 @@
+{
+  "question": "Describe the structure of the reactor vessel.",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch05_0015": {
+      "node_id": "nuscale_ch05_0015",
+      "title": "Reactor Vessel Materials",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module’s reactor pressure vessel (RPV), which houses the core, steam generators, and pressurizer within a containment vessel. The RPV is a critical barrier to fission product release and is constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure integrity and safety throughout the plant’s design life.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
+      "hop": 1
+    },
+    "nuscale_ch05_0014": {
+      "node_id": "nuscale_ch05_0014",
+      "title": "Reactor Vessel",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module (NPM), which integrates the reactor core, steam generators, and pressurizer within a single reactor pressure vessel (RPV) surrounded by a containment vessel. The RPV serves as a crucial barrier to fission product release, supports various reactor components, and is constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure long-term integrity and safety.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
+      "hop": 1
+    },
+    "nuscale_ch05_0018": {
+      "node_id": "nuscale_ch05_0018",
+      "title": "References",
+      "summary": "This section outlines the requirements and procedures for the inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fasteners of the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It specifies compliance with ASME BPVC and NQA-1 standards for packaging and handling, maintenance of a dry and controlled environment during shipment, and points to other sections for detailed procedures and technical specifications.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "74",
+      "hop": 1
+    },
+    "nuscale_ch05_0017": {
+      "node_id": "nuscale_ch05_0017",
+      "title": "Reactor Vessel Integrity",
+      "summary": "This section outlines the procedures and regulatory compliance measures to ensure the integrity of the NuScale reactor vessel over its 60-year design life. It details the development of operating procedures to prevent exceeding pressure-temperature limits, evaluates the vessel's resistance to pressurized thermal shock and upper-shelf energy degradation, and confirms that predicted material properties remain within safety criteria throughout the vessel's operational lifespan.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "73",
+      "hop": 1
+    },
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the construction of the pressurizer and its components in the NuScale reactor, specifying alloys and standards for each part to ensure corrosion resistance and compatibility with operating environments. It references relevant sections of the ASME Boiler and Pressure Vessel Code (BPVC) and lists the specific alloys and material specifications for the baffle plate, heater bundles, cover plate, heater sheaths, and bolting.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 2
+    },
+    "nuscale_ch05_0000": {
+      "node_id": "nuscale_ch05_0000",
+      "title": "Preface",
+      "summary": "The Preface outlines the copyright and usage restrictions for the NuScale Standard Plant Design Certification Application, specifically Chapter Five on the Reactor Coolant System and Connecting Systems. It specifies that only the U.S. Nuclear Regulatory Commission (NRC) is authorized to use, copy, or disclose the information for regulatory purposes, with all copies required to include the copyright notice.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "1",
+      "hop": 2
+    },
+    "nuscale_ch05_0007": {
+      "node_id": "nuscale_ch05_0007",
+      "title": "Integrity of Reactor Coolant Boundary",
+      "summary": "This section describes the design features of each NuScale Power Module (NPM) that ensure the integrity of the reactor coolant pressure boundary (RCPB) throughout the plant’s design life, in accordance with regulatory definitions. It details the components and systems included in the RCPB, such as the reactor pressure vessel, containment isolation valves, safety valves, and associated piping, emphasizing their roles in maintaining pressure containment and system safety.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "19",
+      "hop": 3
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0015",
+      "target": "nuscale_ch05_0018",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general description of the reactor vessel's structure and its role in the reactor system, while Section B references specific standards and requirements for the shipment, handling, and storage of the reactor vessel, thus specifying procedural details for the vessel described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0015",
+      "target": "nuscale_ch05_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the physical structure and components of the reactor vessel, while Section B discusses operational procedures developed to maintain the vessel's integrity by ensuring pressure-temperature limits are not exceeded, thus relying on the vessel's structural characteristics described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0018",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A provides a general description of the reactor vessel's structure, while Section B references specific inspection, shipment, and installation requirements that apply to the reactor vessel described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0017",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A describes the physical structure and components of the reactor vessel, which is the subject for which Section B outlines the operational procedures and integrity requirements to ensure its safe operation within specified limits."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the inspection, shipment, and storage requirements for the reactor vessel, while Section B discusses the development of operating procedures to ensure vessel integrity, both of which are connected by their focus on maintaining the structural and operational integrity of the reactor vessel as required by regulatory standards."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0015",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references Section B by directing the reader to Section 5.2 for details on the materials of the RPV upper shell and upper head, which are structural components described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed descriptions of specific components and materials (such as the RPV upper shell and head) that are part of the overall reactor vessel structure described more generally in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0018",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A specifies the materials and structural components of the reactor pressure vessel (RPV) upper shell and head, while Section B addresses the inspection, shipment, and handling requirements for the RPV, thus Section A provides detailed structural information that underpins the context for Section B's procedural requirements."
+    },
+    {
+      "source": "nuscale_ch05_0000",
+      "target": "nuscale_ch05_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A is the preface providing document context and structure, while Section B contains specific technical details about the reactor vessel's structure, with Section A serving as the general introduction to the content specified in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0000",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A is the preface and copyright notice for the NuScale reactor coolant system documentation, while Section B provides the detailed structural description of the reactor vessel referenced in the analysis question."
+    },
+    {
+      "source": "nuscale_ch05_0000",
+      "target": "nuscale_ch05_0018",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A is the preface of the document that introduces the scope and content, while Section B is a references section that points to specific detailed requirements and procedures related to the reactor vessel described in the main chapters introduced by Section A."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0000",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific details about the reactor vessel's pressurizer structure and materials, which are part of the broader reactor coolant system described in Section B's preface."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch05_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides specific details about the reactor vessel's structure and materials, which are part of the reactor coolant pressure boundary described more generally in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B describes the reactor vessel as a pressure-retaining component that forms part of the reactor coolant pressure boundary, which Section A defines and discusses in terms of integrity requirements."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch05_0018",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general description of the reactor coolant pressure boundary, of which the reactor vessel (described in Section B) is a key component, thus Section B specifies details about a part of the structure introduced in Section A."
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "question": "Describe the multi-module NuScale power plant layout.",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0003": {
+      "node_id": "nuscale_ch01_0003",
+      "title": "Plant Location",
+      "summary": "The section introduces the NuScale Final Safety Analysis Report (FSAR), which is required for standard design certification under 10 CFR 52. It outlines the modular and scalable design of the NuScale Power Module (NPM), highlighting key safety features such as passive shutdown and cooling, compact containment, and advanced digital controls, with the plant capable of operating one to twelve modules within a single facility.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "8",
+      "hop": 1
+    },
+    "nuscale_ch01_0015": {
+      "node_id": "nuscale_ch01_0015",
+      "title": "General Plant Description",
+      "summary": "This section provides an overview of the NuScale plant design, summarizing key systems such as safety features, power conversion, fuel handling, cooling water, and waste management. It explains the distinction between certified and site-specific design elements, noting that some information is representative or conceptual and marked accordingly. The section also references figures illustrating the plant layout and system boundaries, and notes that security-related details are withheld per regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "26",
+      "hop": 1
+    },
+    "nuscale_ch01_0315": {
+      "node_id": "nuscale_ch01_0315",
+      "title": "SRP 9.2.1, Rev 5: Station Service Water SystemII.1 Protection Against Natural Phenomena (GDC 2)",
+      "summary": "The NuScale Site Cooling Water System (SCWS) is not safety-related or risk-significant and does not provide essential cooling to safety-related structures, systems, and components (SSC). Regulatory criteria such as GDC 2, GDC 4, and GDC 5 are only applicable to the extent that failure of the nonsafety-related SCWS does not adversely affect safety-related SSCs, and the system's design and layout ensure compliance with these requirements. GDC 44 is noted as not applicable.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "245",
+      "hop": 1
+    },
+    "nuscale_ch01_0038": {
+      "node_id": "nuscale_ch01_0038",
+      "title": "Main Control Room",
+      "summary": "The Main Control Room (MCR) is located below grade in the Control Room Building (CRB) and includes various support spaces such as offices, conference rooms, and equipment rooms. It houses control panels for all installed NuScale Power Modules (NPMs), allowing reactor operators to monitor and control multiple NPMs using digital control systems that ensure independence between safety and nonsafety systems. The MCR provides comprehensive monitoring, alarms, and controls for plant operations, with additional display stations for shared systems and diagnostics.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "39",
+      "hop": 1
+    },
+    "nuscale_ch01_0004": {
+      "node_id": "nuscale_ch01_0004",
+      "title": "Containment Type",
+      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and operates under vacuum during normal conditions, eliminating the need for insulation. The reactor is a passive, integral small modular pressurized water reactor (SMR) with natural circulation and no external piping for steam generators or pressurizer, and each module produces about 50 MWe, with a 12-module plant yielding approximately 570 MWe net output.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch01_0033": {
+      "node_id": "nuscale_ch01_0033",
+      "title": "General Arrangement of Major Structures and Equipment",
+      "summary": "This section describes the general arrangement of major structures and equipment at a NuScale Power Plant, focusing on the central placement and design of the Reactor Building (RXB). The RXB is a large, reinforced concrete structure designed for safety and radiation protection, housing the NuScale Power Modules (NPMs) in a common reactor pool with individual bays arranged in two rows. The section also references detailed figures and notes that some buildings, like the administration and warehouse, are outside the scope of the safety analysis report.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "36",
+      "hop": 2
+    },
+    "nuscale_ch01_0032": {
+      "node_id": "nuscale_ch01_0032",
+      "title": "Radioactive Waste Management System",
+      "summary": "The section outlines the radioactive waste management system at the NuScale Power Plant, referencing detailed discussions of liquid, gaseous, and solid waste systems in Chapter 11. It also describes the general arrangement of major structures, focusing on the Reactor Building (RXB), which houses key plant systems and provides radiation protection, with specific design features for safety and structural integrity.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "36",
+      "hop": 2
+    },
+    "nuscale_ch01_0069": {
+      "node_id": "nuscale_ch01_0069",
+      "title": "Piping and Instrumentation Diagrams",
+      "summary": "This section describes the use of simplified electrical, instrumentation and control (I&C), and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information. It lists the relevant diagrams and legends used for both I&C and piping and instrumentation diagrams, and notes that site-specific diagrams will be provided by COL applicants referencing the NuScale design certification.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
+      "hop": 3
+    },
+    "nuscale_ch01_0068": {
+      "node_id": "nuscale_ch01_0068",
+      "title": "Electrical and Instrumentation and Control Drawings",
+      "summary": "This section explains that simplified electrical, instrumentation, and control (I&C) drawings are included in the report to visually clarify design information, with legends provided for the symbols used. It also notes that site-specific diagrams and legends must be supplied by applicants referencing the NuScale Power Plant design certification.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
+      "hop": 3
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0003",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A introduces the purpose and scope of the FSAR, while Section B provides the general plant description that fulfills part of the FSAR's required content as outlined in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0003",
+      "target": "nuscale_ch01_0315",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides a general description of the NuScale plant design, which includes the overall layout, while Section B specifies regulatory conformance details for a specific system (the site cooling water system) that is part of the plant layout."
+    },
+    {
+      "source": "nuscale_ch01_0003",
+      "target": "nuscale_ch01_0038",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general introduction and overview of the NuScale plant design, while Section B specifies the detailed layout and associated spaces of the Main Control Room within that plant, connecting the general plant description to a specific facility component."
+    },
+    {
+      "source": "nuscale_ch01_0003",
+      "target": "nuscale_ch01_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the NuScale plant design, while Section B specifies the type and characteristics of the containment vessel used in the plant, thus detailing a key component mentioned in the general description."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0315",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the plant layout, including the cooling water systems, while Section B specifies regulatory conformance details for the site cooling water system, clarifying its safety classification and relationship to seismic safety requirements."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0038",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the plant layout, while Section B specifies the location and associated spaces of the Main Control Room as part of that overall facility description."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the plant layout, while Section B specifies the type and characteristics of the containment vessel that is one of the key components described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0315",
+      "target": "nuscale_ch01_0038",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A discusses the protection of safety-related structures from failures in the site cooling water system, while Section B describes the physical layout and associated spaces of the main control room, both contributing details necessary to understand the overall multi-module NuScale power plant layout."
+    },
+    {
+      "source": "nuscale_ch01_0315",
+      "target": "nuscale_ch01_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A discusses the protection of safety-related structures from failures in the site cooling water system, while Section B describes the containment vessel's design and classification, both providing details about different safety-related components that together inform the overall multi-module NuScale power plant layout."
+    },
+    {
+      "source": "nuscale_ch01_0038",
+      "target": "nuscale_ch01_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the location and associated spaces of the Main Control Room within the Control Room Building, while Section B describes the design and classification of the containment vessel, both providing specific details about different physical components that together constitute the overall multi-module NuScale power plant layout."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific details about the general arrangement and layout of major structures and equipment in the NuScale power plant, which elaborates on the broader plant description introduced in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific details and a visual layout (Figure 1.2-2) of the NuScale power plant's major structures and equipment, which elaborates on the general facility description summarized in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0315",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the physical layout of the NuScale power plant, which includes the placement of major structures and systems such as the radioactive waste management system, while Section B discusses regulatory conformance of the station service water system's design with respect to protection against natural phenomena, which is relevant to the plant layout described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0032",
+      "target": "nuscale_ch01_0003",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references a figure that presents the NuScale power plant layout, while Section B introduces the overall plant design and the purpose of the safety analysis report, establishing the context for the detailed layout information in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0032",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific details about the radioactive waste management system and references the overall plant layout, which is generally described in Section B as part of the facility's summary."
+    },
+    {
+      "source": "nuscale_ch01_0032",
+      "target": "nuscale_ch01_0315",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides a general plant layout that includes major structures and systems, which is necessary context for understanding how the station service water system described in Section B is situated and interacts with safety-related structures."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0032",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the plant layout, which includes the placement of the radioactive waste management system described in Section B, thus specifying where the system is situated within the overall plant arrangement."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed diagrams and figures that visually clarify the plant's design, which support and elaborate on the general plant layout and description introduced in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed drawings and diagrams that specify the components and layout described in general terms in Section B's summary of the overall plant design."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0315",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides detailed drawings and diagrams of the NuScale plant layout, which can be used to visually clarify and support the regulatory conformance claims made in Section B regarding the protection of safety-related systems against natural phenomena."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed electrical and I&C drawings that visually clarify aspects of the plant layout described in the general overview and design basis information found in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed electrical and instrumentation drawings that visually clarify and specify the systems generally described in Section B's overall plant description."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0315",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides detailed electrical and I&C drawings that visually clarify the plant layout, which supports Section B's discussion of how the layout ensures that failures in nonsafety-related systems like the SCWS do not adversely affect safety-related SSCs as required by regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0068",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the types of drawings included (such as piping, instrumentation, electrical, and mechanical), while Section B specifies the subset focused on electrical and instrumentation and control drawings, both referencing the same figures and tables for visual clarification of the plant layout."
+    }
+  ]
+}

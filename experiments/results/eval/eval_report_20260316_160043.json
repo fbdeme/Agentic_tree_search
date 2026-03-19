@@ -1,0 +1,144 @@
+{
+  "timestamp": "2026-03-16T16:00:43.347818",
+  "config": {
+    "model": "gpt-4.1",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 5
+  },
+  "summary": {
+    "keyword_hit_rate": 0.5,
+    "context_recall": 1.0,
+    "faithfulness": 4.0,
+    "relevance": 4.4,
+    "completeness": 3.2
+  },
+  "by_type": {
+    "text_only": {
+      "count": 5,
+      "keyword_hit": 0.5,
+      "context_recall": 1.0,
+      "faithfulness": 4.0,
+      "relevance": 4.4,
+      "completeness": 3.2
+    }
+  },
+  "results": [
+    {
+      "id": "Q001",
+      "type": "text_only",
+      "question": "What is the thermal output of the NuScale Power Module (NPM)?",
+      "expected_answer": "Each NPM has a thermal output of 160 MWt, resulting in a total of 1,920 MWt based on 12 modules.",
+      "agent_answer": "1. 핵심 결론  \nNuScale Power Module(NPM)의 열출력(thermal output)은 현재까지 구축된 지식그래프 내 정보만으로는 명확하게 확인되지 않습니다.\n\n2. 근거 노드 및 관계 경로 인용  \n- [nuscale_ch01_0006] Power Output: 이 노드는 NPM의 출력에 대해 다루고 있으나, 구체적인 열출력 수치(예: MWt)는 명시되어 있지 않습니다.  \n- [nuscale_ch01_0015] General Plant Description: 발전소의 전반적 특성을 요약하지만, NPM의 열출력에 대한 직접적인 언급은 없습니다.  \n- [nuscale_ch01_0005], [nuscale_ch01_0004], [nuscale_ch01_0003], [nuscale_ch01_0051]: 이들 노드는 원자로 유형, 격납용기 유형, 부지 위치, 특이 설비 등에 대한 정보를 제공하지만, 열출력 수치는 포함되어 있지 않습니다.\n\n3. 불확실한 사항  \n- 현재까지의 탐색 및 지식그래프에는 NPM의 열출력(thermal output, MWt)에 대한 구체적 수치가 포함되어 있지 않습니다.  \n- 추가적인 문서 탐색 또는 상세 FSAR(최종안전성분석보고서) 내 관련 표/수치 확인이 필요합니다.\n\n요약:  \nNuScale Power Module의 열출력은 현재 확보된 정보로는 명확히 제시할 수 없습니다. 추가 자료 확보가 필요합니다.",
+      "keyword_hit": 0.5,
+      "context_recall": 1.0,
+      "faithfulness": 5,
+      "relevance": 4,
+      "completeness": 2,
+      "judge_reasoning": "The agent accurately reports that the specific thermal output value is not available in the referenced knowledge base, which is faithful and relevant to the question. However, the answer is incomplete because it does not provide the expected value of 160 MWt per module, which is the correct answer.",
+      "kg_nodes": 6,
+      "kg_edges": 0,
+      "hops_used": 4,
+      "elapsed_sec": 50.9,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch01_0006] Power Output | 노드 추가: [nuscale_ch01_0015] General Plant Description",
+        "Hop 2: 노드 추가: [nuscale_ch01_0005] Reactor Type | 노드 추가: [nuscale_ch01_0004] Containment Type",
+        "Hop 3: 신규 노드 없음",
+        "Hop 4: 노드 추가: [nuscale_ch01_0003] Plant Location | 노드 추가: [nuscale_ch01_0051] Plant Features of Special Interest"
+      ]
+    },
+    {
+      "id": "Q002",
+      "type": "text_only",
+      "question": "How many NPMs can be operated in a single Reactor Building at the NuScale power plant?",
+      "expected_answer": "A single Reactor Building can operate from 1 to a maximum of 12 Nuclear Power Modules (NPMs).",
+      "agent_answer": "1. 핵심 결론  \nNuScale 원자력 발전소의 단일 Reactor Building(RXB) 내에서 운전 가능한 NPM(NuScale Power Module)의 최대 수는 현재까지 구축된 지식그래프 내 정보만으로는 명확하게 특정할 수 없습니다. 그러나, 한 Reactor Building에 여러 NPM이 설치 및 운전될 수 있음은 확인됩니다.\n\n2. 근거 노드 및 관계 경로 인용  \n- [nuscale_ch01_0031] Plant Cooling Water Systems: \"With multiple NPMs per plant, individual NPMs can be placed into service incrementally...\"  \n  → 이 문장은 한 발전소(plant)에 여러 NPM이 설치될 수 있고, 각각 독립적으로 운전 및 정지될 수 있음을 명시합니다.\n- [nuscale_ch01_0017] Facility Description: \"The fuel handling and reactor maintenance areas are located in the west end of the RXB and include space for the SFP, refueling pool, and dry dock.\"  \n  → RXB(=Reactor Building) 내에 연료 저장 및 취급, 정비 공간이 여러 NPM을 지원할 수 있도록 설계되어 있음을 시사합니다.\n- [nuscale_ch01_0031] --(REFERENCES)--> [nuscale_ch01_0015]  \n  → 발전소의 일반 설계와 주요 시스템 설명이 상호 참조되고 있음을 보여줍니다.\n- [nuscale_ch01_0017] --(SUPPORTS)--> [nuscale_ch01_0031]  \n  → 단일 RXB 내 여러 NPM 운전 가능성을 뒷받침합니다.\n\n3. 불확실한 사항  \n- 현재까지의 문서 및 지식그래프에는 \"단일 Reactor Building에 설치 가능한 NPM의 정확한 최대 수\"에 대한 직접적 언급이나 수치(예: 12기 등)는 포함되어 있지 않습니다.\n- 일반적으로 NuScale 설계에서 단일 RXB에 12 NPM이 설치된다는 정보가 외부 공개자료에 존재하나, 본 답변은 제공된 문서 내 정보만을 근거로 하였음을 명시합니다.\n\n**요약:**  \nNuScale 발전소의 단일 Reactor Building에는 여러 NPM이 설치 및 운전될 수 있으나, 정확한 최대 수는 현재 제공된 문서 내에서 확인되지 않습니다. (근거: [nuscale_ch01_0031], [nuscale_ch01_0017] 및 관계 경로)",
+      "keyword_hit": 0.5,
+      "context_recall": 1.0,
+      "faithfulness": 4,
+      "relevance": 5,
+      "completeness": 3,
+      "judge_reasoning": "The agent's answer is accurate in stating that multiple NPMs can be operated in a single Reactor Building and is faithful to the provided sources, but it does not provide the specific maximum number (12) as in the expected answer. The answer is relevant and well-supported by references, but lacks completeness due to the omission of the explicit maximum.",
+      "kg_nodes": 6,
+      "kg_edges": 2,
+      "hops_used": 4,
+      "elapsed_sec": 51.1,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch01_0015] General Plant Description | 노드 추가: [nuscale_ch01_0034] Reactor Building",
+        "Hop 2: 노드 추가: [nuscale_ch01_0033] General Arrangement of Major Structures and Equipment | 노드 추가: [nuscale_ch01_0038] Main Control Room",
+        "Hop 3: 노드 추가: [nuscale_ch01_0017] Facility Description | 노드 추가: [nuscale_ch01_0031] Plant Cooling Water Systems | 엣지: [nuscale_ch01_0031] --REFERENCES--> [nuscale_ch01_0015]",
+        "Hop 4: 신규 노드 없음"
+      ]
+    },
+    {
+      "id": "Q003",
+      "type": "text_only",
+      "question": "In the NuScale design, is AC or DC power required for safety shutdown and cooling?",
+      "expected_answer": "The NuScale design does not require AC or DC power for safety shutdown and cooling.",
+      "agent_answer": "1. 핵심 결론  \nNuScale 설계에서는 안전정지(safety shutdown) 및 냉각(cooling)을 위해 AC(교류) 또는 DC(직류) 전원이 \"필수적으로 요구되지 않습니다\". NuScale은 수동적(passive) 안전설계에 기반하여, 외부 또는 내부 AC/DC 전원 없이도 안전정지와 냉각 기능을 수행할 수 있도록 설계되었습니다.\n\n2. 근거 노드 및 관계 경로 인용  \n- [nuscale_ch01_0246]와 [nuscale_ch01_0275], [nuscale_ch01_0251], [nuscale_ch01_0267], [nuscale_ch01_0276], [nuscale_ch01_0277] 등에서 반복적으로 NuScale 설계가 10 CFR 50.63(Station Blackout, SBO) 규정에 따라 \"Passive Design\"임을 명시하고 있습니다.  \n- [nuscale_ch01_0267]에서는 \"No onsite electrical AC power system equipment is required to conform to 10 CFR 50.55a(h) and IEEE Std. 603-1991. Not Applicable\"이라고 하여, 안전기능 수행에 필수적인 onsite AC 전원 장비가 요구되지 않음을 명확히 하고 있습니다.  \n- [nuscale_ch01_0276], [nuscale_ch01_0277]에서도 \"Use of Alternate AC Power Sources and RTNSS for Plants of Passive Design\" 및 \"Independence of SBO-related power sources\"라는 제목 아래, NuScale이 수동적 설계임을 강조하며, SBO(Station Blackout) 상황에서도 안전정지 및 냉각이 가능함을 언급합니다.  \n- [nuscale_ch01_0251], [nuscale_ch01_0261] 등에서는 AC 및 DC 전원 시스템의 규제 적합성은 언급하지만, 실제로 안전정지 및 냉각에 필수적이지 않음을 암시합니다.\n\n관계 경로 예시:  \n[nuscale_ch01_0267] --(REFERENCES)--> [nuscale_ch01_0246]  \n[nuscale_ch01_0276] --(REFERENCES)--> [nuscale_ch01_0275]  \n[nuscale_ch01_0261] --(SPECIFIES)--> [nuscale_ch01_0251]  \n이 경로들은 NuScale의 수동적 설계(passive design)와 SBO 대응능력, 그리고 AC/DC 전원이 필수적이지 않음을 서로 참조하며 뒷받침합니다.\n\n3. 불확실한 사항  \n- NuScale 설계에서 \"일부 계측 및 제어(I&C) 기능\" 등 비안전(non-safety) 또는 보조적 기능에 DC 전원이 사용될 수 있으나, 안전정지 및 냉각의 핵심 안전기능에는 AC/DC 전원이 필수적으로 요구되지 않습니다.  \n- 실제 운전 중 일부 보조 시스템의 동작에는 전원이 필요할 수 있으나, 규제적 안전기능(reactor shutdown, decay heat removal 등)은 수동적 방식으로 보장됩니다.\n\n요약  \nNuScale 원전은 안전정지 및 냉각을 위해 AC 또는 DC 전원이 필수적으로 요구되지 않으며, 수동적 안전설계(passive safety design)에 따라 외부/내부 전원 상실(SBO) 상황에서도 안전기능을 수행할 수 있습니다.  \n(주요 근거: [nuscale_ch01_0267], [nuscale_ch01_0276], [nuscale_ch01_0246] 등)",
+      "keyword_hit": 1.0,
+      "context_recall": 1.0,
+      "faithfulness": 5,
+      "relevance": 5,
+      "completeness": 5,
+      "judge_reasoning": "The agent's answer accurately states that AC or DC power is not required for safety shutdown and cooling in the NuScale design, directly matching the expected answer. It provides detailed supporting references and clarifies the distinction between safety and non-safety functions, demonstrating thoroughness and relevance.",
+      "kg_nodes": 8,
+      "kg_edges": 18,
+      "hops_used": 4,
+      "elapsed_sec": 72.2,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch01_0246] DSRS 8.2, Rev 0: Offsite Power SystemII.5 Compliance with 10 CFR 50.63 - Passive Design | 노드 추가: [nuscale_ch01_0275] DSRS 8.4, Rev 0: Station BlackoutII.1 Compliance with 10 CFR 50.63 and the guidelines of RG 1.155",
+        "Hop 2: 노드 추가: [nuscale_ch01_0251] DSRS 8.3.1, Rev 0: AC Power Systems (Onsite)II.4 Compliance with GDC 17 | 노드 추가: [nuscale_ch01_0267] DSRS 8.3.2, Rev 0: DC Power Systems (Onsite)II.1 Conformance with RG 1.32 | 엣지: [nuscale_ch01_0251] --REFERENCES--> [nuscale_ch01_0246] | 엣지: [nuscale_ch01_0251] --REFERENCES--> [nuscale_ch01_0275] | 엣지: [nuscale_ch01_0267] --REFERENCES--> [nuscale_ch01_0246] | 엣지: [nuscale_ch01_0267] --REFERENCES--> [nuscale_ch01_0275]",
+        "Hop 3: 노드 추가: [nuscale_ch01_0276] DSRS 8.4, Rev 0: Station BlackoutII.2 Use of Alternate AC Power Sources and RTNSS for Plants of Passive Design | 노드 추가: [nuscale_ch01_0277] DSRS 8.4, Rev 0: Station BlackoutII.3 Independence of SBO-related power sources | 엣지: [nuscale_ch01_0276] --REFERENCES--> [nuscale_ch01_0246] | 엣지: [nuscale_ch01_0276] --REFERENCES--> [nuscale_ch01_0275] | 엣지: [nuscale_ch01_0276] --REFERENCES--> [nuscale_ch01_0251] | 엣지: [nuscale_ch01_0277] --REFERENCES--> [nuscale_ch01_0246] | 엣지: [nuscale_ch01_0277] --REFERENCES--> [nuscale_ch01_0275] | 엣지: [nuscale_ch01_0277] --REFERENCES--> [nuscale_ch01_0251]",
+        "Hop 4: 노드 추가: [nuscale_ch01_0250] DSRS 8.3.1, Rev 0: AC Power Systems (Onsite)II.3 Compliance with GDC 5 | 노드 추가: [nuscale_ch01_0261] DSRS 8.3.2, Rev 0: DC Power Systems (Onsite)II (No Number) Compliance with GDC 5 | 엣지: [nuscale_ch01_0250] --REFERENCES--> [nuscale_ch01_0246] | 엣지: [nuscale_ch01_0250] --REFERENCES--> [nuscale_ch01_0275] | 엣지: [nuscale_ch01_0261] --REFERENCES--> [nuscale_ch01_0246] | 엣지: [nuscale_ch01_0261] --REFERENCES--> [nuscale_ch01_0275] | 엣지: [nuscale_ch01_0261] --SPECIFIES--> [nuscale_ch01_0251]"
+      ]
+    },
+    {
+      "id": "Q004",
+      "type": "text_only",
+      "question": "What is the design configuration of NuScale's steam generator?",
+      "expected_answer": "The NuScale steam generator is designed as a small helical coil located outside the reactor pressure boundary.",
+      "agent_answer": "1. 핵심 결론  \nNuScale의 증기발생기(steam generator)는 원자로 압력용기(RPV) 내부에 통합되어 있으며, 각 NuScale Power Module(NPM)에는 두 개의 증기발생기가 포함되어 있습니다. NuScale 증기발생기의 설계는 기존 가압경수로(PWR) 증기발생기와 달리, 증기발생기 튜브가 나선형(helical shape)으로 배치되어 있고, 튜브 지지 구조(tube support structure) 또한 기존 설계와 차별화되어 있습니다.\n\n2. 근거 노드 및 관계 경로 인용  \n- [nuscale_ch05_0020] Steam Generators: \"The reactor pressure vessel (RPV) of each integrated NuScale Power Module (NPM) contains ... two steam generators (SGs) ...\"  \n- [nuscale_ch05_0021] Reactor Coolant System Piping: \"the two significant differences between the NuScale SG design and existing designs is the helical shape of the SG tubing and the SG tube support structure.\"  \n- [nuscale_ch05_0004] System Description: RCS(원자로 냉각재 계통) 설명에서 증기발생기가 RPV 내부에 통합되어 있음을 명시  \n- 관계 경로:  \n  [nuscale_ch05_0004] --(SPECIFIES)--> [nuscale_ch05_0020]  \n  [nuscale_ch05_0021] --(SUPPORTS)--> [nuscale_ch05_0020]  \n  [nuscale_ch05_0020]는 증기발생기 설계의 기본 구성을, [nuscale_ch05_0021]은 기존 설계와의 차별점(나선형 튜브, 지지 구조)을 구체적으로 설명합니다.\n\n3. 불확실한 사항  \n- 현재 지식그래프 및 인용된 문서에서는 증기발생기 튜브의 구체적 치수, 재질, 내부 유동 경로, 지지 구조의 상세 설계(예: 지지판 배열, 튜브 뱅크 구성 등)까지는 명확히 제시되어 있지 않습니다.  \n- 추가적인 상세 설계 정보(예: 단면도, 주요 치수, 소재 등)는 NuScale의 상세 설계 도면 또는 추가 FSAR(최종안전성분석보고서) 섹션 참조가 필요합니다.\n\n요약:  \nNuScale 증기발생기는 RPV 내부에 통합된 2기 구성, 나선형 튜브와 독특한 튜브 지지 구조를 특징으로 하며, 이는 기존 PWR 증기발생기와의 주요 설계 차이점입니다([nuscale_ch05_0020], [nuscale_ch05_0021], [nuscale_ch05_0004] 경로 참조). 구체적 내부 구조 및 치수 등은 추가 자료가 필요합니다.",
+      "keyword_hit": 0.5,
+      "context_recall": 1.0,
+      "faithfulness": 3,
+      "relevance": 4,
+      "completeness": 3,
+      "judge_reasoning": "The agent correctly identifies the helical coil design but incorrectly states that the steam generator is located inside the reactor pressure vessel, whereas the expected answer specifies it is outside the reactor pressure boundary. The answer is relevant and provides some detail, but misses a key aspect of the configuration.",
+      "kg_nodes": 7,
+      "kg_edges": 10,
+      "hops_used": 4,
+      "elapsed_sec": 52.6,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch05_0020] Steam Generators | 노드 추가: [nuscale_ch05_0019] Reactor Coolant System Component and Subsystem Design",
+        "Hop 2: 노드 추가: [nuscale_ch05_0021] Reactor Coolant System Piping | 노드 추가: [nuscale_ch05_0024] Pressurizer | 엣지: [nuscale_ch05_0021] --SUPPORTS--> [nuscale_ch05_0020] | 엣지: [nuscale_ch05_0021] --SUPPORTS--> [nuscale_ch05_0019] | 엣지: [nuscale_ch05_0024] --REFERENCES--> [nuscale_ch05_0020] | 엣지: [nuscale_ch05_0024] --REFERENCES--> [nuscale_ch05_0019]",
+        "Hop 3: 노드 추가: [nuscale_ch05_0005] System Components | 노드 추가: [nuscale_ch05_0022] Decay Heat Removal System | 엣지: [nuscale_ch05_0005] --SPECIFIES--> [nuscale_ch05_0020] | 엣지: [nuscale_ch05_0005] --SUPPORTS--> [nuscale_ch05_0019] | 엣지: [nuscale_ch05_0022] --REFERENCES--> [nuscale_ch05_0020] | 엣지: [nuscale_ch05_0022] --SPECIFIES--> [nuscale_ch05_0019]",
+        "Hop 4: 노드 추가: [nuscale_ch05_0004] System Description | 엣지: [nuscale_ch05_0004] --SPECIFIES--> [nuscale_ch05_0020] | 엣지: [nuscale_ch05_0004] --SPECIFIES--> [nuscale_ch05_0019]"
+      ]
+    },
+    {
+      "id": "Q005",
+      "type": "text_only",
+      "question": "What is the internal pressure condition of the NuScale containment vessel (CNV) during normal operation?",
+      "expected_answer": "The NuScale containment vessel maintains a sub-atmospheric condition during normal operation.",
+      "agent_answer": "1. 핵심 결론  \nNuScale 원전의 containment vessel(CNV) 내부 압력은 정상 운전 시 대기압(1기압)과 거의 동일하거나 약간 높은 수준(저압 조건)으로 유지됩니다.\n\n2. 근거 노드 및 관계 경로 인용  \n- [nuscale_ch05_0014] \"Reactor Vessel\"에서는 CNV가 RPV(reactor pressure vessel)를 둘러싸고 있으며, RCS(reactor coolant system)와 CNV의 구조적 관계를 설명합니다.\n- [nuscale_ch05_0004] \"System Description\"에서는 정상 운전 중 PZR(pressurizer)에서 비응축성 가스를 제거하기 위해 탈기 라인을 통해 CNV로 배출함을 명시하고 있습니다. 이는 CNV 내부가 밀폐된 고압이 아니라, 비응축성 가스가 유입될 수 있는 저압(거의 대기압) 상태임을 시사합니다.\n- [nuscale_ch05_0002] \"Summary Description\"은 RCS와 CNV의 기본 구조 및 기능을 요약하며, CNV가 RCS를 둘러싸는 구조임을 재확인합니다.\n- [nuscale_ch05_0014] --SUPPORTS--> [nuscale_ch05_0004]: CNV 내부 압력은 정상 운전 시 외부 대기압과 유사하거나 약간 높을 수 있음을 간접적으로 뒷받침합니다.\n\n3. 불확실한 사항  \n- 현재까지의 지식그래프에는 CNV 내부 압력의 수치적 값(예: psia, bar 등)이 명시되어 있지 않습니다.\n- \"정상 운전 시 CNV 내부 압력은 대기압과 거의 동일하거나 약간 높다\"는 결론은 시스템 설명과 가스 배출 경로에 근거한 간접적 추론입니다. 만약 정확한 수치(예: 1.05 bar 등)가 필요하다면 추가적인 설계 문서 또는 기술 사양서의 확인이 필요합니다.\n\n요약:  \nNuScale CNV는 정상 운전 시 내부 압력이 대기압과 거의 같거나 약간 높은 저압 상태로 유지됩니다([nuscale_ch05_0014], [nuscale_ch05_0004], [nuscale_ch05_0002] 및 이들 간 SUPPORTS 관계 근거). 수치적 값은 현재 자료에 명확히 제시되어 있지 않으므로, 필요시 추가 확인이 필요합니다.",
+      "keyword_hit": 0.0,
+      "context_recall": 1.0,
+      "faithfulness": 3,
+      "relevance": 4,
+      "completeness": 3,
+      "judge_reasoning": "The agent's answer is relevant and provides supporting references, but it incorrectly states that the CNV is at or slightly above atmospheric pressure, whereas the expected answer specifies a sub-atmospheric condition. The answer is partially complete but does not fully align with the key technical detail required.",
+      "kg_nodes": 8,
+      "kg_edges": 4,
+      "hops_used": 4,
+      "elapsed_sec": 77.9,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch05_0016] Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses | 노드 추가: [nuscale_ch05_0017] Reactor Vessel Integrity",
+        "Hop 2: 노드 추가: [nuscale_ch05_0004] System Description | 노드 추가: [nuscale_ch05_0024] Pressurizer",
+        "Hop 3: 노드 추가: [nuscale_ch05_0009] Overpressure Protection | 노드 추가: [nuscale_ch05_0021] Reactor Coolant System Piping",
+        "Hop 4: 노드 추가: [nuscale_ch05_0002] Summary Description | 노드 추가: [nuscale_ch05_0014] Reactor Vessel | 엣지: [nuscale_ch05_0002] --SUPPORTS--> [nuscale_ch05_0017] | 엣지: [nuscale_ch05_0002] --SUPPORTS--> [nuscale_ch05_0004] | 엣지: [nuscale_ch05_0014] --SUPPORTS--> [nuscale_ch05_0004]"
+      ]
+    }
+  ]
+}

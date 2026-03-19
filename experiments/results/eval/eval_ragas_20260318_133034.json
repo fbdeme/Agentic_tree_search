@@ -1,0 +1,65 @@
+{
+  "timestamp": "2026-03-18T13:30:34.109419",
+  "evaluation_framework": "RAGAs v0.4",
+  "config": {
+    "model": "gpt-4.1",
+    "evaluator_model": "gpt-4.1",
+    "embedding_model": "text-embedding-3-small",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 1,
+    "errors": 0
+  },
+  "metrics_description": {
+    "faithfulness": "Fraction of claims in the answer that are supported by the retrieved context (0-1)",
+    "answer_relevancy": "How relevant the answer is to the question, measured by reverse question generation (0-1)",
+    "context_recall": "Fraction of expected answer sentences supported by retrieved context (0-1)",
+    "factual_correctness": "Factual overlap between agent answer and expected answer (0-1)",
+    "keyword_hit": "Fraction of expected keywords present in the agent answer (0-1)"
+  },
+  "summary": {
+    "faithfulness": 0.125,
+    "answer_relevancy": 0.9751,
+    "context_recall": 0.0,
+    "factual_correctness": 0.33,
+    "keyword_hit": 0.75
+  },
+  "by_type": {
+    "text_only": {
+      "count": 1,
+      "faithfulness": 0.125,
+      "answer_relevancy": 0.9751,
+      "context_recall": 0.0,
+      "factual_correctness": 0.33,
+      "keyword_hit": 0.75
+    }
+  },
+  "results": [
+    {
+      "id": "Q001",
+      "type": "text_only",
+      "question": "What is the thermal output of the NuScale Power Module (NPM)?",
+      "expected_answer": "Each NPM has a thermal output of 160 MWt, resulting in a total of 1,920 MWt based on 12 modules.",
+      "agent_answer": "**Core Conclusion:**  \nThe thermal output of a single NuScale Power Module (NPM) is 160 MWt (megawatts thermal).\n\n**Supporting Evidence:**  \nThis value is explicitly stated in Table 1.2-1 (\"Overall Characteristics of a NuScale Power Plant\"), which lists the \"Thermal power rating\" for each Power Module as \"160 MWth\" (see image 2). The same table also confirms that each module has one reactor and a nominal gross electrical output of 50 MWe.\n\n**Node Reference:**  \n- Node [nuscale_ch01_0052] references summary tables comparing design parameters.\n- Table 1.2-1 (image 2) directly provides:  \n  - \"Thermal power rating: 160 MWth\" for each Power Module.\n\n**Uncertainties:**  \nThere are no uncertainties regarding the thermal output value, as it is clearly and directly stated in the referenced table.\n\n**Summary Statement:**  \nThe NuScale Power Module (NPM) has a thermal output of 160 MWt per module, as documented in Table 1.2-1 (node [nuscale_ch01_0052]).",
+      "faithfulness": 0.125,
+      "answer_relevancy": 0.9751,
+      "context_recall": 0.0,
+      "factual_correctness": 0.33,
+      "keyword_hit": 0.75,
+      "kg_nodes": 6,
+      "kg_edges": 0,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 55.9,
+      "eval_sec": 29.6,
+      "total_sec": 85.5,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0052] Comparison with Other Facilities | node: [nuscale_ch01_0000] Preface | node: [nuscale_ch01_0001] CHAPTER 1 INTRODUCTION AND GENERAL DESCR | node: [nuscale_ch01_0865] Nuclear Power Plants to be Operated on M",
+        "Hop 2: no results",
+        "Hop 3: node: [nuscale_ch01_0003] Plant Location | node: [nuscale_ch01_0004] Containment Type",
+        "Hop 4: no new nodes"
+      ]
+    }
+  ]
+}

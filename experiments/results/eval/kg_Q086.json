@@ -1,0 +1,102 @@
+{
+  "question": "Explain NuScale's safety design philosophy.",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0025": {
+      "node_id": "nuscale_ch01_0025",
+      "title": "Control Room Habitability System",
+      "summary": "The Control Room Habitability System (CRHS) is a passive safety feature designed to protect plant operators from accidental releases of toxic or radioactive gases by supplying clean, compressed air to the main control room (MCR), even during power outages. The system maintains positive pressure in protected areas and has enough air storage to support the MCR for at least 72 hours after an incident.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "33",
+      "hop": 1
+    },
+    "nuscale_ch01_0209": {
+      "node_id": "nuscale_ch01_0209",
+      "title": "DSRS 7.2.1 Rev. 0: Quality II.2 Conformance to RG 1.152",
+      "summary": "This section summarizes NuScale’s conformance with regulatory guidance for instrumentation and control (I&C) systems important to safety, specifically noting that the design meets the requirements of RG 1.152 as referenced in Table 1.9-2. The document confirms that the NuScale I&C systems adhere to the applicable quality and independence criteria outlined in the regulatory guides.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "234",
+      "hop": 1
+    },
+    "nuscale_ch01_0202": {
+      "node_id": "nuscale_ch01_0202",
+      "title": "DSRS 7.1.5, Rev 0: Diversity and Defense in DepthII.1 Methods for performing D3 analyses of reactor protection systems",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for reactor protection system design, focusing on diversity and defense-in-depth (D3) analyses. It details compliance with various regulatory guides and standards, including NUREG/CR-6303 and SECY-93-087, ensuring that the instrumentation and control (I&C) systems meet safety, independence, redundancy, and quality assurance requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "234",
+      "hop": 1
+    },
+    "nuscale_ch01_0086": {
+      "node_id": "nuscale_ch01_0086",
+      "title": "8.10 Operating Philosophy for Maintaining Occupational Radiation Exposures as Low as Is Reasonably Achievable",
+      "summary": "Section 8.10 states that the operating philosophy for maintaining occupational radiation exposures as low as is reasonably achievable (ALARA) is not applicable to the NuScale standard design certification, as it is a site-specific responsibility of the COL (Combined Operating License) applicant. The NuScale application defers these programmatic and operational aspects to the future licensee, who must implement ALARA practices at their specific site.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "170",
+      "hop": 1
+    },
+    "nuscale_ch01_0087": {
+      "node_id": "nuscale_ch01_0087",
+      "title": "8.11 Applications of Bioassay for Uranium",
+      "summary": "This section outlines the applicability of various regulatory guidance documents related to uranium bioassay and occupational radiation exposure for the NuScale standard plant design. Most guidance, including those on bioassay program concepts and personnel monitoring, is deemed not applicable at the design certification stage and is instead the responsibility of the COL (Combined Operating License) applicant. Only certain design-specific aspects related to maintaining occupational exposures as low as reasonably achievable (ALARA) are partially addressed in the NuScale application.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "170",
+      "hop": 2
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0025",
+      "target": "nuscale_ch01_0209",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the design features of the Emergency Core Cooling System (ECCS), which exemplifies NuScale's safety design philosophy by incorporating passive safety and redundancy, while Section B lists regulatory criteria (such as independence and redundancy) that the design must conform to, thereby connecting the ECCS design to regulatory safety principles."
+    },
+    {
+      "source": "nuscale_ch01_0025",
+      "target": "nuscale_ch01_0202",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the passive Emergency Core Cooling System (ECCS) design, which exemplifies the safety philosophy of defense in depth and redundancy, while Section B lists regulatory criteria (such as diversity, independence, and redundancy) that the NuScale design claims to conform with, thus Section A's design features are intended to satisfy the regulatory requirements outlined in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0025",
+      "target": "nuscale_ch01_0086",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the passive safety features of the Emergency Core Cooling System, which contribute to NuScale's overall safety design philosophy, while Section B outlines programmatic requirements for occupational radiation exposure monitoring, both supporting the overarching goal of maintaining safety and ALARA, but Section A provides design-based evidence that supports the safety philosophy described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0209",
+      "target": "nuscale_ch01_0202",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines NuScale's conformance to regulatory criteria for I&C systems important to safety, while Section B specifies the methods for performing diversity and defense-in-depth analyses as part of those same safety design principles, connecting them through the shared focus on regulatory compliance and safety philosophy."
+    },
+    {
+      "source": "nuscale_ch01_0209",
+      "target": "nuscale_ch01_0086",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A outlines NuScale's safety design philosophy through conformance with regulatory criteria for instrumentation and control systems, while Section B details the operational philosophy for maintaining occupational radiation exposures as low as reasonably achievable, both reflecting complementary aspects of NuScale's overall safety approach."
+    },
+    {
+      "source": "nuscale_ch01_0202",
+      "target": "nuscale_ch01_0086",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A outlines NuScale's safety design philosophy through fundamental design principles such as defense in depth, diversity, independence, and redundancy for I&C systems, while Section B describes the operational philosophy for maintaining occupational radiation exposures ALARA, both of which collectively contribute to NuScale's overall safety design philosophy by addressing different but complementary aspects of safety (design vs. operational controls)."
+    },
+    {
+      "source": "nuscale_ch01_0087",
+      "target": "nuscale_ch01_0025",
+      "relation": "SEMANTIC",
+      "confidence": 0.8,
+      "description": "Section A discusses programmatic requirements for personnel radiation monitoring, while Section B describes the design features of the Emergency Core Cooling System (ECCS) that passively ensures safety during accidents; both sections relate to NuScale's safety design philosophy by addressing different aspects—Section A focuses on operational safety procedures, and Section B on engineered safety systems."
+    }
+  ]
+}

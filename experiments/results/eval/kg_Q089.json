@@ -1,0 +1,153 @@
+{
+  "question": "Explain the advantages of modular design in NPM.",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0390": {
+      "node_id": "nuscale_ch01_0390",
+      "title": "SRP 9.5.1.1, Rev 0: Fire Protection ProgramII.7 Operational Program and Proposed Implementation Milestones",
+      "summary": "This section explains that the operational fire protection program and its implementation milestones are not applicable to the NuScale design certification application, as these are the responsibility of the Combined License (COL) applicant. NuScale's application partially conforms to certain fire protection criteria but defers operational program requirements to future COL applicants referencing their design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "256",
+      "hop": 1
+    },
+    "nuscale_ch01_0391": {
+      "node_id": "nuscale_ch01_0391",
+      "title": "SRP 9.5.1.2, Rev 0: Risk-Informed, Performance-Based Fire Protection ProgramAll Various",
+      "summary": "This section explains that the development and implementation of a risk-informed, performance-based fire protection program (SRP 9.5.1.2, Rev 0) is not applicable to the NuScale design certification application. Instead, this responsibility lies with Combined License (COL) applicants who reference the NuScale design and choose to implement the relevant regulatory provisions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "256",
+      "hop": 1
+    },
+    "nuscale_ch01_0022": {
+      "node_id": "nuscale_ch01_0022",
+      "title": "Engineered Safety Feature Materials",
+      "summary": "The NuScale reactor’s containment vessel (CNV) is kept under vacuum during normal operation, which reduces moisture and corrosion, aids in leak detection, and limits oxygen for safety. The design uses passive safety features—such as natural heat removal and elimination of large external coolant loops—to improve safety, reduce accident risks, and achieve a lower core damage frequency compared to conventional reactors.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "32",
+      "hop": 1
+    },
+    "nuscale_ch01_0020": {
+      "node_id": "nuscale_ch01_0020",
+      "title": "Safety Considerations",
+      "summary": "The NuScale design enhances safety by maintaining a vacuum in the containment vessel (CNV), which reduces corrosion, aids leak detection, and limits combustible gases. Its integral, passive safety systems eliminate the need for external power and large coolant loops, significantly lowering the risk of core damage and large-break loss-of-coolant accidents compared to conventional reactors.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "32",
+      "hop": 1
+    },
+    "nuscale_ch01_0015": {
+      "node_id": "nuscale_ch01_0015",
+      "title": "General Plant Description",
+      "summary": "This section provides an overview of the NuScale plant design, summarizing its main systems, safety features, and operational characteristics. It explains the distinction between certified and site-specific design elements, clarifies the use of representative conceptual design information (CDI), and notes how security-related details are handled. The section also references figures illustrating the plant layout and system boundaries.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "26",
+      "hop": 2
+    },
+    "nuscale_ch01_0051": {
+      "node_id": "nuscale_ch01_0051",
+      "title": "Plant Features of Special Interest",
+      "summary": "This section describes key plant features of special interest in the NuScale Power Plant, including the Central Utility Building (CUB) and Diesel Generator Buildings (DGBs), which house essential but nonsafety-related equipment and backup systems. It also highlights human factors considerations, emphasizing fail-safe design, automation, digital controls, and workload management to minimize human error and meet regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "43",
+      "hop": 2
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0390",
+      "target": "nuscale_ch01_0391",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A and Section B both address fire protection program requirements for new reactor designs, with Section A focusing on operational program implementation milestones and Section B emphasizing a risk-informed, performance-based approach, and both reference the applicability of SRP 9.5.1.1 guidance to the NuScale design certification application."
+    },
+    {
+      "source": "nuscale_ch01_0390",
+      "target": "nuscale_ch01_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes specific engineered safety feature benefits (such as reduced corrosion and debris) that result from the modular containment design, which supports Section A's discussion of how the NuScale design conforms to fire protection and safety program criteria."
+    },
+    {
+      "source": "nuscale_ch01_0390",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B provides specific safety benefits of the NuScale modular design (e.g., vacuum containment vessel), which supports Section A's discussion of how the design conforms to fire protection and regulatory criteria, thereby illustrating advantages of modular design in NPM."
+    },
+    {
+      "source": "nuscale_ch01_0391",
+      "target": "nuscale_ch01_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes specific engineered safety feature benefits enabled by the modular design of the NuScale Power Module (NPM), which supports Section A's discussion of how the design conforms to risk-informed, performance-based fire protection program criteria by reducing hazards such as corrosion and debris generation."
+    },
+    {
+      "source": "nuscale_ch01_0391",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B provides specific safety benefits of the NuScale modular design (e.g., vacuum in the CNV), which supports Section A's discussion of how the design conforms to risk-informed, performance-based fire protection and regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0022",
+      "target": "nuscale_ch01_0020",
+      "relation": "SEMANTIC",
+      "confidence": 1.0,
+      "description": "Section A and Section B are identical excerpts listing the benefits of maintaining a vacuum in the CNV, thus they provide the same information regarding engineered safety features and safety considerations."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0390",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides a general description of the NuScale plant design, which includes modular features relevant to operational programs like fire protection discussed in Section B, thereby offering context for how modularity may support or impact the implementation of regulatory programs such as those in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0391",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides a general description of the plant's modular design, which is relevant background for Section B's discussion of how the design conforms to regulatory fire protection program criteria, thus connecting the design features to regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0022",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides a general overview of the plant's modular design, while Section B details specific engineered safety feature materials and their operational benefits, illustrating how modular design choices (such as maintaining a vacuum in the CNV) enhance safety and reliability."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0390",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes plant features such as the Central Utility Building that support operational and safety functions, while Section B outlines regulatory fire protection program requirements that these plant features must address or conform to, connecting the design features to regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0391",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the modular plant features (such as the Central Utility Building) that can facilitate implementation of fire protection program elements discussed in Section B, thereby supporting compliance with regulatory fire protection criteria."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the modular plant's centralized utility services, while Section B details how the modular containment vessel's vacuum environment provides operational and safety benefits, both illustrating specific advantages of modular design in NPM by highlighting centralized support and enhanced safety features."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0051",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the plant's modular design, while Section B specifies particular features (such as the Central Utility Building) that exemplify how modularity is implemented in the facility."
+    }
+  ]
+}

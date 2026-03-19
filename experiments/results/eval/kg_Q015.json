@@ -1,0 +1,86 @@
+{
+  "question": "How many reactor safety valves (RSVs) are there, and where are they connected?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0063": {
+      "node_id": "nuscale_ch01_0063",
+      "title": "Emergency Core Cooling System Valve Design Certification Application Demonstration Test",
+      "summary": "This section describes the demonstration test program for the Emergency Core Cooling System (ECCS) valves in the NuScale reactor design. The test program aimed to verify the functional performance of the ECCS valves, including their operation at reactor pressures and temperatures and in borated coolant, as well as to validate unique design features such as the inadvertent actuation block (IAB). Testing was conducted at a specialized facility using a representative valve assembly to ensure the valves meet safety and operational requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "89",
+      "hop": 1
+    },
+    "nuscale_ch01_0111": {
+      "node_id": "nuscale_ch01_0111",
+      "title": "Figure 1.7-2: Instrumentatio n and Controls Symbol Legend",
+      "summary": "This section provides a legend explaining the symbols used for instrumentation and controls in NuScale’s safety analysis diagrams. It defines the logic gate functions, control room indicators, switch types, and other symbols relevant to system operation and status indication, ensuring clear interpretation of the diagrams. Additionally, it includes notes on piping and instrumentation diagram conventions, such as vent and drain representations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "101",
+      "hop": 1
+    },
+    "nuscale_ch01_0064": {
+      "node_id": "nuscale_ch01_0064",
+      "title": "NuScale Test and Inspection Plans",
+      "summary": "This section describes NuScale’s test and inspection plans for key reactor components, including control rod drive shafts and the Emergency Core Cooling System (ECCS) valves. The tests confirmed operability and performance under various conditions, and a dedicated program was conducted to demonstrate ECCS valve functionality—including unique design features—at reactor operating pressures and temperatures, using specialized test facilities.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "89",
+      "hop": 1
+    },
+    "nuscale_ch01_0112": {
+      "node_id": "nuscale_ch01_0112",
+      "title": "Figure 1.7-3a: Piping and Instrumentation Diagram Legends",
+      "summary": "This section provides the legend for piping and instrumentation diagrams (P&IDs) used in the NuScale Final Safety Analysis Report, detailing the standardized symbols and notations for various valves, vents, drains, fire safety equipment, and specialty items. It specifies that all vents and drains are represented as 0.75\" normally closed valves unless otherwise noted, and includes notes on symbol meanings and exceptions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "102",
+      "hop": 1
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0063",
+      "target": "nuscale_ch01_0111",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses the physical design and locations of ECCS valves, including reactor vent valves, while Section B provides the symbol legend for interpreting instrumentation and control diagrams that could depict the connections and number of such valves."
+    },
+    {
+      "source": "nuscale_ch01_0063",
+      "target": "nuscale_ch01_0064",
+      "relation": "REFERENCES",
+      "confidence": 1.0,
+      "description": "Section A and Section B are duplicate excerpts describing the location of reactor vent valves (RVVs) as part of the ECCS valves, both referencing the same test and design information."
+    },
+    {
+      "source": "nuscale_ch01_0063",
+      "target": "nuscale_ch01_0112",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A mentions the use and location of emergency core cooling system valves, while Section B provides the diagram legends necessary to interpret the specific types and connections of valves (including RSVs) on the P&ID, thus Section B provides the detailed graphical context for the general valve information in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0111",
+      "target": "nuscale_ch01_0064",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides symbol definitions for instrumentation and controls used in system diagrams, which are necessary to interpret the connection and identification of reactor safety valves (RSVs) that may be depicted in figures referenced in Section B's discussion of ECCS valve locations."
+    },
+    {
+      "source": "nuscale_ch01_0111",
+      "target": "nuscale_ch01_0112",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A provides the symbol legend for instrumentation and controls, while Section B provides the legend for piping and instrumentation diagram (P&ID) symbols, and together they enable interpretation of diagrams that would show the number and connections of reactor safety valves (RSVs)."
+    },
+    {
+      "source": "nuscale_ch01_0064",
+      "target": "nuscale_ch01_0112",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A mentions the presence and location of reactor vent valves (RVVs) as part of the ECCS, while Section B provides the legend and symbols used to identify such valves and their connections on the P&ID diagrams, thus enabling identification and counting of RSVs and their connections."
+    }
+  ]
+}

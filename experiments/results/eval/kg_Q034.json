@@ -1,0 +1,125 @@
+{
+  "question": "What is the volume of the SG region?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch05_0024": {
+      "node_id": "nuscale_ch05_0024",
+      "title": "Pressurizer",
+      "summary": "The pressurizer, integrated into the upper region of the reactor vessel and separated by a baffle plate, regulates Reactor Coolant System (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure, and is designed to handle operating transients without triggering reactor trips or safety system actuations, while providing continuous monitoring and control through instrumentation.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "124",
+      "hop": 1
+    },
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located within the containment vessel and includes key components such as the reactor pressure vessel, pressurizer, and associated piping and controls. It removes heat from the reactor core to the steam generators using natural circulation, and features systems for degasification and emergency core cooling to maintain safety and integrity of the reactor coolant pressure boundary.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch05_0006": {
+      "node_id": "nuscale_ch05_0006",
+      "title": "System Evaluation",
+      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance across various power levels by establishing steady-state parameters such as coolant temperatures, flow rates, and pressures, using both software and manual calculations. It details how uncertainties and design considerations are addressed to ensure efficient operation, maximize electrical generation, and maintain safety margins, particularly emphasizing the low pressure losses that support the plant’s natural circulation design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "12",
+      "hop": 1
+    },
+    "nuscale_ch05_0005": {
+      "node_id": "nuscale_ch05_0005",
+      "title": "System Components",
+      "summary": "This section describes the main components of the NuScale reactor system, focusing on the Reactor Pressure Vessel (RPV), Reactor Coolant System (RCS) piping, and the Pressurizer (PZR). The RPV serves as a primary barrier to fission product release and houses key reactor internals, while the RCS piping connects various system elements, and the PZR is integrated into the RPV to help control system pressure. Each component's functions and connections are briefly outlined, with references to further detailed sections.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "10",
+      "hop": 1
+    },
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the NuScale reactor pressurizer, specifying the alloys and standards for each component, such as the baffle plate, heater bundles, cover plate, and bolting. It emphasizes the use of corrosion-resistant materials that comply with ASME BPVC Section II specifications to ensure compatibility and durability in the reactor coolant system.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 2
+    },
+    "nuscale_ch05_0023": {
+      "node_id": "nuscale_ch05_0023",
+      "title": "Reactor Coolant System High-Point Vents",
+      "summary": "This section outlines the testing and inspection requirements for the DHRS (Decay Heat Removal System) components in the NuScale reactor, ensuring compliance with ASME codes for Class 2 components. It specifies that DHRS actuation valves are exercised during cold shutdown conditions, and details the procedures for valve testing, position verification, and a one-time in-situ heat removal test during initial startup.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "121",
+      "hop": 3
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the physical configuration of the pressurizer region within the reactor vessel, while Section B references the PZR (pressurizer) volume as the location from which noncondensible gases are removed, thus both sections refer to the same physical region relevant to determining the SG region's volume."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0006",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section B mentions that the SGs (Steam Generators) are further described in Section 5.4, which is the section where Section A (Pressurizer) is located, indicating a cross-reference for more detailed information."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0006",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B discusses the establishment of steady state parameters for the SG (steam generator) region as a function of reactor power, which would include or reference the volume of the SG region, while Section A provides general system descriptions but does not specify SG volume; thus, Section B provides details relevant to the analysis question that Section A does not."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0005",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B provides operational steps and context for the SGs (steam generators), including their isolation and water level adjustments, which are necessary to define or calculate the SG region volume referenced in the analysis question, while Section A describes the system features that enable these operations."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0005",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references Section 5.4 for further description of the SGs, which may include volume information, while Section B describes operational procedures involving the SGs but does not provide volume data, indicating that Section A structurally references additional details not present in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0024",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references Section B by citing the general description of the pressurizer region and its components, which are detailed in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides detailed component descriptions of the pressurizer region within the RPV, while Section B describes system-level functions involving the pressurizer volume, connecting them through their focus on the pressurizer's physical and functional characteristics."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0006",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references Section B by indicating that the SGs (steam generators) are further described in Section 5.4, which is the section where the pressurizer and its components are detailed, thus connecting the system evaluation context to the component design details."
+    },
+    {
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch05_0006",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section B references Section 5.4 for further description of the SGs, which is the section where Section A is located, indicating that Section B points to Section A for detailed information about the SG region."
+    }
+  ]
+}

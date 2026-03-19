@@ -1,0 +1,163 @@
+{
+  "timestamp": "2026-03-17T16:44:32.379277",
+  "evaluation_framework": "RAGAs v0.4",
+  "config": {
+    "model": "gpt-4.1",
+    "evaluator_model": "gpt-4.1",
+    "embedding_model": "text-embedding-3-small",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 5,
+    "errors": 0
+  },
+  "metrics_description": {
+    "faithfulness": "Fraction of claims in the answer that are supported by the retrieved context (0-1)",
+    "answer_relevancy": "How relevant the answer is to the question, measured by reverse question generation (0-1)",
+    "context_recall": "Fraction of expected answer sentences supported by retrieved context (0-1)",
+    "factual_correctness": "Factual overlap between agent answer and expected answer (0-1)",
+    "keyword_hit": "Fraction of expected keywords present in the agent answer (0-1)"
+  },
+  "summary": {
+    "faithfulness": 0.0,
+    "answer_relevancy": 0.9221,
+    "context_recall": 0.0,
+    "factual_correctness": 0.326,
+    "keyword_hit": 0.7
+  },
+  "by_type": {
+    "text_only": {
+      "count": 5,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.9221,
+      "context_recall": 0.0,
+      "factual_correctness": 0.326,
+      "keyword_hit": 0.7
+    }
+  },
+  "results": [
+    {
+      "id": "Q001",
+      "type": "text_only",
+      "question": "What is the thermal output of the NuScale Power Module (NPM)?",
+      "expected_answer": "Each NPM has a thermal output of 160 MWt, resulting in a total of 1,920 MWt based on 12 modules.",
+      "agent_answer": "**Core Conclusion:**  \nThe thermal output of a single NuScale Power Module (NPM) is 160 megawatts thermal (MWt).\n\n**Key Evidence Citations:**  \n- [nuscale_ch01_0006]: States that each NPM is rated at 160 MWt and produces approximately 50 MWe.\n- [nuscale_ch01_0015]: Provides general plant description and references figures illustrating the NPM and its systems, supporting the context of the power rating.\n\n**Uncertainties:**  \nThere are no significant uncertainties regarding the rated thermal output, as the value is explicitly stated in the documentation. However, actual electrical output may vary depending on environmental conditions and operational factors, but this does not affect the stated thermal output.\n\n**Supporting Visuals:**  \n- Figure 1.2-3 and Figure 1.2-6 visually depict the NPM and its heat transfer systems, consistent with the described thermal rating.\n\n**Summary:**  \nEach NuScale Power Module is rated at 160 MWt thermal output ([nuscale_ch01_0006]), with supporting plant and system descriptions in [nuscale_ch01_0015]. No uncertainties affect this value.",
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.9473,
+      "context_recall": 0.0,
+      "factual_correctness": 0.67,
+      "keyword_hit": 0.75,
+      "kg_nodes": 2,
+      "kg_edges": 0,
+      "hops_used": 1,
+      "retrieved_contexts_count": 2,
+      "agent_sec": 15.8,
+      "eval_sec": 27.4,
+      "total_sec": 43.2,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch01_0006] Power Output | 노드 추가: [nuscale_ch01_0015] General Plant Description",
+        "Hop 2: Early stop — evidence sufficient"
+      ]
+    },
+    {
+      "id": "Q002",
+      "type": "text_only",
+      "question": "How many NPMs can be operated in a single Reactor Building at the NuScale power plant?",
+      "expected_answer": "A single Reactor Building can operate from 1 to a maximum of 12 Nuclear Power Modules (NPMs).",
+      "agent_answer": "**Core Conclusion:**  \nA single Reactor Building at the NuScale power plant can operate up to 12 NuScale Power Modules (NPMs).\n\n**Key Evidence Citations:**  \n- [nuscale_ch01_0034]: Explicitly states the Reactor Building \"contains a common reactor pool with twelve NPM bays arranged in two rows along the pool’s north and south walls.\"\n- [nuscale_ch01_0003]: Confirms the modular design allows \"between one and twelve modules within a single facility.\"\n- [nuscale_ch01_0033]: Describes the arrangement of NPMs in the Reactor Building, supporting the 12-module configuration.\n- Figure 1.2-2 (attached): Diagrammatically shows 12 NPMs within the Reactor Building.\n- Figure 1.2-5 (referenced, but content withheld): Titled \"Cutaway Illustration of 12 Module Configuration,\" further supporting the 12-module maximum.\n\n**Uncertainties:**  \n- The documentation does not explicitly state if future design changes could alter this maximum, but all current evidence supports 12 as the design limit per Reactor Building.\n- Figure 1.2-5, which might provide additional visual confirmation, is withheld, but the text and other figures are clear.\n\n**Summary:**  \nThe maximum number of NPMs that can be operated in a single Reactor Building at the NuScale power plant is 12, as supported by multiple sections of the FSAR and plant layout figures ([nuscale_ch01_0034], [nuscale_ch01_0003], [nuscale_ch01_0033], Figure 1.2-2). No evidence suggests a higher number is permitted in the current certified design.",
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.8919,
+      "context_recall": 0.0,
+      "factual_correctness": 0.83,
+      "keyword_hit": 1.0,
+      "kg_nodes": 6,
+      "kg_edges": 0,
+      "hops_used": 4,
+      "retrieved_contexts_count": 6,
+      "agent_sec": 53.5,
+      "eval_sec": 33.0,
+      "total_sec": 86.6,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch01_0015] General Plant Description | 노드 추가: [nuscale_ch01_0034] Reactor Building",
+        "Hop 2: 관련 섹션 없음 (쿼리: maximum number of NuScale Power Modules (NPMs) in a single Reactor Building)",
+        "Hop 3: 노드 추가: [nuscale_ch01_0033] General Arrangement of Major Structures and Equipment | 노드 추가: [nuscale_ch01_0864] Nuclear Power Plants to be Operated on Multi-Unit Sites",
+        "Hop 4: 노드 추가: [nuscale_ch01_0003] Plant Location | 노드 추가: [nuscale_ch01_0031] Plant Cooling Water Systems"
+      ]
+    },
+    {
+      "id": "Q003",
+      "type": "text_only",
+      "question": "In the NuScale design, is AC or DC power required for safety shutdown and cooling?",
+      "expected_answer": "The NuScale design does not require AC or DC power for safety shutdown and cooling.",
+      "agent_answer": "**Core Conclusion:**  \nThe NuScale design does **not require either AC or DC power for safety shutdown and cooling for at least 72 hours** following an initiating event, due to its passive safety systems.\n\n**Key Evidence Citations:**  \n- **Passive Safety Systems:** Table 1.2-2 explicitly states that NuScale’s passive safety systems “cool and depressurize the RPV/CNV even in the event of loss of external power,” and “active safety systems are not required” ([Table 1.2-2 image], [nuscale_ch01_0020]).\n- **Station Blackout Compliance:** DSRS 8.4 (Station Blackout) confirms that NuScale’s safety functions do not require AC power for 72 hours after a station blackout event, relying on passive design features ([nuscale_ch01_0275]).\n- **Regulatory Exemptions:** Multiple sections (DSRS 8.2, 8.3.1, 8.3.2) note departures from traditional GDCs for AC/DC power, justified by the passive design ([nuscale_ch01_0246], [nuscale_ch01_0251], [nuscale_ch01_0261]).\n- **Safety Considerations:** The design “eliminates the need for external power and large coolant loops,” further supporting the conclusion ([nuscale_ch01_0020]).\n\n**Uncertainties:**  \n- While the passive systems are designed for at least 72 hours without power, long-term cooling beyond this period may require restoration of some power sources (AC or DC), but this is outside the initial safety shutdown window.\n- Some regulatory responsibilities (e.g., maintenance rule compliance) are deferred to the COL applicant, which could affect implementation details ([nuscale_ch01_0246], [nuscale_ch01_0247]).\n\n**Summary:**  \nFor safety shutdown and cooling, the NuScale design is fully passive for at least 72 hours and does **not require AC or DC power** during this period. This is a key differentiator from conventional nuclear plants.",
+      "faithfulness": null,
+      "answer_relevancy": 0.8933,
+      "context_recall": 0.0,
+      "factual_correctness": 0.0,
+      "keyword_hit": 1.0,
+      "kg_nodes": 8,
+      "kg_edges": 12,
+      "hops_used": 4,
+      "retrieved_contexts_count": 6,
+      "agent_sec": 78.7,
+      "eval_sec": 61.9,
+      "total_sec": 140.6,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch01_0246] DSRS 8.2, Rev 0: Offsite Power SystemII.5 Compliance with 10 CFR 50.63 - Passive Design | 노드 추가: [nuscale_ch01_0275] DSRS 8.4, Rev 0: Station BlackoutII.1 Compliance with 10 CFR 50.63 and the guidelines of RG 1.155 | edge: [nuscale_ch01_0246] --REFERENCES--> [nuscale_ch01_0275]",
+        "Hop 2: 노드 추가: [nuscale_ch01_0251] DSRS 8.3.1, Rev 0: AC Power Systems (Onsite)II.4 Compliance with GDC 17 | 노드 추가: [nuscale_ch01_0261] DSRS 8.3.2, Rev 0: DC Power Systems (Onsite)II (No Number) Compliance with GDC 5 | edge: [nuscale_ch01_0251] --REFERENCES--> [nuscale_ch01_0246] | edge: [nuscale_ch01_0251] --REFERENCES--> [nuscale_ch01_0275] | edge: [nuscale_ch01_0261] --REFERENCES--> [nuscale_ch01_0246] | edge: [nuscale_ch01_0261] --REFERENCES--> [nuscale_ch01_0275]",
+        "Hop 3: 노드 추가: [nuscale_ch01_0031] Plant Cooling Water Systems | 노드 추가: [nuscale_ch01_0020] Safety Considerations",
+        "Hop 4: 노드 추가: [nuscale_ch01_0245] DSRS 8.2, Rev 0: Offsite Power SystemII.4 Compliance with GDCs 34, 35, 38, 41, and 44 | 노드 추가: [nuscale_ch01_0247] DSRS 8.2, Rev 0: Offsite Power SystemII.6 Compliance with 10 CFR 50.65(a)(4) | edge: [nuscale_ch01_0245] --REFERENCES--> [nuscale_ch01_0246] | edge: [nuscale_ch01_0245] --REFERENCES--> [nuscale_ch01_0275] | edge: [nuscale_ch01_0245] --REFERENCES--> [nuscale_ch01_0251] | edge: [nuscale_ch01_0247] --REFERENCES--> [nuscale_ch01_0246] | edge: [nuscale_ch01_0247] --REFERENCES--> [nuscale_ch01_0275] | edge: [nuscale_ch01_0247] --REFERENCES--> [nuscale_ch01_0251] | edge: [nuscale_ch01_0245] --REFERENCES--> [nuscale_ch01_0247]"
+      ]
+    },
+    {
+      "id": "Q004",
+      "type": "text_only",
+      "question": "What is the design configuration of NuScale's steam generator?",
+      "expected_answer": "The NuScale steam generator is designed as a small helical coil located outside the reactor pressure boundary.",
+      "agent_answer": "**Core Conclusion:**  \nThe NuScale steam generator is an integral, once-through, helical coil design located entirely within the reactor pressure vessel (RPV). Each NuScale Power Module contains two steam generators, which use 1,380 helical tubes per module to transfer heat from the primary coolant to the secondary side, producing steam for power generation.\n\n**Key Evidence Citations:**\n- The steam generators are integrated within the RPV, forming part of the reactor coolant pressure boundary ([nuscale_ch05_0020], [nuscale_ch05_0019]).\n- The design is a helical, once-through type, with 1,380 helical tubes per module and 21 columns per module ([Table 5.4-2], image 6).\n- The SG tubes have an outer diameter of 0.625 inches and a wall thickness of 0.050 inches ([Table 5.4-2], image 6).\n- The system operates at 2,100 psia on both the primary and secondary sides, with a total heat transfer area of 17,928 ft² ([Table 5.4-2], [Table 5.4-1], images 5 & 6).\n- Figures 5.1-1 and 5.1-2 (images 1 & 2) illustrate the integral arrangement of the steam generators within the RPV and their connection to the reactor core and pressurizer.\n\n**Uncertainties:**\n- While the helical tube configuration and major design parameters are well-documented, detailed information on support structures and materials for the SG tubes is not fully specified in the provided excerpts.\n- The precise arrangement of feedwater and steam piping within the RPV is not visually detailed in the figures, though the integral concept is clear.\n\n**Summary:**  \nNuScale’s steam generator design is a compact, integral, helical coil, once-through system housed within the RPV, optimized for natural circulation and modular deployment.  \n**References:** [nuscale_ch05_0020], [nuscale_ch05_0019], [Table 5.4-2], [Table 5.4-1], Figures 5.1-1, 5.1-2.",
+      "faithfulness": null,
+      "answer_relevancy": 0.8957,
+      "context_recall": 0.0,
+      "factual_correctness": 0.0,
+      "keyword_hit": 0.75,
+      "kg_nodes": 8,
+      "kg_edges": 10,
+      "hops_used": 4,
+      "retrieved_contexts_count": 6,
+      "agent_sec": 68.1,
+      "eval_sec": 55.9,
+      "total_sec": 124.0,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch05_0020] Steam Generators | 노드 추가: [nuscale_ch05_0019] Reactor Coolant System Component and Subsystem Design",
+        "Hop 2: 노드 추가: [nuscale_ch05_0021] Reactor Coolant System Piping | 노드 추가: [nuscale_ch05_0024] Pressurizer | edge: [nuscale_ch05_0021] --REFERENCES--> [nuscale_ch05_0020] | edge: [nuscale_ch05_0021] --REFERENCES--> [nuscale_ch05_0019]",
+        "Hop 3: 노드 추가: [nuscale_ch05_0005] System Components | 노드 추가: [nuscale_ch05_0004] System Description | edge: [nuscale_ch05_0005] --REFERENCES--> [nuscale_ch05_0020] | edge: [nuscale_ch05_0005] --SPECIFIES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0004] --SPECIFIES--> [nuscale_ch05_0020] | edge: [nuscale_ch05_0004] --REFERENCES--> [nuscale_ch05_0019]",
+        "Hop 4: 노드 추가: [nuscale_ch05_0002] Summary Description | 노드 추가: [nuscale_ch05_0003] Design Basis | edge: [nuscale_ch05_0002] --SPECIFIES--> [nuscale_ch05_0020] | edge: [nuscale_ch05_0002] --SPECIFIES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0003] --SPECIFIES--> [nuscale_ch05_0020] | edge: [nuscale_ch05_0003] --SPECIFIES--> [nuscale_ch05_0019]"
+      ]
+    },
+    {
+      "id": "Q005",
+      "type": "text_only",
+      "question": "What is the internal pressure condition of the NuScale containment vessel (CNV) during normal operation?",
+      "expected_answer": "The NuScale containment vessel maintains a sub-atmospheric condition during normal operation.",
+      "agent_answer": "**Core Conclusion:**  \nDuring normal operation, the internal pressure of the NuScale containment vessel (CNV) is maintained at a low value, close to atmospheric pressure, and is not pressurized like the reactor pressure vessel (RPV). The CNV is designed to remain at low pressure under normal conditions, only experiencing significant pressurization in the event of a reactor coolant system (RCS) leak or accident.\n\n**Key Evidence Citations:**\n- [nuscale_ch05_0014] describes the RPV as the primary pressure-retaining component, with the CNV surrounding it for containment, not for pressure retention during normal operation.\n- [nuscale_ch05_0004] and Figure 5.1-1 show the CNV as an external barrier, with the RCS and pressurizer inside the RPV, indicating the CNV is not part of the high-pressure boundary.\n- [nuscale_ch05_0024] details that the pressurizer (and thus the RCS) is actively controlled for pressure, while the CNV is not mentioned as a pressure-controlled component.\n- Table 5.3-1 (image) lists the RPV design pressure (2100 psia), but does not specify a high design pressure for the CNV, supporting the conclusion that the CNV is not pressurized during normal operation.\n\n**Uncertainties:**  \nThe exact nominal value of the CNV internal pressure during normal operation is not explicitly stated in the provided nodes, but all evidence supports that it is near atmospheric pressure and only increases during accident scenarios.\n\n**Summary:**  \nThe NuScale CNV is maintained at low (near-atmospheric) pressure during normal operation, serving as a containment barrier rather than a pressure vessel. This is consistent with standard small modular reactor (SMR) containment design philosophy.",
+      "faithfulness": null,
+      "answer_relevancy": 0.9825,
+      "context_recall": 0.0,
+      "factual_correctness": 0.13,
+      "keyword_hit": 0.0,
+      "kg_nodes": 7,
+      "kg_edges": 1,
+      "hops_used": 4,
+      "retrieved_contexts_count": 6,
+      "agent_sec": 60.7,
+      "eval_sec": 64.9,
+      "total_sec": 125.6,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch05_0016] Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses | 노드 추가: [nuscale_ch05_0017] Reactor Vessel Integrity",
+        "Hop 2: 노드 추가: [nuscale_ch05_0014] Reactor Vessel | 노드 추가: [nuscale_ch05_0024] Pressurizer",
+        "Hop 3: 노드 추가: [nuscale_ch05_0004] System Description | 노드 추가: [nuscale_ch05_0019] Reactor Coolant System Component and Subsystem Design",
+        "Hop 4: 노드 추가: [nuscale_ch05_0002] Summary Description | edge: [nuscale_ch05_0002] --REFERENCES--> [nuscale_ch05_0014]"
+      ]
+    }
+  ]
+}

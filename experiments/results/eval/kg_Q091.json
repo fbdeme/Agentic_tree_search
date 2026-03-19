@@ -1,0 +1,167 @@
+{
+  "question": "Explain the operation of the Emergency Core Cooling System (ECCS) during a Loss of Coolant Accident (LOCA).",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain proper coolant flow, water chemistry, and boron concentration to protect fuel integrity and support safe operation under normal and abnormal conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 1
+    },
+    "nuscale_ch05_0012": {
+      "node_id": "nuscale_ch05_0012",
+      "title": "Reactor Coolant Pressure Boundary Leakage Detection",
+      "summary": "The NuScale reactor coolant system (RCS) does not use traditional components with designed leakage rates, making it impractical to distinguish between identified and unidentified leakage inside containment using current instrumentation. All leakage into containment is treated as unidentified until its source is confirmed, and leakage rates are determined by RCS inventory balance; the detection systems are reliable and support leak-before-break analyses.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "41",
+      "hop": 1
+    },
+    "nuscale_ch05_0006": {
+      "node_id": "nuscale_ch05_0006",
+      "title": "System Evaluation",
+      "summary": "This section describes the evaluation of the NuScale Power Plant’s systems to optimize performance across various power levels. Key operational parameters—such as coolant temperatures, flow rates, and pressures—are established and verified using both software and manual calculations, accounting for uncertainties and design requirements. The system is designed for efficient natural circulation with minimal pressure losses, and uncertainties related to steam generator tube plugging do not affect primary coolant flow determination.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "12",
+      "hop": 1
+    },
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes key components such as the reactor pressure vessel, pressurizer, and associated piping and controls. The RCS removes heat from the reactor core by natural circulation, using differences in coolant density and elevation to drive flow, and interfaces with several other systems for safety and operational functions, including degasification and emergency cooling. The system is designed to maintain the integrity of the reactor coolant pressure boundary, serving as a barrier to radionuclide release.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch05_0023": {
+      "node_id": "nuscale_ch05_0023",
+      "title": "Reactor Coolant System High-Point Vents",
+      "summary": "This section outlines the testing and inspection requirements for the DHRS (Decay Heat Removal System) components in the NuScale reactor, ensuring compliance with ASME codes for Class 2 components. It specifies that DHRS actuation valves are exercised during cold shutdown conditions, and details the procedures for valve testing, position verification, and a one-time in-situ test of the DHRS function during initial reactor startup.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "121",
+      "hop": 1
+    },
+    "nuscale_ch05_0022": {
+      "node_id": "nuscale_ch05_0022",
+      "title": "Decay Heat Removal System",
+      "summary": "The Decay Heat Removal System (DHRS) is an engineered safety feature designed to remove residual and core decay heat from the reactor after shutdown, especially when normal cooling is unavailable, without relying on external power. It ensures the reactor coolant system temperature drops below 420°F within 36 hours, maintaining fuel and pressure boundary safety limits, and its reliability and risk significance are evaluated through established programs. The DHRS operates independently of the Emergency Core Cooling System (ECCS), but both can function together if needed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "106",
+      "hop": 1
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0012",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the design basis and configuration of the reactor coolant system, which is the system whose integrity and leakage detection are discussed in Section B, thus connecting the system's design features to its operational monitoring requirements."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0006",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A describes the design basis and configuration of the reactor coolant system, which is foundational for the system evaluation in Section B that assesses performance parameters and criteria based on that design."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the reactor coolant system (RCS) design, while Section B specifies operational details of the RCS relevant to ECCS function during emergencies, such as the use of reactor vent valves to remove gases during ECCS operation."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0023",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the general design basis and reliance on natural circulation for the reactor coolant system, which is foundational for understanding the operation and inspection requirements of specific components like the DHRS actuation valves described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0022",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the design basis and reliance on natural circulation for the reactor coolant system, while Section B specifies that the Decay Heat Removal System (DHRS) is designed for non-LOCA events, clarifying that DHRS is not intended for LOCA scenarios addressed by ECCS operation."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0006",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses the limitations in detecting specific sources of reactor coolant leakage, which is a critical input for Section B's system evaluation of plant performance and safety systems like the ECCS during events such as a LOCA."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B describes how the ECCS uses reactor vent valves to discharge steam and remove noncondensible gases during emergency core cooling operation, while Section A discusses the challenges in detecting leakage from the reactor coolant pressure boundary, which is relevant to understanding ECCS operation during a LOCA."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0023",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the challenges in detecting and distinguishing reactor coolant pressure boundary leakage, which is relevant to Section B's focus on inspection and testing of components (such as valves) that could be potential leakage points, thereby connecting the detection of leaks (A) with the integrity and inspection of components that may leak (B) during ECCS operation in a LOCA."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0022",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A discusses the detection of reactor coolant pressure boundary leakage, which is a precursor event that could lead to a LOCA requiring ECCS operation, while Section B describes the Decay Heat Removal System, which is designed for non-LOCA events and thus is not directly involved in ECCS operation during a LOCA."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes the function of reactor vent valves (RVVs) in removing noncondensible gases during ECCS operation, which supports the system performance criteria evaluated in Section A for optimal plant operation during emergencies like LOCA."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0023",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the system evaluation and performance criteria for the NuScale Power Plant, including the use of the DHRS for decay heat removal, while Section B details the inspection and classification requirements for DHRS components, thus Section B provides specific regulatory and operational details that support the general system description in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0022",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A references the use of the Steam Generators (SG) and their connection to the Decay Heat Removal System (DHRS) for decay heat removal, while Section B specifies the design basis and operational role of the DHRS in removing decay heat during non-LOCA events, thus Section B provides detailed specifications for the general description in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0023",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the function of reactor vent valves (RVVs) in removing noncondensible gases during ECCS operation, while Section B outlines the inspection and classification requirements for actuation valves (including those involved in emergency systems), connecting them through the operational and regulatory treatment of valves critical to ECCS performance during a LOCA."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0022",
+      "relation": "SEMANTIC",
+      "confidence": 0.85,
+      "description": "Section A describes the ECCS operation during emergencies such as LOCA, specifically mentioning the removal of noncondensible gases and pressure boundary integrity, while Section B outlines the Decay Heat Removal System (DHRS) which is designed for non-LOCA events, indicating that the two systems serve different but complementary safety functions during different accident scenarios."
+    },
+    {
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch05_0022",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes inspection and classification requirements for DHRS components, which are part of the system described in Section B as providing decay heat removal during non-LOCA events, connecting them through the design and operational role of the DHRS."
+    }
+  ]
+}

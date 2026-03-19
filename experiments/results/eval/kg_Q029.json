@@ -1,0 +1,102 @@
+{
+  "question": "Where is the containment vessel (CNV) installed?",
+  "current_hop": 2,
+  "nodes": {
+    "nuscale_ch05_0011": {
+      "node_id": "nuscale_ch05_0011",
+      "title": "Reactor Coolant Pressure Boundary Inservice Inspection and Testing",
+      "summary": "Threaded fasteners in key reactor coolant system components use Alloy 718, chosen for its compatibility with borated water and resistance to stress corrosion cracking, and comply with ASME BPVC standards. Inservice inspection and testing of pressure-retaining components follow ASME BPVC Section XI and relevant regulatory requirements, with inspection programs updated to the latest approved code editions for each inspection interval.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "37",
+      "hop": 1
+    },
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is responsible for removing heat from the reactor core and transferring it to the steam generators using natural circulation, driven by coolant density and elevation differences. The system includes components such as the reactor pressure vessel, pressurizer, and associated valves, and features mechanisms for removing noncondensible gases during both normal and emergency operations to maintain system integrity and safety.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch05_0018": {
+      "node_id": "nuscale_ch05_0018",
+      "title": "References",
+      "summary": "This section outlines the requirements and procedures for inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fasteners for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It specifies that the reactor vessel must be shipped and stored under controlled, dry, and pressurized conditions, with foreign material exclusion and humidity monitoring, and lists the key codes and standards used for compliance.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "74",
+      "hop": 1
+    },
+    "nuscale_ch05_0014": {
+      "node_id": "nuscale_ch05_0014",
+      "title": "Reactor Vessel",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module's reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel surrounded by a containment vessel. The RPV serves as a key pressure boundary to prevent the release of fission products and provides structural support for various reactor components. Materials used for the RPV are selected according to ASME Boiler and Pressure Vessel Code standards to ensure integrity and safety throughout the plant's design life.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
+      "hop": 1
+    },
+    "nuscale_ch05_0015": {
+      "node_id": "nuscale_ch05_0015",
+      "title": "Reactor Vessel Materials",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module's reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel, serving as a key barrier to fission product release. The RPV materials are carefully selected and fabricated according to ASME Boiler and Pressure Vessel Code standards to ensure integrity and safety throughout the plant's design lifetime.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
+      "hop": 1
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0004",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section B states that reactor vent valves discharge to the CNV, implying the CNV is installed in a location to receive such discharges from the RPV, while Section A discusses components (threaded fasteners) associated with the RPV but does not directly address CNV installation."
+    },
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0018",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the materials and inspection requirements for threaded fasteners in the reactor pressure vessel (RPV), while Section B describes the shipment, handling, and installation requirements for the RPV, with both sections connected through their focus on the RPV's design, installation, and regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B specifies that the containment vessel (CNV) surrounds the reactor pressure vessel (RPV), providing the installation location, while Section A describes system functions involving the CNV but does not specify its location; thus, Section B provides details for Section A's general description."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B specifies that the containment vessel (CNV) surrounds the reactor pressure vessel (RPV), while Section A describes the CNV as the destination for discharged steam and gases from the reactor system, connecting the CNV's function to its physical location."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0014",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B states that the containment vessel (CNV) surrounds the reactor pressure vessel (RPV), while Section A discusses the shipment and installation of the RPV, implying the CNV's installation location is directly related to the RPV's installation."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B states that the containment vessel (CNV) surrounds the reactor pressure vessel (RPV), providing the specific installation location of the CNV, while Section A discusses shipment and installation procedures for the RPV but does not specify the CNV's location."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0015",
+      "relation": "SUPPORTS",
+      "confidence": 1.0,
+      "description": "Section A and Section B are identical excerpts that both state the containment vessel (CNV) surrounds the reactor pressure vessel (RPV), directly providing the installation location of the CNV."
+    }
+  ]
+}

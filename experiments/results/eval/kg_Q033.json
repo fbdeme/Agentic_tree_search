@@ -1,0 +1,125 @@
+{
+  "question": "What is the volume of the Core Region?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch05_0024": {
+      "node_id": "nuscale_ch05_0024",
+      "title": "Pressurizer",
+      "summary": "The pressurizer in the NuScale reactor is integrated into the upper region of the reactor vessel and functions to regulate reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering unnecessary reactor trips or safety system actuations. Instrumentation continuously monitors pressure and water level, providing data to plant control systems.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "124",
+      "hop": 1
+    },
+    "nuscale_ch05_0013": {
+      "node_id": "nuscale_ch05_0013",
+      "title": "References",
+      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as tables summarizing relevant ASME code cases for reactor components.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "46",
+      "hop": 1
+    },
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain fuel integrity, minimize solid deposits, and ensure uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 1
+    },
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes components such as the reactor pressure vessel, pressurizer, and associated piping and controls. The RCS removes heat from the reactor core to the steam generators using natural circulation, and features systems for degasification and emergency core cooling to maintain safety and integrity. It interfaces with several other systems, including chemical control, emergency cooling, and control rod drives.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch05_0006": {
+      "node_id": "nuscale_ch05_0006",
+      "title": "System Evaluation",
+      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance across various power levels by establishing steady-state parameters such as coolant temperatures, flow rates, and pressures, using both software and manual calculations. The evaluation considers uncertainties and design requirements to ensure efficient operation, maximize electrical generation, and maintain safety margins, with particular attention to the natural circulation design and low pressure losses in the reactor coolant system.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "12",
+      "hop": 1
+    },
+    "nuscale_ch05_0000": {
+      "node_id": "nuscale_ch05_0000",
+      "title": "Preface",
+      "summary": "The Preface outlines the copyright and usage restrictions for the NuScale Standard Plant Design Certification Application, specifically Chapter Five on the Reactor Coolant System and Connecting Systems. It specifies that only the U.S. Nuclear Regulatory Commission (NRC) is authorized to use, copy, or disclose the document as needed for regulatory purposes, with all copies required to retain the copyright notice.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "1",
+      "hop": 4
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section B provides a general description of the reactor coolant system and its components, including the pressurizer, while Section A gives specific details about the pressurizer's location and separation from the core region, connecting the two sections through the physical arrangement of RCS components."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the pressurizer as the upper region of the reactor vessel, separated from the core region by a baffle plate, while Section B refers to the pressurizer (PZR) volume at the top of the reactor pressure vessel, thus both sections provide complementary details about the spatial relationship and boundaries between the pressurizer and the core region."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0003",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A lists references that are cited to support the technical and regulatory basis for the design described in Section B, which summarizes the reactor coolant system including the core region."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0004",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A lists references that provide the technical and regulatory basis for the system descriptions and requirements detailed in Section B, such as the integrity and operation of the Reactor Coolant System (RCS)."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0006",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A provides references that are likely cited in Section B's system evaluation to support the establishment of steady state values and criteria for optimal performance, connecting them through referenced technical standards and guidelines."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the reactor coolant system's components, while Section B specifies additional operational features and functions of the same system, thereby detailing aspects of Section A's general description."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0006",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides a general description of the reactor coolant system and its components, while Section B discusses the evaluation of system performance parameters, both of which are necessary to understand before determining the core region volume."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0006",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section B discusses the establishment of steady state values for system parameters as a function of reactor power, which would require knowledge of system volumes such as the Core Region described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0000",
+      "target": "nuscale_ch05_0003",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A provides the publication and copyright context for the document in which Section B, containing the design basis and summary description of the reactor coolant system (including the core region), is found."
+    }
+  ]
+}

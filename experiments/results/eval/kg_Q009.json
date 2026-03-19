@@ -1,0 +1,74 @@
+{
+  "question": "What is the net electrical output considering the self-consumption of the 12 NPM facilities?",
+  "current_hop": 2,
+  "nodes": {
+    "nuscale_ch01_0052": {
+      "node_id": "nuscale_ch01_0052",
+      "title": "Comparison with Other Facilities",
+      "summary": "This section compares the major design features and parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It highlights differences in size, output, core design, and safety systems, showing that NuScale uses significantly smaller modules, fewer components, and simplified systems compared to conventional PWRs. The comparison is summarized in tables for easy reference.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "79",
+      "hop": 1
+    },
+    "nuscale_ch01_0006": {
+      "node_id": "nuscale_ch01_0006",
+      "title": "Power Output",
+      "summary": "The NuScale Power Plant consists of up to 12 NuScale Power Modules (NPMs), each rated at 160 MWt and producing approximately 50 MWe, for a total net output of about 570 MWe when accounting for house loads. The actual electrical output may vary depending on environmental conditions, and the design includes a 2% margin for measurement uncertainty.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch01_0008": {
+      "node_id": "nuscale_ch01_0008",
+      "title": "Format and Content",
+      "summary": "The section describes the NuScale containment vessel as a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and maintained at a vacuum during normal operations. The NuScale reactor is a passive, integral small modular pressurized water reactor (SMR) with natural circulation and no external piping for steam generators or pressurizer, and each module produces about 50 MWe, with a 12-module plant yielding a net output of approximately 570 MWe. The section also notes that applicants referencing the NuScale design must provide construction schedules.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch01_0051": {
+      "node_id": "nuscale_ch01_0051",
+      "title": "Plant Features of Special Interest",
+      "summary": "This section describes key plant features of special interest in the NuScale Power Plant, including the Central Utility Building (CUB) and Diesel Generator Buildings (DGBs), which house essential but nonsafety-related systems and backup power equipment. It also highlights human factors engineering (HFE) considerations, emphasizing fail-safe design, automation, digital controls, and workload management to minimize human error and meet regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "43",
+      "hop": 1
+    },
+    "nuscale_ch01_0004": {
+      "node_id": "nuscale_ch01_0004",
+      "title": "Containment Type",
+      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and operates under vacuum during normal conditions, eliminating the need for insulation. The NuScale reactor is a passive, small modular pressurized water reactor with integral components and natural circulation, removing the need for external piping and coolant pumps. Each module produces 160 MWt (about 50 MWe), and a plant can have up to 12 modules, totaling approximately 570 MWe net output for a full facility.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "9",
+      "hop": 1
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0006",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A references nominal design parameters, including power output, which are detailed in Section B's discussion of the containment vessel and its operational characteristics, providing the technical basis for the values compared in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0051",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A provides nominal design values for the NuScale Power Plant, which are necessary for calculating net electrical output, while Section B describes the Central Utility Building that houses systems responsible for the plant's self-consumption, thus connecting the design output to internal power use."
+    },
+    {
+      "source": "nuscale_ch01_0006",
+      "target": "nuscale_ch01_0051",
+      "relation": "LEADS_TO",
+      "confidence": 0.85,
+      "description": "Section B describes the Central Utility Building's systems that consume power (e.g., chiller equipment, instrument air), which must be subtracted from the gross power output described in Section A to determine the net electrical output."
+    }
+  ]
+}

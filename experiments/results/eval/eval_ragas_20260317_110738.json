@@ -1,0 +1,165 @@
+{
+  "timestamp": "2026-03-17T11:07:38.153586",
+  "evaluation_framework": "RAGAs v0.4",
+  "config": {
+    "model": "gpt-4.1",
+    "evaluator_model": "gpt-4.1",
+    "embedding_model": "text-embedding-3-small",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 5,
+    "errors": 0
+  },
+  "metrics_description": {
+    "faithfulness": "Fraction of claims in the answer that are supported by the retrieved context (0-1)",
+    "answer_relevancy": "How relevant the answer is to the question, measured by reverse question generation (0-1)",
+    "context_recall": "Fraction of expected answer sentences supported by retrieved context (0-1)",
+    "factual_correctness": "Factual overlap between agent answer and expected answer (0-1)",
+    "keyword_hit": "Fraction of expected keywords present in the agent answer (0-1)"
+  },
+  "summary": {
+    "faithfulness": 0.5,
+    "answer_relevancy": 0.7325,
+    "context_recall": 0.7,
+    "factual_correctness": 0.2325,
+    "keyword_hit": 0.4868
+  },
+  "by_type": {
+    "composite": {
+      "count": 5,
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.7325,
+      "context_recall": 0.7,
+      "factual_correctness": 0.2325,
+      "keyword_hit": 0.4868
+    }
+  },
+  "results": [
+    {
+      "id": "Q071",
+      "type": "composite",
+      "question": "What are the main components to which the RCS design pressure and temperature are applied?",
+      "expected_answer": "The design pressure of the RCS is 2100 psia and the design temperature is 650°F, which apply to the internal components of the NPM as indicated in Figure 5.1-1, including the reactor pressure vessel (RPV), pressurizer, and the primary side of the steam generator.",
+      "agent_answer": "Core Conclusion:\nThe main components to which the Reactor Coolant System (RCS) design pressure and temperature are applied are the pressure-retaining portions of the RCS, specifically including the reactor pressure vessel (RPV), the integral pressurizer (PZR), the steam generators (SGs), reactor vessel internals (RVI), reactor safety valves (RSVs), and all RCS piping inside the containment vessel (CNV) (such as RCS injection, discharge, pressurizer spray, and high-point degasification lines).\n\nKey Evidence Citations:\n\n- [nuscale_ch05_0019]: Explicitly lists the RCS components subject to design pressure and temperature: \"The reactor pressure vessel (RPV) ... contains the reactor and reactor vessel internals; a pressurizer; two steam generators (SGs); reactor safety valves (RSVs); ... RCS injection, discharge, pressurizer spray, and high-point degasification vent lines; and a decay heat removal system (DHRS).\"\n- [nuscale_ch05_0003]: Confirms the RCS includes the RPV, PZR, RVI, RSVs, and RCS piping inside the CNV, all of which are pressure-retaining and thus subject to design pressure and temperature.\n- [nuscale_ch05_0004]: States, \"The pressure-retaining portions of the RCS assist in maintaining the integrity of the reactor coolant pressure boundary (RCPB)...\"\n- [nuscale_ch05_0015]: Describes the RPV as a pressure-retaining vessel and part of the RCS, containing the core, internals, SGs, and pressurizer.\n\nUncertainties:\nThere is minimal uncertainty in the identification of these components, as multiple sections consistently specify the same set of pressure-retaining RCS components. However, detailed boundaries (e.g., specific valve housings or minor piping branches) may require further reference to ASME code definitions or detailed system drawings for absolute completeness.\n\nSummary Table of Main Components:\n- Reactor Pressure Vessel (RPV)\n- Integral Pressurizer (PZR)\n- Steam Generators (SGs)\n- Reactor Vessel Internals (RVI)\n- Reactor Safety Valves (RSVs)\n- RCS piping inside CNV (injection, discharge, spray, vent lines)\n\nReferences: [nuscale_ch05_0019], [nuscale_ch05_0003], [nuscale_ch05_0004], [nuscale_ch05_0015]",
+      "faithfulness": null,
+      "answer_relevancy": 0.837,
+      "context_recall": 1.0,
+      "factual_correctness": 0.33,
+      "keyword_hit": 0.375,
+      "kg_nodes": 8,
+      "kg_edges": 13,
+      "hops_used": 4,
+      "retrieved_contexts_count": 6,
+      "agent_sec": 69.3,
+      "eval_sec": 59.7,
+      "total_sec": 129.0,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch05_0005] System Components | 노드 추가: [nuscale_ch05_0019] Reactor Coolant System Component and Subsystem Design | edge: [nuscale_ch05_0005] --SPECIFIES--> [nuscale_ch05_0019]",
+        "Hop 2: 노드 추가: [nuscale_ch05_0021] Reactor Coolant System Piping | 노드 추가: [nuscale_ch05_0024] Pressurizer | edge: [nuscale_ch05_0021] --SPECIFIES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0024] --REFERENCES--> [nuscale_ch05_0005] | edge: [nuscale_ch05_0024] --REFERENCES--> [nuscale_ch05_0019]",
+        "Hop 3: 노드 추가: [nuscale_ch05_0003] Design Basis | 노드 추가: [nuscale_ch05_0016] Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses | edge: [nuscale_ch05_0003] --SPECIFIES--> [nuscale_ch05_0005] | edge: [nuscale_ch05_0003] --SPECIFIES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0003] --SPECIFIES--> [nuscale_ch05_0021] | edge: [nuscale_ch05_0016] --SPECIFIES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0003] --REFERENCES--> [nuscale_ch05_0016]",
+        "Hop 4: 노드 추가: [nuscale_ch05_0004] System Description | 노드 추가: [nuscale_ch05_0015] Reactor Vessel Materials | edge: [nuscale_ch05_0004] --SPECIFIES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0015] --REFERENCES--> [nuscale_ch05_0005] | edge: [nuscale_ch05_0015] --SUPPORTS--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0004] --SUPPORTS--> [nuscale_ch05_0015]"
+      ]
+    },
+    {
+      "id": "Q072",
+      "type": "composite",
+      "question": "Explain the principle of natural circulation cooling in the NuScale design.",
+      "expected_answer": "NuScale cools the Reactor Coolant System (RCS) through natural circulation. As shown in Figure 5.1-2, the coolant heated in the core rises and passes through the steam generator, releasing heat before descending, all occurring without the use of pumps.",
+      "agent_answer": "1. Core Conclusion  \nThe NuScale design achieves reactor core cooling through natural circulation, relying on density-driven flow of the primary coolant without the use of reactor coolant pumps or external piping. This is enabled by the vertical arrangement of the reactor core and steam generators within the reactor pressure vessel (RPV), which creates a temperature and density gradient that drives coolant flow.\n\n2. Key Evidence Citations  \n- The NuScale reactor coolant system (RCS) \"relies on natural circulation flow for the reactor coolant and does not include reactor coolant pumps or an external piping system\" ([nuscale_ch05_0002], [nuscale_ch05_0003]).  \n- The RCS is designed so that \"the heated coolant rises through the core, flows upward, and transfers heat to the steam generators, where it cools and becomes denser, then descends to repeat the cycle\" ([nuscale_ch05_0019], [nuscale_ch05_0020]).  \n- The integral arrangement of the RPV, steam generators, and decay heat removal system (DHRS) within the containment vessel supports this passive, pump-less circulation ([nuscale_ch05_0019], [nuscale_ch05_0020], [nuscale_ch05_0022]).\n\n3. Explicit Mention of Uncertainties  \nWhile the principle and supporting design features are well-documented, the detailed thermal-hydraulic performance (e.g., flow rates under all transient conditions, potential for flow instabilities) is not fully described in the cited sections. Further analysis or reference to system testing and modeling would be required for a comprehensive assessment of all operational scenarios.\n\n**Summary:**  \nNuScale’s natural circulation cooling is based on passive, density-driven flow enabled by the vertical, integral arrangement of the core and steam generators, eliminating the need for pumps and enhancing safety through simplicity ([nuscale_ch05_0002], [nuscale_ch05_0003], [nuscale_ch05_0019], [nuscale_ch05_0020]). Some uncertainties remain regarding detailed performance under all conditions.",
+      "faithfulness": null,
+      "answer_relevancy": 0.6735,
+      "context_recall": 1.0,
+      "factual_correctness": 0.33,
+      "keyword_hit": 0.571,
+      "kg_nodes": 8,
+      "kg_edges": 11,
+      "hops_used": 4,
+      "retrieved_contexts_count": 6,
+      "agent_sec": 68.5,
+      "eval_sec": 50.0,
+      "total_sec": 118.4,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch05_0004] System Description | 노드 추가: [nuscale_ch05_0019] Reactor Coolant System Component and Subsystem Design | edge: [nuscale_ch05_0004] --SUPPORTS--> [nuscale_ch05_0019]",
+        "Hop 2: 노드 추가: [nuscale_ch05_0002] Summary Description | 노드 추가: [nuscale_ch05_0022] Decay Heat Removal System | edge: [nuscale_ch05_0002] --SUPPORTS--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0022] --REFERENCES--> [nuscale_ch05_0019]",
+        "Hop 3: 노드 추가: [nuscale_ch05_0003] Design Basis | 노드 추가: [nuscale_ch05_0021] Reactor Coolant System Piping | edge: [nuscale_ch05_0003] --SUPPORTS--> [nuscale_ch05_0004] | edge: [nuscale_ch05_0003] --SUPPORTS--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0021] --SUPPORTS--> [nuscale_ch05_0002]",
+        "Hop 4: 노드 추가: [nuscale_ch05_0005] System Components | 노드 추가: [nuscale_ch05_0020] Steam Generators | edge: [nuscale_ch05_0005] --REFERENCES--> [nuscale_ch05_0004] | edge: [nuscale_ch05_0005] --REFERENCES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0005] --SUPPORTS--> [nuscale_ch05_0002] | edge: [nuscale_ch05_0020] --SUPPORTS--> [nuscale_ch05_0002] | edge: [nuscale_ch05_0005] --REFERENCES--> [nuscale_ch05_0020]"
+      ]
+    },
+    {
+      "id": "Q073",
+      "type": "composite",
+      "question": "Describe the material properties of the RPV (Reactor Pressure Vessel).",
+      "expected_answer": "The RPV is constructed from SA-508 Grade 3 Class 1 low-alloy steel, and its interior is clad with austenitic stainless steel (SA-182 Grade F304) to ensure corrosion resistance.",
+      "agent_answer": "**Core Conclusion:**  \nThe Reactor Pressure Vessel (RPV) is constructed from materials that meet stringent mechanical, chemical, and fracture toughness requirements as specified by the ASME Boiler and Pressure Vessel Code (BPVC), Section III, Subsection NB, and Section II. The RPV materials are selected for high strength, ductility, resistance to corrosion and stress corrosion cracking, and are subject to rigorous fabrication, testing, and inspection standards to ensure integrity under all operating conditions.\n\n**Key Evidence Citations:**\n\n1. **Material Standards and Compliance:**  \n   - The RPV and its weld materials conform to ASME BPVC Section III, Subsection NB, and Section II requirements, ensuring high quality and reliability ([nuscale_ch05_0010], [nuscale_ch05_0015], [nuscale_ch05_0014]).\n   - Materials are designed, fabricated, and tested as Class 1 components, meeting the highest quality standards for nuclear applications ([nuscale_ch05_0010]).\n\n2. **Mechanical Properties:**  \n   - The RPV materials are selected for adequate fracture toughness, ductility, and strength to withstand pressure, temperature, and irradiation effects ([nuscale_ch05_0016], [nuscale_ch05_0017]).\n   - Charpy upper-shelf energy and pressurized thermal shock resistance are analyzed to ensure vessel integrity during transients ([nuscale_ch05_0016], [nuscale_ch05_0017]).\n\n3. **Corrosion and Environmental Resistance:**  \n   - Threaded fasteners (e.g., closure flange bolts) use nickel-based Alloy 718 for compatibility with borated water and mitigation of stress corrosion cracking ([nuscale_ch05_0011]).\n   - Surfaces are protected during shipment and storage with non-chloride, non-corrosive desiccants to prevent corrosion ([nuscale_ch05_0018]).\n\n4. **Inspection and Testing:**  \n   - Preservice and inservice inspections, including nondestructive examinations, are mandated to verify material integrity throughout the vessel’s life ([nuscale_ch05_0011], [nuscale_ch05_0018]).\n\n**Uncertainties:**  \nThe specific alloy grades (e.g., SA-508, SA-533) and detailed mechanical property values (e.g., yield strength, fracture toughness numbers) are not explicitly stated in the provided nodes. However, compliance with ASME BPVC standards implies use of industry-accepted RPV steels with well-characterized properties.\n\n**Summary:**  \nThe RPV is fabricated from ASME-qualified steels and alloys, with properties ensuring strength, toughness, and corrosion resistance, and is subject to comprehensive inspection and testing regimes ([nuscale_ch05_0010], [nuscale_ch05_0011], [nuscale_ch05_0015], [nuscale_ch05_0016], [nuscale_ch05_0017], [nuscale_ch05_0018]).",
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.7953,
+      "context_recall": 0.0,
+      "factual_correctness": 0.0,
+      "keyword_hit": 0.25,
+      "kg_nodes": 8,
+      "kg_edges": 13,
+      "hops_used": 4,
+      "retrieved_contexts_count": 6,
+      "agent_sec": 72.5,
+      "eval_sec": 35.9,
+      "total_sec": 108.5,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch05_0015] Reactor Vessel Materials | 노드 추가: [nuscale_ch05_0010] Reactor Coolant Pressure Boundary Materials | edge: [nuscale_ch05_0015] --REFERENCES--> [nuscale_ch05_0010]",
+        "Hop 2: 노드 추가: [nuscale_ch05_0016] Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses | 노드 추가: [nuscale_ch05_0017] Reactor Vessel Integrity | edge: [nuscale_ch05_0016] --SPECIFIES--> [nuscale_ch05_0015] | edge: [nuscale_ch05_0016] --REFERENCES--> [nuscale_ch05_0010] | edge: [nuscale_ch05_0017] --SPECIFIES--> [nuscale_ch05_0015] | edge: [nuscale_ch05_0017] --REFERENCES--> [nuscale_ch05_0010]",
+        "Hop 3: 노드 추가: [nuscale_ch05_0014] Reactor Vessel | 노드 추가: [nuscale_ch05_0018] References | edge: [nuscale_ch05_0014] --REFERENCES--> [nuscale_ch05_0010] | edge: [nuscale_ch05_0018] --SPECIFIES--> [nuscale_ch05_0015] | edge: [nuscale_ch05_0018] --REFERENCES--> [nuscale_ch05_0010]",
+        "Hop 4: 노드 추가: [nuscale_ch05_0005] System Components | 노드 추가: [nuscale_ch05_0011] Reactor Coolant Pressure Boundary Inservice Inspection and Testing | edge: [nuscale_ch05_0005] --SPECIFIES--> [nuscale_ch05_0015] | edge: [nuscale_ch05_0005] --SPECIFIES--> [nuscale_ch05_0010] | edge: [nuscale_ch05_0011] --SUPPORTS--> [nuscale_ch05_0015] | edge: [nuscale_ch05_0011] --SUPPORTS--> [nuscale_ch05_0010] | edge: [nuscale_ch05_0005] --SPECIFIES--> [nuscale_ch05_0011]"
+      ]
+    },
+    {
+      "id": "Q074",
+      "type": "composite",
+      "question": "Describe the heat transfer area and structural characteristics of the steam generator.",
+      "expected_answer": "The steam generator (SG) consists of two independent helical coil tube bundles, which are positioned in the upper reactor pressure vessel (RPV) as shown in Figure 5.4-1. According to Table 5.4-1, the total heat transfer area and the number of tubes are specified.",
+      "agent_answer": "1. Core Conclusion  \nThe steam generator (SG) in the NuScale Power Module is an integral component located within the reactor pressure vessel (RPV). Structurally, each module contains two SGs featuring helical-shaped tubing and a specialized tube support structure. The SGs are designed for efficient heat transfer from the primary reactor coolant to the secondary side, enabling steam production for power generation.\n\n2. Key Evidence Citations  \n- The SGs are housed inside the RPV along with the reactor core and pressurizer, forming part of the reactor coolant pressure boundary (RCPB) ([nuscale_ch05_0014], [nuscale_ch05_0020], [nuscale_ch05_0019]).\n- The NuScale SG design differs from conventional designs primarily in the use of helical-shaped SG tubing and a unique tube support structure. This helical configuration is a significant structural characteristic ([nuscale_ch05_0021]).\n- The SGs are designed to minimize risks such as flow-induced vibration and wear, with operational experience from similar tubing materials (A690TT) indicating wear as the primary degradation mechanism ([nuscale_ch05_0021]).\n- The SGs are isolated from the main steam and feedwater systems during certain operations, indicating their integration and operational flexibility within the system ([nuscale_ch05_0005]).\n\n3. Uncertainties  \n- The exact quantitative value of the heat transfer area is not specified in the explored documentation. Only qualitative descriptions of the heat transfer mechanism and structural features are provided.\n- Detailed drawings or further breakdowns of the tube support structure and its impact on heat transfer efficiency are not included in the current evidence set.\n\nIn summary, the NuScale steam generator is characterized by its helical tube design and integral placement within the RPV, with structural features aimed at reliability and efficient heat transfer. However, specific numerical data on heat transfer area is not available in the cited sections.",
+      "faithfulness": null,
+      "answer_relevancy": 0.6279,
+      "context_recall": 0.5,
+      "factual_correctness": null,
+      "keyword_hit": 0.571,
+      "kg_nodes": 8,
+      "kg_edges": 9,
+      "hops_used": 4,
+      "retrieved_contexts_count": 6,
+      "agent_sec": 74.4,
+      "eval_sec": 164.4,
+      "total_sec": 238.8,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch05_0020] Steam Generators | 노드 추가: [nuscale_ch05_0019] Reactor Coolant System Component and Subsystem Design",
+        "Hop 2: 노드 추가: [nuscale_ch05_0021] Reactor Coolant System Piping | 노드 추가: [nuscale_ch05_0024] Pressurizer | edge: [nuscale_ch05_0021] --REFERENCES--> [nuscale_ch05_0020] | edge: [nuscale_ch05_0021] --REFERENCES--> [nuscale_ch05_0019]",
+        "Hop 3: 노드 추가: [nuscale_ch05_0005] System Components | 노드 추가: [nuscale_ch05_0004] System Description | edge: [nuscale_ch05_0005] --REFERENCES--> [nuscale_ch05_0020] | edge: [nuscale_ch05_0004] --SPECIFIES--> [nuscale_ch05_0020]",
+        "Hop 4: 노드 추가: [nuscale_ch05_0002] Summary Description | 노드 추가: [nuscale_ch05_0014] Reactor Vessel | edge: [nuscale_ch05_0002] --SPECIFIES--> [nuscale_ch05_0020] | edge: [nuscale_ch05_0002] --SPECIFIES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0014] --REFERENCES--> [nuscale_ch05_0020] | edge: [nuscale_ch05_0014] --REFERENCES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0002] --REFERENCES--> [nuscale_ch05_0014]"
+      ]
+    },
+    {
+      "id": "Q075",
+      "type": "composite",
+      "question": "Explain the operating principle of the DHRS (Diverse Heat Removal System).",
+      "expected_answer": "The DHRS is a passive residual heat removal system that removes heat through natural circulation between the secondary side of the steam generator and the cooling water pool, as illustrated in Figure 5.4-10. It operates by opening valves without the need for external power.",
+      "agent_answer": "1. Core Conclusion  \nThe Diverse Heat Removal System (DHRS) operates by passively removing decay heat from the reactor core when normal secondary-side cooling is unavailable. It achieves this by transferring heat from the primary reactor coolant, via the steam generators (SGs), to a secondary heat sink, without reliance on external power or active mechanical systems. The DHRS ensures the reactor is brought to and maintained in a safe shutdown condition by using natural circulation and engineered heat exchange pathways.\n\n2. Key Evidence Citations  \n- [nuscale_ch05_0022]: The DHRS is designed to remove post-reactor trip residual and core decay heat from operating conditions and transition the NuScale Power Module (NPM) to safe shutdown without external power. It cools the Reactor Coolant System (RCS) at a rate that maintains fuel and pressure boundary integrity during non-LOCA events.\n- [nuscale_ch05_0006]: The DHRS connects to the steam and feed piping, allowing the steam generators to remove decay heat from the primary coolant. This connection enables heat transfer from the RCS to the secondary side, supporting passive heat removal.\n- [nuscale_ch05_0002]: The NuScale design relies on natural circulation for reactor coolant flow, eliminating the need for pumps, which supports the passive nature of the DHRS.\n- [nuscale_ch05_0005]: Operational steps include isolating the steam generators and recirculating feedwater through the DHRS heat exchangers, further detailing the passive heat removal process.\n\n3. Uncertainties  \n- The precise configuration of the secondary heat sink (e.g., ultimate heat sink details) and the full sequence of DHRS actuation are not fully described in the provided nodes.\n- While the general principle is clear, specific performance data (e.g., heat removal rates, time to safe shutdown) are not included in the cited sections.\n\nIn summary, the DHRS is a passive, safety-related system that uses natural circulation and heat exchangers to remove decay heat via the steam generators, ensuring safe reactor shutdown without external power ([nuscale_ch05_0022], [nuscale_ch05_0006], [nuscale_ch05_0002], [nuscale_ch05_0005]).",
+      "faithfulness": null,
+      "answer_relevancy": 0.7287,
+      "context_recall": 1.0,
+      "factual_correctness": 0.27,
+      "keyword_hit": 0.667,
+      "kg_nodes": 8,
+      "kg_edges": 14,
+      "hops_used": 4,
+      "retrieved_contexts_count": 6,
+      "agent_sec": 72.2,
+      "eval_sec": 102.3,
+      "total_sec": 174.5,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch05_0022] Decay Heat Removal System | 노드 추가: [nuscale_ch05_0019] Reactor Coolant System Component and Subsystem Design | edge: [nuscale_ch05_0022] --REFERENCES--> [nuscale_ch05_0019]",
+        "Hop 2: 노드 추가: [nuscale_ch05_0004] System Description | 노드 추가: [nuscale_ch05_0006] System Evaluation | edge: [nuscale_ch05_0004] --REFERENCES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0006] --SUPPORTS--> [nuscale_ch05_0022] | edge: [nuscale_ch05_0006] --REFERENCES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0004] --SPECIFIES--> [nuscale_ch05_0006]",
+        "Hop 3: 노드 추가: [nuscale_ch05_0002] Summary Description | 노드 추가: [nuscale_ch05_0005] System Components | edge: [nuscale_ch05_0002] --SPECIFIES--> [nuscale_ch05_0022] | edge: [nuscale_ch05_0002] --SPECIFIES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0005] --SUPPORTS--> [nuscale_ch05_0022] | edge: [nuscale_ch05_0005] --REFERENCES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0005] --REFERENCES--> [nuscale_ch05_0004]",
+        "Hop 4: 노드 추가: [nuscale_ch05_0001] CHAPTER 5 REACTOR COOLANT SYSTEM AND CONNECTING SYSTEMS | 노드 추가: [nuscale_ch05_0023] Reactor Coolant System High-Point Vents | edge: [nuscale_ch05_0001] --SPECIFIES--> [nuscale_ch05_0022] | edge: [nuscale_ch05_0001] --SPECIFIES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0023] --SPECIFIES--> [nuscale_ch05_0022] | edge: [nuscale_ch05_0023] --REFERENCES--> [nuscale_ch05_0019]"
+      ]
+    }
+  ]
+}

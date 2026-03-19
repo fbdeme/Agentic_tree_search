@@ -1,0 +1,192 @@
+{
+  "question": "Explain the fuel handling process.",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0410": {
+      "node_id": "nuscale_ch01_0410",
+      "title": "SRP 9.5.4, Rev 3: Emergency Diesel Engine Fuel Oil Storage and Transfer SystemAll (II.1 thru II.4) Compliance with GDC 2, GDC 4, GDC 5, and GDC 17",
+      "summary": "The NuScale plant design does not require or include safety-related emergency diesel generators, and therefore the associated systems (fuel oil storage and transfer, cooling water, starting, lubrication, and combustion air intake/exhaust) and their compliance with the specified General Design Criteria (GDC) are not applicable. The plant’s safety functions do not rely on either AC or DC power. As a result, the requirements of SRP 9.5.4 through SRP 9.5.8 are not relevant to the NuScale design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "260",
+      "hop": 1
+    },
+    "nuscale_ch01_0309": {
+      "node_id": "nuscale_ch01_0309",
+      "title": "SRP 9.1.4, Rev 4: Light Load Handling System and Refueling Cavity DesignII.3 Specific Criteria to Meet GDC 61",
+      "summary": "This section documents NuScale’s conformance with regulatory criteria related to the Light Load Handling System and Refueling Cavity Design, specifically addressing compliance with General Design Criterion (GDC) 61. It confirms that the design meets the required safety standards outlined in SRP 9.1.4, Revision 4, with no exceptions or additional comments noted.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "244",
+      "hop": 1
+    },
+    "nuscale_ch01_0792": {
+      "node_id": "nuscale_ch01_0792",
+      "title": "SRP 15.7.4, Rev 1: Radiological Consequences of Fuel Handling AccidentsII.3 Dose Model and Modeling Assumptions",
+      "summary": "This section explains that the acceptance criteria for the dose model and modeling assumptions in SRP 15.7.4, Rev 1 are not applicable to the NuScale design, as they have been superseded by the updated methodology in SRP Section 15.0.3. Therefore, the specific radiological analysis methods and assumptions outlined in SRP 15.7.4, Rev 1 do not apply to the NuScale Final Safety Analysis Report.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "310",
+      "hop": 1
+    },
+    "nuscale_ch01_0055": {
+      "node_id": "nuscale_ch01_0055",
+      "title": "NuScale Testing Programs",
+      "summary": "This section outlines the NuScale testing programs designed to verify and confirm unique design features supporting the plant’s safety analysis, particularly where prior data or operational experience was lacking. It summarizes completed and ongoing tests for the NuScale Power Module, including those for fuel design, steam generator, control rod assemblies, and integrated system phenomena, with specific mention of critical heat flux testing for both preliminary and final fuel designs to support licensing and safety analysis.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "83",
+      "hop": 1
+    },
+    "nuscale_ch01_0791": {
+      "node_id": "nuscale_ch01_0791",
+      "title": "SRP 15.7.4, Rev 1: Radiological Consequences of Fuel Handling AccidentsII.2 Radioactivity Control Features of Fuel Storage and Handling Systems",
+      "summary": "This section explains that the NuScale design partially conforms to the SRP 15.7.4, Rev 1 acceptance criteria for radioactivity control features of fuel storage and handling systems. Specifically, only the criteria relevant to systems inside the Reactor Building apply, as NuScale does not use a traditional containment building for fuel storage and handling; each module has its own compact containment vessel, making some criteria not applicable.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "310",
+      "hop": 1
+    },
+    "nuscale_ch01_0036": {
+      "node_id": "nuscale_ch01_0036",
+      "title": "Refueling Operations",
+      "summary": "Refueling operations for a NuScale Power Module (NPM) are conducted independently from other modules. The process involves moving the NPM from its operating bay to the refueling pool, disassembling it for core refueling and maintenance, and then reassembling and returning it to service after inspections and tests are completed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "38",
+      "hop": 1
+    },
+    "nuscale_ch01_0035": {
+      "node_id": "nuscale_ch01_0035",
+      "title": "Fuel Handling and Reactor Maintenance Areas",
+      "summary": "The fuel handling and reactor maintenance areas are located at the west end of the Reactor Building (RXB) and include spaces for the spent fuel pool (SFP), refueling pool, and dry dock, with facilities designed for safe fuel handling and maintenance operations. These areas provide radiation protection for personnel, support the transport and storage of new and spent fuel assemblies, and are equipped with cranes and access points for efficient fuel management during refueling and maintenance activities.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "37",
+      "hop": 2
+    },
+    "nuscale_ch01_0034": {
+      "node_id": "nuscale_ch01_0034",
+      "title": "Reactor Building",
+      "summary": "The Reactor Building (RXB) is centrally located on the NuScale Power Plant site and houses the NuScale Power Modules (NPMs) along with essential systems for plant operation and shutdown. It is a large, reinforced concrete, Seismic Category I structure designed for safety against various hazards, and provides radiation protection for personnel. The RXB contains a reactor pool with twelve NPM bays arranged in two rows, each bay having three walls and facing the pool center.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "36",
+      "hop": 3
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0410",
+      "target": "nuscale_ch01_0055",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B describes testing programs that provide data to support the safety analysis of unique design features, which is referenced in Section A as part of the NuScale Final Safety Analysis Report's demonstration of conformance with regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0410",
+      "target": "nuscale_ch01_0791",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A discusses the inapplicability of emergency diesel generator fuel oil storage and transfer systems to the NuScale design, while Section B addresses the radiological consequences and control features of fuel storage and handling systems, both relating to the broader context of fuel handling but focusing on different aspects—A on power system requirements and B on radiological safety during fuel handling."
+    },
+    {
+      "source": "nuscale_ch01_0309",
+      "target": "nuscale_ch01_0792",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the design and regulatory criteria for the fuel handling and refueling systems, while Section B evaluates the radiological consequences of fuel handling accidents, thus Section A's design features are intended to prevent or mitigate the accident scenarios analyzed in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0309",
+      "target": "nuscale_ch01_0055",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section B describes testing programs that provide data to support the safety analyses and regulatory conformance discussed in Section A regarding the fuel handling and related systems."
+    },
+    {
+      "source": "nuscale_ch01_0309",
+      "target": "nuscale_ch01_0791",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the design criteria and regulatory conformance for fuel handling systems, while Section B evaluates the radiological consequences and control features of those same systems during fuel handling accidents, connecting them through the safety and regulatory requirements for fuel handling processes."
+    },
+    {
+      "source": "nuscale_ch01_0309",
+      "target": "nuscale_ch01_0036",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A specifies the regulatory criteria and conformance requirements for the light load handling system and refueling cavity design, which Section B describes in operational detail as part of the refueling process for the NuScale plant."
+    },
+    {
+      "source": "nuscale_ch01_0792",
+      "target": "nuscale_ch01_0055",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section B describes testing programs that provide data to support the safety analyses, such as those in Section A, which includes the analysis of radiological consequences of fuel handling accidents."
+    },
+    {
+      "source": "nuscale_ch01_0792",
+      "target": "nuscale_ch01_0791",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A describes the dose modeling and assumptions used to evaluate radiological consequences of fuel handling accidents, while Section B details the radioactivity control features of the fuel storage and handling systems that are inputs or parameters for the dose model in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0792",
+      "target": "nuscale_ch01_0036",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A outlines the regulatory criteria and radiological consequence modeling assumptions for fuel handling accidents, which Section B's description of the refueling operations must adhere to in order to ensure compliance and safety."
+    },
+    {
+      "source": "nuscale_ch01_0055",
+      "target": "nuscale_ch01_0791",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes testing programs that generate data to support the safety analysis of unique design features, while Section B outlines regulatory criteria and conformance requirements for radiological consequences of fuel handling accidents, thus Section A's test results provide evidence to support compliance with Section B's regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0055",
+      "target": "nuscale_ch01_0036",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes testing programs that generate data to support the safety analysis, which includes processes like those detailed in Section B's description of refueling operations."
+    },
+    {
+      "source": "nuscale_ch01_0791",
+      "target": "nuscale_ch01_0036",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A outlines the regulatory criteria and radiological safety requirements for fuel handling accidents, while Section B describes the specific refueling operations process that must comply with those criteria."
+    },
+    {
+      "source": "nuscale_ch01_0035",
+      "target": "nuscale_ch01_0309",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the physical features and operational context of the fuel handling and reactor maintenance areas, while Section B outlines the regulatory criteria (SRP 9.1.4) that these areas and their systems must conform to, connecting them through the requirement that the design and operation of fuel handling processes meet specific safety standards."
+    },
+    {
+      "source": "nuscale_ch01_0035",
+      "target": "nuscale_ch01_0792",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the physical layout and operational provisions for fuel handling, which are relevant to Section B's evaluation of radiological consequences during fuel handling accidents, as the process and area design directly impact accident analysis."
+    },
+    {
+      "source": "nuscale_ch01_0034",
+      "target": "nuscale_ch01_0309",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general description of the plant layout and references where detailed systems (including those relevant to fuel handling) are discussed, while Section B specifies the regulatory criteria and conformance requirements for systems directly involved in the fuel handling process."
+    },
+    {
+      "source": "nuscale_ch01_0034",
+      "target": "nuscale_ch01_0792",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the general plant layout and references where detailed information on radioactive waste management and related systems can be found, while Section B outlines the regulatory criteria and modeling assumptions for evaluating the radiological consequences of fuel handling accidents, connecting them through the need to understand plant arrangements and waste management systems when assessing fuel handling processes and accident consequences."
+    }
+  ]
+}

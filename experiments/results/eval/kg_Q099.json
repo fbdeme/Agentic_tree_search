@@ -1,0 +1,33 @@
+{
+  "question": "Describe the specimen testing procedures for the materials surveillance program.",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch05_0015": {
+      "node_id": "nuscale_ch05_0015",
+      "title": "Reactor Vessel Materials",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module’s reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel, serving as a key barrier to fission product release. The RPV and its components are constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure integrity and safety throughout the plant’s design lifetime.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
+      "hop": 1
+    },
+    "nuscale_ch05_0018": {
+      "node_id": "nuscale_ch05_0018",
+      "title": "References",
+      "summary": "This section outlines the requirements and procedures for inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fasteners for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It specifies the use of nondestructive examinations, controlled shipping environments, and quality assurance measures to ensure reactor vessel integrity. Key standards cited include the ASME Boiler and Pressure Vessel Code and ASME NQA-1 for quality assurance.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "74",
+      "hop": 1
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0015",
+      "target": "nuscale_ch05_0018",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B references Section A by specifying that the nondestructive examinations performed on the reactor vessel materials are described in Section 5.3.1, which is part of the broader reactor vessel materials discussion in Section A."
+    }
+  ]
+}

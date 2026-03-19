@@ -1,0 +1,271 @@
+{
+  "question": "Explain the operational limitations of the P-T limit curve during normal operation.",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch05_0016": {
+      "node_id": "nuscale_ch05_0016",
+      "title": "Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses",
+      "summary": "This section outlines the methodology and regulatory compliance for establishing pressure-temperature operational limits for the reactor coolant pressure boundary (RCPB) over the plant’s 60-year lifespan. It details the use of ASME and NRC guidelines to calculate pressure-temperature curves, accounting for vessel embrittlement, and specifies that these limits are designed to prevent non-ductile failure of the reactor pressure vessel.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "72",
+      "hop": 1
+    },
+    "nuscale_ch05_0018": {
+      "node_id": "nuscale_ch05_0018",
+      "title": "References",
+      "summary": "This section outlines the requirements and procedures for inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fasteners for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It emphasizes compliance with specific codes for packaging, handling, and quality assurance, as well as maintaining a controlled environment during shipment to protect the reactor vessel's integrity.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "74",
+      "hop": 1
+    },
+    "nuscale_ch05_0008": {
+      "node_id": "nuscale_ch05_0008",
+      "title": "Compliance with Codes and Code Cases",
+      "summary": "This section describes how the NuScale Power Module (NPM) and its reactor coolant pressure boundary (RCPB) components comply with relevant U.S. regulations, specifically 10 CFR 50.55a and associated General Design Criteria. It details the use of ASME Boiler and Pressure Vessel Code (BPVC) standards for design, fabrication, testing, and classification of components, specifying that the 2013 Edition of the ASME BPVC is used for certification, in accordance with NRC requirements and regulatory guides.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "20",
+      "hop": 1
+    },
+    "nuscale_ch05_0015": {
+      "node_id": "nuscale_ch05_0015",
+      "title": "Reactor Vessel Materials",
+      "summary": "The NuScale Power Module’s reactor pressure vessel (RPV) is a key component of the reactor coolant system, housing the core, steam generators, and pressurizer within a single vessel, and serving as a primary barrier to fission product release. The RPV and its appurtenances are constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure long-term integrity and safety, with all components certified according to strict industry standards.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
+      "hop": 1
+    },
+    "nuscale_ch05_0010": {
+      "node_id": "nuscale_ch05_0010",
+      "title": "Reactor Coolant Pressure Boundary Materials",
+      "summary": "The Reactor Coolant Pressure Boundary (RCPB) materials, including welds, are selected and fabricated in accordance with ASME BPVC standards and comply with relevant U.S. regulatory requirements to ensure high quality, environmental compatibility, and fracture resistance. These materials are subject to strict quality assurance measures and testing to meet fracture toughness criteria, as detailed in referenced tables and sections.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "29",
+      "hop": 1
+    },
+    "nuscale_ch05_0002": {
+      "node_id": "nuscale_ch05_0002",
+      "title": "Summary Description",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation, eliminating the need for pumps or external piping, and is integrated within each NuScale Power Module. The RCS is designed to safely transfer heat from the reactor core, maintain proper coolant chemistry, and ensure uniform boron concentration, supporting both normal and transient plant operations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 2
+    },
+    "nuscale_ch05_0024": {
+      "node_id": "nuscale_ch05_0024",
+      "title": "Pressurizer",
+      "summary": "The pressurizer in the NuScale reactor is integrated into the upper region of the reactor vessel and functions to regulate reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure, and is designed to handle operating transients without triggering reactor trips or safety system actuations, while providing continuous monitoring of pressure and water level.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "124",
+      "hop": 2
+    },
+    "nuscale_ch05_0012": {
+      "node_id": "nuscale_ch05_0012",
+      "title": "Reactor Coolant Pressure Boundary Leakage Detection",
+      "summary": "The NuScale reactor coolant system (RCS) does not use traditional components with designed leakage, making it impractical to distinguish between identified and unidentified leakage inside containment using current instrumentation. All leakage into containment is treated as unidentified until the source is determined, with leakage rates monitored through RCS inventory balance and containment evacuation system (CES) flow rates, and detection systems are designed to be reliable and sensitive to support safety analyses.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "41",
+      "hop": 2
+    },
+    "nuscale_ch05_0007": {
+      "node_id": "nuscale_ch05_0007",
+      "title": "Integrity of Reactor Coolant Boundary",
+      "summary": "This section describes the design features of each NuScale Power Module (NPM) that ensure the integrity of the reactor coolant pressure boundary (RCPB) throughout the plant’s design life, in accordance with regulatory definitions. It details the components and systems included in the RCPB, such as the reactor pressure vessel, containment isolation valves, safety valves, and associated piping, emphasizing their roles in maintaining pressure containment and system safety.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "19",
+      "hop": 2
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0018",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A discusses specific weld examination requirements for reactor vessel components per ASME BPVC, while Section B outlines broader inspection and handling requirements for the reactor vessel, both referencing ASME BPVC standards as the connecting regulatory framework."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0008",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A describes specific weld examination and attachment requirements for the reactor pressure vessel as defined by the ASME BPVC, while Section B establishes that all such components comply with ASME BPVC and regulatory requirements, thus Section A provides detailed implementation that satisfies the general compliance stated in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A specifies the examination and welding requirements for nonstructural attachments to the reactor pressure vessel (RPV) as defined by ASME code, while Section B provides a general description of the RPV and its role in the reactor coolant system, connecting them through the physical components and regulatory standards that govern RPV construction and operation."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0010",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses specific examination and welding requirements for reactor vessel attachments per ASME BPVC, while Section B establishes that all reactor coolant pressure boundary materials, including those in Section A, must comply with ASME BPVC and regulatory requirements, thus connecting the operational limitations of P-T curves to material and fabrication standards."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0008",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A describes inspection and handling requirements for the reactor pressure vessel that are performed in accordance with ASME BPVC standards, while Section B states that compliance with these same ASME BPVC standards is required for the integrity of the reactor coolant boundary, thus Section A's activities are performed to satisfy Section B's regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0015",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references the inspection and handling requirements for the reactor pressure vessel, while Section B provides a general description of the reactor vessel's structure and function, connecting them through the subject of the reactor vessel as the component subject to operational limitations such as the P-T limit curve."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0010",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A describes inspection and handling requirements for the reactor vessel that reference ASME BPVC standards, while Section B specifies that the reactor coolant pressure boundary materials, including those of the reactor vessel, conform to the same ASME BPVC requirements, thus connecting them through shared regulatory and material standards."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A establishes that the reactor pressure vessel (RPV) and its components comply with regulatory codes (ASME BPVC and 10 CFR 50.55a), while Section B describes the physical configuration and role of the RPV as a pressure-retaining component, thus Section B provides the specific context and details for the general compliance statement in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0010",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A states that the reactor coolant pressure boundary (RCPB) is designed and constructed in compliance with ASME BPVC Section III, while Section B specifies that the materials used for the RCPB also conform to the fabrication and material requirements of the same code, thus Section B provides the material-specific details that support the general compliance claim in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0015",
+      "target": "nuscale_ch05_0010",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the reactor vessel as a component of the reactor coolant pressure boundary, while Section B specifies the regulatory and code requirements that the materials of the reactor coolant pressure boundary (including the reactor vessel) must meet, thus connecting the vessel's operational limitations to compliance with material standards."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0016",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the overall design and components of the reactor coolant system, which establishes the operational context for the application of the P-T limit curve discussed in Section B, where specific ASME code requirements and structural considerations for the reactor vessel are detailed."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0018",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides a general overview of the reactor coolant system, which includes the reactor pressure vessel (RPV) discussed in Section B, while Section B specifies the inspection, shipment, and handling requirements for the RPV, a component described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0008",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the components and design approach of the reactor coolant system, which are subject to the regulatory codes and standards for integrity detailed in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0016",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the pressurizer's role in maintaining reactor coolant system pressure, which directly affects the operational application of the pressure-temperature (P-T) limit curves discussed in Section B, as the pressurizer's performance ensures that system pressures remain within the regulatory P-T limits during normal operation."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0008",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the design and function of the pressurizer, which is a pressure-retaining component whose operational limitations, such as those imposed by the P-T limit curve, must comply with the regulatory requirements and codes specified in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0016",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses the inability to distinguish specific sources of reactor coolant pressure boundary (RCPB) leakage, which impacts the ability to monitor and enforce the operational limitations set by the P-T limit curve described in Section B, as accurate leakage detection is necessary to ensure vessel integrity under the specified pressure-temperature conditions."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0008",
+      "relation": "VIOLATES",
+      "confidence": 0.8,
+      "description": "Section A discusses the practical limitations in detecting reactor coolant pressure boundary leakage, which impacts the ability to ensure compliance with the regulatory codes and standards for pressure boundary integrity described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch05_0016",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides specific pressure-temperature (P-T) limit analyses and requirements that are necessary to ensure the integrity of the reactor coolant pressure boundary described in Section A during normal operation."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch05_0018",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A defines the integrity requirements for the reactor coolant pressure boundary, which are operationally constrained by the P-T limit curve, while Section B specifies the inspection and handling requirements for the reactor vessel that ensure the boundary's integrity is maintained during normal operation."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch05_0008",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the design intent to maintain the integrity of the reactor coolant pressure boundary (RCPB), while Section B specifies that this integrity is ensured by compliance with regulatory codes and standards such as 10 CFR 50.55a and the ASME BPVC."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the reactor coolant system, which includes the pressurizer described in detail in Section B, thereby establishing that the pressurizer's design and function are a specific component within the broader system context."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0012",
+      "relation": "LEADS_TO",
+      "confidence": 0.9,
+      "description": "Section A describes the design features of the reactor coolant system, which are relevant to Section B's discussion of leakage detection capabilities and limitations, as the absence of traditional components in Section A directly impacts the operational limitations described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0007",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the components and configuration of the reactor coolant system (RCS), which Section B identifies as forming the reactor coolant pressure boundary (RCPB) whose integrity is maintained by design features, thus connecting the physical system to its regulatory integrity requirements."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0012",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the pressurizer's role in maintaining and communicating pressure within the reactor coolant system, which directly affects the operational pressure conditions that must be monitored for compliance with the P-T limit curve, while Section B discusses the detection of pressure boundary leakage, which is critical for ensuring that actual operating pressures remain within the P-T curve's safe limits during normal operation."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0007",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the pressurizer's role in maintaining reactor coolant system pressure, which directly affects the operational limits imposed by the P-T (pressure-temperature) limit curve that is established to ensure the integrity of the reactor coolant pressure boundary as discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0007",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A discusses the challenges in detecting and distinguishing reactor coolant pressure boundary (RCPB) leakage, which directly impacts the ability to ensure the integrity of the RCPB as described in Section B, since reliable leakage detection is essential for maintaining the boundary's integrity during normal operation."
+    }
+  ]
+}

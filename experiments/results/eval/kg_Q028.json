@@ -1,0 +1,116 @@
+{
+  "question": "How is measurement uncertainty considered in the design output?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0006": {
+      "node_id": "nuscale_ch01_0006",
+      "title": "Power Output",
+      "summary": "The NuScale Power Plant consists of up to 12 NuScale Power Modules (NPMs), each with a thermal output of 160 MWt and an electrical output of approximately 50 MWe, totaling about 600 MWe gross or 570 MWe net for a 12-module facility. The actual electrical output depends on environmental conditions and includes a 2% margin for measurement uncertainty.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch01_0659": {
+      "node_id": "nuscale_ch01_0659",
+      "title": "SRP 15.0.2, (March 2007): Review of Transient and Accident Analysis MethodsII.4 Uncertainty Analysis",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for transient and accident analysis methods, noting partial or non-applicability where NuScale’s design or methodologies differ from traditional requirements (such as using CHF instead of DNBR, and a modified AST methodology). It highlights that NuScale’s evaluation models for loss-of-coolant accidents (LOCAs) address only the technically relevant features required by regulations, and that certain exemptions from 10 CFR 50 Appendix K are supported. Overall, NuScale’s approach aligns with regulatory guidance except where specific design differences necessitate alternative methods.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "287",
+      "hop": 1
+    },
+    "nuscale_ch01_0656": {
+      "node_id": "nuscale_ch01_0656",
+      "title": "SRP 15.0.2, (March 2007): Review of Transient and Accident Analysis MethodsII.1 Evaluation Model Departure",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for transient and accident analysis methods. It notes that NuScale partially conforms to certain guidance, using critical heat flux (CHF) instead of DNBR, and applies a modified alternative source term (AST) methodology for radiological consequences. Additionally, NuScale’s design supports exemptions from some requirements of 10 CFR 50 Appendix K, focusing evaluation models only on technically relevant features.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "287",
+      "hop": 1
+    },
+    "nuscale_ch01_0004": {
+      "node_id": "nuscale_ch01_0004",
+      "title": "Containment Type",
+      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and operates under vacuum during normal conditions, eliminating the need for insulation. The NuScale reactor is a passive, integral small modular pressurized water reactor with natural circulation and no external piping for steam generators or pressurizer, and each module produces about 50 MWe, with a 12-module plant yielding a net output of approximately 570 MWe.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch01_0010": {
+      "node_id": "nuscale_ch01_0010",
+      "title": "Standard Review Plan - NuScale Design Specific Review Standard",
+      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and operates under vacuum during normal conditions, eliminating the need for insulation. The NuScale reactor is a passive, integral small modular pressurized water reactor with natural circulation and no external piping for steam generators or pressurizer, and each module produces 160 MWt (about 50 MWe), with a 12-module plant yielding a net output of approximately 570 MWe. Applicants referencing the NuScale design must provide construction schedules.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "9",
+      "hop": 1
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0006",
+      "target": "nuscale_ch01_0659",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section B outlines regulatory guidance requiring uncertainty analysis in transient and accident analyses, which Section A's design of the containment vessel must consider to ensure compliance with these requirements."
+    },
+    {
+      "source": "nuscale_ch01_0006",
+      "target": "nuscale_ch01_0656",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section B outlines regulatory guidance for evaluating transient and accident analysis methods, which includes consideration of measurement uncertainty, and Section A describes the design and analysis of the containment vessel, which must account for such uncertainties to demonstrate compliance with these regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0006",
+      "target": "nuscale_ch01_0010",
+      "relation": "REFERENCES",
+      "confidence": 1.0,
+      "description": "Section A and Section B contain identical text describing the containment vessel's design and ASME code compliance, indicating that Section A directly references or reproduces the content from Section B."
+    },
+    {
+      "source": "nuscale_ch01_0659",
+      "target": "nuscale_ch01_0656",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses the requirements for uncertainty analysis in transient and accident analysis methods, while Section B addresses the evaluation model departure, which is a key input that must be considered in the uncertainty analysis described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0659",
+      "target": "nuscale_ch01_0004",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses the regulatory guidance and conformance for uncertainty analysis in transient and accident analyses, while Section B describes the design features and standards of the NuScale containment vessel, with the connection being that the uncertainty analysis in Section A must account for the containment vessel's design parameters described in Section B to ensure regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch01_0659",
+      "target": "nuscale_ch01_0010",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses the regulatory guidance and conformance related to uncertainty analysis in transient and accident analyses, while Section B describes the design and qualification of the NuScale containment vessel, with the connection being that the uncertainty analysis in Section A must account for the containment vessel's design parameters and performance described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0656",
+      "target": "nuscale_ch01_0004",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A discusses the evaluation of transient and accident analysis methods, including how measurement uncertainty is considered in critical heat flux evaluations, while Section B describes the containment vessel's design and its compliance with ASME BPVC requirements, with the connection being that the design outputs (such as containment vessel specifications in Section B) must account for uncertainties identified and evaluated in the analysis methods described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0656",
+      "target": "nuscale_ch01_0010",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A discusses the evaluation of transient and accident analysis methods, including how measurement uncertainty is considered in critical heat flux evaluations, while Section B describes the design and regulatory classification of the NuScale containment vessel, which is one of the system barriers analyzed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0004",
+      "target": "nuscale_ch01_0010",
+      "relation": "REFERENCES",
+      "confidence": 1.0,
+      "description": "Section A and Section B contain identical text describing the containment vessel's design and regulatory code classification, indicating that Section A directly references or reproduces content from Section B."
+    }
+  ]
+}

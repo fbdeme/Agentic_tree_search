@@ -1,0 +1,111 @@
+{
+  "question": "What is the nominal volume of the Cold Leg?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch05_0024": {
+      "node_id": "nuscale_ch05_0024",
+      "title": "Pressurizer",
+      "summary": "The pressurizer is an integral part of the reactor vessel, located in its upper region and separated from the main coolant by a baffle plate, allowing rapid pressure communication. Its main function is to regulate reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface, using heaters and spray flow for pressure control, and providing instrumentation for monitoring. The pressurizer is designed to handle pressure changes during various operating conditions without triggering unnecessary reactor trips or safety system actuations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "124",
+      "hop": 1
+    },
+    "nuscale_ch05_0023": {
+      "node_id": "nuscale_ch05_0023",
+      "title": "Reactor Coolant System High-Point Vents",
+      "summary": "This section outlines the testing and inspection requirements for the DHRS (Decay Heat Removal System) components in the NuScale reactor, ensuring compliance with ASME codes for Class 2 components. It specifies that actuation valves are exercised during cold shutdown conditions, and that various functional and position verification tests are performed according to technical specifications and code requirements, including a one-time in-situ test for the first reactor module.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "121",
+      "hop": 1
+    },
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes components such as the reactor pressure vessel, pressurizer, and associated piping and controls. The RCS removes heat from the reactor core using natural circulation and interfaces with several other systems for safety and operational functions, including degasification and emergency core cooling. Its pressure-retaining parts help maintain the integrity of the reactor coolant pressure boundary, preventing the release of radionuclides.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the NuScale pressurizer, including the RPV upper shell, baffle plate, heater bundles, and associated components. It specifies the types of alloys and stainless steels used, their protective claddings, and relevant material standards (BPVC Section II) to ensure corrosion resistance and compatibility with operating environments.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 1
+    },
+    "nuscale_ch05_0006": {
+      "node_id": "nuscale_ch05_0006",
+      "title": "System Evaluation",
+      "summary": "This section describes the evaluation of the NuScale Power Plant’s system performance, focusing on optimizing steady-state parameters such as coolant temperatures, flow rates, and pressures to maximize electrical generation and maintain safety margins. Calculations using NRELAP5 software, supported by hand calculations, establish best-estimate, maximum, and minimum flow conditions while accounting for uncertainties in flow resistance and system design. The design supports natural circulation with low pressure losses, and uncertainties related to steam generator tube plugging do not affect primary coolant flow determination.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "12",
+      "hop": 1
+    },
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain proper coolant flow, water chemistry, and boron concentration to protect fuel integrity and support safe operation under normal and transient conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 4
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the pressurizer as an integral part of the reactor vessel and its separation from the reactor coolant system (RCS), while Section B describes the RCS's features for managing the pressurizer volume, connecting both sections through their discussion of the pressurizer's role and integration within the RCS."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A describes the functional design and configuration of the pressurizer, while Section B provides references to where the materials and specific components of the pressurizer are described, connecting them by detailing where to find further information about the parts mentioned in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general system description of the RCS and its degasification features, while Section B specifies detailed component and material information for the pressurizer, which is part of the RCS described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0006",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section B discusses the establishment of steady state values for system parameters, which would include the nominal volume of the Cold Leg described in Section A, thus Section B's evaluation relies on the system description provided in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0006",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A references specific component descriptions and material details that are further elaborated in other sections, while Section B provides a system-level evaluation and references Section 5.4 for further details on the steam generators, indicating both sections cross-reference other parts of the FSAR for detailed information."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A provides a general description of the reactor coolant system, which includes the cold leg as part of its flow path, while Section B details the pressurizer as a component within the same system, indicating that both sections describe interconnected subsystems relevant to determining the nominal volume of the cold leg."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the Reactor Coolant System (RCS), while Section B specifies additional details about RCS features such as degasification and pressure boundary integrity, both of which are relevant to understanding the system context for determining the nominal volume of the Cold Leg."
+    }
+  ]
+}

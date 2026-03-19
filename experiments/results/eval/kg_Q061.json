@@ -1,0 +1,220 @@
+{
+  "question": "Describe the cross-sectional view of the configuration consisting of 12 modules.",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0033": {
+      "node_id": "nuscale_ch01_0033",
+      "title": "General Arrangement of Major Structures and Equipment",
+      "summary": "This section describes the general arrangement of major structures and equipment at the NuScale Power Plant, focusing on the central Reactor Building (RXB). The RXB is a large, reinforced concrete structure designed for safety and radiation protection, housing the NuScale Power Modules (NPMs) in a common reactor pool with individual bays arranged in two rows. The section also references detailed figures and notes that some buildings, like the administration and warehouse, are outside the report's scope.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "36",
+      "hop": 1
+    },
+    "nuscale_ch01_0000": {
+      "node_id": "nuscale_ch01_0000",
+      "title": "Preface",
+      "summary": "The Preface outlines the copyright restrictions for the NuScale Standard Plant Design Certification Application, specifying that the information is proprietary and may only be used or copied by the U.S. Nuclear Regulatory Commission (NRC) under certain conditions. It also details the NRC’s rights to reproduce the document for regulatory purposes and public access, provided copyright and proprietary notices are maintained.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "1",
+      "hop": 1
+    },
+    "nuscale_ch01_0370": {
+      "node_id": "nuscale_ch01_0370",
+      "title": "SRP 9.4.1, Rev 3: Control Room Area Ventilation SystemII.2 Environmental and Dynamic Effects",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for the Control Room Area Ventilation System, specifically regarding environmental and dynamic effects. It states that the system meets the requirements of SRP 9.4.1, Rev 3, with no exceptions noted for this criterion. The table documents compliance with relevant standards and highlights that the control room ventilation system is designed to protect against environmental and dynamic hazards as required.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "252",
+      "hop": 1
+    },
+    "nuscale_ch01_0051": {
+      "node_id": "nuscale_ch01_0051",
+      "title": "Plant Features of Special Interest",
+      "summary": "This section describes special plant features of the NuScale Power Plant, highlighting structures such as the Central Utility Building and Diesel Generator Buildings, which house essential but nonsafety-related equipment and functions. It also emphasizes human factors engineering, noting that the plant design minimizes human error through automation, digital controls, and optimized workload management, in compliance with regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "43",
+      "hop": 1
+    },
+    "nuscale_ch01_0032": {
+      "node_id": "nuscale_ch01_0032",
+      "title": "Radioactive Waste Management System",
+      "summary": "The section describes the radioactive waste management system at the NuScale Power Plant, noting that liquid, gaseous, and solid waste systems are detailed in Chapter 11, along with effluent monitoring. It also outlines the general arrangement of major structures, focusing on the Reactor Building (RXB), which is a reinforced, seismically designed concrete structure housing the nuclear power modules and essential systems, and provides radiation protection for personnel.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "36",
+      "hop": 1
+    },
+    "nuscale_ch01_0372": {
+      "node_id": "nuscale_ch01_0372",
+      "title": "SRP 9.4.1, Rev 3: Control Room Area Ventilation SystemII.4 Control Room",
+      "summary": "This section summarizes NuScale’s conformance with SRP 9.4.1, Rev 3 requirements for the Control Room Area Ventilation System. It confirms compliance with criteria for protection against natural phenomena, environmental effects, and sharing of systems, noting that up to 12 modules share a control room. For radioactive material release, the NuScale design uses compressed air tanks for clean air instead of emergency filtration during accidents.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "252",
+      "hop": 1
+    },
+    "nuscale_ch01_0069": {
+      "node_id": "nuscale_ch01_0069",
+      "title": "Piping and Instrumentation Diagrams",
+      "summary": "This section describes the use of simplified electrical, instrumentation and control (I&C), and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information. It references tables and figures that list and explain the symbols used in these diagrams, and notes that site-specific diagrams and legends will be provided by applicants referencing the NuScale design certification.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
+      "hop": 2
+    },
+    "nuscale_ch01_0068": {
+      "node_id": "nuscale_ch01_0068",
+      "title": "Electrical and Instrumentation and Control Drawings",
+      "summary": "This section explains that simplified electrical, instrumentation, and control (I&C) drawings are included as figures in the report to visually clarify design information, with component positions not necessarily indicating operational states unless specified. It references tables and figures listing and explaining the symbols used in these diagrams, and notes that applicants referencing the NuScale design must provide additional site-specific diagrams and legends as needed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
+      "hop": 2
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0000",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides specific details about the general arrangement and layout of the plant, which elaborates on the broader introductory context given in Section B's preface to the plant's design documentation."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0370",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the general arrangement and layout of major structures and equipment, which forms the physical context necessary to understand the configuration of the 12 modules referenced in the analysis question, while Section B discusses regulatory conformance of specific systems (e.g., ventilation) that are housed within or interact with this arrangement."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0051",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides the overall layout and arrangement of major plant structures, which includes the configuration of modules, while Section B describes specific features and functions of one of those structures (the Central Utility Building) that is part of the overall arrangement."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0372",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A provides the general plant layout and arrangement, which includes the configuration of modules, while Section B references regulatory criteria (SRP 9.4.1) that the plant's systems, as described in Section A, must conform to; thus, Section A's design details are evaluated against Section B's regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0000",
+      "target": "nuscale_ch01_0051",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides the general context and introduction for the NuScale Standard Plant, while Section B gives specific details about plant features such as the Central Utility Building, which are part of the overall configuration referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0000",
+      "target": "nuscale_ch01_0032",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides a general arrangement and references a figure depicting the layout of the NuScale Power Plant, which includes the configuration of the 12 modules requested in the analysis question, whereas Section A is a preface and does not contain technical details."
+    },
+    {
+      "source": "nuscale_ch01_0000",
+      "target": "nuscale_ch01_0372",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A provides the general context and introduction for the NuScale plant design, while Section B lists specific regulatory criteria and conformance statements that the plant (including its configuration, such as the 12-module arrangement) must meet."
+    },
+    {
+      "source": "nuscale_ch01_0370",
+      "target": "nuscale_ch01_0051",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines regulatory criteria and conformance for systems relevant to the plant's configuration, while Section B describes the physical layout and features of the Central Utility Building that would be depicted in a cross-sectional view of the 12-module configuration, connecting regulatory requirements to actual plant design."
+    },
+    {
+      "source": "nuscale_ch01_0370",
+      "target": "nuscale_ch01_0032",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides the general arrangement and layout information, including figures, that would be necessary to describe the cross-sectional configuration of the 12 modules referenced in the analysis question, while Section A lists regulatory criteria and conformance statements but does not provide layout details."
+    },
+    {
+      "source": "nuscale_ch01_0370",
+      "target": "nuscale_ch01_0372",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A (Environmental and Dynamic Effects) provides context on the environmental and dynamic factors that must be considered in the cross-sectional configuration, which directly informs the requirements and design considerations described in Section B (Control Room) for the 12-module configuration."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0032",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section B references a figure (Figure 1.2-2) that presents the layout of the NuScale Power Plant, which would include the cross-sectional configuration of the 12 modules requested in the analysis question, while Section A describes features of the Central Utility Building but does not directly address the cross-sectional view."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0372",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the Central Utility Building and its housed systems, some of which (like chiller equipment and instrument air) are relevant to the operation of the control room area ventilation system discussed in Section B, indicating that the physical plant configuration in A provides the infrastructure necessary for the systems in B."
+    },
+    {
+      "source": "nuscale_ch01_0032",
+      "target": "nuscale_ch01_0372",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides a general plant layout that would include the spatial arrangement of the 12-module configuration, which is necessary context for understanding the placement and integration of systems like the control room ventilation discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0033",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides detailed piping and instrumentation diagrams that can be used to interpret or supplement the general arrangement of major structures and equipment described in Section B, thereby enabling a more comprehensive understanding of the cross-sectional configuration of the 12 modules."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0000",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed drawings and diagrams that visually clarify the plant's configuration, which can be used to describe the cross-sectional view of the 12-module configuration introduced in Section B's general plant description."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0370",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A provides detailed drawings and diagrams that visually clarify the design configuration, which can be used to describe the cross-sectional view of the 12-module configuration referenced in the analysis question, while Section B lists regulatory criteria and conformance statements that the design (including its configuration) must meet."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0033",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides detailed electrical and instrumentation drawings that can visually clarify the configuration of the 12 modules described in Section B's general arrangement of major structures and equipment."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0000",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides detailed drawings and figures that visually clarify the plant configuration described in the general introduction of Section B."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0370",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides detailed drawings and figures that visually clarify the design configuration, which can be used to illustrate or support the regulatory conformance statements about environmental and dynamic effects for the 12-module configuration discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0068",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the types of drawings included (such as electrical and I&C), while Section B specifies the subset focused on electrical and I&C drawings, thus Section B details a specific aspect of Section A's general description."
+    }
+  ]
+}

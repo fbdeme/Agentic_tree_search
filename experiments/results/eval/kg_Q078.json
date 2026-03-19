@@ -1,0 +1,234 @@
+{
+  "question": "Analyze the thermal-hydraulic characteristics of the RCS (Reactor Coolant System).",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch05_0019": {
+      "node_id": "nuscale_ch05_0019",
+      "title": "Reactor Coolant System Component and Subsystem Design",
+      "summary": "This section describes the design of the Reactor Coolant System (RCS) components and subsystems in the NuScale Power Module, detailing the integration of the reactor, steam generators, pressurizer, safety and ECCS valves, and associated piping within the reactor pressure vessel (RPV). It also outlines the configuration and boundaries of the steam generator system, emphasizing the integral design of the steam generators within the RPV and the separation between primary and secondary sides.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
+      "hop": 1
+    },
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain proper coolant flow, water chemistry, and boron concentration to protect fuel integrity and support safe operation under normal and transient conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 1
+    },
+    "nuscale_ch05_0006": {
+      "node_id": "nuscale_ch05_0006",
+      "title": "System Evaluation",
+      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance across various power levels by establishing steady-state parameters such as coolant temperatures, flow rates, and pressures, using both software and manual calculations. It accounts for uncertainties in flow resistance and core bypass, ensuring low pressure losses to support natural circulation, and confirms that certain uncertainties, like SG tube plugging, do not affect primary coolant flow determination.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "12",
+      "hop": 1
+    },
+    "nuscale_ch05_0005": {
+      "node_id": "nuscale_ch05_0005",
+      "title": "System Components",
+      "summary": "This section describes the main components of the NuScale reactor system, focusing on the Reactor Pressure Vessel (RPV), Reactor Coolant System (RCS) piping, and the Pressurizer (PZR). The RPV serves as a primary barrier to fission product release and houses key reactor internals, while the RCS piping connects essential systems and the PZR is integrated into the RPV to help control system pressure. Each component's functions and connections are briefly outlined, with references to further detailed sections.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "10",
+      "hop": 1
+    },
+    "nuscale_ch05_0022": {
+      "node_id": "nuscale_ch05_0022",
+      "title": "Decay Heat Removal System",
+      "summary": "The Decay Heat Removal System (DHRS) is an engineered safety feature designed to remove residual and core decay heat from the reactor after shutdown, especially when normal cooling is unavailable, without relying on external power. It ensures the reactor coolant system temperature drops below 420°F within 36 hours, maintaining fuel and pressure boundary safety limits, and its reliability and risk significance are evaluated through established programs. The DHRS operates independently of the Emergency Core Cooling System (ECCS), but both can function together if needed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "106",
+      "hop": 1
+    },
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the construction of the pressurizer and its components within the NuScale reactor coolant system. It specifies the types of steel and alloys used for various parts, their compliance with relevant BPVC material specifications, and highlights corrosion protection measures such as weld cladding with stainless steel and nickel-based alloys.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 2
+    },
+    "nuscale_ch05_0002": {
+      "node_id": "nuscale_ch05_0002",
+      "title": "Summary Description",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve independent modules, maintains proper coolant chemistry and boron concentration, and is engineered to meet safety and performance requirements during normal and off-normal conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 2
+    },
+    "nuscale_ch05_0016": {
+      "node_id": "nuscale_ch05_0016",
+      "title": "Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses",
+      "summary": "This section outlines the methodology and regulatory compliance for establishing pressure-temperature operational limits for the reactor coolant pressure boundary (RCPB) over the plant’s 60-year lifespan. It describes how these limits are calculated using ASME and NRC guidelines, accounting for vessel embrittlement, and provides reference figures and tables for acceptable pressure-temperature combinations to prevent non-ductile failure of the reactor vessel.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "72",
+      "hop": 2
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed descriptions of the RCS components and subsystems that implement the general design basis summarized in Section B, specifically elaborating on the equipment and configuration that enable the RCS's thermal-hydraulic characteristics."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0006",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A details the design and components of the Reactor Coolant System, while Section B evaluates the system's performance using steady state parameters that are determined based on the design described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides the overall design and configuration of the Reactor Coolant System and its components, while Section B describes specific operational procedures and functions of those same components (e.g., pressurizer, steam generators, degasification line) during certain plant conditions, thus Section B details how the components described in Section A are used in practice."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0022",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A lists the Decay Heat Removal System (DHRS) as a subsystem of the Reactor Coolant System (RCS), while Section B provides the design basis and thermal-hydraulic function of the DHRS in removing decay heat from the RCS."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0006",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the design basis and configuration of the RCS, while Section B evaluates the system's thermal-hydraulic performance based on those design characteristics, connecting the physical design to its operational evaluation."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the RCS design and its reliance on natural circulation, while Section B specifies operational details and component actions (such as PZR water level adjustments and venting) that implement and support the described design basis."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0022",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A describes the RCS's reliance on natural circulation for coolant flow, which is a prerequisite for Section B's Decay Heat Removal System (DHRS) design that depends on this circulation to remove decay heat and achieve safe shutdown."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the establishment of steady state parameters for optimal RCS performance, while Section B details specific operational steps and component conditions that influence or result from those parameters, connecting system-level evaluation with component-level actions."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A discusses the optimization of steady state thermal-hydraulic parameters for the RCS, while Section B describes the DHRS's design basis for removing decay heat from the RCS, connecting them through the requirement to manage RCS thermal-hydraulic conditions during both normal and post-trip scenarios."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch05_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the operational steps and component interactions (e.g., feedwater recirculation through DHRS heat exchangers) that enable the Decay Heat Removal System (DHRS) described in Section B to perform its safety function of removing decay heat from the Reactor Coolant System (RCS)."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed material specifications for pressurizer components that are generally described as part of the RCS in Section B, thus elaborating on the construction details of components listed in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed material and component information about the pressurizer, which is one of the RCS components generally described in Section B's summary of the RCS design."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0006",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A provides detailed component and material descriptions of the RCS pressurizer, which are referenced in Section B's system evaluation to support the analysis of thermal-hydraulic performance and optimization criteria."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the RCS and its reliance on natural circulation, while Section B specifies the detailed components and subsystems that constitute the RCS as summarized in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0003",
+      "relation": "SUPPORTS",
+      "confidence": 1.0,
+      "description": "Section A and Section B are identical text excerpts, both providing a summary description of the RCS design basis, thus they reinforce each other by presenting the same information relevant to the thermal-hydraulic characteristics analysis."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0006",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A provides a general description of the RCS design and its reliance on natural circulation, which is the basis for the system performance evaluation discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides specific material and inspection requirements for reactor vessel components, which are part of the overall RCS design described in Section B, thereby specifying details for the general system outlined in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides detailed material and weld examination requirements for reactor vessel components, which are part of the RCS described in Section B's design basis summary, thereby specifying technical implementation details for the general system described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0006",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses material and weld examination requirements for reactor vessel components, while Section B evaluates system-level thermal-hydraulic performance parameters; both sections are connected through the integrity and reliability of RCS components, which underpin safe thermal-hydraulic operation."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed component and material specifications for the pressurizer, which is one of the subsystems generally described as part of the RCS in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0016",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references Section B by directing the reader to Section 5.2 for material descriptions relevant to the pressurizer, which are necessary for understanding the thermal-hydraulic characteristics of the RCS."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0016",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the RCS design and its reliance on natural circulation, while Section B details specific pressure-temperature limits and material requirements for RCS components, connecting the system's design features to the regulatory criteria for safe operation."
+    }
+  ]
+}

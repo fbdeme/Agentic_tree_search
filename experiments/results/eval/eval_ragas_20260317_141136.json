@@ -1,0 +1,115 @@
+{
+  "timestamp": "2026-03-17T14:11:36.084823",
+  "evaluation_framework": "RAGAs v0.4",
+  "config": {
+    "model": "gpt-4.1",
+    "evaluator_model": "gpt-4.1",
+    "embedding_model": "text-embedding-3-small",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 3,
+    "errors": 0
+  },
+  "metrics_description": {
+    "faithfulness": "Fraction of claims in the answer that are supported by the retrieved context (0-1)",
+    "answer_relevancy": "How relevant the answer is to the question, measured by reverse question generation (0-1)",
+    "context_recall": "Fraction of expected answer sentences supported by retrieved context (0-1)",
+    "factual_correctness": "Factual overlap between agent answer and expected answer (0-1)",
+    "keyword_hit": "Fraction of expected keywords present in the agent answer (0-1)"
+  },
+  "summary": {
+    "faithfulness": null,
+    "answer_relevancy": 0.8259,
+    "context_recall": 0.6667,
+    "factual_correctness": 0.3567,
+    "keyword_hit": 0.357
+  },
+  "by_type": {
+    "composite": {
+      "count": 3,
+      "faithfulness": null,
+      "answer_relevancy": 0.8259,
+      "context_recall": 0.6667,
+      "factual_correctness": 0.3567,
+      "keyword_hit": 0.357
+    }
+  },
+  "results": [
+    {
+      "id": "Q071",
+      "type": "composite",
+      "question": "What are the main components to which the RCS design pressure and temperature are applied?",
+      "expected_answer": "The design pressure of the RCS is 2100 psia and the design temperature is 650°F, which apply to the internal components of the NPM as indicated in Figure 5.1-1, including the reactor pressure vessel (RPV), pressurizer, and the primary side of the steam generator.",
+      "agent_answer": "**Core Conclusion:**  \nThe main components to which the Reactor Coolant System (RCS) design pressure and temperature are applied are the pressure-retaining portions of the RCS, specifically:\n- The Reactor Pressure Vessel (RPV)\n- The integral Pressurizer (PZR)\n- The Steam Generators (SGs)\n- Reactor Vessel Internals (RVI) (as part of the pressure boundary)\n- Reactor Coolant System piping inside the containment vessel (including RCS injection, discharge, pressurizer spray, and high-point degasification lines)\n- Reactor Safety Valves (RSVs) and Emergency Core Cooling System (ECCS) valves\n\n**Key Evidence Citations:**\n- [nuscale_ch05_0003]: Lists the RPV, PZR, RVI, RSVs, RCS piping, and associated lines as the main RCS components subject to design pressure and temperature.\n- [nuscale_ch05_0019]: Confirms these components and subsystems are within the RCS pressure boundary.\n- [nuscale_ch05_0004]: Emphasizes the pressure-retaining portions of the RCS as maintaining the integrity of the reactor coolant pressure boundary.\n- [nuscale_ch05_0015]: Describes the RPV as a pressure-retaining vessel containing the core, SGs, and PZR.\n- Figures 5.1-1, 5.1-2, and 5.1-3: Visually depict the RCS major components and flow paths, supporting the textual descriptions.\n\n**Uncertainties:**\n- While the above components are clearly within the RCS pressure boundary, some internals (e.g., certain RVI elements) may not be directly exposed to full RCS design pressure/temperature, depending on their specific function and location.\n- The detailed boundary for each component (e.g., which piping segments) should be confirmed with referenced ASME code definitions and system schematics.\n\n**Summary:**  \nThe RCS design pressure and temperature apply to all pressure-retaining components forming the reactor coolant pressure boundary, primarily the RPV, PZR, SGs, associated piping, and safety/relief valves ([nuscale_ch05_0003], [nuscale_ch05_0019], [nuscale_ch05_0004], [nuscale_ch05_0015]; see Figures 5.1-1 to 5.1-3).",
+      "faithfulness": null,
+      "answer_relevancy": 0.8327,
+      "context_recall": 1.0,
+      "factual_correctness": 0.4,
+      "keyword_hit": 0.375,
+      "kg_nodes": 8,
+      "kg_edges": 13,
+      "hops_used": 4,
+      "retrieved_contexts_count": 6,
+      "agent_sec": 69.6,
+      "eval_sec": 51.6,
+      "total_sec": 121.2,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch05_0005] System Components | 노드 추가: [nuscale_ch05_0019] Reactor Coolant System Component and Subsystem Design | edge: [nuscale_ch05_0005] --SPECIFIES--> [nuscale_ch05_0019]",
+        "Hop 2: 노드 추가: [nuscale_ch05_0021] Reactor Coolant System Piping | 노드 추가: [nuscale_ch05_0024] Pressurizer | edge: [nuscale_ch05_0021] --SPECIFIES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0024] --REFERENCES--> [nuscale_ch05_0005] | edge: [nuscale_ch05_0024] --REFERENCES--> [nuscale_ch05_0019]",
+        "Hop 3: 노드 추가: [nuscale_ch05_0003] Design Basis | 노드 추가: [nuscale_ch05_0016] Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses | edge: [nuscale_ch05_0003] --REFERENCES--> [nuscale_ch05_0005] | edge: [nuscale_ch05_0003] --SPECIFIES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0003] --SPECIFIES--> [nuscale_ch05_0021] | edge: [nuscale_ch05_0016] --SPECIFIES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0003] --REFERENCES--> [nuscale_ch05_0016]",
+        "Hop 4: 노드 추가: [nuscale_ch05_0004] System Description | 노드 추가: [nuscale_ch05_0015] Reactor Vessel Materials | edge: [nuscale_ch05_0004] --SPECIFIES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0015] --REFERENCES--> [nuscale_ch05_0005] | edge: [nuscale_ch05_0015] --SUPPORTS--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0004] --REFERENCES--> [nuscale_ch05_0015]"
+      ]
+    },
+    {
+      "id": "Q072",
+      "type": "composite",
+      "question": "Explain the principle of natural circulation cooling in the NuScale design.",
+      "expected_answer": "NuScale cools the Reactor Coolant System (RCS) through natural circulation. As shown in Figure 5.1-2, the coolant heated in the core rises and passes through the steam generator, releasing heat before descending, all occurring without the use of pumps.",
+      "agent_answer": "**Core Conclusion:**  \nThe NuScale design uses natural circulation cooling, relying on density-driven flow of reactor coolant without pumps. Heated coolant rises through the core, flows upward, transfers heat to the steam generators, cools, becomes denser, and descends in the downcomer, creating a continuous circulation loop.\n\n**Key Evidence Citations:**\n- [nuscale_ch05_0002] and [nuscale_ch05_0003]: The NuScale reactor coolant system (RCS) \"relies on natural circulation flow for the reactor coolant and does not include reactor coolant pumps or an external piping system.\"\n- [nuscale_ch05_0019]: The RCS is fully integrated within the reactor pressure vessel, including the core, steam generators, and decay heat removal system, supporting natural circulation.\n- [nuscale_ch05_0005]: Describes system components and operational steps that facilitate recirculation and pressure matching, essential for natural circulation.\n- [nuscale_ch05_0020]: Steam generators are integral to the RCS and are the primary heat sink for the upward-flowing coolant.\n- Figure 5.1-3: Visually demonstrates the flow path—heated coolant rises through the core (red arrows), passes through the steam generators, cools, and descends in the annulus (blue arrows), completing the loop.\n\n**Explicit Mention of Uncertainties:**  \nThe documentation provides a clear conceptual and schematic basis for natural circulation. However, detailed performance under all transient conditions (e.g., extreme off-normal events) may involve additional complexities not fully captured in the summary sections referenced.\n\n**Summary:**  \nNuScale’s natural circulation cooling is achieved by vertical arrangement of the core and steam generators within a single vessel, using gravity and density differences to drive coolant flow—eliminating the need for pumps and enhancing passive safety ([nuscale_ch05_0002], [nuscale_ch05_0003], [nuscale_ch05_0019], [nuscale_ch05_0020], Figure 5.1-3).",
+      "faithfulness": null,
+      "answer_relevancy": 0.8579,
+      "context_recall": 1.0,
+      "factual_correctness": 0.67,
+      "keyword_hit": 0.571,
+      "kg_nodes": 8,
+      "kg_edges": 11,
+      "hops_used": 4,
+      "retrieved_contexts_count": 6,
+      "agent_sec": 75.6,
+      "eval_sec": 51.9,
+      "total_sec": 127.5,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch05_0004] System Description | 노드 추가: [nuscale_ch05_0019] Reactor Coolant System Component and Subsystem Design | edge: [nuscale_ch05_0004] --SUPPORTS--> [nuscale_ch05_0019]",
+        "Hop 2: 노드 추가: [nuscale_ch05_0002] Summary Description | 노드 추가: [nuscale_ch05_0003] Design Basis | edge: [nuscale_ch05_0002] --SUPPORTS--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0003] --SUPPORTS--> [nuscale_ch05_0019]",
+        "Hop 3: 노드 추가: [nuscale_ch05_0005] System Components | 노드 추가: [nuscale_ch05_0022] Decay Heat Removal System | edge: [nuscale_ch05_0005] --REFERENCES--> [nuscale_ch05_0004] | edge: [nuscale_ch05_0005] --SUPPORTS--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0005] --SUPPORTS--> [nuscale_ch05_0002] | edge: [nuscale_ch05_0022] --REFERENCES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0022] --SUPPORTS--> [nuscale_ch05_0002] | edge: [nuscale_ch05_0005] --SUPPORTS--> [nuscale_ch05_0022]",
+        "Hop 4: 노드 추가: [nuscale_ch05_0020] Steam Generators | 노드 추가: [nuscale_ch05_0021] Reactor Coolant System Piping | edge: [nuscale_ch05_0020] --SUPPORTS--> [nuscale_ch05_0002] | edge: [nuscale_ch05_0021] --SUPPORTS--> [nuscale_ch05_0002]"
+      ]
+    },
+    {
+      "id": "Q073",
+      "type": "composite",
+      "question": "Describe the material properties of the RPV (Reactor Pressure Vessel).",
+      "expected_answer": "The RPV is constructed from SA-508 Grade 3 Class 1 low-alloy steel, and its interior is clad with austenitic stainless steel (SA-182 Grade F304) to ensure corrosion resistance.",
+      "agent_answer": "**Core Conclusion:**  \nThe Reactor Pressure Vessel (RPV) is constructed from low-alloy steel base metals and weld metals that meet stringent mechanical property and chemical composition requirements, as specified by the ASME Boiler and Pressure Vessel Code (BPVC), Section II and III. The materials are selected for high integrity, resistance to embrittlement, and compatibility with the reactor coolant environment.\n\n**Key Evidence Citations:**\n- **Material Standards and Compliance:**  \n  The RPV and its weld materials conform to ASME BPVC Section III, Subsection NB, and Section II for material selection and fabrication ([nuscale_ch05_0010], [nuscale_ch05_0015]).  \n- **Material Types:**  \n  The RPV uses low-alloy steel for both base and weld metals, ensuring chemical compatibility and mechanical strength (see Table 5.2-4, image 1; [nuscale_ch05_0010]).  \n  Threaded fasteners (e.g., main closure flange) are made from nickel-based Alloy 718, chosen for stress corrosion cracking (SCC) resistance ([nuscale_ch05_0011]).\n- **Mechanical Properties:**  \n  The selected low-alloy steels meet minimum mechanical property requirements, including toughness (Charpy upper-shelf energy), and are subject to pressure-temperature and pressurized thermal shock analyses ([nuscale_ch05_0016], [nuscale_ch05_0017]).\n- **Quality Assurance:**  \n  All RPV materials are Class 1, fabricated and tested to the highest quality standards per 10 CFR 50, Appendix A, GDC 1 and 30 ([nuscale_ch05_0010]).\n- **Inspection and Surveillance:**  \n  Inservice inspections and surveillance capsules are used to monitor material condition and embrittlement over time (see Table 5.2-7, image 4; [nuscale_ch05_0011]).\n\n**Uncertainties:**  \n- The specific grades of low-alloy steel used for the main RPV shell are not detailed in the provided excerpts, though compliance with ASME BPVC is confirmed.\n- Detailed Charpy energy values and embrittlement data are referenced but not explicitly shown.\n\n**Summary:**  \nThe RPV is made from ASME-qualified low-alloy steels and nickel-based alloys for fasteners, ensuring high mechanical strength, toughness, and corrosion resistance, with ongoing surveillance to ensure long-term integrity.  \n**References:** [nuscale_ch05_0010], [nuscale_ch05_0011], [nuscale_ch05_0015], [nuscale_ch05_0016], Table 5.2-4 (image 1).",
+      "faithfulness": null,
+      "answer_relevancy": 0.787,
+      "context_recall": 0.0,
+      "factual_correctness": 0.0,
+      "keyword_hit": 0.125,
+      "kg_nodes": 7,
+      "kg_edges": 7,
+      "hops_used": 4,
+      "retrieved_contexts_count": 6,
+      "agent_sec": 59.6,
+      "eval_sec": 59.7,
+      "total_sec": 119.4,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch05_0015] Reactor Vessel Materials | 노드 추가: [nuscale_ch05_0016] Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses | edge: [nuscale_ch05_0015] --SUPPORTS--> [nuscale_ch05_0016]",
+        "Hop 2: 노드 추가: [nuscale_ch05_0017] Reactor Vessel Integrity | 노드 추가: [nuscale_ch05_0010] Reactor Coolant Pressure Boundary Materials | edge: [nuscale_ch05_0017] --SPECIFIES--> [nuscale_ch05_0015] | edge: [nuscale_ch05_0010] --REFERENCES--> [nuscale_ch05_0015] | edge: [nuscale_ch05_0010] --REFERENCES--> [nuscale_ch05_0016] | edge: [nuscale_ch05_0017] --SPECIFIES--> [nuscale_ch05_0010]",
+        "Hop 3: 노드 추가: [nuscale_ch05_0014] Reactor Vessel | 노드 추가: [nuscale_ch05_0018] References | edge: [nuscale_ch05_0018] --SPECIFIES--> [nuscale_ch05_0015]",
+        "Hop 4: 노드 추가: [nuscale_ch05_0011] Reactor Coolant Pressure Boundary Inservice Inspection and Testing | edge: [nuscale_ch05_0011] --SUPPORTS--> [nuscale_ch05_0015]"
+      ]
+    }
+  ]
+}

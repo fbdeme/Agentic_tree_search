@@ -1,0 +1,51 @@
+{
+  "question": "What is the electrical output of a NuScale NPM per module?",
+  "current_hop": 2,
+  "nodes": {
+    "nuscale_ch01_0006": {
+      "node_id": "nuscale_ch01_0006",
+      "title": "Power Output",
+      "summary": "The NuScale Power Plant consists of up to 12 NuScale Power Modules (NPMs), each rated at 160 MWt and producing approximately 50 MWe, for a total net output of about 570 MWe after accounting for house loads. The actual electrical output may vary depending on environmental conditions, and the design includes a 2% margin for measurement uncertainty.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch01_0110": {
+      "node_id": "nuscale_ch01_0110",
+      "title": "Figure 1.7-1b: Electrical Symbols",
+      "summary": "This section provides a legend of electrical symbols and abbreviations used in the NuScale Final Safety Analysis Report drawings, including representations for switches, relays, indicators, and logic gates. It also explains the meaning of various logic gate outputs and control room indications relevant to system status and alarms.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "100",
+      "hop": 1
+    },
+    "nuscale_ch01_0014": {
+      "node_id": "nuscale_ch01_0014",
+      "title": "Acronyms and Abbreviations",
+      "summary": "This section explains the conventions used in the NuScale Final Safety Analysis Report (FSAR) for numbering tables, figures, and pages, as well as the handling of proprietary and sensitive information. It clarifies that tables and figures are numbered according to their section, pages are sequentially numbered, and sensitive material is withheld from the public version in accordance with regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "10",
+      "hop": 1
+    },
+    "nuscale_ch01_0004": {
+      "node_id": "nuscale_ch01_0004",
+      "title": "Containment Type",
+      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and is maintained at a vacuum during normal operations. The reactor is a passive, integral small modular pressurized water reactor (SMR) with natural circulation, eliminating the need for reactor coolant pumps and external piping. Each NuScale Power Module produces 160 MWt (about 50 MWe), and a plant can have up to 12 modules for a total net output of approximately 570 MWe.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "9",
+      "hop": 1
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0110",
+      "target": "nuscale_ch01_0014",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides a list of electrical symbols used in figures, while Section B explains the numbering and identification system for tables and figures in the report, connecting them by clarifying how to interpret figure references such as Figure 1.7-1b."
+    }
+  ]
+}

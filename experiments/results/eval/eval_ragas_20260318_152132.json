@@ -1,0 +1,81 @@
+{
+  "timestamp": "2026-03-18T15:21:32.036453",
+  "evaluation_framework": "RAGAs v0.4",
+  "config": {
+    "model": "gpt-4.1",
+    "evaluator_model": "gpt-4.1",
+    "embedding_model": "text-embedding-3-small",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 5,
+    "errors": 5
+  },
+  "metrics_description": {
+    "faithfulness": "Fraction of claims in the answer that are supported by the retrieved context (0-1)",
+    "answer_relevancy": "How relevant the answer is to the question, measured by reverse question generation (0-1)",
+    "context_recall": "Fraction of expected answer sentences supported by retrieved context (0-1)",
+    "factual_correctness": "Factual overlap between agent answer and expected answer (0-1)",
+    "keyword_hit": "Fraction of expected keywords present in the agent answer (0-1)"
+  },
+  "summary": {
+    "faithfulness": null,
+    "answer_relevancy": null,
+    "context_recall": null,
+    "factual_correctness": null,
+    "keyword_hit": null
+  },
+  "by_type": {},
+  "results": [
+    {
+      "id": "Q001",
+      "type": "text_only",
+      "error": "'match_in'",
+      "keyword_hit": 0,
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_recall": null,
+      "factual_correctness": null
+    },
+    {
+      "id": "Q002",
+      "type": "text_only",
+      "error": "'match_in'",
+      "keyword_hit": 0,
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_recall": null,
+      "factual_correctness": null
+    },
+    {
+      "id": "Q003",
+      "type": "text_only",
+      "error": "'match_in'",
+      "keyword_hit": 0,
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_recall": null,
+      "factual_correctness": null
+    },
+    {
+      "id": "Q004",
+      "type": "text_only",
+      "error": "'match_in'",
+      "keyword_hit": 0,
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_recall": null,
+      "factual_correctness": null
+    },
+    {
+      "id": "Q005",
+      "type": "text_only",
+      "error": "'match_in'",
+      "keyword_hit": 0,
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_recall": null,
+      "factual_correctness": null
+    }
+  ]
+}

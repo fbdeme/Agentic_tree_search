@@ -1,0 +1,115 @@
+{
+  "timestamp": "2026-03-16T16:55:57.067872",
+  "evaluation_framework": "RAGAs v0.4",
+  "config": {
+    "model": "gpt-4.1",
+    "evaluator_model": "gpt-4.1",
+    "embedding_model": "text-embedding-3-small",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 3,
+    "errors": 0
+  },
+  "metrics_description": {
+    "faithfulness": "Fraction of claims in the answer that are supported by the retrieved context (0-1)",
+    "answer_relevancy": "How relevant the answer is to the question, measured by reverse question generation (0-1)",
+    "context_recall": "Fraction of expected answer sentences supported by retrieved context (0-1)",
+    "factual_correctness": "Factual overlap between agent answer and expected answer (0-1)",
+    "keyword_hit": "Fraction of expected keywords present in the agent answer (0-1)"
+  },
+  "summary": {
+    "faithfulness": null,
+    "answer_relevancy": 0.9322,
+    "context_recall": 0.5,
+    "factual_correctness": 0.4433,
+    "keyword_hit": 0.75
+  },
+  "by_type": {
+    "text_only": {
+      "count": 3,
+      "faithfulness": null,
+      "answer_relevancy": 0.9322,
+      "context_recall": 0.5,
+      "factual_correctness": 0.4433,
+      "keyword_hit": 0.75
+    }
+  },
+  "results": [
+    {
+      "id": "Q001",
+      "type": "text_only",
+      "question": "What is the thermal output of the NuScale Power Module (NPM)?",
+      "expected_answer": "Each NPM has a thermal output of 160 MWt, resulting in a total of 1,920 MWt based on 12 modules.",
+      "agent_answer": "1. Core Conclusion\n\nThe thermal output of a single NuScale Power Module (NPM) is 160 megawatts thermal (MWt).\n\n2. Citations of Evidence Nodes and Relationship Paths\n\n- The key evidence is found in [nuscale_ch01_0052] (Comparison with Other Facilities), which states:  \n  \"The major NuScale Power Plant design features and nominal parameters are provided in Table 1.3-1... These NuScale features and values are shown in comparison with a typical pressurized water reactor (PWR) plant design. All values are nominal and provided for comparison only.\"\n- While the full table content is not directly quoted in the node, the context and standard NuScale documentation indicate that the nominal thermal output per module is 160 MWt. This is a well-established value in NuScale's FSAR and public documentation.\n- The general plant description in [nuscale_ch01_0015] and the introduction in [nuscale_ch01_0002] and [nuscale_ch01_0001] confirm that the NPM is the basic unit of the NuScale plant, and all referenced parameters in these sections pertain to the NPM.\n\nRelationship path:\n- [nuscale_ch01_0052] → Table 1.3-1 (design features and nominal parameters) → NPM thermal output = 160 MWt\n\n3. Explicit Mention of Any Uncertainties\n\n- The node [nuscale_ch01_0052] references Table 1.3-1 for the specific value, but the table's content is not fully quoted in the node text. However, the context and standard NuScale documentation consistently state the NPM thermal output as 160 MWt.\n- There is no conflicting information in the explored nodes, but if the table were to list a different value, that would need to be reconciled. Based on all available evidence and industry consensus, 160 MWt is the correct value.\n\n**Summary:**  \nThe thermal output of the NuScale Power Module (NPM) is 160 MWt, as indicated by the design parameters referenced in [nuscale_ch01_0052] and supported by the general plant description nodes. There is high confidence in this value, with only minor uncertainty due to the table's content not being directly quoted, but no evidence suggests a different value.",
+      "faithfulness": null,
+      "answer_relevancy": 0.9751,
+      "context_recall": 0.5,
+      "factual_correctness": 0.33,
+      "keyword_hit": 0.75,
+      "kg_nodes": 8,
+      "kg_edges": 0,
+      "hops_used": 4,
+      "retrieved_contexts_count": 8,
+      "agent_sec": 60.4,
+      "eval_sec": 51.0,
+      "total_sec": 111.4,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch01_0006] Power Output | 노드 추가: [nuscale_ch01_0015] General Plant Description",
+        "Hop 2: 노드 추가: [nuscale_ch01_0004] Containment Type | 노드 추가: [nuscale_ch01_0005] Reactor Type",
+        "Hop 3: 노드 추가: [nuscale_ch01_0002] Introduction | 노드 추가: [nuscale_ch01_0033] General Arrangement of Major Structures and Equipment",
+        "Hop 4: 노드 추가: [nuscale_ch01_0001] CHAPTER 1 INTRODUCTION AND GENERAL DESCRIPTION OF THE PLANT | 노드 추가: [nuscale_ch01_0052] Comparison with Other Facilities"
+      ]
+    },
+    {
+      "id": "Q002",
+      "type": "text_only",
+      "question": "How many NPMs can be operated in a single Reactor Building at the NuScale power plant?",
+      "expected_answer": "A single Reactor Building can operate from 1 to a maximum of 12 Nuclear Power Modules (NPMs).",
+      "agent_answer": "1. Core Conclusion\n\nBased on the available evidence, up to 12 NuScale Power Modules (NPMs) can be operated in a single Reactor Building (RXB) at a NuScale power plant.\n\n2. Citations of Evidence Nodes and Relationship Paths\n\n- The key evidence comes from the general arrangement and plant description sections, which reference the layout and modularity of the NuScale design:\n    - [nuscale_ch01_0034] (\"Reactor Building\") and [nuscale_ch01_0033] (\"General Arrangement of Major Structures and Equipment\") both refer to Figure 1.2-2, which presents the layout of a NuScale Power Plant and describes the RXB as central to the site. While the text in these nodes does not explicitly state the number, the referenced figure (1.2-2) in the NuScale FSAR is widely known to depict 12 NPMs within a single RXB.\n    - [nuscale_ch01_0031] (\"Plant Cooling Water Systems\") states: \"With multiple NPMs per plant, individual NPMs can be placed into service incrementally...\" This supports the modular, multi-unit arrangement within a single building.\n    - [nuscale_ch01_0037] (\"Control Building\") describes independent refueling operations for each NPM, further supporting the multi-module configuration.\n- The NuScale FSAR and public regulatory filings consistently describe the standard plant as having a single RXB housing up to 12 NPMs.\n\nRelationship Path:\n- [nuscale_ch01_0034] → Figure 1.2-2 (not shown in text, but referenced) → Standard RXB layout = 12 NPMs\n- [nuscale_ch01_0031] → Modular operation of multiple NPMs per plant\n- [nuscale_ch01_0037] → Independent operation and refueling of NPMs within the RXB\n\n3. Explicit Mention of Any Uncertainties\n\n- The explicit number \"12\" is not directly quoted in the provided text nodes, but is inferred from the referenced figures and standard industry/regulatory knowledge of the NuScale design as described in the FSAR.\n- If the user requires a direct textual quote from the FSAR within the provided nodes, it is not present in the current exploration. However, the referenced figures and standard documentation confirm the 12-module configuration.\n- Site-specific applications could propose fewer modules, but the certified design basis is for up to 12 NPMs per RXB.\n\n**Summary:**  \nUp to 12 NPMs can be operated in a single Reactor Building at the NuScale power plant, as supported by the general arrangement descriptions and referenced figures in the FSAR ([nuscale_ch01_0034], [nuscale_ch01_0033], [nuscale_ch01_0031], [nuscale_ch01_0037]). The exact number is inferred from standard documentation and referenced figures, though not directly quoted in the provided text. There is minimal uncertainty, as this is the certified design basis.",
+      "faithfulness": null,
+      "answer_relevancy": 0.9064,
+      "context_recall": 1.0,
+      "factual_correctness": 0.33,
+      "keyword_hit": 0.5,
+      "kg_nodes": 8,
+      "kg_edges": 0,
+      "hops_used": 4,
+      "retrieved_contexts_count": 8,
+      "agent_sec": 58.9,
+      "eval_sec": 45.6,
+      "total_sec": 104.5,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch01_0015] General Plant Description | 노드 추가: [nuscale_ch01_0034] Reactor Building",
+        "Hop 2: 노드 추가: [nuscale_ch01_0033] General Arrangement of Major Structures and Equipment | 노드 추가: [nuscale_ch01_0864] Nuclear Power Plants to be Operated on Multi-Unit Sites",
+        "Hop 3: 노드 추가: [nuscale_ch01_0016] Principal Site Characteristics | 노드 추가: [nuscale_ch01_0037] Control Building",
+        "Hop 4: 노드 추가: [nuscale_ch01_0003] Plant Location | 노드 추가: [nuscale_ch01_0031] Plant Cooling Water Systems"
+      ]
+    },
+    {
+      "id": "Q003",
+      "type": "text_only",
+      "question": "In the NuScale design, is AC or DC power required for safety shutdown and cooling?",
+      "expected_answer": "The NuScale design does not require AC or DC power for safety shutdown and cooling.",
+      "agent_answer": "**Core Conclusion:**  \nIn the NuScale design, neither AC nor DC power is required for safety shutdown and cooling under design basis conditions. The NuScale plant is a passive design that achieves safety shutdown and core cooling without reliance on either onsite or offsite AC or DC electrical power sources.\n\n---\n\n**Evidence and Relationship Paths:**\n\n1. **Passive Design and Station Blackout (SBO) Compliance:**  \n   - [nuscale_ch01_0246] states that NuScale conforms to 10 CFR 50.63 for passive design, with details in Section 8.4 (Station Blackout).  \n   - [nuscale_ch01_0275], [nuscale_ch01_0276], and [nuscale_ch01_0277] all reference compliance with 10 CFR 50.63 and Regulatory Guide 1.155, which address SBO scenarios.  \n   - [nuscale_ch01_0276] specifically discusses the \"Use of Alternate AC Power Sources and RTNSS for Plants of Passive Design,\" indicating that the NuScale design does not require alternate AC power sources for safety functions during SBO due to its passive safety features.\n\n2. **No Required Onsite AC Power for Safety Functions:**  \n   - [nuscale_ch01_0262] and [nuscale_ch01_0261] explicitly state:  \n     > \"No onsite electrical AC power system equipment is required to conform to 10 CFR 50.55a(h) and IEEE Std. 603-1991.\"  \n   - This means that the safety-related functions (shutdown and cooling) do not depend on AC power.\n\n3. **DC Power System Role:**  \n   - [nuscale_ch01_0275], [nuscale_ch01_0276], and [nuscale_ch01_0277] discuss partial conformance of the DC power system with certain regulatory guides, but only \"as it applies to certain aspects of the EDSS design.\"  \n   - There is no statement that DC power is required for the fundamental safety functions of shutdown and cooling; rather, DC power may support non-safety or ancillary functions.\n\n4. **Summary of Regulatory Compliance:**  \n   - [nuscale_ch01_0251], [nuscale_ch01_0250], and [nuscale_ch01_0262] all reference that the NuScale design meets the intent of GDC 17 (Electric Power Systems) through its passive safety features, not through reliance on AC or DC power.\n\n**Relationship Path Example:**  \n[nuscale_ch01_0246] → (REFERENCES) → [nuscale_ch01_0275] → (REFERENCES) → [nuscale_ch01_0276]  \nThis path shows the regulatory compliance chain from passive design requirements to the specific SBO and power system requirements, all of which confirm the passive nature of NuScale's safety systems.\n\n---\n\n**Uncertainties:**  \n- The evidence is based on summary statements from the DSRS and FSAR conformance tables. While these are authoritative, they do not provide detailed system diagrams or operational descriptions.  \n- The statements about \"no required AC power\" are clear for safety shutdown and cooling, but there may be minor support or monitoring functions (not directly related to core safety) that use DC power; these are not safety-critical.\n\n---\n\n**Summary Statement:**  \n**NuScale's safety shutdown and cooling do not require either AC or DC power, as these functions are achieved through passive means.** This is a key feature of the NuScale design and is repeatedly confirmed in the regulatory compliance documentation ([nuscale_ch01_0246], [nuscale_ch01_0275], [nuscale_ch01_0262], [nuscale_ch01_0276], [nuscale_ch01_0277]). Any use of DC power is limited to non-safety or support functions and is not required for the core safety functions of shutdown and cooling.",
+      "faithfulness": null,
+      "answer_relevancy": 0.9152,
+      "context_recall": 0.0,
+      "factual_correctness": 0.67,
+      "keyword_hit": 1.0,
+      "kg_nodes": 8,
+      "kg_edges": 19,
+      "hops_used": 4,
+      "retrieved_contexts_count": 8,
+      "agent_sec": 66.0,
+      "eval_sec": 54.4,
+      "total_sec": 120.4,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch01_0246] DSRS 8.2, Rev 0: Offsite Power SystemII.5 Compliance with 10 CFR 50.63 - Passive Design | 노드 추가: [nuscale_ch01_0275] DSRS 8.4, Rev 0: Station BlackoutII.1 Compliance with 10 CFR 50.63 and the guidelines of RG 1.155",
+        "Hop 2: 노드 추가: [nuscale_ch01_0251] DSRS 8.3.1, Rev 0: AC Power Systems (Onsite)II.4 Compliance with GDC 17 | 노드 추가: [nuscale_ch01_0262] DSRS 8.3.2, Rev 0: DC Power Systems (Onsite)II (No Number) Compliance with GDC 17 | 엣지: [nuscale_ch01_0251] --REFERENCES--> [nuscale_ch01_0246] | 엣지: [nuscale_ch01_0251] --REFERENCES--> [nuscale_ch01_0275] | 엣지: [nuscale_ch01_0262] --REFERENCES--> [nuscale_ch01_0246] | 엣지: [nuscale_ch01_0262] --REFERENCES--> [nuscale_ch01_0275]",
+        "Hop 3: 노드 추가: [nuscale_ch01_0250] DSRS 8.3.1, Rev 0: AC Power Systems (Onsite)II.3 Compliance with GDC 5 | 노드 추가: [nuscale_ch01_0261] DSRS 8.3.2, Rev 0: DC Power Systems (Onsite)II (No Number) Compliance with GDC 5 | 엣지: [nuscale_ch01_0250] --REFERENCES--> [nuscale_ch01_0246] | 엣지: [nuscale_ch01_0250] --REFERENCES--> [nuscale_ch01_0275] | 엣지: [nuscale_ch01_0261] --REFERENCES--> [nuscale_ch01_0246] | 엣지: [nuscale_ch01_0261] --REFERENCES--> [nuscale_ch01_0275] | 엣지: [nuscale_ch01_0261] --REFERENCES--> [nuscale_ch01_0251]",
+        "Hop 4: 노드 추가: [nuscale_ch01_0276] DSRS 8.4, Rev 0: Station BlackoutII.2 Use of Alternate AC Power Sources and RTNSS for Plants of Passive Design | 노드 추가: [nuscale_ch01_0277] DSRS 8.4, Rev 0: Station BlackoutII.3 Independence of SBO-related power sources | 엣지: [nuscale_ch01_0276] --REFERENCES--> [nuscale_ch01_0246] | 엣지: [nuscale_ch01_0276] --REFERENCES--> [nuscale_ch01_0275] | 엣지: [nuscale_ch01_0276] --REFERENCES--> [nuscale_ch01_0251] | 엣지: [nuscale_ch01_0277] --REFERENCES--> [nuscale_ch01_0246] | 엣지: [nuscale_ch01_0277] --REFERENCES--> [nuscale_ch01_0275] | 엣지: [nuscale_ch01_0277] --REFERENCES--> [nuscale_ch01_0251]"
+      ]
+    }
+  ]
+}

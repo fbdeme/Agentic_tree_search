@@ -1,0 +1,159 @@
+{
+  "question": "How many NPMs can be operated in a single Reactor Building at the NuScale power plant?",
+  "current_hop": 3,
+  "nodes": {
+    "nuscale_ch01_0036": {
+      "node_id": "nuscale_ch01_0036",
+      "title": "Refueling Operations",
+      "summary": "Refueling operations for a NuScale Power Module (NPM) are conducted independently from other modules. The process involves moving the NPM from its operating bay to the refueling pool, disassembling it for core refueling and maintenance, and then reassembling and returning it to service after inspections and tests are completed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "38",
+      "hop": 1
+    },
+    "nuscale_ch01_0035": {
+      "node_id": "nuscale_ch01_0035",
+      "title": "Fuel Handling and Reactor Maintenance Areas",
+      "summary": "The fuel handling and reactor maintenance areas are located at the west end of the Reactor Building (RXB) and include spaces for the spent fuel pool (SFP), refueling pool, and dry dock, with facilities designed for safe fuel handling and maintenance operations. These areas provide radiation protection for personnel and include equipment and storage for both new and spent fuel assemblies, facilitating efficient and safe refueling and maintenance activities.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "37",
+      "hop": 1
+    },
+    "nuscale_ch01_0051": {
+      "node_id": "nuscale_ch01_0051",
+      "title": "Plant Features of Special Interest",
+      "summary": "This section describes key plant features of special interest in the NuScale Power Plant, including the Central Utility Building (CUB) and Diesel Generator Buildings (DGB), which house essential but nonsafety-related systems and backup power equipment. It also highlights human factors considerations, emphasizing fail-safe design, automation, digital controls, and workload management to minimize human error and meet regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "43",
+      "hop": 1
+    },
+    "nuscale_ch01_0033": {
+      "node_id": "nuscale_ch01_0033",
+      "title": "General Arrangement of Major Structures and Equipment",
+      "summary": "This section describes the general arrangement of major structures and equipment at a NuScale Power Plant, focusing on the central placement and design of the Reactor Building (RXB). The RXB is a large, reinforced concrete structure designed for safety and radiation protection, housing the NuScale Power Modules (NPMs) in a common reactor pool arranged in two rows. The section also references detailed figures and chapters for further information on radioactive waste management and building layouts.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "36",
+      "hop": 1
+    },
+    "nuscale_ch01_0032": {
+      "node_id": "nuscale_ch01_0032",
+      "title": "Radioactive Waste Management System",
+      "summary": "The section describes the NuScale Power Plant's radioactive waste management system, which handles liquid, gaseous, and solid wastes, with detailed discussions found in Chapter 11 of the report. It also outlines the general arrangement of major structures, focusing on the centrally located Reactor Building (RXB), a robust, reinforced concrete structure designed for safety and radiation protection, housing the nuclear power modules (NPMs) in a secure reactor pool.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "36",
+      "hop": 1
+    },
+    "nuscale_ch01_0109": {
+      "node_id": "nuscale_ch01_0109",
+      "title": "Figure 1.7-1a: Electrical Symbols",
+      "summary": "This section provides a legend for electrical symbols used in NuScale's single-line diagrams, detailing the meaning of each symbol and the associated information such as ratings, voltage levels, and device types. It explains how to interpret symbols for transformers, circuit breakers, batteries, switches, and other electrical components, ensuring clarity in reading and understanding the diagrams.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "99",
+      "hop": 2
+    },
+    "nuscale_ch01_0034": {
+      "node_id": "nuscale_ch01_0034",
+      "title": "Reactor Building",
+      "summary": "The Reactor Building (RXB) is centrally located on the NuScale Power Plant site and houses the NuScale Power Modules (NPMs) along with essential systems for plant operation and shutdown. It is a reinforced concrete, Seismic Category I structure designed for safety against various hazards, and provides radiation protection for personnel. The RXB contains a common reactor pool with twelve NPM bays arranged in two rows along the pool’s north and south walls.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "36",
+      "hop": 2
+    },
+    "nuscale_ch01_0040": {
+      "node_id": "nuscale_ch01_0040",
+      "title": "Radioactive Waste Building",
+      "summary": "The Radioactive Waste Building (RWB) contains equipment and systems for processing radioactive gaseous, liquid, and solid waste, as well as for preparing this waste for off-site shipment. It is an integral part of the plant’s infrastructure for managing radioactive materials safely and efficiently.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "40",
+      "hop": 2
+    },
+    "nuscale_ch01_0108": {
+      "node_id": "nuscale_ch01_0108",
+      "title": "8.37 ALARA Levels for Effluents from Materials Facilities",
+      "summary": "This section provides a legend for electrical symbols used in the NuScale Final Safety Analysis Report, specifically for single-line diagrams. It details the meanings of various symbols and notations related to transformers, circuit breakers, batteries, switches, and other electrical components, enabling accurate interpretation of the facility’s electrical drawings.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "99",
+      "hop": 2
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch01_0035",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the independent refueling operations for each NPM, while Section B details the physical layout and provisions for handling and maintaining NPMs, together providing information about how multiple NPMs can be managed within a single Reactor Building."
+    },
+    {
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch01_0033",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the independence of refueling operations for each NPM within the reactor building, while Section B outlines the general arrangement and layout of major structures and equipment, which includes the spatial configuration that determines how many NPMs can be accommodated and operated in a single reactor building."
+    },
+    {
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch01_0032",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the independence of refueling operations for each NPM within the reactor building, while Section B outlines the general arrangement and waste management systems that support multiple NPMs, both providing information relevant to determining how many NPMs can be operated in a single reactor building by addressing operational independence and facility layout."
+    },
+    {
+      "source": "nuscale_ch01_0035",
+      "target": "nuscale_ch01_0033",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the locations and functions of fuel handling and reactor maintenance areas, while Section B references a figure that presents the overall layout of the NuScale Power Plant, which would include the arrangement and number of NPMs per Reactor Building, thus Section B provides the structural context for the operational details in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0035",
+      "target": "nuscale_ch01_0032",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the location and function of fuel handling and reactor maintenance areas, while Section B references the general arrangement and layout of major structures, including the reactor building, thus both sections provide complementary spatial and functional information relevant to determining how many NPMs can be accommodated in a single reactor building."
+    },
+    {
+      "source": "nuscale_ch01_0034",
+      "target": "nuscale_ch01_0036",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section B describes how each NPM is refueled independently within the reactor building, implying multiple NPMs can be accommodated, while Section A provides the general arrangement of the reactor building where these operations occur, connecting the physical layout to the operational independence of NPMs."
+    },
+    {
+      "source": "nuscale_ch01_0034",
+      "target": "nuscale_ch01_0035",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general description of the Reactor Building layout, while Section B specifies the location and function of the fuel handling and reactor maintenance areas within that layout, connecting them through the physical arrangement of NPM-related systems."
+    },
+    {
+      "source": "nuscale_ch01_0040",
+      "target": "nuscale_ch01_0036",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes operational independence of individual NPMs during refueling, while Section A notes that each reactor (NPM) has a dedicated control system display, together supporting the concept that multiple NPMs can be independently operated and monitored within a single Reactor Building."
+    },
+    {
+      "source": "nuscale_ch01_0040",
+      "target": "nuscale_ch01_0035",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the digital control system's ability to monitor individual reactors, while Section B discusses the physical infrastructure for handling and maintaining multiple NPMs, both providing information relevant to the plant's capacity to operate multiple NPMs in a single Reactor Building."
+    },
+    {
+      "source": "nuscale_ch01_0034",
+      "target": "nuscale_ch01_0040",
+      "relation": "SEMANTIC",
+      "confidence": 0.6,
+      "description": "Section A describes the general arrangement and layout of the NuScale Power Plant, including the Reactor Building, while Section B discusses the implementation of digital control systems and operator monitoring for each reactor, thus both sections provide complementary information about plant structure and reactor operation but do not directly address the number of NPMs per Reactor Building."
+    }
+  ]
+}

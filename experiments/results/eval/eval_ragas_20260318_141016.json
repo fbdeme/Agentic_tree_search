@@ -1,0 +1,165 @@
+{
+  "timestamp": "2026-03-18T14:10:16.015470",
+  "evaluation_framework": "RAGAs v0.4",
+  "config": {
+    "model": "gpt-4.1",
+    "evaluator_model": "gpt-4.1",
+    "embedding_model": "text-embedding-3-small",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 5,
+    "errors": 0
+  },
+  "metrics_description": {
+    "faithfulness": "Fraction of claims in the answer that are supported by the retrieved context (0-1)",
+    "answer_relevancy": "How relevant the answer is to the question, measured by reverse question generation (0-1)",
+    "context_recall": "Fraction of expected answer sentences supported by retrieved context (0-1)",
+    "factual_correctness": "Factual overlap between agent answer and expected answer (0-1)",
+    "keyword_hit": "Fraction of expected keywords present in the agent answer (0-1)"
+  },
+  "summary": {
+    "faithfulness": 0.3438,
+    "answer_relevancy": 0.9109,
+    "context_recall": 0.4,
+    "factual_correctness": 0.368,
+    "keyword_hit": 0.45
+  },
+  "by_type": {
+    "text_only": {
+      "count": 5,
+      "faithfulness": 0.3438,
+      "answer_relevancy": 0.9109,
+      "context_recall": 0.4,
+      "factual_correctness": 0.368,
+      "keyword_hit": 0.45
+    }
+  },
+  "results": [
+    {
+      "id": "Q001",
+      "type": "text_only",
+      "question": "What is the thermal output of the NuScale Power Module (NPM)?",
+      "expected_answer": "Each NPM has a thermal output of 160 MWt, resulting in a total of 1,920 MWt based on 12 modules.",
+      "agent_answer": "**Core Conclusion:**  \nThe thermal output of the NuScale Power Module (NPM) is 160 MWt (megawatts thermal).\n\n**Supporting Evidence:**  \nThis value is explicitly stated in Table 1.2-1 (\"Overall Characteristics of a NuScale Power Plant\") under the \"Power Module\" section, where \"Thermal power rating\" is listed as \"160 MWth\" (see image 2). This is further corroborated in Table 1.2-2 (\"Design Features of a NuScale Power Module\"), which refers to the NPM as a \"Low power core (160 MWt)\" (see image 3).\n\n**Uncertainties:**  \nThere are no uncertainties regarding the nominal thermal output, as the value is directly provided in the official design documentation.\n\n**References to Knowledge Graph Nodes:**  \n- Table 1.2-1, node [nuscale_ch01_0052]: \"Thermal power rating: 160 MWth\"\n- Table 1.2-2, node [nuscale_ch01_0052]: \"Low power core (160 MWt)\"\n\n**Summary:**  \nThe NuScale Power Module has a nominal thermal output of 160 MWt, as clearly documented in the referenced tables.",
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.9796,
+      "context_recall": 0.0,
+      "factual_correctness": 0.33,
+      "keyword_hit": 0.75,
+      "kg_nodes": 7,
+      "kg_edges": 0,
+      "hops_used": 2,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 75.7,
+      "eval_sec": 33.7,
+      "total_sec": 109.4,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0014] Acronyms and Abbreviations | node: [nuscale_ch01_0051] Plant Features of Special Interest | node: [nuscale_ch01_0052] Comparison with Other Facilities | node: [nuscale_ch01_0001] CHAPTER 1 INTRODUCTION AND GENERAL DESCR | node: [nuscale_ch01_0000] Preface",
+        "Hop 2: node: [nuscale_ch01_0018] Principal Design Criteria | node: [nuscale_ch01_0019] Operating Characteristics",
+        "Hop 3: no results",
+        "Hop 4: no results"
+      ]
+    },
+    {
+      "id": "Q002",
+      "type": "text_only",
+      "question": "How many NPMs can be operated in a single Reactor Building at the NuScale power plant?",
+      "expected_answer": "A single Reactor Building can operate from 1 to a maximum of 12 Nuclear Power Modules (NPMs).",
+      "agent_answer": "**Core Conclusion:**  \nA single Reactor Building at the NuScale power plant can operate up to 12 NuScale Power Modules (NPMs).\n\n**Supporting Evidence:**  \n- Table 1.2-1 (\"Overall Characteristics of a NuScale Power Plant\") explicitly states under \"Number of power modules\" that the overall plant consists of 12 modules (see image 2).\n- Figure 1.2-2 (\"NuScale Functional Boundaries\") visually depicts 12 NPMs grouped together within the boundaries of the Reactor Building (see image 5).\n- The text in node [nuscale_ch01_0001] confirms that the FSAR covers both single-module and multi-module configurations, and the plant is designed for modular scalability.\n\n**Uncertainties:**  \n- The provided evidence does not explicitly state if more than 12 NPMs could be accommodated in a single Reactor Building in future designs, but the standard configuration described is 12 NPMs per building.\n\n**References:**  \n- Table 1.2-1, node [nuscale_ch01_0002], node [nuscale_ch01_0001], Figure 1.2-2 (images 2 and 5).",
+      "faithfulness": 0.375,
+      "answer_relevancy": 0.8636,
+      "context_recall": 0.0,
+      "factual_correctness": 0.67,
+      "keyword_hit": 0.5,
+      "kg_nodes": 3,
+      "kg_edges": 0,
+      "hops_used": 1,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 33.1,
+      "eval_sec": 28.8,
+      "total_sec": 61.8,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0002] Introduction | node: [nuscale_ch01_0000] Preface | node: [nuscale_ch01_0001] CHAPTER 1 INTRODUCTION AND GENERAL DESCR",
+        "Hop 2: no results",
+        "Hop 3: no results",
+        "Hop 4: no results"
+      ]
+    },
+    {
+      "id": "Q003",
+      "type": "text_only",
+      "question": "In the NuScale design, is AC or DC power required for safety shutdown and cooling?",
+      "expected_answer": "The NuScale design does not require AC or DC power for safety shutdown and cooling.",
+      "agent_answer": "**Core Conclusion:**  \nThe NuScale design does not require either AC or DC power for safety shutdown and cooling; its safety systems are fully passive.\n\n**Supporting Evidence:**  \n- Table 1.2-2 (“Design Features of a NuScale Power Module”) explicitly states under “Passive safety systems”:  \n  > “Safety systems cool and depressurize the RPV/CNV even in the event of loss of external power”  \n  (node: [nuscale_ch01_0023], image 3).\n- The same table notes, “Active safety systems are not required,” confirming that neither AC nor DC power is necessary for these safety functions.\n\n**Additional Context:**  \n- The containment and cooling systems rely on passive mechanisms such as natural convection and immersion in a reactor pool, as described in Table 1.2-2 and supported by the schematic in Figure 1.2-3 (image 6).\n- The summary in node [nuscale_ch01_0001] also highlights “passive shutdown” and “passive safety systems” as key features.\n\n**Uncertainties:**  \n- The provided sections do not specify if any minimal DC power is required for instrumentation or controls during passive operation, but for core safety shutdown and cooling, no AC or DC power is required.\n\n**Summary Statement:**  \nNuScale’s safety shutdown and cooling are achieved through passive systems that do not require AC or DC power, as evidenced by Table 1.2-2 (node: [nuscale_ch01_0023]).",
+      "faithfulness": 0.3333,
+      "answer_relevancy": 0.9474,
+      "context_recall": 1.0,
+      "factual_correctness": 0.44,
+      "keyword_hit": 1.0,
+      "kg_nodes": 5,
+      "kg_edges": 0,
+      "hops_used": 3,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 46.4,
+      "eval_sec": 34.9,
+      "total_sec": 81.3,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0014] Acronyms and Abbreviations | node: [nuscale_ch01_0023] Containment Systems | node: [nuscale_ch01_0000] Preface | node: [nuscale_ch01_0001] CHAPTER 1 INTRODUCTION AND GENERAL DESCR",
+        "Hop 2: no results",
+        "Hop 3: node: [nuscale_ch01_0002] Introduction",
+        "Hop 4: no results"
+      ]
+    },
+    {
+      "id": "Q004",
+      "type": "text_only",
+      "question": "What is the design configuration of NuScale's steam generator?",
+      "expected_answer": "The NuScale steam generator is designed as a small helical coil located outside the reactor pressure boundary.",
+      "agent_answer": "**Core Conclusion:**  \nThe NuScale steam generator is an integral component located within the reactor pressure vessel (RPV), with each NuScale Power Module containing two steam generators. The RPV itself forms the outer pressure boundary for the steam generators.\n\n**Supporting Evidence:**  \n- Node [nuscale_ch05_0020] states: “The steam generators (SGs) in the NuScale Power Module are integrated within the reactor pressure vessel (RPV), which also houses other key components such as the pressurizer, safety valves, and emergency cooling systems. … the RPV itself forming the outer pressure boundary for the SGs and contributing to the reactor coolant pressure boundary.”\n- Figure 5.1-1 and Figure 5.1-2 (attached) visually confirm the integration of the steam generators within the RPV, showing their placement and the absence of external piping.\n- Node [nuscale_ch05_0002] further supports this by describing the RCS as using natural circulation without pumps or external piping, which is consistent with an integral steam generator design.\n\n**Uncertainties:**  \n- The specific internal configuration (e.g., tube arrangement, material details) of the steam generator is not described in the provided nodes or figures.\n- The number “two steam generators per module” is implied by the plural usage and the diagrams, but not explicitly stated in the text provided.\n\n**Summary:**  \nNuScale’s steam generator design is an integral, internal configuration within the reactor pressure vessel, with the RPV serving as the pressure boundary. This design eliminates external piping and supports natural circulation. (Nodes: [nuscale_ch05_0020], [nuscale_ch05_0002]; Figures 5.1-1, 5.1-2)",
+      "faithfulness": 0.6667,
+      "answer_relevancy": 0.8088,
+      "context_recall": 0.0,
+      "factual_correctness": 0.0,
+      "keyword_hit": 0.0,
+      "kg_nodes": 3,
+      "kg_edges": 1,
+      "hops_used": 1,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 31.8,
+      "eval_sec": 45.1,
+      "total_sec": 76.9,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0002] Summary Description | node: [nuscale_ch05_0000] Preface | node: [nuscale_ch05_0020] Steam Generators | edge: SPECIFIES",
+        "Hop 2: no results",
+        "Hop 3: no results",
+        "Hop 4: no results"
+      ]
+    },
+    {
+      "id": "Q005",
+      "type": "text_only",
+      "question": "What is the internal pressure condition of the NuScale containment vessel (CNV) during normal operation?",
+      "expected_answer": "The NuScale containment vessel maintains a sub-atmospheric condition during normal operation.",
+      "agent_answer": "**Core Conclusion:**  \nDuring normal operation, the internal pressure of the NuScale containment vessel (CNV) is maintained at a low value, close to atmospheric pressure, with only minor increases due to the accumulation of noncondensible gases vented from the reactor coolant system.\n\n**Supporting Evidence:**  \n- Node [nuscale_ch05_0004] (System Description) states that the RCS is responsible for removing noncondensible gases and that these gases are vented to the CNV during normal operation. This implies the CNV is not pressurized during normal operation, except for the small pressure rise from these gases.\n- Node [nuscale_ch05_0005] (System Components) further clarifies that the pressurizer (PZR) pressure can be reduced and matched to the containment vessel pressure, indicating that the CNV is not maintained at a high pressure.\n- There is no evidence in the knowledge graph or referenced tables/figures that the CNV is intentionally pressurized during normal operation; overpressure protection and design pressures (e.g., Table 5.2-2) relate to accident or transient conditions, not normal operation.\n\n**Uncertainties:**  \n- The exact numerical value of the CNV internal pressure during normal operation is not specified in the provided nodes. However, all evidence points to it being near atmospheric, with only minor increases from vented gases.\n\n**Summary:**  \nThe NuScale CNV operates at or near atmospheric pressure during normal operation, with only small pressure increases from noncondensible gas venting (nodes [nuscale_ch05_0004], [nuscale_ch05_0005]). No evidence suggests a higher normal operating pressure.",
+      "faithfulness": null,
+      "answer_relevancy": 0.9551,
+      "context_recall": 1.0,
+      "factual_correctness": 0.4,
+      "keyword_hit": 0.0,
+      "kg_nodes": 5,
+      "kg_edges": 3,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 47.1,
+      "eval_sec": 51.7,
+      "total_sec": 98.8,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0003] Design Basis | node: [nuscale_ch05_0004] System Description | node: [nuscale_ch05_0005] System Components | edge: SUPPORTS | edge: REFERENCES | edge: SUPPORTS",
+        "Hop 2: no results",
+        "Hop 3: no results",
+        "Hop 4: node: [nuscale_ch05_0009] Overpressure Protection | node: [nuscale_ch05_0011] Reactor Coolant Pressure Boundary Inserv"
+      ]
+    }
+  ]
+}

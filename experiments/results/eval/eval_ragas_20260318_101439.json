@@ -1,0 +1,163 @@
+{
+  "timestamp": "2026-03-18T10:14:39.661444",
+  "evaluation_framework": "RAGAs v0.4",
+  "config": {
+    "model": "gpt-4.1",
+    "evaluator_model": "gpt-4.1",
+    "embedding_model": "text-embedding-3-small",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 5,
+    "errors": 0
+  },
+  "metrics_description": {
+    "faithfulness": "Fraction of claims in the answer that are supported by the retrieved context (0-1)",
+    "answer_relevancy": "How relevant the answer is to the question, measured by reverse question generation (0-1)",
+    "context_recall": "Fraction of expected answer sentences supported by retrieved context (0-1)",
+    "factual_correctness": "Factual overlap between agent answer and expected answer (0-1)",
+    "keyword_hit": "Fraction of expected keywords present in the agent answer (0-1)"
+  },
+  "summary": {
+    "faithfulness": 0.774,
+    "answer_relevancy": 0.9215,
+    "context_recall": 0.4,
+    "factual_correctness": 0.47,
+    "keyword_hit": 0.6
+  },
+  "by_type": {
+    "text_only": {
+      "count": 5,
+      "faithfulness": 0.774,
+      "answer_relevancy": 0.9215,
+      "context_recall": 0.4,
+      "factual_correctness": 0.47,
+      "keyword_hit": 0.6
+    }
+  },
+  "results": [
+    {
+      "id": "Q001",
+      "type": "text_only",
+      "question": "What is the thermal output of the NuScale Power Module (NPM)?",
+      "expected_answer": "Each NPM has a thermal output of 160 MWt, resulting in a total of 1,920 MWt based on 12 modules.",
+      "agent_answer": "The core conclusion is: The thermal output of a single NuScale Power Module (NPM) is 160 MWt.\n\nEvidence supporting this conclusion is found in node [nuscale_ch01_0006], which states: “each [NPM is] rated at 160 MWt, for a total thermal output of 1,920 MWt” for a 12-module plant.\n\nThere are no uncertainties in this value, as it is directly specified in the referenced documentation.",
+      "faithfulness": 0.8,
+      "answer_relevancy": 0.9751,
+      "context_recall": 1.0,
+      "factual_correctness": 0.8,
+      "keyword_hit": 0.75,
+      "kg_nodes": 2,
+      "kg_edges": 0,
+      "hops_used": 1,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 25.8,
+      "eval_sec": 29.3,
+      "total_sec": 55.1,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch01_0006] Power Output | 노드 추가: [nuscale_ch01_0015] General Plant Description",
+        "Hop 2: Early stop — evidence sufficient"
+      ]
+    },
+    {
+      "id": "Q002",
+      "type": "text_only",
+      "question": "How many NPMs can be operated in a single Reactor Building at the NuScale power plant?",
+      "expected_answer": "A single Reactor Building can operate from 1 to a maximum of 12 Nuclear Power Modules (NPMs).",
+      "agent_answer": "**Core Conclusion:**  \nA single Reactor Building at the NuScale power plant can operate up to 12 NuScale Power Modules (NPMs).\n\n**Supporting Evidence:**  \n- Node [nuscale_ch01_0003] states: “the plant capable of operating between one and twelve modules within a single facility.”\n- Table 1.2-1 (image 1) confirms: “Number of power modules: 12” for the overall plant.\n- Node [nuscale_ch01_0034] describes the Reactor Building as housing the NPMs in individual bays within a common reactor pool, arranged in two rows, supporting the physical arrangement for up to 12 modules.\n- Figure 1.2-2 (image 4) visually depicts 12 NPMs within the Reactor Building (RXB).\n\n**Uncertainties:**  \n- The documentation consistently refers to the certified design as supporting up to 12 modules per Reactor Building. There is no evidence in the provided context for configurations above 12 NPMs per building.\n\n**Summary:**  \nThe maximum number of NPMs that can be operated in a single Reactor Building at the NuScale power plant is 12, as supported by both textual and visual evidence ([nuscale_ch01_0003], Table 1.2-1, [nuscale_ch01_0034], Figure 1.2-2). No evidence suggests a higher number is permitted.",
+      "faithfulness": 0.4444,
+      "answer_relevancy": 0.8918,
+      "context_recall": 1.0,
+      "factual_correctness": 1.0,
+      "keyword_hit": 1.0,
+      "kg_nodes": 8,
+      "kg_edges": 0,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 98.2,
+      "eval_sec": 31.4,
+      "total_sec": 129.6,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch01_0015] General Plant Description | 노드 추가: [nuscale_ch01_0034] Reactor Building",
+        "Hop 2: 노드 추가: [nuscale_ch01_0003] Plant Location | 노드 추가: [nuscale_ch01_0033] General Arrangement of Major Structures and Equipment",
+        "Hop 3: 노드 추가: [nuscale_ch01_0005] Reactor Type | 노드 추가: [nuscale_ch01_0016] Principal Site Characteristics",
+        "Hop 4: 노드 추가: [nuscale_ch01_0004] Containment Type | 노드 추가: [nuscale_ch01_0019] Operating Characteristics"
+      ]
+    },
+    {
+      "id": "Q003",
+      "type": "text_only",
+      "question": "In the NuScale design, is AC or DC power required for safety shutdown and cooling?",
+      "expected_answer": "The NuScale design does not require AC or DC power for safety shutdown and cooling.",
+      "agent_answer": "**Core Conclusion:**  \nIn the NuScale design, neither AC nor DC power is required for safety shutdown and cooling for at least 72 hours following a station blackout (SBO); all safety-related functions can be performed without AC power during this period.\n\n**Supporting Evidence:**  \n- Node [nuscale_ch01_0275] states: “the design allows all safety-related functions to be performed without AC power for 72 hours after an SBO, making alternate AC power sources not applicable.”\n- Node [nuscale_ch01_0276] reinforces: “all safety-related functions can be maintained without AC power for 72 hours after an SBO event, making alternate AC power sources unnecessary for NuScale.”\n- Node [nuscale_ch01_0277] confirms: “the NuScale plant can perform all safety-related functions for 72 hours without AC power, making alternate AC power sources unnecessary.”\n\n**Uncertainties:**  \n- The evidence is explicit for the first 72 hours post-SBO. The requirements for power (AC or DC) beyond 72 hours are not addressed in the provided context.\n- The summary does not specify if any minimal DC power (e.g., for instrumentation) is required, but it is clear that AC power is not needed for safety functions during the 72-hour window.\n\n**References to Node IDs:**  \n- [nuscale_ch01_0275], [nuscale_ch01_0276], [nuscale_ch01_0277]\n\n**Summary:**  \nFor the NuScale design, safety shutdown and cooling do not require AC or DC power for 72 hours after a station blackout, due to the plant’s passive safety features. This is a key distinction from conventional designs. Requirements beyond 72 hours are not specified in the evidence provided.",
+      "faithfulness": null,
+      "answer_relevancy": 0.8872,
+      "context_recall": 0.0,
+      "factual_correctness": 0.4,
+      "keyword_hit": 1.0,
+      "kg_nodes": 6,
+      "kg_edges": 12,
+      "hops_used": 3,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 74.8,
+      "eval_sec": 69.7,
+      "total_sec": 144.5,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch01_0246] DSRS 8.2, Rev 0: Offsite Power SystemII.5 Compliance with 10 CFR 50.63 - Passive Design | 노드 추가: [nuscale_ch01_0275] DSRS 8.4, Rev 0: Station BlackoutII.1 Compliance with 10 CFR 50.63 and the guidelines of RG 1.155 | edge: [nuscale_ch01_0246] --REFERENCES--> [nuscale_ch01_0275]",
+        "Hop 2: 노드 추가: [nuscale_ch01_0248] DSRS 8.3.1, Rev 0: AC Power Systems (Onsite)II.1 Compliance with GDC 2 | 노드 추가: [nuscale_ch01_0259] DSRS 8.3.2, Rev 0: DC Power Systems (Onsite)II (No Number) Compliance with GDC 2 | edge: [nuscale_ch01_0248] --REFERENCES--> [nuscale_ch01_0246] | edge: [nuscale_ch01_0248] --REFERENCES--> [nuscale_ch01_0275] | edge: [nuscale_ch01_0259] --REFERENCES--> [nuscale_ch01_0246] | edge: [nuscale_ch01_0259] --REFERENCES--> [nuscale_ch01_0275]",
+        "Hop 3: 노드 추가: [nuscale_ch01_0276] DSRS 8.4, Rev 0: Station BlackoutII.2 Use of Alternate AC Power Sources and RTNSS for Plants of Passive Design | 노드 추가: [nuscale_ch01_0277] DSRS 8.4, Rev 0: Station BlackoutII.3 Independence of SBO-related power sources | edge: [nuscale_ch01_0276] --REFERENCES--> [nuscale_ch01_0246] | edge: [nuscale_ch01_0276] --REFERENCES--> [nuscale_ch01_0275] | edge: [nuscale_ch01_0276] --REFERENCES--> [nuscale_ch01_0248] | edge: [nuscale_ch01_0277] --REFERENCES--> [nuscale_ch01_0246] | edge: [nuscale_ch01_0277] --REFERENCES--> [nuscale_ch01_0275] | edge: [nuscale_ch01_0277] --REFERENCES--> [nuscale_ch01_0248] | edge: [nuscale_ch01_0276] --REFERENCES--> [nuscale_ch01_0277]",
+        "Hop 4: Early stop — evidence sufficient"
+      ]
+    },
+    {
+      "id": "Q004",
+      "type": "text_only",
+      "question": "What is the design configuration of NuScale's steam generator?",
+      "expected_answer": "The NuScale steam generator is designed as a small helical coil located outside the reactor pressure boundary.",
+      "agent_answer": "**Core Conclusion:**  \nThe NuScale steam generator design consists of two integral steam generators (SGs) located inside each reactor pressure vessel (RPV), utilizing helical tubing and a novel support structure as part of the reactor coolant system.\n\n**Supporting Evidence:**  \n- Each NuScale Power Module’s RPV contains two integral steam generators that are part of the reactor coolant system. The SGs are integral to the vessel, with their tubes and welds forming part of the reactor coolant pressure boundary ([nuscale_ch05_0020]).\n- The steam generator system includes feedwater and main steam piping, thermal relief valves, and access ports, with the RPV forming the outer pressure boundary ([nuscale_ch05_0020]).\n- The design uses helical tubing and a novel support structure, which has been validated by prototypic testing. This configuration does not increase risk compared to existing designs ([nuscale_ch05_0021]).\n- The integration of the steam generators within the reactor vessel is a key feature, with the primary and secondary sides separated ([nuscale_ch05_0019]).\n- Figures 5.1-1 and 5.1-3 visually confirm the placement of the steam generators within the RPV, showing their integral arrangement and the flow path through the SGs.\n\n**Uncertainties:**  \n- The exact dimensions, tube count, or material specifics of the steam generator tubes are not detailed in the provided nodes.\n- While the helical tube and support structure are mentioned, further specifics on their geometry or material are not included in the current knowledge graph.\n\n**References to Node IDs:**  \n- [nuscale_ch05_0020] (Steam Generators)\n- [nuscale_ch05_0021] (Reactor Coolant System Piping)\n- [nuscale_ch05_0019] (Reactor Coolant System Component and Subsystem Design)\n- Figures 5.1-1, 5.1-3 (attached images)\n\n**Summary:**  \nNuScale’s steam generators are two helical-tube, integral units within each reactor vessel, forming part of the primary pressure boundary and employing a validated novel support structure.",
+      "faithfulness": 0.9286,
+      "answer_relevancy": 0.8707,
+      "context_recall": 0.0,
+      "factual_correctness": 0.15,
+      "keyword_hit": 0.25,
+      "kg_nodes": 8,
+      "kg_edges": 11,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 82.7,
+      "eval_sec": 41.3,
+      "total_sec": 124.0,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch05_0020] Steam Generators | 노드 추가: [nuscale_ch05_0019] Reactor Coolant System Component and Subsystem Design",
+        "Hop 2: 노드 추가: [nuscale_ch05_0021] Reactor Coolant System Piping | 노드 추가: [nuscale_ch05_0024] Pressurizer | edge: [nuscale_ch05_0021] --REFERENCES--> [nuscale_ch05_0020] | edge: [nuscale_ch05_0021] --SPECIFIES--> [nuscale_ch05_0019]",
+        "Hop 3: 노드 추가: [nuscale_ch05_0005] System Components | 노드 추가: [nuscale_ch05_0015] Reactor Vessel Materials | edge: [nuscale_ch05_0005] --REFERENCES--> [nuscale_ch05_0020] | edge: [nuscale_ch05_0005] --SPECIFIES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0015] --SUPPORTS--> [nuscale_ch05_0020] | edge: [nuscale_ch05_0015] --REFERENCES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0005] --REFERENCES--> [nuscale_ch05_0015]",
+        "Hop 4: 노드 추가: [nuscale_ch05_0004] System Description | 노드 추가: [nuscale_ch05_0022] Decay Heat Removal System | edge: [nuscale_ch05_0004] --SPECIFIES--> [nuscale_ch05_0020] | edge: [nuscale_ch05_0004] --REFERENCES--> [nuscale_ch05_0019] | edge: [nuscale_ch05_0022] --REFERENCES--> [nuscale_ch05_0020] | edge: [nuscale_ch05_0022] --REFERENCES--> [nuscale_ch05_0019]"
+      ]
+    },
+    {
+      "id": "Q005",
+      "type": "text_only",
+      "question": "What is the internal pressure condition of the NuScale containment vessel (CNV) during normal operation?",
+      "expected_answer": "The NuScale containment vessel maintains a sub-atmospheric condition during normal operation.",
+      "agent_answer": "**Core Conclusion:**  \nDuring normal operation, the internal pressure of the NuScale containment vessel (CNV) is maintained at or near atmospheric pressure.\n\n**Supporting Evidence:**  \n- The knowledge graph node [nuscale_ch05_0004] (System Description) states that the Reactor Coolant System (RCS), which operates at high pressure, is located inside the containment vessel (CNV). However, it does not indicate that the CNV itself is pressurized during normal operation. Instead, the CNV surrounds the RCS as a secondary barrier.\n- Node [nuscale_ch05_0014] (Reactor Vessel) describes the RCS as the primary pressure boundary, with the CNV providing containment but not serving as a pressure vessel during normal operation.\n- Figure 5.1-1 visually confirms the CNV surrounds the RCS, and the RCS is the component designed for high pressure.\n- No node or figure provides a specific elevated pressure value for the CNV during normal operation, supporting the conclusion that it is not intentionally pressurized.\n\n**Uncertainties:**  \n- The exact value of the CNV internal pressure is not explicitly stated in the provided nodes. However, the absence of any mention of pressurization, combined with the standard design practice for light water reactors, supports the conclusion that the CNV is at or near atmospheric pressure during normal operation.\n\n**References:**  \n- [nuscale_ch05_0004] System Description  \n- [nuscale_ch05_0014] Reactor Vessel  \n- Figure 5.1-1: NuScale Power Module Major Components\n\n**Summary:**  \nThe NuScale CNV is not pressurized during normal operation; it remains at or near atmospheric pressure, serving as a containment barrier rather than a pressure vessel. This is consistent with the system descriptions and figures provided.",
+      "faithfulness": 0.9231,
+      "answer_relevancy": 0.9825,
+      "context_recall": 0.0,
+      "factual_correctness": 0.0,
+      "keyword_hit": 0.0,
+      "kg_nodes": 6,
+      "kg_edges": 1,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 67.3,
+      "eval_sec": 38.6,
+      "total_sec": 105.9,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch05_0016] Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses | 노드 추가: [nuscale_ch05_0017] Reactor Vessel Integrity",
+        "Hop 2: 노드 추가: [nuscale_ch05_0014] Reactor Vessel | 노드 추가: [nuscale_ch05_0024] Pressurizer",
+        "Hop 3: 노드 추가: [nuscale_ch05_0004] System Description | 노드 추가: [nuscale_ch05_0006] System Evaluation | edge: [nuscale_ch05_0004] --REFERENCES--> [nuscale_ch05_0014]",
+        "Hop 4: no new nodes"
+      ]
+    }
+  ]
+}

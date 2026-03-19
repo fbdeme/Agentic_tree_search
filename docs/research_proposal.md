@@ -85,9 +85,15 @@ At each hop, the LLM agent reasons about which tools to call based on the curren
 
 **Dynamic Termination**: Before each hop (from hop 2 onward), the agent evaluates whether the current KG evidence is sufficient to answer the query. If sufficient, exploration stops early. This is integrated into the existing planning step at no additional cost, mirroring PageIndex's iterative retrieval pattern (search → judge → repeat/stop). Empirically, the agent terminates at an average of 2.1–2.6 hops out of a maximum of 4.
 
-### 2.4 Transition (Memory Update): Short-term Memory Update and Relationship Inference
+### 2.4 Transition (Memory Update): Two-Stage Edge Inference
 
-The state transition function $f_{tr}(s_t, a_t) \rightarrow s_{t+1}$ integrates newly collected raw content (text, table, image references) into the short-term memory graph. When new nodes are added, the LLM-based reasoning module analyzes logical consistency between new and existing KG nodes to generate domain-specific edges from both structural and semantic tiers. Relationship inference is performed for all node pairs—both between new and existing nodes, and among new nodes themselves—ensuring edges are generated even in the first hop.
+The state transition function $f_{tr}(s_t, a_t) \rightarrow s_{t+1}$ integrates newly collected raw content (text, table, image references) into the short-term memory graph. When new nodes are added, the LLM-based reasoning module performs **two-stage edge inference** between all node pairs:
+
+**Stage 1 — Description (Free-form)**: The LLM describes the relationship between two nodes in one natural language sentence, without classification pressure. This adopts LightRAG's [4] free-form relation extraction approach, allowing the model to capture nuanced relationships (e.g., "The ECCS design with 3 RVVs and 2 RRVs is configured to meet the acceptance criteria of 10 CFR 50.46") that would be lost under forced classification.
+
+**Stage 2 — Label (Ontology mapping)**: The description is then mapped to a domain-specific ontology label from the two-tier edge set. If no fixed type fits, the edge is preserved as SEMANTIC—ensuring no relationship is discarded.
+
+This design serves as a **vectorless alternative to GWM's embedding-based implicit edges** [5]. Where GWM constructs implicit edges $E_m$ through embedding similarity in vector space, this approach uses LLM reasoning to generate semantically rich edge descriptions grounded in the document text. The natural language descriptions also provide inherent explainability—a critical requirement in safety-critical regulatory review where "cosine similarity = 0.87" offers no interpretive value to human reviewers, but "Section 5.3 specifies ECCS design parameters that satisfy the PCT limits in 10 CFR 50.46(b)(1)" provides directly actionable evidence.
 
 ### 2.5 Vision-Augmented Answer Generation
 
@@ -128,36 +134,51 @@ Pipeline:
 
 ### 3.3 Results
 
-Full 100-question evaluation on NuScale FSAR data with GPT-4.1 (tool-based exploration + BM25 + Vision RAG):
+Full 100-question evaluation on NuScale FSAR data with GPT-4.1 (tool-based exploration + BM25 + Vision RAG + description-first edge inference):
 
 | Metric | Overall | text_only (30) | table_only (20) | image_only (20) | composite (30) |
 |--------|---------|----------------|-----------------|-----------------|----------------|
-| Faithfulness | 0.68 | 0.74 | 0.59 | 0.60 | **0.79** |
-| Answer Relevancy | 0.72 | **0.81** | 0.68 | 0.71 | 0.65 |
-| Context Recall | 0.56 | 0.54 | 0.55 | **0.62** | 0.53 |
-| Factual Correctness | 0.22 | 0.30 | 0.31 | 0.13 | 0.15 |
-| Keyword Hit | 0.65 | 0.52 | **0.88** | 0.75 | 0.57 |
+| Faithfulness | 0.77 | 0.77 | 0.77 | 0.63 | **0.81** |
+| Answer Relevancy | 0.70 | **0.78** | 0.50 | 0.76 | 0.70 |
+| Context Recall | 0.59 | 0.58 | 0.60 | **0.65** | 0.55 |
+| Factual Correctness | 0.20 | 0.24 | **0.26** | 0.18 | 0.13 |
+| Keyword Hit | 0.63 | 0.53 | **0.73** | 0.79 | 0.57 |
+
+**Edge Type Distribution (1,309 total edges across 100 questions):**
+
+| Edge Type | Count | % | Category |
+|-----------|-------|---|----------|
+| SPECIFIES | 497 | 38.0% | Structural |
+| SUPPORTS | 410 | 31.3% | Semantic |
+| REFERENCES | 148 | 11.3% | Structural |
+| IS_PREREQUISITE_OF | 111 | 8.5% | Semantic |
+| SATISFIES | 81 | 6.2% | Semantic |
+| SEMANTIC | 47 | 3.6% | Free-form |
+| CONTRADICTS | 7 | 0.5% | Semantic |
+| LEADS_TO | 7 | 0.5% | Semantic |
+| VIOLATES | 1 | 0.1% | Semantic |
 
 **KG Construction Statistics:**
 
 | Question Type | Avg Nodes | Avg Edges | Avg Hops (max 4) |
 |---------------|-----------|-----------|------------------|
-| text_only | 6.6 | 4.4 | 2.1 |
-| table_only | 5.5 | 2.1 | 2.2 |
-| image_only | 7.2 | 6.5 | 2.6 |
-| composite | 7.0 | 7.2 | 2.4 |
+| text_only | 6.6 | 12.9 | 2.0 |
+| table_only | 5.2 | 5.9 | 2.2 |
+| image_only | 6.8 | 16.1 | 2.4 |
+| composite | 6.7 | 16.0 | 2.2 |
 
 Key findings:
-- **Dynamic termination is effective**: Average hop count of 2.1–2.6 out of maximum 4, demonstrating the agent's ability to judge evidence sufficiency and avoid unnecessary exploration.
-- **Composite questions produce richest KGs**: Highest average edges (7.2) and highest Faithfulness (0.79), confirming that multi-hop exploration with edge inference produces well-grounded, traceable answers for complex regulatory queries.
-- **BM25 ranking enables cross-document retrieval**: Document length normalization naturally ranks specific leaf nodes above generic parent nodes, solving the 866-node tree scalability problem without depth-based heuristics.
-- **Table retrieval is strong**: Keyword Hit of 0.88 for table_only questions demonstrates effective extraction of numerical parameters from regulatory data tables.
-- **Vision RAG limitations**: image_only Factual Correctness of 0.13 suggests that while the VLM receives referenced engineering diagrams, extracting precise factual information from complex P&ID and system schematics remains challenging.
-- **Factual Correctness metric caveat**: The overall low score (0.22) partially reflects a metric limitation—RAGAs penalizes agent answers that are more detailed than the expected answer, as additional correct claims are treated as unsupported.
+
+- **All 8 ontology edge types emerged**: The description-first inference approach resolved the edge type monotonicity problem. Under classification-first prompting, only 3/8 types appeared (REFERENCES 54%, SPECIFIES 29%, SUPPORTS 17%). After switching to description-first, all 8 types plus the SEMANTIC fallback type appeared across 100 questions.
+- **Composite questions validate the two-tier hypothesis**: Composite questions produced the richest semantic edge distribution: SATISFIES (52), SUPPORTS (134), IS_PREREQUISITE_OF (35), LEADS_TO (5), VIOLATES (1) — confirming that regulatory judgment edges emerge naturally in multi-hop queries requiring cross-section evidence synthesis.
+- **Faithfulness highest for composite (0.81)**: Multi-hop exploration with rich edge descriptions produces well-grounded, traceable answers. The natural language edge descriptions serve as explicit reasoning chains that the answer generation step can cite.
+- **Dynamic termination is effective**: Average 2.0–2.4 hops out of maximum 4.
+- **SEMANTIC edges capture domain nuances**: 47 edges (3.6%) did not fit the fixed ontology, demonstrating that the free-form description layer captures relationships that rigid type systems would discard.
+- **Factual Correctness metric caveat**: The overall low score (0.20) partially reflects a RAGAs limitation—agent answers are more detailed than expected answers, and additional correct claims are penalized as unsupported.
 
 ## 4. Conclusion
 
-This research proposes a novel agent architecture combining PageIndex's hierarchical tree index with GWM's State-Action-Transition framework, tool-based document navigation, and a two-tier domain-specific edge ontology for solving the complex multi-hop reasoning problem in multimodal regulatory documents. Unlike GWM's modeling of RAG as an unintended action via embedding similarity, this research implements document exploration as an intended action through a file-system-like tool interface (browse/read/search with BM25 ranking)—eliminating pre-computed embeddings while enabling scalable, purpose-driven information collection across documents of arbitrary size. The dynamic termination mechanism and vision-augmented answer generation further distinguish this approach from static retrieval systems. The proposed framework addresses the massive cost problem of static KG construction (GraphRAG, LightRAG) while emulating human experts' document exploration through logical relationship inference. By providing all intermediate reasoning steps as a transparent knowledge graph and integrating vision-based analysis of referenced figures and tables, the system ensures the high reliability and inspectability demanded in safety-critical domains.
+This research proposes a novel agent architecture combining PageIndex's hierarchical tree index with GWM's State-Action-Transition framework, tool-based document navigation, and a two-stage edge inference pipeline for solving the complex multi-hop reasoning problem in multimodal regulatory documents. The two-stage approach—free-form description first, ontology label second—serves as a vectorless alternative to GWM's embedding-based implicit edges, while adopting LightRAG's insight that natural language relation descriptions preserve richer semantic information than fixed type labels alone. Unlike GWM's modeling of RAG as an unintended action via embedding similarity, this research implements document exploration as an intended action through a file-system-like tool interface (browse/read/search with BM25 ranking)—eliminating pre-computed embeddings while enabling scalable, purpose-driven information collection across documents of arbitrary size. The dynamic termination mechanism and vision-augmented answer generation further distinguish this approach from static retrieval systems. By providing all intermediate reasoning steps as a transparent knowledge graph with human-readable edge descriptions, the system ensures the high reliability and inspectability demanded in safety-critical domains.
 
 ## 5. References
 

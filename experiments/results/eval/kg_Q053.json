@@ -1,0 +1,49 @@
+{
+  "question": "Describe the structure of the helical tube bundle in the steam generator.",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the construction of the pressurizer and its components within the NuScale reactor coolant system, specifying alloys and standards for each part to ensure corrosion resistance and compatibility. It references relevant sections of the BPVC (Boiler and Pressure Vessel Code) and lists the specific alloys and material specifications for the baffle plate, heater bundles, cover plate, bolting, and heater sheaths.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 1
+    },
+    "nuscale_ch05_0019": {
+      "node_id": "nuscale_ch05_0019",
+      "title": "Reactor Coolant System Component and Subsystem Design",
+      "summary": "This section describes the design of the NuScale Power Module’s Reactor Coolant System (RCS) components and subsystems, including the reactor pressure vessel, steam generators, safety and emergency valves, and associated piping. It details how these components are integrated within the module, outlines their boundaries between primary and secondary systems, and references where further design specifics can be found in other report sections.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
+      "hop": 1
+    },
+    "nuscale_ch05_0020": {
+      "node_id": "nuscale_ch05_0020",
+      "title": "Steam Generators",
+      "summary": "Each NuScale Power Module’s reactor pressure vessel contains two integral steam generators, which are part of the reactor coolant system and share the vessel’s pressure boundary. The steam generator system includes feedwater and main steam piping, thermal relief valves, and internal plenums, with the reactor pressure vessel itself forming the shell and pressure boundary for the steam generators.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
+      "hop": 1
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific material and component details for the pressurizer, which is one of the subsystems generally listed in Section B's overview of the reactor coolant system components."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides a general overview of the reactor coolant system components, including the steam generators, while Section B focuses specifically on the steam generators, which are one of the components listed in Section A."
+    }
+  ]
+}

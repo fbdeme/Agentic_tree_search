@@ -1,0 +1,220 @@
+{
+  "question": "Explain the role of the Ultimate Heat Sink through the text and the table in Chapter 1.",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0043": {
+      "node_id": "nuscale_ch01_0043",
+      "title": "Ultimate Heat Sink",
+      "summary": "The Ultimate Heat Sink section describes a large, stainless steel-lined, reinforced concrete pool located below plant grade, which serves as the final heat removal system for the NuScale reactor. In normal operations, heat is removed via a cooling system and external heat sink, while in accidents with total AC power loss, decay heat is passively transferred to the pool, ensuring sufficient water inventory to cool the reactor modules.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "41",
+      "hop": 1
+    },
+    "nuscale_ch01_0044": {
+      "node_id": "nuscale_ch01_0044",
+      "title": "Chemical and Volume Control System",
+      "summary": "The Chemical and Volume Control System section describes the NuScale reactor’s closed-loop, two-phase natural circulation cooling system, which uses two independent decay heat removal trains, each capable of fully cooling the reactor. In emergencies, passive condensers transfer decay heat to a large, stainless steel-lined ultimate heat sink pool, ensuring safe heat removal even during a total loss of AC power.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "41",
+      "hop": 1
+    },
+    "nuscale_ch01_0557": {
+      "node_id": "nuscale_ch01_0557",
+      "title": "DSRS 12.3-12.4, Rev 0: Radiation Protection Design FeaturesII.8 RG 8.10",
+      "summary": "This section summarizes the NuScale Final Safety Analysis Report’s conformance with various regulatory guides (RGs) and standards related to radiation protection design features, as outlined in DSRS 12.3-12.4. It details whether each RG is applicable, not applicable, conforms, or partially conforms, with references to relevant sections for further information. The table provides a clear overview of compliance status for each regulatory criterion.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "278",
+      "hop": 1
+    },
+    "nuscale_ch01_0558": {
+      "node_id": "nuscale_ch01_0558",
+      "title": "DSRS 12.3-12.4, Rev 0: Radiation Protection Design FeaturesII.9 RG 8.15",
+      "summary": "This section summarizes NuScale’s conformance with various regulatory guides (RGs) and standards related to radiation protection design features, as outlined in DSRS 12.3-12.4. It indicates whether each RG is applicable, not applicable, partially conformed to, or fully conformed to, with references to supporting sections or tables for further details. The table provides a clear overview of compliance status for each regulatory criterion.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "278",
+      "hop": 1
+    },
+    "nuscale_ch01_0331": {
+      "node_id": "nuscale_ch01_0331",
+      "title": "SRP 9.2.5, Rev 3: Ultimate Heat SinkII.4 Cooling Water System Inspection",
+      "summary": "The NuScale design fully conforms to SRP 9.2.5, Rev 3, Section II.4 requirements for Cooling Water System Inspection, with no exceptions or additional comments noted. This indicates that the inspection criteria for the ultimate heat sink's cooling water system are met as required by regulatory standards.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "247",
+      "hop": 1
+    },
+    "nuscale_ch01_0121": {
+      "node_id": "nuscale_ch01_0121",
+      "title": "1.9 Conformance with Regulatory Criteria",
+      "summary": "This section outlines how the NuScale Final Safety Analysis Report demonstrates compliance with applicable regulatory criteria, using a series of tables to assess conformance with various NRC regulations and guidance documents effective six months prior to the anticipated docket date. It details the evaluation process, including identification of deviations and justifications for alternative approaches, and specifies that future applicants referencing the NuScale design must similarly address regulatory conformance for site-specific and operational aspects.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "129",
+      "hop": 2
+    },
+    "nuscale_ch01_0074": {
+      "node_id": "nuscale_ch01_0074",
+      "title": "Conformance with Regulatory Criteria",
+      "summary": "This section outlines how the NuScale Final Safety Analysis Report demonstrates compliance with applicable regulatory criteria, using a series of tables to assess conformance with various NRC regulations and guidance documents as of six months prior to the anticipated docket date. It also specifies that any applicant referencing the NuScale design must review and address regulatory conformance for site-specific and operational aspects, and details the process for evaluating and justifying any deviations from NRC Regulatory Guides.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "129",
+      "hop": 2
+    },
+    "nuscale_ch01_0080": {
+      "node_id": "nuscale_ch01_0080",
+      "title": "References",
+      "summary": "This section outlines NuScale's adherence to regulatory criteria by incorporating relevant operational experience and NRC guidance into its design, as detailed in Table 1.9-6. It also describes the evaluation of 10 CFR 21 notifications through NuScale’s supplier quality assurance program, confirming that no such notifications have impacted safety-related work for the NuScale design. Additionally, the section references NRC guidance on advanced and evolutionary light-water reactor design issues as recommended by SRP Section 1.0.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "131",
+      "hop": 3
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0044",
+      "relation": "SEMANTIC",
+      "confidence": 1.0,
+      "description": "Section A and Section B are identical excerpts describing the decay heat removal system and its reliance on passive condensers immersed in the reactor pool, which is the ultimate heat sink, thus both sections provide the same information about the system's cooling function."
+    },
+    {
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0557",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the functional design and operation of the Ultimate Heat Sink, while Section B lists regulatory criteria and conformance statements that the Ultimate Heat Sink's design (as described in Section A) must satisfy, connecting the technical description to regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0558",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the functional design and operation of the Ultimate Heat Sink, while Section B lists regulatory criteria and conformance statements that the Ultimate Heat Sink's design (as described in Section A) must satisfy, connecting them through regulatory compliance requirements."
+    },
+    {
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0331",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the design and function of the Ultimate Heat Sink in the NuScale plant, while Section B evaluates the system's conformance with regulatory criteria (SRP 9.2.5), connecting the technical description to regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0557",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section B references regulatory guidance and conformance tables (Table 1.9-2) that include requirements and criteria relevant to the design features described in Section A, such as the decay heat removal system's role in safety and radiation protection."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0558",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the cooling systems and their operation in the NuScale reactor, while Section B lists regulatory criteria and conformance statements for radiation protection design features, with both sections connected through the requirement that the cooling systems (including the Ultimate Heat Sink) must meet radiation protection standards as referenced in regulatory guidance."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0331",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the decay heat removal system's reliance on passive condensers immersed in the reactor pool, which functions as the Ultimate Heat Sink discussed in Section B's regulatory conformance context."
+    },
+    {
+      "source": "nuscale_ch01_0557",
+      "target": "nuscale_ch01_0558",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A and Section B both list conformance statements for radiation protection design features and regulatory guides, referencing the same tables and criteria, thus providing parallel evidence regarding how the Ultimate Heat Sink's role aligns with regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0557",
+      "target": "nuscale_ch01_0331",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory guidance and conformance tables that include cross-references to Table 1.9-2, which also addresses the Ultimate Heat Sink as discussed in Section B, thereby connecting the radiation protection design features to the cooling water system and Ultimate Heat Sink requirements."
+    },
+    {
+      "source": "nuscale_ch01_0558",
+      "target": "nuscale_ch01_0331",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A references regulatory guidance and conformance tables that include cross-references to Table 1.9-2, which also addresses the Ultimate Heat Sink as discussed in Section B, thereby structurally linking the radiation protection design features to the cooling water system and Ultimate Heat Sink requirements."
+    },
+    {
+      "source": "nuscale_ch01_0121",
+      "target": "nuscale_ch01_0043",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A outlines the regulatory conformance assessment process and references tables that include criteria relevant to systems like the Ultimate Heat Sink, while Section B describes the design and function of the Ultimate Heat Sink system, whose compliance would be evaluated using the criteria and process described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0121",
+      "target": "nuscale_ch01_0044",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A outlines the regulatory conformance assessment process and references tables that include requirements for systems like the Ultimate Heat Sink, while Section B describes the design and function of the decay heat removal system, which relies on the Ultimate Heat Sink to dissipate heat, thus providing the technical basis for conformance claims in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0121",
+      "target": "nuscale_ch01_0557",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A introduces the conformance tables and legends, while Section B provides specific entries from those tables showing how the design conforms to regulatory guides, thus Section B is a detailed instance of the framework described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0074",
+      "target": "nuscale_ch01_0043",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A provides the regulatory conformance framework and tables that include requirements relevant to the Ultimate Heat Sink, while Section B describes the design and function of the Ultimate Heat Sink system, allowing assessment of whether the design satisfies the regulatory criteria outlined in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0074",
+      "target": "nuscale_ch01_0044",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A outlines the regulatory conformance framework and references tables that assess compliance with criteria relevant to systems like the Ultimate Heat Sink, while Section B describes the design and function of the heat removal system that would be evaluated for such conformance."
+    },
+    {
+      "source": "nuscale_ch01_0074",
+      "target": "nuscale_ch01_0557",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A introduces the conformance tables and legends (including Table 1.9-2), while Section B provides specific entries from those tables showing how the design conforms or partially conforms to regulatory guides, thus Section B is a detailed instance of the framework described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0121",
+      "target": "nuscale_ch01_0074",
+      "relation": "REFERENCES",
+      "confidence": 1.0,
+      "description": "Section A and Section B are identical text passages that introduce and describe the purpose and structure of the conformance tables, specifically referencing how Table 1.9-1 defines codes used in subsequent tables, thus structurally referencing each other in the context of regulatory conformance analysis."
+    },
+    {
+      "source": "nuscale_ch01_0080",
+      "target": "nuscale_ch01_0043",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section B provides a detailed technical description of the Ultimate Heat Sink system, which supports Section A's general claim that the NuScale design incorporates operational experience and regulatory guidance relevant to safety systems like the Ultimate Heat Sink."
+    },
+    {
+      "source": "nuscale_ch01_0080",
+      "target": "nuscale_ch01_0044",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A references the incorporation of operational experience and regulatory guidance relevant to systems like the Ultimate Heat Sink, while Section B describes the design and function of the Chemical and Volume Control System, which relies on passive heat removal features that are part of the plant's ultimate heat sink strategy."
+    },
+    {
+      "source": "nuscale_ch01_0080",
+      "target": "nuscale_ch01_0557",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general reference to the NuScale Final Safety Analysis Report's conformance with regulatory criteria, while Section B specifies detailed conformance statements for radiation protection design features, both connecting through their reliance on the same regulatory framework and documentation (the FSAR and associated regulatory guides)."
+    }
+  ]
+}

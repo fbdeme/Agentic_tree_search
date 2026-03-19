@@ -1,0 +1,114 @@
+{
+  "timestamp": "2026-03-19T10:40:09.224872",
+  "evaluation_framework": "RAGAs v0.4",
+  "config": {
+    "model": "gpt-4.1",
+    "evaluator_model": "gpt-4.1",
+    "embedding_model": "text-embedding-3-small",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 3,
+    "errors": 0
+  },
+  "metrics_description": {
+    "faithfulness": "Fraction of claims in the answer that are supported by the retrieved context (0-1)",
+    "answer_relevancy": "How relevant the answer is to the question, measured by reverse question generation (0-1)",
+    "context_recall": "Fraction of expected answer sentences supported by retrieved context (0-1)",
+    "factual_correctness": "Factual overlap between agent answer and expected answer (0-1)",
+    "keyword_hit": "Fraction of expected keywords present in the agent answer (0-1)"
+  },
+  "summary": {
+    "faithfulness": 0.3896,
+    "answer_relevancy": 0.9316,
+    "context_recall": 0.6667,
+    "factual_correctness": 0.49,
+    "keyword_hit": 0.9167
+  },
+  "by_type": {
+    "text_only": {
+      "count": 3,
+      "faithfulness": 0.3896,
+      "answer_relevancy": 0.9316,
+      "context_recall": 0.6667,
+      "factual_correctness": 0.49,
+      "keyword_hit": 0.9167
+    }
+  },
+  "results": [
+    {
+      "id": "Q001",
+      "type": "text_only",
+      "question": "What is the thermal output of the NuScale Power Module (NPM)?",
+      "expected_answer": "Each NPM has a thermal output of 160 MWt, resulting in a total of 1,920 MWt based on 12 modules.",
+      "agent_answer": "**Core Conclusion:**  \nThe thermal output of the NuScale Power Module (NPM) is **160 MWt** (megawatts thermal).\n\n**Supporting Evidence:**  \nThis value is directly specified in Table 1.3-1 (\"NuScale Plant Comparison with Other Facilities\") under the row \"Core thermal output (MWt)\" for NuScale (see image 3). The table compares key parameters of a typical PWR and the NuScale module, listing the NuScale NPM core thermal output as **160 MWt**.\n\n- Node: [nuscale_ch01_0052]  \n- Evidence: “Core thermal output (MWt)” for NuScale: **160** (Table 1.3-1, image 3)\n\n**Uncertainties:**  \nThere are no uncertainties regarding the nominal thermal output value, as it is explicitly stated in the referenced table.\n\n**Summary:**  \nThe NuScale Power Module has a core thermal output of 160 MWt, as shown in Table 1.3-1 (node [nuscale_ch01_0052]).",
+      "faithfulness": 0.1429,
+      "answer_relevancy": 0.9557,
+      "context_recall": 0.0,
+      "factual_correctness": 0.5,
+      "keyword_hit": 0.75,
+      "kg_nodes": 6,
+      "kg_edges": 4,
+      "hops_used": 1,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 67.7,
+      "eval_sec": 34.9,
+      "total_sec": 102.6,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0070] Legends and Symbols | node: [nuscale_ch01_0036] Refueling Operations | node: [nuscale_ch01_0811] DSRS 15.9.A, Rev 0: Thermal Hydraulic St | node: [nuscale_ch01_0035] Fuel Handling and Reactor Maintenance Ar | node: [nuscale_ch01_0052] Comparison with Other Facilities | node: [nuscale_ch01_0810] DSRS 15.9.A, Rev 0: Thermal Hydraulic St | edge: SUPPORTS | edge: SPECIFIES | edge: SPECIFIES | edge: REFERENCES",
+        "Hop 2: no results",
+        "Hop 3: no results",
+        "Hop 4: no results"
+      ]
+    },
+    {
+      "id": "Q002",
+      "type": "text_only",
+      "question": "How many NPMs can be operated in a single Reactor Building at the NuScale power plant?",
+      "expected_answer": "A single Reactor Building can operate from 1 to a maximum of 12 Nuclear Power Modules (NPMs).",
+      "agent_answer": "**Core Conclusion:**  \nA single Reactor Building at the NuScale power plant can operate up to 12 NuScale Power Modules (NPMs).\n\n**Supporting Evidence:**  \n- Table 1.2-1 (\"Overall Characteristics of a NuScale Power Plant\") explicitly lists the \"Number of power modules\" as **12** for the overall plant (see image 1).\n- Node [nuscale_ch01_0003] confirms the plant is designed for a scalable configuration, \"allowing one to twelve modules per facility.\"\n- Node [nuscale_ch01_0033] describes the Reactor Building (RXB) as housing the NPMs in a common reactor pool, arranged in two rows, supporting the physical feasibility of accommodating 12 modules.\n- Node [nuscale_ch01_0372] further states that \"up to 12 modules share a control room,\" reinforcing the operational arrangement for 12 NPMs per building.\n\n**Uncertainties:**  \n- The documentation consistently references 12 as the maximum number of NPMs per plant and per Reactor Building, with no indication of a higher number being possible in the standard design.\n- Figures showing detailed layouts are withheld, so the exact spatial arrangement cannot be visually confirmed, but the text and Table 1.2-1 are explicit.\n\n**References to Knowledge Graph:**  \n- Table 1.2-1 (image 1), node [nuscale_ch01_0003], node [nuscale_ch01_0033], node [nuscale_ch01_0372].\n\n**Summary:**  \nThe maximum number of NPMs that can be operated in a single Reactor Building at the NuScale power plant is 12, as specified in both tabular and narrative descriptions in the provided documentation.",
+      "faithfulness": 0.6364,
+      "answer_relevancy": 0.8917,
+      "context_recall": 1.0,
+      "factual_correctness": 0.57,
+      "keyword_hit": 1.0,
+      "kg_nodes": 12,
+      "kg_edges": 14,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 108.9,
+      "eval_sec": 34.0,
+      "total_sec": 143.0,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0051] Plant Features of Special Interest | node: [nuscale_ch01_0035] Fuel Handling and Reactor Maintenance Ar | node: [nuscale_ch01_0108] 8.37 ALARA Levels for Effluents from Mat | node: [nuscale_ch01_0036] Refueling Operations | edge: REFERENCES | edge: SUPPORTS | edge: SUPPORTS",
+        "Hop 2: node: [nuscale_ch01_0032] Radioactive Waste Management System | node: [nuscale_ch01_0003] Plant Location | node: [nuscale_ch01_0109] Figure 1.7-1a: Electrical Symbols | node: [nuscale_ch01_0033] General Arrangement of Major Structures  | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES",
+        "Hop 3: node: [nuscale_ch01_0370] SRP 9.4.1, Rev 3: Control Room Area Vent | node: [nuscale_ch01_0372] SRP 9.4.1, Rev 3: Control Room Area Vent | edge: SUPPORTS | edge: SUPPORTS | edge: REFERENCES",
+        "Hop 4: node: [nuscale_ch01_0001] CHAPTER 1 INTRODUCTION AND GENERAL DESCR | node: [nuscale_ch01_0002] Introduction | edge: SPECIFIES | edge: SPECIFIES"
+      ]
+    },
+    {
+      "id": "Q003",
+      "type": "text_only",
+      "question": "In the NuScale design, is AC or DC power required for safety shutdown and cooling?",
+      "expected_answer": "The NuScale design does not require AC or DC power for safety shutdown and cooling.",
+      "agent_answer": "**Core Conclusion:**  \nThe NuScale design does **not require either AC or DC power for safety shutdown and cooling**; these functions are achieved through passive safety systems.\n\n**Supporting Evidence:**  \n- **Passive Safety Systems:** Table 1.2-2 (Figure 1) explicitly states:  \n  > \"Passive safety systems: Safety systems cool and depressurize the RPV/CNV even in the event of loss of external power. Active safety systems are not required.\"\n- **Regulatory Text:**  \n  - [nuscale_ch01_0020] and [nuscale_ch01_0022] confirm that NuScale’s passive safety features eliminate reliance on external power for safety functions, reducing core damage frequency and accident consequences.\n  - [nuscale_ch01_0275] (DSRS 8.4, Rev 0) states:  \n    > \"All safety-related functions can be performed without AC power for 72 hours after an SBO event... alternate AC power sources unnecessary.\"\n  - [nuscale_ch01_0269] and [nuscale_ch01_0267] clarify that **no onsite AC power system equipment is required for safety shutdown and cooling**, and DC power system requirements are only partially applicable, with many exemptions due to the passive design.\n  - [nuscale_ch01_0324] and [nuscale_ch01_0325] further confirm that the cooling water system is not safety-related and does not require powered systems for accident mitigation.\n\n**Uncertainties:**  \n- Some regulatory requirements for DC power systems are partially met or assigned to the COL applicant ([nuscale_ch01_0278], [nuscale_ch01_0275]), but this does not affect the core conclusion that **passive systems provide safety shutdown and cooling without reliance on AC or DC power**.\n\n**Summary:**  \nNuScale’s safety shutdown and cooling are fully passive and do not require AC or DC power (see nodes: [nuscale_ch01_0020], [nuscale_ch01_0022], [nuscale_ch01_0275], [nuscale_ch01_0269], [nuscale_ch01_0324]; Table 1.2-2).",
+      "faithfulness": null,
+      "answer_relevancy": 0.9474,
+      "context_recall": 1.0,
+      "factual_correctness": 0.4,
+      "keyword_hit": 1.0,
+      "kg_nodes": 12,
+      "kg_edges": 45,
+      "hops_used": 2,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 131.8,
+      "eval_sec": 82.7,
+      "total_sec": 214.4,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0324] SRP 9.2.2, Rev 4: Reactor Auxiliary Cool | node: [nuscale_ch01_0269] DSRS 8.3.2, Rev 0: DC Power Systems (Ons | node: [nuscale_ch01_0383] SRP 9.4.5, Rev 3: Engineered Safety Feat | node: [nuscale_ch01_0267] DSRS 8.3.2, Rev 0: DC Power Systems (Ons | node: [nuscale_ch01_0387] SRP 9.5.1.1, Rev 0: Fire Protection Prog | node: [nuscale_ch01_0251] DSRS 8.3.1, Rev 0: AC Power Systems (Ons | node: [nuscale_ch01_0325] SRP 9.2.2, Rev 4: Reactor Auxiliary Cool | node: [nuscale_ch01_0252] DSRS 8.3.1, Rev 0: AC Power Systems (Ons | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: CONTRADICTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SEMANTIC | edge: SUPPORTS | edge: CONTRADICTS | edge: SUPPORTS | edge: CONTRADICTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: REFERENCES | edge: SUPPORTS",
+        "Hop 2: node: [nuscale_ch01_0278] SRP Appendix 8-A, Rev1: General Agenda,  | node: [nuscale_ch01_0020] Safety Considerations | node: [nuscale_ch01_0275] DSRS 8.4, Rev 0: Station BlackoutII.1 Co | node: [nuscale_ch01_0022] Engineered Safety Feature Materials | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SATISFIES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: REFERENCES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS",
+        "Hop 3: Early stop — evidence sufficient"
+      ]
+    }
+  ]
+}

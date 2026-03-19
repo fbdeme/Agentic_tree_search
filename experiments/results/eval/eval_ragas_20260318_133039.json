@@ -1,0 +1,65 @@
+{
+  "timestamp": "2026-03-18T13:30:39.888949",
+  "evaluation_framework": "RAGAs v0.4",
+  "config": {
+    "model": "gpt-4.1",
+    "evaluator_model": "gpt-4.1",
+    "embedding_model": "text-embedding-3-small",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 1,
+    "errors": 0
+  },
+  "metrics_description": {
+    "faithfulness": "Fraction of claims in the answer that are supported by the retrieved context (0-1)",
+    "answer_relevancy": "How relevant the answer is to the question, measured by reverse question generation (0-1)",
+    "context_recall": "Fraction of expected answer sentences supported by retrieved context (0-1)",
+    "factual_correctness": "Factual overlap between agent answer and expected answer (0-1)",
+    "keyword_hit": "Fraction of expected keywords present in the agent answer (0-1)"
+  },
+  "summary": {
+    "faithfulness": 0.9286,
+    "answer_relevancy": 0.9826,
+    "context_recall": 0.0,
+    "factual_correctness": 0.25,
+    "keyword_hit": 0.0
+  },
+  "by_type": {
+    "text_only": {
+      "count": 1,
+      "faithfulness": 0.9286,
+      "answer_relevancy": 0.9826,
+      "context_recall": 0.0,
+      "factual_correctness": 0.25,
+      "keyword_hit": 0.0
+    }
+  },
+  "results": [
+    {
+      "id": "Q005",
+      "type": "text_only",
+      "question": "What is the internal pressure condition of the NuScale containment vessel (CNV) during normal operation?",
+      "expected_answer": "The NuScale containment vessel maintains a sub-atmospheric condition during normal operation.",
+      "agent_answer": "**Core Conclusion:**  \nDuring normal operation, the internal pressure of the NuScale containment vessel (CNV) is maintained at or near atmospheric pressure.\n\n**Supporting Evidence:**  \n- The knowledge graph node [nuscale_ch05_0004] states that the Reactor Coolant System (RCS) is located inside the containment vessel and is designed to maintain the integrity of the reactor coolant pressure boundary, preventing radionuclide release. The RCS uses natural circulation and is supported by interfacing systems and safety valves.\n- The relationship between [nuscale_ch05_0004] and [nuscale_ch05_0005] clarifies that nitrogen is vented from the pressurizer (PZR) until its pressure matches the CNV pressure, indicating that the CNV is not pressurized above atmospheric conditions during normal operation.\n- No node or figure indicates that the CNV is intentionally pressurized during normal operation; rather, the design relies on the RCS pressure boundary for containment, with the CNV serving as a secondary barrier.\n\n**Uncertainties:**  \n- The exact value of the CNV internal pressure is not explicitly stated in the provided nodes, but all evidence supports that it is at or near atmospheric pressure during normal operation.\n- If further detail is needed (e.g., specific pressure values), additional documentation would be required.\n\n**References:**  \n- [nuscale_ch05_0004] System Description  \n- [nuscale_ch05_0005] System Components  \n- Edge: [nuscale_ch05_0004] --(SUPPORTS)--> [nuscale_ch05_0005] (pressure equalization process)\n\n**Summary:**  \nThe NuScale CNV is maintained at or near atmospheric pressure during normal operation, with the RCS providing the primary pressure boundary. This is supported by the pressure equalization process described between the PZR and CNV ([nuscale_ch05_0004], [nuscale_ch05_0005]).",
+      "faithfulness": 0.9286,
+      "answer_relevancy": 0.9826,
+      "context_recall": 0.0,
+      "factual_correctness": 0.25,
+      "keyword_hit": 0.0,
+      "kg_nodes": 8,
+      "kg_edges": 1,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 70.4,
+      "eval_sec": 28.7,
+      "total_sec": 99.0,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0865] Nuclear Power Plants to be Operated on M",
+        "Hop 2: node: [nuscale_ch05_0000] Preface | node: [nuscale_ch05_0002] Summary Description | node: [nuscale_ch05_0009] Overpressure Protection | node: [nuscale_ch05_0022] Decay Heat Removal System",
+        "Hop 3: node: [nuscale_ch05_0004] System Description | node: [nuscale_ch05_0005] System Components | edge: SUPPORTS",
+        "Hop 4: node: [nuscale_ch05_0003] Design Basis"
+      ]
+    }
+  ]
+}

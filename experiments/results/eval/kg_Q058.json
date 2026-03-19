@@ -1,0 +1,220 @@
+{
+  "question": "Describe the composition of the ECCS (Emergency Core Cooling System).",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0317": {
+      "node_id": "nuscale_ch01_0317",
+      "title": "SRP 9.2.1, Rev 5: Station Service Water SystemII.3 Sharing of Structures, Systems, and Components (GDC 5)",
+      "summary": "The NuScale site cooling water system (SCWS) is not safety-related or risk-significant and does not provide essential cooling to safety-related structures, systems, and components (SSC). The design and layout of the SCWS conform to GDC 5, ensuring that sharing the system between units does not adversely affect essential SSCs or their safety functions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "245",
+      "hop": 1
+    },
+    "nuscale_ch01_0063": {
+      "node_id": "nuscale_ch01_0063",
+      "title": "Emergency Core Cooling System Valve Design Certification Application Demonstration Test",
+      "summary": "This section describes the demonstration test program for the Emergency Core Cooling System (ECCS) valves in the NuScale reactor design. The program aimed to verify the functional performance of the ECCS valves, including their operation at reactor pressures and temperatures and in borated coolant, as well as the effectiveness of unique design features like the inadvertent actuation block (IAB). Testing was conducted at a specialized facility using a test article representative of the reactor recirculation valve (RRV) to ensure the valves meet safety and operational requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "89",
+      "hop": 1
+    },
+    "nuscale_ch01_0024": {
+      "node_id": "nuscale_ch01_0024",
+      "title": "Emergency Core Cooling System",
+      "summary": "The Emergency Core Cooling System (ECCS) in the NuScale design is a fully passive system that removes decay heat during a loss-of-coolant accident (LOCA) using three independent reactor vent valves and two recirculation valves, all of which are closed during normal operation. During an emergency, the system vents steam into containment for condensation and recirculates water to cool the core, with heat ultimately conducted passively to the reactor pool.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "33",
+      "hop": 1
+    },
+    "nuscale_ch01_0323": {
+      "node_id": "nuscale_ch01_0323",
+      "title": "SRP 9.2.2, Rev 4: Reactor Auxiliary Cooling Water SystemII.3 Sharing of Structures, Systems, and Components",
+      "summary": "The section states that the sharing of structures, systems, and components (SSCs) under SRP 9.2.2, Rev 4, is not applicable to the NuScale reactor auxiliary cooling water system. This is because the system is not safety-related, as explained in the comment for Acceptance Criterion II.1.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "246",
+      "hop": 1
+    },
+    "nuscale_ch01_0188": {
+      "node_id": "nuscale_ch01_0188",
+      "title": "BTP 6-1, (March 2007): pH for Emergency Coolant Water for Pressurized Water ReactorsB.3 Hydrogen Generation from Aluminum Corrosion",
+      "summary": "The section reviews NuScale's conformance with regulatory criteria regarding pH control and hydrogen generation from aluminum corrosion in emergency coolant water. While NuScale's design lacks certain systems referenced in the criteria (such as containment spray systems and sumps), the intent of the guidelines is still met due to the collection and recirculation of ECCS water within the containment vessel. Other criteria related to minimum containment pressure and bypass leakage are deemed not applicable to the NuScale design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "232",
+      "hop": 1
+    },
+    "nuscale_ch01_0189": {
+      "node_id": "nuscale_ch01_0189",
+      "title": "BTP 6-2, Rev 3: Minimum Containment Pressure Model for PWR ECCS PerformanceAll (B.1 thru B.3)Various",
+      "summary": "This section reviews NuScale's conformance with regulatory criteria related to containment pressure and water chemistry for PWR ECCS performance. It notes that some criteria partially apply due to differences in NuScale's design, such as the absence of a containment spray system or sump, but relevant pH and hydrogen generation guidelines are still addressed. Certain guidance, like minimum containment pressure modeling and bypass leakage paths, is deemed not applicable because NuScale's design does not result in core uncovery during a LOCA and lacks a secondary containment.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "232",
+      "hop": 1
+    },
+    "nuscale_ch01_0017": {
+      "node_id": "nuscale_ch01_0017",
+      "title": "Facility Description",
+      "summary": "The Facility Description section outlines the NuScale plant’s core and cooling system design. It explains the reactor’s natural circulation process for heat transfer, the generation of superheated steam to drive a turbine and generator, and the role of the Site Cooling Water System (SCWS) in supporting auxiliary systems and heat removal. The section also notes that specific equipment and cooling tower details are site-dependent.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "28",
+      "hop": 2
+    },
+    "nuscale_ch01_0027": {
+      "node_id": "nuscale_ch01_0027",
+      "title": "Inservice Inspection of Class 2 and 3 Components",
+      "summary": "The section describes key safety systems in the NuScale plant, including the Emergency Core Cooling System (ECCS), which passively removes decay heat during a loss-of-coolant accident using independent valves and heat conduction to the reactor pool. It also outlines the Control Room Habitability System (CRHS), which passively supplies clean air to operators during emergencies, and notes that fission product removal relies on the containment vessel and isolation system as part of the plant’s inherent safety design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "33",
+      "hop": 3
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0317",
+      "target": "nuscale_ch01_0063",
+      "relation": "CONTRADICTS",
+      "confidence": 0.85,
+      "description": "Section B provides specific technical details and test results about the ECCS valves, which are a component of the ECCS whose overall composition is being asked about in the analysis question, while Section A discusses the station service water system and its lack of safety-related function, indicating it is not part of the ECCS composition."
+    },
+    {
+      "source": "nuscale_ch01_0317",
+      "target": "nuscale_ch01_0024",
+      "relation": "CONTRADICTS",
+      "confidence": 0.8,
+      "description": "Section B describes the specific components and function of the ECCS, directly answering the analysis question, while Section A discusses the station service water system and clarifies that it does not provide essential cooling to safety-related systems like the ECCS, thus distinguishing the ECCS from the SCWS."
+    },
+    {
+      "source": "nuscale_ch01_0317",
+      "target": "nuscale_ch01_0323",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A and Section B both state that the site cooling water system (SCWS) does not provide essential or safety-related cooling functions, indicating that the SCWS is not part of the ECCS composition."
+    },
+    {
+      "source": "nuscale_ch01_0317",
+      "target": "nuscale_ch01_0188",
+      "relation": "CONTRADICTS",
+      "confidence": 0.8,
+      "description": "Section B discusses water chemistry and pH requirements during ECCS operation, which are relevant to describing the composition of the ECCS as requested in the analysis question, while Section A addresses the service water system and its lack of essential cooling to safety-related systems, indicating that the SCWS is not part of the ECCS composition."
+    },
+    {
+      "source": "nuscale_ch01_0317",
+      "target": "nuscale_ch01_0189",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B discusses specific chemical and operational requirements for the ECCS water in PWRs, which provides detailed expectations that inform the general regulatory context for ECCS composition described in the analysis question, while Section A addresses a related but distinct system (SCWS) and clarifies its lack of safety-related function, thus Section B specifies requirements relevant to the ECCS composition."
+    },
+    {
+      "source": "nuscale_ch01_0063",
+      "target": "nuscale_ch01_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A references the ECCS valves and their testing, while Section B specifies the composition of the ECCS by listing the number and types of valves, thus Section B provides details for the general description in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0063",
+      "target": "nuscale_ch01_0323",
+      "relation": "CONTRADICTS",
+      "confidence": 0.8,
+      "description": "Section A describes the ECCS valve components and their testing, while Section B clarifies that the site cooling water system is not part of the safety-related or accident mitigation functions, thereby distinguishing ECCS components from non-ECCS systems."
+    },
+    {
+      "source": "nuscale_ch01_0063",
+      "target": "nuscale_ch01_0188",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the physical components and testing of the ECCS valves in the NuScale design, while Section B discusses regulatory water chemistry requirements during ECCS operation, connecting them through the operational context and regulatory criteria for ECCS performance."
+    },
+    {
+      "source": "nuscale_ch01_0063",
+      "target": "nuscale_ch01_0189",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes specific components of the ECCS in the NuScale design, such as reactor vent valves, while Section B discusses regulatory criteria and water chemistry requirements relevant to ECCS operation, connecting them through the operational and compositional aspects of the ECCS."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0323",
+      "relation": "CONTRADICTS",
+      "confidence": 0.85,
+      "description": "Section A describes the components and function of the ECCS, while Section B clarifies that the site cooling water system is not safety-related and does not contribute to accident mitigation, thereby distinguishing the ECCS from other cooling systems."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0188",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the physical components and operation of the ECCS, while Section B discusses regulatory water chemistry requirements that partially apply to the ECCS water collected in containment, connecting them through the operational behavior and regulatory expectations for ECCS water."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0189",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the specific components and operation of the NuScale ECCS, while Section B discusses regulatory criteria for ECCS water chemistry and notes how the NuScale ECCS design partially conforms due to differences in system components, connecting them through the design's alignment with regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0323",
+      "target": "nuscale_ch01_0188",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section B specifies water chemistry requirements (such as pH) for emergency coolant water, which are relevant to the composition of the ECCS described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0323",
+      "target": "nuscale_ch01_0189",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the applicability and conformance of auxiliary and service water systems to regulatory criteria, clarifying that certain site cooling water systems are not safety-related, while Section B addresses regulatory requirements for ECCS performance and water chemistry, noting partial conformance due to design differences; both sections are connected through their discussion of systems and criteria relevant to the composition and regulatory compliance of the ECCS."
+    },
+    {
+      "source": "nuscale_ch01_0188",
+      "target": "nuscale_ch01_0189",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A discusses the chemical and pH requirements for ECCS water, while Section B addresses the minimum containment pressure modeling for ECCS performance, both referencing aspects of ECCS operation and referencing the same regulatory guidance (BTP 6-1) as it applies to the NuScale design."
+    },
+    {
+      "source": "nuscale_ch01_0017",
+      "target": "nuscale_ch01_0317",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the SCWS as providing cooling to plant auxiliary systems, while Section B clarifies that the SCWS does not provide essential cooling to safety-related systems such as the ECCS, establishing that the SCWS is not part of the ECCS composition."
+    },
+    {
+      "source": "nuscale_ch01_0017",
+      "target": "nuscale_ch01_0063",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides specific details about the ECCS valve design and testing, which are not addressed in the general facility description of Section A, thus Section B specifies technical aspects of the ECCS referenced in Section A's broader system overview."
+    },
+    {
+      "source": "nuscale_ch01_0017",
+      "target": "nuscale_ch01_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B specifically describes the composition and function of the ECCS, directly answering the analysis question, while Section A provides only general facility context without detailing the ECCS components."
+    },
+    {
+      "source": "nuscale_ch01_0027",
+      "target": "nuscale_ch01_0317",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the components and function of the ECCS, while Section B discusses the regulatory conformance of the site cooling water system, clarifying that it does not provide essential cooling to safety-related systems like the ECCS; thus, Section B indirectly supports the understanding that the ECCS operates independently of the SCWS."
+    },
+    {
+      "source": "nuscale_ch01_0027",
+      "target": "nuscale_ch01_0063",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the components that make up the ECCS, specifically listing the reactor vent valves and reactor recirculation valves, while Section B references the same ECCS valves and their locations, thus Section B provides additional detail and confirmation about the components mentioned in Section A."
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "timestamp": "2026-03-16T16:24:47.753503",
+  "evaluation_framework": "RAGAs v0.4",
+  "config": {
+    "model": "gpt-4.1",
+    "evaluator_model": "gpt-4.1",
+    "embedding_model": "text-embedding-3-small",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 3,
+    "errors": 0
+  },
+  "metrics_description": {
+    "faithfulness": "Fraction of claims in the answer that are supported by the retrieved context (0-1)",
+    "answer_relevancy": "How relevant the answer is to the question, measured by reverse question generation (0-1)",
+    "context_recall": "Fraction of expected answer sentences supported by retrieved context (0-1)",
+    "factual_correctness": "Factual overlap between agent answer and expected answer (0-1)",
+    "keyword_hit": "Fraction of expected keywords present in the agent answer (0-1)"
+  },
+  "summary": {
+    "faithfulness": null,
+    "answer_relevancy": null,
+    "context_recall": null,
+    "factual_correctness": null,
+    "keyword_hit": 0.6667
+  },
+  "by_type": {
+    "text_only": {
+      "count": 3,
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_recall": null,
+      "factual_correctness": null,
+      "keyword_hit": 0.6667
+    }
+  },
+  "results": [
+    {
+      "id": "Q001",
+      "type": "text_only",
+      "question": "What is the thermal output of the NuScale Power Module (NPM)?",
+      "expected_answer": "Each NPM has a thermal output of 160 MWt, resulting in a total of 1,920 MWt based on 12 modules.",
+      "agent_answer": "1. 핵심 결론  \nNuScale Power Module(NPM)의 열출력(thermal output)은 현재까지 구축된 지식그래프 내에서는 명확하게 제시되어 있지 않습니다.\n\n2. 근거 노드 및 관계 경로 인용  \n- [nuscale_ch01_0006] Power Output: 이 노드는 NPM의 출력에 관한 정보를 담고 있으나, 구체적인 열출력 수치(예: MWt)는 포함되어 있지 않습니다.  \n- [nuscale_ch01_0015] General Plant Description: 전체 설비의 개요와 설계 기준, 특성 등을 설명하지만, NPM의 열출력에 대한 직접적인 언급은 없습니다.  \n- [nuscale_ch01_0003], [nuscale_ch01_0004], [nuscale_ch01_0005], [nuscale_ch01_0051]: 이들 노드는 주로 설계, 위치, 구조, 특수 설비 등에 관한 설명을 포함하고 있으나, NPM의 열출력 수치는 포함되어 있지 않습니다.\n\n3. 불확실한 사항  \n- 현재까지의 탐색 및 지식그래프에는 NuScale Power Module(NPM)의 열출력(thermal output)에 대한 구체적인 수치(예: MWt)가 명시되어 있지 않습니다.  \n- 추가적인 문서 탐색 또는 상세한 설계 자료가 필요합니다.\n\n요약:  \nNuScale Power Module의 열출력은 현재까지 확보된 정보로는 확인할 수 없습니다. 추가 자료 확보가 필요합니다.",
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_recall": null,
+      "factual_correctness": null,
+      "keyword_hit": 0.5,
+      "kg_nodes": 6,
+      "kg_edges": 0,
+      "hops_used": 4,
+      "retrieved_contexts_count": 6,
+      "agent_sec": 78.4,
+      "eval_sec": 0.0,
+      "total_sec": 78.4,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch01_0006] Power Output | 노드 추가: [nuscale_ch01_0015] General Plant Description",
+        "Hop 2: 노드 추가: [nuscale_ch01_0005] Reactor Type | 노드 추가: [nuscale_ch01_0051] Plant Features of Special Interest",
+        "Hop 3: 노드 추가: [nuscale_ch01_0003] Plant Location | 노드 추가: [nuscale_ch01_0004] Containment Type",
+        "Hop 4: 신규 노드 없음"
+      ]
+    },
+    {
+      "id": "Q002",
+      "type": "text_only",
+      "question": "How many NPMs can be operated in a single Reactor Building at the NuScale power plant?",
+      "expected_answer": "A single Reactor Building can operate from 1 to a maximum of 12 Nuclear Power Modules (NPMs).",
+      "agent_answer": "1. 핵심 결론  \nNuScale 발전소의 단일 Reactor Building(RXB)에는 최대 12개의 NuScale Power Modules(NPMs)이 운전될 수 있습니다.\n\n2. 근거 노드와 관계 경로 인용  \n- [nuscale_ch01_0033] General Arrangement of Major Structures and Equipment 및 [nuscale_ch01_0034] Reactor Building: 이 두 노드는 NuScale 발전소의 주요 구조물 배치와 RXB의 역할을 설명합니다. 특히, Figure 1.2-2(본문 참조)에서 RXB 내에 여러 NPM이 설치되는 배치도를 제공합니다.\n- [nuscale_ch01_0031] Plant Cooling Water Systems: \"With multiple NPMs per plant, individual NPMs can be placed into service incrementally...\"라는 문구에서 한 발전소(특히 RXB)에 여러 NPM이 설치·운전될 수 있음을 명확히 언급합니다.\n- [nuscale_ch01_0015] General Plant Description: 전체 시설의 일반적 설명에서, NuScale 설계가 다수의 NPM을 한 시설 내에 배치하는 것을 전제로 하고 있음을 확인할 수 있습니다.\n- 실제로 NuScale 공식 설계 및 FSAR(최종안전성분석보고서)에서 RXB 1동에 최대 12 NPM 설치가 표준 설계임이 반복적으로 언급됩니다(예: Figure 1.2-2, 텍스트 내 \"12-module plant\" 등).\n\n관계 경로:  \n[nuscale_ch01_0031] --(REFERENCES)--> [nuscale_ch01_0015]  \n[nuscale_ch01_0033] 및 [nuscale_ch01_0034] → RXB 구조 및 NPM 배치 설명  \n[nuscale_ch01_0031] → 다수 NPM의 독립 운전 가능성 명시\n\n3. 불확실한 사항  \n- 현재 지식그래프에 직접적으로 \"12\"라는 숫자가 명시된 문장은 포함되어 있지 않으나, NuScale 표준 설계 및 FSAR의 도면(Figure 1.2-2)과 관련 설명, 그리고 \"multiple NPMs per plant\"라는 반복적 언급을 종합할 때, RXB 1동에 최대 12 NPM이 운전 가능하다는 것이 규제 심사 및 설계 기준상 확립된 사실임을 알 수 있습니다.\n- 만약 최신 설계 변경이나 특정 프로젝트에서 이 숫자가 달라질 수 있으므로, 최종적으로는 해당 프로젝트의 COL(운영허가 신청서) 또는 최신 FSAR를 확인하는 것이 필요합니다.\n\n요약:  \nNuScale 표준 설계 기준으로, 단일 Reactor Building에는 최대 12개의 NPM이 운전될 수 있습니다. (근거: [nuscale_ch01_0031], [nuscale_ch01_0033], [nuscale_ch01_0034], [nuscale_ch01_0015])",
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_recall": null,
+      "factual_correctness": null,
+      "keyword_hit": 0.5,
+      "kg_nodes": 8,
+      "kg_edges": 2,
+      "hops_used": 4,
+      "retrieved_contexts_count": 8,
+      "agent_sec": 76.1,
+      "eval_sec": 0.0,
+      "total_sec": 76.1,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch01_0015] General Plant Description | 노드 추가: [nuscale_ch01_0034] Reactor Building",
+        "Hop 2: 노드 추가: [nuscale_ch01_0033] General Arrangement of Major Structures and Equipment | 노드 추가: [nuscale_ch01_0038] Main Control Room",
+        "Hop 3: 노드 추가: [nuscale_ch01_0017] Facility Description | 노드 추가: [nuscale_ch01_0031] Plant Cooling Water Systems | 엣지: [nuscale_ch01_0031] --REFERENCES--> [nuscale_ch01_0015]",
+        "Hop 4: 노드 추가: [nuscale_ch01_0051] Plant Features of Special Interest | 노드 추가: [nuscale_ch01_0864] Nuclear Power Plants to be Operated on Multi-Unit Sites"
+      ]
+    },
+    {
+      "id": "Q003",
+      "type": "text_only",
+      "question": "In the NuScale design, is AC or DC power required for safety shutdown and cooling?",
+      "expected_answer": "The NuScale design does not require AC or DC power for safety shutdown and cooling.",
+      "agent_answer": "1. 핵심 결론  \nNuScale 설계에서는 안전 정지(safety shutdown) 및 냉각(cooling)을 위해 AC(교류) 또는 DC(직류) 전원이 필수적으로 요구되지 않습니다. 즉, NuScale은 수동적(passive) 안전 설계에 기반하여, 외부 또는 내부 AC/DC 전원 없이도 안전 정지 및 냉각 기능을 수행할 수 있도록 설계되었습니다.\n\n2. 근거 노드 및 관계 경로 인용  \n- [nuscale_ch01_0246]와 [nuscale_ch01_0251], [nuscale_ch01_0257] 등에서는 NuScale 설계가 10 CFR 50.63(Station Blackout, SBO) 규정에 따라 \"Passive Design\"임을 명확히 하고 있습니다.  \n  - [nuscale_ch01_0246] \"Compliance with 10 CFR 50.63 - Passive Design\"  \n  - [nuscale_ch01_0251], [nuscale_ch01_0250] 등에서도 \"The details regarding conformance with 10 CFR 50.63 are described in Section 8.4, Station Blackout.\"  \n- [nuscale_ch01_0257], [nuscale_ch01_0261], [nuscale_ch01_0267], [nuscale_ch01_0266] 등에서는 \"No onsite electrical AC power system equipment is required to conform to 10 CFR 50.55a(h) and IEEE Std. 603-1991. Not Applicable\"이라고 명시되어 있습니다. 즉, 필수 안전기능 수행에 onsite AC 전원 설비가 요구되지 않음을 분명히 하고 있습니다.\n- [nuscale_ch01_0275]에서는 DC 전원 시스템(DSRS 8.3.2)에 대해서도 일부 규제(RG 1.153 등)에 부분적으로만 적합(Partially Conforms)하며, 전체 안전기능 수행에 필수적이지 않음을 시사합니다.\n- [nuscale_ch01_0261], [nuscale_ch01_0267], [nuscale_ch01_0266] 등은 DC 전원 시스템 역시 GDC 2, 4, 5 등 규정에 \"Conforms None\" 또는 \"Not Applicable\"로 명시되어, 필수적이지 않음을 재확인합니다.\n\n관계 경로 예시:  \n[nuscale_ch01_0246] --REFERENCES--> [nuscale_ch01_0275]  \n[nuscale_ch01_0251] --REFERENCES--> [nuscale_ch01_0246]  \n[nuscale_ch01_0257] --REFERENCES--> [nuscale_ch01_0251]  \n[nuscale_ch01_0261] --REFERENCES--> [nuscale_ch01_0275]  \n[nuscale_ch01_0266] --SPECIFIES--> [nuscale_ch01_0251]  \n\n3. 불확실한 사항  \n- NuScale의 수동적 안전설계는 정상적인 운전 및 일부 비상상황에서 AC/DC 전원이 필요 없음을 명확히 하나, 일부 계측·제어(I&C) 또는 경보 등 비핵심 보조기능에는 제한적으로 DC 전원이 사용될 수 있습니다. 그러나 안전 정지 및 냉각의 핵심 기능에는 AC/DC 전원이 필수적이지 않음이 규제 문서에서 반복적으로 확인됩니다.\n- 실제 운전 절차나 특정 비상 시나리오(예: 장기 SBO)에서 일부 보조적 DC 전원 사용 가능성은 있으나, 본 질의의 \"필수 요구\" 여부에는 해당하지 않습니다.\n\n**요약:**  \nNuScale 설계는 안전 정지 및 냉각을 위해 AC 또는 DC 전원이 필수적으로 요구되지 않는 수동적(passive) 안전설계임이 규제 심사 문서에서 명확히 확인됩니다([nuscale_ch01_0246], [nuscale_ch01_0251], [nuscale_ch01_0257], [nuscale_ch01_0261], [nuscale_ch01_0275] 등).  \n단, 일부 보조기능에 DC 전원이 사용될 수 있으나, 핵심 안전기능에는 필수적이지 않습니다.",
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_recall": null,
+      "factual_correctness": null,
+      "keyword_hit": 1.0,
+      "kg_nodes": 8,
+      "kg_edges": 19,
+      "hops_used": 4,
+      "retrieved_contexts_count": 8,
+      "agent_sec": 81.3,
+      "eval_sec": 0.0,
+      "total_sec": 81.3,
+      "trajectory": [
+        "Hop 1: 노드 추가: [nuscale_ch01_0246] DSRS 8.2, Rev 0: Offsite Power SystemII.5 Compliance with 10 CFR 50.63 - Passive Design | 노드 추가: [nuscale_ch01_0275] DSRS 8.4, Rev 0: Station BlackoutII.1 Compliance with 10 CFR 50.63 and the guidelines of RG 1.155",
+        "Hop 2: 노드 추가: [nuscale_ch01_0251] DSRS 8.3.1, Rev 0: AC Power Systems (Onsite)II.4 Compliance with GDC 17 | 노드 추가: [nuscale_ch01_0261] DSRS 8.3.2, Rev 0: DC Power Systems (Onsite)II (No Number) Compliance with GDC 5 | 엣지: [nuscale_ch01_0251] --REFERENCES--> [nuscale_ch01_0246] | 엣지: [nuscale_ch01_0251] --REFERENCES--> [nuscale_ch01_0275] | 엣지: [nuscale_ch01_0261] --REFERENCES--> [nuscale_ch01_0246] | 엣지: [nuscale_ch01_0261] --REFERENCES--> [nuscale_ch01_0275]",
+        "Hop 3: 노드 추가: [nuscale_ch01_0257] DSRS 8.3.1, Rev 0: AC Power Systems (Onsite)II.8 Compliance with 10 CFR 50.55a(h) | 노드 추가: [nuscale_ch01_0267] DSRS 8.3.2, Rev 0: DC Power Systems (Onsite)II.1 Conformance with RG 1.32 | 엣지: [nuscale_ch01_0257] --REFERENCES--> [nuscale_ch01_0246] | 엣지: [nuscale_ch01_0257] --REFERENCES--> [nuscale_ch01_0275] | 엣지: [nuscale_ch01_0257] --REFERENCES--> [nuscale_ch01_0251] | 엣지: [nuscale_ch01_0267] --REFERENCES--> [nuscale_ch01_0246] | 엣지: [nuscale_ch01_0267] --REFERENCES--> [nuscale_ch01_0275] | 엣지: [nuscale_ch01_0267] --REFERENCES--> [nuscale_ch01_0251]",
+        "Hop 4: 노드 추가: [nuscale_ch01_0250] DSRS 8.3.1, Rev 0: AC Power Systems (Onsite)II.3 Compliance with GDC 5 | 노드 추가: [nuscale_ch01_0266] DSRS 8.3.2, Rev 0: DC Power Systems (Onsite)II (No Number) Compliance with GDC 50 | 엣지: [nuscale_ch01_0250] --REFERENCES--> [nuscale_ch01_0246] | 엣지: [nuscale_ch01_0250] --REFERENCES--> [nuscale_ch01_0275] | 엣지: [nuscale_ch01_0266] --REFERENCES--> [nuscale_ch01_0246] | 엣지: [nuscale_ch01_0266] --REFERENCES--> [nuscale_ch01_0275] | 엣지: [nuscale_ch01_0266] --SPECIFIES--> [nuscale_ch01_0251]"
+      ]
+    }
+  ]
+}

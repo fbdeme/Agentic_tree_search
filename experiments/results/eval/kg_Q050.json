@@ -1,0 +1,136 @@
+{
+  "question": "What is the definition of the abbreviation NPM?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0051": {
+      "node_id": "nuscale_ch01_0051",
+      "title": "Plant Features of Special Interest",
+      "summary": "This section describes key plant features of special interest in the NuScale Power Plant, including the Central Utility Building (CUB) and Diesel Generator Buildings (DGBs), which house essential but nonsafety-related equipment and systems. It also highlights human factors considerations, emphasizing fail-safe design, automation, digital controls, and workload management to minimize human error and meet regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "43",
+      "hop": 1
+    },
+    "nuscale_ch01_0111": {
+      "node_id": "nuscale_ch01_0111",
+      "title": "Figure 1.7-2: Instrumentatio n and Controls Symbol Legend",
+      "summary": "This section provides a legend explaining the symbols used for instrumentation and controls in NuScale’s safety analysis report diagrams. It defines the logic gate functions, control room indicators, switch types, and other symbols relevant to system status and operations, ensuring clear interpretation of the diagrams. Additionally, it includes notes on piping and instrumentation diagram conventions, such as vent and drain representations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "101",
+      "hop": 1
+    },
+    "nuscale_ch01_0036": {
+      "node_id": "nuscale_ch01_0036",
+      "title": "Refueling Operations",
+      "summary": "Refueling operations for a NuScale Power Module (NPM) are conducted independently from other modules. The process involves moving the NPM from its operating bay to the refueling pool, disassembling it for inspection, maintenance, and refueling, and then reassembling and returning it to service after successful testing and startup procedures.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "38",
+      "hop": 1
+    },
+    "nuscale_ch01_0117": {
+      "node_id": "nuscale_ch01_0117",
+      "title": "Figure 1.7-3f: Piping and In strumentation Diagram Legends",
+      "summary": "This section provides the legend for piping and instrumentation diagrams (P&IDs) used in the NuScale Final Safety Analysis Report, listing standardized symbols and descriptions for various instruments, sensors, and auxiliary devices. It includes representations for sample probes, pressure and temperature sensors, flow measurement devices, and level indicators, ensuring consistent interpretation of P&ID drawings.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "107",
+      "hop": 1
+    },
+    "nuscale_ch01_0035": {
+      "node_id": "nuscale_ch01_0035",
+      "title": "Fuel Handling and Reactor Maintenance Areas",
+      "summary": "The fuel handling and reactor maintenance areas are located at the west end of the Reactor Building (RXB) and include spaces for the spent fuel pool (SFP), refueling pool, and dry dock, with provisions for safe transport and handling of nuclear power modules (NPMs) and fuel assemblies. These areas are designed to facilitate refueling operations, provide radiation protection for personnel, and offer storage for both new and spent fuel assemblies.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "37",
+      "hop": 1
+    },
+    "nuscale_ch01_0015": {
+      "node_id": "nuscale_ch01_0015",
+      "title": "General Plant Description",
+      "summary": "This section provides a summary of the NuScale plant’s overall design, including its main systems such as safety features, power conversion, fuel handling, cooling, waste management, and auxiliary systems. It explains how the NuScale Final Safety Analysis Report (FSAR) serves as a reference for site-specific reports, clarifying the distinction between certified and conceptual design information, and notes that certain security details are withheld per regulations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "26",
+      "hop": 1
+    },
+    "nuscale_ch01_0013": {
+      "node_id": "nuscale_ch01_0013",
+      "title": "Proprietary Information",
+      "summary": "This section explains the organization and identification of text, tables, figures, and page numbering in the NuScale Final Safety Analysis Report (FSAR). It also clarifies that while the FSAR does not contain proprietary or safeguards information, some sensitive content is withheld from public disclosure in accordance with regulations, and a separate public version is provided with such material removed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "10",
+      "hop": 2
+    },
+    "nuscale_ch01_0014": {
+      "node_id": "nuscale_ch01_0014",
+      "title": "Acronyms and Abbreviations",
+      "summary": "This section explains the conventions used in the NuScale Final Safety Analysis Report (FSAR) for numbering tables, figures, and pages, as well as the handling of proprietary and sensitive information. It clarifies that tables and figures are numbered according to their section, pages are sequentially numbered, and sensitive content is withheld from the public version in compliance with regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "10",
+      "hop": 2
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0117",
+      "relation": "REFERENCES",
+      "confidence": 0.7,
+      "description": "Section B provides diagram legends that may include the definition of abbreviations such as NPM, which could be referenced or used in Section A's plant description."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0035",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section B mentions 'NPM installation, refueling outages, and during replacement or removal of NPMs,' providing context that NPM is an abbreviation related to reactor modules or components, while Section A does not reference NPM, so the connection is that Section B contains the abbreviation in question."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.6,
+      "description": "Section B provides a general overview of the plant's systems and features, which includes the context in which abbreviations like NPM may be defined or used, while Section A details specific plant features but does not define NPM."
+    },
+    {
+      "source": "nuscale_ch01_0111",
+      "target": "nuscale_ch01_0117",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A and Section B both provide legends for symbols and abbreviations used in NuScale Final Safety Analysis Report diagrams, which may include the definition of NPM."
+    },
+    {
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch01_0035",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Both Section A and Section B refer to the movement, installation, and handling of NPMs during refueling and maintenance, indicating that 'NPM' is a key component involved in these operations."
+    },
+    {
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch01_0015",
+      "relation": "SEMANTIC",
+      "confidence": 0.6,
+      "description": "Section A repeatedly uses the abbreviation 'NPM' in the context of refueling operations, while Section B provides a general description of plant systems but does not define 'NPM', so Section A's usage of 'NPM' relies on Section B's broader context but not a direct definition."
+    },
+    {
+      "source": "nuscale_ch01_0117",
+      "target": "nuscale_ch01_0035",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section B uses the abbreviation 'NPM' in the context of reactor maintenance and installation, while Section A provides diagram legends but does not define 'NPM', so Section B's usage prompts the analysis question about its definition."
+    },
+    {
+      "source": "nuscale_ch01_0013",
+      "target": "nuscale_ch01_0014",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section B is expected to contain the list or definitions of acronyms and abbreviations, such as NPM, referenced or used elsewhere in the document, including Section A."
+    }
+  ]
+}

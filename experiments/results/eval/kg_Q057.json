@@ -1,0 +1,162 @@
+{
+  "question": "Describe the configuration of the Decay Heat Removal System (DHRS).",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0043": {
+      "node_id": "nuscale_ch01_0043",
+      "title": "Ultimate Heat Sink",
+      "summary": "The Ultimate Heat Sink section describes a large, stainless steel-lined, reinforced concrete pool located below plant grade level, which serves as the final heat removal system for the NuScale reactor. During normal operations, heat is removed from the pool via a cooling system and rejected to the atmosphere, while in the event of a total loss of AC power, decay heat is passively transferred to the pool, which has sufficient water inventory to ensure continued cooling.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "41",
+      "hop": 1
+    },
+    "nuscale_ch01_0669": {
+      "node_id": "nuscale_ch01_0669",
+      "title": "DSRS 15.1.1-15.1.4, Rev 0: Decrease in Feedwater Temperature, Increase in Feedwater Flow, Increase in Steam Flow, and Inadvertent Opening of the Turbine Bypass System or Inadvertent Operation of the Decay Heat Removal SystemII.4 Specific CriterionInstrument Spans and Setpoints use RG 1.105",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for abnormal operating occurrences such as changes in feedwater temperature, flow, steam flow, and inadvertent system operations. It confirms that system pressure, critical heat flux, and event classification criteria are met, and that instrument spans and setpoints follow RG 1.105, ensuring compliance with the Standard Review Plan and Design Specific Review Standard requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "289",
+      "hop": 1
+    },
+    "nuscale_ch01_0450": {
+      "node_id": "nuscale_ch01_0450",
+      "title": "BTP 10-2, Rev 4: Design Guidelines for Avoiding Water Hammers in Steam GeneratorsTFSGD B.1 thru B.4Top-Feed Steam Generator Designs",
+      "summary": "This section explains that the NuScale plant design does not use top-feed, preheat, or once-through steam generator designs, so the regulatory guidelines for avoiding water hammers in these systems are not applicable. Instead, NuScale uses a passive natural circulation system (DHRS) that fulfills a similar function to the auxiliary feedwater system in large PWRs, but its design inherently avoids the water hammer issues addressed by these guidelines.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "265",
+      "hop": 1
+    },
+    "nuscale_ch01_0666": {
+      "node_id": "nuscale_ch01_0666",
+      "title": "DSRS 15.1.1-15.1.4, Rev 0: Decrease in Feedwater Temperature, Increase in Feedwater Flow, Increase in Steam Flow, and Inadvertent Opening of the Turbine Bypass System or Inadvertent Operation of the Decay Heat Removal SystemII.1 Specific CriterionSystem Pressure",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for abnormal operational events such as changes in feedwater temperature, flow, steam flow, and inadvertent system operations. It confirms that NuScale meets requirements for system pressure, critical heat flux limits, prevention of escalation to more serious conditions, and use of appropriate instrument setpoints, aligning with the Standard Review Plan and Design Specific Review Standard.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "289",
+      "hop": 1
+    },
+    "nuscale_ch01_0673": {
+      "node_id": "nuscale_ch01_0673",
+      "title": "DSRS 15.1.1-15.1.4, Rev 0: Decrease in Feedwater Temperature, Increase in Feedwater Flow, Increase in Steam Flow, and Inadvertent Opening of the Turbine Bypass System or Inadvertent Operation of the Decay Heat Removal SystemII.3 Analytical ParametersCore Burnup",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for DSRS 15.1.1-15.1.4, addressing events such as decreases in feedwater temperature, increases in feedwater or steam flow, and inadvertent operation of turbine bypass or decay heat removal systems. It confirms that analytical parameters—including initial power level, conservative scram, core burnup, and setpoint inaccuracies—meet regulatory standards, with no exceptions noted.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "290",
+      "hop": 1
+    },
+    "nuscale_ch01_0440": {
+      "node_id": "nuscale_ch01_0440",
+      "title": "DSRS 10.4.7, Rev 0: Condensate and Feedwater SystemII.1 Seismic Events (GDC 2)",
+      "summary": "This section summarizes the NuScale Final Safety Analysis Report’s conformance with various regulatory criteria for the condensate and feedwater systems. It details compliance or non-applicability with specific General Design Criteria (GDC) and Standard Review Plan (SRP) sections, noting that the NuScale design often conforms or is not applicable due to design differences, such as the absence of certain components or unique system configurations. Where departures from standard criteria exist, such as for residual heat removal, NuScale provides alternative design justifications.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "263",
+      "hop": 2
+    },
+    "nuscale_ch01_0062": {
+      "node_id": "nuscale_ch01_0062",
+      "title": "Control Rod Assembly Drop and Control Rod Drive Shaft Alignment Test",
+      "summary": "This section describes the testing and validation of the NuScale control rod assembly (CRA) drop and drive shaft alignment, focusing on the reliability and repeatability of the new remote disconnect mechanism. Testing at Curtiss Wright facilities demonstrated that the remote disconnect system reliably engages and disengages the CRA, and the results have informed improvements in drive rod position detection circuitry, though they do not form the final design basis. The NPM design incorporates multiple alignment features to ensure proper control rod drive shaft positioning, accommodating its longer shafts compared to conventional PWRs.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "88",
+      "hop": 2
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0669",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the DHRS configuration and operation, which provides the technical basis for meeting the regulatory criteria outlined in Section B regarding system response to abnormal feedwater and steam flow events."
+    },
+    {
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0450",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the configuration and function of the DHRS, while Section B clarifies that certain regulatory guidelines for auxiliary feedwater systems do not apply because the NuScale DHRS fulfills a similar function but with a different design."
+    },
+    {
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0666",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the physical configuration and operational features of the DHRS, while Section B lists regulatory criteria and accident scenarios (such as inadvertent operation of the DHRS) that the system's configuration must address or conform to."
+    },
+    {
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0673",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the technical configuration and operation of the DHRS, which provides the basis for evaluating the system's response to the operational events and regulatory criteria outlined in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0669",
+      "target": "nuscale_ch01_0450",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses operational events and criteria related to the Decay Heat Removal System (DHRS), while Section B provides design guidelines for systems (like the DHRS) that fulfill functions similar to the Auxiliary Feedwater System, thus Section B's guidelines inform or specify design considerations relevant to the DHRS configuration described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0669",
+      "target": "nuscale_ch01_0666",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific instrument spans and setpoints for the DHRS in the context of DSRS 15.1.1-15.1.4 events, while Section B specifies the system pressure criterion for the same events, with both sections referencing the same regulatory basis and event scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0669",
+      "target": "nuscale_ch01_0673",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A and Section B both address specific criteria and analytical parameters for the same set of DHRS-related transients in DSRS 15.1.1-15.1.4, with Section A focusing on instrument spans/setpoints and system pressure, while Section B addresses core burnup and limiting single failure, thus providing complementary technical details for the configuration analysis."
+    },
+    {
+      "source": "nuscale_ch01_0450",
+      "target": "nuscale_ch01_0666",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A explains that the NuScale DHRS serves a similar function to the Auxiliary Feedwater System in large PWRs, while Section B provides regulatory criteria for system pressure responses during DHRS-related events, connecting them through the functional role of DHRS in safety analysis."
+    },
+    {
+      "source": "nuscale_ch01_0450",
+      "target": "nuscale_ch01_0673",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A explains that the NuScale DHRS serves a similar function to the Auxiliary Feedwater System in large PWRs, while Section B provides the regulatory criteria and analytical parameters for events involving the DHRS, connecting the system's configuration to its required performance under specific scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0666",
+      "target": "nuscale_ch01_0673",
+      "relation": "SEMANTIC",
+      "confidence": 0.85,
+      "description": "Section A and Section B both address different analytical aspects (system pressure and core burnup/limiting single failure) under the same regulatory scenarios for the Decay Heat Removal System, with each section providing specific criteria or parameters relevant to the overall configuration analysis."
+    },
+    {
+      "source": "nuscale_ch01_0440",
+      "target": "nuscale_ch01_0043",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides a detailed configuration of the Decay Heat Removal System (DHRS), which is the specific system whose regulatory conformance and related systems are referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0440",
+      "target": "nuscale_ch01_0669",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the regulatory conformance of the condensate and feedwater systems, which are functionally related to the Decay Heat Removal System (DHRS) described in Section B, as both sections address system responses and criteria relevant to DHRS operation and its interaction with feedwater and steam systems."
+    },
+    {
+      "source": "nuscale_ch01_0440",
+      "target": "nuscale_ch01_0450",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B explains that the NuScale DHRS fulfills a similar function to the Auxiliary Feedwater (AFW) system in large PWRs, providing context for understanding the configuration described in Section A."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "question": "Explain the operating principle of the DHRS (Diverse Heat Removal System).",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the construction of the pressurizer and its components in the NuScale reactor, specifying alloys and standards for each part to ensure corrosion resistance and compatibility with operating environments. It references relevant sections of the ASME Boiler and Pressure Vessel Code (BPVC) and lists the specific alloys and material specifications for the baffle plate, heater bundles, cover plate, heater sheaths, and bolting.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 1
+    },
+    "nuscale_ch05_0022": {
+      "node_id": "nuscale_ch05_0022",
+      "title": "Decay Heat Removal System",
+      "summary": "The Decay Heat Removal System (DHRS) is an engineered safety feature designed to remove residual and core decay heat during non-LOCA events when normal cooling is unavailable, ensuring the reactor transitions to safe shutdown without external power. It maintains the reactor coolant system (RCS) temperature below 420°F within 36 hours, protecting fuel and pressure boundaries, and its reliability and risk significance are systematically evaluated. The DHRS operates independently of the Emergency Core Cooling System (ECCS), but both can function together if needed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "106",
+      "hop": 1
+    },
+    "nuscale_ch05_0023": {
+      "node_id": "nuscale_ch05_0023",
+      "title": "Reactor Coolant System High-Point Vents",
+      "summary": "This section outlines the testing and inspection requirements for the DHRS (Decay Heat Removal System) components in the NuScale reactor, ensuring compliance with ASME codes for Class 2 components. It specifies that DHRS actuation valves are exercised during cold shutdown conditions, and that comprehensive testing—including position verification and in-situ heat removal tests—will be conducted according to technical specifications and as part of the initial test program.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "121",
+      "hop": 4
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the materials and components of the pressurizer, which is part of the Reactor Coolant System, while Section B explains the function and design basis of the DHRS, which relies on the Reactor Coolant System to remove decay heat; thus, Section A provides component details that support the system-level function described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch05_0022",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A specifies inspection and classification requirements for DHRS components, which are part of the system described in Section B as providing decay heat removal during certain events."
+    }
+  ]
+}

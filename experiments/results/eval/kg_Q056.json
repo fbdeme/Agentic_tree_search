@@ -1,0 +1,190 @@
+{
+  "question": "Describe the flow of coolant between the steam generator and the reactor.",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0747": {
+      "node_id": "nuscale_ch01_0747",
+      "title": "SRP 15.4.6, Rev 2: Inadvertent Decrease in Boron Concentration in the Reactor Coolant System (PWR)II.1 Reactor Coolant and Main Steam System Pressures",
+      "summary": "This section summarizes NuScale’s conformance with SRP 15.4.6, Rev 2, regarding inadvertent decreases in boron concentration in the reactor coolant system for PWRs. It states that NuScale’s design meets the relevant regulatory criteria for reactor coolant and main steam system pressures, fuel cladding integrity, incident frequency, and analysis methods, while noting that some requirements (such as operator actions and non-safety systems) are not applicable due to design differences like the absence of reactor coolant pumps.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "302",
+      "hop": 1
+    },
+    "nuscale_ch01_0452": {
+      "node_id": "nuscale_ch01_0452",
+      "title": "BTP 10-2, Rev 4: Design Guidelines for Avoiding Water Hammers in Steam GeneratorsOTSGD B.1 Once-Through Steam Generator Designs - Auxiliary Feedwater Supply",
+      "summary": "This section explains that the NuScale plant design does not use the steam generator configurations (top-feed, preheat, or once-through with auxiliary feedwater supply) addressed by BTP 10-2, Rev 4, and therefore the associated water hammer avoidance guidelines are not applicable. Instead, NuScale uses a passive Decay Heat Removal System (DHRS) that fulfills a similar safety function without the need for auxiliary feedwater pumps or external supply headers, inherently precluding water hammer concerns.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "265",
+      "hop": 1
+    },
+    "nuscale_ch01_0451": {
+      "node_id": "nuscale_ch01_0451",
+      "title": "BTP 10-2, Rev 4: Design Guidelines for Avoiding Water Hammers in Steam GeneratorsPSGD B.1 thru B.4Preheat Steam Generator Designs",
+      "summary": "This section explains that the NuScale plant design does not use top-feed or preheat steam generator designs, so the regulatory guidelines for avoiding water hammers in such systems are not applicable. Instead, NuScale uses a different system (DHRS) that operates via passive natural circulation and inherently avoids the water hammer issues addressed by these guidelines.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "265",
+      "hop": 1
+    },
+    "nuscale_ch01_0745": {
+      "node_id": "nuscale_ch01_0745",
+      "title": "SRP 15.4.4-15.4.5, Rev 2: Startup of an Inactive Loop or Recirculation Loop at an Incorrect Temperature, and Flow Controller Malfunction Causing an Increase in BWR Core Flow RateII.E Single Failure",
+      "summary": "This section explains that the guidance in SRP 15.4.4-15.4.5 regarding startup of an inactive loop or recirculation loop at an incorrect temperature, and flow controller malfunction causing increased BWR core flow, is not applicable to the NuScale design because it does not use reactor coolant pumps or forced coolant flow. Instead, any relevant postulated startup reactivity accidents are addressed under DSRS 15.4.6, which covers inadvertent decreases in boron concentration.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "301",
+      "hop": 1
+    },
+    "nuscale_ch01_0743": {
+      "node_id": "nuscale_ch01_0743",
+      "title": "SRP 15.4.4-15.4.5, Rev 2: Startup of an Inactive Loop or Recirculation Loop at an Incorrect Temperature, and Flow Controller Malfunction Causing an Increase in BWR Core Flow RateII.C Events of Moderate Frequency",
+      "summary": "This section explains that the regulatory guidance in SRP 15.4.4-15.4.5, which addresses startup of inactive or recirculation loops at incorrect temperatures and flow controller malfunctions in PWR and BWR designs, does not apply to the NuScale reactor because it does not use reactor coolant pumps or forced coolant flow. Instead, any relevant postulated startup reactivity accidents for NuScale are addressed under DSRS 15.4.6, which covers inadvertent decreases in boron concentration.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "300",
+      "hop": 1
+    },
+    "nuscale_ch01_0044": {
+      "node_id": "nuscale_ch01_0044",
+      "title": "Chemical and Volume Control System",
+      "summary": "The Chemical and Volume Control System section describes the NuScale reactor’s passive decay heat removal system, which uses two independent trains, each capable of removing 100% of the decay heat via natural circulation and passive condensers in the reactor pool. In case of a steam generator tube failure or loss of AC power, the system isolates the affected components and relies on heat transfer to a large, stainless steel-lined ultimate heat sink pool to ensure continued cooling and safety.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "41",
+      "hop": 2
+    },
+    "nuscale_ch01_0018": {
+      "node_id": "nuscale_ch01_0018",
+      "title": "Principal Design Criteria",
+      "summary": "The section outlines the principal design criteria for the NuScale plant, focusing on the Site Cooling Water System (SCWS) and the overall facility process. It describes the reactor core’s heat transfer process, natural circulation of coolant, steam generation, and the flow of superheated steam to the turbine and condenser, emphasizing the system’s role in efficient heat removal and power generation.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "28",
+      "hop": 2
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0452",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A and Section B both discuss how the NuScale design differs from conventional PWRs by not using reactor coolant pumps or auxiliary feedwater pumps, which directly affects the flow of coolant between the steam generator and the reactor."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0451",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A and Section B both discuss how the NuScale design differs from conventional PWRs in terms of coolant flow and system components, specifically noting the absence of reactor coolant pumps and auxiliary feedwater pumps, which directly affects the flow of coolant between the steam generator and the reactor."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0745",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A and Section B both state that guidance related to reactor coolant loops and pumps is not applicable to the NuScale design because it does not use forced reactor coolant flow, directly connecting their content by referencing the same design feature."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0743",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references Section B's regulatory guidance and explains its inapplicability to the NuScale design due to the absence of reactor coolant pumps and forced flow, which directly affects the coolant flow path between the steam generator and reactor."
+    },
+    {
+      "source": "nuscale_ch01_0452",
+      "target": "nuscale_ch01_0451",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A and Section B both reference BTP 10-2, Rev 4 and discuss design guidelines for avoiding water hammers in steam generators, specifically in the context of NuScale's conformance with regulatory criteria for coolant flow between the steam generator and the reactor."
+    },
+    {
+      "source": "nuscale_ch01_0452",
+      "target": "nuscale_ch01_0745",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A and Section B both discuss the applicability of traditional PWR/BWR regulatory guidance to the NuScale design, specifically noting that certain requirements related to coolant flow and auxiliary feedwater systems do not apply due to NuScale's unique design features (e.g., absence of reactor coolant pumps and use of DHRS instead of AFW)."
+    },
+    {
+      "source": "nuscale_ch01_0452",
+      "target": "nuscale_ch01_0743",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A and Section B both discuss the applicability of traditional PWR/BWR regulatory guidance to the NuScale design, specifically noting that certain requirements (auxiliary feedwater system and reactor coolant loops/pumps) are not applicable due to NuScale's unique design features, thus connecting them through their shared rationale for regulatory conformance."
+    },
+    {
+      "source": "nuscale_ch01_0451",
+      "target": "nuscale_ch01_0745",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A and Section B both discuss the applicability of traditional PWR/BWR regulatory guidance to the NuScale design, specifically noting that certain requirements related to coolant flow and auxiliary systems do not apply due to NuScale's unique design features (e.g., absence of reactor coolant pumps and use of DHRS instead of AFW)."
+    },
+    {
+      "source": "nuscale_ch01_0451",
+      "target": "nuscale_ch01_0743",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A and Section B both discuss the applicability of traditional PWR/BWR regulatory guidance to the NuScale design, specifically noting that certain requirements about coolant flow and auxiliary systems do not apply due to NuScale's unique system configuration."
+    },
+    {
+      "source": "nuscale_ch01_0745",
+      "target": "nuscale_ch01_0743",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Both Section A and Section B state that the guidance regarding coolant flow between the steam generator and reactor is not applicable to the NuScale design because it does not use reactor coolant pumps or forced coolant flow, directly connecting their content by referencing the same design feature."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0747",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the passive, closed-loop natural circulation of coolant between the steam generator and reactor in the NuScale design, while Section B clarifies that regulatory guidance for systems with forced coolant flow and pumps does not apply because NuScale uses natural circulation without pumps, thus both sections are connected by the design choice of natural circulation affecting coolant flow."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0452",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the NuScale plant's decay heat removal system and its role in cooling the reactor coolant system via the steam generator, while Section B explains that the NuScale DHRS serves a similar function to the auxiliary feedwater system in large PWRs, connecting both sections through their discussion of systems that manage coolant flow between the steam generator and reactor."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0451",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the NuScale plant's decay heat removal system and its operation in isolating the steam generator during certain events, while Section B discusses regulatory guidelines for auxiliary feedwater systems and clarifies that NuScale's DHRS serves a similar function, connecting them through the functional equivalence of DHRS to AFW in the context of coolant flow between the steam generator and reactor."
+    },
+    {
+      "source": "nuscale_ch01_0018",
+      "target": "nuscale_ch01_0747",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the physical configuration and flow path of the reactor coolant system, while Section B clarifies that the NuScale design lacks traditional reactor coolant loops and pumps, directly impacting how coolant flows between the steam generator and reactor."
+    },
+    {
+      "source": "nuscale_ch01_0018",
+      "target": "nuscale_ch01_0452",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the general plant design and mentions the cooling water system and reactor core configuration, while Section B discusses regulatory guidelines for auxiliary feedwater systems and clarifies that NuScale's design uses a different system (DHRS) instead of a traditional AFW, thus connecting them through the functional role of coolant flow between the steam generator and reactor."
+    },
+    {
+      "source": "nuscale_ch01_0018",
+      "target": "nuscale_ch01_0451",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A provides a general description of the reactor and cooling system layout, while Section B discusses regulatory guidelines for steam generator design and clarifies that certain auxiliary feedwater system requirements do not apply to NuScale's design, connecting them through the context of coolant flow and system function."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0018",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the decay heat removal system's role in cooling the reactor coolant system via the steam generator, while Section B provides the general process overview of coolant flow from the reactor core to the hot leg riser, thus Section A specifies operational details for the general flow path outlined in Section B."
+    }
+  ]
+}

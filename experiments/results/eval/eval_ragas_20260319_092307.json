@@ -1,0 +1,164 @@
+{
+  "timestamp": "2026-03-19T09:23:07.093103",
+  "evaluation_framework": "RAGAs v0.4",
+  "config": {
+    "model": "gpt-4.1",
+    "evaluator_model": "gpt-4.1",
+    "embedding_model": "text-embedding-3-small",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 5,
+    "errors": 0
+  },
+  "metrics_description": {
+    "faithfulness": "Fraction of claims in the answer that are supported by the retrieved context (0-1)",
+    "answer_relevancy": "How relevant the answer is to the question, measured by reverse question generation (0-1)",
+    "context_recall": "Fraction of expected answer sentences supported by retrieved context (0-1)",
+    "factual_correctness": "Factual overlap between agent answer and expected answer (0-1)",
+    "keyword_hit": "Fraction of expected keywords present in the agent answer (0-1)"
+  },
+  "summary": {
+    "faithfulness": 0.45,
+    "answer_relevancy": 0.7382,
+    "context_recall": 0.6,
+    "factual_correctness": 0.094,
+    "keyword_hit": 0.838
+  },
+  "by_type": {
+    "image_only": {
+      "count": 5,
+      "faithfulness": 0.45,
+      "answer_relevancy": 0.7382,
+      "context_recall": 0.6,
+      "factual_correctness": 0.094,
+      "keyword_hit": 0.838
+    }
+  },
+  "results": [
+    {
+      "id": "Q051",
+      "type": "image_only",
+      "question": "Explain the main components of NPM.",
+      "expected_answer": "Figure 5.1-1 shows the main components of the NPM, with the RPV located inside the CNV, and the core, steam generator, and pressurizer integrated within the RPV.",
+      "agent_answer": "**Core Conclusion:**  \nThe main components of the NuScale Power Module (NPM) are the Reactor Pressure Vessel (RPV), Reactor Coolant System (RCS) piping, Pressurizer (PZR), Steam Generators (SGs), and associated internals and controls, all housed within the containment vessel.\n\n**Supporting Evidence:**  \n- The summary and system components sections ([nuscale_ch05_0002], [nuscale_ch05_0005], [nuscale_ch05_0004]) specify that the NPM’s primary systems include:\n  - **Reactor Pressure Vessel (RPV):** Serves as the main barrier to fission product release and houses the reactor core and internals.\n  - **Reactor Coolant System (RCS) piping:** Connects system elements and enables natural circulation of coolant.\n  - **Pressurizer (PZR):** Integrated into the RPV to control system pressure.\n  - **Steam Generators (SGs):** Transfer heat from the reactor core to the secondary side.\n  - **Containment Vessel:** Encloses all major components for safety.\n  - **Reactor Vessel Internals:** Support core and control rod mechanisms.\n\n- Figure 5.1-1 (attached) visually confirms these components: Containment Vessel, Control Rod Drive Mechanisms, Pressurizer Region, Reactor Pressure Vessel, Reactor Vessel Internals, and Reactor Core Region.\n\n- Table 5.1-1 lists RCS regions and their volumes, further detailing the hot leg, cold leg, core region, SG region, and PZR region.\n\n**Uncertainties:**  \n- The knowledge graph does not detail every minor component or auxiliary system (e.g., sensors, valves), but all major components are covered as above.\n\n**References to Node IDs:**  \n- [nuscale_ch05_0002], [nuscale_ch05_0005], [nuscale_ch05_0004], Figure 5.1-1, Table 5.1-1\n\n**Summary:**  \nThe NPM’s main components are the RPV, RCS piping, PZR, SGs, containment vessel, and reactor internals, as specified in the referenced sections and figures.",
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.7078,
+      "context_recall": 1.0,
+      "factual_correctness": 0.0,
+      "keyword_hit": 0.833,
+      "kg_nodes": 6,
+      "kg_edges": 12,
+      "hops_used": 1,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 71.8,
+      "eval_sec": 62.2,
+      "total_sec": 133.9,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0008] Compliance with Codes and Code Cases | node: [nuscale_ch05_0006] System Evaluation | node: [nuscale_ch05_0021] Reactor Coolant System Piping | node: [nuscale_ch05_0002] Summary Description | node: [nuscale_ch05_0005] System Components | node: [nuscale_ch05_0004] System Description | edge: SPECIFIES | edge: SPECIFIES | edge: REFERENCES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SUPPORTS",
+        "Hop 2: no results",
+        "Hop 3: Early stop — evidence sufficient"
+      ]
+    },
+    {
+      "id": "Q052",
+      "type": "image_only",
+      "question": "Explain the main flow paths of the RCS simplified diagram.",
+      "expected_answer": "Figure 5.1-2 is a simplified diagram of the Reactor Coolant System (RCS), illustrating the natural circulation path where the heated coolant rises through the riser, passes through the steam generator (SG), cools down, and then descends through the downcomer to return to the core.",
+      "agent_answer": "**Core Conclusion:**  \nThe main flow paths of the Reactor Coolant System (RCS) in the NuScale design are driven by natural circulation, moving coolant from the reactor core upward through the riser, across the steam generators, and downward through the annulus (downcomer) back to the core, with integral connections to the pressurizer and high-point vents.\n\n**Supporting Evidence:**  \n- The RCS uses natural circulation without pumps or external piping, relying on coolant density differences and elevation changes to drive flow (node [nuscale_ch05_0003], [nuscale_ch05_0004]).\n- **Figure 5.1-2** (Reactor Coolant System Simplified Diagram) shows the primary flow path:  \n  1. Coolant is heated in the reactor core (bottom center).\n  2. It rises through the central riser.\n  3. It flows across the steam generators (SG1, SG2), transferring heat to the secondary side.\n  4. It descends through the downcomer (outer annulus) back to the core.\n- **Figure 5.1-3** (Schematic Flow Diagram) details these stages, confirming the upward flow through the core and riser (stages 4, 8), horizontal flow through the steam generator (stage 12), and downward return (stage 13).\n- The pressurizer is integrated in the upper region of the reactor vessel, separated by a baffle plate, allowing rapid pressure communication and pressure control (node [nuscale_ch05_0024], Figure 5.4-17).\n- High-point vents and degasification lines are shown at the top of the vessel for removal of noncondensible gases (node [nuscale_ch05_0023], Figure 5.1-2).\n\n**Uncertainties:**  \n- The simplified diagram does not show all auxiliary or emergency flow paths (e.g., ECCS, DHRS) in detail.\n- Flow rates and temperature values vary with power level (see Table 5.1-2), but the main path remains as described.\n\n**Summary:**  \nThe RCS main flow path is: core → riser → steam generator → downcomer → core, with integrated pressurizer and venting features, all contained within the reactor vessel (nodes [nuscale_ch05_0003], [nuscale_ch05_0004], [nuscale_ch05_0024]; Figures 5.1-2, 5.1-3, 5.4-17).",
+      "faithfulness": null,
+      "answer_relevancy": 0.6798,
+      "context_recall": 1.0,
+      "factual_correctness": 0.0,
+      "keyword_hit": 1.0,
+      "kg_nodes": 7,
+      "kg_edges": 4,
+      "hops_used": 3,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 73.1,
+      "eval_sec": 75.9,
+      "total_sec": 149.1,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0006] System Evaluation | node: [nuscale_ch05_0024] Pressurizer | node: [nuscale_ch05_0023] Reactor Coolant System High-Point Vents | node: [nuscale_ch05_0003] Design Basis | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS",
+        "Hop 2: node: [nuscale_ch05_0000] Preface | node: [nuscale_ch05_0004] System Description | edge: SUPPORTS",
+        "Hop 3: node: [nuscale_ch05_0016] Pressure-Temperature Limits, Pressurized",
+        "Hop 4: no results"
+      ]
+    },
+    {
+      "id": "Q053",
+      "type": "image_only",
+      "question": "Describe the structure of the helical tube bundle in the steam generator.",
+      "expected_answer": "Figure 5.4-1 shows the SG helical tube bundle, with two independent helical coil tube bundles interconnected within the RPV.",
+      "agent_answer": "**Core Conclusion:**  \nThe helical tube bundle in the steam generator consists of multiple helically wound tubes arranged in columns, supported by a dedicated support structure, and integrated within the reactor pressure vessel (RPV).\n\n**Supporting Evidence:**  \n- The tube bundle is made up of tubes wound in a helical (spiral) shape, as shown in Figure 5.4-1, which illustrates the typical tube arrangement, a quarter column, a full column, and the complete tube bundle. The tubes are organized in columns and the bundle fills the steam generator region within the RPV.\n- The configuration of the steam generators within the upper RPV section is depicted in Figure 5.4-2, showing the SG tubes vertically oriented and enclosed by the vessel, with feedwater and steam plenums at the ends.\n- The tube bundle is supported by a novel support structure, as described in [nuscale_ch05_0021], which includes upper and lower SG supports and intermediate tube support sections (see Figure 5.4-6). These supports prevent excessive vibration and wear.\n- Tube support tabs (Figure 5.4-7) provide additional stabilization by contacting adjacent supports, further securing the helical tubes in place.\n\n**Uncertainties:**  \n- The exact number of tubes, columns, and detailed geometric parameters are not specified in the provided nodes or figures.\n- Material specifics for the tubes are not detailed here, but general corrosion-resistant alloys are referenced elsewhere ([nuscale_ch05_0025]).\n\n**Summary Statement:**  \nThe helical tube bundle in the steam generator is a densely packed, helically wound tube array, arranged in columns and supported by a multi-level support structure within the RPV, as evidenced by Figures 5.4-1, 5.4-2, 5.4-6, and 5.4-7, and supported by node [nuscale_ch05_0021].",
+      "faithfulness": 0.4,
+      "answer_relevancy": 0.832,
+      "context_recall": 0.0,
+      "factual_correctness": 0.22,
+      "keyword_hit": 0.833,
+      "kg_nodes": 4,
+      "kg_edges": 0,
+      "hops_used": 2,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 50.6,
+      "eval_sec": 39.4,
+      "total_sec": 90.1,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0025] References | node: [nuscale_ch05_0019] Reactor Coolant System Component and Sub | node: [nuscale_ch05_0020] Steam Generators",
+        "Hop 2: node: [nuscale_ch05_0021] Reactor Coolant System Piping",
+        "Hop 3: no results",
+        "Hop 4: no results"
+      ]
+    },
+    {
+      "id": "Q054",
+      "type": "image_only",
+      "question": "Explain the composition of the DHRS simplified diagram.",
+      "expected_answer": "Figure 5.4-10 is a simplified diagram of the Decay Heat Removal System (DHRS), illustrating the configuration in which the DHRS heat exchanger is submerged in a pool and removes decay heat through steam and feedwater piping connected to the steam generator (SG).",
+      "agent_answer": "**Core Conclusion:**  \nThe DHRS (Decay Heat Removal System) simplified diagram consists of two independent trains, each including a DHRS heat exchanger (condenser), associated piping, valves, and instrumentation, designed to remove decay heat from the reactor via natural circulation without external power.\n\n**Supporting Evidence:**  \n- The DHRS is described as an engineered safety feature that removes residual and core decay heat after shutdown, operating independently of external power and the Emergency Core Cooling System (ECCS) ([nuscale_ch05_0022]).\n- Figure 5.4-10 (\"Decay Heat Removal System Simplified Diagram\") visually confirms the composition:  \n  - Two parallel DHRS trains, each with its own heat exchanger labeled \"DHRS IN-PATIENT CONDENSER.\"\n  - Each train includes insulated and non-insulated piping sections, control and isolation valves, and instrumentation (pressure, temperature, and flow indicators).\n  - The system interfaces with the containment heat sink and discharges to the environment via a vent.\n- The DHRS connects to the steam generator secondary side, using natural circulation to transfer heat from the reactor coolant system to the DHRS condensers ([nuscale_ch05_0022], [nuscale_ch05_0006]).\n- The system is designed for redundancy and reliability, ensuring the reactor coolant system temperature drops below 420°F within 36 hours ([nuscale_ch05_0022]).\n\n**Uncertainties:**  \n- The diagram does not show detailed internal construction of the heat exchangers or the specific materials used.\n- The knowledge graph does not provide a step-by-step operational sequence, but the functional composition is clear.\n\n**References to Node IDs:**  \n- System function and independence: [nuscale_ch05_0022]\n- Diagram structure and redundancy: Figure 5.4-10 (image), [nuscale_ch05_0022]\n- System evaluation and natural circulation: [nuscale_ch05_0006]\n\n**Summary:**  \nThe DHRS simplified diagram is composed of two redundant heat removal trains, each with a condenser, piping, valves, and instrumentation, ensuring passive, reliable decay heat removal from the reactor.",
+      "faithfulness": null,
+      "answer_relevancy": 0.6467,
+      "context_recall": 1.0,
+      "factual_correctness": 0.0,
+      "keyword_hit": 0.667,
+      "kg_nodes": 8,
+      "kg_edges": 5,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 77.2,
+      "eval_sec": 64.7,
+      "total_sec": 141.8,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0025] References | node: [nuscale_ch05_0006] System Evaluation | node: [nuscale_ch05_0022] Decay Heat Removal System | node: [nuscale_ch05_0000] Preface | edge: SUPPORTS",
+        "Hop 2: node: [nuscale_ch05_0003] Design Basis | node: [nuscale_ch05_0016] Pressure-Temperature Limits, Pressurized | edge: REFERENCES | edge: REFERENCES",
+        "Hop 3: no results",
+        "Hop 4: node: [nuscale_ch05_0021] Reactor Coolant System Piping | node: [nuscale_ch05_0004] System Description | edge: REFERENCES | edge: REFERENCES"
+      ]
+    },
+    {
+      "id": "Q055",
+      "type": "image_only",
+      "question": "Describe the structure of the NuScale Power Module.",
+      "expected_answer": "Figure 1.2-6 is a cross-sectional view of the NPM, illustrating the arrangement of the RPV within the CNV, and the sequential placement of the core, riser, SG tube bundle, and pressurizer region inside the RPV.",
+      "agent_answer": "**Core Conclusion:**  \nThe NuScale Power Module (NPM) is an integrated, self-contained nuclear reactor system featuring a vertical, cylindrical structure with passive safety systems and a compact containment vessel.\n\n**Supporting Evidence:**  \n- The NPM consists of a single reactor core, reactor pressure vessel (RPV), integrated steam generators (vertical helical tube type), and a containment vessel (CNV), all arranged in a vertical orientation (see Figure 1.2-6, \"Cutaway View of NuScale Power Module\").\n- Key internal components include:\n  - **Control Rod Drive Mechanism** at the top,\n  - **Pressurizer** above the core,\n  - **Reactor Core** at the bottom,\n  - **Downcomer** and **Riser** for primary coolant flow,\n  - **Steam Generator** (secondary flow) surrounding the core,\n  - **Feedwater** and **Main Steam** connections,\n  - All enclosed within the **Containment Vessel** (Figure 1.2-6).\n- The module operates with natural convection cooling—no reactor coolant pumps are used (Table 1.2-2, \"Design Features of a NuScale Power Module\").\n- The RPV and all primary coolant are contained within the CNV, which is partially immersed in a reactor pool for passive heat removal (Table 1.2-2).\n- Each module is rated at 160 MWth (thermal) and 50 MWe (electric), with two steam generators per module (Table 1.2-1, \"Overall Characteristics of a NuScale Power Plant\").\n- The design emphasizes passive safety: systems cool and depressurize the RPV/CNV without external power, and the containment is designed for high integrity and subatmospheric pressure during normal operation (Table 1.2-2).\n\n**Uncertainties:**  \n- The precise dimensions and some proprietary internal details are not provided in the available context.\n\n**References to Knowledge Graph Nodes:**  \n- [nuscale_ch01_0002], [nuscale_ch01_0015], [nuscale_ch01_0033], Table 1.2-1, Table 1.2-2, Figure 1.2-6\n\n**Summary:**  \nThe NuScale Power Module is a vertically oriented, integral reactor system with passive safety, natural convection cooling, and a compact containment vessel, as depicted in Figure 1.2-6 and described in Tables 1.2-1 and 1.2-2.",
+      "faithfulness": null,
+      "answer_relevancy": 0.8246,
+      "context_recall": 0.0,
+      "factual_correctness": 0.25,
+      "keyword_hit": 0.857,
+      "kg_nodes": 11,
+      "kg_edges": 4,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 98.6,
+      "eval_sec": 78.1,
+      "total_sec": 176.7,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0051] Plant Features of Special Interest | node: [nuscale_ch01_0047] Annex Building | node: [nuscale_ch01_0048] Security Buildings | node: [nuscale_ch01_0015] General Plant Description | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES",
+        "Hop 2: node: [nuscale_ch01_0036] Refueling Operations | node: [nuscale_ch01_0035] Fuel Handling and Reactor Maintenance Ar",
+        "Hop 3: node: [nuscale_ch01_0002] Introduction | node: [nuscale_ch01_0033] General Arrangement of Major Structures  | node: [nuscale_ch01_0032] Radioactive Waste Management System | edge: REFERENCES",
+        "Hop 4: node: [nuscale_ch01_0061] Control Rod Drive Mechanism Proof Test | node: [nuscale_ch01_0063] Emergency Core Cooling System Valve Desi"
+      ]
+    }
+  ]
+}
