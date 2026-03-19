@@ -26,9 +26,10 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 - [ ] Review QA dataset for factual errors — **Q004 confirmed**: expected answer says SG "outside RPV" but actually inside
 
 ### Edge Quality
-- [ ] Add regulatory compliance judgment questions to QA dataset to trigger SATISFIES/VIOLATES edges
-- [ ] Analyze edge type distribution across all 100 questions
-- [ ] Validate two-tier edge hierarchy hypothesis: structural edges in single-hop, semantic edges in multi-hop
+- [x] ~~SATISFIES/VIOLATES never appeared~~ → Fixed by description-first edge inference (v0.4.0). CONTRADICTS (3), SATISFIES (1), SEMANTIC (1) emerged in pilot.
+- [ ] Run full 100-question evaluation with new edge inference and analyze edge type distribution
+- [ ] Validate two-tier edge hierarchy hypothesis with full results
+- [ ] Address edge explosion (Q003: 45 edges from 12 nodes) — consider selective pairing or max edge limits
 
 ---
 
@@ -103,3 +104,4 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 - [x] Relevance-based image selection: question keywords vs caption overlap (v0.3.2)
 - [x] BM25 caption indexing: reference captions now searchable (v0.3.2)
 - [x] Root cause analysis: Faithfulness N/A = answer length + KG size, not images (v0.3.2)
+- [x] Description-first two-stage edge inference — CONTRADICTS/SATISFIES/SEMANTIC now emerge (v0.4.0)

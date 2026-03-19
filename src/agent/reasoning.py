@@ -78,6 +78,17 @@ class ReasoningModule:
     # -----------------------------------------------------------
     # 2. Infer relations between nodes
     # -----------------------------------------------------------
+    # Structural edge labels (document connectivity)
+    STRUCTURAL_LABELS = ["REFERENCES", "SPECIFIES"]
+
+    # Semantic edge labels (regulatory judgment)
+    SEMANTIC_LABELS = [
+        "SATISFIES", "VIOLATES", "SUPPORTS", "CONTRADICTS",
+        "LEADS_TO", "IS_PREREQUISITE_OF",
+    ]
+
+    ALL_LABELS = STRUCTURAL_LABELS + SEMANTIC_LABELS + ["SEMANTIC", "NONE"]
+
     def infer_relation(
         self,
         node_a_title: str,
@@ -87,29 +98,45 @@ class ReasoningModule:
         question: str,
     ) -> dict:
         """
-        Infer the logical relationship between two nodes.
-        Used during the GWM Transition (KG update) step to create edges.
+        Two-stage edge inference: description first, then label.
+
+        Stage 1: LLM describes the relationship in natural language.
+        Stage 2: LLM maps the description to an ontology label.
+
+        This avoids the "default to REFERENCES" problem where LLM
+        picks the safest label under classification pressure.
 
         Returns:
-            {"relation": "SATISFIES", "confidence": 0.9, "reasoning": "..."}
+            {"relation": str, "description": str, "confidence": float}
         """
-        VALID_RELATIONS = [
-            "REFERENCES", "SUPPORTS", "CONTRADICTS",
-            "SATISFIES", "VIOLATES", "IS_PREREQUISITE_OF",
-            "LEADS_TO", "SPECIFIES", "NONE"
-        ]
-
         system = (
-            "You are an expert in nuclear regulatory document analysis. "
-            "Analyze the logical relationship between two document sections.\n"
-            f"Possible relation types: {', '.join(VALID_RELATIONS)}\n"
-            "- NONE: No meaningful relationship between the two sections\n"
-            "Respond ONLY in the following JSON format:\n"
-            '{"relation": "RELATION_TYPE", "confidence": 0.0~1.0, '
-            '"reasoning": "Explain the basis for this relationship in 2-3 sentences"}'
+            "You are an expert in nuclear regulatory document analysis.\n\n"
+            "STEP 1: Describe the relationship between Section A and Section B "
+            "in ONE concrete sentence. Focus on HOW they are related in the "
+            "context of the analysis question. Be specific — mention what "
+            "information connects them (e.g., design values, regulatory limits, "
+            "causal effects, prerequisites).\n\n"
+            "STEP 2: Based on your description, classify the relationship into "
+            "one of the following labels:\n"
+            "  Structural:\n"
+            "    REFERENCES — A cites or cross-references B\n"
+            "    SPECIFIES — A provides details/specifications for B's general description\n"
+            "  Semantic (regulatory judgment):\n"
+            "    SATISFIES — A (design result) meets B (regulatory requirement)\n"
+            "    VIOLATES — A (design result) fails to meet B (requirement)\n"
+            "    SUPPORTS — A provides evidence that strengthens B's claim\n"
+            "    CONTRADICTS — A provides evidence that conflicts with B\n"
+            "    LEADS_TO — A (cause/event) leads to B (consequence/state)\n"
+            "    IS_PREREQUISITE_OF — A must be understood/verified before B\n"
+            "  Other:\n"
+            "    SEMANTIC — meaningful relationship that doesn't fit above types\n"
+            "    NONE — no meaningful relationship\n\n"
+            "Respond ONLY in JSON:\n"
+            '{"description": "one sentence describing the relationship", '
+            '"relation": "LABEL", "confidence": 0.0~1.0}'
         )
         user = (
-            f"[Analysis Purpose Query]\n{question}\n\n"
+            f"[Analysis Question]\n{question}\n\n"
             f"[Section A] {node_a_title}\n{node_a_content[:600]}\n\n"
             f"[Section B] {node_b_title}\n{node_b_content[:600]}"
         )
@@ -117,11 +144,18 @@ class ReasoningModule:
         try:
             cleaned = re.sub(r"```json\s*|\s*```", "", raw).strip()
             result = json.loads(cleaned)
-            if result.get("relation") not in VALID_RELATIONS:
-                result["relation"] = "REFERENCES"
-            return result
+            if result.get("relation") not in self.ALL_LABELS:
+                result["relation"] = "SEMANTIC"
+            return {
+                "relation": result.get("relation", "SEMANTIC"),
+                "description": result.get("description", ""),
+                "confidence": result.get("confidence", 0.5),
+                # Keep backward compat: reasoning = description
+                "reasoning": result.get("description", ""),
+            }
         except Exception:
-            return {"relation": "REFERENCES", "confidence": 0.5, "reasoning": raw}
+            return {"relation": "SEMANTIC", "description": raw,
+                    "confidence": 0.5, "reasoning": raw}
 
     # -----------------------------------------------------------
     # 3. Generate final answer

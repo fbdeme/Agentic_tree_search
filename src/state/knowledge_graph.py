@@ -51,12 +51,16 @@ class KGNode:
 
 @dataclass
 class KGEdge:
-    """지식그래프 엣지 - 두 노드 간의 논리적 관계"""
+    """Knowledge graph edge — relationship between two nodes.
+    description: free-form natural language relationship (primary)
+    relation: ontology label mapped from description (secondary)
+    """
     source_id: str
     target_id: str
-    relation: str          # RELATION_TYPES 중 하나
+    relation: str = "SEMANTIC"
     confidence: float = 1.0
-    reasoning: str = ""    # 왜 이 관계가 성립하는지 LLM이 설명한 내용
+    description: str = ""     # Free-form relationship description (LightRAG-style)
+    reasoning: str = ""       # Backward compat alias for description
 
     def to_dict(self) -> dict:
         return {
@@ -64,7 +68,7 @@ class KGEdge:
             "target": self.target_id,
             "relation": self.relation,
             "confidence": self.confidence,
-            "reasoning": self.reasoning,
+            "description": self.description or self.reasoning,
         }
 
 
@@ -151,10 +155,11 @@ class DynamicSubKG:
         lines.append("\n\n--- Relationship (Edge) List ---")
         if self.edges:
             for e in self.edges:
+                desc = e.description or e.reasoning
                 lines.append(
-                    f"  [{e.source_id}] --({e.relation})--> [{e.target_id}]"
+                    f"  [{e.source_id}] --[{e.relation}]--> [{e.target_id}]"
                     f"  (confidence: {e.confidence:.2f})"
-                    + (f"\n    reasoning: {e.reasoning}" if e.reasoning else "")
+                    + (f"\n    {desc}" if desc else "")
                 )
         else:
             lines.append("  (no relationships yet)")

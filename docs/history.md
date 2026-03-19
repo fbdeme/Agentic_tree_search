@@ -270,12 +270,48 @@ Investigated why image_only FactCorr was 0.13 and Faithfulness failed 80% of the
 
 ---
 
+---
+
+## v0.4.0 — Description-first Edge Inference (`TBD`)
+
+**Date**: 2026-03-19
+
+Replaced classification-first edge inference with description-first two-stage approach.
+
+### Root Cause of Edge Type Monotonicity
+
+100-question evaluation showed only 3/8 edge types used (REFERENCES 54%, SPECIFIES 29%, SUPPORTS 17%). Five semantic edge types (SATISFIES, VIOLATES, CONTRADICTS, LEADS_TO, IS_PREREQUISITE_OF) never appeared.
+
+**Root cause**: `infer_relation()` prompt asked LLM to classify first: "Choose one of: REFERENCES, SUPPORTS, ...". Under classification pressure, LLM defaults to safest/most generic label (REFERENCES) when relationship is ambiguous.
+
+### Changes
+- **Two-stage edge inference**:
+  - Stage 1: LLM describes the relationship in one natural language sentence (no classification pressure)
+  - Stage 2: LLM maps description to ontology label (SATISFIES, SUPPORTS, etc.) or SEMANTIC if none fit
+- **New edge structure**: `KGEdge.description` stores free-form relationship text (primary), `KGEdge.relation` stores ontology label (secondary interpretation layer)
+- **SEMANTIC fallback**: Relationships that don't fit fixed ontology are preserved as SEMANTIC instead of being forced into REFERENCES
+- **Academic framing**: "LightRAG-style free-form description with domain-specific ontology label post-mapping. Vectorless alternative to GWM's embedding-based implicit edges."
+
+### Results (Q1-Q3 pilot)
+| Edge Type | Before (100q) | After (3q only!) |
+|-----------|--------------|-----------------|
+| REFERENCES | 280 | ✅ present |
+| SPECIFIES | 150 | ✅ present |
+| SUPPORTS | 87 | ✅ dominant |
+| **CONTRADICTS** | **0** | **✅ 3 instances** |
+| **SATISFIES** | **0** | **✅ 1 instance** |
+| **SEMANTIC** | N/A | **✅ 1 instance** |
+
+Q003 alone produced 45 edges including CONTRADICTS and SATISFIES — types that never appeared in 100 questions with the old prompt.
+
+---
+
 ## Known Issues (Unresolved)
 
-1. **Factual Correctness structurally low**: RAGAs penalizes extra claims. Agent answers more detailed than expected answers. Metric limitation.
-2. **Faithfulness timeout (45/99)**: Correlated with answer length (>2000 chars) and KG size (>7 nodes). Not image-related.
-3. **image_only FactCorr still low after fix**: Correct figures now delivered, but Vision extracts information in different wording than expected answer.
-4. **Only 3/8 edge types used**: REFERENCES, SPECIFIES, SUPPORTS only. No regulatory judgment edges (SATISFIES/VIOLATES) — QA dataset lacks compliance judgment questions.
-5. **QA dataset errors**: Q004 expected answer contains factual error.
-6. **browse tool under-utilized**: Agent defaults to search-heavy strategy.
-7. **KGNode.to_dict() missing references**: References field not serialized to JSON. Doesn't affect runtime but KG JSON exports lack reference data.
+1. **Factual Correctness structurally low**: RAGAs penalizes extra claims. Metric limitation.
+2. **Faithfulness timeout**: Correlated with answer length + KG size. Large KGs (>40 edges like Q003) will likely worsen this.
+3. **image_only FactCorr still low**: Correct figures now delivered, but Vision wording differs from expected answer.
+4. **QA dataset errors**: Q004 expected answer contains factual error.
+5. **browse tool under-utilized**: Agent defaults to search-heavy strategy.
+6. **KGNode.to_dict() missing references**: Not serialized to JSON exports.
+7. **Edge explosion**: Q003 produced 45 edges (12 nodes × pairwise). May need edge count limits or selective pairing.

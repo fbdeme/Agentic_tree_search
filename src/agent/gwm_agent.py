@@ -157,6 +157,7 @@ class GWMAgent:
                         target_id=node_b.node_id,
                         relation=relation,
                         confidence=confidence,
+                        description=rel.get("description", ""),
                         reasoning=rel.get("reasoning", ""),
                     )
                     if kg.add_edge(edge):
