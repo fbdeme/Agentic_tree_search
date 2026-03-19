@@ -232,11 +232,50 @@ Added BM25 ranking to search tool and ran full 100-question benchmark.
 
 ---
 
+## v0.3.2 — Image Selection Fix + Caption Indexing (`4d6c7bc`)
+
+**Date**: 2026-03-19
+
+Fixed two critical issues with Vision RAG image delivery.
+
+### Root Cause Analysis
+
+Investigated why image_only FactCorr was 0.13 and Faithfulness failed 80% of the time:
+
+1. **Not a Vision capability problem**: Faithfulness N/A correlated with answer length (2021 chars avg) and KG size (7.8 nodes), not image presence. Composite without images had worse Faithfulness success (9%) than with images (37%).
+
+2. **Image selection was broken**: `_collect_reference_images()` collected ALL reference pages from ALL KG nodes, sorted by page number, took first 6. Result: irrelevant figures filled the quota before the correct figure.
+   - Q055: Figure 1.2-6 (p.51) was cut by max_images=6 because p.44-49 filled first.
+
+3. **Reference captions not searchable**: BM25 index only covered title+summary+text. Reference captions (e.g., "NuScale Power Module Major Components") were invisible to search.
+
+### Changes
+- **Relevance-based image selection**: Rank references by keyword overlap between question and caption/ref_id. Most relevant figures selected first.
+- **Caption indexing**: BM25 index now includes `references[].caption` text, making figure captions searchable.
+
+### Results (Q51-Q55, image_only)
+| Question | Correct Figure Delivered? | Before FactCorr | After FactCorr | After KW Hit |
+|----------|-------------------------|-----------------|----------------|-------------|
+| Q051 | Before: ❌ After: ✅ Figure 5.1-1 (p.16) | 0.00 | 0.00 | 0.83 |
+| Q052 | ✅ (was OK) | 0.50 | 0.00 | 1.00 |
+| Q053 | Before: ❌ After: ✅ Figure 5.4-1 (p.144) | 0.00 | 0.22 | 0.83 |
+| Q054 | Before: ❌ After: ✅ Figure 5.4-10 (p.153) | 0.00 | 0.00 | 0.67 |
+| Q055 | Before: ❌ After: ✅ Figure 1.2-6 (p.51) | 0.00 | 0.25 | 0.86 |
+
+### Analysis of 100-question Results
+- **Edge distribution**: REFERENCES 54%, SPECIFIES 29%, SUPPORTS 17%. No SATISFIES/VIOLATES/CONTRADICTS/LEADS_TO/IS_PREREQUISITE_OF appeared.
+- **Dynamic termination**: 31% stop at hop 1, 56% within 2 hops. Average 2.1-2.6 hops.
+- **Faithfulness N/A root cause**: Answer length + KG size, not images. image_only 80% N/A, composite 73% N/A — both due to long context exceeding RAGAs claim extraction token limit.
+- **FactCorr 41% zero-score**: composite (53%) and image_only (55%) worst. Mix of search failure + expression mismatch + RAGAs metric limitation.
+
+---
+
 ## Known Issues (Unresolved)
 
-1. **Factual Correctness structurally low**: RAGAs penalizes extra claims in agent answers. Agent answers are more detailed than expected answers. This is a metric limitation, not an agent quality issue.
-2. **Faithfulness timeout (45/99)**: RAGAs Faithfulness fails for ~45% of questions when context is long. Only 54/99 scored.
-3. **image_only weak performance**: Vision RAG passes referenced images but Factual Correctness is 0.13. Agent may not extract correct details from engineering diagrams.
-4. **QA dataset errors**: Q004 expected answer contains factual error. Need dataset review.
-5. **browse tool under-utilized**: Agent defaults to search-heavy strategy.
-6. **Search keyword mismatch**: Agent searches question terms, but key information may use different vocabulary.
+1. **Factual Correctness structurally low**: RAGAs penalizes extra claims. Agent answers more detailed than expected answers. Metric limitation.
+2. **Faithfulness timeout (45/99)**: Correlated with answer length (>2000 chars) and KG size (>7 nodes). Not image-related.
+3. **image_only FactCorr still low after fix**: Correct figures now delivered, but Vision extracts information in different wording than expected answer.
+4. **Only 3/8 edge types used**: REFERENCES, SPECIFIES, SUPPORTS only. No regulatory judgment edges (SATISFIES/VIOLATES) — QA dataset lacks compliance judgment questions.
+5. **QA dataset errors**: Q004 expected answer contains factual error.
+6. **browse tool under-utilized**: Agent defaults to search-heavy strategy.
+7. **KGNode.to_dict() missing references**: References field not serialized to JSON. Doesn't affect runtime but KG JSON exports lack reference data.

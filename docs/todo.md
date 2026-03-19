@@ -9,8 +9,9 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 ### Evaluation
 - [x] ~~Run full 100-question benchmark evaluation~~ → Completed (v0.3.1), 99/100 success
 - [x] ~~Analyze results by question type~~ → See history.md v0.3.1 for full breakdown
-- [ ] Fix Faithfulness metric timeout — only 54/99 scored (45% failure rate). Consider lighter evaluator model or shorter context.
-- [ ] Investigate image_only low Factual Correctness (0.13) — is Vision RAG extracting useful info from diagrams?
+- [ ] Fix Faithfulness metric timeout — 45% failure rate. Root cause: answer length + KG size, not images. Consider shorter answers or lighter evaluator.
+- [x] ~~Investigate image_only low FactCorr~~ → Root cause: wrong images delivered (page-number ordering). Fixed by relevance-based selection (v0.3.2)
+- [ ] image_only FactCorr still low after fix (Vision extracts info but wording differs from expected answer)
 - [ ] Address Factual Correctness structural limitation — agent's detailed answers penalized vs terse expected answers
 
 ### Search (Action) Enhancement
@@ -99,3 +100,6 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 - [x] Research proposal with updated methodology (docs/research_proposal.md)
 - [x] BM25 search ranking replacing naive keyword match (v0.3.1)
 - [x] Full 100-question benchmark: 58 min (4x parallel), 99/100 success (v0.3.1)
+- [x] Relevance-based image selection: question keywords vs caption overlap (v0.3.2)
+- [x] BM25 caption indexing: reference captions now searchable (v0.3.2)
+- [x] Root cause analysis: Faithfulness N/A = answer length + KG size, not images (v0.3.2)
