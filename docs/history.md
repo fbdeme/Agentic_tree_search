@@ -308,7 +308,7 @@ Q003 alone produced 45 edges including CONTRADICTS and SATISFIES — types that 
 
 ---
 
-## v0.4.1 — Structured Table Extraction + Table/Figure Split (`4f35255`, `TBD`)
+## v0.4.1 — Structured Table Extraction + Table/Figure Split (`4f35255`)
 
 **Date**: 2026-03-19
 
@@ -340,7 +340,28 @@ table_only Q031-Q035 all scored AR=0.0, FC=0.0. Investigation revealed:
 | Q035 (PZR 578) | AR=0.0 FC=0.0 | AR=0.0 FC=0.0 (search keyword repetition) |
 
 ### Q035 Failure Analysis
-Agent searched "pressurizer volume" / "PZR volume" across all 4 hops but never tried "RCS volumes" (which returns System Evaluation node with Table 5.1-1 at score=15.21). Root cause: **agent repeats same search keywords because it has no memory of previous search attempts.** `search("RCS volumes")` would have found the answer immediately.
+Agent searched "pressurizer volume" / "PZR volume" across all 4 hops but never tried "RCS volumes" (which returns System Evaluation node with Table 5.1-1 at score=15.21). Root cause: **agent repeats same search keywords because it has no memory of previous search attempts.**
+
+### Full 100-Question Results (v0.4.1)
+
+| Metric | v0.4.0 | v0.4.1 | Change |
+|--------|--------|--------|--------|
+| Faithfulness | 0.77 | 0.73 | -0.04 |
+| Answer Relevancy | 0.70 | **0.74** | **+0.04** |
+| Context Recall | 0.59 | 0.56 | -0.03 |
+| Factual Correctness | 0.20 | **0.24** | **+0.04** |
+| Keyword Hit | 0.63 | **0.66** | **+0.03** |
+
+By type — key improvements:
+
+| Type | v0.4.0 AR/FC | v0.4.1 AR/FC | Change |
+|------|-------------|-------------|--------|
+| text_only | 0.78/0.24 | **0.81/0.32** | +0.03/+0.08 |
+| **table_only** | **0.50/0.26** | **0.67/0.41** | **+0.17/+0.15** |
+| image_only | 0.76/0.18 | 0.75/0.11 | -0.01/-0.07 |
+| composite | 0.70/0.13 | 0.72/0.14 | +0.02/+0.01 |
+
+Edge distribution (1,328 total): SPECIFIES 525 (39.5%), SUPPORTS 442 (33.3%), REFERENCES 137 (10.3%), IS_PREREQUISITE_OF 87 (6.6%), SATISFIES 77 (5.8%), SEMANTIC 47 (3.5%), LEADS_TO 8 (0.6%), CONTRADICTS 5 (0.4%).
 
 ---
 

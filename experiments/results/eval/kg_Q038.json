@@ -2,10 +2,19 @@
   "question": "What is the definition of the acronym DHRS?",
   "current_hop": 4,
   "nodes": {
+    "nuscale_ch01_0043": {
+      "node_id": "nuscale_ch01_0043",
+      "title": "Ultimate Heat Sink",
+      "summary": "The Ultimate Heat Sink for the NuScale plant is a large, stainless steel-lined, reinforced concrete pool located below grade, comprising the reactor, refueling, and spent fuel pool areas. During normal operations, heat is removed via a cooling system and rejected to the atmosphere, while in the event of a total loss of AC power, decay heat is passively transferred to the pool, which has sufficient water inventory to ensure continued cooling through heat-up and boiling.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "41",
+      "hop": 1
+    },
     "nuscale_ch01_0450": {
       "node_id": "nuscale_ch01_0450",
       "title": "BTP 10-2, Rev 4: Design Guidelines for Avoiding Water Hammers in Steam GeneratorsTFSGD B.1 thru B.4Top-Feed Steam Generator Designs",
-      "summary": "This section explains that the NuScale plant design does not use top-feed, preheat, or once-through steam generator designs, so the specific regulatory guidelines for avoiding water hammers in these systems are not applicable. Instead, NuScale uses a passive natural circulation system (DHRS) that fulfills a similar safety function without the need for auxiliary feedwater pumps or the design features addressed by these guidelines.",
+      "summary": "This section explains that the NuScale plant design does not use top-feed, preheat, or once-through steam generator designs, so the specific regulatory guidelines for avoiding water hammers in these systems are not applicable. Instead, NuScale uses a different system (DHRS) that operates via passive natural circulation and inherently avoids the water hammer issues addressed by these guidelines.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "265",
@@ -14,25 +23,16 @@
     "nuscale_ch01_0669": {
       "node_id": "nuscale_ch01_0669",
       "title": "DSRS 15.1.1-15.1.4, Rev 0: Decrease in Feedwater Temperature, Increase in Feedwater Flow, Increase in Steam Flow, and Inadvertent Opening of the Turbine Bypass System or Inadvertent Operation of the Decay Heat Removal SystemII.4 Specific CriterionInstrument Spans and Setpoints use RG 1.105",
-      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for abnormal operating occurrences such as changes in feedwater temperature, flow, steam flow, and inadvertent system operations. It confirms that system pressure, critical heat flux, and event classification criteria are met, and that instrument spans and setpoints comply with Regulatory Guide 1.105. Overall, NuScale’s analysis demonstrates alignment with the Standard Review Plan and Design Specific Review Standard requirements for these events.",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for DSRS 15.1.1-15.1.4, addressing events such as changes in feedwater temperature or flow, steam flow, and inadvertent system operations. It confirms that NuScale meets specific criteria for system pressure, critical heat flux, event classification, and instrument setpoints, aligning with NRC guidance and ensuring plant safety under these conditions.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "289",
       "hop": 1
     },
-    "nuscale_ch01_0043": {
-      "node_id": "nuscale_ch01_0043",
-      "title": "Ultimate Heat Sink",
-      "summary": "The Ultimate Heat Sink for the NuScale plant is a large, stainless steel-lined, reinforced concrete pool located below grade, comprising the reactor, refueling, and spent fuel pool areas. During normal operations, heat is removed via a cooling system and external heat sink, while in a loss of all AC power, decay heat is passively transferred to the pool, which has sufficient water inventory to ensure continued cooling through heat up and boiling.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "41",
-      "hop": 1
-    },
     "nuscale_ch01_0673": {
       "node_id": "nuscale_ch01_0673",
       "title": "DSRS 15.1.1-15.1.4, Rev 0: Decrease in Feedwater Temperature, Increase in Feedwater Flow, Increase in Steam Flow, and Inadvertent Opening of the Turbine Bypass System or Inadvertent Operation of the Decay Heat Removal SystemII.3 Analytical ParametersCore Burnup",
-      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for DSRS 15.1.1-15.1.4, addressing events such as decrease in feedwater temperature, increase in feedwater or steam flow, and inadvertent operation of turbine bypass or decay heat removal systems. It confirms that analytical parameters—including limiting single failure, initial power level, conservative scram, core burnup, and setpoint inaccuracies—meet regulatory requirements, with no exceptions noted.",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for DSRS 15.1.1-15.1.4, which address events such as decreases in feedwater temperature, increases in feedwater or steam flow, and inadvertent operation of the turbine bypass or decay heat removal systems. It confirms that analytical parameters—including initial power level, conservative scram, core burnup, and setpoint inaccuracies—are addressed and conform to regulatory guidance, with no exceptions noted.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "290",
@@ -41,83 +41,96 @@
     "nuscale_ch01_0014": {
       "node_id": "nuscale_ch01_0014",
       "title": "Acronyms and Abbreviations",
-      "summary": "This section explains the conventions used in the NuScale Final Safety Analysis Report (FSAR) for numbering tables, figures, and pages, as well as the handling of proprietary and sensitive information. Tables and figures are numbered according to their section, and sensitive content is withheld from the public version in compliance with regulatory requirements.",
+      "summary": "This section explains the conventions used for numbering tables, figures, and pages in the NuScale Final Safety Analysis Report (FSAR), as well as the handling of proprietary and sensitive information. It clarifies that sensitive content is withheld from the public version in accordance with regulatory requirements, while all such material is clearly marked in the non-public version.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "10",
-      "hop": 1
+      "hop": 2
+    },
+    "nuscale_ch01_0013": {
+      "node_id": "nuscale_ch01_0013",
+      "title": "Proprietary Information",
+      "summary": "This section explains the organization and identification of text, tables, figures, and page numbering within the NuScale Final Safety Analysis Report (FSAR). It also clarifies that while the FSAR does not contain proprietary or safeguards information, some sensitive content is withheld from public disclosure in accordance with regulations, and a separate public version is provided with such material removed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "10",
+      "hop": 2
+    },
+    "nuscale_ch01_0117": {
+      "node_id": "nuscale_ch01_0117",
+      "title": "Figure 1.7-3f: Piping and In strumentation Diagram Legends",
+      "summary": "This section provides the legend for piping and instrumentation diagrams (P&IDs) used in the NuScale Final Safety Analysis Report. It lists and describes various symbols representing sample probes, flow and pressure measurement devices, temperature and level sensors, and other auxiliary instrumentation, ensuring standardized interpretation of the diagrams.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "107",
+      "hop": 3
+    },
+    "nuscale_ch01_0111": {
+      "node_id": "nuscale_ch01_0111",
+      "title": "Figure 1.7-2: Instrumentatio n and Controls Symbol Legend",
+      "summary": "This section provides a legend explaining the symbols used for instrumentation and controls in NuScale’s safety analysis diagrams. It describes the logic gate functions, control room indicators, switch types, and other symbols relevant to system status and operations, ensuring clear interpretation of the diagrams. Additionally, it includes notes on piping and instrumentation diagram conventions, such as vent and drain representations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "101",
+      "hop": 3
     }
   },
   "edges": [
+    {
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0450",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section B explains that the NuScale DHRS serves a similar function to the Auxiliary Feedwater (AFW) system in large PWRs, while Section A describes the DHRS as a system for removing decay heat and cooling the RCS, thus both sections connect by clarifying the role and function of DHRS in the plant."
+    },
+    {
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0669",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A describes the function and context of the DHRS (Decay Heat Removal System), while Section B references regulatory criteria and events involving the DHRS, connecting them through the system's operational role in safety analysis."
+    },
+    {
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0673",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the function and operation of the DHRS (Decay Heat Removal System), while Section B references scenarios involving the operation of the Decay Heat Removal System, thus Section A provides details/specifications for the general mention of DHRS in Section B."
+    },
     {
       "source": "nuscale_ch01_0450",
       "target": "nuscale_ch01_0669",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A states that the NuScale DHRS fulfills a similar function as the AFW system in large PWRs, while Section B references the Decay Heat Removal System (DHRS) in the context of system operations and safety analysis, connecting both sections through the functional role of DHRS."
-    },
-    {
-      "source": "nuscale_ch01_0450",
-      "target": "nuscale_ch01_0043",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A explains that the NuScale DHRS (Decay Heat Removal System) serves a similar function to the Auxiliary Feedwater System in large PWRs, while Section B describes the DHRS as a system that removes decay heat and provides cooling to the reactor coolant system, thus both sections connect by describing the function and operational context of the DHRS."
+      "description": "Section A states that the NuScale DHRS fulfills a similar function as the AFW system in large PWRs, while Section B references the Decay Heat Removal System (DHRS) in the context of specific accident scenarios, connecting both sections through the functional role of DHRS."
     },
     {
       "source": "nuscale_ch01_0450",
       "target": "nuscale_ch01_0673",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A states that the NuScale DHRS fulfills a similar function as the AFW system at a large PWR, while Section B references the Decay Heat Removal System (DHRS) in the context of operational events, connecting both sections through the functional role of DHRS in reactor safety systems."
+      "description": "Section A states that the NuScale DHRS fulfills a similar function as the AFW system in large PWRs, while Section B references the Decay Heat Removal System (DHRS) in the context of inadvertent operation, connecting both sections through the functional role of DHRS."
     },
     {
-      "source": "nuscale_ch01_0450",
-      "target": "nuscale_ch01_0014",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.8,
-      "description": "Section A mentions the acronym DHRS and describes its function, while Section B is titled 'Acronyms and Abbreviations' and is likely where the definition of DHRS would be formally provided."
+      "source": "nuscale_ch01_0014",
+      "target": "nuscale_ch01_0669",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A provides general information about acronyms and abbreviations in the NuScale FSAR, while Section B uses the acronym 'Decay Heat Removal System' (DHRS) in the context of specific DSRS events, connecting them by the use and context of the acronym in regulatory analysis."
     },
     {
-      "source": "nuscale_ch01_0669",
-      "target": "nuscale_ch01_0043",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section B provides a functional description of the Decay Heat Removal System (DHRS), which is referenced in Section A as part of the analyzed events, thereby connecting the acronym DHRS in Section A to its definition in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0669",
-      "target": "nuscale_ch01_0673",
-      "relation": "SEMANTIC",
+      "source": "nuscale_ch01_0013",
+      "target": "nuscale_ch01_0669",
+      "relation": "REFERENCES",
       "confidence": 0.85,
-      "description": "Section A and Section B both discuss specific criteria and analytical parameters related to the inadvertent operation of the Decay Heat Removal System (DHRS) under DSRS 15.1.1-15.1.4, connecting them through their shared focus on DHRS events and regulatory conformance."
+      "description": "Section A explains that the FSAR uses the DSRS and SRP as technical guidance for the NuScale design, while Section B provides specific DSRS criteria related to system operations including the Decay Heat Removal System (DHRS), thus Section A establishes the regulatory framework that Section B details with specific requirements."
     },
     {
-      "source": "nuscale_ch01_0669",
-      "target": "nuscale_ch01_0014",
-      "relation": "REFERENCES",
-      "confidence": 0.8,
-      "description": "Section B is likely to contain the definition of the acronym DHRS, which is referenced in Section A as 'Decay Heat Removal System,' thus Section A uses the acronym whose definition is provided in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0043",
-      "target": "nuscale_ch01_0673",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A describes the function and operation of the DHRS (Decay Heat Removal System), while Section B references scenarios involving the operation of the Decay Heat Removal System, thus Section A provides details/specifications for the general mention of DHRS in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0043",
-      "target": "nuscale_ch01_0014",
-      "relation": "REFERENCES",
-      "confidence": 0.8,
-      "description": "Section B is likely to contain the definition of the acronym DHRS, which is referenced in Section A when describing the decay heat removal system."
-    },
-    {
-      "source": "nuscale_ch01_0673",
-      "target": "nuscale_ch01_0014",
-      "relation": "REFERENCES",
-      "confidence": 0.8,
-      "description": "Section B is likely to contain the definition of the acronym DHRS, which is referenced in Section A as 'Decay Heat Removal System,' thus Section A uses an acronym that Section B may define."
+      "source": "nuscale_ch01_0117",
+      "target": "nuscale_ch01_0450",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B explains that the NuScale DHRS (Decay Heat Removal System) serves a similar function to the Auxiliary Feedwater (AFW) system in large PWRs, thereby providing context for the acronym DHRS, which is not defined in Section A."
     }
   ]
 }

@@ -2,37 +2,10 @@
   "question": "Describe the normal heating and critical limit pressure-temperature curve.",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0015": {
-      "node_id": "nuscale_ch05_0015",
-      "title": "Reactor Vessel Materials",
-      "summary": "The NuScale Power Module’s reactor pressure vessel (RPV) is a key component that houses the reactor core, steam generators, and pressurizer, serving as a primary barrier to fission product release. The RPV and its associated materials are selected and fabricated according to stringent ASME Boiler and Pressure Vessel Code standards to ensure integrity and safety throughout the plant’s design lifetime.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "67",
-      "hop": 1
-    },
-    "nuscale_ch05_0016": {
-      "node_id": "nuscale_ch05_0016",
-      "title": "Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses",
-      "summary": "This section outlines the basis for establishing operational pressure and temperature limits for the reactor coolant pressure boundary (RCPB) to comply with regulatory requirements over the plant’s 60-year lifespan. It describes the methodology used to calculate these limits, accounting for vessel embrittlement, and provides the resulting pressure-temperature curves and values to ensure protection against non-ductile failure during various operating conditions.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "72",
-      "hop": 1
-    },
-    "nuscale_ch05_0024": {
-      "node_id": "nuscale_ch05_0024",
-      "title": "Pressurizer",
-      "summary": "The pressurizer in the NuScale reactor is integrated into the upper region of the reactor vessel and functions to regulate reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering reactor trips or safety system actuations, with instrumentation providing real-time pressure and level data to control systems.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "124",
-      "hop": 1
-    },
     "nuscale_ch05_0006": {
       "node_id": "nuscale_ch05_0006",
       "title": "System Evaluation",
-      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance across various power levels by establishing steady-state parameters for both primary and secondary systems, such as coolant temperatures and flow rates. These parameters are calculated using thermal hydraulic software and verified by hand, with uncertainties and design margins considered to ensure efficient operation and safety. The design supports natural circulation with minimal pressure losses, and uncertainties related to steam generator tube plugging do not affect primary coolant flow rate determination.",
+      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance across various power levels by establishing steady-state parameters such as coolant temperatures, flow rates, and pressures, using both software modeling and hand calculations. The evaluation considers uncertainties in flow resistance and thermal head, ensuring efficient operation, safety margins, and minimal pressure losses to support the plant’s natural circulation design.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "12",
@@ -41,83 +14,110 @@
     "nuscale_ch05_0018": {
       "node_id": "nuscale_ch05_0018",
       "title": "References",
-      "summary": "This section outlines the requirements and procedures for inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fasteners for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It emphasizes compliance with specific codes for packaging, handling, and quality assurance, as well as maintaining a controlled environment during shipment to protect the reactor vessel's integrity.",
+      "summary": "This section outlines the requirements and procedures for inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fasteners for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It emphasizes compliance with specific codes for packaging, handling, and quality assurance, as well as maintaining a controlled environment during shipment to ensure vessel integrity. Key references to industry standards are also provided.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "74",
+      "hop": 1
+    },
+    "nuscale_ch05_0016": {
+      "node_id": "nuscale_ch05_0016",
+      "title": "Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses",
+      "summary": "This section outlines the methodology and regulatory compliance for establishing pressure-temperature limits for the reactor coolant pressure boundary (RCPB) over the plant’s 60-year life. It describes how these limits are calculated using ASME and NRC guidelines, accounting for vessel embrittlement, and provides the relevant curves and data to ensure protection against non-ductile failure.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "72",
+      "hop": 1
+    },
+    "nuscale_ch05_0024": {
+      "node_id": "nuscale_ch05_0024",
+      "title": "Pressurizer",
+      "summary": "The pressurizer, integrated into the upper region of the reactor vessel and separated by a baffle plate, regulates Reactor Coolant System (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle system transients without triggering reactor trips or safety system actuations, with instrumentation providing continuous monitoring and control.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "124",
+      "hop": 1
+    },
+    "nuscale_ch05_0015": {
+      "node_id": "nuscale_ch05_0015",
+      "title": "Reactor Vessel Materials",
+      "summary": "The NuScale Power Module’s reactor pressure vessel (RPV) is a key component of the reactor coolant system, housing the core, steam generators, and pressurizer within a containment vessel for safety. The RPV and its materials are selected and fabricated according to ASME Boiler and Pressure Vessel Code standards to ensure long-term integrity and prevent the release of fission products. Material specifications for all components, including bolting and welds, are detailed in referenced tables and comply with strict regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
       "hop": 1
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0015",
-      "target": "nuscale_ch05_0016",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section A describes the reactor vessel materials and their role in the reactor coolant system, which are the basis for establishing the pressure-temperature limits and analyses discussed in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0015",
-      "target": "nuscale_ch05_0024",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes the reactor vessel as the main pressure-retaining component of the reactor coolant system, while Section B specifies that the pressurizer is an integral part of the reactor vessel, detailing its location and function in pressure management."
-    },
-    {
-      "source": "nuscale_ch05_0015",
-      "target": "nuscale_ch05_0006",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the physical components and materials of the reactor vessel, which are directly relevant to Section B's evaluation of system performance parameters (such as temperature and pressure) that define the normal heating and critical limit pressure-temperature curve."
-    },
-    {
-      "source": "nuscale_ch05_0015",
-      "target": "nuscale_ch05_0018",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section B references Section A by specifying that the nondestructive examinations performed on the reactor vessel materials described in Section A are detailed in Section 5.3.1, thus connecting the inspection requirements to the vessel's material description."
-    },
-    {
-      "source": "nuscale_ch05_0016",
-      "target": "nuscale_ch05_0024",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses pressure-temperature limits and material properties relevant to the reactor vessel, while Section B describes the pressurizer's design and its role in controlling reactor pressure, both of which are directly connected in defining the normal heating and critical limit pressure-temperature curve for safe reactor operation."
-    },
-    {
-      "source": "nuscale_ch05_0016",
-      "target": "nuscale_ch05_0006",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section B establishes steady state temperature and pressure parameters for optimal reactor performance, which are bounded by the pressure-temperature limits and analyses described in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0016",
-      "target": "nuscale_ch05_0018",
-      "relation": "REFERENCES",
-      "confidence": 0.85,
-      "description": "Section A discusses compliance with ASME BPVC requirements for welds and attachments on the reactor vessel, while Section B outlines inspection and handling requirements that reference the same ASME BPVC standards, connecting them through shared regulatory codes and quality assurance practices."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0006",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the design and function of the pressurizer, which directly affects the pressure and temperature conditions in the reactor coolant system, while Section B discusses the establishment of steady-state pressure-temperature parameters for optimal system performance, thus Section A provides design details that inform the pressure-temperature curves evaluated in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0018",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.8,
-      "description": "Section A describes the design and function of the pressurizer, which is integral to establishing and maintaining the pressure-temperature conditions relevant to the normal heating and critical limit curves, while Section B outlines inspection and handling requirements for the reactor vessel, which must be met to ensure the vessel's integrity under those pressure-temperature conditions."
-    },
-    {
       "source": "nuscale_ch05_0006",
       "target": "nuscale_ch05_0018",
       "relation": "IS_PREREQUISITE_OF",
       "confidence": 0.8,
-      "description": "Section A discusses the establishment of steady state values for primary and secondary side parameters as a function of reactor power, which are necessary for defining the normal heating and pressure-temperature behavior, while Section B details inspection and handling requirements for the reactor vessel, which are prerequisites to ensuring the vessel's integrity before evaluating its pressure-temperature performance."
+      "description": "Section A discusses the establishment of steady state values for primary and secondary side parameters as a function of reactor power, which are necessary for defining the normal heating and pressure-temperature behavior, while Section B details inspection and handling requirements for the reactor vessel, which are prerequisites to ensuring the vessel's integrity before such operational evaluations can be meaningful."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0016",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the establishment of steady state pressure and temperature values for optimal reactor performance, which are directly relevant to the pressure-temperature limits and analyses described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0024",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the establishment of steady state pressure and temperature values for optimal system performance, while Section B describes the pressurizer's role in maintaining and communicating pressure within the reactor coolant system, directly affecting the pressure-temperature relationship relevant to the critical limit curve."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0015",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the establishment of steady state pressure and temperature values for optimal system performance, which are directly relevant to the pressure-temperature limits that must be maintained to protect the reactor vessel materials described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0016",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A outlines inspection and handling requirements for the reactor pressure vessel, while Section B discusses pressure-temperature limits and material properties, both of which are connected through their reliance on ASME BPVC code compliance for ensuring vessel integrity under operational and thermal conditions."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes inspection, shipment, and storage requirements for the reactor pressure vessel (RPV), which structurally includes the pressurizer described in Section B as an integral part of the RPV, thus connecting the physical and regulatory context of both sections."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A references the inspection, shipment, and handling requirements for the reactor pressure vessel, while Section B provides a general description of the reactor vessel's structure and function, with Section A specifying procedural details for the general component described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0024",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses pressure-temperature limits and material requirements for the reactor vessel, while Section B describes the pressurizer's design and its role in controlling reactor pressure, both of which are directly connected through their influence on the pressure-temperature curve relevant to normal heating and critical limits."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses specific pressure-temperature limits and examination requirements for reactor vessel attachments, while Section B provides a general description of the reactor vessel and its role as a pressure-retaining component, thus Section A specifies details for the general context provided in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0015",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the pressurizer's design and function as part of the reactor vessel, while Section B describes the reactor vessel materials and structure, with both sections providing foundational information necessary to understand the pressure-temperature behavior and limits of the system."
     }
   ]
 }

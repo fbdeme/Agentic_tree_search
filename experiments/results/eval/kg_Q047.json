@@ -1,20 +1,29 @@
 {
   "question": "What is the definition of the abbreviation RRV?",
-  "current_hop": 4,
+  "current_hop": 3,
   "nodes": {
-    "nuscale_ch01_0064": {
-      "node_id": "nuscale_ch01_0064",
-      "title": "NuScale Test and Inspection Plans",
-      "summary": "This section describes NuScale’s test and inspection plans for key reactor components, including control rod drive shafts and Emergency Core Cooling System (ECCS) valves. It summarizes test results confirming operability and performance under various conditions, and outlines a dedicated test program—conducted at a specialized facility—to demonstrate ECCS valve functionality at reactor conditions, including unique design features like the inadvertent actuation block (IAB).",
+    "nuscale_ch01_0063": {
+      "node_id": "nuscale_ch01_0063",
+      "title": "Emergency Core Cooling System Valve Design Certification Application Demonstration Test",
+      "summary": "This section describes the demonstration test program for the Emergency Core Cooling System (ECCS) valves in the NuScale reactor design. The program aimed to verify the functional performance of the ECCS valves—including their operation at reactor pressures and temperatures, and in borated coolant—using test setups that replicated actual system conditions and included unique design features like the inadvertent actuation block (IAB). Testing was conducted at a specialized facility using a representative valve assembly to ensure the valves met safety and operational requirements.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "89",
       "hop": 1
     },
-    "nuscale_ch01_0063": {
-      "node_id": "nuscale_ch01_0063",
-      "title": "Emergency Core Cooling System Valve Design Certification Application Demonstration Test",
-      "summary": "This section describes the demonstration test program for the Emergency Core Cooling System (ECCS) valves in the NuScale reactor design. The program aimed to verify the functional performance of the ECCS valves, including their operation at reactor pressures and temperatures and in borated coolant, as well as to test unique features like the inadvertent actuation block (IAB). Testing was conducted at a specialized facility using a test article representative of the reactor recirculation valve (RRV) and included all key valve components.",
+    "nuscale_ch01_0117": {
+      "node_id": "nuscale_ch01_0117",
+      "title": "Figure 1.7-3f: Piping and In strumentation Diagram Legends",
+      "summary": "This section provides the legend for symbols used in NuScale's Piping and Instrumentation Diagrams (P&IDs), detailing the graphical representations for various instruments, sensors, and auxiliary devices such as flow meters, pressure and temperature sensors, and sample probes. It serves as a reference to interpret the P&ID drawings accurately by defining each symbol and its application within the system.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "107",
+      "hop": 1
+    },
+    "nuscale_ch01_0064": {
+      "node_id": "nuscale_ch01_0064",
+      "title": "NuScale Test and Inspection Plans",
+      "summary": "This section describes NuScale’s test and inspection plans for key reactor components, including control rod drive shafts and the Emergency Core Cooling System (ECCS) valves. The tests confirmed operability and performance under various conditions, and a dedicated program was conducted to demonstrate ECCS valve functionality—including unique design features—at reactor operating pressures and temperatures, using specialized test facilities.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "89",
@@ -23,46 +32,23 @@
     "nuscale_ch01_0111": {
       "node_id": "nuscale_ch01_0111",
       "title": "Figure 1.7-2: Instrumentatio n and Controls Symbol Legend",
-      "summary": "This section provides a legend explaining the symbols used for instrumentation and controls in NuScale’s safety analysis diagrams. It defines the logic gate functions, control room indicators, switch types, and other symbols relevant to system status and operations, ensuring clear interpretation of the diagrams. Additionally, it includes notes on piping and instrumentation diagram conventions, such as vent and drain representations.",
+      "summary": "This section provides a legend explaining the symbols used for instrumentation and controls in NuScale’s safety analysis diagrams. It describes the logic gate functions, control room indicators, switch types, and other key symbols, ensuring clear interpretation of system status and control actions in the diagrams. Additionally, it includes notes on piping and instrumentation diagram conventions, such as vent and drain representations.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "101",
       "hop": 1
     },
-    "nuscale_ch01_0117": {
-      "node_id": "nuscale_ch01_0117",
-      "title": "Figure 1.7-3f: Piping and In strumentation Diagram Legends",
-      "summary": "This section provides the legend for piping and instrumentation diagrams (P&IDs) used in the NuScale Final Safety Analysis Report, detailing the standardized symbols and notations for various instruments, probes, flow meters, and accessory devices. It includes representations for sample probes, pressure and temperature sensors, flow measurement devices, and level indicators, ensuring consistent interpretation of P&ID drawings throughout the documentation.",
+    "nuscale_ch01_0112": {
+      "node_id": "nuscale_ch01_0112",
+      "title": "Figure 1.7-3a: Piping and Instrumentation Diagram Legends",
+      "summary": "This section provides the legend for piping and instrumentation diagrams (P&IDs) used in the NuScale Final Safety Analysis Report. It details the standard symbols and notations for various valves, fire and safety equipment, and specialty items, as well as conventions for vents, drains, and flow paths, ensuring consistent interpretation of P&ID drawings. Exceptions and specific system abbreviations are noted directly on the diagrams.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "107",
-      "hop": 1
-    },
-    "nuscale_ch01_0014": {
-      "node_id": "nuscale_ch01_0014",
-      "title": "Acronyms and Abbreviations",
-      "summary": "This section explains the conventions used in the NuScale Final Safety Analysis Report (FSAR) for numbering tables, figures, and pages, as well as the handling of proprietary and sensitive information. Tables and figures are numbered according to their section, and sensitive content is withheld from the public version in compliance with regulatory requirements.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "10",
-      "hop": 1
+      "page_range": "102",
+      "hop": 2
     }
   },
   "edges": [
-    {
-      "source": "nuscale_ch01_0064",
-      "target": "nuscale_ch01_0063",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A and Section B are identical excerpts, both mentioning that RVV stands for reactor vent valves, thus Section A specifies the definition of the abbreviation RRV (likely a typographical error for RVV) as used in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0064",
-      "target": "nuscale_ch01_0117",
-      "relation": "REFERENCES",
-      "confidence": 0.85,
-      "description": "Section A mentions reactor vent valves (RVVs) and reactor recirculation valves (RRVs), while Section B provides diagram legends that likely define abbreviations such as RRV, connecting the abbreviation's use in A to its definition in B."
-    },
     {
       "source": "nuscale_ch01_0063",
       "target": "nuscale_ch01_0117",
@@ -72,17 +58,38 @@
     },
     {
       "source": "nuscale_ch01_0063",
-      "target": "nuscale_ch01_0014",
-      "relation": "SPECIFIES",
+      "target": "nuscale_ch01_0064",
+      "relation": "REFERENCES",
       "confidence": 0.95,
-      "description": "Section A mentions 'reactor vent valves (RVVs)' as part of the ECCS, while Section B is an acronyms and abbreviations section that would define such abbreviations, connecting the use of 'RVV' in A to its definition in B."
+      "description": "Section A defines the abbreviation 'RVVs' as 'reactor vent valves,' which is referenced in Section B in the same context."
     },
     {
       "source": "nuscale_ch01_0117",
-      "target": "nuscale_ch01_0014",
+      "target": "nuscale_ch01_0064",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B defines 'RVVs' as reactor vent valves, which is likely the intended abbreviation RRV in the analysis question, while Section A provides diagram legends but does not define RRV."
+    },
+    {
+      "source": "nuscale_ch01_0112",
+      "target": "nuscale_ch01_0063",
       "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section B defines the abbreviation 'RRV' as 'reactor recirculation valve,' which is referenced in Section A's legend as a system abbreviation placeholder (XXXX), connecting the abbreviation's definition to its use in diagram notation."
+    },
+    {
+      "source": "nuscale_ch01_0112",
+      "target": "nuscale_ch01_0117",
+      "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section B contains the list of acronyms and abbreviations, which is where the definition of 'RRV' would be found, while Section A provides diagram legends but does not define abbreviations."
+      "description": "Section A and Section B both provide legends for Piping and Instrumentation Diagrams (P&IDs), with each section listing symbols and abbreviations used in the diagrams, which are necessary to interpret the meaning of abbreviations such as RRV."
+    },
+    {
+      "source": "nuscale_ch01_0112",
+      "target": "nuscale_ch01_0064",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section B defines RRV as 'reactor recirculation valve,' while Section A provides the legend indicating that 'XXXX' in valve labels corresponds to system abbreviations such as RRV, thus connecting the abbreviation to its meaning."
     }
   ]
 }

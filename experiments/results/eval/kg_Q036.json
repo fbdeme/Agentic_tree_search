@@ -2,103 +2,117 @@
   "question": "What is the volume of the cylindrical section of the PZR region?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0024": {
-      "node_id": "nuscale_ch05_0024",
-      "title": "Pressurizer",
-      "summary": "The pressurizer, integrated into the upper region of the reactor vessel and separated by a baffle plate, regulates reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering reactor trips or safety system actuations, with instrumentation providing real-time pressure and level data to control systems.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "124",
-      "hop": 1
-    },
-    "nuscale_ch05_0023": {
-      "node_id": "nuscale_ch05_0023",
-      "title": "Reactor Coolant System High-Point Vents",
-      "summary": "This section describes the testing and inspection requirements for the DHRS (Decay Heat Removal System) components in the NuScale reactor, ensuring compliance with ASME codes for Class 2 components. It details how actuation valves are exercised during cold shutdown conditions, outlines the necessary valve testing procedures, and specifies that an in-situ DHRS heat removal test will be conducted on the first installed reactor module as part of the initial test program.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "121",
-      "hop": 1
-    },
     "nuscale_ch05_0004": {
       "node_id": "nuscale_ch05_0004",
       "title": "System Description",
-      "summary": "The Reactor Coolant System (RCS) in the NuScale design is responsible for removing noncondensible gases from the pressurizer (PZR) during both normal and emergency operations, and for maintaining the integrity of the reactor coolant pressure boundary to prevent radionuclide release. The RCS, located inside the containment vessel (CNV), includes key components such as the reactor pressure vessel (RPV), integral PZR, and associated piping and controls, and operates primarily by natural circulation to transfer heat from the reactor core to the steam generators (SGs).",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes components such as the reactor pressure vessel, pressurizer, and associated piping and controls. It removes heat from the reactor core to the steam generators using natural circulation, and features systems for removing noncondensible gases and maintaining pressure boundary integrity to prevent radionuclide release. The RCS interfaces with several other systems, including emergency core cooling and chemical control, to ensure safe and efficient operation.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "9",
       "hop": 1
     },
-    "nuscale_ch05_0018": {
-      "node_id": "nuscale_ch05_0018",
-      "title": "References",
-      "summary": "This section outlines the requirements and procedures for inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fasteners for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It emphasizes compliance with specific codes for packaging, handling, and quality assurance, as well as maintaining a controlled environment during shipment to ensure vessel integrity. Key references to industry standards are also provided.",
+    "nuscale_ch05_0014": {
+      "node_id": "nuscale_ch05_0014",
+      "title": "Reactor Vessel",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module's reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel surrounded by a containment vessel. The RPV serves as a critical barrier to fission product release and supports various reactor components, with its materials and fabrication adhering to stringent ASME Boiler and Pressure Vessel Code standards to ensure integrity throughout the plant's design lifetime.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "74",
-      "hop": 1
-    },
-    "nuscale_ch05_0006": {
-      "node_id": "nuscale_ch05_0006",
-      "title": "System Evaluation",
-      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance across various power levels by establishing steady-state parameters for both primary and secondary systems, such as coolant temperatures, flow rates, and pressures. These parameters are calculated using thermal hydraulic software and verified by hand, with uncertainties and design margins considered to ensure efficient operation and safety. The design supports natural circulation with low pressure losses, and uncertainties like SG tube plugging do not affect primary coolant flow determination.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "12",
+      "page_range": "67",
       "hop": 1
     },
     "nuscale_ch05_0005": {
       "node_id": "nuscale_ch05_0005",
       "title": "System Components",
-      "summary": "This section describes key components of the NuScale reactor system. It details the Reactor Pressure Vessel (RPV), which houses the reactor core and supports major systems, and outlines the main Reactor Coolant System (RCS) piping and its connections. The section also briefly introduces the pressurizer (PZR), which is integral to the RPV.",
+      "summary": "This section describes key components of the NuScale reactor system. It details the Reactor Pressure Vessel (RPV), which houses the reactor core and supports major systems, and outlines the main Reactor Coolant System (RCS) piping and its connections. The section also briefly introduces the pressurizer (PZR), emphasizing its integration with the RPV and its role in system operations.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "10",
+      "hop": 1
+    },
+    "nuscale_ch05_0024": {
+      "node_id": "nuscale_ch05_0024",
+      "title": "Pressurizer",
+      "summary": "The pressurizer, integrated into the upper region of the reactor vessel and separated by a baffle plate, regulates Reactor Coolant System (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering reactor trips or safety system actuations, with instrumentation providing real-time pressure and level data to control systems.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "124",
+      "hop": 1
+    },
+    "nuscale_ch05_0018": {
+      "node_id": "nuscale_ch05_0018",
+      "title": "References",
+      "summary": "This section outlines the requirements and procedures for inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fasteners for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It specifies the use of nondestructive examinations, controlled shipping environments, and quality assurance measures to ensure the integrity and safety of the reactor vessel. Key standards cited include the ASME Boiler and Pressure Vessel Code and ASME NQA-1 for quality assurance.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "74",
+      "hop": 1
+    },
+    "nuscale_ch05_0023": {
+      "node_id": "nuscale_ch05_0023",
+      "title": "Reactor Coolant System High-Point Vents",
+      "summary": "This section describes the testing and inspection requirements for the Decay Heat Removal System (DHRS) components in the NuScale reactor, ensuring compliance with ASME codes for Class 2 components. It details how DHRS actuation valves are tested during cold shutdown conditions, outlines the procedures for valve exercising and position verification, and specifies that a one-time in-situ test of the DHRS function will be performed on the first installed reactor module as part of the initial test program.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "121",
       "hop": 1
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0004",
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0014",
       "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A defines the physical boundaries and configuration of the pressurizer region (PZR), which is the specific volume referenced in Section B as the PZR volume for system operations such as degasification and venting."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0006",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section A describes the physical configuration and boundaries of the pressurizer region, which is necessary information for determining the volume of its cylindrical section as asked in the analysis question, while Section B discusses system-level performance criteria without providing specific details about the pressurizer's geometry."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0005",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section A describes the physical configuration and boundaries of the pressurizer region, which is necessary context for understanding the volume of the cylindrical section referenced in the analysis question, while Section B discusses operational procedures involving the PZR water level but does not provide geometric or volumetric data."
+      "confidence": 0.8,
+      "description": "Section A describes the function and operational context of the PZR region within the RCS, while Section B provides the physical configuration and components of the reactor vessel that contains the PZR, connecting them through the shared system (RCS) and the location of the PZR within the RPV."
     },
     {
       "source": "nuscale_ch05_0004",
       "target": "nuscale_ch05_0005",
-      "relation": "SEMANTIC",
+      "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A describes the function and configuration of the PZR region, including the degasification line and RVVs, while Section B details operational procedures involving the PZR water level and venting, both referencing the PZR region but neither providing the volume or design values needed to answer the analysis question."
+      "description": "Section A describes the function and operation of the PZR volume and its degasification line, while Section B details operational steps involving the PZR water level and venting processes, both referencing the PZR region and its management but neither providing the specific volume value requested in the analysis question."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the operational role and connections of the PZR region within the RCS, while Section B provides the physical configuration and boundaries of the pressurizer region, which are necessary to determine the volume of its cylindrical section."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the overall structure and components of the reactor vessel, which includes the pressurizer (PZR), while Section B provides operational details about the PZR water level and pressure management, connecting the physical component described in A to its functional operation relevant for determining the PZR region's volume."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B specifies that the pressurizer is an integral part of the reactor vessel described in Section A, detailing that it comprises the upper region of the vessel above the circulating coolant and is separated by a baffle plate."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0018",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section B references Section A by discussing inspection, shipment, and storage requirements for the Reactor Vessel described in Section A, connecting them through the shared subject of the RPV."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B defines the pressurizer region as the upper part of the reactor vessel, which provides the necessary spatial context for identifying the cylindrical section whose volume is being asked about in the analysis question, while Section A describes operational procedures involving the PZR but does not specify its geometry."
     },
     {
       "source": "nuscale_ch05_0018",
-      "target": "nuscale_ch05_0005",
+      "target": "nuscale_ch05_0023",
       "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A provides references and procedural requirements for the reactor vessel, while Section B describes operational steps involving the PZR water level, with both sections connected through their focus on the handling and operational status of the PZR region as part of the reactor vessel system."
-    },
-    {
-      "source": "nuscale_ch05_0006",
-      "target": "nuscale_ch05_0005",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.7,
-      "description": "Section B describes operational procedures that involve adjusting the PZR water level, which is a prerequisite for determining the volume of the cylindrical section of the PZR region as asked in the analysis question, while Section A provides general system evaluation context."
+      "confidence": 0.8,
+      "description": "Section A and Section B both discuss inspection and testing requirements for reactor vessel and reactor coolant system components, referencing compliance with ASME BPVC codes, thereby connecting through shared regulatory standards for component integrity."
     }
   ]
 }

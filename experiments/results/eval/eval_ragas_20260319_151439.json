@@ -1,0 +1,165 @@
+{
+  "timestamp": "2026-03-19T15:14:39.756130",
+  "evaluation_framework": "RAGAs v0.4",
+  "config": {
+    "model": "gpt-4.1",
+    "evaluator_model": "gpt-4.1",
+    "embedding_model": "text-embedding-3-small",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 5,
+    "errors": 0
+  },
+  "metrics_description": {
+    "faithfulness": "Fraction of claims in the answer that are supported by the retrieved context (0-1)",
+    "answer_relevancy": "How relevant the answer is to the question, measured by reverse question generation (0-1)",
+    "context_recall": "Fraction of expected answer sentences supported by retrieved context (0-1)",
+    "factual_correctness": "Factual overlap between agent answer and expected answer (0-1)",
+    "keyword_hit": "Fraction of expected keywords present in the agent answer (0-1)"
+  },
+  "summary": {
+    "faithfulness": 0.9286,
+    "answer_relevancy": 0.0,
+    "context_recall": 0.0,
+    "factual_correctness": 0.0,
+    "keyword_hit": 0.3164
+  },
+  "by_type": {
+    "table_only": {
+      "count": 5,
+      "faithfulness": 0.9286,
+      "answer_relevancy": 0.0,
+      "context_recall": 0.0,
+      "factual_correctness": 0.0,
+      "keyword_hit": 0.3164
+    }
+  },
+  "results": [
+    {
+      "id": "Q031",
+      "type": "table_only",
+      "question": "What is the nominal volume of the Hot Leg?",
+      "expected_answer": "The nominal volume of the Hot Leg (lower riser, riser transition, upper riser, riser supports) is 635 ft³.",
+      "agent_answer": "**Core Conclusion:**  \nThe nominal volume of the Hot Leg is **not specified** in the provided knowledge graph or referenced figures/tables.\n\n**Supporting Evidence:**  \n- The System Evaluation ([nuscale_ch05_0006]) and System Description ([nuscale_ch05_0004]) nodes discuss the establishment of steady-state parameters and describe the Reactor Coolant System (RCS), but do not provide explicit values for the Hot Leg volume.\n- The Design Basis ([nuscale_ch05_0003]) outlines the RCS configuration and mentions the Hot Leg as a component, but does not specify its nominal volume.\n- The attached figures and tables focus on the pressurizer, steam generators, and general RCS layout, but none display or list the Hot Leg volume.\n\n**Uncertainties:**  \n- The nominal volume of the Hot Leg may be specified elsewhere in the full document, but it is not present in the sections or images provided in this exploration trajectory.\n\n**Summary:**  \nBased on the current knowledge graph and referenced materials, the nominal volume of the Hot Leg cannot be determined. No explicit value or table entry for this parameter is available in the provided context.",
+      "faithfulness": 0.7857,
+      "answer_relevancy": 0.0,
+      "context_recall": 0.0,
+      "factual_correctness": 0.0,
+      "keyword_hit": 0.25,
+      "kg_nodes": 5,
+      "kg_edges": 8,
+      "hops_used": 3,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 47.9,
+      "eval_sec": 29.1,
+      "total_sec": 77.0,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0024] Pressurizer | node: [nuscale_ch05_0006] System Evaluation | node: [nuscale_ch05_0025] References | node: [nuscale_ch05_0004] System Description | edge: REFERENCES | edge: SUPPORTS | edge: REFERENCES | edge: SPECIFIES | edge: SPECIFIES",
+        "Hop 2: no results",
+        "Hop 3: node: [nuscale_ch05_0003] Design Basis | edge: SPECIFIES | edge: IS_PREREQUISITE_OF | edge: SPECIFIES",
+        "Hop 4: no results"
+      ]
+    },
+    {
+      "id": "Q032",
+      "type": "table_only",
+      "question": "What is the nominal volume of the Cold Leg?",
+      "expected_answer": "The nominal volume of the Cold Leg (feedwater plenums, downcomer transition, downcomer, core barrel, RPV bottom head, flow diverter) is 578 ft³.",
+      "agent_answer": "**Core Conclusion:**  \nThe nominal volume of the Cold Leg is **not explicitly stated** in the provided knowledge graph or referenced figures/tables.\n\n**Supporting Evidence:**  \n- The knowledge graph nodes ([nuscale_ch05_0006] System Evaluation, [nuscale_ch05_0004] System Description, [nuscale_ch05_0005] System Components) discuss the establishment of steady-state parameters and describe the Reactor Coolant System (RCS) and its components, including the Cold Leg, but do **not specify the nominal volume**.\n- The relationships (e.g., “[nuscale_ch05_0006] --[SPECIFIES]--> [nuscale_ch05_0004]”) indicate that steady-state values for system parameters like the Cold Leg volume are considered, but the **actual value is not provided** in the text or tables.\n- The attached figures and tables focus on the pressurizer, steam generators, and general RCS configuration, but **do not include a value for the Cold Leg volume**.\n\n**Uncertainties:**  \n- The nominal volume of the Cold Leg may be specified elsewhere in the full document, but it is **not present in the current knowledge graph or visual materials** provided.\n\n**Summary:**  \nThe nominal volume of the Cold Leg cannot be determined from the current evidence (nodes: nuscale_ch05_0006, nuscale_ch05_0004, nuscale_ch05_0005; edges: SPECIFIES, REFERENCES). No explicit value or table entry for the Cold Leg volume is available in the supplied context.",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.0,
+      "context_recall": 0.0,
+      "factual_correctness": 0.0,
+      "keyword_hit": 0.333,
+      "kg_nodes": 6,
+      "kg_edges": 11,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 50.7,
+      "eval_sec": 32.5,
+      "total_sec": 83.2,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0024] Pressurizer | node: [nuscale_ch05_0006] System Evaluation | node: [nuscale_ch05_0025] References | node: [nuscale_ch05_0004] System Description | edge: REFERENCES | edge: SUPPORTS | edge: REFERENCES | edge: SPECIFIES | edge: SPECIFIES",
+        "Hop 2: node: [nuscale_ch05_0003] Design Basis | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES",
+        "Hop 3: no results",
+        "Hop 4: node: [nuscale_ch05_0005] System Components | edge: REFERENCES | edge: SPECIFIES | edge: SPECIFIES"
+      ]
+    },
+    {
+      "id": "Q033",
+      "type": "table_only",
+      "question": "What is the volume of the Core Region?",
+      "expected_answer": "The volume of the core region (fuel assembly region and reflector cooling channels) is 89 ft³.",
+      "agent_answer": "**Core Conclusion:**  \nThe specific volume of the Core Region is not provided in the constructed knowledge graph or referenced figures/tables.\n\n**Supporting Evidence:**  \n- The knowledge graph nodes ([nuscale_ch05_0024], [nuscale_ch05_0003], [nuscale_ch05_0006], [nuscale_ch05_0004]) describe the physical separation of the Core Region from the Pressurizer Region by the baffle plate and outline the system’s design and evaluation, but do not state a numerical value for the Core Region volume.\n- Figure 5.1-1 visually identifies the “Reactor Core Region” within the reactor vessel, showing its location and boundaries, but does not provide a volume.\n- No tables or figures among the provided images list the Core Region volume.\n\n**Uncertainties:**  \n- The absence of a direct value for the Core Region volume in the available documentation means the answer cannot be more specific without additional data.\n\n**Summary:**  \nThe volume of the Core Region is not specified in the provided documentation or figures (nodes: nuscale_ch05_0024, nuscale_ch05_0003, nuscale_ch05_0006, nuscale_ch05_0004). The Core Region is defined spatially (see Figure 5.1-1), but its exact volume is not given.",
+      "faithfulness": null,
+      "answer_relevancy": 0.0,
+      "context_recall": 0.0,
+      "factual_correctness": 0.0,
+      "keyword_hit": 0.333,
+      "kg_nodes": 4,
+      "kg_edges": 5,
+      "hops_used": 1,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 41.9,
+      "eval_sec": 48.7,
+      "total_sec": 90.6,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0024] Pressurizer | node: [nuscale_ch05_0003] Design Basis | node: [nuscale_ch05_0006] System Evaluation | node: [nuscale_ch05_0004] System Description | edge: SPECIFIES | edge: IS_PREREQUISITE_OF | edge: SUPPORTS | edge: SPECIFIES | edge: SPECIFIES",
+        "Hop 2: no results",
+        "Hop 3: no results",
+        "Hop 4: no results"
+      ]
+    },
+    {
+      "id": "Q034",
+      "type": "table_only",
+      "question": "What is the volume of the SG region?",
+      "expected_answer": "The volume of the SG Region is 621 ft³.",
+      "agent_answer": "**Core Conclusion:**  \nThe volume of the SG (Steam Generator) region is not explicitly stated in the provided knowledge graph or referenced figures/tables.\n\n**Supporting Evidence:**  \n- The knowledge graph nodes ([nuscale_ch05_0004], [nuscale_ch05_0005], [nuscale_ch05_0006], [nuscale_ch05_0024], [nuscale_ch05_0025]) describe the system layout, components, and pressurizer details, but do not provide a numerical value for the SG region volume.\n- Figures such as Figure 5.4-2 (“Configuration of Steam Generators in Upper Reactor Pressure Vessel Section”) visually depict the SG region’s location and configuration, but do not include volumetric data.\n- Table 5.4-6 and Table 5.4-7 provide pressurizer design and heater parameters, not SG region volume.\n- The semantic and reference relationships (e.g., [nuscale_ch05_0006] --[REFERENCES]--> [nuscale_ch05_0005]) indicate that further details about the SGs may be in Section 5.4, but the actual volume is not present in the extracted content.\n\n**Uncertainties:**  \n- The exact volume of the SG region cannot be determined from the current knowledge graph or attached figures/tables.\n- There may be additional information in other sections not included in the current exploration.\n\n**Summary:**  \nThe SG region’s volume is not specified in the provided documentation (nodes: nuscale_ch05_0004, nuscale_ch05_0005, nuscale_ch05_0006, nuscale_ch05_0024, nuscale_ch05_0025). Visuals confirm the SG region’s location but do not provide a volume value. Further document review is needed for this specific data.",
+      "faithfulness": null,
+      "answer_relevancy": 0.0,
+      "context_recall": 0.0,
+      "factual_correctness": 0.0,
+      "keyword_hit": 0.333,
+      "kg_nodes": 5,
+      "kg_edges": 8,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 44.7,
+      "eval_sec": 52.2,
+      "total_sec": 97.0,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0024] Pressurizer | node: [nuscale_ch05_0006] System Evaluation | node: [nuscale_ch05_0005] System Components | node: [nuscale_ch05_0004] System Description | edge: REFERENCES | edge: SEMANTIC | edge: SUPPORTS | edge: REFERENCES | edge: REFERENCES",
+        "Hop 2: no results",
+        "Hop 3: no results",
+        "Hop 4: node: [nuscale_ch05_0025] References | edge: SPECIFIES | edge: REFERENCES | edge: SEMANTIC"
+      ]
+    },
+    {
+      "id": "Q035",
+      "type": "table_only",
+      "question": "What is the total volume of the PZR region?",
+      "expected_answer": "The volume of the PZR region (main steam plenums, PZR, RPV top head) is 578 ft³.",
+      "agent_answer": "**Core Conclusion:**  \nThe total volume of the PZR (pressurizer) region is not explicitly stated in the provided knowledge graph or referenced figures/tables.\n\n**Supporting Evidence:**  \n- The knowledge graph nodes ([nuscale_ch05_0024], [nuscale_ch05_0004], [nuscale_ch05_0005]) describe the PZR as being integrated into the upper region of the reactor vessel and provide details on its function, configuration, and instrumentation, but do not specify its total volume.\n- Figures (e.g., Figure 5.1-1, Figure 5.4-17) visually depict the PZR region and its boundaries within the reactor vessel, confirming its location and integration, but do not provide volumetric data.\n- Table 5.4-6 and Table 5.4-7 list design parameters (pressure, temperature, heater capacity) but do not include the PZR region’s total volume.\n\n**Uncertainties:**  \n- There is no direct numerical value or calculation for the total PZR region volume in the current knowledge graph or attached figures/tables.\n- The absence of this data means the answer cannot be provided with certainty from the available evidence.\n\n**Summary:**  \nThe total volume of the PZR region is not specified in the provided documentation ([nuscale_ch05_0024], [nuscale_ch05_0004], [nuscale_ch05_0005], Figures 5.1-1, 5.4-17, Tables 5.4-6, 5.4-7). Further documentation or a specific section with volumetric data is required to answer this question definitively.",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.0,
+      "context_recall": 0.0,
+      "factual_correctness": 0.0,
+      "keyword_hit": 0.333,
+      "kg_nodes": 7,
+      "kg_edges": 8,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 60.9,
+      "eval_sec": 35.4,
+      "total_sec": 96.3,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0024] Pressurizer | node: [nuscale_ch05_0004] System Description | node: [nuscale_ch05_0005] System Components | node: [nuscale_ch05_0023] Reactor Coolant System High-Point Vents | node: [nuscale_ch05_0006] System Evaluation | edge: REFERENCES | edge: SEMANTIC | edge: SEMANTIC | edge: IS_PREREQUISITE_OF",
+        "Hop 2: node: [nuscale_ch05_0002] Summary Description | edge: SPECIFIES | edge: SPECIFIES | edge: SUPPORTS",
+        "Hop 3: no results",
+        "Hop 4: node: [nuscale_ch05_0012] Reactor Coolant Pressure Boundary Leakag | edge: IS_PREREQUISITE_OF"
+      ]
+    }
+  ]
+}

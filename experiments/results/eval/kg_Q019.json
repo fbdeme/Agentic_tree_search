@@ -14,7 +14,7 @@
     "nuscale_ch05_0023": {
       "node_id": "nuscale_ch05_0023",
       "title": "Reactor Coolant System High-Point Vents",
-      "summary": "This section describes the testing and inspection requirements for the Decay Heat Removal System (DHRS) components in the NuScale reactor, ensuring compliance with ASME codes for Class 2 components. It details how DHRS actuation valves are tested during cold shutdown conditions, outlines the procedures for valve exercising and position verification, and specifies that a one-time in-situ test of the DHRS function will be performed on the first installed reactor module as part of the initial test program.",
+      "summary": "This section describes the testing and inspection requirements for the DHRS (Decay Heat Removal System) components in the NuScale reactor, ensuring compliance with ASME codes for Class 2 components. It details how actuation valves are exercised during cold shutdown conditions, outlines the necessary valve testing procedures, and specifies that an in-situ DHRS heat removal test will be conducted on the first installed reactor module as part of the initial test program.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "121",
@@ -23,20 +23,20 @@
     "nuscale_ch05_0014": {
       "node_id": "nuscale_ch05_0014",
       "title": "Reactor Vessel",
-      "summary": "The Reactor Vessel section describes the NuScale Power Module's reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel surrounded by a containment vessel. The RPV serves as a key pressure-retaining component and barrier to fission product release, supporting various reactor systems and components. Materials for the RPV are selected according to ASME Boiler and Pressure Vessel Code standards to ensure integrity and safety throughout the plant's design lifetime.",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module's reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel surrounded by a containment vessel. The RPV serves as a critical barrier to fission product release and provides structural support and attachment points for various reactor components, with its materials and fabrication adhering to strict ASME Boiler and Pressure Vessel Code standards to ensure long-term integrity.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "67",
-      "hop": 2
+      "hop": 3
     },
     "nuscale_ch05_0002": {
       "node_id": "nuscale_ch05_0002",
       "title": "Summary Description",
-      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve independent modules, maintains proper coolant chemistry and boron concentration, and is engineered to prevent fuel design limit violations during all operating conditions.",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation, eliminating the need for pumps or external piping, and is integrated within each NuScale Power Module. The RCS is designed to safely transfer heat from the reactor core, maintain proper coolant chemistry and boron concentration, and ensure fuel design limits are not exceeded during all operational conditions.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "8",
-      "hop": 2
+      "hop": 3
     }
   },
   "edges": [
@@ -45,7 +45,7 @@
       "target": "nuscale_ch05_0024",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A identifies the pressurizer as a component within the reactor vessel, while Section B provides specific details about the pressurizer's location and its functional integration with the reactor vessel, connecting them through the physical and operational relationship within the reactor coolant system."
+      "description": "Section A identifies the pressurizer as a component within the reactor vessel, while Section B provides specific details about the pressurizer's location, structure, and its principal function within the reactor vessel."
     },
     {
       "source": "nuscale_ch05_0002",
@@ -58,8 +58,8 @@
       "source": "nuscale_ch05_0014",
       "target": "nuscale_ch05_0002",
       "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A identifies the pressurizer as a component within the reactor pressure vessel, while Section B specifies that the pressurizer is an integral part of the reactor coolant system, thus Section B provides a broader system context for the component described in Section A."
+      "confidence": 0.95,
+      "description": "Section A identifies the pressurizer as a component within the reactor pressure vessel, while Section B specifies that the pressurizer is an integral part of the reactor coolant system, connecting their roles in the system's design."
     }
   ]
 }

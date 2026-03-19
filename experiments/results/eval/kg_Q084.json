@@ -2,89 +2,89 @@
   "question": "Explain the material of the steam generator tubes and their heat exchange performance.",
   "current_hop": 4,
   "nodes": {
+    "nuscale_ch05_0002": {
+      "node_id": "nuscale_ch05_0002",
+      "title": "Summary Description",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve independent modules, maintains proper coolant chemistry, and ensures uniform boron concentration to protect fuel integrity during all operating conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 1
+    },
     "nuscale_ch05_0022": {
       "node_id": "nuscale_ch05_0022",
       "title": "Decay Heat Removal System",
-      "summary": "The Decay Heat Removal System (DHRS) is an engineered safety feature designed to remove residual and core decay heat from the reactor after shutdown, ensuring safe cooling without external power during non-LOCA events. It maintains the reactor coolant system (RCS) temperature below 420°F within 36 hours, preventing fuel or pressure boundary limits from being exceeded, and its reliability and risk significance are evaluated through established programs. The DHRS operates independently of the Emergency Core Cooling System (ECCS), but both can function together if needed.",
+      "summary": "The Decay Heat Removal System (DHRS) is an engineered safety feature designed to remove residual and core decay heat during non-LOCA events when normal cooling is unavailable, ensuring safe shutdown of the NuScale Power Module without external power. The system maintains the reactor coolant system (RCS) temperature below 420°F within 36 hours after an initiating event, preventing fuel or pressure boundary limits from being exceeded, and its reliability and risk significance are evaluated through established programs and criteria.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "106",
       "hop": 1
     },
-    "nuscale_ch05_0025": {
-      "node_id": "nuscale_ch05_0025",
-      "title": "References",
-      "summary": "This section details the materials used in the NuScale reactor pressurizer, specifying the alloys and standards for each component, such as the baffle plate, heater bundles, cover plate, and bolting. It emphasizes the use of corrosion-resistant materials compliant with ASME BPVC Section II specifications to ensure compatibility and durability in the reactor coolant system.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "130",
-      "hop": 1
-    },
     "nuscale_ch05_0020": {
       "node_id": "nuscale_ch05_0020",
       "title": "Steam Generators",
-      "summary": "The steam generators (SGs) in each NuScale Power Module are integrated within the reactor pressure vessel (RPV), which also houses other key components such as the pressurizer and safety valves. The SG system includes feedwater and main steam piping, plenum access ports, and relief valves, with the RPV itself forming the outer pressure boundary for the SGs. The design ensures separation between the primary and secondary sides, with specific components forming the reactor coolant pressure boundary.",
+      "summary": "The steam generators (SGs) in the NuScale Power Module are integrated within the reactor pressure vessel (RPV), which also houses other key components such as the pressurizer and safety valves. The SG system includes feedwater and main steam piping, thermal relief valves, and access ports, with the RPV itself forming the outer pressure boundary for the SGs and their associated components.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "91",
       "hop": 1
     },
-    "nuscale_ch05_0002": {
-      "node_id": "nuscale_ch05_0002",
-      "title": "Summary Description",
-      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, relying on integrated components within each NuScale Power Module (NPM). The RCS is designed to safely transfer heat from the reactor core, maintain proper coolant chemistry and boron concentration, and ensure fuel design limits are not exceeded during all operating conditions.",
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the construction of the NuScale pressurizer and its components, specifying alloys and standards for each part to ensure corrosion resistance and compatibility with operating environments. It references relevant sections of the BPVC (Boiler and Pressure Vessel Code) and lists the specific alloys and material specifications for the baffle plate, heater bundles, cover plate, heater sheaths, and bolting.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "8",
+      "page_range": "130",
       "hop": 1
     },
     "nuscale_ch05_0003": {
       "node_id": "nuscale_ch05_0003",
       "title": "Design Basis",
-      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain fuel integrity, minimize solid deposits, and ensure uniform boron concentration under all operating conditions.",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain fuel integrity, minimize solid deposits, and ensure uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "8",
       "hop": 2
     },
-    "nuscale_ch05_0013": {
-      "node_id": "nuscale_ch05_0013",
-      "title": "References",
-      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as tables summarizing relevant ASME code cases for reactor components.",
+    "nuscale_ch05_0019": {
+      "node_id": "nuscale_ch05_0019",
+      "title": "Reactor Coolant System Component and Subsystem Design",
+      "summary": "This section describes the design of the NuScale Power Module’s Reactor Coolant System (RCS) components and subsystems, including the reactor pressure vessel, steam generators, safety and emergency valves, and associated piping. It details how the steam generators are integrated into the reactor vessel, forming part of the reactor coolant pressure boundary, and outlines the separation between the primary and secondary sides within the system.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "46",
-      "hop": 2
+      "page_range": "91",
+      "hop": 3
     }
   },
   "edges": [
     {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0022",
+      "relation": "LEADS_TO",
+      "confidence": 0.8,
+      "description": "Section A describes the overall reactor coolant system, which includes the steam generator tubes as part of its components, while Section B discusses the decay heat removal system that relies on the reactor coolant system (and thus the steam generator tubes) for transferring heat during shutdown scenarios."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the reactor coolant system, which includes the steam generators mentioned in Section B, while Section B gives specific details about the components and design of the steam generators within that system."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the reactor coolant system, while Section B references specific sections where the materials of certain components (including those relevant to the steam generator) are described in detail, thus connecting the summary to the detailed material specifications."
+    },
+    {
       "source": "nuscale_ch05_0022",
       "target": "nuscale_ch05_0020",
       "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section B identifies the steam generators as components within the reactor coolant system, which Section A describes as being cooled by the decay heat removal system, thus linking the steam generators' material and heat exchange performance to the DHRS's ability to remove decay heat."
-    },
-    {
-      "source": "nuscale_ch05_0022",
-      "target": "nuscale_ch05_0002",
-      "relation": "REFERENCES",
-      "confidence": 0.8,
-      "description": "Section A describes the function and design basis of the Decay Heat Removal System, which relies on the Reactor Coolant System detailed in Section B for primary coolant circulation, establishing that the DHRS's performance depends on the RCS's configuration and components such as the steam generator tubes."
-    },
-    {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0002",
-      "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A provides detailed material specifications for pressurizer components, while Section B gives a general overview of the reactor coolant system, including the pressurizer as one of its subsystems."
-    },
-    {
-      "source": "nuscale_ch05_0020",
-      "target": "nuscale_ch05_0002",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides detailed information about the components within the reactor pressure vessel, including the steam generators, while Section B gives a general overview of the reactor coolant system and its subsystems, establishing the context in which the steam generators operate."
+      "description": "Section B identifies the steam generators as components within the reactor coolant system that are directly connected to the decay heat removal system described in Section A, establishing that the material and performance of the steam generator tubes are integral to the DHRS's ability to remove decay heat as required."
     },
     {
       "source": "nuscale_ch05_0003",
@@ -95,45 +95,31 @@
     },
     {
       "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch05_0025",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A provides a general overview of the reactor coolant system, while Section B references specific sections for material details of pressurizer components, indicating that Section B specifies where to find detailed material information for components broadly described in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0003",
       "target": "nuscale_ch05_0020",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A provides a general overview of the reactor coolant system, while Section B specifies the components within the system, including the steam generators relevant to the analysis question."
+      "description": "Section A provides a general overview of the reactor coolant system, while Section B specifies the inclusion and design details of the steam generators within that system, connecting the general system description to the specific components relevant to the analysis question."
     },
     {
-      "source": "nuscale_ch05_0013",
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides detailed design information about the steam generators as components within the reactor coolant system, while Section B gives a general overview of the reactor coolant system and its subsystems, including the steam generators."
+    },
+    {
+      "source": "nuscale_ch05_0019",
       "target": "nuscale_ch05_0022",
-      "relation": "SUPPORTS",
+      "relation": "LEADS_TO",
       "confidence": 0.85,
-      "description": "Section A lists references that include material reliability and chemistry guidelines relevant to the steam generator tubes, while Section B describes the Decay Heat Removal System's reliance on the heat exchange performance of these tubes to achieve safe shutdown, connecting material properties to system performance."
+      "description": "Section A describes the components of the reactor coolant system, including the steam generators, while Section B explains the function of the decay heat removal system, which relies on the steam generators for heat exchange to remove decay heat."
     },
     {
-      "source": "nuscale_ch05_0013",
-      "target": "nuscale_ch05_0025",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section B references Section 5.2, which is detailed in Section A, to specify the material of the RPV upper shell and upper head, thereby connecting the material specifications across both sections."
-    },
-    {
-      "source": "nuscale_ch05_0013",
+      "source": "nuscale_ch05_0019",
       "target": "nuscale_ch05_0020",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A provides references to material standards and reliability guidelines that are relevant to the material selection and performance of the steam generator tubes described in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch05_0013",
-      "relation": "REFERENCES",
-      "confidence": 0.85,
-      "description": "Section A provides a general description of the reactor coolant system design, while Section B lists references that include material reliability and chemistry guidelines relevant to the selection and performance of steam generator tube materials."
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the reactor coolant system components, including the steam generators, while Section B focuses specifically on the steam generators, which are one of the components listed in Section A."
     }
   ]
 }

@@ -5,16 +5,16 @@
     "nuscale_ch01_0110": {
       "node_id": "nuscale_ch01_0110",
       "title": "Figure 1.7-1b: Electrical Symbols",
-      "summary": "This section provides a comprehensive legend of electrical symbols and abbreviations used in NuScale’s Final Safety Analysis Report drawings, including representations for switches, relays, transformers, and logic gates. It also explains the meanings of various indicator lights, control devices, and logic outputs, ensuring clarity in interpreting electrical and instrumentation diagrams.",
+      "summary": "This section provides a comprehensive legend of electrical symbols and abbreviations used in NuScale’s Final Safety Analysis Report drawings, including representations for switches, relays, indicators, and logic gates. It explains the meaning of each symbol and describes the logic functions (AND, OR, NOT, bistable outputs) used in instrumentation and control diagrams.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "100",
       "hop": 1
     },
-    "nuscale_ch01_0355": {
-      "node_id": "nuscale_ch01_0355",
-      "title": "SRP 9.3.3, Rev 3: Equipment and Floor Drainage SystemII.2 Environmental and Dynamic Effects",
-      "summary": "The section confirms that the NuScale equipment and floor drainage system meets the regulatory requirements for protection against environmental and dynamic effects, with no exceptions noted. The system is designed to conform fully to the relevant criteria, ensuring safety and compliance with NRC standards.",
+    "nuscale_ch01_0354": {
+      "node_id": "nuscale_ch01_0354",
+      "title": "SRP 9.3.3, Rev 3: Equipment and Floor Drainage SystemII.1 Protection Against Natural Phenomena",
+      "summary": "The section confirms that the NuScale equipment and floor drainage system meets the regulatory criteria for protection against natural phenomena, with full conformance noted and no exceptions. The system is designed to withstand environmental and dynamic effects, and it does not allow any portion of the drain system to penetrate the containment barrier, ensuring control of radioactive material releases.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "250",
@@ -23,16 +23,16 @@
     "nuscale_ch01_0038": {
       "node_id": "nuscale_ch01_0038",
       "title": "Main Control Room",
-      "summary": "The Main Control Room (MCR) is located below grade in the Control Room Building (CRB) and includes various support spaces such as offices, conference rooms, and equipment rooms. It houses control panels for all installed NuScale Power Modules (NPMs), allowing reactor operators to monitor and control multiple NPMs using digital control systems that ensure independence between safety and nonsafety systems. The MCR provides comprehensive plant information, alarms, and controls to support effective monitoring and diagnostics.",
+      "summary": "The Main Control Room (MCR) is located below grade in the Control Room Building (CRB) and includes various support spaces such as offices, conference rooms, and equipment rooms. It houses control panels for all installed NuScale Power Modules (NPMs), allowing reactor operators to monitor and control multiple NPMs using digital control systems that ensure independence between safety and nonsafety systems. The MCR provides comprehensive plant information, alarms, and controls for effective monitoring and diagnostics.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "39",
       "hop": 1
     },
-    "nuscale_ch01_0354": {
-      "node_id": "nuscale_ch01_0354",
-      "title": "SRP 9.3.3, Rev 3: Equipment and Floor Drainage SystemII.1 Protection Against Natural Phenomena",
-      "summary": "The section confirms that the NuScale equipment and floor drainage system meets the regulatory criteria for protection against natural phenomena, with full conformance noted and no exceptions. The system is designed to prevent environmental and dynamic effects, and ensures that no part of the drain system penetrates the containment barrier, thereby controlling the release of radioactive material.",
+    "nuscale_ch01_0355": {
+      "node_id": "nuscale_ch01_0355",
+      "title": "SRP 9.3.3, Rev 3: Equipment and Floor Drainage SystemII.2 Environmental and Dynamic Effects",
+      "summary": "The section confirms that the NuScale equipment and floor drainage system meets the regulatory requirements for protection against environmental and dynamic effects, with no exceptions noted. It states that the system conforms to the relevant criteria, ensuring safety and compliance with established standards.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "250",
@@ -41,25 +41,18 @@
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0355",
-      "target": "nuscale_ch01_0038",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A discusses environmental and dynamic effects relevant to equipment and floor drainage systems, which are part of the broader facility infrastructure that includes the operating floor, while Section B describes the spatial layout and associated rooms of the Main Control Room, which is located in proximity to or below the operating floor, thus providing contextual information about the plant areas connected to the operating floor."
-    },
-    {
-      "source": "nuscale_ch01_0355",
-      "target": "nuscale_ch01_0354",
+      "source": "nuscale_ch01_0354",
+      "target": "nuscale_ch01_0355",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A discusses the environmental and dynamic effects relevant to the equipment and floor drainage system on the operating floor, while Section B addresses the protection of the operating floor against natural phenomena, both referencing the same system and regulatory criteria to describe different required characteristics of the operating floor."
+      "description": "Section A addresses protection of the operating floor against natural phenomena, while Section B addresses the operating floor's response to environmental and dynamic effects, both contributing specific safety-related characteristics relevant to the analysis question."
     },
     {
       "source": "nuscale_ch01_0038",
-      "target": "nuscale_ch01_0354",
-      "relation": "SEMANTIC",
+      "target": "nuscale_ch01_0355",
+      "relation": "SUPPORTS",
       "confidence": 0.7,
-      "description": "Section A describes the location and associated spaces of the Main Control Room, which is situated below grade and distinct from the Operating Floor, while Section B outlines regulatory criteria for equipment and floor drainage systems that would apply to areas like the Operating Floor, connecting them through the context of facility layout and regulatory conformance."
+      "description": "Section A describes the location and associated spaces of the Main Control Room, which is below grade and not on the Operating Floor, while Section B discusses regulatory criteria for equipment and floor drainage systems relevant to various plant areas, including the Operating Floor, thus Section A provides contextual information that helps distinguish the Operating Floor from other plant areas referenced in Section B."
     }
   ]
 }

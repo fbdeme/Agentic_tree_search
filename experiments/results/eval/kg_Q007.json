@@ -2,10 +2,19 @@
   "question": "How is the reactor coolant circulation conducted in the NuScale NPM?",
   "current_hop": 4,
   "nodes": {
+    "nuscale_ch05_0006": {
+      "node_id": "nuscale_ch05_0006",
+      "title": "System Evaluation",
+      "summary": "This section describes the evaluation of the NuScale Power Plant's system performance, focusing on optimizing steady-state parameters such as coolant temperatures, flow rates, and pressure to maximize electrical generation and maintain safety margins. Calculations using thermal hydraulic software and hand verification account for uncertainties and ensure the natural circulation design is effective, with low pressure losses and robust performance across different operating conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "12",
+      "hop": 1
+    },
     "nuscale_ch05_0003": {
       "node_id": "nuscale_ch05_0003",
       "title": "Design Basis",
-      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain proper coolant flow, water chemistry, and boron concentration to protect fuel integrity and support safe operation under normal and transient conditions.",
+      "summary": "The Design Basis section describes the NuScale reactor coolant system (RCS), which uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator. The RCS is designed to ensure safe and efficient cooling, maintain water chemistry, and provide uniform boron concentration under all operating conditions, thereby protecting fuel integrity during normal and off-normal events.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "8",
@@ -14,103 +23,124 @@
     "nuscale_ch05_0002": {
       "node_id": "nuscale_ch05_0002",
       "title": "Summary Description",
-      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve modules, maintains proper coolant chemistry and boron concentration, and is engineered to prevent fuel design limit violations during all operational conditions.",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve independent modules, maintains proper coolant chemistry and boron concentration, and is engineered to prevent fuel design limit violations during all operational conditions.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "8",
       "hop": 1
     },
-    "nuscale_ch05_0023": {
-      "node_id": "nuscale_ch05_0023",
-      "title": "Reactor Coolant System High-Point Vents",
-      "summary": "This section outlines the testing and inspection requirements for the DHRS (Decay Heat Removal System) components in the NuScale reactor, ensuring compliance with ASME codes for Class 2 components. It specifies that DHRS actuation valves are exercised during cold shutdown conditions, and details the procedures for valve testing, position verification, and a one-time in-situ test of the DHRS function during initial startup.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "121",
-      "hop": 2
-    },
-    "nuscale_ch05_0006": {
-      "node_id": "nuscale_ch05_0006",
-      "title": "System Evaluation",
-      "summary": "This section describes the evaluation of the NuScale Power Plant’s systems to optimize performance across various power levels. Key operational parameters—such as coolant temperatures, flow rates, and water levels—are established and verified using both software and manual calculations, accounting for uncertainties and design requirements. The system is designed for low pressure losses to support natural circulation, and uncertainties related to steam generator tube plugging do not affect primary coolant flow rate determination.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "12",
-      "hop": 2
-    },
     "nuscale_ch05_0005": {
       "node_id": "nuscale_ch05_0005",
       "title": "System Components",
-      "summary": "This section describes the main components of the NuScale reactor system, focusing on the Reactor Pressure Vessel (RPV), Reactor Coolant System (RCS) piping, and the Pressurizer (PZR). The RPV serves as a primary barrier to fission product release and houses key reactor internals, while the RCS piping connects various system elements, and the PZR is integrated into the RPV to help control system pressure. Each component's functions and connections are briefly outlined, with references to further detailed sections.",
+      "summary": "This section describes the main components of the NuScale reactor system, focusing on the Reactor Pressure Vessel (RPV), Reactor Coolant System (RCS) piping, and the Pressurizer (PZR). The RPV serves as a primary barrier to fission product release and houses key reactor internals, while the RCS piping connects various system components and the PZR is integrated into the RPV to help control system pressure. Each component's functions and connections are briefly outlined, with references to further detailed sections.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "10",
+      "hop": 1
+    },
+    "nuscale_ch05_0024": {
+      "node_id": "nuscale_ch05_0024",
+      "title": "Pressurizer",
+      "summary": "The pressurizer in the NuScale reactor is integrated into the upper region of the reactor vessel and functions to regulate reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering reactor trips or safety system actuations, with instrumentation providing continuous monitoring and control.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "124",
+      "hop": 2
+    },
+    "nuscale_ch05_0023": {
+      "node_id": "nuscale_ch05_0023",
+      "title": "Reactor Coolant System High-Point Vents",
+      "summary": "This section outlines the testing and inspection requirements for the Reactor Coolant System’s DHRS (Decay Heat Removal System) components, ensuring compliance with ASME codes for Class 2 components. It specifies that DHRS actuation valves are exercised during cold shutdown conditions, with additional testing for valve position and actuator power, and includes a one-time in-situ test of the DHRS function during initial startup of the first reactor module.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "121",
       "hop": 2
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0023",
-      "target": "nuscale_ch05_0003",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section B describes the overall reactor coolant circulation method (natural circulation) in the NuScale NPM, while Section A details inspection and classification requirements for components (such as DHRS valves) that are part of the systems supporting or connected to the coolant circulation described in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0023",
-      "target": "nuscale_ch05_0002",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section B provides a general description of how reactor coolant circulation is achieved in the NuScale NPM via natural circulation, while Section A specifies inspection and testing requirements for components (such as DHRS valves) that are part of the systems supporting or connected to the coolant circulation described in Section B."
-    },
-    {
       "source": "nuscale_ch05_0006",
       "target": "nuscale_ch05_0003",
-      "relation": "SUPPORTS",
+      "relation": "IS_PREREQUISITE_OF",
       "confidence": 0.95,
-      "description": "Section B describes the design basis that the NuScale NPM relies on natural circulation for reactor coolant flow, while Section A evaluates system performance parameters that are established based on this design approach."
+      "description": "Section B describes the design basis that the NuScale NPM relies on natural circulation for reactor coolant flow, while Section A evaluates system performance based on these established design parameters."
     },
     {
       "source": "nuscale_ch05_0006",
       "target": "nuscale_ch05_0002",
       "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section B provides a general description of the reactor coolant system's reliance on natural circulation, while Section A discusses the evaluation of system performance parameters that are established based on this circulation method."
-    },
-    {
-      "source": "nuscale_ch05_0005",
-      "target": "nuscale_ch05_0003",
-      "relation": "SATISFIES",
       "confidence": 0.95,
-      "description": "Section A describes specific operational steps and component manipulations (e.g., isolation of steam generators, use of chemical volume control system) that implement the general design basis for reactor coolant circulation by natural circulation as outlined in Section B."
+      "description": "Section B provides a general overview stating that the NuScale NPM uses natural circulation for reactor coolant flow, while Section A discusses how system parameters are optimized within this natural circulation framework to achieve optimal performance."
     },
     {
-      "source": "nuscale_ch05_0005",
-      "target": "nuscale_ch05_0002",
-      "relation": "SUPPORTS",
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
       "confidence": 0.9,
-      "description": "Section B explains that the NuScale NPM relies on natural circulation for reactor coolant flow, while Section A describes specific system operations (e.g., feedwater recirculation, PZR level adjustment) that are consistent with and support the natural circulation approach outlined in Section B."
+      "description": "Section A discusses the evaluation of system performance parameters for reactor coolant circulation, while Section B details specific operational steps and component actions (such as isolation of SGs and pressure adjustments) that implement and affect the coolant circulation described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the overall design principle of the NuScale NPM reactor coolant system relying on natural circulation, while Section B details specific operational steps and component actions (such as isolation of steam generators and pressurizer water level adjustments) that implement and support this circulation method."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the reactor coolant system's reliance on natural circulation, while Section B details specific operational steps and components involved in managing coolant and pressure within that system, thus specifying how the general process described in A is implemented."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0006",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the pressurizer's role in maintaining pressure equilibrium within the reactor coolant system, while Section B discusses the evaluation of system parameters (including coolant circulation) to optimize plant performance, connecting them through the operational requirements and design considerations for effective coolant circulation."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the pressurizer as an integral component of the reactor vessel that interacts with the naturally circulating reactor coolant, while Section B provides the overall design basis stating that the NuScale NPM relies on natural circulation for reactor coolant flow and includes the pressurizer as part of the RCS."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the pressurizer as an integral component of the reactor vessel that interacts with the naturally circulating reactor coolant, while Section B provides a general overview of the reactor coolant system, specifying that it relies on natural circulation and includes the pressurizer as a subsystem component."
     },
     {
       "source": "nuscale_ch05_0023",
       "target": "nuscale_ch05_0006",
-      "relation": "SPECIFIES",
+      "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A details inspection and classification requirements for DHRS components, while Section B explains how the DHRS connects to the steam and feed piping to facilitate decay heat removal from the primary coolant, thus Section A specifies operational and regulatory details for components whose system-level function is described in Section B."
+      "description": "Section A details inspection and classification requirements for DHRS components, while Section B explains the functional connection of the DHRS to the steam and feed piping for decay heat removal, linking the design and operational aspects of the reactor coolant circulation."
     },
     {
       "source": "nuscale_ch05_0023",
-      "target": "nuscale_ch05_0005",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A describes inspection and classification requirements for DHRS components, while Section B outlines operational procedures involving DHRS heat exchangers and related system components, connecting them through their shared focus on DHRS functionality within the reactor coolant circulation process."
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B describes the fundamental method of reactor coolant circulation (natural circulation without pumps) in the NuScale NPM, while Section A details inspection and testing requirements for components (such as DHRS valves) that are part of the systems supporting or connected to the reactor coolant system."
     },
     {
-      "source": "nuscale_ch05_0006",
-      "target": "nuscale_ch05_0005",
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch05_0002",
       "relation": "SPECIFIES",
       "confidence": 0.9,
-      "description": "Section A discusses the evaluation of system performance parameters for reactor coolant circulation, while Section B details specific operational steps and component actions (such as isolation of SGs and pressure adjustments) that implement and affect the coolant circulation process described in Section A."
+      "description": "Section B describes the overall method of reactor coolant circulation in the NuScale NPM (natural circulation without pumps), while Section A details inspection and classification requirements for components (such as valves) within the systems that support or interact with this circulation, thus providing specific implementation details for the general system described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0023",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the pressurizer's role in maintaining pressure and facilitating coolant flow within the reactor vessel, while Section B outlines inspection requirements for high-point vents and related components, both of which are integral to ensuring proper reactor coolant circulation and system integrity."
     }
   ]
 }

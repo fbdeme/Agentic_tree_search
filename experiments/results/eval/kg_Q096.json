@@ -2,46 +2,46 @@
   "question": "Explain the purpose of maintaining CNV vacuum.",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0004": {
-      "node_id": "nuscale_ch05_0004",
-      "title": "System Description",
-      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes components such as the reactor pressure vessel, pressurizer, and associated piping and controls. The RCS removes heat from the reactor core using natural circulation and interfaces with several other systems for safety and operational control, including degasification lines and emergency core cooling. Its pressure-retaining parts help maintain the integrity of the reactor coolant pressure boundary, preventing the release of radionuclides.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "9",
-      "hop": 1
-    },
     "nuscale_ch05_0012": {
       "node_id": "nuscale_ch05_0012",
       "title": "Reactor Coolant Pressure Boundary Leakage Detection",
-      "summary": "The NuScale reactor coolant system (RCS) does not use traditional components with designed leakage rates, making it impractical to distinguish between identified and unidentified leakage inside containment using installed instrumentation. All leakage into containment is treated as unidentified until the source is determined, with leakage rates monitored through RCS inventory balance and containment evacuation system (CES) flow rates, and operational limits set in plant technical specifications. The leakage detection systems are designed to be reliable, redundant, and sensitive to support safety analyses.",
+      "summary": "The NuScale reactor coolant system (RCS) does not use traditional components with designed leakage, making it impractical to distinguish between identified and unidentified leakage inside containment using current instrumentation. All leakage into containment is treated as unidentified until the source is determined, with leakage rates monitored through RCS inventory balance and containment evacuation system (CES) flow rates, ensuring reliable detection to support safety analyses.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "41",
       "hop": 1
     },
-    "nuscale_ch05_0011": {
-      "node_id": "nuscale_ch05_0011",
-      "title": "Reactor Coolant Pressure Boundary Inservice Inspection and Testing",
-      "summary": "This section describes the materials and design requirements for threaded fasteners in the reactor coolant pressure boundary, emphasizing the use of Alloy 718 for corrosion resistance and compliance with ASME BPVC standards. It also outlines the preservice and inservice inspection and testing procedures for pressure-retaining components, specifying adherence to the latest ASME BPVC Section XI requirements as mandated by 10 CFR 50.55a regulations.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "37",
-      "hop": 1
-    },
     "nuscale_ch05_0009": {
       "node_id": "nuscale_ch05_0009",
       "title": "Overpressure Protection",
-      "summary": "This section outlines NuScale's compliance with NRC regulations and ASME Boiler and Pressure Vessel Code (BPVC) requirements for overpressure protection of the reactor coolant boundary. It details how code cases for design, fabrication, construction, preservice, and inservice inspections and testing are selected and applied, ensuring they meet the conditions specified in relevant NRC regulatory guides and federal regulations. A consolidated list of the specific ASME code cases used is provided in Table 5.2-1.",
+      "summary": "This section outlines NuScale's compliance with overpressure protection requirements by referencing applicable ASME Boiler and Pressure Vessel Code (BPVC) and Operations and Maintenance (OM) code cases, as mandated by various sections of 10 CFR 50.55a and related Regulatory Guides (RGs). It details how code cases for design, fabrication, preservice, and inservice inspections and testing are selected and verified to meet NRC-endorsed standards, with a consolidated list provided in Table 5.2-1.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "21",
       "hop": 1
     },
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes components such as the reactor pressure vessel, pressurizer, and associated piping and controls. It removes heat from the reactor core to the steam generators using natural circulation, and features systems for removing noncondensible gases and maintaining pressure boundary integrity to prevent radionuclide release. The RCS interfaces with several other systems, including emergency core cooling and chemical control systems, to ensure safe and efficient operation.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch05_0011": {
+      "node_id": "nuscale_ch05_0011",
+      "title": "Reactor Coolant Pressure Boundary Inservice Inspection and Testing",
+      "summary": "This section describes the materials and design requirements for threaded fasteners used in key reactor coolant system components, emphasizing the use of Alloy 718 for its compatibility and stress corrosion cracking resistance. It also outlines the preservice and inservice inspection and testing procedures for reactor coolant pressure boundary components, specifying adherence to ASME BPVC Section XI and relevant regulatory requirements for inspection intervals and code editions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "37",
+      "hop": 1
+    },
     "nuscale_ch05_0025": {
       "node_id": "nuscale_ch05_0025",
       "title": "References",
-      "summary": "This section details the materials used in the construction of the pressurizer and its components in the NuScale reactor, specifying alloys and standards for each part to ensure corrosion resistance and compatibility with operating environments. It references relevant sections of the BPVC (Boiler and Pressure Vessel Code) and lists the applicable material specifications for components such as the baffle plate, heater bundles, cover plate, and bolting.",
+      "summary": "This section details the materials used in the construction of the pressurizer and its components in the NuScale reactor, specifying alloys and standards for each part to ensure corrosion resistance and compatibility with operating environments. It references relevant sections of the ASME Boiler and Pressure Vessel Code (BPVC) and lists the specific alloys and material specifications for the baffle plate, heater bundles, cover plate, heater sheaths, and bolting.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "130",
@@ -50,97 +50,90 @@
     "nuscale_ch05_0016": {
       "node_id": "nuscale_ch05_0016",
       "title": "Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses",
-      "summary": "This section outlines the methodology and regulatory compliance for establishing pressure-temperature operational limits for the reactor coolant pressure boundary (RCPB) over the plant’s 60-year lifespan. It details the use of ASME and NRC guidelines to calculate pressure-temperature limit curves, accounting for vessel embrittlement, and specifies that these limits are designed to prevent non-ductile failure of the reactor pressure vessel.",
+      "summary": "This section outlines the methodology and regulatory compliance for establishing pressure-temperature limits for the reactor coolant pressure boundary (RCPB) over the plant’s 60-year lifespan. It details the use of ASME and NRC guidelines to calculate these limits, accounting for vessel embrittlement, and provides the resulting curves and data to ensure protection against non-ductile failure during various operational conditions.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "72",
-      "hop": 3
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0012",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes how the RCS degasification and venting to the CNV help remove noncondensible gases, which is relevant to Section B's discussion of leakage detection inside containment, as maintaining CNV vacuum aids in identifying and managing potential RCPB leakage."
-    },
-    {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0011",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A describes the system's mechanisms for removing noncondensible gases from the PZR and maintaining RCS integrity, while Section B details the material and inspection requirements for threaded fasteners that help ensure the integrity of the reactor coolant pressure boundary, thus both sections are connected through their focus on maintaining the integrity and safety of the RCS and its pressure boundary."
-    },
-    {
-      "source": "nuscale_ch05_0004",
+      "source": "nuscale_ch05_0012",
       "target": "nuscale_ch05_0009",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A discusses the challenges of detecting reactor coolant pressure boundary leakage, which is relevant to Section B's focus on compliance with overpressure protection codes, as effective leakage detection (A) is necessary to ensure the integrity and proper functioning of overpressure protection systems (B)."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0004",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A describes how the CNV vacuum is maintained to remove noncondensible gases from the reactor system, which supports Section B's focus on maintaining the integrity of the reactor coolant pressure boundary as required by regulatory codes."
+      "description": "Section A discusses the challenge of detecting reactor coolant pressure boundary (RCPB) leakage due to limitations in instrumentation, while Section B describes system features (such as degasification and venting to the CNV) that help manage noncondensible gases and maintain RCPB integrity, thus supporting the purpose of maintaining CNV vacuum as a means to detect and control leakage."
     },
     {
       "source": "nuscale_ch05_0012",
       "target": "nuscale_ch05_0011",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A discusses the challenges of detecting reactor coolant pressure boundary (RCPB) leakage, while Section B specifies the material and inspection requirements for threaded fasteners that are part of the RCPB, connecting them through their shared focus on maintaining RCPB integrity to prevent leakage."
-    },
-    {
-      "source": "nuscale_ch05_0012",
-      "target": "nuscale_ch05_0009",
       "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A discusses the challenges of detecting reactor coolant pressure boundary leakage, which is relevant to Section B's focus on compliance with overpressure protection codes, as effective leakage detection (potentially aided by maintaining CNV vacuum) supports the integrity and regulatory compliance of the pressure boundary."
+      "description": "Section A discusses the challenges in detecting reactor coolant pressure boundary (RCPB) leakage, while Section B specifies the material and inspection requirements for threaded fasteners that are part of the RCPB, connecting them through their shared focus on maintaining RCPB integrity."
     },
     {
-      "source": "nuscale_ch05_0011",
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B explains that the CNV vacuum is maintained to remove noncondensible gases from the reactor system, which supports the overpressure protection and integrity requirements described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0011",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A outlines the general regulatory and code compliance framework for overpressure protection of the reactor coolant boundary, while Section B provides specific material and design details for threaded fasteners used within that boundary, both referencing ASME BPVC requirements."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0011",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the removal of noncondensible gases from the PZR to the CNV to maintain system integrity, while Section B details the material and inspection requirements for threaded fasteners that help ensure the integrity of the reactor coolant pressure boundary, both contributing to the overall safety and integrity of the RCS."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0012",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the physical components and materials of the pressurizer, which is part of the reactor coolant pressure boundary whose integrity and potential leakage are discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
       "target": "nuscale_ch05_0009",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A describes the material and code compliance for threaded fasteners in the reactor coolant pressure boundary, while Section B outlines the use of ASME BPVC code cases and regulatory compliance for the design and construction of the same boundary, connecting them through their shared reliance on ASME BPVC standards for ensuring boundary integrity."
+      "description": "Section A provides detailed descriptions of pressurizer components and their materials, which are part of the reactor coolant pressure boundary whose integrity and overpressure protection requirements are addressed in Section B."
     },
     {
       "source": "nuscale_ch05_0025",
       "target": "nuscale_ch05_0004",
-      "relation": "REFERENCES",
+      "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A references the material composition and structural components of the pressurizer, while Section B describes the system function of removing noncondensible gases from the pressurizer volume, connecting them through the operational context of the pressurizer's role in maintaining system integrity and vacuum."
+      "description": "Section A describes the physical components and materials of the pressurizer, while Section B explains the system function of removing noncondensible gases from the pressurizer volume, connecting the design features in A to the operational purpose in B."
     },
     {
-      "source": "nuscale_ch05_0025",
+      "source": "nuscale_ch05_0016",
       "target": "nuscale_ch05_0012",
       "relation": "SUPPORTS",
       "confidence": 0.7,
-      "description": "Section A describes the structural components and materials of the pressurizer, which is part of the reactor coolant system, while Section B discusses the detection of leakage from the reactor coolant pressure boundary, with both sections connected by their focus on the integrity and monitoring of the reactor coolant system and its components."
-    },
-    {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0011",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the components and materials of the pressurizer, while Section B details the materials and standards for threaded fasteners used in those components, connecting them through the shared focus on material selection and integrity for reactor coolant system pressure boundary components."
+      "description": "Section A discusses structural and examination requirements for reactor vessel attachments, while Section B addresses the detection of reactor coolant pressure boundary leakage, both of which are connected through the integrity and monitoring of the reactor coolant pressure boundary as required for safety analysis."
     },
     {
       "source": "nuscale_ch05_0016",
-      "target": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0009",
       "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section B explains that the CNV (containment vessel) receives noncondensible gases vented from the reactor pressure vessel (RPV) during both normal and emergency operations, which relates to the purpose of maintaining CNV vacuum by ensuring these gases are effectively removed to maintain system integrity."
-    },
-    {
-      "source": "nuscale_ch05_0016",
-      "target": "nuscale_ch05_0012",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section B discusses the detection of reactor coolant pressure boundary leakage, which is directly related to the purpose of maintaining CNV vacuum as a means to monitor and identify such leakage, while Section A provides structural and examination details that ensure the integrity of components relevant to leakage pathways."
-    },
-    {
-      "source": "nuscale_ch05_0016",
-      "target": "nuscale_ch05_0011",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses compliance of lock plate stud welds with ASME BPVC requirements, while Section B details the material selection and ASME BPVC compliance of threaded fasteners in the reactor pressure vessel, connecting them through their shared adherence to ASME code requirements for reactor vessel components."
+      "confidence": 0.7,
+      "description": "Section A discusses material and weld examination requirements for reactor vessel attachments, while Section B outlines compliance with overpressure protection codes; both sections are connected through their reliance on ASME BPVC standards to ensure reactor vessel integrity, which is essential for maintaining CNV vacuum as a safety function."
     }
   ]
 }

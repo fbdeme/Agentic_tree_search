@@ -5,7 +5,7 @@
     "nuscale_ch05_0015": {
       "node_id": "nuscale_ch05_0015",
       "title": "Reactor Vessel Materials",
-      "summary": "The Reactor Vessel section describes the NuScale Power Module's reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel, serving as a key barrier to fission product release. The RPV and its components are constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure integrity and safety throughout the plant's design lifetime.",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module’s reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel, serving as a key barrier to fission product release. The RPV and its components are constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure integrity and safety throughout the plant’s design lifetime.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "67",
@@ -14,7 +14,7 @@
     "nuscale_ch05_0018": {
       "node_id": "nuscale_ch05_0018",
       "title": "References",
-      "summary": "This section outlines the requirements and procedures for inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fasteners for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It emphasizes compliance with specific codes for packaging, handling, and quality assurance, as well as maintaining a controlled environment during shipment to protect the reactor vessel's integrity. Key references to industry standards are also provided.",
+      "summary": "This section outlines the requirements and procedures for the inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fasteners of the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It specifies the use of nondestructive examinations, controlled shipping environments, and quality assurance measures to ensure the integrity and safety of the reactor vessel. Key standards cited include the ASME Boiler and Pressure Vessel Code and ASME NQA-1 for quality assurance.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "74",
@@ -23,11 +23,11 @@
     "nuscale_ch05_0017": {
       "node_id": "nuscale_ch05_0017",
       "title": "Reactor Vessel Integrity",
-      "summary": "This section outlines the procedures and regulatory compliance measures to ensure the integrity of the NuScale reactor vessel over its 60-year design life. It details the development of operating procedures to maintain pressure-temperature limits, evaluates the vessel’s resistance to pressurized thermal shock and upper-shelf energy degradation, and confirms that predicted material properties remain within regulatory safety margins throughout the vessel’s operational lifespan.",
+      "summary": "This section outlines the procedures and regulatory compliance measures in place to ensure the integrity of the NuScale reactor vessel throughout its 60-year design life. It details the development of operating procedures to maintain pressure-temperature limits, evaluates the vessel’s resistance to pressurized thermal shock and upper-shelf energy degradation, and confirms that all predicted values remain within regulatory safety criteria.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "73",
-      "hop": 3
+      "hop": 2
     }
   },
   "edges": [
@@ -36,21 +36,21 @@
       "target": "nuscale_ch05_0018",
       "relation": "REFERENCES",
       "confidence": 0.85,
-      "description": "Section B references Section A by discussing inspection and handling requirements for the reactor vessel, which is structurally described in Section A, thereby connecting the general vessel description to its regulatory treatment."
+      "description": "Section B references Section A by discussing inspection and handling requirements for the reactor vessel, which is described in detail in Section A, thereby connecting the general vessel description to its regulatory and procedural context."
     },
     {
       "source": "nuscale_ch05_0017",
       "target": "nuscale_ch05_0015",
-      "relation": "SEMANTIC",
+      "relation": "SPECIFIES",
       "confidence": 0.7,
-      "description": "Section A discusses the development of operating procedures to ensure reactor vessel integrity under specified conditions, while Section B provides a general description of the reactor vessel and its components, with both sections referencing the reactor vessel as the common subject relevant to the surveillance capsule's location."
+      "description": "Section A discusses operating procedures to ensure reactor vessel integrity under pressure-temperature limits, while Section B describes the physical configuration of the reactor vessel and its components, providing context for where surveillance capsules would be located."
     },
     {
       "source": "nuscale_ch05_0017",
       "target": "nuscale_ch05_0018",
       "relation": "SUPPORTS",
       "confidence": 0.7,
-      "description": "Section A discusses the development of operating procedures for reactor vessel integrity, while Section B details inspection and installation requirements for the reactor vessel, both of which are connected by their focus on ensuring the vessel's safety and compliance with regulatory standards."
+      "description": "Section A discusses the development of operating procedures for reactor vessel integrity, while Section B provides references to inspection and installation requirements, with both sections connected through their focus on ensuring compliance with technical and safety specifications for the reactor vessel."
     }
   ]
 }

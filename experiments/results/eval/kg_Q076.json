@@ -2,37 +2,10 @@
   "question": "Explain what ECCS is and how it operates.",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0063": {
-      "node_id": "nuscale_ch01_0063",
-      "title": "Emergency Core Cooling System Valve Design Certification Application Demonstration Test",
-      "summary": "This section describes the demonstration test program for the Emergency Core Cooling System (ECCS) valves in the NuScale reactor design. The test program aimed to verify the functional performance of the ECCS valves—including their operation at reactor pressures and temperatures, and in borated coolant—using a test article at a specialized facility. The tests also evaluated unique design features such as the inadvertent actuation block (IAB) to ensure reliable valve operation under various conditions.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "89",
-      "hop": 1
-    },
-    "nuscale_ch01_0017": {
-      "node_id": "nuscale_ch01_0017",
-      "title": "Facility Description",
-      "summary": "The Facility Description section outlines the NuScale plant’s core cooling and power generation process. It explains that the reactor core heats coolant, which circulates naturally to transfer heat to steam generators, producing superheated steam that drives a turbine and generates electricity. The section also notes that site-specific details, such as cooling tower design and operation, are addressed elsewhere in the report.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "28",
-      "hop": 1
-    },
-    "nuscale_ch01_0024": {
-      "node_id": "nuscale_ch01_0024",
-      "title": "Emergency Core Cooling System",
-      "summary": "The Emergency Core Cooling System (ECCS) in the NuScale design is a fully passive system that removes decay heat during a loss-of-coolant accident (LOCA) using three independent reactor vent valves and two recirculation valves, all of which are closed during normal operation. During an emergency, the system vents steam into containment, condenses it, and recirculates water to cool the core, with heat ultimately transferred passively to the reactor pool.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "33",
-      "hop": 1
-    },
     "nuscale_ch01_0189": {
       "node_id": "nuscale_ch01_0189",
       "title": "BTP 6-2, Rev 3: Minimum Containment Pressure Model for PWR ECCS PerformanceAll (B.1 thru B.3)Various",
-      "summary": "This section reviews NuScale's conformance with regulatory criteria related to containment pressure and water chemistry for PWR ECCS performance. It notes that some criteria partially apply, but specific requirements for systems like containment spray and sumps are not relevant to NuScale’s design, as it lacks these features. Additionally, guidance on minimum containment pressure and bypass leakage paths is deemed not applicable since NuScale’s design does not result in core uncovery during a LOCA and does not have dual containment.",
+      "summary": "This section explains that the guidance in BTP 6-2, Rev 3 regarding minimum containment pressure models for PWR ECCS performance is not applicable to the NuScale design, as a postulated LOCA in NuScale does not result in core uncovery. Therefore, the regulatory criteria addressed in BTP 6-2 do not apply to the NuScale reactor.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "232",
@@ -41,152 +14,133 @@
     "nuscale_ch01_0188": {
       "node_id": "nuscale_ch01_0188",
       "title": "BTP 6-1, (March 2007): pH for Emergency Coolant Water for Pressurized Water ReactorsB.3 Hydrogen Generation from Aluminum Corrosion",
-      "summary": "The section reviews NuScale’s conformance with regulatory criteria regarding pH control and hydrogen generation from aluminum corrosion in emergency coolant water for pressurized water reactors. While NuScale’s design lacks certain systems referenced in the criteria (such as a containment spray system or sump), the intent of the requirements is still met due to the collection and recirculation of ECCS water within the containment vessel. Other criteria, such as those related to minimum containment pressure and dual containment leakage, are deemed not applicable to the NuScale design.",
+      "summary": "The section reviews NuScale's conformance with regulatory criteria regarding pH control and hydrogen generation from aluminum corrosion in emergency coolant water. While NuScale's design lacks certain systems referenced in the criteria (such as a containment spray system or sump), the intent of the requirements is still met due to the collection and recirculation of ECCS water within the containment vessel. Other criteria related to minimum containment pressure and bypass leakage are deemed not applicable to the NuScale design.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "232",
       "hop": 1
     },
-    "nuscale_ch01_0279": {
-      "node_id": "nuscale_ch01_0279",
-      "title": "SRP BTP 8-1, Rev 3: Requirements on Motor-Operated Valves in the ECCS Accumulator LinesAll (B.1 thru B.4)Various",
-      "summary": "This section summarizes NuScale’s conformance with various regulatory criteria related to DC power systems and station blackout (SBO) requirements. It notes partial conformance with several Regulatory Guides (RGs) and clarifies that some requirements, such as the Alternate AC Power Source, are not applicable due to the passive design of the NuScale plant. Responsibilities for certain maintenance and site visit requirements are assigned to the COL applicant or are not applicable at this stage.",
+    "nuscale_ch01_0028": {
+      "node_id": "nuscale_ch01_0028",
+      "title": "Instrumentation, Controls, and Electrical Systems",
+      "summary": "The Emergency Core Cooling System (ECCS) in the NuScale design provides passive decay heat removal during a loss-of-coolant accident using independent vent and recirculation valves, operating without active power. The Control Room Habitability System (CRHS) passively supplies clean, compressed air to protect operators during emergencies, while fission product removal relies on the containment vessel and isolation system, utilizing passive processes for safety.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "240",
-      "hop": 2
+      "page_range": "33",
+      "hop": 1
     },
-    "nuscale_ch01_0660": {
-      "node_id": "nuscale_ch01_0660",
-      "title": "SRP 15.0.2, (March 2007): Review of Transient and Accident Analysis MethodsII.5 Quality Assurance Plan",
-      "summary": "This section outlines NuScale’s conformance with regulatory criteria for transient and accident analysis methods, noting partial or non-applicability where the guidance is BWR-specific or where NuScale uses alternative methodologies, such as a modified AST for radiological consequences. It also highlights that NuScale’s evaluation models for loss-of-coolant accidents (LOCAs) address only the technically relevant features required by regulations, supporting exemptions from certain portions of 10 CFR 50 Appendix K.",
+    "nuscale_ch01_0063": {
+      "node_id": "nuscale_ch01_0063",
+      "title": "Emergency Core Cooling System Valve Design Certification Application Demonstration Test",
+      "summary": "This section describes the demonstration test program for the Emergency Core Cooling System (ECCS) valves in the NuScale reactor design. The test program aimed to verify the functional performance of the ECCS valves, including their operation at reactor pressures and temperatures and in borated coolant, as well as the effectiveness of unique design features like the inadvertent actuation block (IAB). Testing was conducted at a specialized facility using a test article representative of the reactor recirculation valve (RRV) to ensure the valves meet safety and operational requirements.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "287",
-      "hop": 2
+      "page_range": "89",
+      "hop": 1
     },
-    "nuscale_ch01_0411": {
-      "node_id": "nuscale_ch01_0411",
-      "title": "SRP 9.5.5, Rev 3: Emergency Diesel Engine Cooling Water SystemAll (II.1 thru II.7)Compliance with GDC 2, GDC 4, GDC 5, GDC 17, GDC 44, GDC 45, and GDC 46",
-      "summary": "The NuScale plant design does not include or require safety-related emergency diesel generators, and therefore the associated systems (fuel oil storage, cooling water, starting, lubrication, and air intake/exhaust) and their compliance with relevant General Design Criteria (GDC) are not applicable. The plant’s safety functions do not rely on any AC or DC power sources.",
+    "nuscale_ch01_0024": {
+      "node_id": "nuscale_ch01_0024",
+      "title": "Emergency Core Cooling System",
+      "summary": "The Emergency Core Cooling System (ECCS) in the NuScale design is a fully passive system that removes decay heat during a loss-of-coolant accident (LOCA) using three independent reactor vent valves and two recirculation valves, all of which are closed during normal operation. During an emergency, the system vents steam into containment for condensation and recirculates water back to the core, with heat ultimately transferred passively to the reactor pool.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "260",
+      "page_range": "33",
+      "hop": 1
+    },
+    "nuscale_ch01_0017": {
+      "node_id": "nuscale_ch01_0017",
+      "title": "Facility Description",
+      "summary": "The Facility Description section outlines the NuScale plant’s core cooling and power generation process. It describes how the reactor core heats coolant, which circulates naturally to transfer heat to steam generators, producing superheated steam that drives a turbine and generates electricity. The section also notes that site-specific details exist for cooling systems and equipment layout.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "28",
       "hop": 3
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0063",
-      "target": "nuscale_ch01_0017",
-      "relation": "SPECIFIES",
+      "source": "nuscale_ch01_0189",
+      "target": "nuscale_ch01_0188",
+      "relation": "REFERENCES",
       "confidence": 0.85,
-      "description": "Section A describes the design and testing of the Emergency Core Cooling System (ECCS) valves, which are a specific safety feature, while Section B provides a general overview of the facility and its systems, including the reactor core layout, thus Section A specifies details for the broader system context described in Section B."
+      "description": "Section A references the operation of ECCS and its interaction with containment water chemistry requirements, while Section B details specific pH and hydrogen generation considerations during ECCS operation, both connected by the regulatory evaluation of ECCS water chemistry in the NuScale design."
+    },
+    {
+      "source": "nuscale_ch01_0189",
+      "target": "nuscale_ch01_0028",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section B provides a general description of the ECCS and its operation, which is referenced in Section A's discussion of regulatory conformance and specific design features."
+    },
+    {
+      "source": "nuscale_ch01_0189",
+      "target": "nuscale_ch01_0063",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section B provides specific test results and operational details of the ECCS valves, which serve as concrete evidence supporting the general regulatory conformance claims about ECCS operation discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0189",
+      "target": "nuscale_ch01_0024",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section B describes the design and operation of the ECCS, while Section A references regulatory criteria and acceptance conditions (including water collection during ECCS operation) that the NuScale ECCS must address, thus Section B's information is used to demonstrate conformance with Section A's regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0188",
+      "target": "nuscale_ch01_0028",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section B describes the design and operation of the ECCS, while Section A references regulatory criteria (BTP 6-1) that partially apply to the NuScale ECCS operation, specifically regarding water chemistry and system components."
+    },
+    {
+      "source": "nuscale_ch01_0188",
+      "target": "nuscale_ch01_0063",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the regulatory criteria and chemical requirements for ECCS water during operation, while Section B provides test results confirming the operability of ECCS valves in the NuScale design, thus Section B supports the operational aspect referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0188",
+      "target": "nuscale_ch01_0024",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references regulatory criteria for ECCS water chemistry and notes how the NuScale design conforms or differs, while Section B describes the design and operation of the ECCS in the NuScale plant, thus Section A's discussion of regulatory conformance is directly connected to the ECCS operational details provided in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0028",
+      "target": "nuscale_ch01_0063",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the function and configuration of the ECCS, while Section B provides test results confirming the operability of ECCS valves as described in Section A, thus supporting the operational claims made in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0028",
+      "target": "nuscale_ch01_0024",
+      "relation": "SEMANTIC",
+      "confidence": 1.0,
+      "description": "Section A and Section B are identical excerpts describing the components and operation of the ECCS, providing the same information about its function and configuration."
     },
     {
       "source": "nuscale_ch01_0063",
       "target": "nuscale_ch01_0024",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A describes the testing and operability confirmation of ECCS valves, which are the specific components detailed in Section B's general description of the ECCS and its function in decay heat removal."
-    },
-    {
-      "source": "nuscale_ch01_0063",
-      "target": "nuscale_ch01_0189",
-      "relation": "SATISFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the design and testing of ECCS valves in the NuScale reactor, while Section B discusses regulatory criteria for ECCS performance and water chemistry, connecting them through the operational requirements and regulatory expectations for ECCS functionality."
-    },
-    {
-      "source": "nuscale_ch01_0063",
-      "target": "nuscale_ch01_0188",
-      "relation": "SATISFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the design and testing of ECCS valves in the NuScale reactor, while Section B discusses regulatory criteria for ECCS water chemistry and how the NuScale design partially conforms to these requirements, connecting them through the operational and regulatory aspects of ECCS in the NuScale system."
+      "description": "Section A describes the testing and design verification of ECCS valves, while Section B provides a general overview of the ECCS's function and components, with Section A specifying technical details that support and elaborate on the general description in Section B."
     },
     {
       "source": "nuscale_ch01_0017",
       "target": "nuscale_ch01_0188",
       "relation": "REFERENCES",
       "confidence": 0.7,
-      "description": "Section B discusses regulatory criteria and water chemistry requirements relevant to ECCS operation, while Section A provides a general facility and system description without directly addressing ECCS, thus Section B partially references and interprets requirements in the context of the NuScale design described in Section A."
+      "description": "Section B discusses regulatory criteria for emergency coolant water chemistry during ECCS operation, while Section A provides a general facility and system description without directly addressing ECCS, thus Section B partially references and interprets requirements relevant to the systems described in Section A."
     },
     {
-      "source": "nuscale_ch01_0024",
-      "target": "nuscale_ch01_0189",
-      "relation": "SATISFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the design and operation of the ECCS in NuScale, while Section B discusses regulatory criteria for ECCS performance and notes how the NuScale design partially conforms due to differences in system components, connecting them through the applicability of regulatory requirements to the described ECCS operation."
-    },
-    {
-      "source": "nuscale_ch01_0024",
-      "target": "nuscale_ch01_0188",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A describes the components and operation of the ECCS in the NuScale design, while Section B discusses regulatory criteria for emergency coolant water chemistry, noting partial applicability to the NuScale ECCS since it lacks certain systems like a spray or sump but still involves ECCS water collection in containment."
-    },
-    {
-      "source": "nuscale_ch01_0189",
-      "target": "nuscale_ch01_0188",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A references the operation of the ECCS and its interaction with containment water chemistry requirements, while Section B details specific chemical considerations (pH and hydrogen generation) that are relevant during ECCS operation, thus Section A's discussion of ECCS operation is supported by the technical requirements and considerations outlined in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0279",
-      "target": "nuscale_ch01_0063",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section B provides test results and operational details of ECCS valves, which serve as evidence supporting the regulatory requirements and conformance statements regarding ECCS valve operability and design found in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0279",
-      "target": "nuscale_ch01_0017",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section A outlines regulatory requirements and conformance for ECCS-related components, while Section B provides a general facility and process overview, including the reactor core and supporting systems, which are prerequisites for understanding ECCS operation."
-    },
-    {
-      "source": "nuscale_ch01_0279",
-      "target": "nuscale_ch01_0024",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A references regulatory requirements and conformance criteria for motor-operated valves and DC power systems that are components or support systems for the ECCS described in Section B, which explains the ECCS's function and operation."
-    },
-    {
-      "source": "nuscale_ch01_0660",
-      "target": "nuscale_ch01_0063",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section B provides specific test results and operational details of the NuScale Emergency Core Cooling System (ECCS) valves, which serve as concrete evidence supporting the general regulatory conformance and analysis methods discussed in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0660",
-      "target": "nuscale_ch01_0017",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section A discusses the regulatory review and analysis methods for transient and accident scenarios, which require understanding the facility's systems described in Section B, such as the Site Cooling Water System and reactor core layout, to evaluate ECCS operation."
-    },
-    {
-      "source": "nuscale_ch01_0660",
-      "target": "nuscale_ch01_0024",
+      "source": "nuscale_ch01_0017",
+      "target": "nuscale_ch01_0028",
       "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section B describes the design and operation of the Emergency Core Cooling System (ECCS), which is the system referenced in Section A's discussion of accident analysis methods and regulatory conformance for core cooling performance."
-    },
-    {
-      "source": "nuscale_ch01_0279",
-      "target": "nuscale_ch01_0660",
-      "relation": "IS_PREREQUISITE_OF",
       "confidence": 0.85,
-      "description": "Section A specifies regulatory requirements and conformance for ECCS-related components (such as motor-operated valves and DC power systems), while Section B addresses the methods and quality assurance for analyzing ECCS performance during transients and accidents, connecting them through the need for ECCS design features (from A) to be evaluated and justified using the analysis methods and QA plans described in B."
-    },
-    {
-      "source": "nuscale_ch01_0411",
-      "target": "nuscale_ch01_0017",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A discusses regulatory compliance and the absence of emergency diesel generators in the NuScale design, while Section B provides a general description of the plant's cooling systems, both connecting through their focus on plant auxiliary and safety-related cooling functions."
+      "description": "Section B explains the function and operation of the Emergency Core Cooling System (ECCS), which is the direct answer to the analysis question, while Section A provides general facility and process context but does not address ECCS specifically; thus, Section B specifies the relevant operational details that Section A does not cover."
     }
   ]
 }

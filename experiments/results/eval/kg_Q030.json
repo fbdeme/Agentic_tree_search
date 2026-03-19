@@ -1,109 +1,79 @@
 {
   "question": "What functions does the RPV perform, and what components does it support?",
-  "current_hop": 3,
+  "current_hop": 2,
   "nodes": {
-    "nuscale_ch05_0014": {
-      "node_id": "nuscale_ch05_0014",
-      "title": "Reactor Vessel",
-      "summary": "The Reactor Vessel section describes the NuScale Power Module (NPM), which integrates the reactor core, steam generators, and pressurizer within a single reactor pressure vessel (RPV) surrounded by a containment vessel. The RPV serves as a key pressure-retaining component, housing critical systems and providing structural support, and is constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure long-term integrity and safety.",
+    "nuscale_ch05_0015": {
+      "node_id": "nuscale_ch05_0015",
+      "title": "Reactor Vessel Materials",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module’s reactor pressure vessel (RPV), which houses the core, steam generators, and pressurizer, and serves as a critical barrier to fission product release. The RPV and its components are constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure integrity and safety throughout the plant’s design life.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "67",
+      "hop": 1
+    },
+    "nuscale_ch05_0005": {
+      "node_id": "nuscale_ch05_0005",
+      "title": "System Components",
+      "summary": "This section describes the main components of the NuScale reactor system, focusing on the Reactor Pressure Vessel (RPV), Reactor Coolant System (RCS) piping, and the Pressurizer (PZR). The RPV serves as a primary barrier to fission product release and houses key reactor internals, while the RCS piping connects various system elements, and the PZR is integrated into the RPV to help control system pressure. Each component's functions and connections are briefly outlined, with references to further detailed sections.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "10",
       "hop": 1
     },
     "nuscale_ch05_0018": {
       "node_id": "nuscale_ch05_0018",
       "title": "References",
-      "summary": "This section outlines the requirements and procedures for inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fasteners for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It specifies that the reactor vessel must be shipped and stored under controlled, dry, and pressurized conditions to prevent corrosion and contamination, and lists the applicable codes and standards used for compliance.",
+      "summary": "This section outlines the requirements and procedures for inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fasteners for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It specifies that the reactor vessel must be shipped and stored under controlled, dry, and pressurized conditions to maintain integrity, and lists the key codes and standards used for compliance.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "74",
       "hop": 1
     },
-    "nuscale_ch05_0013": {
-      "node_id": "nuscale_ch05_0013",
-      "title": "References",
-      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as tables summarizing relevant ASME code cases for materials and components used in nuclear facility applications.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "46",
-      "hop": 1
-    },
-    "nuscale_ch05_0015": {
-      "node_id": "nuscale_ch05_0015",
-      "title": "Reactor Vessel Materials",
-      "summary": "The Reactor Vessel section describes the NuScale Power Module’s reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel, providing a critical barrier to fission product release. The RPV and its components are constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure structural integrity and safety throughout the plant’s design life.",
+    "nuscale_ch05_0014": {
+      "node_id": "nuscale_ch05_0014",
+      "title": "Reactor Vessel",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module (NPM), which integrates the reactor core, steam generators, and pressurizer within a single reactor pressure vessel (RPV) surrounded by a containment vessel. The RPV serves as a crucial barrier to fission product release, supports various reactor components, and is constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure long-term integrity and safety.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "67",
       "hop": 1
-    },
-    "nuscale_ch05_0004": {
-      "node_id": "nuscale_ch05_0004",
-      "title": "System Description",
-      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located within the containment vessel and includes components such as the reactor pressure vessel, pressurizer, and associated piping and controls. Its primary function is to transfer heat from the reactor core to the steam generators using natural circulation, while also providing mechanisms for removing noncondensible gases and maintaining the integrity of the reactor coolant pressure boundary to prevent radionuclide release. The RCS interfaces with several other systems, including emergency core cooling and chemical control systems.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "9",
-      "hop": 2
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0014",
-      "target": "nuscale_ch05_0018",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A describes the design and functional role of the RPV within the reactor system, while Section B references the standards and requirements for the RPV's shipment, installation, and inspection, thus Section B provides regulatory and procedural details that support and specify the implementation of the RPV described in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0014",
-      "target": "nuscale_ch05_0013",
-      "relation": "REFERENCES",
-      "confidence": 0.85,
-      "description": "Section A describes the reactor pressure vessel's role and components it supports, while Section B lists references that provide standards and guidelines relevant to the integrity and requirements for the reactor coolant boundary, which includes the RPV."
-    },
-    {
-      "source": "nuscale_ch05_0018",
-      "target": "nuscale_ch05_0013",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A specifies that the shipment, handling, and storage of the RPV must meet the quality assurance requirements detailed in ASME NQA-1-2008/1a-2009 Addenda, which is referenced in Section B as a standard for nuclear facility applications."
-    },
-    {
-      "source": "nuscale_ch05_0018",
-      "target": "nuscale_ch05_0015",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section B describes the components supported by the RPV (reactor core, steam generators, pressurizer) and its function as a pressure-retaining vessel, while Section A references the RPV and its handling/inspection requirements, thus Section B provides the general functional and support context for the RPV that Section A addresses procedurally."
-    },
-    {
-      "source": "nuscale_ch05_0013",
-      "target": "nuscale_ch05_0015",
+      "source": "nuscale_ch05_0015",
+      "target": "nuscale_ch05_0005",
       "relation": "SUPPORTS",
       "confidence": 0.9,
-      "description": "Section A provides references and standards that underpin the technical and regulatory basis for the design and integrity of the RPV described in Section B, which details the RPV's functions and supported components."
+      "description": "Section A identifies the RPV as a pressure-retaining vessel that houses key components such as the reactor core, steam generators, and pressurizer, while Section B describes operational procedures involving these components (SGs, PZR) and their interaction with the RPV during system operations."
     },
     {
-      "source": "nuscale_ch05_0004",
+      "source": "nuscale_ch05_0015",
+      "target": "nuscale_ch05_0018",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B references Section A by discussing inspection and handling requirements for the RPV, which is described in detail in Section A as a key component of the reactor coolant system."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch05_0018",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A describes operational procedures involving the reactor pressure vessel (RPV) and its supported components, while Section B outlines inspection, shipment, and storage requirements for the RPV, connecting through their focus on the RPV's role and handling within the system."
+    },
+    {
+      "source": "nuscale_ch05_0005",
       "target": "nuscale_ch05_0014",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A describes the functions of the RPV within the RCS, while Section B specifies the components supported by the RPV, such as the reactor core, steam generators, and pressurizer, thus providing detailed component information for the general functions described in Section A."
+      "description": "Section B describes the RPV as housing and supporting key components such as the reactor core, steam generators, and pressurizer, while Section A lists these components and their operational interactions, thus Section B specifies the RPV's support functions for the components detailed in Section A."
     },
     {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0018",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.9,
-      "description": "Section A describes the operational functions and safety roles of the RPV within the reactor coolant system, while Section B outlines the inspection, shipment, and installation requirements that ensure the RPV can reliably perform those functions."
-    },
-    {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0013",
-      "relation": "SUPPORTS",
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A describes the functions and integrity roles of the RPV and RCS, while Section B lists references that provide standards and guidelines supporting the integrity and quality assurance of these components."
+      "description": "Section A references inspection, shipment, and installation requirements for the RPV, while Section B describes the RPV's structural role and the components it supports, thus Section A provides procedural and regulatory context for the physical functions and supported components detailed in Section B."
     }
   ]
 }

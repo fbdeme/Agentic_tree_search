@@ -2,72 +2,53 @@
   "question": "Explain the inventory of coolant in the Reactor Coolant System (RCS) and the management of its chemistry.",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0010": {
-      "node_id": "nuscale_ch05_0010",
-      "title": "Reactor Coolant Pressure Boundary Materials",
-      "summary": "The Reactor Coolant Pressure Boundary (RCPB) materials, including welds, are selected and fabricated in accordance with ASME BPVC standards and comply with relevant U.S. regulatory requirements to ensure high quality, environmental compatibility, and fracture resistance. These materials are subject to rigorous testing and quality assurance measures, with detailed specifications provided in referenced tables and sections.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "29",
-      "hop": 1
-    },
     "nuscale_ch05_0012": {
       "node_id": "nuscale_ch05_0012",
       "title": "Reactor Coolant Pressure Boundary Leakage Detection",
-      "summary": "The NuScale reactor coolant system (RCS) does not use traditional components with designed leakage rates, making it impractical to distinguish between identified and unidentified leakage inside containment using current instrumentation. All leakage into containment is treated as unidentified until the source is determined, and leakage rates are monitored through RCS inventory balance and comparison with the containment evacuation system (CES) flow. The leakage detection systems are designed to be reliable, redundant, and sensitive to support safety analyses.",
+      "summary": "The NuScale reactor coolant pressure boundary (RCPB) leakage detection system does not use traditional components with designed leakage rates, making it impractical to distinguish between identified and unidentified leakage inside containment using installed instrumentation. All leakage into containment is treated as unidentified until its source is determined, with leakage rates monitored through inventory balance and containment evacuation system (CES) flow rates; the detection systems are reliable and support leak-before-break analyses.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "41",
       "hop": 1
     },
+    "nuscale_ch05_0002": {
+      "node_id": "nuscale_ch05_0002",
+      "title": "Summary Description",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation, eliminating the need for pumps or external piping, and is integrated within each NuScale Power Module. The RCS is designed to safely transfer heat from the reactor core, maintain proper coolant chemistry, and ensure uniform boron concentration, supporting both normal and accident conditions. These features collectively ensure the system meets performance and safety requirements for each module.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 1
+    },
+    "nuscale_ch05_0010": {
+      "node_id": "nuscale_ch05_0010",
+      "title": "Reactor Coolant Pressure Boundary Materials",
+      "summary": "The Reactor Coolant Pressure Boundary (RCPB) materials, including welds, are selected and fabricated in accordance with ASME BPVC standards and meet the regulatory requirements of 10 CFR 50, including General Design Criteria (GDC) for quality, environmental compatibility, and fracture prevention. The materials used for Class 1 components, such as the reactor pressure vessel (RPV) and steam generators (SGs), are specified in Table 5.2-4, ensuring compliance with applicable material and testing standards.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "29",
+      "hop": 1
+    },
     "nuscale_ch05_0025": {
       "node_id": "nuscale_ch05_0025",
       "title": "References",
-      "summary": "This section details the materials used in the construction of the pressurizer and its components within the NuScale reactor coolant system. It specifies the types of steel and alloys used for various parts, their compliance with ASME BPVC standards, and highlights corrosion protection measures such as weld cladding and material selection for compatibility with operating environments.",
+      "summary": "This section details the materials used in the NuScale pressurizer, including the RPV upper shell, baffle plate, heater bundles, and associated components. It specifies the types of steel and nickel-based alloys used, their compliance with ASME BPVC standards, and the purpose of cladding for corrosion protection and compatibility.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "130",
       "hop": 1
     },
-    "nuscale_ch05_0002": {
-      "node_id": "nuscale_ch05_0002",
-      "title": "Summary Description",
-      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve independent modules, maintains water chemistry, and ensures uniform boron concentration to protect fuel integrity during all operating conditions.",
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section describes the NuScale reactor coolant system (RCS), which uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator. The RCS is designed to ensure safe and efficient cooling, maintain proper water chemistry, and support uniform boron concentration under all operating conditions, thereby protecting fuel integrity during normal and off-normal events.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "8",
-      "hop": 1
+      "hop": 2
     }
   },
   "edges": [
-    {
-      "source": "nuscale_ch05_0010",
-      "target": "nuscale_ch05_0012",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the materials and construction standards ensuring the integrity of the Reactor Coolant Pressure Boundary, which is directly related to Section B's discussion of detecting leakage from this boundary as part of managing the coolant inventory and chemistry."
-    },
-    {
-      "source": "nuscale_ch05_0010",
-      "target": "nuscale_ch05_0025",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section B references Section A by indicating that the material of the RPV upper shell and upper head, which are part of the pressurizer, is described in Section 5.2 (Section A), thus connecting the detailed component description to the general material requirements."
-    },
-    {
-      "source": "nuscale_ch05_0010",
-      "target": "nuscale_ch05_0002",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A specifies the materials and regulatory compliance for the reactor coolant pressure boundary, which structurally supports and contains the coolant inventory described in Section B's summary of the Reactor Coolant System."
-    },
-    {
-      "source": "nuscale_ch05_0012",
-      "target": "nuscale_ch05_0025",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section B provides detailed descriptions of pressurizer materials and components that are referenced in Section A's discussion of the Reactor Coolant Pressure Boundary, connecting the physical design to leakage detection considerations."
-    },
     {
       "source": "nuscale_ch05_0012",
       "target": "nuscale_ch05_0002",
@@ -76,11 +57,53 @@
       "description": "Section B provides a general overview of the RCS design and components, while Section A specifies details about leakage detection within that system, particularly noting the absence of traditional components that would affect coolant inventory and chemistry management."
     },
     {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0002",
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0010",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes the regulatory-compliant materials used in the Reactor Coolant Pressure Boundary, which directly affect the leakage characteristics discussed in Section A regarding detection and management of coolant inventory."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section B provides detailed descriptions of pressurizer materials and components that are referenced in Section A's discussion of the integrity and leakage detection of the Reactor Coolant Pressure Boundary."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0010",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A provides detailed specifications of the pressurizer materials and components, which are part of the broader RCS described in Section B, thereby elaborating on specific elements mentioned in the general system overview."
+      "description": "Section A describes the components and function of the Reactor Coolant System, while Section B specifies the material standards and regulatory compliance for the Reactor Coolant Pressure Boundary, which is a critical part of the RCS described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the RCS and its components, while Section B specifies detailed information about the materials and design of the pressurizer, which is one of the components mentioned in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0010",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B references Section A by indicating that the material descriptions for the pressurizer components are detailed in Section 5.2, which covers Reactor Coolant Pressure Boundary Materials."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0012",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A describes the design features of the RCS, including the absence of pumps and external piping, which directly impacts the leakage characteristics and detection challenges discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0010",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the components and configuration of the Reactor Coolant System, while Section B specifies the material standards and regulatory requirements for the Reactor Coolant Pressure Boundary, which is a critical part of the RCS described in Section A."
     }
   ]
 }

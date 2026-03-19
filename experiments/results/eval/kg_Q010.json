@@ -2,46 +2,37 @@
   "question": "What type of reactor is the NuScale NSSS?",
   "current_hop": 2,
   "nodes": {
-    "nuscale_ch01_0748": {
-      "node_id": "nuscale_ch01_0748",
-      "title": "SRP 15.4.6, Rev 2: Inadvertent Decrease in Boron Concentration in the Reactor Coolant System (PWR)II.2 Fuel Cladding Integrity",
-      "summary": "The section explains that NuScale’s reactor design conforms to the regulatory criteria for fuel cladding integrity in the event of an inadvertent decrease in boron concentration, as outlined in SRP 15.4.6, Rev 2. It notes that \"CHF\" (Critical Heat Flux) is the more appropriate term for describing the relevant phenomenon in the NuScale context, and confirms that the design meets the required standards for this scenario.",
+    "nuscale_ch01_0188": {
+      "node_id": "nuscale_ch01_0188",
+      "title": "BTP 6-1, (March 2007): pH for Emergency Coolant Water for Pressurized Water ReactorsB.3 Hydrogen Generation from Aluminum Corrosion",
+      "summary": "The section reviews NuScale's conformance with regulatory criteria regarding pH control and hydrogen generation from aluminum corrosion in emergency coolant water. While NuScale's design lacks certain systems referenced in the criteria (such as containment spray systems and sumps), the intent of the requirements is still met due to the collection and recirculation of ECCS water within the containment vessel. Other criteria related to minimum containment pressure and bypass leakage paths are deemed not applicable to the NuScale design.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "302",
+      "page_range": "232",
       "hop": 1
     },
     "nuscale_ch01_0018": {
       "node_id": "nuscale_ch01_0018",
       "title": "Principal Design Criteria",
-      "summary": "The section outlines the principal design criteria for the NuScale plant, focusing on the Site Cooling Water System (SCWS) and the overall facility process. It describes the reactor core's heat transfer process, natural coolant circulation, steam generation, and the flow of superheated steam to the turbine and condenser, emphasizing the system's role in power generation and heat removal.",
+      "summary": "The Principal Design Criteria section describes the NuScale reactor's core cooling and power generation process, emphasizing the role of the Site Cooling Water System (SCWS) in supporting auxiliary systems. It outlines the natural circulation of reactor coolant for heat transfer, the generation of superheated steam to drive a turbine and generator, and the use of a circulating water loop to remove heat via the condenser.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "28",
       "hop": 1
     },
-    "nuscale_ch01_0743": {
-      "node_id": "nuscale_ch01_0743",
-      "title": "SRP 15.4.4-15.4.5, Rev 2: Startup of an Inactive Loop or Recirculation Loop at an Incorrect Temperature, and Flow Controller Malfunction Causing an Increase in BWR Core Flow RateII.C Events of Moderate Frequency",
-      "summary": "This section explains that the guidance in SRP 15.4.4-15.4.5 regarding startup of an inactive loop or flow controller malfunction is not applicable to the NuScale reactor design, as it does not use reactor coolant pumps or forced coolant flow like traditional PWRs. Instead, any relevant postulated startup reactivity accidents are addressed under DSRS 15.4.6, which covers inadvertent decreases in boron concentration.",
+    "nuscale_ch01_0186": {
+      "node_id": "nuscale_ch01_0186",
+      "title": "BTP 6-1, (March 2007): pH for Emergency Coolant Water for Pressurized Water ReactorsB.1 Minimum pH for Emergency Coolant Water",
+      "summary": "This section discusses NuScale’s conformance with regulatory criteria regarding the minimum pH for emergency coolant water in pressurized water reactors. While certain requirements in BTP 6-1 reference systems not present in the NuScale design (such as a containment spray system or sump), the intent of the acceptance criterion is still applicable because ECCS water is recirculated within the containment vessel. Thus, NuScale’s design aligns with the regulatory intent for emergency coolant water pH control.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "300",
+      "page_range": "231",
       "hop": 1
     },
     "nuscale_ch01_0005": {
       "node_id": "nuscale_ch01_0005",
       "title": "Reactor Type",
-      "summary": "The NuScale reactor is a small modular pressurized water reactor (PWR) featuring a cylindrical steel containment vessel designed to withstand high-pressure events and maintain a vacuum during normal operation. Each NuScale Power Module (NPM) integrates the reactor core, steam generators, and pressurizer within a single vessel, uses natural circulation for cooling (eliminating the need for pumps), and delivers approximately 50 MWe per module, with up to 12 modules per plant for a total net output of about 570 MWe.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "9",
-      "hop": 1
-    },
-    "nuscale_ch01_0004": {
-      "node_id": "nuscale_ch01_0004",
-      "title": "Containment Type",
-      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and is maintained at a vacuum during normal operation, eliminating the need for insulation. The NuScale reactor is a passive, integral small modular pressurized water reactor with natural circulation and no external piping for steam generators or pressurizer, and each module produces about 50 MWe, with a 12-module plant yielding a net output of approximately 570 MWe. The section also notes that applicants referencing the design must provide construction schedules.",
+      "summary": "The NuScale reactor is a small modular pressurized water reactor (PWR) featuring a cylindrical steel containment vessel designed to ASME standards, with internal pressure maintained at a vacuum during normal operation. Each NuScale Power Module (NPM) integrates the reactor core, steam generators, and pressurizer within a single vessel, uses natural circulation for cooling (eliminating the need for pumps), and is rated at 160 MWt (about 50 MWe), with up to 12 modules per plant for a total net output of approximately 570 MWe.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "9",
@@ -50,111 +41,120 @@
     "nuscale_ch01_0019": {
       "node_id": "nuscale_ch01_0019",
       "title": "Operating Characteristics",
-      "summary": "The NuScale Power Module (NPM) operates using natural circulation for reactor coolant flow, eliminating the need for reactor coolant pumps, and features a small, modular, integral pressurized water reactor design. It employs passive safety systems—including dedicated emergency core cooling and decay heat removal systems—that do not rely on electrical power, and its components are designed for in-shop fabrication and enhanced safety through features like a vacuum-operated steel containment partially immersed in water. The NPM allows for flexible power maneuvering using turbine bypass, control rods, and soluble boron adjustments.",
+      "summary": "The NuScale Power Module (NPM) operates using natural circulation for reactor coolant flow, eliminating the need for reactor coolant pumps, and features a small, modular, integral pressurized water reactor design. It relies on passive safety systems—including dedicated emergency core cooling and decay heat removal systems—that do not require electrical power, and its components are housed in steel containment partially immersed in water for effective heat removal. The NPM allows for flexible power maneuvering using control rods and soluble boron, and its modular construction enables in-shop fabrication of major components.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "29",
+      "hop": 1
+    },
+    "nuscale_ch01_0004": {
+      "node_id": "nuscale_ch01_0004",
+      "title": "Containment Type",
+      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and operates under vacuum during normal conditions, eliminating the need for insulation. The reactor is a passive, integral small modular pressurized water reactor (SMR) with natural circulation and no external piping for steam generators or pressurizer, and each module produces about 50 MWe, with a 12-module plant yielding a net output of approximately 570 MWe.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "9",
       "hop": 1
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0748",
+      "source": "nuscale_ch01_0188",
       "target": "nuscale_ch01_0018",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A states that certain PWR-specific guidance is not applicable to the NuScale design because it does not use reactor coolant pumps or loops, while Section B describes the NuScale reactor core configuration, both indicating that NuScale is not a conventional PWR but rather a unique integral PWR design."
+      "description": "Section A discusses the NuScale design's partial conformance with criteria for Pressurized Water Reactors (PWRs), while Section B describes the NuScale reactor's core and cooling system, indicating it is a PWR-type design."
     },
     {
-      "source": "nuscale_ch01_0748",
-      "target": "nuscale_ch01_0743",
-      "relation": "SUPPORTS",
+      "source": "nuscale_ch01_0188",
+      "target": "nuscale_ch01_0186",
+      "relation": "REFERENCES",
       "confidence": 0.95,
-      "description": "Section A and Section B both state that the NuScale design does not require or include reactor coolant pumps, indicating that guidance for PWRs with forced coolant flow and loops is not applicable, thus supporting the identification of the NuScale NSSS as a different reactor type."
+      "description": "Section A discusses the applicability of BTP 6-1 requirements for pressurized water reactors to the NuScale design, while Section B outlines specific pH requirements from BTP 6-1, indicating that Section A references and evaluates the criteria detailed in Section B."
     },
     {
-      "source": "nuscale_ch01_0748",
+      "source": "nuscale_ch01_0188",
       "target": "nuscale_ch01_0005",
       "relation": "SUPPORTS",
       "confidence": 0.9,
-      "description": "Section A discusses the inapplicability of certain PWR-specific regulatory guidance to the NuScale design due to the absence of reactor coolant pumps, while Section B describes the NuScale reactor's containment and pressure vessel characteristics, both indicating that NuScale is a unique PWR design without conventional coolant loops."
+      "description": "Section A discusses the applicability of regulatory criteria for Pressurized Water Reactors (PWRs) to the NuScale design, while Section B describes the NuScale reactor's containment type and design features, connecting them by indicating that NuScale is a type of PWR but with unique design elements."
     },
     {
-      "source": "nuscale_ch01_0748",
-      "target": "nuscale_ch01_0004",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses the inapplicability of certain PWR-specific safety guidance to the NuScale design due to its lack of reactor coolant pumps, while Section B describes the NuScale containment as a cylindrical, steel, ASME-certified vessel, both providing technical details that together support the identification of NuScale as a unique type of pressurized water reactor (PWR) with specific design features."
-    },
-    {
-      "source": "nuscale_ch01_0748",
+      "source": "nuscale_ch01_0188",
       "target": "nuscale_ch01_0019",
       "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A notes that guidance for PWRs with forced coolant flow and pumps is not applicable to NuScale because its design does not include reactor coolant pumps, while Section B specifies that NuScale uses natural circulation for coolant flow, confirming the absence of pumps."
-    },
-    {
-      "source": "nuscale_ch01_0018",
-      "target": "nuscale_ch01_0743",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section B states that certain regulatory guidance is not applicable to the NuScale design because it does not use reactor coolant pumps or loops, which is consistent with Section A's description of the NuScale reactor core and coolant system."
-    },
-    {
-      "source": "nuscale_ch01_0018",
-      "target": "nuscale_ch01_0005",
-      "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A provides a general description of the NuScale reactor's core and support assembly, while Section B specifies the type of containment vessel used for the reactor, together offering complementary details about the reactor's design and classification."
+      "description": "Section A discusses the applicability of regulatory criteria for Pressurized Water Reactors (PWRs) to the NuScale design, while Section B describes the NuScale NSSS's operating characteristics, specifically indicating it uses natural circulation and passive safety systems typical of a PWR, thus Section B provides design details that clarify and support the classification implied in Section A."
     },
     {
-      "source": "nuscale_ch01_0018",
+      "source": "nuscale_ch01_0188",
       "target": "nuscale_ch01_0004",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the reactor core's physical configuration and process overview, while Section B specifies the type and design standards of the containment vessel that houses the reactor, connecting them through the physical and safety design of the NuScale NSSS."
-    },
-    {
-      "source": "nuscale_ch01_0018",
-      "target": "nuscale_ch01_0019",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes the physical configuration and core support assembly of the NuScale reactor, while Section B details its operating characteristics, such as natural circulation cooling and modular design, together providing complementary information that collectively defines the reactor type."
-    },
-    {
-      "source": "nuscale_ch01_0743",
-      "target": "nuscale_ch01_0005",
       "relation": "SUPPORTS",
       "confidence": 0.9,
-      "description": "Section A explains that certain BWR and PWR-specific regulatory guidance does not apply to the NuScale design because it lacks reactor coolant pumps and loops, while Section B describes the NuScale reactor's containment and pressure vessel type, together indicating that NuScale is a unique reactor type (integral PWR) distinct from conventional BWRs and loop-type PWRs."
+      "description": "Section B describes the NuScale containment vessel as a cylindrical, steel, ASME BPVC Class MC containment designed for high-pressure transients, which supports the classification of the NuScale NSSS as a pressurized water reactor referenced in Section A."
     },
     {
-      "source": "nuscale_ch01_0743",
-      "target": "nuscale_ch01_0004",
+      "source": "nuscale_ch01_0018",
+      "target": "nuscale_ch01_0186",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A describes the physical and operational design of the NuScale reactor core and its support assembly, while Section B discusses regulatory conformance for inservice inspection and testing of reactor components, both referencing the NuScale Final Safety Analysis Report as their source."
+    },
+    {
+      "source": "nuscale_ch01_0018",
+      "target": "nuscale_ch01_0005",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A explains that certain BWR-specific guidance is not applicable to NuScale because it lacks reactor coolant pumps and loops, implying a PWR-type design, while Section B describes the containment as a cylindrical steel vessel designed to ASME standards, which is typical for PWRs, thus both sections provide complementary technical details supporting the identification of NuScale as a PWR-type reactor."
+      "description": "Section A provides a general description of the NuScale reactor's core and support assembly, while Section B specifies the type of containment vessel used for the reactor, both contributing technical details necessary to identify the reactor type."
     },
     {
-      "source": "nuscale_ch01_0743",
+      "source": "nuscale_ch01_0018",
       "target": "nuscale_ch01_0019",
       "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the physical configuration of the NuScale reactor core and vessel, while Section B details its operating characteristics, specifically that it uses natural circulation for coolant flow, both contributing information necessary to identify the reactor type."
+    },
+    {
+      "source": "nuscale_ch01_0018",
+      "target": "nuscale_ch01_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the reactor core's physical arrangement and process overview, while Section B specifies the type and design standards of the containment vessel that houses the reactor, connecting them through the physical and safety design of the NuScale NSSS."
+    },
+    {
+      "source": "nuscale_ch01_0186",
+      "target": "nuscale_ch01_0005",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B directly describes the reactor type and containment design of the NuScale NSSS, while Section A discusses regulatory conformance for pressurized water reactors, implying that NuScale is a PWR and thus connecting the regulatory context to the reactor type."
+    },
+    {
+      "source": "nuscale_ch01_0186",
+      "target": "nuscale_ch01_0019",
+      "relation": "SATISFIES",
       "confidence": 0.95,
-      "description": "Section A states that guidance for PWRs with reactor coolant pumps is not applicable to NuScale because it does not use reactor coolant pumps, while Section B confirms that NuScale uses natural circulation for reactor coolant flow, eliminating the need for such pumps, thus both sections connect through the design feature of natural circulation versus forced flow."
+      "description": "Section B describes the NuScale NSSS as a reactor that operates using natural circulation and passive safety systems, which are characteristic features of a pressurized water reactor (PWR), and Section A references regulatory criteria and guidance specifically for pressurized water reactors, thereby connecting the design type in B to the regulatory classification in A."
+    },
+    {
+      "source": "nuscale_ch01_0186",
+      "target": "nuscale_ch01_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses regulatory conformance for pressurized water reactors (PWRs), while Section B describes the NuScale containment vessel as designed for a PWR, thus Section B provides design details that specify the reactor type referenced in Section A."
     },
     {
       "source": "nuscale_ch01_0005",
       "target": "nuscale_ch01_0019",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A describes the physical containment and vessel design of the NuScale reactor, while Section B outlines its operating characteristics such as natural circulation and modularity, together providing complementary details that specify the NuScale NSSS as a modular, integral pressurized water reactor (iPWR)."
+      "description": "Section A describes the physical containment and vessel design of the NuScale reactor, while Section B outlines its operating characteristics such as natural circulation and modularity, together providing complementary details that specify the NuScale NSSS as a modular, integral pressurized water reactor."
     },
     {
-      "source": "nuscale_ch01_0004",
-      "target": "nuscale_ch01_0019",
+      "source": "nuscale_ch01_0019",
+      "target": "nuscale_ch01_0004",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A describes the physical containment vessel design of the NuScale reactor, while Section B outlines the operating characteristics of the NuScale Power Module (NPM), with both sections providing complementary technical details that together help identify the reactor type as a modular, integral pressurized water reactor (iPWR)."
+      "description": "Section A describes the operating characteristics of the NuScale reactor, including its use of natural circulation and modular design, while Section B specifies the type of containment vessel used, both contributing technical details necessary to identify the reactor type in response to the analysis question."
     }
   ]
 }

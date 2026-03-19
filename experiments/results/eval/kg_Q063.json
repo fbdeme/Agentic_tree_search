@@ -5,25 +5,25 @@
     "nuscale_ch05_0025": {
       "node_id": "nuscale_ch05_0025",
       "title": "References",
-      "summary": "This section details the materials used in the construction of the pressurizer and its components in the NuScale reactor, specifying alloys and standards for each part to ensure corrosion resistance and compatibility with operating environments. It references relevant sections of the BPVC (Boiler and Pressure Vessel Code) and lists the specific alloys and material specifications for the baffle plate, heater bundles, cover plate, bolting, and heater sheaths.",
+      "summary": "This section details the materials used in the construction of the pressurizer and its components within the NuScale reactor coolant system. It specifies the types of steel and alloys used for various parts, their protective cladding, and compliance with relevant BPVC material specifications to ensure corrosion resistance and compatibility with operating environments.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "130",
       "hop": 1
     },
-    "nuscale_ch05_0013": {
-      "node_id": "nuscale_ch05_0013",
-      "title": "References",
-      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as tables summarizing relevant ASME code cases for materials and components used in nuclear facility applications.",
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain fuel integrity, minimize solid deposits, and ensure uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "46",
+      "page_range": "8",
       "hop": 1
     },
     "nuscale_ch05_0009": {
       "node_id": "nuscale_ch05_0009",
       "title": "Overpressure Protection",
-      "summary": "This section outlines NuScale's compliance with NRC regulations and ASME code requirements for overpressure protection of the reactor coolant boundary. It details how the plant selects and applies specific ASME BPVC and OM code cases for design, fabrication, inspection, and testing, ensuring all code cases used meet the conditions established in relevant NRC regulatory guides. A consolidated list of these code cases is provided in Table 5.2-1.",
+      "summary": "This section outlines NuScale's compliance with NRC regulations and ASME code requirements for overpressure protection of the reactor coolant boundary. It details how the plant uses specific ASME BPVC and OM code cases for design, fabrication, inspection, and testing, ensuring all selected code cases meet the conditions established in relevant NRC regulatory guides. A consolidated list of these code cases is provided in Table 5.2-1.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "21",
@@ -32,85 +32,92 @@
     "nuscale_ch05_0004": {
       "node_id": "nuscale_ch05_0004",
       "title": "System Description",
-      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and is responsible for transporting heat from the reactor core to the steam generators using natural circulation. It includes components such as the reactor pressure vessel, pressurizer, and various valves, and features systems for removing noncondensible gases and maintaining the integrity of the reactor coolant pressure boundary. The RCS interfaces with several other systems, including emergency core cooling and chemical control, to ensure safe and efficient operation.",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes key components such as the reactor pressure vessel, pressurizer, and associated piping and controls. It removes heat from the reactor core to the steam generators using natural circulation, and features systems for degasification and emergency core cooling to maintain safety and integrity. The RCS interfaces with several other systems, ensuring effective heat removal and containment of radionuclides.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "9",
       "hop": 1
     },
-    "nuscale_ch05_0006": {
-      "node_id": "nuscale_ch05_0006",
-      "title": "System Evaluation",
-      "summary": "This section describes the evaluation of the NuScale Power Plant's system performance, focusing on optimizing steady-state parameters such as coolant temperatures, flow rates, and pressure to maximize electrical generation and maintain safety margins. Calculations using NRELAP5 software, supported by hand calculations, account for uncertainties and ensure the natural circulation design is effective, with low pressure losses and reliable flow even under varying conditions.",
+    "nuscale_ch05_0013": {
+      "node_id": "nuscale_ch05_0013",
+      "title": "References",
+      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as tables summarizing relevant ASME code cases for reactor components.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "12",
-      "hop": 3
+      "page_range": "46",
+      "hop": 1
     }
   },
   "edges": [
     {
       "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed descriptions of specific pressurizer components and their materials, which are part of the broader reactor coolant system and pressurizer overview described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0009",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides detailed descriptions of the pressurizer's components and materials, which are part of the reactor coolant system relevant to the overpressure protection requirements and code compliance discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed descriptions of the pressurizer's structural components and materials, which are part of the Reactor Coolant System described in Section B, thereby specifying the physical elements that enable the system functions outlined in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
       "target": "nuscale_ch05_0013",
       "relation": "REFERENCES",
       "confidence": 0.95,
-      "description": "Section A describes the materials and components of the pressurizer, referencing Section 5.2 for material details, while Section B provides the regulatory and industry standards (including Section 5.2) that govern the integrity and material requirements for those same components."
+      "description": "Section A references Section B by directing the reader to Section 5.2 for material descriptions of the RPV upper shell and upper head, which are detailed in Section B."
     },
     {
-      "source": "nuscale_ch05_0025",
+      "source": "nuscale_ch05_0003",
       "target": "nuscale_ch05_0009",
-      "relation": "SPECIFIES",
+      "relation": "IS_PREREQUISITE_OF",
       "confidence": 0.9,
-      "description": "Section A provides detailed descriptions of pressurizer components and materials, which are part of the reactor coolant system whose integrity and overpressure protection requirements are addressed in Section B."
+      "description": "Section A describes the general design and components of the reactor coolant system, which includes the reactor pressure vessel and integral pressurizer, while Section B outlines the regulatory codes and standards (ASME BPVC, 10 CFR 50.55a) that the design and construction of these components, including safety valves, must comply with."
     },
     {
-      "source": "nuscale_ch05_0025",
+      "source": "nuscale_ch05_0003",
       "target": "nuscale_ch05_0004",
       "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A specifies the detailed components and materials of the pressurizer, which is referenced in Section B's system-level description of the Reactor Coolant System (RCS) and its functions, including degasification and pressure boundary integrity."
+      "confidence": 0.95,
+      "description": "Section B provides specific details about the reactor coolant system's degasification and venting functions, which are part of the general system described in Section A."
     },
     {
-      "source": "nuscale_ch05_0013",
-      "target": "nuscale_ch05_0009",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A provides references to regulatory and industry standards that are cited in Section B to justify compliance with overpressure protection requirements for the Reactor Safety Valve."
-    },
-    {
-      "source": "nuscale_ch05_0013",
-      "target": "nuscale_ch05_0004",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A lists references that provide the technical and regulatory basis for the integrity and operation of the Reactor Safety Valve (RSV) described in Section B's system description."
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0013",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides a summary description of the reactor coolant system design, while Section B lists references that support the technical and regulatory basis for the integrity and quality assurance of the reactor coolant boundary, which includes components like the Reactor Safety Valve."
     },
     {
       "source": "nuscale_ch05_0009",
       "target": "nuscale_ch05_0004",
       "relation": "SATISFIES",
       "confidence": 0.85,
-      "description": "Section A outlines regulatory and code compliance requirements for overpressure protection, which Section B addresses by describing system features (such as reactor vent valves) that implement these protective functions in the reactor coolant system."
+      "description": "Section A outlines the regulatory and code compliance requirements for overpressure protection devices like the Reactor Safety Valve, while Section B describes the system features (such as vent valves and pressure-retaining components) that implement these requirements in the reactor design."
     },
     {
-      "source": "nuscale_ch05_0006",
-      "target": "nuscale_ch05_0025",
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0013",
       "relation": "REFERENCES",
       "confidence": 0.95,
-      "description": "Section A provides a general system evaluation and references Section 5.4 for further details, while Section B contains those detailed descriptions of reactor coolant system components, thus Section A cross-references Section B for supporting technical information."
+      "description": "Section A discusses compliance with ASME and NRC regulatory codes for overpressure protection, while Section B lists specific references (such as ASME and EPRI documents) that support or are cited in Section A's compliance statements."
     },
     {
-      "source": "nuscale_ch05_0006",
+      "source": "nuscale_ch05_0004",
       "target": "nuscale_ch05_0013",
       "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A discusses the system evaluation and operational criteria for the NuScale Power Plant, while Section B lists references that provide supporting standards and guidelines relevant to the integrity and quality assurance of reactor components mentioned in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0006",
-      "target": "nuscale_ch05_0009",
-      "relation": "SATISFIES",
-      "confidence": 0.85,
-      "description": "Section A discusses the system evaluation and operational parameters of the NuScale Power Plant, while Section B addresses compliance with overpressure protection codes and standards, connecting them through the requirement that system design (including safety valves) must meet regulatory and code-based integrity and protection criteria."
+      "confidence": 0.9,
+      "description": "Section A describes the system functions and components relevant to reactor safety valves, while Section B lists reference documents that provide standards and guidelines supporting the integrity and quality assurance of those components."
     }
   ]
 }

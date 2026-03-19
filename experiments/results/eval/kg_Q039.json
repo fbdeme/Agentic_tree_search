@@ -2,60 +2,62 @@
   "question": "What is the definition of the abbreviation CNV?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0023": {
-      "node_id": "nuscale_ch01_0023",
-      "title": "Containment Systems",
-      "summary": "The NuScale containment vessel (CNV) is maintained under vacuum during normal operation, which reduces moisture and corrosion, aids in leak detection, and limits oxygen for safety. The design relies on passive safety systems and eliminates large external piping, resulting in improved safety, lower core damage frequency, and a smaller radioactive source term compared to conventional reactors.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "32",
-      "hop": 1
-    },
     "nuscale_ch01_0019": {
       "node_id": "nuscale_ch01_0019",
       "title": "Operating Characteristics",
-      "summary": "The NuScale Power Module (NPM) operates at full power using natural circulation for reactor coolant flow, eliminating the need for pumps. Its small, modular, integral pressurized water reactor design features passive safety systems, dedicated emergency cooling, and decay heat removal, all housed in a steel containment partially immersed in water for effective heat management. The NPM allows for flexible power adjustments and core maneuvering using control rods and soluble boron.",
+      "summary": "The NuScale Power Module (NPM) operates at full power using natural circulation for reactor coolant flow, eliminating the need for reactor coolant pumps. Its small, modular, integral pressurized water reactor design features passive safety systems, dedicated emergency cooling, and decay heat removal, all housed in a steel containment partially immersed in water for effective passive heat removal. The NPM allows for flexible power maneuvering using control rods and soluble boron, and its components are designed for modular fabrication and enhanced safety.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "29",
       "hop": 1
     },
-    "nuscale_ch01_0111": {
-      "node_id": "nuscale_ch01_0111",
-      "title": "Figure 1.7-2: Instrumentatio n and Controls Symbol Legend",
-      "summary": "This section provides a legend explaining the symbols used for instrumentation and controls in NuScale’s safety analysis diagrams. It defines the logic gate functions, control room indicators, switch types, and other symbols relevant to system monitoring and operation, ensuring clear interpretation of the diagrams.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "101",
-      "hop": 1
-    },
     "nuscale_ch01_0117": {
       "node_id": "nuscale_ch01_0117",
       "title": "Figure 1.7-3f: Piping and In strumentation Diagram Legends",
-      "summary": "This section provides the legend for symbols used in NuScale's Piping and Instrumentation Diagrams (P&IDs), detailing the graphical representations for various instruments, sensors, and devices such as flow meters, pressure and temperature sensors, sample probes, and level indicators. It serves as a reference to interpret the P&ID drawings accurately by defining each symbol and its application within the system.",
+      "summary": "This section provides the legend for piping and instrumentation diagrams (P&IDs) used in the NuScale Final Safety Analysis Report. It lists and describes various symbols representing sample probes, pressure and temperature sensors, flow measurement devices, and other instrumentation and accessory devices, ensuring standardized interpretation of the diagrams.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "107",
       "hop": 1
     },
-    "nuscale_ch01_0014": {
-      "node_id": "nuscale_ch01_0014",
-      "title": "Acronyms and Abbreviations",
-      "summary": "This section explains the conventions used in the NuScale Final Safety Analysis Report (FSAR) for numbering tables, figures, and pages, as well as the handling of proprietary and sensitive information. Tables and figures are numbered according to their section, and sensitive content is withheld from the public version in compliance with regulatory requirements.",
+    "nuscale_ch01_0023": {
+      "node_id": "nuscale_ch01_0023",
+      "title": "Containment Systems",
+      "summary": "The NuScale containment vessel (CNV) is kept under vacuum during normal operation, which reduces moisture and corrosion, aids in leak detection, and limits oxygen for safety. In the event of an emergency, passive cooling rapidly reduces pressure and temperature, and the design’s reliance on passive safety systems and small fuel inventory results in improved safety and a lower core damage frequency compared to traditional reactors.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "32",
+      "hop": 1
+    },
+    "nuscale_ch01_0111": {
+      "node_id": "nuscale_ch01_0111",
+      "title": "Figure 1.7-2: Instrumentatio n and Controls Symbol Legend",
+      "summary": "This section provides a legend explaining the symbols used for instrumentation and controls in the NuScale Final Safety Analysis Report. It describes the logic gate functions, control room indicators, switch types, and other symbols relevant to system operation and status indication, as well as notes on piping and instrumentation diagram conventions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "101",
+      "hop": 1
+    },
+    "nuscale_ch01_0013": {
+      "node_id": "nuscale_ch01_0013",
+      "title": "Proprietary Information",
+      "summary": "This section explains the organization and identification of text, tables, figures, and page numbering within the NuScale Final Safety Analysis Report (FSAR). It also clarifies that while the FSAR does not contain proprietary or safeguards information, some sensitive content is withheld from public disclosure in accordance with regulations, and a separate public version is provided with such material removed.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "10",
-      "hop": 3
+      "hop": 4
+    },
+    "nuscale_ch01_0014": {
+      "node_id": "nuscale_ch01_0014",
+      "title": "Acronyms and Abbreviations",
+      "summary": "This section explains the conventions used in the NuScale Final Safety Analysis Report (FSAR) for numbering tables, figures, and pages, as well as the handling of proprietary and sensitive information. Tables and figures are numbered according to their section, and sensitive content is withheld from the public version in accordance with regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "10",
+      "hop": 4
     }
   },
   "edges": [
-    {
-      "source": "nuscale_ch01_0019",
-      "target": "nuscale_ch01_0111",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section B provides symbol legends and abbreviations, which may include the definition of 'CNV', thus serving as a potential source for answering the analysis question posed to Section A."
-    },
     {
       "source": "nuscale_ch01_0019",
       "target": "nuscale_ch01_0117",
@@ -64,11 +66,46 @@
       "description": "Section B provides diagram legends that may define abbreviations such as CNV, which could be referenced or used in Section A's description of containment components."
     },
     {
-      "source": "nuscale_ch01_0111",
+      "source": "nuscale_ch01_0019",
+      "target": "nuscale_ch01_0023",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B introduces and describes the CNV, providing context that allows the abbreviation CNV to be defined as the containment vessel, which is referenced in Section A as part of the modular reactor and containment components."
+    },
+    {
+      "source": "nuscale_ch01_0019",
+      "target": "nuscale_ch01_0111",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides symbol legends and abbreviations, which may include the definition of 'CNV', thereby serving as a potential source for the abbreviation's meaning referenced in the analysis question, while Section A does not address abbreviations."
+    },
+    {
+      "source": "nuscale_ch01_0117",
+      "target": "nuscale_ch01_0023",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.7,
+      "description": "Section B uses the abbreviation 'CNV' in context, while Section A is a legend that could potentially define such abbreviations, but does not explicitly define 'CNV', so Section A could be a source for the definition sought in the analysis question."
+    },
+    {
+      "source": "nuscale_ch01_0013",
       "target": "nuscale_ch01_0117",
-      "relation": "SUPPORTS",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B contains diagram legends where abbreviations such as CNV are likely defined, providing the specific definitions referenced or needed for the analysis question, while Section A only describes general document structure and does not address abbreviations."
+    },
+    {
+      "source": "nuscale_ch01_0014",
+      "target": "nuscale_ch01_0117",
+      "relation": "SPECIFIES",
       "confidence": 0.8,
-      "description": "Section A and Section B both provide symbol legends for instrumentation and piping diagrams, which are sources where the definition of the abbreviation CNV may be found."
+      "description": "Section A provides general information about acronyms and abbreviations in the FSAR, while Section B contains a figure that likely includes the legend or definitions for abbreviations such as CNV, thus Section B specifies the detailed definitions referenced generally in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0014",
+      "target": "nuscale_ch01_0023",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B uses the abbreviation 'CNV' in context, while Section A is titled 'Acronyms and Abbreviations' and is expected to provide definitions for such abbreviations, thus Section A is intended to specify the meaning of 'CNV' as used in Section B."
     }
   ]
 }

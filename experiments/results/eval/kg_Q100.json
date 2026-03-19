@@ -2,37 +2,19 @@
   "question": "Explain the multi-module operation strategy of NuScale.",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0859": {
-      "node_id": "nuscale_ch01_0859",
-      "title": "SRP 19.3, Rev 0: Regulatory Treatment of Non-Safety Systems for Passive Advanced Light Water ReactorsAll Various",
-      "summary": "This section summarizes NuScale's conformance with various sections of the Standard Review Plan (SRP) related to risk and safety for passive advanced light water reactors. Specifically, it states that NuScale fully conforms to SRP 19.3, which addresses the regulatory treatment of non-safety systems, with no exceptions noted. The table also references conformance status for related SRP sections, highlighting any partial conformance or exceptions where applicable.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "323",
-      "hop": 1
-    },
-    "nuscale_ch01_0003": {
-      "node_id": "nuscale_ch01_0003",
-      "title": "Plant Location",
-      "summary": "The section introduces the NuScale Final Safety Analysis Report (FSAR), which is required for standard design certification under 10 CFR 52. It provides an overview of the NuScale Power Module (NPM), a modular, scalable nuclear steam supply system, and highlights key design features such as passive safety systems, compact containment, and advanced digital controls. The FSAR covers both individual module and multi-module plant configurations.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "8",
-      "hop": 1
-    },
     "nuscale_ch01_0004": {
       "node_id": "nuscale_ch01_0004",
       "title": "Containment Type",
-      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and is maintained at a vacuum during normal operation, eliminating the need for insulation. The NuScale reactor is a passive, integral small modular pressurized water reactor with natural circulation and no external piping for steam generators or pressurizer, and each module produces about 50 MWe, with a 12-module plant yielding approximately 570 MWe net output. The schedule for construction and operation will be provided by applicants referencing the NuScale design.",
+      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and operates under vacuum during normal conditions, eliminating the need for insulation. The NuScale reactor is a passive, integral small modular pressurized water reactor with natural circulation and no external piping for steam generators or pressurizer, and each module produces about 50 MWe, with a 12-module plant yielding a net output of approximately 570 MWe.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "9",
       "hop": 1
     },
-    "nuscale_ch01_0860": {
-      "node_id": "nuscale_ch01_0860",
-      "title": "SRP 19.4, Rev 0: Strategies and Guidance to Address Loss-of-Large Areas of the Plant Due to Explosions and FiresAll Various",
-      "summary": "This section summarizes NuScale's conformance with SRP 19.4, which provides strategies and guidance for addressing loss-of-large areas of a plant due to explosions and fires. NuScale partially conforms to SRP 19.4, except for certain acceptance criteria related to Boiling Water Reactor (BWR) containment venting and spent fuel pool (SFP) mitigative measures, as these are either BWR-specific or not required for NuScale's below-grade, undrainable SFP design.",
+    "nuscale_ch01_0859": {
+      "node_id": "nuscale_ch01_0859",
+      "title": "SRP 19.3, Rev 0: Regulatory Treatment of Non-Safety Systems for Passive Advanced Light Water ReactorsAll Various",
+      "summary": "This section summarizes NuScale’s conformance with SRP 19.3, Rev 0, which addresses the regulatory treatment of non-safety systems for passive advanced light water reactors. The NuScale Final Safety Analysis Report states full conformance with these criteria, with no exceptions or additional comments noted.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "323",
@@ -41,83 +23,101 @@
     "nuscale_ch01_0009": {
       "node_id": "nuscale_ch01_0009",
       "title": "Regulatory Guide 1.206",
-      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and operates under vacuum during normal conditions, eliminating the need for insulation. The reactor is a passive, integral small modular pressurized water reactor (SMR) with natural circulation and no external piping for steam generators or pressurizer, and each module produces 160 MWt (about 50 MWe), with a 12-module plant yielding a net output of approximately 570 MWe. Applicants referencing the NuScale design must provide their own construction and operation schedules.",
+      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and operates under vacuum during normal conditions, eliminating the need for insulation. The NuScale reactor is a passive, integral small modular pressurized water reactor (SMR) with natural circulation and no external piping for steam generators or pressurizer, and each module produces 160 MWt (about 50 MWe), with a 12-module plant yielding a net output of approximately 570 MWe. Applicants referencing the NuScale design must provide construction and operational schedules.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch01_0860": {
+      "node_id": "nuscale_ch01_0860",
+      "title": "SRP 19.4, Rev 0: Strategies and Guidance to Address Loss-of-Large Areas of the Plant Due to Explosions and FiresAll Various",
+      "summary": "This section summarizes NuScale's conformance with SRP 19.4, which addresses strategies for loss-of-large areas of the plant due to explosions and fires. NuScale partially conforms to SRP 19.4, except for certain acceptance criteria related to Boiling Water Reactor (BWR) containment venting and spent fuel pool (SFP) mitigative measures, as these are either BWR-specific or not required for NuScale's below-grade, undrainable SFP design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "323",
+      "hop": 1
+    },
+    "nuscale_ch01_0003": {
+      "node_id": "nuscale_ch01_0003",
+      "title": "Plant Location",
+      "summary": "The section introduces the NuScale Final Safety Analysis Report, which is part of the application for standard design certification under 10 CFR 52. It describes the modular, scalable design of the NuScale Power Module (NPM), highlighting its key safety features, compact structure, and the ability to operate up to twelve modules within a single facility.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "8",
       "hop": 1
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0859",
+      "source": "nuscale_ch01_0004",
+      "target": "nuscale_ch01_0859",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the design and containment features of the NuScale module, while Section B references regulatory criteria (SRP 19.3) that the NuScale design claims to conform to, connecting the containment design to regulatory expectations for passive advanced light water reactors."
+    },
+    {
+      "source": "nuscale_ch01_0004",
+      "target": "nuscale_ch01_0009",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A provides the specific design details of the NuScale containment vessel, while Section B references the regulatory guidance (Regulatory Guide 1.206) that these design details are intended to satisfy."
+    },
+    {
+      "source": "nuscale_ch01_0004",
+      "target": "nuscale_ch01_0860",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the technical containment design of the NuScale module, while Section B references regulatory strategies (SRP 19.4) for addressing loss-of-large-areas, which the containment design in Section A must support or conform to as part of the multi-module operation strategy."
+    },
+    {
+      "source": "nuscale_ch01_0004",
       "target": "nuscale_ch01_0003",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section A references regulatory criteria and conformance related to multi-module operation strategies, while Section B provides the general plant description and design bases that underpin those strategies, making Section B a prerequisite for understanding the context of Section A's regulatory analysis."
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific technical details about the NuScale containment vessel, which is one of the structures described more generally in Section B's overview of the plant design and safety analysis."
     },
     {
       "source": "nuscale_ch01_0859",
-      "target": "nuscale_ch01_0004",
-      "relation": "SPECIFIES",
+      "target": "nuscale_ch01_0009",
+      "relation": "SATISFIES",
       "confidence": 0.85,
-      "description": "Section A outlines the regulatory criteria and conformance requirements for non-safety systems in passive advanced light water reactors like NuScale, while Section B describes the specific design and operational features of the NuScale containment vessel, thus Section B provides the technical details that Section A's regulatory framework is intended to evaluate."
+      "description": "Section A outlines the regulatory criteria and conformance for non-safety systems and risk-informed changes relevant to multi-module operation, while Section B describes the containment vessel design that must comply with these regulatory requirements, connecting them through the need for the containment's features to satisfy the regulatory expectations for multi-module operation."
     },
     {
       "source": "nuscale_ch01_0859",
       "target": "nuscale_ch01_0860",
       "relation": "REFERENCES",
-      "confidence": 0.85,
+      "confidence": 0.9,
       "description": "Section A references Section B as part of the NuScale Final Safety Analysis Report's conformance with regulatory criteria, indicating that strategies from Section B are considered in the overall regulatory treatment discussed in Section A."
     },
     {
       "source": "nuscale_ch01_0859",
-      "target": "nuscale_ch01_0009",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A outlines the regulatory criteria and conformance requirements for non-safety systems and risk-informed changes in NuScale's licensing basis, while Section B describes the design and regulatory classification of the NuScale containment vessel, connecting them through the regulatory framework that governs both multi-module operation strategies and containment system requirements."
+      "target": "nuscale_ch01_0003",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria and conformance related to multi-module operation strategies, while Section B provides the general plant description and design bases that serve as the foundation for those strategies, connecting them through the design and safety analysis context."
     },
     {
-      "source": "nuscale_ch01_0003",
-      "target": "nuscale_ch01_0004",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general description of the NuScale plant design and its operational bases, while Section B specifies the technical details of the containment vessel that is part of the plant described in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0003",
+      "source": "nuscale_ch01_0009",
       "target": "nuscale_ch01_0860",
       "relation": "REFERENCES",
       "confidence": 0.85,
-      "description": "Section A provides a general introduction and scope of the NuScale FSAR, which includes the design bases and operational limits, while Section B references specific regulatory criteria (SRP 19.4) that the FSAR must address, including strategies for multi-module operation in response to large-area loss scenarios."
+      "description": "Section A describes the design and safety features of the NuScale containment vessel, which are referenced in Section B as part of the NuScale Final Safety Analysis Report's conformance with regulatory criteria for multi-module operation strategies, particularly regarding risk and safety in loss-of-large-area scenarios."
     },
     {
-      "source": "nuscale_ch01_0003",
-      "target": "nuscale_ch01_0009",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A provides a general overview of the NuScale plant design and its regulatory context, while Section B specifies technical details about the containment vessel as part of that design."
-    },
-    {
-      "source": "nuscale_ch01_0004",
-      "target": "nuscale_ch01_0860",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A describes the design and safety features of the NuScale containment vessel, which are relevant to Section B's discussion of regulatory strategies (SRP 19.4) for addressing loss-of-large areas due to explosions and fires, as the containment's robustness supports compliance with such strategies."
-    },
-    {
-      "source": "nuscale_ch01_0004",
-      "target": "nuscale_ch01_0009",
+      "source": "nuscale_ch01_0009",
+      "target": "nuscale_ch01_0003",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A provides specific details about the NuScale containment vessel design, which are referenced in Section B to demonstrate compliance with Regulatory Guide 1.206 requirements."
+      "description": "Section A provides specific technical details about the NuScale containment vessel design, which is one of the structures described more generally in Section B's overall introduction to the plant's safety analysis and design bases."
     },
     {
       "source": "nuscale_ch01_0860",
-      "target": "nuscale_ch01_0009",
-      "relation": "SUPPORTS",
+      "target": "nuscale_ch01_0003",
+      "relation": "REFERENCES",
       "confidence": 0.85,
-      "description": "Section B describes the design and safety features of the NuScale containment vessel, which supports the strategies and guidance in Section A for addressing loss-of-large areas due to explosions and fires as part of the multi-module operation strategy."
+      "description": "Section A references regulatory strategies and guidance that the NuScale FSAR (described in Section B) must conform to, establishing the regulatory context for the multi-module operation strategy discussed in the FSAR."
     }
   ]
 }

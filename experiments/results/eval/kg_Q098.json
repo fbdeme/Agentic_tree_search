@@ -2,101 +2,138 @@
   "question": "Explain the pressure control methods for the pressurizer heater and spray.",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0025": {
-      "node_id": "nuscale_ch05_0025",
-      "title": "References",
-      "summary": "This section details the materials used in the NuScale pressurizer, including the RPV upper shell, baffle plate, heater bundles, and associated components. It specifies the types of alloys and stainless steels used, their relevant material specifications, and their compliance with ASME Boiler and Pressure Vessel Code (BPVC) standards to ensure corrosion resistance and compatibility with operating environments.",
+    "nuscale_ch05_0023": {
+      "node_id": "nuscale_ch05_0023",
+      "title": "Reactor Coolant System High-Point Vents",
+      "summary": "This section describes the testing and inspection requirements for the DHRS (Decay Heat Removal System) components and actuation valves in the NuScale reactor coolant system. It explains that these valves are exercised during cold shutdown conditions, in accordance with ASME OM Code, and outlines the procedures for position verification and functional testing, including a one-time in-situ test for the first reactor module during initial startup.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "130",
+      "page_range": "121",
       "hop": 1
     },
     "nuscale_ch05_0024": {
       "node_id": "nuscale_ch05_0024",
       "title": "Pressurizer",
-      "summary": "The pressurizer in the NuScale reactor is integrated into the upper region of the reactor vessel and functions to regulate reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering reactor trips or safety system actuations, while providing continuous monitoring and control through instrumentation.",
+      "summary": "The pressurizer in the NuScale reactor is integrated into the upper region of the reactor vessel and functions to regulate reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure, and is designed to handle pressure changes during various operating conditions without triggering unnecessary reactor trips or safety system actuations.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "124",
       "hop": 1
     },
-    "nuscale_ch05_0012": {
-      "node_id": "nuscale_ch05_0012",
-      "title": "Reactor Coolant Pressure Boundary Leakage Detection",
-      "summary": "The NuScale reactor coolant system (RCS) does not use traditional components with designed leakage, making it impractical to distinguish between identified and unidentified leakage inside containment using current instrumentation. All leakage into containment is treated as unidentified until its source is confirmed, and leakage rates are determined by RCS inventory balance and comparison to the containment evacuation system (CES) flow. The leakage detection systems are designed to be reliable, redundant, and sensitive enough to support safety analyses.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "41",
-      "hop": 1
-    },
     "nuscale_ch05_0004": {
       "node_id": "nuscale_ch05_0004",
       "title": "System Description",
-      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes key components such as the reactor pressure vessel, pressurizer, and associated piping and controls. The RCS removes heat from the reactor core to the steam generators using natural circulation, and features systems for degasification and emergency core cooling to maintain safety and integrity. It interfaces with several other systems, including chemical control, emergency cooling, and sampling systems.",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes key components such as the reactor pressure vessel, pressurizer, and associated piping and controls. It removes heat from the reactor core to the steam generators using natural circulation, and features systems for degasification and emergency core cooling to maintain safety and integrity. The RCS interfaces with several other systems, including chemical control, emergency cooling, and sampling systems.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "9",
       "hop": 1
     },
-    "nuscale_ch05_0023": {
-      "node_id": "nuscale_ch05_0023",
-      "title": "Reactor Coolant System High-Point Vents",
-      "summary": "This section describes the testing and inspection requirements for the Decay Heat Removal System (DHRS) components in the NuScale reactor, ensuring compliance with ASME codes for Class 2 components. It details how DHRS actuation valves are tested during cold shutdown conditions, outlines the procedures for valve exercising and position verification, and specifies that a one-time in-situ test of the DHRS function will be conducted on the first installed reactor module as part of the initial test program.",
+    "nuscale_ch05_0012": {
+      "node_id": "nuscale_ch05_0012",
+      "title": "Reactor Coolant Pressure Boundary Leakage Detection",
+      "summary": "The NuScale reactor coolant pressure boundary (RCPB) leakage detection system does not use traditional components with designed leakage rates, making it impractical to distinguish between identified and unidentified leakage inside containment using installed instrumentation. Leakage is treated as unidentified until its source is confirmed, and the leakage rate is determined by RCS inventory balance; the detection systems are reliable and support leak-before-break analyses.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "121",
+      "page_range": "41",
       "hop": 1
+    },
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the construction of the pressurizer and its components in the NuScale reactor, specifying alloys and standards for each part to ensure corrosion resistance and compatibility with operating environments. It references relevant sections of the BPVC (Boiler and Pressure Vessel Code) and lists the applicable material specifications for components such as the baffle plate, heater bundles, cover plate, and bolting.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 1
+    },
+    "nuscale_ch05_0007": {
+      "node_id": "nuscale_ch05_0007",
+      "title": "Integrity of Reactor Coolant Boundary",
+      "summary": "This section describes the design features of each NuScale Power Module (NPM) that ensure the integrity of the reactor coolant pressure boundary (RCPB) throughout the plant’s design life, in accordance with regulatory definitions. It details the components and systems included in the RCPB, such as the reactor pressure vessel, containment isolation valves, safety valves, and associated piping, emphasizing their roles in maintaining pressure containment and system safety.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "19",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0024",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A references the physical components and material descriptions of the pressurizer, including heater bundles and spray nozzles, which are further described in Section B as integral parts of the pressurizer used for pressure control."
-    },
-    {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0012",
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch05_0004",
       "relation": "SEMANTIC",
-      "confidence": 0.6,
-      "description": "Section A describes the physical components of the pressurizer, including heater bundles and spray nozzles, which are directly involved in pressure control methods, while Section B discusses leakage detection in the reactor coolant pressure boundary, which is relevant for monitoring the integrity of systems like the pressurizer but does not directly address pressure control methods."
+      "confidence": 0.4,
+      "description": "Section B describes the degasification and venting features of the pressurizer, which are relevant to pressure control, while Section A discusses inspection requirements for high-point vents but does not address operational pressure control methods, so the sections are only loosely connected by their reference to venting components."
     },
     {
-      "source": "nuscale_ch05_0025",
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch05_0012",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses inspection requirements for DHRS components and valves, while Section B addresses leakage detection for the reactor coolant pressure boundary, with both sections connected through their focus on maintaining the integrity and monitoring of reactor coolant system components."
+    },
+    {
+      "source": "nuscale_ch05_0024",
       "target": "nuscale_ch05_0004",
-      "relation": "SPECIFIES",
+      "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A describes the physical components and materials of the pressurizer, including heater bundles and spray nozzles, while Section B outlines the system-level functions related to pressure control and degasification, connecting the described components in A to their operational roles in B."
+      "description": "Section A describes the physical configuration and function of the pressurizer within the reactor vessel, while Section B outlines system-level features (such as degasification and venting) that interact with the pressurizer to control pressure and maintain system integrity, connecting them through their roles in pressure management."
     },
     {
       "source": "nuscale_ch05_0024",
       "target": "nuscale_ch05_0012",
-      "relation": "LEADS_TO",
+      "relation": "SUPPORTS",
       "confidence": 0.7,
-      "description": "Section A describes the design and function of the pressurizer, which is directly related to pressure control methods, while Section B discusses leakage detection in the reactor coolant pressure boundary, which is a consequence that effective pressure control (as described in Section A) helps to prevent or monitor."
+      "description": "Section A describes the design and function of the pressurizer, which is responsible for pressure control in the reactor coolant system, while Section B discusses leakage detection in the reactor coolant pressure boundary, which is relevant for monitoring the effectiveness and integrity of pressure control methods such as those involving the pressurizer heater and spray."
     },
     {
       "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0004",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A describes the physical configuration and function of the pressurizer within the reactor vessel, while Section B outlines system-level features (such as degasification and venting) that interact with or support the pressurizer's pressure control role, connecting them through their shared involvement in maintaining reactor coolant system pressure."
-    },
-    {
-      "source": "nuscale_ch05_0012",
-      "target": "nuscale_ch05_0004",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section B describes system features (degasification line, reactor vent valves) that are relevant to pressure control in the pressurizer, while Section A discusses leakage detection in the reactor coolant pressure boundary, which is affected by the effectiveness of pressure control methods such as those described in Section B."
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the functional design and role of the pressurizer in pressure control, while Section B specifies the physical components (including heater bundles and spray nozzles) that enable those pressure control methods."
     },
     {
       "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0023",
+      "target": "nuscale_ch05_0012",
       "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A describes the system's degasification and venting features for pressure control in the pressurizer, while Section B outlines inspection and classification requirements for valves involved in these systems, connecting operational methods to regulatory compliance."
+      "confidence": 0.7,
+      "description": "Section A describes the system features that maintain reactor coolant system (RCS) pressure, while Section B discusses the detection of leakage from the reactor coolant pressure boundary (RCPB), both of which are connected by their focus on maintaining RCS integrity and pressure control."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general system description of the reactor coolant system and its pressure control functions, while Section B specifies the detailed design and material composition of the pressurizer components (including heaters and spray nozzles) that enable those pressure control methods."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides detailed descriptions of the pressurizer's heater bundles and spray nozzles, which are the components relevant to the pressure control methods referenced in the analysis question, while Section A discusses leakage detection but does not address pressure control methods directly."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch05_0023",
+      "relation": "SEMANTIC",
+      "confidence": 0.6,
+      "description": "Section A describes the integrity requirements for the reactor coolant pressure boundary, which includes components affected by pressure control methods such as the pressurizer heater and spray, while Section B discusses inspection requirements for high-point vents and related components, which are part of the same reactor coolant system but does not directly address pressure control methods."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B describes the design and function of the pressurizer, which is a pressure-retaining component included in the reactor coolant pressure boundary as defined and discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes system features (such as degasification and pressure-retaining components) that support the integrity objective outlined in Section A for the reactor coolant pressure boundary."
     }
   ]
 }

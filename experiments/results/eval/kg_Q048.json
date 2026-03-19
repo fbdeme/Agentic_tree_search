@@ -1,32 +1,14 @@
 {
   "question": "What is the definition of the acronym ASME?",
-  "current_hop": 4,
+  "current_hop": 2,
   "nodes": {
     "nuscale_ch01_0004": {
       "node_id": "nuscale_ch01_0004",
       "title": "Containment Type",
-      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and operates under vacuum during normal conditions, eliminating the need for insulation. The NuScale reactor is a passive, integral small modular pressurized water reactor with natural circulation and no external piping for steam generators or pressurizer, and each module produces about 50 MWe, with a 12-module plant yielding approximately 570 MWe net output.",
+      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and is maintained at a vacuum during normal operation, eliminating the need for insulation. The reactor is a passive, integral small modular pressurized water reactor (SMR) with natural circulation and no external piping for steam generators or pressurizer, and each module produces about 50 MWe, with a 12-module plant yielding approximately 570 MWe net output. The schedule for construction and operation will be provided by the applicant referencing the NuScale design.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "9",
-      "hop": 1
-    },
-    "nuscale_ch01_0767": {
-      "node_id": "nuscale_ch01_0767",
-      "title": "DSRS 15.5.1-15.5.2, Rev 0: Chemical and Volume Control System Malfunction That Increases Reactor Coolant InventoryII.4.B Input Parameters and Initial Conditions - Scram Characteristics",
-      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for chemical and volume control system malfunctions that increase reactor coolant inventory, specifically regarding input parameters and initial conditions such as scram characteristics. It states that NuScale conforms to DSRS 15.5.1-15.5.2 requirements, and clarifies that certain SRP guidance related to pressurizer relief valves is only partially applicable, as NuScale uses spring-loaded safety valves rather than power-operated relief valves.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "305",
-      "hop": 1
-    },
-    "nuscale_ch01_0159": {
-      "node_id": "nuscale_ch01_0159",
-      "title": "DSRS 3.11, Rev. 0: Environmental Qualification of Mechanical and Electrical EquipmentII.24 Exposure of Organic Components on Engineered Safety Features Systems",
-      "summary": "This section summarizes NuScale’s conformance with DSRS 3.11, Rev. 0 requirements regarding the environmental qualification of mechanical and electrical equipment, specifically addressing the exposure of organic components in engineered safety features systems. It confirms that NuScale meets the relevant regulatory criteria for these requirements, with no exceptions noted. Certain operational and maintenance program aspects are identified as the responsibility of the COL (Combined License) applicant and are not applicable at this stage.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "200",
       "hop": 1
     },
     "nuscale_ch01_0014": {
@@ -38,13 +20,40 @@
       "page_range": "10",
       "hop": 1
     },
+    "nuscale_ch01_0159": {
+      "node_id": "nuscale_ch01_0159",
+      "title": "DSRS 3.11, Rev. 0: Environmental Qualification of Mechanical and Electrical EquipmentII.24 Exposure of Organic Components on Engineered Safety Features Systems",
+      "summary": "This section summarizes NuScale’s conformance with DSRS 3.11, Rev. 0 requirements for the environmental qualification of mechanical and electrical equipment, specifically regarding the exposure of organic components in engineered safety features systems. The document states that NuScale’s design conforms to these regulatory criteria, with no exceptions noted for this requirement.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "200",
+      "hop": 1
+    },
     "nuscale_ch01_0008": {
       "node_id": "nuscale_ch01_0008",
       "title": "Format and Content",
-      "summary": "The section describes the NuScale containment vessel as a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events, with internal vacuum pressure during normal operation. The NuScale reactor is a passive, integral small modular pressurized water reactor (SMR) that uses natural circulation and eliminates the need for external piping and coolant pumps. Each NuScale Power Module (NPM) produces 160 MWt (about 50 MWe), with a 12-module plant yielding a net output of approximately 570 MWe after accounting for house loads and measurement uncertainty.",
+      "summary": "The section describes the NuScale containment vessel as a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events, with internal vacuum conditions during normal operation. The NuScale reactor is a passive, integral small modular pressurized water reactor (SMR) that uses natural circulation and eliminates the need for external piping and coolant pumps. Each module produces 160 MWt (about 50 MWe), with a 12-module plant yielding a net output of approximately 570 MWe, and applicants referencing the design must provide construction schedules.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch01_0010": {
+      "node_id": "nuscale_ch01_0010",
+      "title": "Standard Review Plan - NuScale Design Specific Review Standard",
+      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and operates under vacuum during normal conditions, eliminating the need for insulation. The NuScale reactor is a passive, integral small modular pressurized water reactor (SMR) with natural circulation and no external piping for steam generators or pressurizer, and each module produces 160 MWt (about 50 MWe), with up to 12 modules per plant. The total net electrical output for a 12-module facility is approximately 570 MWe, accounting for house loads and measurement uncertainty.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch01_0013": {
+      "node_id": "nuscale_ch01_0013",
+      "title": "Proprietary Information",
+      "summary": "This section explains the organization and identification of text, tables, figures, and page numbering within the NuScale Final Safety Analysis Report (FSAR). It also clarifies that while the FSAR does not contain proprietary or safeguards information, some sensitive content is withheld from public disclosure in accordance with regulations, and a separate public version is provided with such material removed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "10",
       "hop": 1
     }
   },
@@ -54,28 +63,42 @@
       "target": "nuscale_ch01_0008",
       "relation": "SUPPORTS",
       "confidence": 1.0,
-      "description": "Section A and Section B are identical excerpts that both mention 'ASME' as the acronym for the American Society of Mechanical Engineers, providing the context needed to define the acronym."
+      "description": "Section A and Section B are identical excerpts that both mention 'ASME' as the acronym for 'American Society of Mechanical Engineers,' providing the definition directly in the text."
     },
     {
-      "source": "nuscale_ch01_0767",
-      "target": "nuscale_ch01_0014",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section B is likely to contain the definition of the acronym ASME, which is not provided in Section A; thus, Section B provides the specific information needed to answer the analysis question."
-    },
-    {
-      "source": "nuscale_ch01_0159",
-      "target": "nuscale_ch01_0014",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section B contains the list of acronyms and abbreviations, which would include the definition of ASME, directly answering the analysis question, while Section A does not address acronyms or their definitions."
+      "source": "nuscale_ch01_0004",
+      "target": "nuscale_ch01_0010",
+      "relation": "SUPPORTS",
+      "confidence": 1.0,
+      "description": "Section A and Section B both state that 'ASME' stands for 'American Society of Mechanical Engineers' in the context of the containment vessel's design code."
     },
     {
       "source": "nuscale_ch01_0014",
       "target": "nuscale_ch01_0008",
       "relation": "SATISFIES",
+      "confidence": 1.0,
+      "description": "Section B defines ASME as the American Society of Mechanical Engineers, which is the information sought in the analysis question, while Section A does not address the acronym ASME."
+    },
+    {
+      "source": "nuscale_ch01_0014",
+      "target": "nuscale_ch01_0010",
+      "relation": "SATISFIES",
       "confidence": 0.95,
-      "description": "Section B defines ASME as the American Society of Mechanical Engineers, which is the information sought in the analysis question, while Section A does not provide this definition."
+      "description": "Section B defines ASME as the American Society of Mechanical Engineers in the context of the containment vessel's code classification, which directly answers the analysis question, while Section A does not provide the acronym definition."
+    },
+    {
+      "source": "nuscale_ch01_0159",
+      "target": "nuscale_ch01_0013",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides general information about the structure and guidance documents (including DSRS) used in the NuScale FSAR, while Section A lists specific DSRS sections and their conformance, thus Section A provides details/specifications for the general description in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0008",
+      "target": "nuscale_ch01_0010",
+      "relation": "SUPPORTS",
+      "confidence": 1.0,
+      "description": "Section A and Section B contain identical text, both mentioning that 'ASME' stands for 'American Society of Mechanical Engineers' in the context of the ASME Boiler and Pressure Vessel Code."
     }
   ]
 }

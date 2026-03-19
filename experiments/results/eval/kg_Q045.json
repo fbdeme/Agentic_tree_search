@@ -2,15 +2,32 @@
   "question": "What is the definition of the acronym RSV?",
   "current_hop": 4,
   "nodes": {
+    "nuscale_ch01_0013": {
+      "node_id": "nuscale_ch01_0013",
+      "title": "Proprietary Information",
+      "summary": "This section explains the organization and identification of text, tables, figures, and page numbering within the NuScale Final Safety Analysis Report (FSAR). It also clarifies that while the FSAR does not contain proprietary or safeguards information, some sensitive content is withheld from public disclosure in accordance with regulations, and a separate public version is provided with such material removed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "10",
+      "hop": 1
+    },
     "nuscale_ch01_0014": {
       "node_id": "nuscale_ch01_0014",
       "title": "Acronyms and Abbreviations",
-      "summary": "This section explains the conventions used in the NuScale Final Safety Analysis Report (FSAR) for numbering tables, figures, and pages, as well as the handling of proprietary and sensitive information. Tables and figures are numbered according to their section, and sensitive material is withheld from the public version in accordance with regulatory requirements.",
+      "summary": "This section explains the conventions used in the NuScale Final Safety Analysis Report (FSAR) for numbering tables, figures, and pages, as well as the handling of proprietary and sensitive information. Tables and figures are numbered according to their section, and sensitive content is withheld from the public version in accordance with regulatory requirements.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "10",
       "hop": 1
     }
   },
-  "edges": []
+  "edges": [
+    {
+      "source": "nuscale_ch01_0013",
+      "target": "nuscale_ch01_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section B would typically provide the definitions for acronyms such as RSV, which is the information sought in the analysis question, while Section A does not address acronyms."
+    }
+  ]
 }

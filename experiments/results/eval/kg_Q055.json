@@ -2,31 +2,31 @@
   "question": "Describe the structure of the NuScale Power Module.",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0048": {
-      "node_id": "nuscale_ch01_0048",
-      "title": "Security Buildings",
-      "summary": "The Security Buildings (SCBs) at a NuScale Power Plant are nonsafety-related structures that include the primary access control building. These buildings support plant security functions but are not classified as safety-related structures.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "42",
-      "hop": 1
-    },
-    "nuscale_ch01_0051": {
-      "node_id": "nuscale_ch01_0051",
-      "title": "Plant Features of Special Interest",
-      "summary": "This section describes special plant features of the NuScale Power Plant, highlighting the Central Utility Building (CUB) and Diesel Generator Buildings (DGB), which house essential but nonsafety-related systems and backup power equipment. It also emphasizes human factors engineering (HFE) considerations, such as fail-safe design, automation, digital controls, and workload management, to minimize human error and meet regulatory requirements.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "43",
-      "hop": 1
-    },
     "nuscale_ch01_0015": {
       "node_id": "nuscale_ch01_0015",
       "title": "General Plant Description",
-      "summary": "This section provides an overview of the NuScale plant design, summarizing key systems such as safety features, power conversion, fuel handling, cooling, waste management, and auxiliary systems. It explains that each COL Applicant must reference the NuScale FSAR and provide site-specific details, with certain conceptual design information and security-related content clearly identified and delineated. Figures referenced in the section illustrate the scope of certified and site-specific designs, as well as the general site layout.",
+      "summary": "This section provides a summary of the NuScale plant’s overall design, including key systems such as safety features, power conversion, fuel handling, cooling water, waste management, and auxiliary systems. It explains that each Combined License (COL) applicant must reference the NuScale Final Safety Analysis Report (FSAR) and provide site-specific details, while distinguishing between certified design elements and conceptual design information (CDI). Security-related information is also identified and withheld as required by regulations.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "26",
+      "hop": 1
+    },
+    "nuscale_ch01_0068": {
+      "node_id": "nuscale_ch01_0068",
+      "title": "Electrical and Instrumentation and Control Drawings",
+      "summary": "This section describes the use of simplified electrical, instrumentation, and control (I&C) drawings in the NuScale Final Safety Analysis Report (FSAR) to visually clarify design information alongside the written text. It references tables and figures that list and explain the symbols used in these diagrams, and notes that applicants referencing the NuScale design must provide site-specific diagrams and legends as needed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
+      "hop": 1
+    },
+    "nuscale_ch01_0048": {
+      "node_id": "nuscale_ch01_0048",
+      "title": "Security Buildings",
+      "summary": "The Security Buildings (SCBs) at a NuScale Power Plant are nonsafety-related structures that include facilities such as the primary access control building. These buildings support plant security functions but are not classified as safety-related structures within the plant’s overall design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "42",
       "hop": 1
     },
     "nuscale_ch01_0047": {
@@ -37,50 +37,221 @@
       "source_doc": "nuscale_ch01",
       "page_range": "42",
       "hop": 1
+    },
+    "nuscale_ch01_0069": {
+      "node_id": "nuscale_ch01_0069",
+      "title": "Piping and Instrumentation Diagrams",
+      "summary": "This section describes the use of simplified electrical, instrumentation and control (I&C), and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information. It lists the relevant diagrams, figures, and legends used for both I&C and piping and instrumentation diagrams, and notes that site-specific diagrams will be provided by COL applicants referencing the NuScale design certification.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
+      "hop": 1
+    },
+    "nuscale_ch01_0167": {
+      "node_id": "nuscale_ch01_0167",
+      "title": "SRP 6.5.3, Rev 3: Fission Product Control Systems and StructuresII.1 Primary Containment",
+      "summary": "The NuScale design partially conforms to SRP 6.5.3, Rev 3 requirements for primary containment, as its passive containment vessel does not include active fission product clean-up or pressure suppression systems; instead, fission product control is achieved through inherent design features. Criteria related to secondary containment and other fission product control systems are not applicable, as the NuScale design lacks these elements and only credits the containment vessel and isolation systems for fission product control.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "229",
+      "hop": 2
+    },
+    "nuscale_ch01_0168": {
+      "node_id": "nuscale_ch01_0168",
+      "title": "SRP 6.5.3, Rev 3: Fission Product Control Systems and StructuresII.2 Secondary Containment",
+      "summary": "The NuScale design does not include secondary containment or fission product clean-up systems, as its passive safety features and submerged containment vessel inherently control fission products. Therefore, regulatory criteria related to secondary containment and associated systems are not applicable to the NuScale design, and only certain containment parameters such as leakage rates are relevant for review.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "229",
+      "hop": 2
+    },
+    "nuscale_ch01_0036": {
+      "node_id": "nuscale_ch01_0036",
+      "title": "Refueling Operations",
+      "summary": "Refueling operations for a NuScale Power Module (NPM) are conducted independently from other modules. The process involves moving the NPM from its operating bay to the refueling pool, disassembling it for inspection, maintenance, and core refueling, and then reassembling and returning it to service after successful testing and startup procedures.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "38",
+      "hop": 4
+    },
+    "nuscale_ch01_0035": {
+      "node_id": "nuscale_ch01_0035",
+      "title": "Fuel Handling and Reactor Maintenance Areas",
+      "summary": "The fuel handling and reactor maintenance areas are located at the west end of the Reactor Building and include the spent fuel pool (SFP), refueling pool, and dry dock, providing space and equipment for safe fuel handling and reactor maintenance activities. These areas are designed for efficient transport and storage of new and spent fuel assemblies, while ensuring radiation protection for personnel during operations and maintenance.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "37",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0048",
-      "target": "nuscale_ch01_0051",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes operational processes within the NuScale Power Module (such as the use of CVCS and boron control), while Section B describes supporting plant structures (like the Central Utility Building) that house systems (e.g., demineralized water equipment) referenced in Section A, thus Section B specifies the physical context for systems mentioned in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0048",
-      "target": "nuscale_ch01_0015",
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0068",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A provides specific operational details about the NuScale Power Module's startup and coolant systems, which are components broadly described in Section B's general plant description."
+      "description": "Section B provides detailed electrical and instrumentation drawings that specify and visually clarify the general plant design elements described in Section A."
     },
     {
-      "source": "nuscale_ch01_0048",
-      "target": "nuscale_ch01_0047",
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0048",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Sections A and B both provide identical descriptions of the NuScale Power Module's startup process and coolant chemistry control, indicating they specify the same structural and operational details relevant to the module's structure."
-    },
-    {
-      "source": "nuscale_ch01_0051",
-      "target": "nuscale_ch01_0015",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides specific details about the Central Utility Building and its functions, which are part of the broader general plant description summarized in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0051",
-      "target": "nuscale_ch01_0047",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the Central Utility Building's support systems, which provide essential utilities and services to the plant, while Section B details the Annex Building's role in supporting the NuScale Power Module's startup and operational processes, indicating that both sections specify different structural components that together comprise the overall structure and function of the NuScale Power Module."
+      "description": "Section B provides specific details about the startup process and safety-related systems of the NuScale Power Module, which are part of the general plant systems broadly described in Section A."
     },
     {
       "source": "nuscale_ch01_0015",
       "target": "nuscale_ch01_0047",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section B provides specific details about the Annex Building's systems and operational processes, which are part of the broader plant systems generally described in Section A."
+      "description": "Section B provides specific details about the Annex Building's systems and operational processes, which are part of the broader facility overview described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0069",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the NuScale Power Module's structure, while Section B offers detailed diagrams that visually clarify and specify the systems described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0048",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides detailed electrical and instrumentation drawings that visually clarify design information relevant to the NuScale Power Module's structure, while Section B describes operational processes and systems (such as the CVCS and RCS) that are part of the module's functional structure, with both sections contributing complementary details to the overall structural understanding."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0047",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides detailed electrical and instrumentation drawings that visually clarify the design of NuScale Power Module systems, while Section B describes the operational processes and systems (such as CVCS and RCS) within the Annex Building, with the drawings from Section A supporting the understanding of the structural and functional layout described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0069",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A and Section B both provide types of design drawings (electrical/I&C and piping/instrumentation diagrams, respectively) that together contribute visual clarification of the NuScale Power Module's structure."
+    },
+    {
+      "source": "nuscale_ch01_0048",
+      "target": "nuscale_ch01_0047",
+      "relation": "SEMANTIC",
+      "confidence": 0.95,
+      "description": "Sections A and B both describe the same operational processes (CVCS use, heatup system, boron control) during NPM startup, indicating they provide parallel information about different buildings' roles in the NuScale Power Module structure."
+    },
+    {
+      "source": "nuscale_ch01_0048",
+      "target": "nuscale_ch01_0069",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides detailed drawings and diagrams that visually clarify and supplement the general plant description and operational processes described in Section A, such as the startup process and system flows."
+    },
+    {
+      "source": "nuscale_ch01_0047",
+      "target": "nuscale_ch01_0069",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section B provides detailed drawings and diagrams that visually clarify and supplement the general plant description and operational processes described in Section A, specifically supporting understanding of the NuScale Power Module's structure."
+    },
+    {
+      "source": "nuscale_ch01_0167",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section B provides a general overview of the NuScale Power Module's structure, while Section A specifies how certain containment features described in Section B conform or do not conform to specific regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0167",
+      "target": "nuscale_ch01_0068",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the regulatory conformance and structural features of the NuScale containment vessel, while Section B provides supporting electrical and instrumentation drawings that visually clarify the design details referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0167",
+      "target": "nuscale_ch01_0048",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the primary containment structure and its conformance with regulatory criteria, while Section B describes the operational systems within the NuScale Power Module, both contributing specific details to the overall structural and functional description of the module as required by the analysis question."
+    },
+    {
+      "source": "nuscale_ch01_0168",
+      "target": "nuscale_ch01_0015",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section B provides a general overview of the NuScale Power Module's structure and systems, while Section A references specific regulatory criteria and how the NuScale design conforms or partially conforms to those criteria, thus Section A applies regulatory context to the structural description found in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0168",
+      "target": "nuscale_ch01_0068",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides detailed electrical and instrumentation drawings that visually clarify and supplement the structural and system descriptions referenced in Section A's discussion of the NuScale Power Module's containment and fission product control systems."
+    },
+    {
+      "source": "nuscale_ch01_0168",
+      "target": "nuscale_ch01_0048",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A outlines regulatory criteria and conformance for containment and fission product control systems, while Section B describes the operational systems and processes within the NuScale Power Module, with both sections providing complementary details necessary to understand the overall structure and safety features of the module."
+    },
+    {
+      "source": "nuscale_ch01_0167",
+      "target": "nuscale_ch01_0168",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the primary containment structure of the NuScale Power Module, while Section B addresses the secondary containment, both referencing the same regulatory criteria and noting partial conformance due to the absence of fission product clean-up systems in the NuScale design."
+    },
+    {
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific details about refueling operations for the NuScale Power Module, which is one of the systems generally described in Section B's overview of the plant's structure and systems."
+    },
+    {
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch01_0068",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section B provides drawings and visual details that clarify and support the structural and operational descriptions given in Section A regarding the NuScale Power Module's refueling operations."
+    },
+    {
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch01_0048",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the handling and movement of the NuScale Power Module (NPM) during refueling, while Section B discusses systems (CVCS, RCS) and processes (heatup, boron control) that are integral to the NPM's operation, both contributing specific details to the overall structural and functional description of the NPM."
+    },
+    {
+      "source": "nuscale_ch01_0035",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific details about the fuel handling and reactor maintenance areas, which are components generally described in Section B's overall summary of the NuScale Power Module structure."
+    },
+    {
+      "source": "nuscale_ch01_0035",
+      "target": "nuscale_ch01_0068",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references the use of drawings and tables, such as those described in Section B, to provide detailed location and classification information for structures, systems, and components within the NuScale Power Module."
+    },
+    {
+      "source": "nuscale_ch01_0035",
+      "target": "nuscale_ch01_0048",
+      "relation": "SEMANTIC",
+      "confidence": 0.8,
+      "description": "Section A describes the physical layout and maintenance areas of the NuScale Power Module, while Section B discusses operational systems and processes during startup, both contributing different aspects to the overall structure and function of the module."
+    },
+    {
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch01_0035",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the process of moving the NuScale Power Module (NPM) during refueling, while Section B details the structural features and locations (such as pipe fittings and maintenance areas) that enable and support these refueling operations."
     }
   ]
 }

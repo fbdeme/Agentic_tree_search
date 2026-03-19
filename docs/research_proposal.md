@@ -134,47 +134,47 @@ Pipeline:
 
 ### 3.3 Results
 
-Full 100-question evaluation on NuScale FSAR data with GPT-4.1 (tool-based exploration + BM25 + Vision RAG + description-first edge inference):
+Full 100-question evaluation on NuScale FSAR data with GPT-4.1 (tool-based exploration + BM25 + Vision RAG + description-first edge inference + structured table extraction):
 
 | Metric | Overall | text_only (30) | table_only (20) | image_only (20) | composite (30) |
 |--------|---------|----------------|-----------------|-----------------|----------------|
-| Faithfulness | 0.77 | 0.77 | 0.77 | 0.63 | **0.81** |
-| Answer Relevancy | 0.70 | **0.78** | 0.50 | 0.76 | 0.70 |
-| Context Recall | 0.59 | 0.58 | 0.60 | **0.65** | 0.55 |
-| Factual Correctness | 0.20 | 0.24 | **0.26** | 0.18 | 0.13 |
-| Keyword Hit | 0.63 | 0.53 | **0.73** | 0.79 | 0.57 |
+| Faithfulness | 0.73 | **0.87** | 0.63 | 0.66 | 0.74 |
+| Answer Relevancy | 0.74 | **0.81** | 0.67 | 0.75 | 0.72 |
+| Context Recall | 0.56 | 0.54 | 0.55 | **0.63** | 0.54 |
+| Factual Correctness | 0.24 | 0.32 | **0.41** | 0.11 | 0.14 |
+| Keyword Hit | 0.66 | 0.51 | **0.85** | 0.81 | 0.58 |
 
-**Edge Type Distribution (1,309 total edges across 100 questions):**
+**Edge Type Distribution (1,328 total edges across 100 questions):**
 
 | Edge Type | Count | % | Category |
 |-----------|-------|---|----------|
-| SPECIFIES | 497 | 38.0% | Structural |
-| SUPPORTS | 410 | 31.3% | Semantic |
-| REFERENCES | 148 | 11.3% | Structural |
-| IS_PREREQUISITE_OF | 111 | 8.5% | Semantic |
-| SATISFIES | 81 | 6.2% | Semantic |
-| SEMANTIC | 47 | 3.6% | Free-form |
-| CONTRADICTS | 7 | 0.5% | Semantic |
-| LEADS_TO | 7 | 0.5% | Semantic |
-| VIOLATES | 1 | 0.1% | Semantic |
+| SPECIFIES | 525 | 39.5% | Structural |
+| SUPPORTS | 442 | 33.3% | Semantic |
+| REFERENCES | 137 | 10.3% | Structural |
+| IS_PREREQUISITE_OF | 87 | 6.6% | Semantic |
+| SATISFIES | 77 | 5.8% | Semantic |
+| SEMANTIC | 47 | 3.5% | Free-form |
+| LEADS_TO | 8 | 0.6% | Semantic |
+| CONTRADICTS | 5 | 0.4% | Semantic |
 
 **KG Construction Statistics:**
 
 | Question Type | Avg Nodes | Avg Edges | Avg Hops (max 4) |
 |---------------|-----------|-----------|------------------|
-| text_only | 6.6 | 12.9 | 2.0 |
-| table_only | 5.2 | 5.9 | 2.2 |
-| image_only | 6.8 | 16.1 | 2.4 |
-| composite | 6.7 | 16.0 | 2.2 |
+| text_only | 6.5 | 13.5 | 2.2 |
+| table_only | 5.5 | 6.0 | 2.1 |
+| image_only | 7.0 | 16.6 | 2.6 |
+| composite | 6.9 | 16.2 | 2.7 |
 
 Key findings:
 
 - **All 8 ontology edge types emerged**: The description-first inference approach resolved the edge type monotonicity problem. Under classification-first prompting, only 3/8 types appeared (REFERENCES 54%, SPECIFIES 29%, SUPPORTS 17%). After switching to description-first, all 8 types plus the SEMANTIC fallback type appeared across 100 questions.
-- **Composite questions validate the two-tier hypothesis**: Composite questions produced the richest semantic edge distribution: SATISFIES (52), SUPPORTS (134), IS_PREREQUISITE_OF (35), LEADS_TO (5), VIOLATES (1) — confirming that regulatory judgment edges emerge naturally in multi-hop queries requiring cross-section evidence synthesis.
-- **Faithfulness highest for composite (0.81)**: Multi-hop exploration with rich edge descriptions produces well-grounded, traceable answers. The natural language edge descriptions serve as explicit reasoning chains that the answer generation step can cite.
-- **Dynamic termination is effective**: Average 2.0–2.4 hops out of maximum 4.
-- **SEMANTIC edges capture domain nuances**: 47 edges (3.6%) did not fit the fixed ontology, demonstrating that the free-form description layer captures relationships that rigid type systems would discard.
-- **Factual Correctness metric caveat**: The overall low score (0.20) partially reflects a RAGAs limitation—agent answers are more detailed than expected answers, and additional correct claims are penalized as unsupported.
+- **Structured table extraction improved table_only performance**: table_only Factual Correctness improved from 0.26 to **0.41** (+0.15) and Keyword Hit reached **0.85** after extracting structured table data via PyMuPDF `find_tables()` and passing it directly in the answer generation context. Tables are passed as structured text rather than VLM images, as parsed data is more reliable than OCR.
+- **Multimodal handling strategy**: Figures are passed as VLM images (visual understanding required), while tables are passed as structured text (already extracted). This split maximizes both accuracy and cost efficiency.
+- **text_only Faithfulness highest (0.87)**: Well-grounded answers with clear evidence chains.
+- **Dynamic termination is effective**: Average 2.1–2.7 hops out of maximum 4.
+- **SEMANTIC edges capture domain nuances**: 47 edges (3.5%) did not fit the fixed ontology, demonstrating that the free-form description layer captures relationships that rigid type systems would discard.
+- **Factual Correctness metric caveat**: The overall score (0.24) partially reflects a RAGAs limitation—agent answers are more detailed than expected answers, and additional correct claims are penalized as unsupported.
 
 ## 4. Conclusion
 

@@ -2,28 +2,37 @@
   "question": "Where is the Reactor Vent Valve (RVV) connected, and what functions does it serve?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0023": {
-      "node_id": "nuscale_ch05_0023",
-      "title": "Reactor Coolant System High-Point Vents",
-      "summary": "This section describes the testing and inspection requirements for the Decay Heat Removal System (DHRS) components in the NuScale reactor, ensuring compliance with ASME codes for Class 2 components. It details how DHRS actuation valves are exercised during cold shutdown conditions, outlines the required valve testing procedures, and specifies that a one-time in-situ test of DHRS heat removal capability will be conducted during initial startup.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "121",
-      "hop": 1
-    },
     "nuscale_ch05_0009": {
       "node_id": "nuscale_ch05_0009",
       "title": "Overpressure Protection",
-      "summary": "This section outlines NuScale's compliance with regulatory requirements for overpressure protection, specifying the use of ASME Boiler and Pressure Vessel Code (BPVC) and Operations and Maintenance (OM) Code cases as mandated by 10 CFR 50.55a and related Regulatory Guides. It details how code cases for design, fabrication, construction, preservice, and inservice inspections and testing are selected and verified to meet NRC-endorsed standards, with a consolidated list provided in Table 5.2-1.",
+      "summary": "This section outlines NuScale's compliance with overpressure protection requirements by referencing applicable ASME Boiler and Pressure Vessel Code (BPVC) and Operations and Maintenance (OM) code cases, as mandated by various sections of 10 CFR 50.55a and related Regulatory Guides. It details how code cases for design, fabrication, construction, preservice, and inservice inspections and testing are selected and verified to meet NRC-endorsed standards, with a consolidated list provided in Table 5.2-1.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "21",
       "hop": 1
     },
+    "nuscale_ch05_0011": {
+      "node_id": "nuscale_ch05_0011",
+      "title": "Reactor Coolant Pressure Boundary Inservice Inspection and Testing",
+      "summary": "This section describes the materials and standards used for threaded fasteners in key reactor coolant system components, emphasizing the use of Alloy 718 for its compatibility and stress corrosion cracking resistance. It also outlines the requirements for preservice and inservice inspection and testing of pressure-retaining components, specifying adherence to the latest ASME BPVC Section XI codes and relevant regulatory conditions for ongoing inspection intervals.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "37",
+      "hop": 1
+    },
+    "nuscale_ch05_0023": {
+      "node_id": "nuscale_ch05_0023",
+      "title": "Reactor Coolant System High-Point Vents",
+      "summary": "This section outlines the testing and inspection requirements for the DHRS (Decay Heat Removal System) components in the NuScale reactor, ensuring compliance with ASME codes for Class 2 components. It specifies that DHRS actuation valves are exercised during cold shutdown conditions, and that comprehensive testing—including position verification and in-situ heat removal tests—are conducted according to technical specifications and initial test programs.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "121",
+      "hop": 1
+    },
     "nuscale_ch05_0013": {
       "node_id": "nuscale_ch05_0013",
       "title": "References",
-      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as tables summarizing relevant ASME code cases for reactor components.",
+      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as tables summarizing relevant ASME code cases for materials and safety requirements.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "46",
@@ -32,25 +41,46 @@
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0023",
-      "target": "nuscale_ch05_0009",
-      "relation": "SATISFIES",
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0011",
+      "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A discusses inspection and classification requirements for DHRS actuation valves, which are part of the reactor coolant system, while Section B outlines the regulatory codes and standards (ASME BPVC, OM Code, 10 CFR 50.55a) that these components, including valves, must comply with; thus, Section A's inspection and classification practices are specified to satisfy the regulatory requirements described in Section B."
+      "description": "Section A outlines the general regulatory and code compliance framework for reactor coolant boundary components, while Section B provides specific material and design details for threaded fasteners used in those components, referencing the standards mentioned in Section A."
     },
     {
-      "source": "nuscale_ch05_0023",
-      "target": "nuscale_ch05_0013",
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0023",
       "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A discusses inspection requirements for DHRS components, including actuation valves, while Section B lists references that provide standards and guidelines (such as ASME NQA-1 and EPRI documents) relevant to the integrity and quality assurance of reactor coolant boundary components, thereby supporting the regulatory basis for the requirements described in Section A."
+      "confidence": 0.7,
+      "description": "Section A discusses compliance with ASME and NRC requirements for overpressure protection and references Section 3.9.6 for inservice testing, while Section B details inspection requirements for high-point vents and associated valves, both addressing regulatory compliance for reactor coolant system components."
     },
     {
       "source": "nuscale_ch05_0009",
       "target": "nuscale_ch05_0013",
       "relation": "REFERENCES",
       "confidence": 0.95,
-      "description": "Section A discusses compliance with ASME and NRC requirements for reactor coolant boundary integrity and references Section B, which lists the specific industry standards and guidelines (such as EPRI and ASME documents) that support these compliance claims."
+      "description": "Section A discusses compliance with ASME and NRC regulatory codes for reactor coolant boundary integrity, while Section B lists the specific references (such as ASME and EPRI documents) that Section A relies on to substantiate its compliance claims."
+    },
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0023",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the material and inspection requirements for threaded fasteners in reactor coolant system components, while Section B outlines inspection requirements for high-point vent valves and related components, both referencing ASME BPVC standards and inspection codes for pressure boundary integrity."
+    },
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0013",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A discusses the use of specific threaded fastener materials in the reactor coolant pressure boundary and cites Section B as a reference for the relevant industry guidelines and standards that inform these material choices."
+    },
+    {
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch05_0013",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A discusses inspection requirements for DHRS components, including actuation valves, while Section B lists references such as ASME NQA-1 and EPRI guidelines that provide quality assurance and material reliability standards relevant to those components."
     }
   ]
 }

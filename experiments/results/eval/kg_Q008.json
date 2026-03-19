@@ -5,34 +5,52 @@
     "nuscale_ch01_0006": {
       "node_id": "nuscale_ch01_0006",
       "title": "Power Output",
-      "summary": "The NuScale Power Plant consists of up to 12 NuScale Power Modules (NPMs), each rated at 160 MWt and producing approximately 50 MWe, for a total net output of about 570 MWe after accounting for house loads. The actual electrical output may vary depending on environmental conditions, and the design includes a 2% margin for measurement uncertainty.",
+      "summary": "The NuScale Power Plant consists of up to 12 NuScale Power Modules (NPMs), each rated at 160 MWt and producing approximately 50 MWe, for a total net output of about 570 MWe when accounting for house loads in a 12-module facility. The electrical output may vary depending on environmental conditions, and the design includes an additional 2% margin for measurement uncertainty.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "9",
       "hop": 1
     },
-    "nuscale_ch01_0110": {
-      "node_id": "nuscale_ch01_0110",
-      "title": "Figure 1.7-1b: Electrical Symbols",
-      "summary": "This section provides a legend of electrical symbols and abbreviations used in the NuScale Final Safety Analysis Report drawings, including representations for switches, relays, indicators, and logic gates. It also explains the meaning of various logic gate outputs and control room indications relevant to system status and alarms.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "100",
-      "hop": 1
-    },
     "nuscale_ch01_0014": {
       "node_id": "nuscale_ch01_0014",
       "title": "Acronyms and Abbreviations",
-      "summary": "This section explains the conventions used in the NuScale Final Safety Analysis Report (FSAR) for numbering tables, figures, and pages, as well as the handling of proprietary and sensitive information. It clarifies that tables and figures are numbered according to their section, pages are sequentially numbered, and sensitive material is withheld from the public version in accordance with regulatory requirements.",
+      "summary": "This section explains the conventions used in the NuScale Final Safety Analysis Report (FSAR) for numbering tables, figures, and pages, as well as the handling of proprietary and sensitive information. Tables and figures are numbered according to their section, and sensitive content is withheld from the public version in compliance with regulatory requirements.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "10",
       "hop": 1
     },
+    "nuscale_ch01_0285": {
+      "node_id": "nuscale_ch01_0285",
+      "title": "SRP BTP 8-6, Rev 3: Adequacy of Station Electric Distribution System VoltagesAll Criteria for evaluating voltage protection for the offsite power system to assure proper operation and sequencing of Class 1E loads",
+      "summary": "This section summarizes NuScale’s conformance with various regulatory criteria related to electric power systems, including the use of backup diesel generators, grid stability, and application of the single failure criterion. It notes that backup diesel generators are used solely for standby power, and that certain criteria—such as grid stability analysis and specific safety feature requirements—are the responsibility of the COL applicant or are not applicable to the NuScale design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "241",
+      "hop": 1
+    },
+    "nuscale_ch01_0110": {
+      "node_id": "nuscale_ch01_0110",
+      "title": "Figure 1.7-1b: Electrical Symbols",
+      "summary": "This section provides a legend of electrical symbols and abbreviations used in NuScale’s Final Safety Analysis Report drawings, including representations for switches, relays, transformers, and logic gates. It also explains the meaning of indicator light colors, logic gate functions, and common abbreviations relevant to electrical and control systems.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "100",
+      "hop": 1
+    },
+    "nuscale_ch01_0007": {
+      "node_id": "nuscale_ch01_0007",
+      "title": "Schedule",
+      "summary": "This section describes the NuScale containment vessel as a steel, cylindrical, ASME-certified pressure vessel designed to withstand high-pressure events, with internal vacuum conditions during normal operations. The NuScale reactor is a passive, integral small modular pressurized water reactor with natural circulation and no external piping for steam generators or pressurizer, and each module produces about 50 MWe, with a 12-module plant yielding a net output of approximately 570 MWe. The schedule requirement states that a COL applicant referencing the NuScale design must provide construction and implementation schedules.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "9",
+      "hop": 1
+    },
     "nuscale_ch01_0004": {
       "node_id": "nuscale_ch01_0004",
       "title": "Containment Type",
-      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and is maintained at a vacuum during normal operations. The reactor is a passive, integral small modular pressurized water reactor (SMR) with natural circulation, eliminating the need for reactor coolant pumps and external piping. Each NuScale Power Module produces 160 MWt (about 50 MWe), and a plant can have up to 12 modules for a total net output of approximately 570 MWe.",
+      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and operates under vacuum during normal conditions, eliminating the need for insulation. The reactor is a passive, integral small modular pressurized water reactor (SMR) with natural circulation and no external piping for steam generators or pressurizer, and each module produces about 50 MWe, with a 12-module plant yielding a net output of approximately 570 MWe.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "9",
@@ -41,11 +59,18 @@
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0110",
-      "target": "nuscale_ch01_0014",
-      "relation": "SUPPORTS",
+      "source": "nuscale_ch01_0014",
+      "target": "nuscale_ch01_0285",
+      "relation": "REFERENCES",
       "confidence": 0.8,
-      "description": "Section A provides a list of electrical symbols used in figures, while Section B explains the numbering and identification system for tables and figures in the report, connecting them by clarifying how to interpret figure references such as Figure 1.7-1b."
+      "description": "Section A describes the structure and referencing system of the NuScale FSAR, while Section B presents regulatory criteria for electric distribution systems, with Section A explaining how to locate detailed evaluations like those in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0285",
+      "target": "nuscale_ch01_0110",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A discusses regulatory criteria and operational constraints for the NuScale NPM's electrical systems, while Section B provides a legend for electrical symbols used in system diagrams, with both sections relating through their focus on the design and documentation of the electrical distribution system but neither directly providing the electrical output value."
     }
   ]
 }

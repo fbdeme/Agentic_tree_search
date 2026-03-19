@@ -2,37 +2,28 @@
   "question": "What are the main subassemblies of the RVI (Reactor Vessel Internals)?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0007": {
-      "node_id": "nuscale_ch01_0007",
-      "title": "Schedule",
-      "summary": "This section describes the NuScale containment vessel as a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events, with internal vacuum conditions during normal operation. The NuScale reactor is a passive, integral small modular pressurized water reactor with natural circulation and no external piping for steam generators or pressurizer, and each module produces about 50 MWe, with a 12-module plant yielding a net output of approximately 570 MWe. The schedule requirement states that a COL applicant referencing the NuScale design must provide construction and implementation schedules.",
+    "nuscale_ch01_0135": {
+      "node_id": "nuscale_ch01_0135",
+      "title": "Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review Standard (DSRS)",
+      "summary": "Table 1.9-3 summarizes NuScale’s conformance with the regulatory criteria outlined in NUREG-0800 (SRP) and DSRS. It details which sections are applicable, whether NuScale conforms to each criterion, and provides comments or notes on applicability, particularly distinguishing requirements for COL applicants versus the NuScale design certification application.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "9",
+      "page_range": "174",
       "hop": 1
     },
     "nuscale_ch01_0005": {
       "node_id": "nuscale_ch01_0005",
       "title": "Reactor Type",
-      "summary": "The NuScale reactor is a small modular pressurized water reactor (PWR) featuring a passive safety design. Each NuScale Power Module (NPM) integrates the reactor core, steam generators, and pressurizer within a single vessel, surrounded by a steel containment vessel designed to withstand high-pressure events. The plant can include up to 12 modules, each producing 160 MWt (about 50 MWe), for a total net output of approximately 570 MWe for a 12-module facility.",
+      "summary": "The NuScale reactor is a small modular pressurized water reactor (PWR) featuring a cylindrical steel containment vessel designed to ASME standards, which operates under vacuum during normal conditions and uses natural circulation for coolant flow, eliminating the need for pumps. Each NuScale Power Module (NPM) produces 160 MWt (about 50 MWe), and a plant can have up to 12 modules for a total net output of approximately 570 MWe, with the design emphasizing passive safety and modular scalability.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "9",
       "hop": 1
     },
-    "nuscale_ch01_0135": {
-      "node_id": "nuscale_ch01_0135",
-      "title": "Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review Standard (DSRS)",
-      "summary": "This section presents Table 1.9-3, which summarizes NuScale’s conformance with the regulatory criteria outlined in NUREG-0800 (Standard Review Plan) and the Design Specific Review Standard (DSRS). It lists specific SRP and DSRS sections, describes their acceptance criteria, and indicates whether NuScale’s application conforms or if the criteria are not applicable, with brief comments for clarification.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "174",
-      "hop": 2
-    },
     "nuscale_ch01_0073": {
       "node_id": "nuscale_ch01_0073",
       "title": "Departures",
-      "summary": "This section outlines the interface requirements between the NuScale Power Plant’s certified design and the site-specific design provided in the combined license (COL) application. It describes the types of interface requirements (conceptual design information and COL information items), lists the necessary COL information items, and states that COL applicants must provide a list of any departures from the certified design.",
+      "summary": "This section outlines the interface requirements between the NuScale Power Plant’s certified design and the site-specific design provided in the Combined License (COL) application. It distinguishes between conceptual design information (CDI) for non-certified portions and COL information items, which are site-specific responsibilities. Additionally, it requires COL applicants to provide a list of any departures from the certified design.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "108",
@@ -42,38 +33,24 @@
   "edges": [
     {
       "source": "nuscale_ch01_0135",
-      "target": "nuscale_ch01_0007",
+      "target": "nuscale_ch01_0005",
       "relation": "SUPPORTS",
       "confidence": 0.7,
-      "description": "Section A lists regulatory conformance criteria for the safety analysis report, while Section B provides a description of the containment vessel design, with both sections connected by their reference to compliance with regulatory standards for reactor vessel and containment design."
-    },
-    {
-      "source": "nuscale_ch01_0135",
-      "target": "nuscale_ch01_0005",
-      "relation": "SPECIFIES",
-      "confidence": 0.8,
-      "description": "Section A lists regulatory conformance criteria for the NuScale design, while Section B provides a general description of the containment vessel type referenced in those criteria, connecting them through the regulatory requirements that Section A addresses and Section B describes."
+      "description": "Section A lists regulatory conformance criteria for the NuScale design, while Section B provides a general description of the containment vessel type, with both sections connected by their reference to the NuScale reactor's design features and regulatory compliance."
     },
     {
       "source": "nuscale_ch01_0073",
-      "target": "nuscale_ch01_0007",
+      "target": "nuscale_ch01_0135",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A identifies the structures, systems, and components included in the certified design, while Section B documents the conformance of those components (as referenced in Section A) with regulatory criteria such as the SRP and DSRS."
+    },
+    {
+      "source": "nuscale_ch01_0073",
+      "target": "nuscale_ch01_0005",
       "relation": "SUPPORTS",
       "confidence": 0.7,
       "description": "Section A outlines the interface requirements and identifies structures, systems, and components included in the certified design, which provides context for understanding the containment vessel described in Section B as part of those components."
-    },
-    {
-      "source": "nuscale_ch01_0073",
-      "target": "nuscale_ch01_0005",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A outlines the interface requirements and identifies structures, systems, and components included in the certified design, while Section B describes the containment vessel type and its design standards, with both sections providing foundational context for understanding the scope and boundaries of the RVI subassemblies within the certified design."
-    },
-    {
-      "source": "nuscale_ch01_0135",
-      "target": "nuscale_ch01_0073",
-      "relation": "REFERENCES",
-      "confidence": 0.8,
-      "description": "Section A documents the NuScale FSAR's conformance with regulatory criteria, while Section B outlines the interface requirements and identifies which structures, systems, and components (potentially including RVI subassemblies) are part of the certified design referenced in Section A."
     }
   ]
 }

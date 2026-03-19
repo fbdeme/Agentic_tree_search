@@ -2,19 +2,19 @@
   "question": "What is the location and function of the RRV (Reactor Recirculation Valve)?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0006": {
-      "node_id": "nuscale_ch05_0006",
-      "title": "System Evaluation",
-      "summary": "This section describes the evaluation of the NuScale Power Plant’s system performance across its design power range. It outlines the criteria and parameters used to optimize plant operation, such as coolant temperatures and flow rates, and explains that calculations are performed using thermal hydraulic software and verified by hand. The analysis accounts for uncertainties and confirms that the system’s natural circulation design results in low pressure losses, with primary coolant flow unaffected by steam generator tube plugging.",
+    "nuscale_ch05_0011": {
+      "node_id": "nuscale_ch05_0011",
+      "title": "Reactor Coolant Pressure Boundary Inservice Inspection and Testing",
+      "summary": "This section describes the materials and standards used for threaded fasteners in key reactor coolant system components, emphasizing the use of Alloy 718 for its compatibility and stress corrosion cracking resistance. It also outlines the requirements for preservice and inservice inspection and testing of pressure-retaining components, specifying adherence to the latest ASME Boiler and Pressure Vessel Code (BPVC) editions as mandated by regulatory requirements.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "12",
+      "page_range": "37",
       "hop": 1
     },
     "nuscale_ch05_0025": {
       "node_id": "nuscale_ch05_0025",
       "title": "References",
-      "summary": "This section details the materials used in the construction of the pressurizer and its components within the NuScale reactor coolant system, specifying alloys and standards for each part to ensure corrosion resistance and compatibility. It references relevant sections of the BPVC (Boiler and Pressure Vessel Code) for material specifications and compliance.",
+      "summary": "This section details the materials used in the construction of the pressurizer and its components in the NuScale reactor, specifying alloys and standards for each part to ensure corrosion resistance and compatibility with operating environments. It references relevant sections of the BPVC (Boiler and Pressure Vessel Code) and lists the specific alloys and material specifications for the baffle plate, heater bundles, cover plate, heater sheaths, and bolting.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "130",
@@ -23,7 +23,7 @@
     "nuscale_ch05_0013": {
       "node_id": "nuscale_ch05_0013",
       "title": "References",
-      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as tables summarizing relevant ASME code cases for reactor components.",
+      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as tables summarizing relevant ASME code cases for materials and safety requirements.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "46",
@@ -32,85 +32,92 @@
     "nuscale_ch05_0019": {
       "node_id": "nuscale_ch05_0019",
       "title": "Reactor Coolant System Component and Subsystem Design",
-      "summary": "This section describes the design of the NuScale Power Module's Reactor Coolant System (RCS) components and subsystems, including the reactor pressure vessel, steam generators, safety and emergency valves, and associated piping. It details how the steam generators are integrated into the reactor vessel, forming part of the primary and secondary pressure boundaries, and references other sections for specific component design bases.",
+      "summary": "This section describes the design of the NuScale Power Module's Reactor Coolant System (RCS) components and subsystems, including the reactor pressure vessel, steam generators, safety and emergency valves, and associated piping. It details how the steam generators are integrated into the reactor vessel, forming part of the primary and secondary pressure boundaries, and references other sections for further design specifics of key components.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "91",
-      "hop": 3
+      "hop": 2
     },
     "nuscale_ch05_0003": {
       "node_id": "nuscale_ch05_0003",
       "title": "Design Basis",
-      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain fuel integrity, minimize solid deposits, and ensure uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain proper coolant flow, water chemistry, and boron concentration to protect fuel integrity and support safe operation under normal and transient conditions.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "8",
-      "hop": 3
+      "hop": 2
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0006",
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A discusses the materials and inspection requirements for threaded fasteners used in various reactor coolant system (RCS) components, including RSV flanges, while Section B describes the materials and design of pressurizer components, referencing Section 5.2 for material details, thereby connecting through shared material specifications and cross-references to Section 5.2."
+    },
+    {
+      "source": "nuscale_ch05_0011",
       "target": "nuscale_ch05_0013",
       "relation": "REFERENCES",
-      "confidence": 0.9,
-      "description": "Section A provides a summary description and evaluation of system performance, while Section B lists references that support the technical and regulatory basis for the information in Section A."
+      "confidence": 0.95,
+      "description": "Section A discusses the use and material requirements of threaded fasteners in reactor coolant system components, while Section B lists references (such as ASME and EPRI guidelines) that provide the standards and guidelines these requirements are based on."
     },
     {
       "source": "nuscale_ch05_0025",
       "target": "nuscale_ch05_0013",
       "relation": "REFERENCES",
       "confidence": 0.95,
-      "description": "Section A describes the materials and components of the pressurizer, referencing Section 5.2 for material details, while Section B contains the referenced Section 5.2, which provides standards and guidelines for the integrity and materials of the reactor coolant boundary."
+      "description": "Section A describes the components and materials of the pressurizer, referencing Section 5.2 for material details, while Section B contains the referenced Section 5.2, which provides standards and guidelines for the integrity and materials of the reactor coolant boundary."
     },
     {
       "source": "nuscale_ch05_0019",
-      "target": "nuscale_ch05_0006",
-      "relation": "REFERENCES",
-      "confidence": 0.8,
-      "description": "Section A lists the major components within the reactor pressure vessel, which may include the RRV if it is part of the described subsystems, while Section B discusses system-level performance criteria and references Section 5.4 for further details on components such as the steam generators, indicating that Section B relies on Section A for detailed component descriptions."
+      "target": "nuscale_ch05_0011",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the major components and subsystems within the reactor pressure vessel, while Section B specifies the materials and standards for threaded fasteners used in several of those components, thus detailing part of the construction described in Section A."
     },
     {
       "source": "nuscale_ch05_0019",
       "target": "nuscale_ch05_0025",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A provides a general overview of the reactor coolant system components, including valves, while Section B specifies detailed information about the materials and construction of the pressurizer and its associated components, which are part of the system described in Section A."
+      "description": "Section A provides a general overview of the reactor coolant system components, including valves, while Section B specifies detailed information about the pressurizer and its associated components, which are part of the system described in Section A."
     },
     {
       "source": "nuscale_ch05_0019",
       "target": "nuscale_ch05_0013",
       "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A describes the components and subsystems within the reactor coolant system, potentially including the RRV, while Section B lists references that provide supporting standards and guidelines for the integrity and quality assurance of those components."
+      "description": "Section A describes the components and subsystems within the reactor coolant system, which may include the RRV, while Section B lists references that provide supporting standards and guidelines for the integrity and quality assurance of those components."
     },
     {
       "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch05_0006",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section A describes the overall design of the reactor coolant system, which establishes the context for Section B's evaluation of system performance parameters and criteria, connecting them through the design basis and operational optimization of the RCS."
+      "target": "nuscale_ch05_0011",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides a general overview of the reactor coolant system's components and their arrangement, while Section B specifies the materials and standards for threaded fasteners used in several RCS components mentioned in Section A, connecting the general system description to detailed material requirements."
     },
     {
       "source": "nuscale_ch05_0003",
       "target": "nuscale_ch05_0025",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A provides a general overview of the reactor coolant system and its components, while Section B specifies detailed information about the materials and design of the pressurizer, which is identified in Section A as part of the RCS."
+      "description": "Section B provides detailed component and material information (such as the pressurizer's integration with the RPV upper shell) that specifies and elaborates on the general system description of the RCS in Section A."
     },
     {
       "source": "nuscale_ch05_0003",
       "target": "nuscale_ch05_0013",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A provides a general description of the reactor coolant system design, while Section B lists references that support the technical and regulatory basis for the system's integrity and quality assurance."
+      "description": "Section A provides a general description of the reactor coolant system design, while Section B lists references that support the integrity and quality assurance of the reactor coolant boundary, which is part of the system described in Section A."
     },
     {
       "source": "nuscale_ch05_0019",
       "target": "nuscale_ch05_0003",
       "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A lists the components within the reactor pressure vessel, while Section B provides a general overview of the reactor coolant system's function and major components, with both sections connecting through their descriptions of the RCS and its integral parts."
+      "confidence": 0.9,
+      "description": "Section A provides specific details about the components within the reactor pressure vessel, while Section B gives a general overview of the reactor coolant system's design and function, with Section A specifying the details for Section B's broader description."
     }
   ]
 }

@@ -2,96 +2,110 @@
   "question": "What is the total volume of the PZR region?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0024": {
-      "node_id": "nuscale_ch05_0024",
-      "title": "Pressurizer",
-      "summary": "The pressurizer, integrated into the upper region of the reactor vessel and separated by a baffle plate, regulates Reactor Coolant System (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering reactor trips or safety system actuations, with instrumentation providing continuous monitoring and control.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "124",
-      "hop": 1
-    },
-    "nuscale_ch05_0023": {
-      "node_id": "nuscale_ch05_0023",
-      "title": "Reactor Coolant System High-Point Vents",
-      "summary": "This section describes the testing and inspection requirements for the DHRS (Decay Heat Removal System) components and actuation valves in the NuScale reactor coolant system. It explains that these valves are exercised during cold shutdown conditions, in accordance with ASME OM Code requirements, and outlines the procedures for valve testing, position verification, and a one-time in-situ DHRS heat removal test during initial startup.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "121",
-      "hop": 1
-    },
-    "nuscale_ch05_0004": {
-      "node_id": "nuscale_ch05_0004",
-      "title": "System Description",
-      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes components such as the reactor pressure vessel, pressurizer, and associated piping and controls. Its primary function is to transfer heat from the reactor core to the steam generators using natural circulation, while also providing mechanisms for removing noncondensible gases and maintaining the integrity of the reactor coolant pressure boundary to prevent radionuclide release. The RCS interfaces with several other systems, including emergency core cooling and chemical control systems.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "9",
-      "hop": 1
-    },
     "nuscale_ch05_0005": {
       "node_id": "nuscale_ch05_0005",
       "title": "System Components",
-      "summary": "This section describes key components of the NuScale reactor system. It details the Reactor Pressure Vessel (RPV), which houses the reactor core and supports major systems, and outlines the main Reactor Coolant System (RCS) piping and its connections. The section also briefly introduces the pressurizer (PZR), emphasizing its integration with the RPV and its role in system operations.",
+      "summary": "This section describes key components of the NuScale reactor system. It details the Reactor Pressure Vessel (RPV), which houses the reactor core and supports major systems, and outlines the main Reactor Coolant System (RCS) piping and its connections. The section also briefly introduces the pressurizer (PZR), which is integral to the RPV.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "10",
       "hop": 1
     },
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located within the containment vessel and includes key components such as the reactor pressure vessel, pressurizer, and associated piping and controls. It removes heat from the reactor core to the steam generators via natural circulation, and features systems for degasification and emergency core cooling to maintain safety and integrity during both normal and emergency operations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch05_0023": {
+      "node_id": "nuscale_ch05_0023",
+      "title": "Reactor Coolant System High-Point Vents",
+      "summary": "This section outlines the testing and inspection requirements for the DHRS (Decay Heat Removal System) components in the NuScale reactor, ensuring compliance with ASME codes for Class 2 components. It specifies that DHRS actuation valves are exercised during cold shutdown conditions, and details the procedures for valve testing, position verification, and a one-time in-situ test of the DHRS function during initial startup.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "121",
+      "hop": 1
+    },
+    "nuscale_ch05_0024": {
+      "node_id": "nuscale_ch05_0024",
+      "title": "Pressurizer",
+      "summary": "The pressurizer in the NuScale reactor is integrated into the upper region of the reactor vessel and functions to regulate reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering reactor trips or safety system actuations, ensuring stable operation under various conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "124",
+      "hop": 1
+    },
     "nuscale_ch05_0002": {
       "node_id": "nuscale_ch05_0002",
       "title": "Summary Description",
-      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, supporting up to twelve independent modules. The RCS design ensures safe and efficient cooling, maintains water chemistry, and controls boron concentration to protect fuel integrity during normal and abnormal conditions.",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve independent modules, maintains proper water chemistry, and ensures uniform boron concentration to protect fuel integrity during all operating conditions.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "8",
-      "hop": 2
+      "hop": 3
     },
-    "nuscale_ch05_0012": {
-      "node_id": "nuscale_ch05_0012",
-      "title": "Reactor Coolant Pressure Boundary Leakage Detection",
-      "summary": "The NuScale reactor coolant pressure boundary (RCPB) leakage detection system does not use traditional components with designed leakage rates, making it impractical to distinguish between identified and unidentified leakage inside containment using installed instrumentation. All leakage into containment is treated as unidentified until its source is determined, with leakage rates monitored through RCS inventory balance and containment evacuation system (CES) flow rates, and the detection systems are designed to be reliable, redundant, and sensitive to support safety analyses.",
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain proper coolant flow, water chemistry, and boron concentration to protect fuel integrity and support safe operation under normal and transient conditions.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "41",
-      "hop": 3
+      "page_range": "8",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0024",
+      "source": "nuscale_ch05_0005",
       "target": "nuscale_ch05_0004",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A defines the physical boundaries and location of the PZR region within the reactor vessel, while Section B describes operational features (such as degasification and venting) that act specifically on the PZR volume, connecting both sections through their focus on the PZR region's function and containment."
+      "description": "Section A describes operational steps involving the reduction and venting of PZR water and gases, while Section B explains the system features (degasification line, RVVs) that enable removal of noncondensible gases from the PZR volume, thus Section B provides the technical context for the actions described in Section A."
     },
     {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0005",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A defines the physical boundaries and configuration of the PZR region, while Section B describes operational procedures that adjust the water level within the PZR, both referencing the PZR region whose total volume is the subject of the analysis question."
-    },
-    {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0005",
-      "relation": "SEMANTIC",
-      "confidence": 0.8,
-      "description": "Section A describes the function and configuration of the PZR region, while Section B details operational procedures involving the PZR water level and degasification, with both sections referencing the PZR but neither providing its total volume."
-    },
-    {
-      "source": "nuscale_ch05_0002",
+      "source": "nuscale_ch05_0005",
       "target": "nuscale_ch05_0024",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A provides a general overview of the reactor coolant system and identifies the pressurizer as a component, while Section B gives a more detailed description of the pressurizer's physical configuration and its separation from the coolant region, which is necessary for determining the total volume of the PZR region."
+      "description": "Section B defines the physical boundaries and location of the PZR region within the reactor vessel, which is referenced in Section A when describing operational procedures involving the PZR water level."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes operational features and functions involving the PZR region, while Section B specifies the physical configuration and boundaries of the PZR region within the reactor vessel, connecting them through the definition and operational context of the PZR region."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A identifies the PZR as an integral component of the RCS, while Section B describes operational procedures involving the PZR water level, connecting the system's structural overview to specific volume management actions."
     },
     {
       "source": "nuscale_ch05_0002",
       "target": "nuscale_ch05_0004",
       "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A introduces the integral pressurizer (PZR) as part of the reactor coolant system, while Section B describes operational features and functions specifically related to the PZR volume, connecting the general system overview to specific details about the PZR region."
+      "confidence": 0.9,
+      "description": "Section A introduces the PZR as part of the RCS, while Section B describes operational features and functions specifically associated with the PZR volume, connecting the general system overview to specific details about the PZR region."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0005",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A identifies the PZR as an integral component of the RCS, while Section B describes operational procedures involving the PZR water level, connecting both sections through their focus on the PZR's role and management within the system."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A introduces the integral pressurizer (PZR) as part of the reactor coolant system, while Section B describes operational features and functions specifically associated with the PZR volume, connecting them through the functional role and operational handling of the PZR region."
     }
   ]
 }

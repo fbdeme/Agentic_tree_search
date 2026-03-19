@@ -2,10 +2,19 @@
   "question": "Where is the Pressurizer (PZR) located in relation to the Reactor Pressure Vessel (RPV)?",
   "current_hop": 2,
   "nodes": {
+    "nuscale_ch05_0014": {
+      "node_id": "nuscale_ch05_0014",
+      "title": "Reactor Vessel",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module's reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel surrounded by a containment vessel. The RPV serves as a critical barrier to fission product release and provides structural support for various reactor components, with materials and fabrication methods chosen to ensure long-term integrity in accordance with ASME Boiler and Pressure Vessel Code standards.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
+      "hop": 1
+    },
     "nuscale_ch05_0024": {
       "node_id": "nuscale_ch05_0024",
       "title": "Pressurizer",
-      "summary": "The pressurizer in the NuScale reactor is integrated into the upper region of the reactor vessel and functions to regulate reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering reactor trips or safety system actuations, while providing continuous monitoring and control through instrumentation.",
+      "summary": "The pressurizer, integrated into the upper region of the reactor vessel and separated by a baffle plate, regulates Reactor Coolant System (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering reactor trips or safety system actuations, with instrumentation providing continuous monitoring and control.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "124",
@@ -14,7 +23,7 @@
     "nuscale_ch05_0023": {
       "node_id": "nuscale_ch05_0023",
       "title": "Reactor Coolant System High-Point Vents",
-      "summary": "This section outlines the testing and inspection requirements for the DHRS (Decay Heat Removal System) components in the NuScale reactor, ensuring compliance with ASME codes for Class 2 components. It specifies that DHRS actuation valves are exercised during cold shutdown conditions, and that comprehensive testing—including position verification and in-situ heat removal tests—will be conducted according to technical specifications and as part of the initial test program.",
+      "summary": "This section describes the testing and inspection requirements for the DHRS (Decay Heat Removal System) components in the NuScale reactor, ensuring compliance with ASME codes for Class 2 components. It details how actuation valves are exercised during cold shutdown conditions, outlines the required testing procedures, and specifies that a one-time in-situ test of the DHRS function will be performed on the first installed reactor module as part of the initial test program.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "121",
@@ -23,82 +32,94 @@
     "nuscale_ch05_0015": {
       "node_id": "nuscale_ch05_0015",
       "title": "Reactor Vessel Materials",
-      "summary": "The Reactor Vessel section describes the NuScale Power Module’s reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a containment vessel for safety. The RPV is constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure long-term integrity and prevent the release of fission products, with all components and welds meeting strict standards for pressure boundary reliability.",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module’s reactor pressure vessel (RPV), which houses the core, steam generators, and pressurizer, and serves as a critical barrier to fission product release. The RPV and its components are constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure integrity and safety throughout the plant’s design life.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "67",
-      "hop": 1
-    },
-    "nuscale_ch05_0004": {
-      "node_id": "nuscale_ch05_0004",
-      "title": "System Description",
-      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes key components such as the reactor pressure vessel, pressurizer, and associated piping and controls. It removes heat from the reactor core to the steam generators using natural circulation, and features systems for removing noncondensible gases and maintaining pressure boundary integrity to prevent radionuclide release. The RCS interfaces with several other systems, including emergency core cooling and chemical control, to ensure safe and efficient operation.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "9",
       "hop": 1
     },
     "nuscale_ch05_0005": {
       "node_id": "nuscale_ch05_0005",
       "title": "System Components",
-      "summary": "This section describes the main components of the NuScale reactor system, focusing on the Reactor Pressure Vessel (RPV), Reactor Coolant System (RCS) piping, and the Pressurizer (PZR). The RPV serves as a primary barrier to fission product release and supports key reactor internals, while the RCS piping connects various subsystems, and the PZR is integrated into the RPV to help control system pressure. Each component's functions and connections within the overall reactor system are briefly outlined.",
+      "summary": "This section describes key components of the NuScale reactor system. It details the Reactor Pressure Vessel (RPV), which houses the reactor core and supports major systems, and outlines the main Reactor Coolant System (RCS) piping and the integral pressurizer (PZR). These components are essential for containing reactor coolant, supporting safety systems, and maintaining system integrity.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "10",
       "hop": 1
     },
-    "nuscale_ch05_0014": {
-      "node_id": "nuscale_ch05_0014",
-      "title": "Reactor Vessel",
-      "summary": "The Reactor Vessel section describes the NuScale Power Module’s reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel, all surrounded by a containment vessel. The RPV serves as a critical barrier to fission product release and provides structural support for various reactor components, with materials and fabrication methods chosen to ensure long-term integrity and compliance with ASME Boiler and Pressure Vessel Code standards.",
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes key components such as the reactor pressure vessel, pressurizer, and associated piping and controls. It removes heat from the reactor core to the steam generators using natural circulation, and features systems for removing noncondensible gases and maintaining the integrity of the reactor coolant pressure boundary to prevent radionuclide release. The RCS interfaces with several other systems, including emergency core cooling and chemical control systems.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "67",
+      "page_range": "9",
       "hop": 1
     }
   },
   "edges": [
     {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B specifies that the pressurizer is located in the upper region of the reactor vessel, which Section A describes as part of the NuScale Power Module, thus providing the specific spatial relationship between the pressurizer and the reactor pressure vessel."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0015",
+      "relation": "SUPPORTS",
+      "confidence": 1.0,
+      "description": "Section A and Section B both state that the pressurizer is contained within the same reactor pressure vessel (RPV) as the reactor core and steam generators, directly connecting the physical location of the pressurizer to the RPV."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0005",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A states that the pressurizer (PZR) is contained within the same reactor pressure vessel (RPV), while Section B describes operational procedures involving the PZR and its connection to the RPV, confirming their physical and functional proximity."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A states that the pressurizer is contained within the same reactor pressure vessel (RPV) as the reactor core and steam generators, while Section B describes operational features (like degasification and venting) that reference the PZR volume being at the top of the RPV, thus both sections connect by specifying the physical and functional integration of the PZR within the RPV."
+    },
+    {
       "source": "nuscale_ch05_0024",
       "target": "nuscale_ch05_0015",
       "relation": "SUPPORTS",
       "confidence": 0.95,
-      "description": "Section A specifies that the pressurizer is an integral part of the reactor vessel and located in its upper region, while Section B confirms that the pressurizer is contained within the same reactor pressure vessel (RPV), thus both sections describe the physical integration and relative location of the pressurizer to the RPV."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0004",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A specifies that the pressurizer is located in the upper region of the reactor vessel above the naturally circulating coolant, while Section B confirms that the PZR volume is at the top of the RPV, thus both sections provide consistent spatial information about the PZR's location relative to the RPV."
+      "description": "Section A specifies that the pressurizer is an integral part of the reactor vessel and located in its upper region, while Section B confirms that the pressurizer is contained within the same reactor pressure vessel (RPV), thus both sections together clarify the spatial relationship between the PZR and RPV."
     },
     {
       "source": "nuscale_ch05_0024",
       "target": "nuscale_ch05_0005",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A specifies that the pressurizer is an integral part of the reactor vessel and located in its upper region, while Section B references operational procedures involving the PZR and RPV, thus Section A provides the physical location details that clarify the relationship implied in Section B."
+      "description": "Section A specifies that the pressurizer is an integral part of the reactor vessel and located in its upper region, while Section B references operational procedures involving the PZR and RPV, thus Section A provides the physical location details that clarify the relationship mentioned in Section B."
     },
     {
       "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0014",
-      "relation": "SPECIFIES",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
       "confidence": 0.95,
-      "description": "Section A specifies that the pressurizer is an integral part of the reactor vessel, specifically comprising the upper region above the naturally circulating reactor coolant, while Section B confirms that the pressurizer is contained within the same reactor pressure vessel (RPV), thus both sections describe the physical integration and spatial relationship of the pressurizer within the RPV."
+      "description": "Section A specifies that the pressurizer is located in the upper region of the reactor vessel, while Section B refers to the PZR volume being at the top of the RPV, thus both sections provide consistent information about the pressurizer's location relative to the reactor pressure vessel."
     },
     {
       "source": "nuscale_ch05_0023",
       "target": "nuscale_ch05_0005",
-      "relation": "SEMANTIC",
-      "confidence": 0.7,
-      "description": "Section B describes the process of venting nitrogen from the Pressurizer (PZR) through the Reactor Pressure Vessel (RPV) high point degasification line, indicating a physical and functional connection between the PZR and RPV, while Section A discusses inspection requirements for related system components but does not directly address their spatial relationship."
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B describes the process of venting nitrogen from the Pressurizer (PZR) through the Reactor Pressure Vessel (RPV) high point degasification line, indicating a physical connection and relative location between the PZR and RPV, while Section A discusses high-point vents in the Reactor Coolant System, which are relevant to the venting process mentioned in Section B."
     },
     {
-      "source": "nuscale_ch05_0015",
+      "source": "nuscale_ch05_0023",
       "target": "nuscale_ch05_0004",
-      "relation": "SUPPORTS",
+      "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A states that the pressurizer is contained within the same reactor pressure vessel (RPV) as the reactor core and steam generators, while Section B describes operational features (such as degasification and venting) that specifically reference the PZR volume being located at the top of the RPV, thus both sections connect by specifying the physical and functional integration of the PZR within the RPV."
+      "description": "Section B states that the PZR volume is located at the top of the RPV, providing a direct spatial relationship, while Section A does not address PZR location, so Section B provides the relevant information for the analysis question."
     },
     {
       "source": "nuscale_ch05_0015",
@@ -109,31 +130,17 @@
     },
     {
       "source": "nuscale_ch05_0015",
-      "target": "nuscale_ch05_0014",
-      "relation": "SUPPORTS",
-      "confidence": 1.0,
-      "description": "Section A and Section B are identical excerpts that both state the pressurizer is contained within the same reactor pressure vessel (RPV) as the reactor core and steam generators, directly answering the analysis question about their relative locations."
-    },
-    {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0005",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A and Section B both describe operational processes involving the removal of gases from the PZR via lines and valves connected at the top or high point of the RPV, indicating that the PZR is integrated with or located at the upper region of the RPV."
-    },
-    {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0004",
       "relation": "SUPPORTS",
       "confidence": 0.95,
-      "description": "Section B states that the pressurizer is contained within the same reactor pressure vessel (RPV), while Section A describes operational features involving the PZR at the top of the RPV, thus both sections together indicate the PZR is located inside and at the top of the RPV."
+      "description": "Section A states that the pressurizer is contained within the same reactor pressure vessel (RPV) as the reactor core and steam generators, while Section B describes operational features (degasification and venting) that occur at the top of the RPV where the PZR volume is located, thus both sections connect by specifying the PZR's physical and functional location relative to the RPV."
     },
     {
       "source": "nuscale_ch05_0005",
-      "target": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0004",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section B states that the pressurizer is contained within the same reactor pressure vessel (RPV), providing the physical relationship that Section A assumes when discussing PZR operations in relation to the RPV."
+      "description": "Section A describes operational steps involving the PZR, including venting nitrogen through the RPV high point degasification line, while Section B specifies that the PZR volume is located at the top of the RPV and details the degasification line's function, thus Section B provides the physical and functional context for the actions described in Section A."
     }
   ]
 }

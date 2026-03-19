@@ -2,10 +2,19 @@
   "question": "What is the internal pressure condition of the NuScale containment vessel (CNV) during normal operation?",
   "current_hop": 4,
   "nodes": {
+    "nuscale_ch05_0012": {
+      "node_id": "nuscale_ch05_0012",
+      "title": "Reactor Coolant Pressure Boundary Leakage Detection",
+      "summary": "The NuScale reactor coolant pressure boundary (RCPB) leakage detection system does not use traditional components with designed leakage rates, making it impractical to distinguish between identified and unidentified leakage inside containment using installed instrumentation. All leakage into containment is treated as unidentified until its source is determined, with leakage rates monitored via RCS inventory balance and compared to containment evacuation system (CES) flow rates, ensuring reliable detection to support safety analyses.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "41",
+      "hop": 1
+    },
     "nuscale_ch05_0024": {
       "node_id": "nuscale_ch05_0024",
       "title": "Pressurizer",
-      "summary": "The pressurizer in the NuScale reactor is integrated into the upper region of the reactor vessel and functions to regulate reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering reactor trips or safety system actuations, with instrumentation providing real-time pressure and level data to control systems.",
+      "summary": "The pressurizer in the NuScale reactor is integrated into the upper region of the reactor vessel and functions to regulate reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering unnecessary reactor trips or safety system actuations. Instrumentation provides continuous monitoring of pressure and water level to support safe operation.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "124",
@@ -14,244 +23,198 @@
     "nuscale_ch05_0011": {
       "node_id": "nuscale_ch05_0011",
       "title": "Reactor Coolant Pressure Boundary Inservice Inspection and Testing",
-      "summary": "Threaded fasteners in key reactor coolant system components are made from Alloy 718, chosen for compatibility with borated water and compliance with ASME BPVC standards to mitigate stress corrosion cracking. Inservice inspection and testing of pressure-retaining components follow ASME BPVC Section XI and relevant regulatory requirements, with inspection programs updated to the latest approved code editions for each inspection interval.",
+      "summary": "This section describes the materials and design requirements for threaded fasteners used in key reactor coolant system components, emphasizing the use of Alloy 718 for its compatibility and stress corrosion cracking resistance. It also outlines that preservice and inservice inspection and testing of pressure-retaining components are conducted according to the latest ASME BPVC Section XI standards, as mandated by federal regulations, with inspection intervals and code editions specified in the inspection program.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "37",
       "hop": 1
     },
-    "nuscale_ch05_0003": {
-      "node_id": "nuscale_ch05_0003",
-      "title": "Design Basis",
-      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain fuel integrity, minimize solid deposits, and ensure uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "8",
-      "hop": 1
-    },
-    "nuscale_ch05_0002": {
-      "node_id": "nuscale_ch05_0002",
-      "title": "Summary Description",
-      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve independent modules, maintains proper coolant chemistry, and ensures uniform boron concentration to protect fuel integrity during all operating conditions.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "8",
-      "hop": 1
-    },
-    "nuscale_ch05_0012": {
-      "node_id": "nuscale_ch05_0012",
-      "title": "Reactor Coolant Pressure Boundary Leakage Detection",
-      "summary": "The NuScale reactor coolant system (RCS) does not use traditional components with designed leakage rates, making it impractical to distinguish between identified and unidentified leakage inside containment using installed instrumentation. All leakage into containment is treated as unidentified until the source is located and quantified by other means, with the leakage rate determined by RCS inventory balance and compared to the containment evacuation system (CES) flow. The leakage detection systems are reliable, redundant, and sensitive enough to support leak-before-break analyses.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "41",
-      "hop": 1
-    },
     "nuscale_ch05_0004": {
       "node_id": "nuscale_ch05_0004",
       "title": "System Description",
-      "summary": "The Reactor Coolant System (RCS) in the NuScale design is responsible for removing heat from the reactor core and transferring it to the steam generators using natural circulation, driven by density and elevation differences. The system includes components such as the reactor pressure vessel, pressurizer, and associated valves, and features mechanisms for removing noncondensible gases during both normal and emergency operations to maintain system integrity and safety.",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes components such as the reactor pressure vessel, pressurizer, and associated piping and controls. The RCS removes heat from the reactor core to the steam generators using natural circulation, and features systems for degasification and emergency core cooling to maintain safety and integrity of the reactor coolant pressure boundary.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "9",
       "hop": 1
     },
-    "nuscale_ch05_0015": {
-      "node_id": "nuscale_ch05_0015",
-      "title": "Reactor Vessel Materials",
-      "summary": "The NuScale Power Module’s reactor pressure vessel (RPV) is a key component of the reactor coolant system, housing the core, steam generators, and pressurizer, and serving as a primary barrier to fission product release. The RPV and its appurtenances are constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure structural integrity and safety throughout the plant’s design lifetime.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "67",
-      "hop": 2
-    },
     "nuscale_ch05_0009": {
       "node_id": "nuscale_ch05_0009",
       "title": "Overpressure Protection",
-      "summary": "This section outlines NuScale's compliance with NRC regulations and ASME Boiler and Pressure Vessel Code (BPVC) requirements for overpressure protection of the reactor coolant boundary. It details how code cases for design, fabrication, construction, preservice, and inservice inspections and testing are selected and applied, ensuring they meet the conditions specified in relevant NRC regulatory guides and federal regulations. A consolidated list of the specific ASME code cases used is provided in Table 5.2-1.",
+      "summary": "This section outlines NuScale's compliance with overpressure protection requirements by referencing applicable ASME Boiler and Pressure Vessel Code (BPVC) and Operations and Maintenance (OM) Code cases, as mandated by various sections of 10 CFR 50.55a and related Regulatory Guides (RGs). It details how code cases for design, fabrication, construction, preservice, and inservice inspections and testing are selected and verified to meet NRC-endorsed standards, with a consolidated list provided in Table 5.2-1.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "21",
-      "hop": 2
+      "hop": 1
+    },
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section describes the NuScale reactor coolant system (RCS), which uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator. The RCS is designed to ensure safe and efficient cooling, maintain water chemistry, and provide uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 1
     },
     "nuscale_ch05_0014": {
       "node_id": "nuscale_ch05_0014",
       "title": "Reactor Vessel",
-      "summary": "The Reactor Vessel section describes the NuScale Power Module (NPM), which integrates the reactor core, steam generators, and pressurizer within a single reactor pressure vessel (RPV) surrounded by a containment vessel. The RPV serves as a key pressure-retaining component, supporting various reactor systems and providing a barrier to fission product release, with materials and fabrication meeting stringent ASME Boiler and Pressure Vessel Code requirements to ensure long-term integrity.",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module's reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel surrounded by a containment vessel. The RPV serves as a key pressure-retaining component and barrier to fission product release, supporting various reactor systems and constructed according to ASME Boiler and Pressure Vessel Code standards. The materials used for the RPV are carefully selected to ensure integrity and compliance with regulatory requirements throughout the plant's design lifetime.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "67",
-      "hop": 2
+      "hop": 3
+    },
+    "nuscale_ch05_0017": {
+      "node_id": "nuscale_ch05_0017",
+      "title": "Reactor Vessel Integrity",
+      "summary": "This section outlines the procedures and regulatory compliance measures for ensuring the integrity of the NuScale reactor vessel. It details the development of operating procedures to maintain pressure-temperature limits, evaluates the vessel’s resistance to pressurized thermal shock and upper-shelf energy degradation over a 60-year design life, and confirms that all criteria remain within regulatory limits.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "73",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0024",
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0024",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B describes the pressurizer's integration with the reactor vessel and its function to rapidly communicate pressure changes with the reactor coolant system (RCS), which is the same system whose leakage and pressure conditions are discussed in Section A, thus both sections provide complementary technical context for understanding the internal pressure condition of the containment vessel during normal operation."
+    },
+    {
+      "source": "nuscale_ch05_0012",
       "target": "nuscale_ch05_0011",
       "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A describes the pressurizer's role in maintaining and communicating pressure within the reactor coolant system, which directly determines the internal pressure condition of the containment vessel during normal operation, while Section B discusses the material and design requirements for fasteners that ensure the integrity of the pressure boundary under those pressure conditions."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0003",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes the pressurizer's role in maintaining and communicating pressure within the reactor vessel, which is a component detailed in Section B's general design basis summary of the reactor coolant system that includes the pressurizer as part of its configuration."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0002",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A provides specific design details about the pressurizer, which is identified in Section B as an integral component of the reactor coolant system (RCS) that is relevant to understanding the internal pressure condition of the containment vessel during normal operation."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0012",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the pressurizer's role in maintaining and communicating pressure within the reactor coolant system, which directly determines the internal pressure condition that Section B's leakage detection systems monitor within the containment vessel during normal operation."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0004",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section B states that during normal operation, noncondensible gases are removed from the pressurizer (PZR) volume at the top of the reactor pressure vessel (RPV) via a degasification line, implying that the CNV is not routinely exposed to PZR steam or pressure under normal conditions, which is consistent with Section A's description of the pressurizer's function and separation from the CNV."
-    },
-    {
-      "source": "nuscale_ch05_0011",
-      "target": "nuscale_ch05_0003",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A discusses the materials and inspection requirements for threaded fasteners in the reactor coolant pressure boundary, while Section B provides a general summary of the reactor coolant system design, including components like the RPV and PZR, which are the context for the fasteners described in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0011",
-      "target": "nuscale_ch05_0002",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A discusses the materials and inspection requirements for threaded fasteners in the reactor coolant pressure boundary, while Section B provides a general summary of the reactor coolant system's components, with both sections connected by their focus on the design and integrity of the reactor coolant pressure boundary."
-    },
-    {
-      "source": "nuscale_ch05_0011",
-      "target": "nuscale_ch05_0012",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A discusses the materials and design requirements for threaded fasteners in the reactor coolant pressure boundary, while Section B addresses the detection of leakage from the same boundary, connecting them through their focus on maintaining the integrity and monitoring of the reactor coolant pressure boundary during operation."
-    },
-    {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch05_0002",
-      "relation": "SUPPORTS",
-      "confidence": 1.0,
-      "description": "Section A and Section B are identical excerpts providing the same summary description of the reactor coolant system, thus they reinforce each other's content without adding new information."
-    },
-    {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch05_0012",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the design and configuration of the reactor coolant system, which is the source of internal pressure in the containment vessel during normal operation, while Section B discusses the detection of leakage from this system into the containment, thus connecting the system's pressure conditions to containment monitoring."
-    },
-    {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch05_0004",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section B specifies that during normal operation, noncondensible gases are removed from the pressurizer volume to the containment vessel (CNV), providing information about the internal pressure condition referenced in the analysis question, which is structurally supported by the general system description in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch05_0012",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A provides a general overview of the reactor coolant system's design, while Section B specifies details about leakage detection within the same system, connecting them through their focus on the RCS and its operational characteristics."
-    },
-    {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch05_0004",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section B specifies that during normal operation, noncondensible gases are removed from the pressurizer volume to the containment vessel (CNV), providing information about internal pressure conditions that is not detailed in Section A's general system overview."
+      "description": "Section A discusses the challenges of detecting reactor coolant pressure boundary leakage inside containment, while Section B details the materials and standards for threaded fasteners used in the pressure boundary, both relating to the integrity and potential leakage sources affecting internal CNV pressure during normal operation."
     },
     {
       "source": "nuscale_ch05_0012",
       "target": "nuscale_ch05_0004",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section B describes that during normal operation, noncondensible gases are removed from the pressurizer (PZR) volume via a degasification line, implying that the CNV is not normally exposed to RCS pressure, while Section A discusses the impracticality of distinguishing RCS leakage inside containment, connecting both sections through the context of potential sources and pathways for internal CNV pressurization during normal operation."
+      "description": "Section B describes that during normal operation, noncondensible gases are removed from the pressurizer (PZR) volume via a degasification line, indicating that the CNV is not normally exposed to RCS pressure, while Section A discusses leakage detection and the impracticality of distinguishing RCS leakage inside containment, connecting both sections through the context of internal containment conditions during normal operation."
     },
     {
-      "source": "nuscale_ch05_0015",
-      "target": "nuscale_ch05_0024",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A describes the physical arrangement of the containment vessel (CNV) surrounding the reactor pressure vessel (RPV), while Section B explains that the pressurizer, integral to the RPV, maintains and communicates pressure within the reactor coolant system, which is enclosed by the CNV—thus, Section B's information about pressure control within the RPV is structurally and functionally connected to the CNV's internal pressure condition referenced in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0015",
-      "target": "nuscale_ch05_0011",
-      "relation": "SEMANTIC",
-      "confidence": 0.7,
-      "description": "Section A describes the physical arrangement of the containment vessel (CNV) relative to the reactor pressure vessel (RPV), while Section B details the materials and standards for threaded fasteners used in the RPV and related pressure boundaries, both providing context for the pressure-retaining components but neither directly addresses the internal pressure condition of the CNV during normal operation."
-    },
-    {
-      "source": "nuscale_ch05_0009",
-      "target": "nuscale_ch05_0024",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section B describes the pressurizer's function in maintaining and communicating pressure within the reactor coolant system, which directly determines the internal pressure condition of the containment vessel referenced in the analysis question, while Section A outlines the overpressure protection and code compliance that ensures this pressure remains within regulatory limits."
-    },
-    {
-      "source": "nuscale_ch05_0009",
-      "target": "nuscale_ch05_0011",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A outlines the regulatory codes and standards for overpressure protection and inservice testing, while Section B details the material and design compliance of threaded fasteners used in the reactor coolant pressure boundary, both referencing ASME BPVC requirements to ensure the integrity of the containment vessel under pressure conditions."
-    },
-    {
-      "source": "nuscale_ch05_0009",
-      "target": "nuscale_ch05_0003",
-      "relation": "REFERENCES",
-      "confidence": 0.8,
-      "description": "Section A references regulatory codes and testing requirements for overpressure protection of the reactor coolant boundary, while Section B provides a general summary of the reactor coolant system design, with both sections connected by their focus on the integrity and operational parameters of the reactor coolant system, including containment vessel pressure conditions."
-    },
-    {
-      "source": "nuscale_ch05_0014",
-      "target": "nuscale_ch05_0024",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A describes the containment vessel (CNV) as surrounding the reactor pressure vessel (RPV), while Section B explains that the pressurizer, integral to the RPV, rapidly communicates pressure changes within the reactor coolant system, thereby influencing the internal pressure condition of the CNV during normal operation."
-    },
-    {
-      "source": "nuscale_ch05_0014",
-      "target": "nuscale_ch05_0011",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A describes the physical arrangement of the containment vessel (CNV) surrounding the reactor pressure vessel (RPV), while Section B details the materials and standards for threaded fasteners used in the RPV and related pressure boundaries, connecting them through their shared role in maintaining the integrity of the reactor coolant pressure boundary."
-    },
-    {
-      "source": "nuscale_ch05_0014",
-      "target": "nuscale_ch05_0003",
-      "relation": "REFERENCES",
-      "confidence": 0.8,
-      "description": "Section A describes the physical arrangement of the containment vessel (CNV) surrounding the reactor pressure vessel (RPV), while Section B outlines the design basis and components of the reactor coolant system (RCS), which includes the RPV but does not directly specify the internal pressure condition of the CNV; both sections are structurally related by referencing the RPV as a key component."
-    },
-    {
-      "source": "nuscale_ch05_0015",
+      "source": "nuscale_ch05_0012",
       "target": "nuscale_ch05_0009",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section A describes the physical configuration of the containment vessel (CNV) and its relationship to the reactor pressure vessel, while Section B discusses regulatory requirements for overpressure protection that would govern the allowable internal pressure conditions of the CNV during normal operation."
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the detection of reactor coolant pressure boundary leakage inside the containment, while Section B outlines the overpressure protection and code compliance for the reactor coolant boundary, connecting them through their focus on maintaining containment integrity and pressure control in accordance with regulatory requirements."
     },
     {
-      "source": "nuscale_ch05_0009",
-      "target": "nuscale_ch05_0014",
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0003",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A discusses regulatory compliance and overpressure protection provisions for the reactor coolant boundary, while Section B describes the physical configuration of the NuScale reactor vessel and containment vessel, connecting them by specifying that the CNV surrounds the RPV and is part of the pressure boundary subject to the requirements in Section A."
+      "description": "Section A discusses the detection of reactor coolant pressure boundary leakage inside the containment, while Section B describes the design of the reactor coolant system, which determines the internal pressure conditions relevant to leakage detection."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0011",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the pressurizer's role in maintaining and communicating pressure within the reactor coolant system, which directly determines the internal pressure condition relevant to the containment vessel during normal operation, while Section B discusses the material and design standards for fasteners that ensure the integrity of the pressure boundary under those pressure conditions."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B states that during normal operation, noncondensible gases are removed from the pressurizer (PZR) volume at the top of the reactor pressure vessel (RPV) via a degasification line, which implies that the CNV is not directly exposed to PZR steam or pressure under normal conditions, while Section A describes the pressurizer's function and its integration with the RCS, providing context for the pressure conditions managed within the RCS but not directly specifying CNV pressure."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0009",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the pressurizer's role in maintaining and communicating pressure within the reactor coolant system, which directly relates to Section B's focus on overpressure protection and compliance with regulatory codes to ensure the integrity of the reactor coolant boundary under normal and abnormal pressure conditions."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the pressurizer's role in maintaining and communicating pressure within the reactor vessel, while Section B provides the overall design basis of the reactor coolant system, which includes the pressurizer as a component, thus Section A specifies details for the general system described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0009",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the material and design requirements for threaded fasteners in the reactor coolant pressure boundary, while Section B outlines compliance with overpressure protection codes and standards, both of which are connected through their reliance on ASME BPVC requirements for ensuring the integrity and safety of the reactor coolant boundary under pressure conditions."
+    },
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the materials and inspection requirements for threaded fasteners in the reactor coolant pressure boundary, while Section B provides a general summary of the reactor coolant system design, with both sections connected by their focus on the integrity and configuration of the reactor coolant pressure boundary components."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0009",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the system features that manage internal pressures in the CNV during normal operation, while Section B outlines the regulatory codes and standards (ASME BPVC, 10 CFR 50.55a) that these pressure management features must comply with, connecting the design implementation to regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes specific features of the RCS, such as degasification and venting to the CNV during normal and emergency operations, which provide operational context and mechanisms relevant to understanding the internal pressure condition of the CNV discussed in Section B's general design basis."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0003",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A references regulatory codes and testing programs that ensure the integrity and overpressure protection of the reactor coolant boundary, while Section B provides a general description of the reactor coolant system's design, which includes the containment vessel whose pressure conditions are governed by the requirements in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0012",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the physical arrangement of the reactor and containment vessels, while Section B discusses the detection of reactor coolant pressure boundary leakage within the containment, connecting them through the containment's role in housing and monitoring the reactor system during normal operation."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0024",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the containment vessel (CNV) as surrounding the reactor pressure vessel (RPV), while Section B explains that the pressurizer, integral to the RPV, rapidly communicates pressure changes within the reactor coolant system, thereby linking the internal pressure conditions of the RPV (and thus the CNV environment) to the pressurizer's operation."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0011",
+      "relation": "SEMANTIC",
+      "confidence": 0.6,
+      "description": "Section A describes the physical arrangement of the containment vessel (CNV) surrounding the reactor pressure vessel (RPV), while Section B details the materials and standards for threaded fasteners used in the RPV and related pressure boundaries, connecting them through their shared focus on pressure-retaining components but not directly addressing CNV internal pressure conditions."
+    },
+    {
+      "source": "nuscale_ch05_0017",
+      "target": "nuscale_ch05_0012",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the development of operating procedures to ensure pressure-temperature limits are not exceeded during normal operation, while Section B addresses the detection of leakage from the reactor coolant pressure boundary, both relating to maintaining and monitoring internal pressure conditions within the containment vessel during normal operation."
+    },
+    {
+      "source": "nuscale_ch05_0017",
+      "target": "nuscale_ch05_0024",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the development of operating procedures to ensure pressure-temperature limits are not exceeded during normal operation, while Section B describes the pressurizer's role in maintaining and communicating pressure within the reactor vessel, thus both sections are connected through their focus on controlling and maintaining internal pressure conditions during normal operation."
+    },
+    {
+      "source": "nuscale_ch05_0017",
+      "target": "nuscale_ch05_0011",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses operating procedures to ensure pressure-temperature limits are not exceeded during normal operation, while Section B details the material and design standards for threaded fasteners that must withstand those same pressure conditions, connecting them through the shared requirement to maintain reactor coolant boundary integrity under specified pressures."
     }
   ]
 }

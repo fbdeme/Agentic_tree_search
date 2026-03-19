@@ -1,132 +1,111 @@
 {
   "question": "What is the definition of the abbreviation RCS?",
-  "current_hop": 2,
+  "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0701": {
-      "node_id": "nuscale_ch01_0701",
-      "title": "DSRS 15.1.6, Rev 0: Loss of Containment VacuumII.4 Analytical ParametersMaximize Heat Transfer from RCS to Containment and Reactor Pool",
-      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for various accident scenarios, including loss of containment vacuum and related analytical parameters. It confirms that NuScale’s design meets the requirements for maximizing heat transfer from the reactor coolant system (RCS) to the containment and reactor pool, as well as other parameters, with no exceptions noted. For some events, such as steam pressure regulator failure, partial conformance is noted due to design differences.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "294",
-      "hop": 1
-    },
-    "nuscale_ch01_0786": {
-      "node_id": "nuscale_ch01_0786",
-      "title": "DSRS 15.6.6, Rev 0: Inadvertent Operation of ECCSII.1 RCS pressure below 110 percent design value.",
-      "summary": "This section reviews NuScale’s conformance with regulatory criteria regarding the inadvertent operation of ECCS when RCS pressure is below 110 percent of the design value. It concludes that NuScale fully conforms to the relevant DSRS 15.6.6 requirements for both RCS pressure and maintaining minimum DNBR, while noting only partial conformance to some SRP 15.6.5 radiological consequence criteria due to superseding guidance in SRP 15.0.3. Certain criteria are also identified as not applicable because they pertain only to BWRs.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "309",
-      "hop": 1
-    },
-    "nuscale_ch01_0748": {
-      "node_id": "nuscale_ch01_0748",
-      "title": "SRP 15.4.6, Rev 2: Inadvertent Decrease in Boron Concentration in the Reactor Coolant System (PWR)II.2 Fuel Cladding Integrity",
-      "summary": "The section explains that the NuScale reactor design conforms to the regulatory criteria for fuel cladding integrity in the event of an inadvertent decrease in boron concentration, as outlined in SRP 15.4.6, Rev 2. It notes that \"CHF\" (Critical Heat Flux) is the appropriate term for describing the relevant phenomenon in NuScale's design, and confirms that the analysis methods and assumptions meet the required standards.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "302",
-      "hop": 1
-    },
-    "nuscale_ch01_0111": {
-      "node_id": "nuscale_ch01_0111",
-      "title": "Figure 1.7-2: Instrumentatio n and Controls Symbol Legend",
-      "summary": "This section provides a legend explaining the symbols used for instrumentation and controls in NuScale’s safety analysis diagrams. It defines the logic gate functions, control room indicators, switch types, and other symbols to ensure clear interpretation of system status and operations in the diagrams.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "101",
-      "hop": 1
-    },
     "nuscale_ch01_0117": {
       "node_id": "nuscale_ch01_0117",
       "title": "Figure 1.7-3f: Piping and In strumentation Diagram Legends",
-      "summary": "This section provides the legend for symbols used in NuScale's Piping and Instrumentation Diagrams (P&IDs), detailing the graphical representations for various instruments, sensors, and auxiliary devices. It includes symbols for sample probes, pressure and temperature sensors, flow measurement devices, and level indicators, ensuring consistent interpretation of P&ID drawings.",
+      "summary": "This section provides the legend for piping and instrumentation diagrams (P&IDs) used in the NuScale Final Safety Analysis Report, detailing the symbols and descriptions for various instruments, sensors, and auxiliary devices. It includes representations for sample probes, pressure and temperature sensors, flow measurement devices, and level indicators, ensuring standardized interpretation of P&ID drawings.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "107",
       "hop": 1
     },
-    "nuscale_ch01_0747": {
-      "node_id": "nuscale_ch01_0747",
-      "title": "SRP 15.4.6, Rev 2: Inadvertent Decrease in Boron Concentration in the Reactor Coolant System (PWR)II.1 Reactor Coolant and Main Steam System Pressures",
-      "summary": "This section summarizes NuScale’s conformance with SRP 15.4.6, Rev 2, regarding inadvertent decreases in boron concentration in the reactor coolant system for PWRs. It states that NuScale’s design meets the relevant regulatory criteria for reactor coolant and main steam system pressures, fuel cladding integrity, incident frequency, and analysis methods, but notes that some guidance is not applicable due to the absence of reactor coolant pumps and the lack of required operator action for boron dilution events.",
+    "nuscale_ch01_0786": {
+      "node_id": "nuscale_ch01_0786",
+      "title": "DSRS 15.6.6, Rev 0: Inadvertent Operation of ECCSII.1 RCS pressure below 110 percent design value.",
+      "summary": "This section reviews NuScale’s conformance with regulatory criteria regarding the inadvertent operation of ECCS at RCS pressures below 110% of the design value. It concludes that NuScale fully conforms to the relevant DSRS 15.6.6 requirements, with no exceptions noted for RCS pressure and minimum DNBR criteria. Some related SRP guidance is only partially applicable or not applicable, particularly where it pertains to BWRs or is superseded by other sections.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "302",
+      "page_range": "309",
       "hop": 1
+    },
+    "nuscale_ch01_0701": {
+      "node_id": "nuscale_ch01_0701",
+      "title": "DSRS 15.1.6, Rev 0: Loss of Containment VacuumII.4 Analytical ParametersMaximize Heat Transfer from RCS to Containment and Reactor Pool",
+      "summary": "This section documents NuScale’s conformance with regulatory criteria for DSRS 15.1.6, specifically regarding analytical parameters for the loss of containment vacuum scenario. It confirms that the analysis maximizes heat transfer from the Reactor Coolant System (RCS) to the containment and reactor pool, and that all relevant parameters conform to regulatory requirements. No exceptions or deviations are noted for this criterion.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "294",
+      "hop": 1
+    },
+    "nuscale_ch01_0111": {
+      "node_id": "nuscale_ch01_0111",
+      "title": "Figure 1.7-2: Instrumentatio n and Controls Symbol Legend",
+      "summary": "This section provides a legend explaining the symbols used for instrumentation and controls in NuScale’s safety analysis report diagrams. It defines the logic gate functions, control room indicators, switch types, and other symbols relevant to system status and control operations, ensuring clarity in interpreting the technical drawings. Additionally, it includes notes on piping and instrumentation diagram conventions, such as vent and drain representations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "101",
+      "hop": 1
+    },
+    "nuscale_ch01_0013": {
+      "node_id": "nuscale_ch01_0013",
+      "title": "Proprietary Information",
+      "summary": "This section explains the organization and numbering of text, tables, figures, and pages within the NuScale Final Safety Analysis Report (FSAR), following specific regulatory guidance. It also clarifies that while the FSAR does not contain proprietary or safeguards information, some sensitive content is withheld from public disclosure and is clearly marked, with a separate public version provided that excludes such material.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "10",
+      "hop": 2
+    },
+    "nuscale_ch01_0014": {
+      "node_id": "nuscale_ch01_0014",
+      "title": "Acronyms and Abbreviations",
+      "summary": "This section explains the conventions used for identifying and numbering tables, figures, and pages within the NuScale Final Safety Analysis Report (FSAR), as well as the handling of proprietary and sensitive information. It clarifies that sensitive content is withheld from the public version in accordance with regulatory requirements, while all such material is clearly marked and included only in the non-public version.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "10",
+      "hop": 2
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0701",
+      "source": "nuscale_ch01_0117",
       "target": "nuscale_ch01_0786",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.9,
-      "description": "Both Section A and Section B use the abbreviation 'RCS' in the context of analytical parameters and pressure limits, indicating that understanding the definition of 'RCS' is a prerequisite for interpreting both sections' technical content."
-    },
-    {
-      "source": "nuscale_ch01_0701",
-      "target": "nuscale_ch01_0748",
       "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A and Section B both reference the term 'RCS' in the context of reactor systems, with Section A discussing analytical parameters involving heat transfer from RCS and Section B explicitly defining RCS as the Reactor Coolant System in the context of boron concentration and reactor design."
-    },
-    {
-      "source": "nuscale_ch01_0701",
-      "target": "nuscale_ch01_0117",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section B provides diagram legends that likely define abbreviations such as RCS, which are referenced in Section A's analytical parameters."
-    },
-    {
-      "source": "nuscale_ch01_0701",
-      "target": "nuscale_ch01_0747",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A and Section B both reference the term 'RCS' in the context of reactor systems, with Section B explicitly defining it as 'Reactor Coolant System,' thereby providing the definition sought in the analysis question."
-    },
-    {
-      "source": "nuscale_ch01_0786",
-      "target": "nuscale_ch01_0748",
-      "relation": "SEMANTIC",
-      "confidence": 0.9,
-      "description": "Both Section A and Section B use the abbreviation 'RCS' in the context of reactor safety analysis, where 'RCS' refers to the Reactor Coolant System, thus both sections implicitly define or use the same technical term."
-    },
-    {
-      "source": "nuscale_ch01_0786",
-      "target": "nuscale_ch01_0117",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section A uses the abbreviation 'RCS' in the context of regulatory criteria, while Section B (the P&ID legend) is the likely location where the definition or expansion of 'RCS' would be provided, connecting them through the need to clarify the abbreviation's meaning."
-    },
-    {
-      "source": "nuscale_ch01_0786",
-      "target": "nuscale_ch01_0747",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Both Section A and Section B reference the Reactor Coolant System (RCS) in the context of pressure and boron concentration, indicating that RCS stands for Reactor Coolant System."
-    },
-    {
-      "source": "nuscale_ch01_0748",
-      "target": "nuscale_ch01_0117",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A discusses the Reactor Coolant System (RCS) in the context of safety analysis, while Section B provides diagram legends that likely define abbreviations such as RCS used in system drawings, thus Section B specifies the meaning of RCS referenced in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0748",
-      "target": "nuscale_ch01_0747",
-      "relation": "REFERENCES",
-      "confidence": 0.9,
-      "description": "Both Section A and Section B reference the Reactor Coolant System (RCS) in the context of PWR designs and regulatory guidance, indicating that RCS stands for Reactor Coolant System."
+      "confidence": 0.7,
+      "description": "Section B uses the abbreviation 'RCS' in the context of regulatory criteria, while Section A provides diagram legends that may define such abbreviations, thus Section A potentially specifies the meaning of 'RCS' referenced in Section B."
     },
     {
       "source": "nuscale_ch01_0117",
-      "target": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0701",
       "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B uses the abbreviation 'RCS' in the context of analytical parameters, while Section A is a legend for diagrams that likely defines such abbreviations, thus Section A provides the definition for 'RCS' as used in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0013",
+      "target": "nuscale_ch01_0117",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides general information about the structure and referencing of tables and figures in the FSAR, while Section B is an example of a specific figure (Figure 1.7-3f) that would be referenced according to the conventions described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0014",
+      "target": "nuscale_ch01_0117",
+      "relation": "SUPPORTS",
       "confidence": 0.7,
-      "description": "Section B uses the term 'Reactor Coolant System' (RCS) in the context of regulatory analysis, while Section A provides diagram legends that may include the abbreviation RCS, thus Section A potentially specifies or defines abbreviations used in Section B."
+      "description": "Section A provides general information about acronyms and abbreviations in the FSAR, while Section B contains diagram legends that may use such abbreviations, connecting them through the use and explanation of abbreviations like RCS."
+    },
+    {
+      "source": "nuscale_ch01_0014",
+      "target": "nuscale_ch01_0786",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides a list of acronyms and abbreviations, which is where the definition of 'RCS' would be found, while Section B discusses technical and regulatory criteria related to RCS but does not define the abbreviation itself."
+    },
+    {
+      "source": "nuscale_ch01_0014",
+      "target": "nuscale_ch01_0701",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B uses the abbreviation 'RCS' without definition, while Section A is titled 'Acronyms and Abbreviations' and is expected to provide definitions for such abbreviations, thus Section A is intended to specify the meaning of 'RCS' as used in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0013",
+      "target": "nuscale_ch01_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section B is expected to provide the definitions of acronyms and abbreviations such as RCS, which is the information sought in the analysis question, while Section A does not address abbreviations."
     }
   ]
 }
