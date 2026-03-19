@@ -50,16 +50,16 @@ OUTPUT_DIR = ROOT / "data/trees"
 
 def extract_figure_table_metadata(pdf_path: str) -> tuple[dict, dict]:
     """
-    Scan all PDF pages to find Figure and Table captions.
-    Returns (figures_dict, tables_dict) with page numbers and captions.
+    Scan all PDF pages to find Figure/Table captions and extract structured table data.
 
-    Strategy: Find all pages containing "Figure X.Y-Z:" or "Table X.Y-Z:" captions.
-    Take the LAST occurrence of each ID as the actual location (first occurrence is
-    in the LIST OF FIGURES/TABLES in the front matter).
+    For tables: uses PyMuPDF find_tables() to extract structured row/column data,
+    stored as pipe-delimited text. This solves the PDF text extraction problem where
+    cell boundaries are lost (e.g., "635Cold" instead of "635 | Cold Leg").
+
+    Returns (figures_dict, tables_dict).
     """
     doc = fitz.open(pdf_path)
 
-    # Collect ALL occurrences, keep last one per ID
     figures = {}
     tables = {}
 
@@ -70,16 +70,17 @@ def extract_figure_table_metadata(pdf_path: str) -> tuple[dict, dict]:
         page = doc[page_num]
         text = page.get_text()
 
+        # Figure captions
         for match in fig_pattern.finditer(text):
             fig_id = match.group(1).strip()
             caption = match.group(2).strip()
-            # Remove trailing dots and page numbers from LIST entries
             caption = re.sub(r'\s*\.{3,}.*$', '', caption).strip()
             figures[fig_id] = {
-                "page": page_num + 1,  # 1-indexed
+                "page": page_num + 1,
                 "caption": caption,
             }
 
+        # Table captions
         for match in tbl_pattern.finditer(text):
             tbl_id = match.group(1).strip()
             caption = match.group(2).strip()
@@ -88,6 +89,40 @@ def extract_figure_table_metadata(pdf_path: str) -> tuple[dict, dict]:
                 "page": page_num + 1,
                 "caption": caption,
             }
+
+    # Second pass: extract structured table data using find_tables()
+    for page_num in range(len(doc)):
+        page = doc[page_num]
+        try:
+            found = page.find_tables()
+        except Exception:
+            continue
+
+        if not found.tables:
+            continue
+
+        # Match extracted tables to table IDs by checking page text
+        text = page.get_text()
+        for tbl_id, tbl_meta in tables.items():
+            if tbl_meta["page"] != page_num + 1:
+                continue
+
+            # Extract structured data from the first table on this page
+            for table in found.tables:
+                try:
+                    df = table.to_pandas()
+                    rows = []
+                    for _, row in df.iterrows():
+                        cells = [str(v).strip() for v in row.values
+                                 if v is not None and str(v).strip()
+                                 and str(v).strip() != 'nan']
+                        if cells:
+                            rows.append(" | ".join(cells))
+                    if rows:
+                        tbl_meta["structured_text"] = "\n".join(rows)
+                        break  # Use first valid table on this page
+                except Exception:
+                    continue
 
     doc.close()
     return figures, tables
@@ -116,12 +151,15 @@ def add_references_to_nodes(nodes: list, figures: dict, tables: dict) -> int:
                     "caption": figures[ref_id]["caption"],
                 })
             elif ref_id in tables:
-                references.append({
+                ref_entry = {
                     "type": "table",
                     "id": ref_id,
                     "page": tables[ref_id]["page"],
                     "caption": tables[ref_id]["caption"],
-                })
+                }
+                if "structured_text" in tables[ref_id]:
+                    ref_entry["structured_text"] = tables[ref_id]["structured_text"]
+                references.append(ref_entry)
 
         if references:
             node["references"] = references

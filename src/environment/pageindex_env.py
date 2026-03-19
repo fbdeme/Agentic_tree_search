@@ -154,12 +154,15 @@ class PageIndexEnvironment:
             title = node.get("title", "")
             summary = node.get("summary", "") or ""
             text = node.get("text", "") or ""
-            # Include reference captions in searchable text
-            ref_captions = " ".join(
-                ref.get("caption", "") for ref in node.get("references", [])
-            )
+            # Include reference captions + structured table data in searchable text
+            ref_parts = []
+            for ref in node.get("references", []):
+                ref_parts.append(ref.get("caption", ""))
+                if ref.get("structured_text"):
+                    ref_parts.append(ref["structured_text"])
+            ref_text = " ".join(ref_parts)
             # Combine all searchable text, weight title higher by repeating
-            combined = f"{title} {title} {title} {summary} {ref_captions} {text}"
+            combined = f"{title} {title} {title} {summary} {ref_text} {text}"
             tokens = combined.lower().split()
             self._bm25_keys.append(cache_key)
             self._bm25_corpus.append(tokens)
