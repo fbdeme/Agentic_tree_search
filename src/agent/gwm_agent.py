@@ -167,20 +167,27 @@ class GWMAgent:
             trajectory.append(f"Hop {hop}: " + " | ".join(hop_log) if hop_log else f"Hop {hop}: no new nodes")
             actual_hops = hop
 
-        # ── Collect reference images ──────────────────────────────
+        # ── Collect referenced materials ──────────────────────────
         reference_images = self._collect_reference_images(kg, doc_ids, question=question)
+        table_context = self._collect_table_context(kg)
 
         # ── Generate final answer ─────────────────────────────────
+        kg_context = kg.to_context_string()
+        if table_context:
+            kg_context += "\n\n" + table_context
+
         print(f"\n{'='*60}")
         print(f"📝 Final answer generation...")
         print(f"   KG: {kg}")
         if reference_images:
-            print(f"   📷 Images: {len(reference_images)}")
+            print(f"   📷 Figure images: {len(reference_images)}")
+        if table_context:
+            print(f"   📊 Table data: {len(table_context)} chars")
         print(f"{'='*60}")
 
         answer = self.reasoning.generate_answer(
             question=question,
-            kg_context=kg.to_context_string(),
+            kg_context=kg_context,
             trajectory=trajectory,
             reference_images=reference_images if reference_images else None,
         )
@@ -278,21 +285,50 @@ class GWMAgent:
         return retrieved
 
     # -----------------------------------------------------------
-    # Collect reference images for VLM
+    # Collect structured table data for answer context
+    # -----------------------------------------------------------
+    def _collect_table_context(self, kg) -> str:
+        """
+        Collect structured table data from all KG nodes' references.
+        Tables are passed as text (not images) since structured data
+        is already extracted and more reliable than VLM OCR.
+        """
+        seen = set()
+        sections = []
+        for nid, node in kg.nodes.items():
+            for ref in node.references:
+                if ref.get("type") != "table":
+                    continue
+                ref_id = ref.get("id", "")
+                if ref_id in seen:
+                    continue
+                seen.add(ref_id)
+                structured = ref.get("structured_text", "")
+                if structured:
+                    caption = ref.get("caption", "")
+                    sections.append(f"[{ref_id}: {caption}]\n{structured}")
+        if not sections:
+            return ""
+        return "--- Referenced Tables (structured data) ---\n" + "\n\n".join(sections)
+
+    # -----------------------------------------------------------
+    # Collect reference images for VLM (Figures only)
     # -----------------------------------------------------------
     def _collect_reference_images(
         self, kg, doc_ids: list[str] | None, question: str = "",
         max_images: int = 6,
     ) -> list[str]:
         """
-        Collect referenced Figure/Table images relevant to the question.
-        Uses BM25 scoring of reference captions against the question
-        to select the most relevant images instead of blindly taking all.
+        Collect referenced Figure images relevant to the question.
+        Tables are handled separately via _collect_table_context() as structured text.
+        Uses keyword overlap with question to select most relevant figures.
         """
-        # Gather all references with their captions
+        # Gather figure references only (tables handled as text)
         all_refs = []
         for nid, node in kg.nodes.items():
             for ref in node.references:
+                if ref.get("type") == "table":
+                    continue  # Tables passed as structured text, not images
                 doc_id = node.source_doc
                 page = ref.get("page")
                 caption = ref.get("caption", "")
