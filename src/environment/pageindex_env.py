@@ -129,11 +129,24 @@ class PageIndexEnvironment:
         if not node:
             return None
 
+        content = node.get("text", node.get("summary", ""))
+
+        # Append structured table data from references so LLM can read
+        # table values that are corrupted in raw PDF text extraction
+        table_sections = []
+        for ref in node.get("references", []):
+            if ref.get("structured_text"):
+                table_sections.append(
+                    f"\n[{ref['id']}: {ref.get('caption', '')}]\n{ref['structured_text']}"
+                )
+        if table_sections:
+            content += "\n\n--- Referenced Tables (structured) ---" + "".join(table_sections)
+
         return {
             "doc_id": doc_id,
             "node_id": node_id,
             "title": node.get("title", ""),
-            "content": node.get("text", node.get("summary", "")),
+            "content": content,
             "summary": node.get("summary", ""),
             "page_range": str(node.get("start_index", node.get("page_index", "?"))),
             "references": node.get("references", []),
