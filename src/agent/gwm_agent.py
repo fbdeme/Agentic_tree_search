@@ -76,6 +76,7 @@ class GWMAgent:
         trajectory: list[str] = []
         actual_hops = 0
         already_read: set[str] = set()
+        search_log: list[dict] = []  # Agent Memory: tracks past search attempts
 
         for hop in range(1, self.max_hops + 1):
             kg.current_hop = hop
@@ -95,8 +96,12 @@ class GWMAgent:
                     break
 
             # ── Action: Tool-based exploration ────────────────────
-            tool_actions = self._plan_tool_actions(question, kg, doc_ids)
-            retrieved = self._execute_tools(tool_actions, doc_ids, already_read)
+            tool_actions = self._plan_tool_actions(question, kg, doc_ids, search_log)
+            retrieved, hop_searches = self._execute_tools(tool_actions, doc_ids, already_read)
+
+            # Record search attempts in Agent Memory
+            if hop_searches:
+                search_log.append({"hop": hop, "searches": hop_searches})
 
             if not retrieved:
                 print(f"   ⚠️  No new nodes found")
@@ -203,8 +208,9 @@ class GWMAgent:
     # Tool-based action planning
     # -----------------------------------------------------------
     def _plan_tool_actions(self, question: str, kg: DynamicSubKG,
-                           doc_ids: Optional[list[str]]) -> list[dict]:
-        """LLM decides which tools to call based on current state."""
+                           doc_ids: Optional[list[str]],
+                           search_log: list[dict] = None) -> list[dict]:
+        """LLM decides which tools to call based on current state + agent memory."""
         system = TOOL_USE_SYSTEM.format(
             tool_descriptions=self.env.get_tool_descriptions()
         )
@@ -212,10 +218,29 @@ class GWMAgent:
         explored = list(kg.nodes.keys())
         explored_str = ", ".join(explored) if explored else "(none)"
 
+        # Agent Memory: format search history
+        memory_str = ""
+        if search_log:
+            memory_lines = []
+            for entry in search_log:
+                searches = ", ".join(
+                    f'search("{s["keyword"]}") → {s["n_results"]} results'
+                    + (f' → read {", ".join(s["read_nodes"])}' if s.get("read_nodes") else "")
+                    for s in entry["searches"]
+                )
+                memory_lines.append(f'  Hop {entry["hop"]}: {searches}')
+            memory_str = (
+                "\n\nAgent Memory (previous search attempts):\n"
+                + "\n".join(memory_lines)
+                + "\n⚠️ Do NOT repeat these keywords. Try different terms, synonyms, "
+                "or broader/narrower concepts."
+            )
+
         user = (
             f"Question: {question}\n\n"
             f"Already explored nodes: {explored_str}\n\n"
-            f"Current knowledge:\n{kg.to_context_string()}\n\n"
+            f"Current knowledge:\n{kg.to_context_string()}"
+            f"{memory_str}\n\n"
             f"What tools should I call next to find the answer?"
         )
 
@@ -235,13 +260,18 @@ class GWMAgent:
 
     def _execute_tools(self, actions: list[dict],
                        doc_ids: Optional[list[str]],
-                       already_read: set[str] = None) -> list[dict]:
-        """Execute tool actions and return retrieved nodes to add to KG."""
+                       already_read: set[str] = None
+                       ) -> tuple[list[dict], list[dict]]:
+        """
+        Execute tool actions. Returns (retrieved_nodes, search_records).
+        search_records feed into Agent Memory to prevent keyword repetition.
+        """
         if already_read is None:
             already_read = set()
 
         retrieved = []
         nodes_to_read = set()
+        hop_searches = []
 
         for action in actions:
             tool = action.get("tool", "")
@@ -263,12 +293,23 @@ class GWMAgent:
             elif tool == "search":
                 keyword = action.get("keyword", "")
                 results = self.env.search(keyword, doc_ids)
+                n_results = len(results) if results else 0
+
                 if results:
-                    print(f"   🔎 search(\"{keyword}\"): {len(results)} matches")
+                    print(f"   🔎 search(\"{keyword}\"): {n_results} matches")
                     for r in results[:3]:
                         print(f"      [{r['doc_id']}::{r['node_id']}] {r['title'][:40]} (score={r.get('score', '?')})")
                     for r in results[:self.top_k]:
                         nodes_to_read.add((r["doc_id"], r["node_id"]))
+                else:
+                    print(f"   🔎 search(\"{keyword}\"): 0 matches")
+
+                read_nodes = [f"{r['doc_id']}::{r['node_id']}" for r in (results or [])[:self.top_k]]
+                hop_searches.append({
+                    "keyword": keyword,
+                    "n_results": n_results,
+                    "read_nodes": read_nodes,
+                })
 
         # Read queued nodes (skip already read)
         for doc_id, node_id in nodes_to_read:
@@ -282,7 +323,7 @@ class GWMAgent:
                 retrieved.append(node_data)
                 print(f"   📖 read({doc_id}, {node_id}): {node_data['title'][:50]}")
 
-        return retrieved
+        return retrieved, hop_searches
 
     # -----------------------------------------------------------
     # Collect structured table data for answer context
