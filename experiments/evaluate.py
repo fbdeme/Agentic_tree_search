@@ -63,7 +63,9 @@ def init_ragas_metrics():
     """RAGAs 메트릭 인스턴스들을 초기화 (AsyncOpenAI 클라이언트 필요)"""
     async_client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-    evaluator_llm = llm_factory("gpt-4.1", client=async_client)
+    # max_tokens=4096: default 1024 causes claim extraction to fail
+    # when agent answers have many claims (>15)
+    evaluator_llm = llm_factory("gpt-4.1", client=async_client, max_tokens=4096)
     evaluator_embeddings = embedding_factory(
         "openai", model="text-embedding-3-small", client=async_client
     )
@@ -228,9 +230,8 @@ def map_doc_ids(evidence_list: list[dict], env: PageIndexEnvironment) -> list[st
 
 def extract_contexts_from_kg(kg) -> list[str]:
     """
-    Extract the KG context string that the agent actually used for answer generation.
-    This ensures evaluation measures the same information the agent saw.
-    Returns a single-element list containing the full KG context string.
+    Extract the full KG context string — same context the agent used for answer generation.
+    Ensures evaluation measures exactly what the agent saw.
     """
     return [kg.to_context_string()]
 

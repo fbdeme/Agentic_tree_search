@@ -420,10 +420,50 @@ SUPPORTS 33%, SPECIFIES 31%, REFERENCES 14%, IS_PREREQUISITE_OF 10%, **SATISFIES
 
 ---
 
+---
+
+## v0.4.3 — Faithfulness Fix: RAGAs max_tokens 1024→4096 (`TBD`)
+
+**Date**: 2026-03-24
+
+### Root Cause
+
+Faithfulness measured only 39/200 (19.5%). Investigation revealed the failure was NOT caused by context size or answer length — it was RAGAs internal LLM `max_tokens=1024` (default). Faithfulness claim extraction outputs a JSON list of all claims in the answer. When answer has >15 claims, the JSON exceeds 1024 output tokens and gets truncated → parse failure.
+
+### Fix
+
+One line: `llm_factory("gpt-4.1", client=async_client, max_tokens=4096)`
+
+### Results (re-evaluation of same 200 answers, no agent re-run)
+
+| Metric | Before (max_tokens=1024) | After (max_tokens=4096) |
+|--------|-------------------------|------------------------|
+| Faithfulness | 0.56 (n=39/200, 19.5%) | **0.71 (n=200/200, 100%)** |
+| Answer Relevancy | 0.81 | 0.81 |
+| Context Recall | 0.68 | **0.69** |
+| Factual Correctness | 0.38 | **0.39** |
+
+By reasoning type (all n=full):
+| Type | Faithfulness | AR | CR | FC |
+|------|-------------|-----|-----|-----|
+| factual (70) | 0.59 | 0.80 | 0.54 | 0.35 |
+| comparative (65) | **0.77** | 0.77 | 0.70 | **0.45** |
+| judgment (65) | **0.78** | **0.85** | **0.85** | 0.36 |
+
+By complexity:
+| Complexity | Faithfulness | CR |
+|-----------|-------------|-----|
+| single_evidence (50) | 0.56 | 0.45 |
+| multi_evidence (75) | 0.64 | 0.64 |
+| cross_document (75) | **0.88** | **0.91** |
+
+Key insight: Previous Faithfulness 0.56 was selection bias — only 39 "easy" questions (small KGs) were measured. Full measurement reveals actual Faithfulness is 0.71, with cross_document reaching 0.88.
+
+---
+
 ## Known Issues (Unresolved)
 
 1. **single_evidence CR=0.45**: BM25 precision too low for finding one specific node. Browse-first pattern needed.
-2. **Faithfulness measurement 19.5%**: Large KGs (avg 52 edges) overflow RAGAs claim extraction. Need shorter context or lighter evaluator.
-3. **judgment FC=0.34**: Agent adds reasoning claims beyond expected answer → RAGAs penalizes.
-4. **browse tool under-utilized**: Agent defaults to search-heavy strategy.
-5. **VIOLATES rare (2/8069)**: Structural — FSAR describes compliant designs only.
+2. **judgment FC=0.36**: Agent adds reasoning claims beyond expected answer → RAGAs penalizes.
+3. **browse tool under-utilized**: Agent defaults to search-heavy strategy.
+4. **VIOLATES rare (2/8069)**: Structural — FSAR describes compliant designs only.

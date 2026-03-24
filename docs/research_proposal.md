@@ -142,10 +142,10 @@ Full 200-question evaluation on the multi-evidence benchmark with GPT-4.1:
 
 | Metric | Overall (200) | factual (70) | comparative (65) | judgment (65) |
 |--------|--------------|-------------|------------------|--------------|
-| Faithfulness | 0.56 | 0.43 | **0.86** | **0.82** |
+| Faithfulness | **0.71** | 0.59 | **0.77** | **0.78** |
 | Answer Relevancy | **0.81** | 0.80 | 0.77 | **0.85** |
-| Context Recall | **0.68** | 0.54 | 0.70 | **0.82** |
-| Factual Correctness | **0.38** | 0.35 | **0.46** | 0.34 |
+| Context Recall | **0.69** | 0.54 | 0.70 | **0.85** |
+| Factual Correctness | **0.39** | 0.35 | **0.45** | 0.36 |
 | Keyword Hit | 0.65 | **0.71** | 0.65 | 0.60 |
 
 **Context Recall by Reasoning × Complexity:**

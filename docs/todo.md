@@ -10,7 +10,7 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 - [x] ~~Run full 100-question benchmark evaluation~~ → Completed (v0.3.1), 99/100 success
 - [x] ~~Analyze results by question type~~ → See history.md v0.3.1 for full breakdown
 - [x] ~~Run multihop benchmark (200q)~~ → 200/200 success, judgment CR=0.82, SATISFIES 659 instances
-- [ ] Fix Faithfulness measurement rate — only 19.5% (39/200) measured on multihop. KG avg 52 edges overflows RAGAs.
+- [x] ~~Fix Faithfulness measurement rate~~ → Root cause: RAGAs default max_tokens=1024. Fixed to 4096. Now 200/200 (100%) measured. (v0.4.3)
 - [ ] Improve single_evidence CR (0.45) — BM25 precision for finding one specific node. Browse-first likely solution.
 - [ ] Address judgment FC=0.34 — agent's reasoning claims beyond expected answer get penalized by RAGAs
 
@@ -105,6 +105,7 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 - [x] Full 100-question benchmark: 58 min (4x parallel), 99/100 success (v0.3.1)
 - [x] Agent Memory: search history prevents keyword repetition (v0.4.2)
 - [x] Multihop benchmark (200q): 100 min (8x parallel), 200/200 success, SATISFIES 659 instances (v0.4.2)
+- [x] Faithfulness 100% measurement: RAGAs max_tokens 1024→4096 (v0.4.3)
 - [x] Relevance-based image selection: question keywords vs caption overlap (v0.3.2)
 - [x] BM25 caption indexing: reference captions now searchable (v0.3.2)
 - [x] Root cause analysis: Faithfulness N/A = answer length + KG size, not images (v0.3.2)
