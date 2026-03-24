@@ -1,56 +1,486 @@
 {
-  "question": "What are the main subassemblies of the RVI (Reactor Vessel Internals)?",
+  "question": "Based on Figure 1.2-4, what are the main external components visible on the NuScale Power Module?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0135": {
-      "node_id": "nuscale_ch01_0135",
-      "title": "Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review Standard (DSRS)",
-      "summary": "Table 1.9-3 summarizes NuScale’s conformance with the regulatory criteria outlined in NUREG-0800 (SRP) and DSRS. It details which sections are applicable, whether NuScale conforms to each criterion, and provides comments or notes on applicability, particularly distinguishing requirements for COL applicants versus the NuScale design certification application.",
+    "nuscale_ch01_0020": {
+      "node_id": "nuscale_ch01_0020",
+      "title": "Safety Considerations",
+      "summary": "The NuScale design enhances safety by maintaining a vacuum in the containment vessel (CNV), which reduces corrosion, aids in leak detection, and limits combustible gases. Its passive safety systems and integral design eliminate large-break loss-of-coolant accident (LOCA) scenarios and reduce reliance on external power, resulting in a lower core damage frequency compared to conventional nuclear plants.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "174",
+      "page_range": "32",
       "hop": 1
     },
-    "nuscale_ch01_0005": {
-      "node_id": "nuscale_ch01_0005",
-      "title": "Reactor Type",
-      "summary": "The NuScale reactor is a small modular pressurized water reactor (PWR) featuring a cylindrical steel containment vessel designed to ASME standards, which operates under vacuum during normal conditions and uses natural circulation for coolant flow, eliminating the need for pumps. Each NuScale Power Module (NPM) produces 160 MWt (about 50 MWe), and a plant can have up to 12 modules for a total net output of approximately 570 MWe, with the design emphasizing passive safety and modular scalability.",
+    "nuscale_ch01_0068": {
+      "node_id": "nuscale_ch01_0068",
+      "title": "Electrical and Instrumentation and Control Drawings",
+      "summary": "This section describes the inclusion of simplified electrical, instrumentation, and control (I&C) drawings in the NuScale Final Safety Analysis Report (FSAR) to visually clarify design information alongside the written text. It references tables and figures listing and explaining the symbols used in these diagrams, and notes that applicants referencing the NuScale design must provide additional site-specific diagrams and legends as needed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
+      "hop": 1
+    },
+    "nuscale_ch01_0052": {
+      "node_id": "nuscale_ch01_0052",
+      "title": "Comparison with Other Facilities",
+      "summary": "This section compares the NuScale Power Plant’s major design features and parameters with those of a typical pressurized water reactor (PWR). It highlights differences in size, output, and system components, showing that NuScale uses significantly smaller modules, fewer fuel assemblies, and simplified systems such as the elimination of external coolant loops and pumps. The comparison is intended to illustrate the unique aspects and safety features of the NuScale design relative to conventional PWRs.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "79",
+      "hop": 1
+    },
+    "nuscale_ch01_0069": {
+      "node_id": "nuscale_ch01_0069",
+      "title": "Piping and Instrumentation Diagrams",
+      "summary": "This section describes the use of simplified electrical, instrumentation and control (I&C), and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information. It lists the relevant diagrams and legends provided for both electrical/I&C and piping/instrumentation systems, and notes that site-specific diagrams and legends will be supplied by COL applicants referencing the NuScale design certification.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
+      "hop": 1
+    },
+    "nuscale_ch01_0021": {
+      "node_id": "nuscale_ch01_0021",
+      "title": "Engineered Safety Features and Emergency Systems",
+      "summary": "The NuScale reactor design maintains a vacuum in the containment vessel (CNV) to reduce corrosion, facilitate leak detection, and minimize heat transfer and oxygen content, enhancing safety and reliability. In emergencies, passive systems rapidly reduce containment pressure and temperature without external power, and the integral design eliminates large-break loss-of-coolant accident (LOCA) risks, resulting in a lower core damage frequency compared to conventional reactors.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "32",
+      "hop": 2
+    },
+    "nuscale_ch01_0192": {
+      "node_id": "nuscale_ch01_0192",
+      "title": "BTP 6-5, Rev 3: Currently the Responsibility of Reactor Systems Piping From the RWST (or BWST) and Containment Sump(s) to the Safety Injection PumpsAll Various",
+      "summary": "This section explains that the guidance in BTP 6-5, Rev 3 applies only to light-water reactor (LWR) emergency core cooling system (ECCS) designs that use safety injection pumps and refueling water storage tanks. Since the NuScale ECCS design does not use pumps or such tanks, this guidance is not applicable to NuScale.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "233",
+      "hop": 2
+    },
+    "nuscale_ch01_0051": {
+      "node_id": "nuscale_ch01_0051",
+      "title": "Plant Features of Special Interest",
+      "summary": "This section describes key plant features of special interest in the NuScale Power Plant, including the Central Utility Building (CUB) and Diesel Generator Buildings (DGB), which house essential but nonsafety-related systems and backup power equipment. It also highlights human factors engineering (HFE) considerations, emphasizing fail-safe design, automation, digital controls, and workload management to minimize human error and meet regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "43",
+      "hop": 2
+    },
+    "nuscale_ch01_0194": {
+      "node_id": "nuscale_ch01_0194",
+      "title": "DSRS Appendix 7.0-A, Rev 0: I&C - Hazard Analysis- I&C - Hazard Analysis",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria related to instrumentation and controls (I&C) hazard analysis. It notes that certain guidance, such as for containment purge systems and ECCS designs, is not applicable to NuScale due to differences in system design, while the I&C hazard analysis and related appendices conform to the relevant review process and criteria. Specific acceptance criteria are referenced in other sections and appendices of the Standard Review Plan (SRP).",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "233",
+      "hop": 2
+    },
+    "nuscale_ch01_0002": {
+      "node_id": "nuscale_ch01_0002",
+      "title": "Introduction",
+      "summary": "This section introduces the NuScale Final Safety Analysis Report (FSAR), which is required for standard design certification under 10 CFR 52. It outlines the scope of the report, describing the NuScale Power Module (NPM) design, its modular and scalable features, and highlights key safety and operational characteristics of the advanced small modular reactor plant.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "8",
+      "hop": 3
+    },
+    "nuscale_ch01_0004": {
+      "node_id": "nuscale_ch01_0004",
+      "title": "Containment Type",
+      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and operates under vacuum during normal conditions, eliminating the need for insulation. The NuScale reactor is a passive, integral small modular pressurized water reactor with natural circulation and no external piping for steam generators or pressurizer, and each module produces about 50 MWe, with a 12-module plant yielding approximately 570 MWe net output.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "9",
-      "hop": 1
+      "hop": 3
     },
-    "nuscale_ch01_0073": {
-      "node_id": "nuscale_ch01_0073",
-      "title": "Departures",
-      "summary": "This section outlines the interface requirements between the NuScale Power Plant’s certified design and the site-specific design provided in the Combined License (COL) application. It distinguishes between conceptual design information (CDI) for non-certified portions and COL information items, which are site-specific responsibilities. Additionally, it requires COL applicants to provide a list of any departures from the certified design.",
+    "nuscale_ch01_0015": {
+      "node_id": "nuscale_ch01_0015",
+      "title": "General Plant Description",
+      "summary": "This section provides a summary of the NuScale plant’s overall design, including key systems such as safety features, power conversion, fuel handling, cooling water, waste management, and auxiliary systems. It explains that each Combined License (COL) applicant must reference the NuScale Final Safety Analysis Report (FSAR) and supplement it with site-specific information, while distinguishing between certified design elements and conceptual design information (CDI). Security-related details are specially marked and withheld according to regulatory requirements.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "108",
-      "hop": 2
+      "page_range": "26",
+      "hop": 3
+    },
+    "nuscale_ch01_0008": {
+      "node_id": "nuscale_ch01_0008",
+      "title": "Format and Content",
+      "summary": "The section describes the NuScale containment vessel as a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and maintained at a vacuum during normal operation. The NuScale reactor is a passive, integral small modular pressurized water reactor with natural circulation and no external piping for steam generators or pressurizer, and each module produces about 50 MWe, with a 12-module plant yielding a net output of approximately 570 MWe. The section also notes that applicants referencing the NuScale design must provide their own project schedules.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "9",
+      "hop": 3
+    },
+    "nuscale_ch01_0067": {
+      "node_id": "nuscale_ch01_0067",
+      "title": "Drawings and Other Detailed Information",
+      "summary": "This section describes the inclusion of simplified instrumentation, control, electrical, and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information alongside the written text. It lists the relevant diagrams and legends used for electrical, I&C, and piping systems, and notes that applicants referencing the NuScale design must provide additional site-specific diagrams and legends as needed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
+      "hop": 4
+    },
+    "nuscale_ch01_0168": {
+      "node_id": "nuscale_ch01_0168",
+      "title": "SRP 6.5.3, Rev 3: Fission Product Control Systems and StructuresII.2 Secondary Containment",
+      "summary": "The NuScale design does not include secondary containment or fission product clean-up systems typically required for LWRs, as its passive safety features and submerged containment vessel inherently control fission products. Therefore, the regulatory criteria related to secondary containment and certain fission product control systems are not applicable to the NuScale Power Module. Only the containment vessel and its isolation systems are credited for fission product control in this design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "229",
+      "hop": 4
+    },
+    "nuscale_ch01_0167": {
+      "node_id": "nuscale_ch01_0167",
+      "title": "SRP 6.5.3, Rev 3: Fission Product Control Systems and StructuresII.1 Primary Containment",
+      "summary": "The NuScale design partially conforms to SRP 6.5.3, Rev 3 requirements for primary containment, as its passive containment vessel does not include fission product clean-up or pressure suppression systems typical of other LWRs; instead, fission product control is achieved through inherent design features. Requirements related to secondary containment and other fission product control systems are not applicable, as the NuScale design does not include these features.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "229",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0135",
-      "target": "nuscale_ch01_0005",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A lists regulatory conformance criteria for the NuScale design, while Section B provides a general description of the containment vessel type, with both sections connected by their reference to the NuScale reactor's design features and regulatory compliance."
-    },
-    {
-      "source": "nuscale_ch01_0073",
-      "target": "nuscale_ch01_0135",
+      "source": "nuscale_ch01_0020",
+      "target": "nuscale_ch01_0068",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A identifies the structures, systems, and components included in the certified design, while Section B documents the conformance of those components (as referenced in Section A) with regulatory criteria such as the SRP and DSRS."
+      "description": "Section B provides visual figures, such as Figure 1.2-4, that clarify the design information discussed in Section A, enabling identification of external components on the NuScale Power Module."
     },
     {
-      "source": "nuscale_ch01_0073",
-      "target": "nuscale_ch01_0005",
+      "source": "nuscale_ch01_0020",
+      "target": "nuscale_ch01_0052",
       "relation": "SUPPORTS",
       "confidence": 0.7,
-      "description": "Section A outlines the interface requirements and identifies structures, systems, and components included in the certified design, which provides context for understanding the containment vessel described in Section B as part of those components."
+      "description": "Section B provides comparative design features and parameters that contextualize the external components discussed in Section A, allowing for a comparison of NuScale's containment and external features with those of typical PWRs."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0052",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides detailed drawings, including figures like Figure 1.2-4, which visually clarify the design and external components of the NuScale Power Module, while Section B offers comparative context by listing major design features and parameters relative to other facilities."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0069",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A and Section B both reference the use of figures (such as Figure 1.2-4) to visually clarify the design and layout of components, indicating that both sections provide visual and textual information that can be used to identify external components of the NuScale Power Module."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0069",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides general design features and parameters of the NuScale Power Module, while Section B offers detailed drawings and figures (such as Figure 1.2-4) that visually clarify and specify these components, connecting general descriptions to specific visual representations."
+    },
+    {
+      "source": "nuscale_ch01_0021",
+      "target": "nuscale_ch01_0020",
+      "relation": "SEMANTIC",
+      "confidence": 1.0,
+      "description": "Section A and Section B are identical excerpts, both describing the operational vacuum in the CNV and its benefits, thus providing the same information regarding safety features."
+    },
+    {
+      "source": "nuscale_ch01_0021",
+      "target": "nuscale_ch01_0068",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B explains that figures such as Figure 1.2-4 provide visual clarification of design information, including the external components of the NuScale Power Module, which is the focus of the analysis question, while Section A does not directly address the figure or external components."
+    },
+    {
+      "source": "nuscale_ch01_0021",
+      "target": "nuscale_ch01_0052",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the functional benefits of maintaining a vacuum in the CNV, which is a design feature that is compared to other facilities in Section B, connecting the specific design aspect (vacuum in CNV) to the broader comparison of NuScale's external components and features."
+    },
+    {
+      "source": "nuscale_ch01_0192",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A distinguishes the NuScale containment evacuation system from traditional containment purge systems, while Section B describes the operational benefits of maintaining a vacuum in the containment vessel, both addressing design features related to containment atmosphere management."
+    },
+    {
+      "source": "nuscale_ch01_0192",
+      "target": "nuscale_ch01_0052",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section B provides a comparative overview of NuScale Power Module features, which can contextualize or clarify the external components referenced or implied in Section A's discussion of containment and system responsibilities."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the Central Utility Building and its external utility components, while Section B discusses the safety benefits of maintaining a vacuum in the CNV, both providing context for identifying and understanding the external features visible on the NuScale Power Module as referenced in Figure 1.2-4."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0068",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B provides visual figures, such as Figure 1.2-4, that clarify and illustrate the plant features described in Section A, enabling identification of external components on the NuScale Power Module."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0052",
+      "relation": "SPECIFIES",
+      "confidence": 0.7,
+      "description": "Section A describes specific plant features and structures such as the Central Utility Building, while Section B provides a comparative overview of major design features and parameters, potentially including external components, thus Section A provides details that could specify or elaborate on the general features mentioned in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0194",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A distinguishes the NuScale containment vessel's evacuation system from traditional purge systems and references its features to prevent radiological release, while Section B describes the operational vacuum in the containment vessel and its safety benefits, both addressing external containment features relevant to Figure 1.2-4."
+    },
+    {
+      "source": "nuscale_ch01_0194",
+      "target": "nuscale_ch01_0052",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B provides a comparative overview of the main design features and parameters of the NuScale Power Module, which supports the identification of external components referenced in the analysis question, while Section A discusses containment system features that may be among those components."
+    },
+    {
+      "source": "nuscale_ch01_0021",
+      "target": "nuscale_ch01_0192",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the function and benefits of maintaining a vacuum in the NuScale containment vessel, while Section B clarifies that the NuScale containment evacuation system is distinct from traditional containment purge systems and includes features to prevent radiological release, connecting both sections through their discussion of containment atmosphere control and safety features."
+    },
+    {
+      "source": "nuscale_ch01_0021",
+      "target": "nuscale_ch01_0051",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the containment vessel's internal environment and its benefits, while Section B lists external utility systems housed in the Central Utility Building, both providing context for identifying external components visible on the NuScale Power Module as referenced in Figure 1.2-4."
+    },
+    {
+      "source": "nuscale_ch01_0021",
+      "target": "nuscale_ch01_0194",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the function and benefits of maintaining a vacuum in the NuScale containment vessel, while Section B clarifies that the containment evacuation system serves a different purpose than traditional purge systems and includes features to prevent radiological release, thus both sections are connected by their discussion of containment atmosphere control and safety features."
+    },
+    {
+      "source": "nuscale_ch01_0192",
+      "target": "nuscale_ch01_0051",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses regulatory guidance and containment system features, while Section B describes physical plant structures and utility components, with both sections providing context for identifying and understanding external components visible on the NuScale Power Module as referenced in Figure 1.2-4."
+    },
+    {
+      "source": "nuscale_ch01_0192",
+      "target": "nuscale_ch01_0194",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A and Section B both reference BTP 6-4, Rev 3 guidance on containment purge systems and discuss how the NuScale containment vessel's evacuation system differs from a traditional purge system, specifically in terms of preventing radiological release."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0194",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes physical plant features and utility components, while Section B discusses regulatory guidance on containment systems, both referencing aspects of the NuScale Power Module's external systems relevant to safety and operational functions."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides the overall context and purpose of the FSAR, while Section B gives specific safety-related details about the containment vessel (CNV), both contributing information necessary to understand and analyze the external components of the NuScale Power Module as referenced in Figure 1.2-4."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch01_0068",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B explains that figures such as Figure 1.2-4 provide visual clarification of design information, which is referenced in the analysis question, while Section A gives a general introduction to the FSAR and its purpose."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch01_0052",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A introduces the purpose and scope of the FSAR, which includes describing the design and components of the NuScale Power Module, while Section B provides comparative design features and parameters (including external components) between NuScale and typical PWRs, thus Section B elaborates on the general description outlined in Section A by providing specific comparative details."
+    },
+    {
+      "source": "nuscale_ch01_0004",
+      "target": "nuscale_ch01_0020",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A describes the design and structural features of the NuScale containment vessel, while Section B explains the safety benefits that result from maintaining a vacuum in the same vessel, directly linking the design (A) to its operational safety considerations (B)."
+    },
+    {
+      "source": "nuscale_ch01_0004",
+      "target": "nuscale_ch01_0068",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B provides figures and drawings, such as Figure 1.2-4, that visually clarify the design details described in Section A's textual description of the containment vessel and its components."
+    },
+    {
+      "source": "nuscale_ch01_0004",
+      "target": "nuscale_ch01_0052",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the design and construction details of the NuScale containment vessel, while Section B provides a comparative overview of NuScale's design features (including containment) relative to typical PWRs, connecting them through the containment vessel's characteristics."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the plant's systems, including external components, while Section B details specific safety considerations related to the containment vessel (CNV), which is one of the external components referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0068",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the plant's systems, while Section B offers detailed drawings (such as Figure 1.2-4) that visually clarify and specify the components described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0052",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides a general description of the NuScale plant's systems and components, which establishes the context for identifying external components in Figure 1.2-4, while Section B compares these features and parameters to those of typical PWRs, offering a basis for distinguishing which components are unique or notable."
+    },
+    {
+      "source": "nuscale_ch01_0008",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A introduces the containment vessel (CNV) and mentions its vacuum condition, while Section B elaborates on the safety benefits of maintaining this vacuum, thus Section B provides specific justifications for the design feature described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0008",
+      "target": "nuscale_ch01_0068",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides figures and drawings, such as Figure 1.2-4, that visually clarify and detail the design information described generally in Section A about the NuScale containment vessel and its components."
+    },
+    {
+      "source": "nuscale_ch01_0008",
+      "target": "nuscale_ch01_0052",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the design and construction details of the NuScale containment vessel, while Section B provides a comparative overview of NuScale's design features (including external components) relative to typical PWRs, connecting them through the shared focus on design characteristics."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch01_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides a general overview of the NuScale Power Module and the scope of the safety analysis report, while Section B specifies the type and design characteristics of the containment vessel, which is one of the main external components referenced in the analysis question."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A introduces the purpose and scope of the FSAR, while Section B provides a general description of the plant design, with Section B elaborating on the content outlined in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch01_0008",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the NuScale FSAR and its purpose, while Section B specifies details about the containment vessel, which is one of the main external components that would be visible in Figure 1.2-4."
+    },
+    {
+      "source": "nuscale_ch01_0004",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific details about the containment vessel, which is one of the external components summarized in the general plant description of Section B."
+    },
+    {
+      "source": "nuscale_ch01_0004",
+      "target": "nuscale_ch01_0008",
+      "relation": "SEMANTIC",
+      "confidence": 1.0,
+      "description": "Section A and Section B are identical excerpts describing the containment vessel's type and design standards, thus they provide the same information regarding the external components of the NuScale Power Module."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0008",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the plant and its systems, while Section B specifies detailed information about the containment vessel, which is one of the external components referenced in Section A's summary."
+    },
+    {
+      "source": "nuscale_ch01_0067",
+      "target": "nuscale_ch01_0020",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A provides visual and detailed design information (including figures) that can be used to identify external components of the NuScale Power Module, while Section B discusses safety considerations related to the containment vessel (CNV) but does not directly describe external components; thus, Section A offers the specific information needed to answer the analysis question, whereas Section B provides contextual background."
+    },
+    {
+      "source": "nuscale_ch01_0067",
+      "target": "nuscale_ch01_0068",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the use and purpose of drawings, while Section B repeats the same content specifically for electrical and instrumentation and control drawings, indicating that B is a subset or specific instance of A's general description."
+    },
+    {
+      "source": "nuscale_ch01_0067",
+      "target": "nuscale_ch01_0052",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides detailed drawings and figures that visually clarify the design and external components of the NuScale Power Module, while Section B offers a comparative context by listing major design features and parameters of the NuScale module alongside those of typical PWRs, thus connecting the visual identification of components (A) with their comparative significance (B)."
+    },
+    {
+      "source": "nuscale_ch01_0168",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B provides specific operational details about the NuScale containment vessel (CNV) that support the general regulatory conformance discussion in Section A regarding containment system features."
+    },
+    {
+      "source": "nuscale_ch01_0168",
+      "target": "nuscale_ch01_0052",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section B provides a comparative overview of NuScale Power Module features and parameters, which can contextualize or clarify the external components referenced or implied in Section A's discussion of containment systems."
+    },
+    {
+      "source": "nuscale_ch01_0167",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the absence of certain containment systems in the NuScale design, while Section B describes the safety benefits and operational characteristics of the containment vessel (CNV), both providing information about the external and internal features relevant to Figure 1.2-4."
+    },
+    {
+      "source": "nuscale_ch01_0167",
+      "target": "nuscale_ch01_0068",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section B provides visual figures, such as Figure 1.2-4, that clarify the design information referenced in Section A's discussion of the NuScale containment vessel and its external components."
+    },
+    {
+      "source": "nuscale_ch01_0167",
+      "target": "nuscale_ch01_0052",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the absence of certain containment systems in the NuScale design, while Section B provides a comparative overview of NuScale's major design features (including external components) relative to typical PWRs, thus both sections provide context for identifying and understanding the visible external components of the NuScale Power Module."
+    },
+    {
+      "source": "nuscale_ch01_0067",
+      "target": "nuscale_ch01_0167",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides detailed drawings and figures that visually clarify the design and external components of the NuScale Power Module, which can be used to identify features relevant to the regulatory conformance discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0168",
+      "target": "nuscale_ch01_0167",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses secondary containment while Section B discusses primary containment, and both reference the absence of fission product clean-up and pressure suppression systems in the NuScale design, connecting them through their conformance to SRP 6.5.3 regulatory criteria."
     }
   ]
 }

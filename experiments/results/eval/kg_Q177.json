@@ -1,0 +1,834 @@
+{
+  "question": "Does the NuScale design adequately address station blackout (SBO) given the Ch.01 passive design philosophy and Ch.05 safety system details?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0278": {
+      "node_id": "nuscale_ch01_0278",
+      "title": "SRP Appendix 8-A, Rev1: General Agenda, Station Site VisitsAll Various",
+      "summary": "This section summarizes NuScale's conformance with various regulatory criteria related to DC power systems and station blackout requirements. It notes partial conformance with several Regulatory Guides (RGs) and clarifies that some requirements, such as maintenance rule implementation and alternate AC power sources, are either the responsibility of the COL applicant or not applicable to the NuScale design. Additionally, SRP Appendix 8-A is identified as governing staff site visits during licensing reviews, but is not applicable to the design certification stage.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "240",
+      "hop": 1
+    },
+    "nuscale_ch01_0427": {
+      "node_id": "nuscale_ch01_0427",
+      "title": "DSRS 10.3, Rev 0: Main Steam Supply SystemII.4 MSS is capable of supporting core cooling or safe-shutdown (non-DBA) in the event of an SBO (10 CFR 50.63)",
+      "summary": "The section reviews the NuScale Main Steam Supply System (MSS) against regulatory criteria, noting that while the MSS is not safety-related, its design ensures backup and protection for safety functions, particularly through secondary isolation valves. Specifically, regarding SBO (Station Blackout) events, the MSS partially conforms to requirements by supporting core cooling and safe shutdown through passive design features and minimal reliance on AC power.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "262",
+      "hop": 1
+    },
+    "nuscale_ch01_0275": {
+      "node_id": "nuscale_ch01_0275",
+      "title": "DSRS 8.4, Rev 0: Station BlackoutII.1 Compliance with 10 CFR 50.63 and the guidelines of RG 1.155",
+      "summary": "This section summarizes NuScale’s compliance with regulatory requirements for station blackout (SBO) and related DC power systems. The NuScale design partially conforms to 10 CFR 50.63 and RG 1.155, as all safety-related functions can be performed without AC power for 72 hours after an SBO event, making alternate AC power sources unnecessary. Some requirements, such as maintenance rule implementation, are the responsibility of the COL applicant, and the independence of SBO-related power supplies is addressed in referenced sections.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "240",
+      "hop": 1
+    },
+    "nuscale_ch01_0023": {
+      "node_id": "nuscale_ch01_0023",
+      "title": "Containment Systems",
+      "summary": "The NuScale containment vessel (CNV) is maintained under vacuum during normal operations, which reduces moisture and corrosion, aids in leak detection, and limits oxygen for safety. In the event of an emergency, passive cooling rapidly reduces pressure and temperature, and the design’s reliance on passive safety systems and small fuel inventory results in improved safety and a lower core damage frequency compared to conventional reactors.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "32",
+      "hop": 1
+    },
+    "nuscale_ch01_0020": {
+      "node_id": "nuscale_ch01_0020",
+      "title": "Safety Considerations",
+      "summary": "The NuScale design enhances safety by maintaining a vacuum in the containment vessel (CNV), which reduces corrosion, aids leak detection, and limits combustible gases. Its passive safety systems and integral design eliminate large-break loss-of-coolant accident (LOCA) scenarios and reduce reliance on external power, resulting in a lower core damage frequency compared to conventional reactors. Additionally, the smaller fuel inventory leads to a reduced radioactive source term.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "32",
+      "hop": 1
+    },
+    "nuscale_ch01_0069": {
+      "node_id": "nuscale_ch01_0069",
+      "title": "Piping and Instrumentation Diagrams",
+      "summary": "This section describes the use of simplified electrical, instrumentation and control (I&C), and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information. It references tables and figures that list and explain the symbols used in these diagrams, and notes that site-specific diagrams and legends will be provided by applicants referencing the NuScale design certification.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
+      "hop": 2
+    },
+    "nuscale_ch01_0052": {
+      "node_id": "nuscale_ch01_0052",
+      "title": "Comparison with Other Facilities",
+      "summary": "This section compares the NuScale Power Plant’s major design features and parameters with those of a typical pressurized water reactor (PWR). It highlights differences in size, output, and system components, showing that NuScale uses smaller, simpler, and more integrated systems compared to conventional PWRs. Tables provide side-by-side comparisons of key parameters and safety system components.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "79",
+      "hop": 2
+    },
+    "nuscale_ch01_0024": {
+      "node_id": "nuscale_ch01_0024",
+      "title": "Emergency Core Cooling System",
+      "summary": "The Emergency Core Cooling System (ECCS) in the NuScale design is a fully passive system that removes decay heat during a loss-of-coolant accident (LOCA) using three independent reactor vent valves and two recirculation valves, all of which are closed during normal operation. During ECCS activation, steam is vented and condensed within containment, and recirculated water cools the core, with heat ultimately transferred passively to the reactor pool.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "33",
+      "hop": 2
+    },
+    "nuscale_ch01_0025": {
+      "node_id": "nuscale_ch01_0025",
+      "title": "Control Room Habitability System",
+      "summary": "The Control Room Habitability System (CRHS) is a passive safety feature designed to protect plant operators from accidental releases of toxic or radioactive gases by supplying clean, compressed air to the main control room (MCR). It maintains positive pressure in protected areas and can provide breathable air for at least 72 hours after an incident, even if AC power is unavailable.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "33",
+      "hop": 2
+    },
+    "nuscale_ch01_0017": {
+      "node_id": "nuscale_ch01_0017",
+      "title": "Facility Description",
+      "summary": "The Facility Description section outlines the NuScale plant’s core and cooling system operations. It explains how heat generated in the reactor core is transferred via natural circulation to steam generators, producing superheated steam that drives a turbine and generates electricity. The section also notes that site-specific details exist for the cooling water system and cooling towers.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "28",
+      "hop": 2
+    },
+    "nuscale_ch01_0026": {
+      "node_id": "nuscale_ch01_0026",
+      "title": "Fission Product Removal and Control Systems",
+      "summary": "The only credited fission product removal and control system in the NuScale design is the containment vessel (CNV) working with the containment isolation system. Fission product control is achieved inherently by the design, as the CNV atmosphere is passively depleted of fission products.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "33",
+      "hop": 2
+    },
+    "nuscale_ch01_0044": {
+      "node_id": "nuscale_ch01_0044",
+      "title": "Chemical and Volume Control System",
+      "summary": "The Chemical and Volume Control System section describes the NuScale reactor’s closed-loop, two-phase natural circulation cooling system, which uses two independent trains of decay heat removal equipment, each capable of fully cooling the reactor. In the event of a steam generator tube failure or loss of AC power, passive systems transfer decay heat to a large, stainless steel-lined reactor pool, ensuring continued cooling through natural circulation and heat rejection to the atmosphere or external sinks.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "41",
+      "hop": 3
+    },
+    "nuscale_ch01_0681": {
+      "node_id": "nuscale_ch01_0681",
+      "title": "DSRS 15.1.5, Rev 0: Steam System Piping Failures Inside and Outside of ContainmentII.3 AssumptionsPostulated Steam Line Break Effects",
+      "summary": "This section outlines NuScale's conformance with regulatory criteria for steam system piping failures both inside and outside containment, specifically addressing the assumptions related to postulated steam line break effects. It confirms that the analysis meets all relevant criteria, including initial power level, plant operating mode, loss of offsite power, and worst-case single active component failure, with no exceptions noted.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "291",
+      "hop": 3
+    },
+    "nuscale_ch01_0680": {
+      "node_id": "nuscale_ch01_0680",
+      "title": "DSRS 15.1.5, Rev 0: Steam System Piping Failures Inside and Outside of ContainmentII.2 AssumptionsLoss of Offsite Power",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for steam system piping failures inside and outside containment, specifically under the assumption of loss of offsite power. It confirms that NuScale meets all relevant criteria in DSRS 15.1.5, with no exceptions noted.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "291",
+      "hop": 3
+    },
+    "nuscale_ch01_0666": {
+      "node_id": "nuscale_ch01_0666",
+      "title": "DSRS 15.1.1-15.1.4, Rev 0: Decrease in Feedwater Temperature, Increase in Feedwater Flow, Increase in Steam Flow, and Inadvertent Opening of the Turbine Bypass System or Inadvertent Operation of the Decay Heat Removal SystemII.1 Specific CriterionSystem Pressure",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for DSRS 15.1.1-15.1.4, addressing events such as changes in feedwater temperature, flow, steam flow, and inadvertent system operations. It confirms that NuScale meets specific criteria for system pressure, critical heat flux limits, prevention of escalation from anticipated operational occurrences (AOOs), and use of appropriate instrument setpoints, aligning with Standard Review Plan requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "289",
+      "hop": 3
+    },
+    "nuscale_ch01_0669": {
+      "node_id": "nuscale_ch01_0669",
+      "title": "DSRS 15.1.1-15.1.4, Rev 0: Decrease in Feedwater Temperature, Increase in Feedwater Flow, Increase in Steam Flow, and Inadvertent Opening of the Turbine Bypass System or Inadvertent Operation of the Decay Heat Removal SystemII.4 Specific CriterionInstrument Spans and Setpoints use RG 1.105",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for abnormal operating occurrences such as changes in feedwater temperature, flow, steam flow, and inadvertent system operations. It confirms that NuScale meets specific criteria for system pressure, critical heat flux, event classification, and instrument setpoints, aligning with NRC guidance and ensuring plant safety under these conditions. The report references compliance with relevant standards, including RG 1.105 and the Standard Review Plan.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "289",
+      "hop": 3
+    },
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain proper coolant flow, water chemistry, and boron concentration to protect fuel integrity and support safe operation under normal and transient conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 3
+    },
+    "nuscale_ch01_0108": {
+      "node_id": "nuscale_ch01_0108",
+      "title": "8.37 ALARA Levels for Effluents from Materials Facilities",
+      "summary": "This section provides a legend for electrical symbols used in the NuScale Final Safety Analysis Report, specifically for single-line diagrams. It details the meaning of various symbols and notations for components such as transformers, circuit breakers, batteries, switches, and other electrical devices, ensuring clarity and consistency in interpreting the diagrams.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "99",
+      "hop": 4
+    },
+    "nuscale_ch01_0109": {
+      "node_id": "nuscale_ch01_0109",
+      "title": "Figure 1.7-1a: Electrical Symbols",
+      "summary": "This section provides a legend for electrical symbols used in NuScale's single-line diagrams, detailing the meaning of various symbols and the information associated with each, such as ratings, voltage levels, and device types. It explains how to interpret symbols for transformers, circuit breakers, batteries, switches, and other electrical components, ensuring clarity in reading and understanding the diagrams.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "99",
+      "hop": 4
+    },
+    "nuscale_ch01_0413": {
+      "node_id": "nuscale_ch01_0413",
+      "title": "SRP 9.5.7, Rev 3: Emergency Diesel Engine Lubrication SystemAll (II.1 thru II.4) Compliance with GDC 2, GDC 4, GDC 5, and GDC 17",
+      "summary": "The NuScale plant design does not require or include safety-related emergency diesel generators, and therefore the regulatory criteria outlined in SRP 9.5.7 (and related sections) are not applicable. The plant’s safety functions do not rely on AC or DC power, making compliance with GDC 2, 4, 5, and 17 for these systems unnecessary.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "260",
+      "hop": 4
+    },
+    "nuscale_ch01_0412": {
+      "node_id": "nuscale_ch01_0412",
+      "title": "SRP 9.5.6, Rev 3: Emergency Diesel Engine Starting SystemAll (II.1 thru II.4)Compliance with GDC 2, GDC 4, GDC 5, and GDC 17",
+      "summary": "The NuScale plant design does not require or include safety-related emergency diesel generators, and therefore the regulatory criteria in SRP 9.5.6 (and related sections) regarding emergency diesel engine starting systems are not applicable. The plant’s safety functions do not rely on AC or DC power, making compliance with GDC 2, 4, 5, and 17 for these systems unnecessary.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "260",
+      "hop": 4
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0278",
+      "target": "nuscale_ch01_0427",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses partial conformance of the NuScale design with regulatory guidance for DC power systems relevant to SBO scenarios, while Section B states that the main steam supply system is capable of supporting core cooling or safe shutdown during an SBO, thus Section A's evaluation of electrical system conformance is directly related to Section B's claim about passive system performance during SBO."
+    },
+    {
+      "source": "nuscale_ch01_0278",
+      "target": "nuscale_ch01_0275",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A and Section B both reference the NuScale Final Safety Analysis Report's conformance with regulatory criteria for DC power systems and station blackout, specifically noting partial conformance with RG 1.153 and RG 1.63 as they apply to the EDSS design."
+    },
+    {
+      "source": "nuscale_ch01_0278",
+      "target": "nuscale_ch01_0023",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the NuScale design's partial conformance with regulatory criteria for DC power systems relevant to station blackout scenarios, while Section B describes containment system features (such as vacuum maintenance) that are part of the passive safety approach, thus both sections provide complementary technical and regulatory context for evaluating SBO resilience in the NuScale design."
+    },
+    {
+      "source": "nuscale_ch01_0278",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the NuScale design's partial conformance with regulatory guidance for DC power systems relevant to station blackout scenarios, while Section B describes the containment vessel's vacuum conditions that contribute to passive safety features, both of which are connected as design elements intended to address SBO in line with the passive safety philosophy."
+    },
+    {
+      "source": "nuscale_ch01_0427",
+      "target": "nuscale_ch01_0275",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A asserts that the Main Steam Supply System (MSS) is capable of supporting core cooling or safe shutdown during an SBO, directly addressing the regulatory requirement in Section B for compliance with 10 CFR 50.63 and RG 1.155 regarding station blackout."
+    },
+    {
+      "source": "nuscale_ch01_0427",
+      "target": "nuscale_ch01_0023",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the capability of the Main Steam Supply System (MSS) to support core cooling or safe shutdown during a station blackout (SBO), while Section B describes the containment vessel (CNV) vacuum conditions that help maintain component reliability and facilitate heat transfer management, both of which are design features that collectively contribute to the plant's passive safety response during SBO scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0427",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the main steam supply system's capability to support core cooling during an SBO, while Section B describes the containment vessel's vacuum environment, which supports passive heat removal and thus underpins the passive safety features referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0275",
+      "target": "nuscale_ch01_0023",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the NuScale design's partial conformance with regulatory requirements for station blackout and DC power systems, while Section B describes the containment system's vacuum conditions, which support passive safety features relevant to SBO scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0275",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses compliance with regulatory requirements for station blackout and DC power systems, while Section B describes the passive safety features of the NuScale containment vessel (CNV) that contribute to safety during station blackout scenarios, thus Section B provides supporting design details relevant to the regulatory compliance evaluated in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0278",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A provides detailed drawings and diagrams of the NuScale design's electrical and I&C systems, which are referenced in Section B's regulatory conformance assessments regarding DC power systems and station blackout requirements."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0427",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides detailed drawings and diagrams of the NuScale design's electrical and I&C systems, which can be used as supporting evidence to demonstrate that the main steam supply system described in Section B is capable of supporting core cooling or safe shutdown during a station blackout, as required by regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0275",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides detailed drawings and diagrams of the NuScale design's electrical and I&C systems, which serve as supporting evidence for the compliance claims and partial conformance statements regarding SBO requirements discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0278",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides a comparison of NuScale's design features and parameters with typical PWRs, while Section B evaluates NuScale's conformance with specific regulatory criteria for DC power systems relevant to SBO, connecting the design philosophy and system details to regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0427",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A provides a comparative overview of NuScale's design features and parameters relative to typical PWRs, while Section B outlines specific regulatory criteria (DSRS 10.3) that the NuScale main steam supply system must meet for SBO scenarios, connecting them through the evaluation of whether NuScale's design features satisfy these regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0275",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A provides comparative design values and features of the NuScale plant relative to typical PWRs, while Section B details the NuScale design's partial conformance with specific regulatory requirements for station blackout (SBO) and DC power systems, connecting the design features in A to the regulatory compliance status in B."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0278",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the passive Emergency Core Cooling System (ECCS) design for decay heat removal during events like SBO, while Section B assesses the NuScale design's partial conformance with regulatory criteria for onsite DC power systems relevant to SBO scenarios, connecting them through the adequacy of passive safety features versus regulatory expectations."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0427",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the passive Emergency Core Cooling System (ECCS) design for decay heat removal, while Section B outlines regulatory criteria requiring the main steam supply system (MSS) to support core cooling or safe shutdown during a station blackout (SBO), connecting them through the shared requirement for passive or reliable core cooling capability during SBO events."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0275",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the passive Emergency Core Cooling System (ECCS) design features that provide decay heat removal without reliance on AC power, which is directly relevant to Section B's regulatory requirements for station blackout (SBO) coping capability under 10 CFR 50.63 and RG 1.155."
+    },
+    {
+      "source": "nuscale_ch01_0025",
+      "target": "nuscale_ch01_0278",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the passive Emergency Core Cooling System (ECCS) design for decay heat removal during events like SBO, while Section B assesses the NuScale design's partial conformance with regulatory criteria (e.g., RG 1.153) for DC power systems relevant to SBO scenarios, thus connecting the passive system's capabilities to regulatory requirements for SBO mitigation."
+    },
+    {
+      "source": "nuscale_ch01_0025",
+      "target": "nuscale_ch01_0427",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the passive Emergency Core Cooling System (ECCS) design for decay heat removal, while Section B states the regulatory requirement that the Main Steam Supply System (MSS) must support core cooling or safe shutdown during an SBO per 10 CFR 50.63, connecting them through the need for passive safety systems to meet SBO regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0025",
+      "target": "nuscale_ch01_0275",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the passive Emergency Core Cooling System (ECCS) design features that provide decay heat removal without reliance on AC power, which is directly relevant to Section B's regulatory requirements for station blackout (SBO) coping capability and conformance with 10 CFR 50.63 and RG 1.155."
+    },
+    {
+      "source": "nuscale_ch01_0017",
+      "target": "nuscale_ch01_0278",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the physical and operational aspects of the NuScale plant's cooling systems, while Section B evaluates the plant's conformance with regulatory requirements for DC power systems relevant to station blackout scenarios, connecting them through the need for safety system functionality during SBO events."
+    },
+    {
+      "source": "nuscale_ch01_0017",
+      "target": "nuscale_ch01_0427",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the site-specific and auxiliary cooling systems of the NuScale plant, while Section B outlines the regulatory requirement that the main steam supply system (MSS) must support core cooling or safe shutdown during an SBO, connecting them through the need for plant systems (like SCWS) to enable MSS compliance with SBO safety functions."
+    },
+    {
+      "source": "nuscale_ch01_0017",
+      "target": "nuscale_ch01_0275",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the physical and operational details of the NuScale plant's cooling and core support systems, while Section B outlines the regulatory compliance status of the plant's electrical and safety systems (including SBO requirements), connecting them through the need for these systems to meet specific regulatory criteria for station blackout scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0026",
+      "target": "nuscale_ch01_0278",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the passive Emergency Core Cooling System (ECCS) design for decay heat removal, while Section B evaluates the NuScale design's conformance with regulatory criteria for onsite DC power systems during station blackout, connecting them through the requirement that passive safety systems must function adequately without AC power to satisfy SBO regulations."
+    },
+    {
+      "source": "nuscale_ch01_0026",
+      "target": "nuscale_ch01_0427",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the passive Emergency Core Cooling System (ECCS) for decay heat removal during events like LOCA, while Section B references regulatory requirements (DSRS 10.3, 10 CFR 50.63) for main steam system capability to support core cooling or safe shutdown during SBO, connecting them through the shared objective of ensuring core cooling during station blackout scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0026",
+      "target": "nuscale_ch01_0275",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the passive Emergency Core Cooling System (ECCS) design for decay heat removal, which is relevant to Section B's regulatory requirements for station blackout (SBO) coping capability under 10 CFR 50.63 and associated guidance."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0052",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides detailed diagrams and component information that visually clarify the NuScale design, while Section B offers a comparative context by listing NuScale's major features and parameters alongside those of typical PWRs, thus allowing the design details in A to be evaluated in the broader context presented in B."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0024",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides detailed drawings and diagrams, including electrical and I&C schematics, that visually clarify the design and operation of systems such as the Emergency Core Cooling System described in Section B, thereby supporting the understanding and verification of the ECCS's passive safety functions."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0025",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides detailed drawings and diagrams that visually clarify the design and operation of systems like the ECCS described in Section B, supporting the understanding of how passive safety features address station blackout scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0017",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides detailed drawings and diagrams that visually clarify the design and operation of systems described in Section B's general facility and system overview, including the Site Cooling Water System."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0026",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides detailed drawings and diagrams, including electrical and I&C schematics, that visually clarify the design and operation of systems such as the ECCS described in Section B, thereby supporting the understanding and verification of the passive safety system's function during station blackout scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides a comparative overview of NuScale's design features relative to typical PWRs, while Section B details the passive Emergency Core Cooling System (ECCS) that is one of those features, thus Section B specifies the technical implementation of the general design philosophy referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a comparative overview of NuScale's design features and parameters relative to typical PWRs, while Section B details the passive Emergency Core Cooling System (ECCS) as one of those features, connecting the general design philosophy to specific safety system implementation."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A provides a comparative overview of NuScale's major design features and parameters relative to typical PWRs, while Section B offers a general description of the NuScale facility and its systems, with both sections connected through their discussion of key plant systems and design features relevant to evaluating SBO response."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0026",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a comparative overview of NuScale's design features relative to typical PWRs, while Section B details the passive Emergency Core Cooling System (ECCS) that is a specific feature supporting the passive safety philosophy referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the passive Emergency Core Cooling System (ECCS) for decay heat removal, while Section B outlines the Site Cooling Water System (SCWS) and general facility layout, with both sections providing complementary details about safety systems relevant to station blackout scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0026",
+      "relation": "SUPPORTS",
+      "confidence": 1.0,
+      "description": "Section A and Section B are identical excerpts describing the ECCS's passive decay heat removal function, thus they provide the same technical basis for evaluating SBO response."
+    },
+    {
+      "source": "nuscale_ch01_0025",
+      "target": "nuscale_ch01_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the passive Emergency Core Cooling System (ECCS) for decay heat removal during events like SBO, while Section B outlines the Site Cooling Water System (SCWS) that supports auxiliary systems, connecting them through their roles in heat removal and plant safety during station blackout scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0017",
+      "target": "nuscale_ch01_0026",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes the passive Emergency Core Cooling System (ECCS) that provides decay heat removal during events like station blackout, which supports the passive safety design philosophy mentioned in the analysis question and complements the auxiliary cooling functions described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0278",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the passive safety system features that provide decay heat removal during station blackout, while Section B evaluates the design's conformance with regulatory requirements for onsite DC power systems during SBO, connecting the system's capabilities to regulatory expectations."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0427",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the passive decay heat removal capability of the NuScale design, which supports the regulatory requirement in Section B that the main steam supply system must be capable of supporting core cooling or safe shutdown during a station blackout."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0275",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the passive decay heat removal capabilities of the NuScale design, which are relevant to demonstrating compliance with the SBO regulatory requirements outlined in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0681",
+      "target": "nuscale_ch01_0278",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses the NuScale design's conformance with regulatory criteria for steam system failures and analytical parameters, while Section B addresses the partial conformance of the DC power systems (relevant to SBO scenarios) with regulatory guidance, thus Section B provides information necessary to evaluate whether the passive safety systems in Section A can function during SBO as required by the regulatory philosophy in Ch.01 and Ch.05."
+    },
+    {
+      "source": "nuscale_ch01_0681",
+      "target": "nuscale_ch01_0427",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B states that the Main Steam Supply System (MSS) is capable of supporting core cooling or safe-shutdown during an SBO, which provides evidence supporting Section A's analysis of system conformance with regulatory criteria for steam system failures and safety functions."
+    },
+    {
+      "source": "nuscale_ch01_0681",
+      "target": "nuscale_ch01_0275",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A addresses the NuScale design's conformance with regulatory criteria for steam system piping failures and related analytical parameters, while Section B addresses compliance with station blackout requirements and DC power system conformance, both referencing the NuScale Final Safety Analysis Report and regulatory guidance to demonstrate regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch01_0680",
+      "target": "nuscale_ch01_0278",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the NuScale design's conformance with regulatory criteria for steam system failures and loss of offsite power, while Section B addresses the partial conformance of the DC power systems (critical for SBO response) with relevant regulatory guides, thus both sections are connected through their evaluation of the design's ability to handle station blackout scenarios as required by regulatory standards."
+    },
+    {
+      "source": "nuscale_ch01_0680",
+      "target": "nuscale_ch01_0427",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B states that the Main Steam Supply System (MSS) is capable of supporting core cooling or safe-shutdown during an SBO, which provides evidence that supports Section A's discussion of system conformance with regulatory criteria for loss of offsite power scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0680",
+      "target": "nuscale_ch01_0275",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A addresses the NuScale design's conformance with regulatory criteria for steam system failures and loss of offsite power, while Section B evaluates compliance with station blackout requirements and related DC power system standards, both referencing the plant's ability to handle loss of power scenarios as part of the safety analysis."
+    },
+    {
+      "source": "nuscale_ch01_0666",
+      "target": "nuscale_ch01_0278",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A addresses the NuScale design's conformance with regulatory criteria for certain transient events affecting system pressure, while Section B evaluates the conformance of the DC power systems (critical for SBO response) with regulatory guidance, thus both sections provide evidence regarding whether the design's passive safety systems and electrical systems together satisfy SBO-related regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0666",
+      "target": "nuscale_ch01_0427",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes the Main Steam Supply System's capability to support core cooling or safe shutdown during a station blackout (SBO), which provides functional evidence relevant to Section A's evaluation of system pressure response under various transient scenarios, thereby supporting the adequacy of the passive safety design philosophy in addressing SBO."
+    },
+    {
+      "source": "nuscale_ch01_0666",
+      "target": "nuscale_ch01_0275",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A addresses the NuScale design's conformance with regulatory criteria for certain transient events (e.g., feedwater and steam flow changes), while Section B addresses compliance with station blackout (SBO) requirements and related DC power system criteria, connecting them through the need for passive safety system performance under loss of power scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0669",
+      "target": "nuscale_ch01_0278",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A addresses specific transient events and their regulatory conformance, while Section B discusses the conformance of DC power systems (critical for SBO response) with regulatory guidance, thus Section B provides necessary support for the adequacy of the safety systems referenced in Section A regarding SBO scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0669",
+      "target": "nuscale_ch01_0427",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B states that the Main Steam Supply System (MSS) is capable of supporting core cooling or safe-shutdown during a station blackout (SBO), which provides evidence that supports the adequacy of the passive safety system approach discussed in Section A for addressing SBO scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0669",
+      "target": "nuscale_ch01_0275",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the NuScale design's conformance with regulatory criteria for various transient events affecting feedwater and steam systems, while Section B addresses compliance with station blackout requirements and related DC power system regulations, both providing evidence relevant to evaluating whether the passive safety systems (Ch.05) and passive design philosophy (Ch.01) adequately address SBO scenarios."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch01_0278",
+      "relation": "SATISFIES",
+      "confidence": 0.7,
+      "description": "Section A describes the NuScale reactor's reliance on passive natural circulation for coolant flow, while Section B indicates only partial conformance of the DC power systems to regulatory guidance for station blackout scenarios, connecting the passive design philosophy to the adequacy of SBO mitigation as required by regulation."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch01_0427",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the passive natural circulation design of the reactor coolant system, which is relevant to Section B's regulatory requirement that the main steam supply system must support core cooling or safe shutdown during a station blackout (SBO), thus linking the design approach to the SBO regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch01_0275",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the NuScale reactor's reliance on passive natural circulation for coolant flow, which is relevant to Section B's regulatory requirements for station blackout (SBO) resilience, as passive systems are a key design feature intended to satisfy SBO-related safety criteria."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0681",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the passive decay heat removal system's capability to cool the reactor during events such as steam generator tube failures, while Section B outlines regulatory criteria and analytical parameters for evaluating steam system piping failures, both addressing the plant's response to loss-of-coolant or steam system integrity events relevant to SBO scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0680",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the passive decay heat removal capability of the NuScale design, which is relevant for addressing station blackout scenarios, while Section B outlines the regulatory criteria and assumptions (including loss of offsite power) that such safety systems must conform to, thus Section A's system performance is intended to satisfy Section B's regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0666",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the passive decay heat removal capability of the NuScale design, which is a key feature supporting compliance with the system pressure and safety criteria outlined in Section B's regulatory requirements for various feedwater and steam flow transients."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0669",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the passive decay heat removal capabilities of the NuScale design, which are relevant to demonstrating conformance with the regulatory criteria for system response to feedwater and steam flow transients outlined in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the passive decay heat removal capability of the chemical and volume control system, which relies on natural circulation as detailed in Section B's design basis for the reactor coolant system, thereby showing that the passive system in A is an implementation of the passive design philosophy outlined in B."
+    },
+    {
+      "source": "nuscale_ch01_0681",
+      "target": "nuscale_ch01_0680",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section B's assumption of loss of offsite power is a specific scenario that Section A's postulated steam line break effects must consider in its analysis, connecting them through the requirement to evaluate system response under station blackout conditions."
+    },
+    {
+      "source": "nuscale_ch01_0681",
+      "target": "nuscale_ch01_0666",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references the analytical parameters and conformance statements from Section B to demonstrate compliance with regulatory criteria for system pressure during postulated steam system events."
+    },
+    {
+      "source": "nuscale_ch01_0681",
+      "target": "nuscale_ch01_0669",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references the analytical parameters and conformance statements from Section B regarding setpoint inaccuracies and system pressure criteria, indicating that Section A's evaluation relies on or incorporates the regulatory criteria and analytical guidance established in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0681",
+      "target": "nuscale_ch05_0003",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references the NuScale FSAR's conformance with regulatory criteria for steam system failures, while Section B provides the design basis and summary description of the reactor coolant system that underpins the passive safety features evaluated in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0680",
+      "target": "nuscale_ch01_0666",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references Section B by noting that the analytical parameters and specific criteria for system pressure in DSRS 15.1.5 are based on or conform to those established in DSRS 15.1.1-15.1.4, thereby connecting the evaluation of steam system piping failures to the criteria for feedwater and steam flow transients."
+    },
+    {
+      "source": "nuscale_ch01_0680",
+      "target": "nuscale_ch01_0669",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references Section B by noting that setpoint inaccuracies in DSRS 15.1.5 use the guidance and analytical parameters established in DSRS 15.1.1-15.1.4, thereby connecting the evaluation of steam system piping failures to the criteria and methods used for feedwater and steam flow events."
+    },
+    {
+      "source": "nuscale_ch01_0680",
+      "target": "nuscale_ch05_0003",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A references regulatory criteria and conformance related to loss of offsite power and steam system failures, while Section B describes the passive, pump-less reactor coolant system design that is intended to address such events, thus Section B's design features are intended to satisfy the regulatory requirements and assumptions outlined in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0666",
+      "target": "nuscale_ch01_0669",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A addresses the system pressure criteria for specific transients, while Section B addresses the instrument spans and setpoints for the same transients, both referencing the same DSRS sections and regulatory conformance, thus providing complementary technical bases for evaluating the NuScale design's response to these events."
+    },
+    {
+      "source": "nuscale_ch01_0666",
+      "target": "nuscale_ch05_0003",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section B describes the passive natural circulation design of the reactor coolant system, which is the foundational design philosophy referenced in Section A's evaluation of system pressure response to various transients, thereby providing the technical basis for Section A's regulatory conformance claims."
+    },
+    {
+      "source": "nuscale_ch01_0669",
+      "target": "nuscale_ch05_0003",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A references regulatory criteria and conformance for system responses to certain transients, while Section B specifies the passive design features of the reactor coolant system that are relevant to meeting those criteria, thus Section B provides the technical basis that supports the regulatory compliance discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0108",
+      "target": "nuscale_ch01_0278",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A provides technical details about electrical system components, while Section B evaluates the NuScale design's conformance with regulatory criteria for DC power systems, connecting them through the design's ability to meet station blackout requirements."
+    },
+    {
+      "source": "nuscale_ch01_0108",
+      "target": "nuscale_ch01_0427",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides detailed electrical system component information, which underpins the design basis for power supply and distribution, while Section B discusses the regulatory requirement that the main steam supply system must support core cooling during a station blackout, thus Section A's details are prerequisites for evaluating whether the design in Section B can satisfy SBO requirements."
+    },
+    {
+      "source": "nuscale_ch01_0108",
+      "target": "nuscale_ch01_0275",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A provides technical details and symbols for electrical system components, which are referenced in Section B's discussion of compliance with station blackout regulatory requirements, connecting the design documentation to regulatory conformance."
+    },
+    {
+      "source": "nuscale_ch01_0109",
+      "target": "nuscale_ch01_0278",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the electrical symbols and diagram legends necessary to interpret the detailed design drawings referenced in Section B's regulatory conformance discussion regarding DC power systems and SBO requirements."
+    },
+    {
+      "source": "nuscale_ch01_0109",
+      "target": "nuscale_ch01_0427",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the electrical symbols and legend necessary to interpret system diagrams, which are prerequisites for understanding the detailed safety system configurations referenced in Section B's regulatory assessment of SBO capability."
+    },
+    {
+      "source": "nuscale_ch01_0109",
+      "target": "nuscale_ch01_0275",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the electrical symbols and diagram legends necessary to interpret the detailed electrical system drawings referenced in Section B's regulatory compliance discussion for station blackout (SBO) requirements."
+    },
+    {
+      "source": "nuscale_ch01_0413",
+      "target": "nuscale_ch01_0278",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A states that the NuScale design does not rely on AC or DC power for safety functions, while Section B discusses partial conformance of NuScale's DC power systems with regulatory guidance, both addressing how the design manages SBO scenarios and regulatory expectations for power independence."
+    },
+    {
+      "source": "nuscale_ch01_0413",
+      "target": "nuscale_ch01_0427",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A explains that the NuScale design does not rely on emergency diesel generators or AC/DC power for safety functions, while Section B states that the main steam supply system is capable of supporting core cooling or safe shutdown during an SBO, together showing that passive systems fulfill SBO requirements without reliance on active power sources."
+    },
+    {
+      "source": "nuscale_ch01_0413",
+      "target": "nuscale_ch01_0275",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A explains that the NuScale design does not rely on emergency diesel generators or AC/DC power for safety functions, while Section B addresses compliance with station blackout requirements, thus Section A provides the design basis that supports or justifies the approach to SBO compliance discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0412",
+      "target": "nuscale_ch01_0278",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A explains that the NuScale design does not rely on AC or DC power for safety functions and thus does not require emergency diesel generators, while Section B details partial conformance with regulatory guidance for DC power systems, connecting both sections through their discussion of how the design addresses (or does not address) SBO-related power requirements."
+    },
+    {
+      "source": "nuscale_ch01_0412",
+      "target": "nuscale_ch01_0427",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A explains that the NuScale design does not rely on emergency diesel generators or AC/DC power for safety functions, while Section B states that the main steam supply system is capable of supporting core cooling or safe shutdown during an SBO, connecting both sections through the passive safety approach to SBO mitigation."
+    },
+    {
+      "source": "nuscale_ch01_0412",
+      "target": "nuscale_ch01_0275",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A explains that the NuScale design does not rely on emergency diesel generators or AC/DC power for safety functions, while Section B evaluates compliance with station blackout requirements, making Section A's design approach directly relevant to how Section B's SBO criteria are addressed."
+    },
+    {
+      "source": "nuscale_ch01_0108",
+      "target": "nuscale_ch01_0109",
+      "relation": "REFERENCES",
+      "confidence": 1.0,
+      "description": "Section A includes Figure 1.7-1a, which is exactly the content of Section B, indicating that Section A references or incorporates Section B's electrical symbols legend."
+    },
+    {
+      "source": "nuscale_ch01_0108",
+      "target": "nuscale_ch01_0413",
+      "relation": "CONTRADICTS",
+      "confidence": 0.85,
+      "description": "Section A provides electrical system component details, while Section B states that the NuScale design does not rely on AC or DC power or emergency diesel generators for safety functions, indicating that the electrical components in Section A are not required for SBO mitigation per the passive safety philosophy described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0108",
+      "target": "nuscale_ch01_0412",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides electrical system component details, while Section B states that the NuScale design does not rely on AC or DC power for safety functions and thus does not require emergency diesel generators, indicating that the electrical components in A are not relied upon for SBO mitigation as per B's regulatory conformance."
+    },
+    {
+      "source": "nuscale_ch01_0109",
+      "target": "nuscale_ch01_0413",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides the legend for electrical symbols used in system diagrams, while Section B states that the NuScale design does not rely on AC or DC power or emergency diesel generators for safety functions, indicating that the electrical components detailed in Section A are not required for SBO mitigation per the passive safety philosophy."
+    },
+    {
+      "source": "nuscale_ch01_0109",
+      "target": "nuscale_ch01_0412",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides the legend for electrical symbols used in system diagrams, while Section B states that the NuScale design does not rely on AC or DC power (and thus does not require emergency diesel generators), connecting them through the absence of conventional electrical dependencies in the safety system design."
+    },
+    {
+      "source": "nuscale_ch01_0413",
+      "target": "nuscale_ch01_0412",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A and Section B both state that the NuScale design does not require or include safety-related emergency diesel generators, and that no AC or DC power is relied upon for safety functions, demonstrating consistent application of the passive design philosophy in addressing station blackout scenarios."
+    }
+  ]
+}

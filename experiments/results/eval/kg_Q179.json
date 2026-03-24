@@ -1,0 +1,514 @@
+{
+  "question": "Does the NuScale design adequately address the loss of ultimate heat sink scenario given the pool design (Ch.01) and DHRS design (Ch.05)?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0301": {
+      "node_id": "nuscale_ch01_0301",
+      "title": "DSRS 9.1.3, Rev 0: Spent Fuel Pool Cooling and Cleanup SystemII.3 Specific Criteria to Meet GDC 5",
+      "summary": "Section II.3 of DSRS 9.1.3, Rev 0 states that the Spent Fuel Pool Cooling and Cleanup System fully conforms to the specific criteria required to meet General Design Criterion (GDC) 5, with no exceptions noted. This indicates that the system is designed to prevent sharing of structures, systems, and components among multiple units in a way that could compromise safety.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "243",
+      "hop": 1
+    },
+    "nuscale_ch01_0044": {
+      "node_id": "nuscale_ch01_0044",
+      "title": "Chemical and Volume Control System",
+      "summary": "The Chemical and Volume Control System section describes the NuScale reactor’s passive decay heat removal system, which uses two independent trains, each capable of removing 100% of the decay heat via natural circulation and passive condensers immersed in the reactor pool. In case of a steam generator tube failure or loss of AC power, the system isolates the affected components and relies on heat transfer to a large, stainless steel-lined ultimate heat sink pool to safely dissipate heat, ensuring continued cooling of the reactor and spent fuel.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "41",
+      "hop": 1
+    },
+    "nuscale_ch05_0022": {
+      "node_id": "nuscale_ch05_0022",
+      "title": "Decay Heat Removal System",
+      "summary": "The Decay Heat Removal System (DHRS) is an engineered safety feature designed to remove residual and core decay heat from the reactor after shutdown, especially when normal cooling is unavailable, without relying on external power. It ensures the reactor coolant system temperature drops below 420°F within 36 hours, maintaining fuel and pressure boundary safety limits, and its reliability and risk significance are rigorously evaluated. The DHRS operates independently of the Emergency Core Cooling System (ECCS), but both can function together if needed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "106",
+      "hop": 1
+    },
+    "nuscale_ch01_0300": {
+      "node_id": "nuscale_ch01_0300",
+      "title": "DSRS 9.1.3, Rev 0: Spent Fuel Pool Cooling and Cleanup SystemII.2 Specific Criteria to Meet GDC 4",
+      "summary": "The section summarizes the NuScale Spent Fuel Pool Cooling and Cleanup System’s conformance with regulatory criteria, specifically addressing GDC 4. It notes partial conformance, as the normal makeup water supply system and its source are not designed to accommodate postulated accidents, but the ultimate heat sink (UHS) system is compliant and serves as the safety-related supply for accident conditions; an ESF ventilation system is not required. Other criteria (GDC 5, GDC 61, GDC 63, and 10 CFR 20.1101(b)) are fully met.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "243",
+      "hop": 1
+    },
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the construction of the pressurizer and its components in the NuScale reactor, specifying alloys and standards for each part to ensure corrosion resistance and compatibility with operating environments. It references relevant sections of the BPVC (Boiler and Pressure Vessel Code) and lists the specific alloys and material specifications for the baffle plate, heater bundles, cover plate, bolting, and heater sheaths.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 1
+    },
+    "nuscale_ch01_0043": {
+      "node_id": "nuscale_ch01_0043",
+      "title": "Ultimate Heat Sink",
+      "summary": "The Ultimate Heat Sink for the NuScale plant is a large, stainless steel-lined, reinforced concrete pool located below grade, comprising the reactor, refueling, and spent fuel pool areas. During normal operations, heat is removed via a cooling system and rejected to the atmosphere, while in the event of a total loss of AC power, decay heat is passively transferred to the pool, which has sufficient water inventory to ensure continued cooling through heat-up and boiling.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "41",
+      "hop": 1
+    },
+    "nuscale_ch01_0278": {
+      "node_id": "nuscale_ch01_0278",
+      "title": "SRP Appendix 8-A, Rev1: General Agenda, Station Site VisitsAll Various",
+      "summary": "This section summarizes NuScale’s conformance with various regulatory criteria related to DC power systems and station blackout requirements. It notes that NuScale partially conforms to several regulatory guides, with some requirements not applicable due to the design’s passive safety features and the responsibilities assigned to the COL applicant. Additionally, SRP Appendix 8-A is identified as not applicable, as it pertains to staff site visits during licensing reviews rather than design certification.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "240",
+      "hop": 2
+    },
+    "nuscale_ch01_0024": {
+      "node_id": "nuscale_ch01_0024",
+      "title": "Emergency Core Cooling System",
+      "summary": "The Emergency Core Cooling System (ECCS) in the NuScale design is a fully passive system that removes decay heat during a loss-of-coolant accident (LOCA) using three independent reactor vent valves and two recirculation valves, all of which are closed during normal operation. During ECCS activation, steam is vented and condensed in the containment, and recirculated water cools the core, with heat ultimately conducted passively to the reactor pool.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "33",
+      "hop": 2
+    },
+    "nuscale_ch01_0275": {
+      "node_id": "nuscale_ch01_0275",
+      "title": "DSRS 8.4, Rev 0: Station BlackoutII.1 Compliance with 10 CFR 50.63 and the guidelines of RG 1.155",
+      "summary": "This section summarizes NuScale’s compliance with regulatory requirements for station blackout (SBO) and related DC power systems. The NuScale design partially conforms to 10 CFR 50.63 and RG 1.155, as all safety functions can be maintained without AC power for 72 hours, making alternate AC power sources unnecessary. Some requirements, such as maintenance rule implementation, are designated as the responsibility of the COL applicant, and the independence of SBO-related power supplies is addressed in referenced sections.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "240",
+      "hop": 2
+    },
+    "nuscale_ch01_0023": {
+      "node_id": "nuscale_ch01_0023",
+      "title": "Containment Systems",
+      "summary": "The NuScale containment vessel (CNV) is maintained under vacuum during normal operations, which reduces moisture and corrosion, aids in leak detection, and limits oxygen for safety. In the event of an emergency, passive cooling rapidly reduces pressure and temperature, and the design’s reliance on passive safety systems and small fuel inventory significantly lowers core damage risk compared to conventional reactors.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "32",
+      "hop": 2
+    },
+    "nuscale_ch05_0023": {
+      "node_id": "nuscale_ch05_0023",
+      "title": "Reactor Coolant System High-Point Vents",
+      "summary": "This section describes the testing and inspection requirements for the DHRS (Decay Heat Removal System) components in the NuScale reactor, ensuring compliance with ASME codes for Class 2 components. It details how DHRS actuation valves are exercised and tested, primarily during cold shutdown conditions, and outlines the procedures for initial in-situ testing of the DHRS function on the first reactor module as part of the initial test program.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "121",
+      "hop": 3
+    },
+    "nuscale_ch01_0659": {
+      "node_id": "nuscale_ch01_0659",
+      "title": "SRP 15.0.2, (March 2007): Review of Transient and Accident Analysis MethodsII.4 Uncertainty Analysis",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for transient and accident analysis methods, noting partial or non-applicability where NuScale’s design or methodologies differ from traditional requirements (such as using CHF instead of DNBR and a modified AST methodology). It highlights that NuScale seeks exemptions from certain 10 CFR 50 Appendix K requirements, focusing its evaluation models only on technically relevant features for its unique design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "287",
+      "hop": 3
+    },
+    "nuscale_ch01_0657": {
+      "node_id": "nuscale_ch01_0657",
+      "title": "SRP 15.0.2, (March 2007): Review of Transient and Accident Analysis MethodsII.2 Accident Scenario Identification Process",
+      "summary": "The section outlines NuScale’s conformance with regulatory criteria for accident scenario identification, specifically referencing SRP 15.0.2 (March 2007). It states that NuScale’s process for identifying accident scenarios fully conforms to the regulatory guidance, with no departures or exceptions noted for this aspect.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "287",
+      "hop": 3
+    },
+    "nuscale_ch01_0060": {
+      "node_id": "nuscale_ch01_0060",
+      "title": "NuScale Integral System Test Program",
+      "summary": "The NuScale Integral System Test Program was established to collect thermal-hydraulic data for system characterization and to validate safety analysis codes using a scaled model of the NuScale Power Module (NPM) design. The NIST-1 facility replicates key reactor systems and supports the development and validation of proprietary safety codes, ensuring accurate modeling of the NPM’s unique features. Testing at NIST-1 has provided essential data for NuScale’s safety analysis and design certification efforts.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "87",
+      "hop": 3
+    },
+    "nuscale_ch01_0331": {
+      "node_id": "nuscale_ch01_0331",
+      "title": "SRP 9.2.5, Rev 3: Ultimate Heat SinkII.4 Cooling Water System Inspection",
+      "summary": "The section confirms that the NuScale design fully conforms to SRP 9.2.5, Rev 3, Ultimate Heat Sink II.4 requirements for Cooling Water System Inspection, with no exceptions or additional comments. This means the inspection criteria for the cooling water system are met as required by regulatory standards.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "247",
+      "hop": 4
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0301",
+      "target": "nuscale_ch01_0044",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A outlines the regulatory criteria and conformance for the ultimate heat sink (UHS) and its role in spent fuel cooling, while Section B describes the DHRS design features that provide decay heat removal via passive condensers immersed in the reactor pool, thus connecting the pool/UHS design to the DHRS's ability to address loss of UHS scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0301",
+      "target": "nuscale_ch05_0022",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A specifies the regulatory criteria and requirements for the ultimate heat sink and spent fuel pool cooling, while Section B describes the DHRS design features that are intended to meet these requirements for decay heat removal during loss of normal cooling scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0301",
+      "target": "nuscale_ch01_0300",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A and Section B both discuss the NuScale spent fuel pool cooling system's conformance with regulatory criteria, specifically referencing the ultimate heat sink (UHS) system's seismic and quality classification as it relates to different General Design Criteria (GDC 2 and GDC 4), thus providing details for different regulatory requirements using overlapping technical information."
+    },
+    {
+      "source": "nuscale_ch01_0301",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references the NuScale Final Safety Analysis Report for conformance with regulatory criteria, while Section B provides detailed descriptions of reactor coolant system components as cited in Section A, connecting them through cross-references to specific design features."
+    },
+    {
+      "source": "nuscale_ch01_0301",
+      "target": "nuscale_ch01_0043",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A specifies the regulatory criteria and conformance for the ultimate heat sink (UHS) system's seismic and quality classification for spent fuel pool cooling, while Section B describes the NuScale UHS and DHRS design features that are intended to meet those criteria by providing passive, redundant decay heat removal capabilities."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch05_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the DHRS trains and their integration with the reactor pool, while Section B specifies the design basis and performance requirements for the DHRS in removing decay heat without external power, thus Section A's design details support Section B's regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0300",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the DHRS's reliance on the reactor pool as a heat sink for decay heat removal, while Section B specifies regulatory criteria for the ultimate heat sink system's design and classification, directly connecting the pool's role in accident scenarios to regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A describes the decay heat removal system's operation and its integration with the reactor pool, while Section B provides material specifications for the pressurizer components referenced in Section A's system description."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0043",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A and Section B both describe the same closed-loop, two-phase natural circulation cooling system with passive condensers in the reactor pool, indicating that the Chemical and Volume Control System and the Ultimate Heat Sink rely on the same DHRS design features for decay heat removal."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch01_0300",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the DHRS's capability to remove decay heat without external power during non-LOCA events, while Section B specifies regulatory criteria for the ultimate heat sink system's design and its role in spent fuel cooling during accident conditions, connecting them through the requirement that the DHRS and pool design must ensure adequate heat removal via the UHS."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.7,
+      "description": "Section B provides material specifications and references for pressurizer components that are part of the reactor coolant system, which is relevant to Section A's discussion of the DHRS design basis since the DHRS interfaces with the reactor coolant system."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch01_0043",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the DHRS's design basis for removing decay heat without external power, while Section B details how the DHRS uses the reactor pool as the ultimate heat sink to achieve this function, connecting the system's capability to the pool design."
+    },
+    {
+      "source": "nuscale_ch01_0300",
+      "target": "nuscale_ch01_0043",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A specifies regulatory criteria for the ultimate heat sink system's seismic and quality classification for spent fuel pool cooling, while Section B describes the NuScale design features of the ultimate heat sink and decay heat removal system that are intended to meet these criteria."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch01_0043",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A describes the materials and components of the pressurizer, referencing other sections for details, while Section B outlines the ultimate heat sink and decay heat removal system design, with both sections connected through their roles in ensuring reactor coolant system integrity and heat removal during loss of ultimate heat sink scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0278",
+      "target": "nuscale_ch01_0301",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the NuScale design's partial conformance with regulatory criteria for DC power systems, while Section B addresses the spent fuel pool cooling system's conformance with criteria for the ultimate heat sink, connecting them through their respective roles in ensuring safety functions during loss of ultimate heat sink scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0278",
+      "target": "nuscale_ch01_0044",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes the design features of the NuScale DHRS and pool system, which provide the technical basis for evaluating whether the design satisfies the regulatory conformance and criteria referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0278",
+      "target": "nuscale_ch05_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B describes the design basis and capabilities of the DHRS to remove decay heat without reliance on external power, which supports the regulatory conformance claims in Section A regarding the adequacy of onsite DC power systems and their partial conformance with regulatory guidance."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0301",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the ECCS's passive decay heat removal during accidents, while Section B specifies regulatory criteria for the ultimate heat sink system, which is the source for spent fuel cooling and accident mitigation, thus connecting the ECCS's reliance on the pool/UHS to the regulatory requirements for UHS design."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0044",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the ECCS's passive decay heat removal during a LOCA, while Section B details the DHRS's capability to remove 100% of decay heat via passive condensers immersed in the reactor pool, showing that both systems rely on the pool design for heat removal in accident scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch05_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the ECCS's passive decay heat removal during a LOCA, while Section B details the DHRS's role in removing decay heat during non-LOCA events when normal cooling is unavailable, showing that both systems address different but complementary aspects of decay heat removal relevant to the loss of ultimate heat sink scenario."
+    },
+    {
+      "source": "nuscale_ch01_0275",
+      "target": "nuscale_ch01_0301",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses compliance with regulatory criteria for station blackout and DC power systems, which are essential for maintaining safety functions during loss of power, while Section B addresses the spent fuel pool cooling system's conformance with criteria for the ultimate heat sink, connecting both sections through their reliance on the UHS and supporting systems to ensure safety during loss of ultimate heat sink scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0275",
+      "target": "nuscale_ch01_0044",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes the DHRS design features (passive condenser in reactor pool, two trains for decay heat removal) that provide the technical basis for meeting the regulatory compliance requirements for station blackout and loss of heat sink scenarios discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0275",
+      "target": "nuscale_ch05_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section B describes the DHRS design's capability to remove decay heat without external power, which supports Section A's discussion of compliance with station blackout and loss of power regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0023",
+      "target": "nuscale_ch01_0301",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the containment vessel's vacuum environment, which impacts heat transfer and moisture control, while Section B outlines regulatory criteria for the ultimate heat sink system's role in spent fuel pool cooling, connecting them through the requirement that containment and pool designs must ensure adequate heat removal during loss of ultimate heat sink scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0023",
+      "target": "nuscale_ch01_0044",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B describes the DHRS design, which relies on passive condensers immersed in the reactor pool (from Ch.05), while Section A describes the containment vacuum that minimizes moisture and corrosion, supporting the reliability of components such as those in the DHRS, thus Section A supports the operational integrity of the system described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0023",
+      "target": "nuscale_ch05_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the containment vessel's vacuum conditions, which reduce moisture and heat transfer, while Section B outlines the DHRS's function to remove decay heat without external power, with both sections addressing aspects of heat management critical to the loss of ultimate heat sink scenario."
+    },
+    {
+      "source": "nuscale_ch01_0278",
+      "target": "nuscale_ch01_0024",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes the passive Emergency Core Cooling System (ECCS) design for decay heat removal during a loss-of-coolant accident, which supports the regulatory conformance claims in Section A regarding NuScale's compliance with safety criteria for onsite DC power and heat removal systems."
+    },
+    {
+      "source": "nuscale_ch01_0278",
+      "target": "nuscale_ch01_0275",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A and Section B both reference the NuScale Final Safety Analysis Report's conformance with regulatory criteria for DC power systems, specifically citing partial conformance with RG 1.153 and RG 1.63 as it applies to the EDSS design, indicating that both sections address the same regulatory compliance issues relevant to the loss of ultimate heat sink scenario."
+    },
+    {
+      "source": "nuscale_ch01_0278",
+      "target": "nuscale_ch01_0023",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A discusses the NuScale design's partial conformance with regulatory criteria for DC power systems, while Section B describes the containment vessel's vacuum conditions and associated benefits; both sections relate to the analysis question by addressing different safety features (power systems and containment environment) that together impact the plant's response to a loss of ultimate heat sink scenario."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0275",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the passive ECCS design features for decay heat removal during loss-of-coolant accidents, while Section B outlines the regulatory compliance requirements (including partial conformance) for station blackout and DC power systems, which are relevant to evaluating whether the ECCS and related systems meet regulatory expectations for loss of ultimate heat sink scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0023",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes how the ECCS vents steam into the CNV during emergency operation, while Section B explains the CNV's vacuum state and its benefits, indicating that the ECCS operation relies on and interacts with the CNV's design features."
+    },
+    {
+      "source": "nuscale_ch01_0275",
+      "target": "nuscale_ch01_0023",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses regulatory compliance related to station blackout and DC power systems, which are critical for maintaining safety functions during loss of ultimate heat sink scenarios, while Section B describes the containment vessel's vacuum design that supports passive heat removal and containment integrity, thus both sections are connected through their roles in ensuring safety during loss of heat sink events."
+    },
+    {
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch01_0301",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A details inspection and classification requirements for DHRS components, which are part of the safety systems relevant to heat removal, while Section B outlines regulatory criteria for the ultimate heat sink system's design and classification, both addressing the adequacy of safety-related systems in accident scenarios such as loss of ultimate heat sink."
+    },
+    {
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch01_0044",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A specifies inspection and classification requirements for DHRS components, while Section B describes the functional role of the DHRS in decay heat removal during loss of ultimate heat sink scenarios, connecting them through the operational reliability and regulatory compliance of DHRS components."
+    },
+    {
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch05_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A specifies inspection and classification requirements for DHRS components, which supports Section B's claim that the DHRS is designed to reliably remove decay heat during loss of normal cooling scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0659",
+      "target": "nuscale_ch01_0301",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A discusses the general regulatory guidance and conformance for transient and accident analysis methods, while Section B provides specific criteria and conformance details for the spent fuel pool cooling system's reliance on the ultimate heat sink, connecting them through the requirement to analyze and ensure adequate heat removal during accident scenarios such as loss of ultimate heat sink."
+    },
+    {
+      "source": "nuscale_ch01_0659",
+      "target": "nuscale_ch01_0044",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section B describes the DHRS design features (e.g., passive condenser, two trains, isolation capability) that are evaluated in Section A's accident analysis methods to determine conformance with regulatory criteria for scenarios such as loss of ultimate heat sink."
+    },
+    {
+      "source": "nuscale_ch01_0659",
+      "target": "nuscale_ch05_0022",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A discusses the regulatory criteria and analysis methods (including uncertainty analysis and conformance with SRP/DSRS guidance) that must be met for transient and accident scenarios, while Section B describes the DHRS design basis and its capability to remove decay heat during loss of normal cooling, thus providing the technical means to satisfy the regulatory requirements outlined in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0657",
+      "target": "nuscale_ch01_0301",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the regulatory guidance and accident analysis methods relevant to evaluating scenarios like loss of ultimate heat sink, while Section B specifies the design criteria and conformance for the spent fuel pool cooling system, including reliance on the ultimate heat sink, thus Section A provides the analytical framework that Section B's design features must satisfy."
+    },
+    {
+      "source": "nuscale_ch01_0657",
+      "target": "nuscale_ch01_0044",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section B describes the DHRS design features that provide decay heat removal via passive condensers in the reactor pool, which directly supports Section A's regulatory requirement to evaluate accident scenarios such as loss of ultimate heat sink by demonstrating conformance with transient and accident analysis methods."
+    },
+    {
+      "source": "nuscale_ch01_0657",
+      "target": "nuscale_ch05_0022",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A outlines the regulatory criteria and accident analysis methods that must be met, while Section B describes the DHRS design features that are intended to satisfy these regulatory requirements for decay heat removal during loss of ultimate heat sink scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0060",
+      "target": "nuscale_ch01_0301",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides test data and validation for the NuScale system's thermal-hydraulic behavior, which supports Section B's regulatory assessment of whether the pool and ultimate heat sink systems meet GDC 5 requirements."
+    },
+    {
+      "source": "nuscale_ch01_0060",
+      "target": "nuscale_ch01_0044",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the integral system test program that generates thermal-hydraulic data to validate safety codes and methodologies, which supports the design claims in Section B regarding the DHRS's ability to remove decay heat via passive condensers in the reactor pool."
+    },
+    {
+      "source": "nuscale_ch01_0060",
+      "target": "nuscale_ch05_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the integral system test program that generates thermal-hydraulic data and validates safety codes, which provides supporting evidence for the DHRS design basis and performance claims described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch01_0659",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes inspection and classification requirements for DHRS components, which are part of the design features whose adequacy is evaluated in Section B's discussion of conformance with regulatory criteria for transient and accident analyses, including loss of ultimate heat sink scenarios."
+    },
+    {
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch01_0657",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes inspection and classification requirements for DHRS components, which are part of the design features evaluated in Section B's accident analysis methods to ensure regulatory conformance for scenarios like loss of ultimate heat sink."
+    },
+    {
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch01_0060",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes inspection and classification requirements for DHRS components, while Section B explains that the integral system test program generates data to characterize system performance, including DHRS behavior, thus Section B provides evidence supporting the adequacy and validation of the DHRS design discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0659",
+      "target": "nuscale_ch01_0657",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A discusses the uncertainty analysis methods for transient and accident scenarios, which rely on the accident scenario identification process described in Section B to define the scenarios to be analyzed."
+    },
+    {
+      "source": "nuscale_ch01_0659",
+      "target": "nuscale_ch01_0060",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section B describes the NuScale Integral System Test Program, which provides thermal-hydraulic data and validation evidence that supports the accident analysis methods and regulatory conformance discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0657",
+      "target": "nuscale_ch01_0060",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section B describes the NuScale Integral System Test Program, which provides thermal-hydraulic data and validation evidence supporting the accident analysis methods and regulatory conformance discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0331",
+      "target": "nuscale_ch01_0301",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the regulatory conformance of the NuScale ultimate heat sink and related water systems, while Section B specifies that the ultimate heat sink system is the seismic Category I supply for spent fuel pool cooling during accident conditions, thus Section B provides specific design details that clarify and elaborate on the general regulatory requirements referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0331",
+      "target": "nuscale_ch01_0044",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section B describes the DHRS design features that provide decay heat removal via passive condensers in the reactor pool, which supports Section A's regulatory requirement for protection against loss of the ultimate heat sink by demonstrating an alternative heat removal capability."
+    },
+    {
+      "source": "nuscale_ch01_0331",
+      "target": "nuscale_ch05_0022",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section B describes the DHRS design's capability to remove decay heat without reliance on external power, which is a key function needed to address the loss of ultimate heat sink scenario discussed in Section A's regulatory criteria."
+    }
+  ]
+}

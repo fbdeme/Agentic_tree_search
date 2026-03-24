@@ -1,0 +1,86 @@
+{
+  "question": "Based on Table 5.3-8, do the NuScale RPV materials satisfy the PTS screening criteria of 10 CFR 50.61?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch05_0017": {
+      "node_id": "nuscale_ch05_0017",
+      "title": "Reactor Vessel Integrity",
+      "summary": "This section outlines the procedures and regulatory compliance measures to ensure the integrity of the NuScale reactor vessel throughout its 60-year design life. It details the development of operating procedures to prevent exceeding pressure-temperature limits, evaluates the vessel’s resistance to pressurized thermal shock and upper-shelf energy degradation, and confirms that all criteria remain within regulatory limits under anticipated conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "73",
+      "hop": 1
+    },
+    "nuscale_ch05_0016": {
+      "node_id": "nuscale_ch05_0016",
+      "title": "Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses",
+      "summary": "This section outlines the basis for establishing operational pressure and temperature limits for the reactor coolant pressure boundary (RCPB) to comply with regulatory requirements over the plant’s 60-year lifespan. It describes the methodology used to calculate pressure-temperature limit curves, accounting for vessel embrittlement, and provides references to figures and tables where these limits are detailed to ensure protection against non-ductile failure.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "72",
+      "hop": 1
+    },
+    "nuscale_ch05_0018": {
+      "node_id": "nuscale_ch05_0018",
+      "title": "References",
+      "summary": "This section outlines the inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fastener requirements for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It specifies procedures for maintaining vessel integrity during transport and operation, and lists the key codes and standards used for compliance.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "74",
+      "hop": 1
+    },
+    "nuscale_ch05_0015": {
+      "node_id": "nuscale_ch05_0015",
+      "title": "Reactor Vessel Materials",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module’s reactor pressure vessel (RPV), which houses the core, steam generators, and pressurizer, serving as a critical barrier to fission product release. The RPV and its components are constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure integrity and safety throughout the plant’s design life.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
+      "hop": 4
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0017",
+      "target": "nuscale_ch05_0016",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A discusses the development of operating procedures to ensure compliance with pressure-temperature limits, which are established based on the material properties and analyses described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0017",
+      "target": "nuscale_ch05_0018",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the development of operating procedures to ensure compliance with technical specifications for reactor vessel integrity, while Section B outlines inspection, shipment, and installation requirements for the RPV, both of which are connected through their roles in ensuring the RPV meets regulatory and safety standards."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0018",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A discusses compliance with ASME BPVC requirements for RPV attachments and welds, while Section B references the inspection and handling requirements per ASME BPVC and NQA-1 standards, with both sections connected through their reliance on ASME BPVC codes for RPV integrity."
+    },
+    {
+      "source": "nuscale_ch05_0015",
+      "target": "nuscale_ch05_0017",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the physical composition and function of the NuScale reactor pressure vessel (RPV) materials, while Section B discusses the development of operating procedures to ensure the RPV operates within pressure-temperature limits, which is necessary to demonstrate compliance with regulatory requirements such as the PTS screening criteria of 10 CFR 50.61."
+    },
+    {
+      "source": "nuscale_ch05_0015",
+      "target": "nuscale_ch05_0016",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the general composition and function of the NuScale RPV materials, while Section B provides specific data and analyses (including compliance with ASME code) relevant to evaluating whether these materials meet regulatory requirements such as the PTS screening criteria of 10 CFR 50.61."
+    },
+    {
+      "source": "nuscale_ch05_0015",
+      "target": "nuscale_ch05_0018",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general description of the NuScale reactor pressure vessel (RPV) materials, while Section B references the standards and requirements for inspection, shipment, and installation of the RPV, specifying the procedures that ensure the integrity of the materials described in Section A."
+    }
+  ]
+}

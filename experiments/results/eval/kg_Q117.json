@@ -1,0 +1,769 @@
+{
+  "question": "Compare the Ch.01 description of NuScale's eliminated RCPs with the Ch.05 analysis of natural circulation flow rates.",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0731": {
+      "node_id": "nuscale_ch01_0731",
+      "title": "SRP 15.3.3-15.3.4, Rev 2: Reactor Coolant Pump Rotor Seizure and Reactor Coolant Pump Shaft BreakAll Various",
+      "summary": "Sections SRP 15.3.3-15.3.4 address reactor coolant pump rotor seizure and shaft break events, which are only relevant to light water reactor (LWR) designs that use forced coolant flow. Since the NuScale design relies on passive natural circulation and does not use reactor coolant pumps, these sections are not applicable.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "298",
+      "hop": 1
+    },
+    "nuscale_ch01_0044": {
+      "node_id": "nuscale_ch01_0044",
+      "title": "Chemical and Volume Control System",
+      "summary": "The Chemical and Volume Control System section describes the NuScale reactor’s passive decay heat removal system, which uses two independent trains, each capable of removing 100% of the decay heat via natural circulation and passive condensers immersed in the reactor pool. In case of a steam generator tube failure, the system isolates the affected generator and continues cooling through the intact one, transferring heat to the ultimate heat sink—a large, reinforced pool that can passively absorb and dissipate heat even during a total loss of AC power.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "41",
+      "hop": 1
+    },
+    "nuscale_ch05_0006": {
+      "node_id": "nuscale_ch05_0006",
+      "title": "System Evaluation",
+      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance across various power levels by establishing steady-state parameters for both primary and secondary systems, such as coolant temperatures, flow rates, and pressures. These parameters are calculated using thermal hydraulic software and verified by hand, with uncertainties and design margins considered to ensure efficient operation and safety. The design supports natural circulation with minimal pressure losses, and uncertainties related to steam generator tube plugging do not affect primary coolant flow rate determination.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "12",
+      "hop": 1
+    },
+    "nuscale_ch01_0730": {
+      "node_id": "nuscale_ch01_0730",
+      "title": "SRP 15.3.1-15.3.2, Rev 2: Loss of Forced Reactor Coolant Flow Including Trip of Pump Motor and Flow Controller MalfunctionsAll Various",
+      "summary": "This section explains that certain regulatory criteria related to loss of forced reactor coolant flow and pump failures are not applicable to the NuScale design, as it uses passive natural circulation rather than forced flow with pumps. It also notes that for scenarios involving uncontrolled control rod withdrawal, NuScale conforms to relevant safety limits, using appropriate terminology and methods for its design. Overall, the NuScale reactor's passive safety features eliminate the need for compliance with requirements specific to pump-driven coolant systems.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "298",
+      "hop": 1
+    },
+    "nuscale_ch01_0741": {
+      "node_id": "nuscale_ch01_0741",
+      "title": "SRP 15.4.4-15.4.5, Rev 2: Startup of an Inactive Loop or Recirculation Loop at an Incorrect Temperature, and Flow Controller Malfunction Causing an Increase in BWR Core Flow RateII.A RCS and MSS Pressures",
+      "summary": "The section explains that the regulatory guidance in SRP 15.4.4-15.4.5 regarding startup of an inactive loop or recirculation loop at an incorrect temperature, and flow controller malfunction causing increased BWR core flow rate, is not applicable to the NuScale reactor design because it does not use reactor coolant pumps or forced coolant flow. Instead, NuScale addresses similar postulated startup reactivity accidents under DSRS 15.4.6, which covers inadvertent decreases in boron concentration in the reactor coolant system.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "299",
+      "hop": 1
+    },
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain proper coolant flow, water chemistry, and boron concentration to protect fuel integrity and support safe operation under normal and transient conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 1
+    },
+    "nuscale_ch01_0747": {
+      "node_id": "nuscale_ch01_0747",
+      "title": "SRP 15.4.6, Rev 2: Inadvertent Decrease in Boron Concentration in the Reactor Coolant System (PWR)II.1 Reactor Coolant and Main Steam System Pressures",
+      "summary": "This section summarizes NuScale’s conformance with SRP 15.4.6, Rev 2, regarding inadvertent decreases in boron concentration in the reactor coolant system for PWRs. It states that NuScale’s design meets the relevant regulatory criteria for reactor coolant and main steam system pressures, fuel cladding integrity, incident frequency, and analysis methods, while noting that certain requirements (such as operator action and non-safety systems) are not applicable due to design differences like the absence of reactor coolant pumps.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "302",
+      "hop": 2
+    },
+    "nuscale_ch05_0020": {
+      "node_id": "nuscale_ch05_0020",
+      "title": "Steam Generators",
+      "summary": "The steam generators (SGs) in the NuScale Power Module are integrated within the reactor pressure vessel (RPV), which also houses other key components such as the pressurizer and safety valves. The SG system includes feedwater and main steam piping, thermal relief valves, and access ports, with the RPV itself forming the outer pressure boundary for the SGs and contributing to the reactor coolant pressure boundary.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
+      "hop": 2
+    },
+    "nuscale_ch01_0057": {
+      "node_id": "nuscale_ch01_0057",
+      "title": "Critical Heat Flux Testing - NuFuel HTP2™ Fuel Design",
+      "summary": "This section describes the critical heat flux (CHF) testing conducted for the NuFuel HTP2™ fuel design, which uses AREVA HMP™/HTP™ spacer grid technology. The primary goals were to obtain CHF data to develop and validate NuScale's CHF correlations, and to gather additional thermal-hydraulic data such as subchannel temperatures and pressure drops under various operating conditions using a 5x5 electrically-heated test bundle at the AREVA Karlstein facility.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "85",
+      "hop": 2
+    },
+    "nuscale_ch01_0023": {
+      "node_id": "nuscale_ch01_0023",
+      "title": "Containment Systems",
+      "summary": "The NuScale containment vessel (CNV) is maintained under vacuum during normal operations, which reduces moisture and corrosion, aids in leak detection, and limits oxygen for safety. The design uses passive safety systems and eliminates external coolant loops, resulting in improved safety, lower core damage frequency, and a smaller radioactive source term compared to conventional reactors.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "32",
+      "hop": 2
+    },
+    "nuscale_ch01_0024": {
+      "node_id": "nuscale_ch01_0024",
+      "title": "Emergency Core Cooling System",
+      "summary": "The Emergency Core Cooling System (ECCS) in the NuScale design is a fully passive system that removes decay heat during a loss-of-coolant accident (LOCA) using three independent vent valves and two recirculation valves, all of which are closed during normal operation. During an emergency, the system vents steam into containment where it condenses, and recirculation valves return water to the reactor core, with continued cooling achieved by heat conduction through the containment wall to the reactor pool.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "33",
+      "hop": 2
+    },
+    "nuscale_ch01_0058": {
+      "node_id": "nuscale_ch01_0058",
+      "title": "Steam Generator Thermal-Hydraulic Performance Testing - Electrically Heated Facility",
+      "summary": "This section describes the critical heat flux (CHF) testing conducted for the NuScale NuFuel HTP2™ fuel design using an electrically heated 5x5 simulated fuel bundle with AREVA HTP™/HMP™ spacer grid technology. The tests, performed at the AREVA Karlstein Thermal Hydraulics facility, aimed to gather CHF data, validate and develop CHF correlations, and collect thermal-hydraulic performance data under various operating conditions to support the NuScale reactor safety analysis.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "85",
+      "hop": 2
+    },
+    "nuscale_ch01_0017": {
+      "node_id": "nuscale_ch01_0017",
+      "title": "Facility Description",
+      "summary": "The Facility Description section outlines the NuScale plant's cooling and power generation processes. It describes how the reactor core heats coolant, which circulates naturally to transfer heat to steam generators, producing steam that drives a turbine and generates electricity. The section also notes that site-specific details exist for cooling systems and equipment layout.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "28",
+      "hop": 3
+    },
+    "nuscale_ch01_0811": {
+      "node_id": "nuscale_ch01_0811",
+      "title": "DSRS 15.9.A, Rev 0: Thermal Hydraulic Stability Review ResponsibilitiesII.5 Detect and Suppress Method Trip of reactor before SAFDL violation",
+      "summary": "The NuScale design does not use the exclusion zone or detect-and-suppress (D&S) methods for thermal hydraulic stability; instead, existing reactor trip signals act preemptively to prevent violation of safety limits before unstable flow oscillations can develop. The system partially conforms to some regulatory criteria by providing more limiting protection than required, but does not employ D&S systems or backup options, as reactor trips occur before instability conditions arise.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "315",
+      "hop": 3
+    },
+    "nuscale_ch01_0814": {
+      "node_id": "nuscale_ch01_0814",
+      "title": "DSRS 15.9.A, Rev 0: Thermal Hydraulic Stability Review ResponsibilitiesII.8 Detect and Suppress system to monitor process variables and systems.",
+      "summary": "The NuScale design does not utilize a Detect and Suppress (D&S) system to monitor process variables for thermal hydraulic stability, as reactor trip signals are designed to act before unstable flow oscillations can develop. As a result, the D&S system is deemed not applicable, and stability is managed through existing reactor trip mechanisms rather than direct detection and suppression.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "315",
+      "hop": 3
+    },
+    "nuscale_ch05_0005": {
+      "node_id": "nuscale_ch05_0005",
+      "title": "System Components",
+      "summary": "This section describes key components of the NuScale reactor system. It details the Reactor Pressure Vessel (RPV), which houses the reactor core and supports major systems, and outlines the main Reactor Coolant System (RCS) piping and its connections. The section also briefly introduces the pressurizer (PZR), which is integral to the RPV.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "10",
+      "hop": 3
+    },
+    "nuscale_ch05_0002": {
+      "node_id": "nuscale_ch05_0002",
+      "title": "Summary Description",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation, eliminating the need for pumps and external piping, and is integrated within each NuScale Power Module. The RCS is designed to safely transfer heat from the reactor core, maintain proper coolant chemistry and boron concentration, and ensure fuel safety limits are not exceeded during all operating conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 4
+    },
+    "nuscale_ch01_0051": {
+      "node_id": "nuscale_ch01_0051",
+      "title": "Plant Features of Special Interest",
+      "summary": "This section describes key plant features of special interest in the NuScale Power Plant, including the Central Utility Building (CUB) and Diesel Generator Buildings (DGBs), which house essential but nonsafety-related systems and backup power equipment. It also highlights human factors considerations, emphasizing fail-safe design, automation, digital controls, and workload management to minimize human error and meet regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "43",
+      "hop": 4
+    },
+    "nuscale_ch01_0732": {
+      "node_id": "nuscale_ch01_0732",
+      "title": "SRP 15.4.1, Rev 3: Uncontrolled Control Rod Assembly Withdrawal From a Subcritical or Low Power Startup ConditionII.1.A Thermal Margin Limits",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria related to uncontrolled control rod assembly withdrawal from a subcritical or low power startup condition. It notes that NuScale meets thermal margin and fuel temperature limits, using critical heat flux (CHF) terminology and heat generation rate limits, while some criteria related to forced coolant flow are not applicable due to NuScale’s passive natural circulation design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "298",
+      "hop": 4
+    },
+    "nuscale_ch01_0738": {
+      "node_id": "nuscale_ch01_0738",
+      "title": "SRP 15.4.3, Rev 3: Control Rod Misoperation (System Malfunction or Operator Error)II.1 Thermal Margin Limits",
+      "summary": "This section summarizes NuScale’s compliance with regulatory criteria for control rod misoperation events, focusing on thermal margin limits. It confirms that NuScale meets requirements for fuel centerline temperature and cladding strain using appropriate methodologies, and clarifies that certain criteria are not applicable due to differences in reactor design compared to traditional PWRs and BWRs. The section also notes that NuScale uses CHF terminology and addresses relevant accident scenarios with appropriate guidance.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "299",
+      "hop": 4
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0731",
+      "target": "nuscale_ch01_0044",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) in NuScale's design, which necessitates reliance on natural circulation for reactor cooling, while Section B analyzes the natural circulation flow rates and the associated passive safety systems that compensate for the absence of RCPs."
+    },
+    {
+      "source": "nuscale_ch01_0731",
+      "target": "nuscale_ch05_0006",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) in NuScale's design, which directly relates to Section B's analysis of natural circulation flow rates as the primary means of coolant movement in the absence of RCPs."
+    },
+    {
+      "source": "nuscale_ch01_0731",
+      "target": "nuscale_ch01_0730",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A's description of the elimination of reactor coolant pumps (RCPs) in NuScale provides the design basis that directly informs Section B's analysis of natural circulation flow rates, as the absence of RCPs necessitates reliance on natural circulation for core cooling."
+    },
+    {
+      "source": "nuscale_ch01_0731",
+      "target": "nuscale_ch01_0741",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) in NuScale's design, which directly impacts the analysis in Section B by necessitating reliance on natural circulation flow rates for core cooling, thus connecting the design change to the evaluation of system performance."
+    },
+    {
+      "source": "nuscale_ch01_0731",
+      "target": "nuscale_ch05_0003",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the regulatory conformance regarding the elimination of reactor coolant pumps (RCPs), while Section B provides the design basis analysis showing that natural circulation flow rates are sufficient to replace the function of RCPs, thus demonstrating that the design satisfies the regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch05_0006",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) and reliance on natural circulation for cooling, while Section B analyzes the resulting natural circulation flow rates to ensure adequate heat removal, thus connecting the design change in A to the performance evaluation in B."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0730",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) and reliance on natural circulation for cooling, while Section B analyzes the plant's conformance with regulatory criteria for loss of forced coolant flow, thus Section A's design approach is directly evaluated against Section B's regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0741",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) in favor of a natural circulation cooling system, while Section B analyzes the resulting natural circulation flow rates to demonstrate conformance with regulatory criteria, thus Section B provides analysis results that demonstrate whether the design change described in Section A meets regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch05_0003",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) and reliance on natural circulation for cooling, while Section B analyzes the design basis and confirms that the NuScale system circulates primary coolant solely via natural circulation without RCPs, directly connecting the design description to the technical analysis of flow rates."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch01_0730",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the system evaluation and performance optimization of NuScale's natural circulation (eliminated RCPs), while Section B references regulatory criteria for loss of forced reactor coolant flow, connecting the design choice in A to the regulatory analysis in B."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch01_0741",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the system evaluation and performance optimization of NuScale's natural circulation system in the absence of reactor coolant pumps (RCPs), while Section B references regulatory criteria and safety analysis methods that NuScale uses to demonstrate conformance in scenarios where RCPs would traditionally be involved, thus connecting the design choice (elimination of RCPs) with the analysis of natural circulation flow rates to meet regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B explains that NuScale eliminates reactor coolant pumps (RCPs) in favor of natural circulation, while Section A analyzes the resulting natural circulation flow rates to ensure system performance, thus Section A provides detailed evaluation of the design approach described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0730",
+      "target": "nuscale_ch01_0741",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) in NuScale's design, which directly impacts the analysis in Section B regarding natural circulation flow rates as the primary means of reactor coolant flow, connecting the design change to the flow rate analysis."
+    },
+    {
+      "source": "nuscale_ch01_0730",
+      "target": "nuscale_ch05_0003",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A references the regulatory criteria and conformance regarding the elimination of reactor coolant pumps (RCPs), while Section B provides the design basis and analysis showing that natural circulation flow rates are sufficient to replace the function of RCPs, thus demonstrating that the design satisfies the regulatory requirements discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0741",
+      "target": "nuscale_ch05_0003",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) in NuScale's design, while Section B analyzes how natural circulation flow rates are achieved in the absence of RCPs, directly connecting the design choice in A with the performance analysis in B."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0731",
+      "relation": "CONTRADICTS",
+      "confidence": 0.95,
+      "description": "Section A explains that NuScale eliminates reactor coolant pumps (RCPs) and thus certain PWR accident scenarios and requirements do not apply, while Section B analyzes the consequences and regulatory conformance for events involving RCPs, highlighting that such analyses are not relevant to NuScale's natural circulation design."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0044",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A explains that NuScale eliminates reactor coolant pumps (RCPs), making certain PWR regulatory guidance inapplicable, while Section B describes how natural circulation and passive systems provide core cooling in the absence of RCPs, thus Section B's analysis of natural circulation flow rates operationalizes the design choice described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch05_0006",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A explains that NuScale eliminates reactor coolant pumps (RCPs), making certain PWR regulatory guidance inapplicable, while Section B analyzes how natural circulation flow rates (enabled by the absence of RCPs) are established to optimize plant performance, thus Section A's design choice directly informs the analysis in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch01_0731",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the NuScale reactor's elimination of reactor coolant pumps (RCPs) and reliance on natural circulation, while Section B references regulatory criteria and analyses for events involving RCP failures, connecting them through the design choice to eliminate RCPs and the resulting need to analyze natural circulation flow rates for safety conformance."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch01_0044",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the reactor coolant system's design, including the absence of reactor coolant pumps (RCPs), while Section B explains how natural circulation—enabled by this design—provides sufficient flow rates for decay heat removal, directly connecting the design choice in A to the performance analysis in B."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0006",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A describes the design elimination of reactor coolant pumps (RCPs) in favor of natural circulation, while Section B analyzes the resulting natural circulation flow rates to evaluate system performance, directly connecting the design choice in A to the operational analysis in B."
+    },
+    {
+      "source": "nuscale_ch01_0057",
+      "target": "nuscale_ch01_0731",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A provides critical heat flux testing data for the NuScale fuel design, which is necessary to validate the safety analysis in Section B that addresses loss of forced reactor coolant flow scenarios resulting from the elimination of reactor coolant pumps (RCPs), thus connecting fuel performance limits to natural circulation flow analysis."
+    },
+    {
+      "source": "nuscale_ch01_0057",
+      "target": "nuscale_ch01_0044",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A provides critical heat flux data and correlations for the NuScale fuel design, which are necessary to validate the natural circulation flow rates analyzed in Section B after the elimination of reactor coolant pumps (RCPs)."
+    },
+    {
+      "source": "nuscale_ch01_0057",
+      "target": "nuscale_ch05_0006",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A provides critical heat flux data and correlations for the NuScale fuel design, which are necessary inputs for the natural circulation flow rate analysis described in Section B to ensure safe and optimal system performance without RCPs."
+    },
+    {
+      "source": "nuscale_ch01_0023",
+      "target": "nuscale_ch01_0731",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) in NuScale's design, which directly relates to Section B's analysis of natural circulation flow rates as the absence of RCPs necessitates reliance on natural circulation for core cooling."
+    },
+    {
+      "source": "nuscale_ch01_0023",
+      "target": "nuscale_ch01_0044",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A's elimination of reactor coolant pumps (RCPs) in the NuScale design is directly related to Section B's reliance on natural circulation flow rates for decay heat removal, as the absence of RCPs necessitates effective passive natural circulation to meet cooling requirements."
+    },
+    {
+      "source": "nuscale_ch01_0023",
+      "target": "nuscale_ch05_0006",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) as part of the containment system design, while Section B analyzes how natural circulation flow rates are established and optimized in the absence of RCPs, directly connecting the design choice in A to the operational analysis in B."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0731",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) and reliance on passive systems, while Section B analyzes the plant's conformance with regulatory criteria for loss of forced coolant flow, connecting the design change in A to the safety analysis in B."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0044",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A's elimination of reactor coolant pumps (RCPs) necessitates reliance on natural circulation, which is analyzed in Section B through the evaluation of natural circulation flow rates to ensure adequate decay heat removal."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch05_0006",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) and reliance on passive systems, while Section B analyzes the resulting natural circulation flow rates that must be sufficient to meet design and safety criteria, thus Section B evaluates whether the design change described in Section A achieves required performance."
+    },
+    {
+      "source": "nuscale_ch01_0058",
+      "target": "nuscale_ch01_0731",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the testing and validation of fuel design critical heat flux correlations necessary for safe operation under natural circulation, which is directly relevant to Section B's analysis of system behavior and safety conformance in scenarios where reactor coolant pumps (RCPs) are eliminated and natural circulation is relied upon."
+    },
+    {
+      "source": "nuscale_ch01_0058",
+      "target": "nuscale_ch01_0044",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides critical heat flux data and correlations for the NuScale fuel design, which are necessary for validating the natural circulation flow rates analyzed in Section B after the elimination of reactor coolant pumps (RCPs)."
+    },
+    {
+      "source": "nuscale_ch01_0058",
+      "target": "nuscale_ch05_0006",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A provides critical heat flux data and correlations for the NuScale fuel design, which are necessary inputs for the natural circulation flow rate analysis described in Section B to ensure safe and optimal system performance after eliminating RCPs."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch05_0020",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A explains that NuScale eliminates reactor coolant pumps (RCPs), making certain PWR regulatory guidance inapplicable, while Section B describes the natural circulation-based reactor coolant system design that replaces forced flow with RCPs, directly connecting the design change to the resulting flow analysis."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0057",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A explains that NuScale's design eliminates reactor coolant pumps (RCPs), necessitating reliance on natural circulation, while Section B provides critical heat flux (CHF) test data and correlations that validate the safety analysis of natural circulation flow rates in the absence of RCPs."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0023",
+      "relation": "LEADS_TO",
+      "confidence": 0.85,
+      "description": "Section A explains that NuScale eliminates reactor coolant pumps (RCPs), making certain PWR regulatory guidance inapplicable, while Section B describes containment system features that are enabled or influenced by the absence of RCPs, such as maintaining a vacuum and eliminating the need for RPV insulation."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0024",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A explains that NuScale eliminates reactor coolant pumps (RCPs), making certain PWR-specific regulatory guidance inapplicable, while Section B describes how the plant relies on passive systems like natural circulation and ECCS for core cooling, thus connecting the design choice in A to the operational analysis in B."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0058",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A explains that NuScale's design eliminates reactor coolant pumps (RCPs), making forced flow guidance inapplicable, while Section B provides analysis and testing data on natural circulation flow rates, which are necessary due to the absence of RCPs."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch01_0057",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) and reliance on natural circulation in the reactor coolant system, while Section B analyzes whether the natural circulation flow rates are sufficient to meet thermal-hydraulic safety requirements, thus Section B evaluates the safety implications of the design change described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch01_0023",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A analyzes the natural circulation flow rates enabled by the elimination of reactor coolant pumps (RCPs), which is described as a design feature in Section B's general plant description of NuScale's containment system."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch01_0024",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the design of the reactor coolant system, including the absence of reactor coolant pumps (RCPs), while Section B outlines the emergency core cooling system's reliance on passive features, both of which depend on natural circulation flow rates for heat removal, connecting the design elimination of RCPs to the analysis of natural circulation performance."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) in the NuScale design, which necessitates reliance on natural circulation for coolant flow, while Section B analyzes the thermal-hydraulic performance and critical heat flux testing to validate that natural circulation provides adequate flow rates for safe operation, thus Section B provides evidence that supports the design approach described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0057",
+      "target": "nuscale_ch01_0023",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides critical heat flux testing data for the NuScale fuel design, which supports the analysis in Section B by supplying necessary thermal-hydraulic parameters that underpin the natural circulation flow rate calculations after the elimination of RCPs."
+    },
+    {
+      "source": "nuscale_ch01_0057",
+      "target": "nuscale_ch01_0024",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A provides critical heat flux data and correlations for the NuScale fuel design, which are necessary to validate the natural circulation flow rates analyzed in Section B after the elimination of RCPs, ensuring that passive safety systems like ECCS can maintain adequate core cooling."
+    },
+    {
+      "source": "nuscale_ch01_0057",
+      "target": "nuscale_ch01_0058",
+      "relation": "SEMANTIC",
+      "confidence": 1.0,
+      "description": "Section A and Section B both describe the objective of obtaining critical heat flux (CHF) data for the NuScale fuel design using AREVA HMP/HTP spacer grid technology, with the results used to develop and validate CHF correlations (NSP4 and NSP2), indicating they are essentially identical in content and purpose."
+    },
+    {
+      "source": "nuscale_ch01_0023",
+      "target": "nuscale_ch01_0024",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A's description of the containment vacuum and elimination of convective heat transfer provides a design basis that supports Section B's analysis of passive ECCS operation, which relies on natural circulation rather than forced flow from RCPs."
+    },
+    {
+      "source": "nuscale_ch01_0023",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) and the resulting reliance on natural circulation, while Section B analyzes the natural circulation flow rates and critical heat flux testing to demonstrate that the design can achieve adequate cooling without RCPs, thus providing evidence that supports the claims made in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0058",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) and reliance on passive systems, while Section B analyzes natural circulation flow rates that result from this design change, directly connecting the design feature to its thermal-hydraulic performance."
+    },
+    {
+      "source": "nuscale_ch01_0017",
+      "target": "nuscale_ch01_0731",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the NuScale facility's elimination of reactor coolant pumps (RCPs) in its design, while Section B analyzes regulatory requirements and accident scenarios related to RCP failures, connecting them by showing how the design change in A addresses or obviates the failure modes analyzed in B."
+    },
+    {
+      "source": "nuscale_ch01_0017",
+      "target": "nuscale_ch01_0044",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) in NuScale's design, which necessitates reliance on natural circulation for core cooling, while Section B analyzes the system's ability to achieve adequate natural circulation flow rates to remove decay heat, thus demonstrating that the design result (natural circulation) satisfies the regulatory requirement for core cooling without RCPs."
+    },
+    {
+      "source": "nuscale_ch01_0017",
+      "target": "nuscale_ch05_0006",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) in the NuScale design, which necessitates reliance on natural circulation, while Section B analyzes the resulting natural circulation flow rates to ensure they are sufficient for safe and optimal plant operation."
+    },
+    {
+      "source": "nuscale_ch01_0811",
+      "target": "nuscale_ch01_0731",
+      "relation": "LEADS_TO",
+      "confidence": 0.9,
+      "description": "Section A describes NuScale's elimination of reactor coolant pumps (RCPs) and reliance on reactor trip signals to prevent thermal hydraulic instability, while Section B analyzes the consequences and safety analysis requirements for loss of forced coolant flow, directly connecting the design choice in A to the flow rate analyses in B."
+    },
+    {
+      "source": "nuscale_ch01_0811",
+      "target": "nuscale_ch01_0044",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A explains that NuScale eliminates reactor coolant pumps (RCPs) and relies on reactor trip signals to prevent thermal hydraulic instabilities, while Section B describes the plant's use of a closed-loop, two-phase natural circulation system for cooling, showing that the design's reliance on natural circulation (Section B) is the basis for eliminating RCPs (Section A)."
+    },
+    {
+      "source": "nuscale_ch01_0811",
+      "target": "nuscale_ch05_0006",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A explains that NuScale eliminates reactor coolant pumps (RCPs) and relies on reactor trip signals to prevent thermal hydraulic instability, while Section B analyzes how natural circulation flow rates (enabled by the absence of RCPs) are established and evaluated to ensure optimal and safe plant performance, thus Section B provides the technical analysis that supports the safety claims made in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0814",
+      "target": "nuscale_ch01_0731",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A explains that NuScale eliminates reactor coolant pumps (RCPs) and relies on reactor trip signals to prevent thermal hydraulic instability, while Section B analyzes the consequences and safety analysis requirements for loss or failure of RCPs, thus Section A's design decision directly impacts the scenarios and analyses discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0814",
+      "target": "nuscale_ch01_0044",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A explains that NuScale eliminates reactor coolant pumps (RCPs) and relies on reactor trip signals to prevent thermal hydraulic instability, while Section B describes the natural circulation system that replaces forced flow, directly connecting the design change in A to the operational analysis in B."
+    },
+    {
+      "source": "nuscale_ch01_0814",
+      "target": "nuscale_ch05_0006",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A explains that NuScale eliminates reactor coolant pumps (RCPs) and relies on reactor trip signals to prevent thermal hydraulic instability, while Section B analyzes how natural circulation flow rates (enabled by the absence of RCPs) are established and evaluated to ensure optimal and safe plant performance, thus Section B provides the technical analysis that supports the design approach described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch01_0731",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the system configuration and operational steps after the elimination of reactor coolant pumps (RCPs), while Section B references regulatory criteria and conformance related to events involving RCP failures, connecting them through the design choice to eliminate RCPs and the resulting reliance on natural circulation analyzed in Ch.05."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch01_0044",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the operational steps taken after the elimination of reactor coolant pumps (RCPs), including reliance on natural circulation and preparation for decay heat removal, while Section B analyzes the plant's ability to achieve adequate natural circulation flow rates and decay heat removal using passive systems, thus Section A's design choices are evaluated in Section B's performance analysis."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch05_0006",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) and the reliance on natural circulation, which is directly analyzed in Section B through the evaluation of natural circulation flow rates to ensure adequate heat removal."
+    },
+    {
+      "source": "nuscale_ch01_0017",
+      "target": "nuscale_ch01_0811",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the facility's design choice to eliminate reactor coolant pumps (RCPs), which directly relates to Section B's analysis of how natural circulation (in the absence of RCPs) is relied upon to maintain thermal hydraulic stability and prevent violation of safety limits."
+    },
+    {
+      "source": "nuscale_ch01_0017",
+      "target": "nuscale_ch01_0814",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the facility's elimination of reactor coolant pumps (RCPs) and reliance on natural circulation, while Section B analyzes how the natural circulation flow rates and protective actions satisfy regulatory requirements for thermal hydraulic stability in the absence of RCPs."
+    },
+    {
+      "source": "nuscale_ch01_0017",
+      "target": "nuscale_ch05_0005",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) in NuScale's facility design, which directly necessitates the natural circulation flow rates analyzed in Section B to ensure adequate core cooling."
+    },
+    {
+      "source": "nuscale_ch01_0811",
+      "target": "nuscale_ch01_0814",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) and reliance on reactor trip signals to prevent CHF violations, while Section B discusses the system for monitoring process variables to detect and suppress instability, both addressing how NuScale ensures thermal hydraulic stability without RCPs."
+    },
+    {
+      "source": "nuscale_ch01_0811",
+      "target": "nuscale_ch05_0005",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A explains that NuScale eliminates reactor coolant pumps (RCPs) and relies on reactor trip signals to prevent thermal hydraulic instabilities, while Section B describes how natural circulation is established and maintained in the absence of RCPs, thus providing operational details that support the safety claims in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0814",
+      "target": "nuscale_ch05_0005",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A explains that NuScale eliminates reactor coolant pumps (RCPs) and relies on reactor trip signals to prevent thermal hydraulic instabilities, while Section B analyzes how natural circulation flow rates are achieved and maintained in the absence of RCPs, directly connecting the design choice in A to the operational analysis in B."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch01_0731",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A explains that NuScale's reactor coolant system eliminates reactor coolant pumps (RCPs) in favor of natural circulation, while Section B lists regulatory criteria and accident analyses related to RCP failures, which are rendered inapplicable by the design described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch01_0044",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A explains that NuScale eliminates reactor coolant pumps (RCPs) and relies on natural circulation for primary coolant flow, while Section B analyzes how the natural circulation system, with passive decay heat removal, maintains adequate flow rates and cooling, thus demonstrating that the design approach in A is operationally viable as analyzed in B."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0006",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A explains that NuScale eliminates reactor coolant pumps (RCPs) and relies on natural circulation for coolant flow, while Section B analyzes how natural circulation flow rates are established and optimized in the absence of RCPs."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0731",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) as a plant feature, while Section B analyzes the regulatory conformance and safety analysis implications of scenarios involving RCP failures, connecting them through the design choice (elimination of RCPs) and its impact on natural circulation flow and safety analysis."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0044",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) as a plant feature, while Section B analyzes how natural circulation flow rates are achieved in the absence of RCPs, directly connecting the design feature to its operational consequence."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch05_0006",
+      "relation": "LEADS_TO",
+      "confidence": 0.9,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) as a plant feature, while Section B analyzes how natural circulation flow rates are established and evaluated in the absence of RCPs, directly connecting the design choice in A to the performance analysis in B."
+    },
+    {
+      "source": "nuscale_ch01_0732",
+      "target": "nuscale_ch01_0731",
+      "relation": "LEADS_TO",
+      "confidence": 0.85,
+      "description": "Section A describes the regulatory context and thermal margin limits related to the elimination of reactor coolant pumps (RCPs), while Section B addresses the analysis of events (such as pump rotor seizure and shaft break) that are rendered irrelevant or altered by the absence of RCPs, thus connecting the design change in Ch.01 to the natural circulation analysis in Ch.05."
+    },
+    {
+      "source": "nuscale_ch01_0732",
+      "target": "nuscale_ch01_0044",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A discusses the regulatory requirements and safety analysis related to the elimination of reactor coolant pumps (RCPs), while Section B describes how NuScale's design uses a closed-loop, two-phase natural circulation system (instead of RCPs) to achieve required cooling, directly connecting the design choice in Ch.01 to the natural circulation flow rate analysis in Ch.05."
+    },
+    {
+      "source": "nuscale_ch01_0732",
+      "target": "nuscale_ch05_0006",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) in NuScale's design, while Section B analyzes how natural circulation flow rates (enabled by the absence of RCPs) are established and evaluated to ensure adequate heat removal, directly connecting the design change to its operational performance."
+    },
+    {
+      "source": "nuscale_ch01_0738",
+      "target": "nuscale_ch01_0731",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) in NuScale's design, while Section B analyzes the resulting reliance on natural circulation flow rates, connecting the design change (elimination of RCPs) to the operational analysis (natural circulation performance)."
+    },
+    {
+      "source": "nuscale_ch01_0738",
+      "target": "nuscale_ch01_0044",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A discusses the elimination of reactor coolant pumps (RCPs) in NuScale and the resulting reliance on natural circulation to meet thermal margin limits, while Section B describes the plant's closed-loop, two-phase natural circulation cooling system that supports this design choice by providing adequate decay heat removal without RCPs."
+    },
+    {
+      "source": "nuscale_ch01_0738",
+      "target": "nuscale_ch05_0006",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) in NuScale's design, while Section B analyzes how natural circulation flow rates (enabled by the absence of RCPs) are established and evaluated to ensure adequate thermal performance, directly connecting the design change in A to the operational analysis in B."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch01_0732",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A explains that NuScale eliminates reactor coolant pumps (RCPs) and relies on natural circulation for primary coolant flow, while Section B analyzes the safety and regulatory conformance of the plant's response to loss of forced coolant flow, thus Section A's design choice directly informs and is evaluated by Section B's analysis of natural circulation flow rates."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch01_0738",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A explains that NuScale eliminates reactor coolant pumps in favor of natural circulation, which directly impacts the natural circulation flow rates analyzed in Section B to ensure thermal margin limits and regulatory conformance."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0732",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) as a plant feature, while Section B analyzes the resulting natural circulation flow rates that occur due to the absence of RCPs, directly connecting the design choice in A to the performance analysis in B."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0738",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) as a plant feature, while Section B analyzes how natural circulation (enabled by the absence of RCPs) achieves required flow rates to satisfy thermal margin limits, directly connecting the design choice in A to the safety analysis in B."
+    },
+    {
+      "source": "nuscale_ch01_0732",
+      "target": "nuscale_ch01_0738",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A describes the elimination of reactor coolant pumps (RCPs) in NuScale's design, which directly impacts the natural circulation flow rates analyzed in Section B, as the absence of RCPs necessitates reliance on natural circulation for core cooling."
+    }
+  ]
+}

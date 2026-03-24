@@ -1,0 +1,189 @@
+{
+  "timestamp": "2026-03-24T09:24:49.704943",
+  "evaluation_framework": "RAGAs v0.4",
+  "config": {
+    "model": "gpt-4.1",
+    "evaluator_model": "gpt-4.1",
+    "embedding_model": "text-embedding-3-small",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 5,
+    "errors": 0
+  },
+  "metrics_description": {
+    "faithfulness": "Fraction of claims in the answer that are supported by the retrieved context (0-1)",
+    "answer_relevancy": "How relevant the answer is to the question, measured by reverse question generation (0-1)",
+    "context_recall": "Fraction of expected answer sentences supported by retrieved context (0-1)",
+    "factual_correctness": "Factual overlap between agent answer and expected answer (0-1)",
+    "keyword_hit": "Fraction of expected keywords present in the agent answer (0-1)"
+  },
+  "summary": {
+    "faithfulness": null,
+    "answer_relevancy": 0.9323,
+    "context_recall": 0.8,
+    "factual_correctness": 0.438,
+    "keyword_hit": 0.5792
+  },
+  "by_type": {
+    "composite": {
+      "count": 1,
+      "faithfulness": null,
+      "answer_relevancy": 0.8767,
+      "context_recall": 1.0,
+      "factual_correctness": 0.59,
+      "keyword_hit": 0.667
+    },
+    "image_only": {
+      "count": 1,
+      "faithfulness": null,
+      "answer_relevancy": 0.9409,
+      "context_recall": 0.6667,
+      "factual_correctness": 0.5,
+      "keyword_hit": 0.6
+    },
+    "table_only": {
+      "count": 1,
+      "faithfulness": null,
+      "answer_relevancy": 0.8917,
+      "context_recall": 0.6667,
+      "factual_correctness": 0.4,
+      "keyword_hit": 0.429
+    },
+    "text_only": {
+      "count": 2,
+      "faithfulness": null,
+      "answer_relevancy": 0.9762,
+      "context_recall": 0.8334,
+      "factual_correctness": 0.35,
+      "keyword_hit": 0.6
+    }
+  },
+  "results": [
+    {
+      "id": "Q136",
+      "type": "text_only",
+      "question": "Is the NuScale natural circulation design adequate for removing core heat without reactor coolant pumps?",
+      "expected_answer": "Yes. The natural circulation design is adequate because the NuScale core has a much lower power density than conventional PWRs, and the tall RPV with large height difference between heat source (core) and heat sink (SG) provides sufficient buoyancy-driven flow. Analysis shows 587 kg/s flow at 100% power is sufficient for heat removal.",
+      "agent_answer": "**Core Conclusion:**  \nYes, the NuScale natural circulation design is adequate for removing core heat without reactor coolant pumps.\n\n**Supporting Evidence:**  \n- The NuScale reactor coolant system (RCS) is explicitly designed to use natural circulation, eliminating the need for pumps or external piping ([nuscale_ch05_0002], [nuscale_ch05_0003]). The system is engineered to safely transfer heat from the core under all operating and transient conditions.\n- The Decay Heat Removal System (DHRS) is a passive, engineered safety feature that removes residual and decay heat after shutdown, maintaining RCS temperature below 420°F within 36 hours without external power ([nuscale_ch05_0022]). This demonstrates the system’s ability to cool the core solely via natural circulation.\n- System evaluation confirms that steady-state parameters (coolant temperatures, flow rates, pressures) are established and verified through thermal hydraulic modeling, ensuring reliable natural circulation and efficient heat removal ([nuscale_ch05_0006]).\n- Figures 5.4-11, 5.4-12, and 5.4-13 show that, even with only one DHRS train operating, the primary coolant temperature decreases steadily and remains within safe limits for extended periods (e.g., below 420°F within 36 hours), confirming passive heat removal capability.\n- The design is supported by compliance with ASME Boiler and Pressure Vessel Code and NRC regulatory requirements ([nuscale_ch05_0008]), ensuring structural integrity and safety margins for natural circulation operation.\n\n**Uncertainties:**  \n- The analysis assumes that the DHRS and associated valves function as designed. Failure of both DHRS trains would require reliance on other passive safety features, but with one train operable, safe shutdown is maintained ([Table 5.4-8]).\n- The adequacy is demonstrated for non-LOCA (Loss of Coolant Accident) events; for LOCA, the Emergency Core Cooling System (ECCS) would also be engaged.\n\n**References to Knowledge Graph Nodes:**  \n- [nuscale_ch05_0002], [nuscale_ch05_0003], [nuscale_ch05_0022], [nuscale_ch05_0006], [nuscale_ch05_0008], [Table 5.4-8], Figures 5.4-11, 5.4-12, 5.4-13\n\n**Summary:**  \nThe NuScale design’s reliance on natural circulation, validated by system modeling, passive DHRS performance, and regulatory compliance, provides robust and adequate core heat removal without reactor coolant pumps.",
+      "faithfulness": null,
+      "answer_relevancy": 1.0,
+      "context_recall": 0.6667,
+      "factual_correctness": 0.14,
+      "keyword_hit": 0.4,
+      "kg_nodes": 13,
+      "kg_edges": 44,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 106.0,
+      "eval_sec": 58.6,
+      "total_sec": 164.6,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0002] Summary Description | node: [nuscale_ch05_0003] Design Basis | node: [nuscale_ch05_0022] Decay Heat Removal System | edge: SUPPORTS | edge: SUPPORTS",
+        "Hop 2: node: [nuscale_ch05_0023] Reactor Coolant System High-Point Vents | node: [nuscale_ch05_0025] References | node: [nuscale_ch05_0006] System Evaluation | node: [nuscale_ch05_0013] References | node: [nuscale_ch05_0019] Reactor Coolant System Component and Sub | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS | edge: REFERENCES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: REFERENCES | edge: SPECIFIES | edge: SPECIFIES | edge: REFERENCES | edge: SPECIFIES | edge: REFERENCES | edge: SPECIFIES | edge: REFERENCES",
+        "Hop 3: node: [nuscale_ch05_0016] Pressure-Temperature Limits, Pressurized | node: [nuscale_ch05_0017] Reactor Vessel Integrity | edge: SEMANTIC | edge: SUPPORTS | edge: SUPPORTS | edge: SPECIFIES | edge: IS_PREREQUISITE_OF | edge: SUPPORTS",
+        "Hop 4: node: [nuscale_ch05_0014] Reactor Vessel | node: [nuscale_ch05_0008] Compliance with Codes and Code Cases | node: [nuscale_ch05_0024] Pressurizer | edge: SPECIFIES | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: IS_PREREQUISITE_OF | edge: SPECIFIES | edge: SPECIFIES | edge: SUPPORTS | edge: SATISFIES | edge: SPECIFIES | edge: SPECIFIES"
+      ]
+    },
+    {
+      "id": "Q137",
+      "type": "text_only",
+      "question": "Does the NuScale vacuum containment design provide adequate pressure suppression during a LOCA?",
+      "expected_answer": "Yes. The vacuum CNV provides effective pressure suppression because steam released during a LOCA condenses on the cool CNV inner wall, which is maintained at reactor pool water temperature. The vacuum starting condition and condensation mechanism keep containment pressure well below design limits without active spray systems.",
+      "agent_answer": "**Core Conclusion:**  \nYes, the NuScale vacuum containment design provides adequate pressure suppression during a Loss-of-Coolant Accident (LOCA), as demonstrated by its passive safety features and regulatory conformance.\n\n**Supporting Evidence from the Knowledge Graph:**\n\n- The NuScale Containment Vessel (CNV) is maintained at a vacuum under normal conditions, which \"offers several safety and operational benefits,\" including minimizing noncondensible gases and maximizing steam condensation rates for heat removal during a LOCA ([nuscale_ch01_0022], [nuscale_ch01_0020]).\n- During a LOCA, \"steam is vented from the reactor pressure vessel into the containment vessel for condensation,\" and the CNV's vacuum state is a prerequisite for effective pressure suppression ([nuscale_ch01_0026] --[IS_PREREQUISITE_OF]--> [nuscale_ch01_0022], [nuscale_ch01_0020]).\n- The design \"eliminates the need for external power and large coolant loops,\" relying on passive safety systems that \"significantly lower the risk of core damage\" ([nuscale_ch01_0022], [nuscale_ch01_0020]).\n- Regulatory review sections confirm that NuScale \"satisfies\" or \"conforms\" to the relevant DSRS and SRP requirements for LOCA pressure suppression and containment performance ([nuscale_ch01_0779], [nuscale_ch01_0776], [nuscale_ch01_0781]).\n- The NuScale design does **not** use or credit a suppression pool (as in BWRs), and SRP 6.5.5 criteria are \"not applicable\" ([nuscale_ch01_0171], [nuscale_ch01_0169]), but the vacuum containment approach is accepted as providing the necessary pressure suppression function.\n- Table 1.2-2 confirms that \"containment peak pressure for worst case design-basis accident remains below containment design pressure,\" ensuring containment integrity and minimizing radioactive releases.\n\n**Uncertainties:**\n- Some regulatory criteria and analysis models are \"superseded\" or \"partially conforming\" due to the unique design (e.g., [nuscale_ch01_0780], [nuscale_ch01_0779]), but no evidence suggests these gaps compromise pressure suppression adequacy.\n\n**Summary:**  \nThe NuScale vacuum containment design, through passive condensation and subatmospheric operation, meets regulatory expectations for pressure suppression during a LOCA, even though it does not use traditional suppression pools. This is supported by multiple nodes and tables (e.g., [nuscale_ch01_0022], [nuscale_ch01_0026], [nuscale_ch01_0779], Table 1.2-2). No significant uncertainties remain regarding its adequacy for this safety function.",
+      "faithfulness": null,
+      "answer_relevancy": 0.9523,
+      "context_recall": 1.0,
+      "factual_correctness": 0.56,
+      "keyword_hit": 0.8,
+      "kg_nodes": 21,
+      "kg_edges": 79,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 194.5,
+      "eval_sec": 67.3,
+      "total_sec": 261.8,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0022] Engineered Safety Feature Materials | node: [nuscale_ch01_0779] DSRS 15.6.5, Rev 0: Loss-of-Coolant Acci | node: [nuscale_ch01_0020] Safety Considerations | node: [nuscale_ch01_0780] SRP 15.6.5.A, Rev 1: Radiological Conseq | node: [nuscale_ch01_0169] SRP 6.5.3, Rev 3: Fission Product Contro | node: [nuscale_ch01_0171] SRP 6.5.5, Rev 1: Pressure Suppression P | edge: SATISFIES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: REFERENCES | edge: SUPPORTS | edge: CONTRADICTS | edge: SATISFIES | edge: SATISFIES | edge: CONTRADICTS | edge: SUPPORTS | edge: SATISFIES",
+        "Hop 2: node: [nuscale_ch01_0701] DSRS 15.1.6, Rev 0: Loss of Containment  | node: [nuscale_ch01_0601] SRP 13.3, Rev 3: Emergency PlanningII.22 | node: [nuscale_ch01_0699] DSRS 15.1.6, Rev 0: Loss of Containment  | node: [nuscale_ch01_0604] SRP 13.3, Rev 3: Emergency PlanningII.25 | edge: SPECIFIES | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: REFERENCES | edge: SUPPORTS | edge: REFERENCES | edge: REFERENCES | edge: SUPPORTS",
+        "Hop 3: node: [nuscale_ch01_0051] Plant Features of Special Interest | node: [nuscale_ch01_0194] DSRS Appendix 7.0-A, Rev 0: I&C - Hazard | node: [nuscale_ch01_0189] BTP 6-2, Rev 3: Minimum Containment Pres | node: [nuscale_ch01_0717] DSRS 15.2.6, Rev 0: Loss of nullmergency | node: [nuscale_ch01_0188] BTP 6-1, (March 2007): pH for Emergency  | node: [nuscale_ch01_0694] DSRS 15.1.6, Rev 0: Loss of Containment  | edge: SUPPORTS | edge: SATISFIES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: LEADS_TO | edge: SUPPORTS | edge: SUPPORTS | edge: REFERENCES | edge: SUPPORTS | edge: SUPPORTS | edge: SEMANTIC | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: REFERENCES | edge: SUPPORTS | edge: SEMANTIC | edge: SPECIFIES | edge: SUPPORTS",
+        "Hop 4: node: [nuscale_ch01_0357] DSRS 9.3.4, Rev 0: Chemical and Volume C | node: [nuscale_ch01_0781] SRP 15.6.5.A, Rev 1: Radiological Conseq | node: [nuscale_ch01_0776] DSRS 15.6.5, Rev 0: Loss-of-Coolant Acci | node: [nuscale_ch01_0026] Fission Product Removal and Control Syst | node: [nuscale_ch01_0052] Comparison with Other Facilities | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: REFERENCES | edge: REFERENCES | edge: SUPPORTS | edge: SATISFIES | edge: REFERENCES | edge: SUPPORTS | edge: IS_PREREQUISITE_OF | edge: SATISFIES | edge: IS_PREREQUISITE_OF | edge: SPECIFIES | edge: IS_PREREQUISITE_OF | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SATISFIES | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS"
+      ]
+    },
+    {
+      "id": "Q138",
+      "type": "table_only",
+      "question": "Based on Table 5.3-8, do the NuScale RPV materials satisfy the PTS screening criteria of 10 CFR 50.61?",
+      "expected_answer": "Yes. Table 5.3-8 shows that the RTPTS values for all RPV beltline materials are well below the screening criteria of 270 degrees F for plates/forgings and 300 degrees F for welds. The maximum RTPTS is for the weld at 120.4 degrees F, providing a margin of approximately 180 degrees F below the 300 degrees F weld criterion.",
+      "agent_answer": "**Core Conclusion:**  \nYes, the NuScale RPV (Reactor Pressure Vessel) materials satisfy the Pressurized Thermal Shock (PTS) screening criteria of 10 CFR 50.61.\n\n**Supporting Evidence:**  \n- **Table 5.3-8: Pressurized Thermal Shock Screening Result** provides the key data. For both 32 EFPY and 57 EFPY (Effective Full Power Years), the adjusted reference temperatures (RT<sub>PTS</sub>) for all critical RPV regions are well below the regulatory screening limits:\n  - **Lower RPV shell, beltline:**  \n    - 32 EFPY: RT<sub>PTS</sub> = 88.9°F (limit: 270°F)  \n    - 57 EFPY: RT<sub>PTS</sub> = 94.8°F (limit: 270°F)\n  - **Lower RPV weld:**  \n    - 32 EFPY: RT<sub>PTS</sub> = 113.6°F (limit: 300°F)  \n    - 57 EFPY: RT<sub>PTS</sub> = 125.9°F (limit: 300°F)\n  - **RPV bottom head:**  \n    - 32 EFPY: RT<sub>PTS</sub> = 74.4°F (limit: 270°F)  \n    - 57 EFPY: RT<sub>PTS</sub> = 79.9°F (limit: 270°F)\n\n- These values are all significantly below the respective screening criteria specified in 10 CFR 50.61 (node: [nuscale_ch05_0016], [nuscale_ch05_0017]).\n\n- The knowledge graph confirms that the methodology and regulatory compliance measures (node: [nuscale_ch05_0017]) ensure the vessel’s resistance to PTS remains within regulatory limits at end-of-life fluence levels.\n\n**Uncertainties:**  \n- The answer is based on the data provided in Table 5.3-8 and supporting text. If future surveillance data (see Table 5.3-5) were to show higher embrittlement than predicted, a re-evaluation would be required, but current evidence shows compliance.\n\n**Summary Statement:**  \nAll NuScale RPV materials meet the PTS screening criteria of 10 CFR 50.61, with RT<sub>PTS</sub> values well below regulatory limits at both 32 and 57 EFPY (see Table 5.3-8, node: [nuscale_ch05_0016]).",
+      "faithfulness": null,
+      "answer_relevancy": 0.8917,
+      "context_recall": 0.6667,
+      "factual_correctness": 0.4,
+      "keyword_hit": 0.429,
+      "kg_nodes": 7,
+      "kg_edges": 18,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 58.3,
+      "eval_sec": 59.1,
+      "total_sec": 117.4,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0016] Pressure-Temperature Limits, Pressurized | node: [nuscale_ch05_0017] Reactor Vessel Integrity | node: [nuscale_ch05_0018] References | edge: SUPPORTS | edge: SUPPORTS | edge: IS_PREREQUISITE_OF",
+        "Hop 2: node: [nuscale_ch05_0015] Reactor Vessel Materials | edge: SPECIFIES | edge: IS_PREREQUISITE_OF | edge: SPECIFIES",
+        "Hop 3: no results",
+        "Hop 4: node: [nuscale_ch05_0014] Reactor Vessel | node: [nuscale_ch05_0008] Compliance with Codes and Code Cases | node: [nuscale_ch05_0007] Integrity of Reactor Coolant Boundary | edge: SPECIFIES | edge: SUPPORTS | edge: SPECIFIES | edge: SPECIFIES | edge: SUPPORTS | edge: SPECIFIES | edge: SATISFIES | edge: SUPPORTS | edge: SPECIFIES | edge: SATISFIES | edge: SPECIFIES | edge: SPECIFIES"
+      ]
+    },
+    {
+      "id": "Q139",
+      "type": "image_only",
+      "question": "Based on Figure 5.1-2, does the NuScale RCS flow path appear to provide adequate driving head for natural circulation?",
+      "expected_answer": "Yes. Figure 5.1-2 shows a tall vertical loop with the heat source (core) at the bottom and heat sink (SG) near the top, with a long riser between them. This large elevation difference between the heat source and sink maximizes the buoyancy driving head for natural circulation, which is the primary design feature enabling pump-less operation.",
+      "agent_answer": "**Core Conclusion:**  \nYes, based on Figure 5.1-2 and supporting documentation, the NuScale RCS flow path appears to provide adequate driving head for natural circulation.\n\n**Supporting Evidence:**  \n- **Figure 5.1-2** (not shown here, but referenced in the knowledge graph) and the associated schematic flow diagram (see also Figure 5.1-3) illustrate a vertical, integral arrangement where the core is at the bottom, the steam generator is above, and the pressurizer is at the top. This configuration establishes a clear elevation difference between the heated core (riser) and the cooled downcomer, which is essential for generating the driving head required for natural circulation.\n- **Node [nuscale_ch05_0003] (Design Basis):** States that the RCS is designed for natural circulation without pumps, ensuring safe and efficient heat transfer from the core to the steam generator.\n- **Node [nuscale_ch05_0006] (System Evaluation):** Confirms that the system is evaluated for low pressure losses and uncertainties in flow resistance, specifically to ensure adequate driving head for natural circulation.\n- **Node [nuscale_ch05_0019] (Component and Subsystem Design):** Details the integral arrangement of the reactor, steam generator, and pressurizer within the RPV, supporting the necessary flow path for natural circulation.\n- **Node [nuscale_ch05_0004] (System Description):** Describes the RCS as removing heat from the core by natural circulation, with all major components located inside the containment vessel to minimize flow resistance.\n\n**Uncertainties:**  \n- The knowledge graph does not provide explicit quantitative values for the driving head or detailed hydraulic calculations. However, the design intent and evaluation steps described in the referenced nodes indicate that the configuration is specifically engineered to provide sufficient driving head for natural circulation.\n\n**Summary:**  \nThe integral, vertical arrangement of the NuScale RCS, as depicted in Figure 5.1-2 and described in nodes [nuscale_ch05_0003], [nuscale_ch05_0006], [nuscale_ch05_0019], and [nuscale_ch05_0004], supports the conclusion that the flow path provides adequate driving head for natural circulation, consistent with the system’s design basis and evaluation criteria.",
+      "faithfulness": null,
+      "answer_relevancy": 0.9409,
+      "context_recall": 0.6667,
+      "factual_correctness": 0.5,
+      "keyword_hit": 0.6,
+      "kg_nodes": 12,
+      "kg_edges": 27,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 100.2,
+      "eval_sec": 65.5,
+      "total_sec": 165.7,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0018] References | node: [nuscale_ch05_0004] System Description | node: [nuscale_ch05_0003] Design Basis | node: [nuscale_ch05_0006] System Evaluation | node: [nuscale_ch05_0002] Summary Description | edge: IS_PREREQUISITE_OF | edge: REFERENCES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SUPPORTS | edge: SPECIFIES",
+        "Hop 2: node: [nuscale_ch05_0023] Reactor Coolant System High-Point Vents | node: [nuscale_ch05_0000] Preface | node: [nuscale_ch05_0025] References | node: [nuscale_ch05_0024] Pressurizer | edge: SEMANTIC | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS | edge: IS_PREREQUISITE_OF | edge: REFERENCES | edge: SUPPORTS | edge: SPECIFIES",
+        "Hop 3: node: [nuscale_ch05_0005] System Components | edge: SPECIFIES | edge: SPECIFIES",
+        "Hop 4: node: [nuscale_ch05_0019] Reactor Coolant System Component and Sub | node: [nuscale_ch05_0022] Decay Heat Removal System | edge: SUPPORTS | edge: SPECIFIES | edge: SPECIFIES | edge: IS_PREREQUISITE_OF | edge: IS_PREREQUISITE_OF | edge: SUPPORTS | edge: SUPPORTS"
+      ]
+    },
+    {
+      "id": "Q140",
+      "type": "composite",
+      "question": "Based on Table 5.3-9/10 data and the text discussion of Charpy requirements, do the NuScale RPV materials maintain adequate fracture toughness through end of life?",
+      "expected_answer": "Yes. Tables 5.3-9/10 show minimum Charpy upper shelf energy of 58.4 ft-lb after irradiation, exceeding the 10 CFR 50 Appendix G requirement of 50 ft-lb. The text confirms that the reduced neutron fluence from NuScale's lower power density results in less embrittlement, maintaining adequate toughness margins through the 60-year design life.",
+      "agent_answer": "**Core Conclusion:**  \nYes, the NuScale RPV (Reactor Pressure Vessel) materials maintain adequate fracture toughness through end of life, as demonstrated by compliance with Charpy upper-shelf energy requirements and regulatory criteria.\n\n**Supporting Evidence:**  \n- **Charpy Upper-Shelf Energy (USE) Requirements:**  \n  Regulatory guidance (per RG 1.99, Rev. 2) requires that the Charpy USE for RPV beltline materials remain above 50 ft-lb throughout the vessel’s life.\n- **Table 5.3-9 Data:**  \n  - Lower RPV shell, beltline: End-of-life USE = **59.6 ft-lb**  \n  - Lower RPV weld: End-of-life USE = **63.5 ft-lb**  \n  - RPV bottom head: End-of-life USE = **64.1 ft-lb**  \n  All values are well above the 50 ft-lb minimum requirement.\n- **Table 5.3-10 (Adjusted for NuScale):**  \n  - After adjustment, the lowest predicted USE is **58.4 ft-lb** (shell, beltline), still above the regulatory threshold.\n- **Text Discussion ([nuscale_ch05_0016], [nuscale_ch05_0017]):**  \n  The methodology for pressure-temperature limits and fracture toughness evaluation follows ASME and NRC guidelines, explicitly accounting for embrittlement and upper-shelf energy degradation over 60 years. The text confirms that “all predicted values remain within regulatory safety criteria.”\n- **Material Surveillance:**  \n  Surveillance capsule program (see Figure 5.3-2 and Table 5.3-4) ensures ongoing verification of material properties.\n\n**Uncertainties:**  \n- The analysis is based on predicted values using RG 1.99, Rev. 2, and assumes no unexpected material degradation mechanisms arise.  \n- Actual surveillance data over time will provide further confirmation.\n\n**References to Knowledge Graph Nodes:**  \n- [nuscale_ch05_0016] (Pressure-Temperature Limits, Charpy Data)  \n- [nuscale_ch05_0017] (Reactor Vessel Integrity)  \n- [Table 5.3-9], [Table 5.3-10] (Charpy USE Data)\n\n**Summary:**  \nAll available data and regulatory analyses confirm that the NuScale RPV materials maintain adequate fracture toughness through end of life, with Charpy USE values exceeding the required minimum.",
+      "faithfulness": null,
+      "answer_relevancy": 0.8767,
+      "context_recall": 1.0,
+      "factual_correctness": 0.59,
+      "keyword_hit": 0.667,
+      "kg_nodes": 9,
+      "kg_edges": 23,
+      "hops_used": 3,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 72.0,
+      "eval_sec": 63.9,
+      "total_sec": 135.9,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0017] Reactor Vessel Integrity | node: [nuscale_ch05_0014] Reactor Vessel | node: [nuscale_ch05_0018] References | node: [nuscale_ch05_0008] Compliance with Codes and Code Cases | node: [nuscale_ch05_0015] Reactor Vessel Materials | node: [nuscale_ch05_0016] Pressure-Temperature Limits, Pressurized | node: [nuscale_ch05_0000] Preface | edge: IS_PREREQUISITE_OF | edge: SUPPORTS | edge: SUPPORTS | edge: IS_PREREQUISITE_OF | edge: IS_PREREQUISITE_OF | edge: SPECIFIES | edge: SATISFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SUPPORTS | edge: IS_PREREQUISITE_OF | edge: IS_PREREQUISITE_OF | edge: REFERENCES | edge: SPECIFIES | edge: SUPPORTS | edge: REFERENCES | edge: SPECIFIES",
+        "Hop 2: node: [nuscale_ch05_0013] References | edge: SUPPORTS | edge: REFERENCES | edge: REFERENCES",
+        "Hop 3: node: [nuscale_ch05_0019] Reactor Coolant System Component and Sub | edge: SATISFIES | edge: SPECIFIES | edge: SUPPORTS",
+        "Hop 4: no results"
+      ]
+    }
+  ]
+}

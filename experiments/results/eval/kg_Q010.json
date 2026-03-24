@@ -1,160 +1,185 @@
 {
-  "question": "What type of reactor is the NuScale NSSS?",
-  "current_hop": 2,
+  "question": "How many reactor safety valves does the NuScale RCS have?",
+  "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0188": {
-      "node_id": "nuscale_ch01_0188",
-      "title": "BTP 6-1, (March 2007): pH for Emergency Coolant Water for Pressurized Water ReactorsB.3 Hydrogen Generation from Aluminum Corrosion",
-      "summary": "The section reviews NuScale's conformance with regulatory criteria regarding pH control and hydrogen generation from aluminum corrosion in emergency coolant water. While NuScale's design lacks certain systems referenced in the criteria (such as containment spray systems and sumps), the intent of the requirements is still met due to the collection and recirculation of ECCS water within the containment vessel. Other criteria related to minimum containment pressure and bypass leakage paths are deemed not applicable to the NuScale design.",
+    "nuscale_ch05_0009": {
+      "node_id": "nuscale_ch05_0009",
+      "title": "Overpressure Protection",
+      "summary": "This section outlines NuScale's compliance with overpressure protection requirements, referencing specific ASME Boiler and Pressure Vessel Code (BPVC) and Operations and Maintenance (OM) Code cases as mandated by 10 CFR 50.55a and related NRC regulatory guides. It details how code cases for design, fabrication, construction, preservice, and inservice inspections and testing are selected and verified to meet regulatory conditions, with a consolidated list provided in Table 5.2-1.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "232",
+      "source_doc": "nuscale_ch05",
+      "page_range": "21",
       "hop": 1
     },
-    "nuscale_ch01_0018": {
-      "node_id": "nuscale_ch01_0018",
-      "title": "Principal Design Criteria",
-      "summary": "The Principal Design Criteria section describes the NuScale reactor's core cooling and power generation process, emphasizing the role of the Site Cooling Water System (SCWS) in supporting auxiliary systems. It outlines the natural circulation of reactor coolant for heat transfer, the generation of superheated steam to drive a turbine and generator, and the use of a circulating water loop to remove heat via the condenser.",
+    "nuscale_ch05_0013": {
+      "node_id": "nuscale_ch05_0013",
+      "title": "References",
+      "summary": "This section lists references and standards related to the integrity of the reactor coolant boundary in the NuScale Final Safety Analysis Report. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as tables summarizing relevant ASME code cases for reactor components.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "28",
+      "source_doc": "nuscale_ch05",
+      "page_range": "46",
       "hop": 1
     },
-    "nuscale_ch01_0186": {
-      "node_id": "nuscale_ch01_0186",
-      "title": "BTP 6-1, (March 2007): pH for Emergency Coolant Water for Pressurized Water ReactorsB.1 Minimum pH for Emergency Coolant Water",
-      "summary": "This section discusses NuScale’s conformance with regulatory criteria regarding the minimum pH for emergency coolant water in pressurized water reactors. While certain requirements in BTP 6-1 reference systems not present in the NuScale design (such as a containment spray system or sump), the intent of the acceptance criterion is still applicable because ECCS water is recirculated within the containment vessel. Thus, NuScale’s design aligns with the regulatory intent for emergency coolant water pH control.",
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the NuScale pressurizer, including the RPV upper shell, baffle plate, heater bundles, and associated components. It specifies the types of alloys and stainless steels used, their relevant material specifications, and their compliance with ASME Boiler and Pressure Vessel Code (BPVC) standards to ensure corrosion resistance and compatibility with operating environments.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "231",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
       "hop": 1
     },
-    "nuscale_ch01_0005": {
-      "node_id": "nuscale_ch01_0005",
-      "title": "Reactor Type",
-      "summary": "The NuScale reactor is a small modular pressurized water reactor (PWR) featuring a cylindrical steel containment vessel designed to ASME standards, with internal pressure maintained at a vacuum during normal operation. Each NuScale Power Module (NPM) integrates the reactor core, steam generators, and pressurizer within a single vessel, uses natural circulation for cooling (eliminating the need for pumps), and is rated at 160 MWt (about 50 MWe), with up to 12 modules per plant for a total net output of approximately 570 MWe.",
+    "nuscale_ch05_0022": {
+      "node_id": "nuscale_ch05_0022",
+      "title": "Decay Heat Removal System",
+      "summary": "The Decay Heat Removal System (DHRS) is an engineered safety feature designed to remove residual and core decay heat from the reactor after shutdown, especially when normal cooling is unavailable, without relying on external power. It ensures the reactor coolant system temperature drops below 420°F within 36 hours, maintaining fuel and pressure boundary safety limits, and its reliability and risk significance are systematically evaluated. The DHRS operates independently of the Emergency Core Cooling System (ECCS), but both can function together if needed.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
+      "source_doc": "nuscale_ch05",
+      "page_range": "106",
+      "hop": 2
+    },
+    "nuscale_ch05_0008": {
+      "node_id": "nuscale_ch05_0008",
+      "title": "Compliance with Codes and Code Cases",
+      "summary": "This section describes how the NuScale Power Module (NPM) and its reactor coolant pressure boundary (RCPB) components comply with relevant U.S. regulations, specifically 10 CFR 50.55a and associated General Design Criteria. It confirms that these components are designed, fabricated, and tested to ASME Boiler and Pressure Vessel Code (BPVC) Section III, 2013 Edition standards, and classified according to NRC quality group requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "20",
+      "hop": 2
+    },
+    "nuscale_ch05_0006": {
+      "node_id": "nuscale_ch05_0006",
+      "title": "System Evaluation",
+      "summary": "This section describes the evaluation of the NuScale Power Plant’s system performance across its design power range. It outlines how steady-state parameters—such as coolant temperatures, flow rates, and pressures—are optimized for efficiency, safety margins, and electrical generation, using both software and manual calculations. The analysis also considers uncertainties in flow resistance and system design, emphasizing the plant’s low pressure losses and natural circulation capabilities.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "12",
+      "hop": 3
+    },
+    "nuscale_ch05_0023": {
+      "node_id": "nuscale_ch05_0023",
+      "title": "Reactor Coolant System High-Point Vents",
+      "summary": "This section describes the testing and inspection requirements for the DHRS (Decay Heat Removal System) components in the NuScale reactor, ensuring compliance with ASME codes for Class 2 components. It details how actuation valves are tested during cold shutdown conditions, outlines the procedures for valve exercising and position verification, and specifies that a one-time in-situ test of the DHRS function will be performed on the first reactor module during initial startup.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "121",
+      "hop": 3
+    },
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes key components such as the reactor pressure vessel, pressurizer, and associated piping and controls. The RCS removes heat from the reactor core to the steam generators using natural circulation, and features systems for degasification and emergency core cooling to maintain safety and integrity. It interfaces with several other systems, including chemical control, emergency cooling, and control rod drives.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
       "page_range": "9",
-      "hop": 1
-    },
-    "nuscale_ch01_0019": {
-      "node_id": "nuscale_ch01_0019",
-      "title": "Operating Characteristics",
-      "summary": "The NuScale Power Module (NPM) operates using natural circulation for reactor coolant flow, eliminating the need for reactor coolant pumps, and features a small, modular, integral pressurized water reactor design. It relies on passive safety systems—including dedicated emergency core cooling and decay heat removal systems—that do not require electrical power, and its components are housed in steel containment partially immersed in water for effective heat removal. The NPM allows for flexible power maneuvering using control rods and soluble boron, and its modular construction enables in-shop fabrication of major components.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "29",
-      "hop": 1
-    },
-    "nuscale_ch01_0004": {
-      "node_id": "nuscale_ch01_0004",
-      "title": "Containment Type",
-      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and operates under vacuum during normal conditions, eliminating the need for insulation. The reactor is a passive, integral small modular pressurized water reactor (SMR) with natural circulation and no external piping for steam generators or pressurizer, and each module produces about 50 MWe, with a 12-module plant yielding a net output of approximately 570 MWe.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "9",
-      "hop": 1
+      "hop": 3
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0188",
-      "target": "nuscale_ch01_0018",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses the NuScale design's partial conformance with criteria for Pressurized Water Reactors (PWRs), while Section B describes the NuScale reactor's core and cooling system, indicating it is a PWR-type design."
-    },
-    {
-      "source": "nuscale_ch01_0188",
-      "target": "nuscale_ch01_0186",
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0013",
       "relation": "REFERENCES",
       "confidence": 0.95,
-      "description": "Section A discusses the applicability of BTP 6-1 requirements for pressurized water reactors to the NuScale design, while Section B outlines specific pH requirements from BTP 6-1, indicating that Section A references and evaluates the criteria detailed in Section B."
+      "description": "Section A discusses regulatory compliance and code cases relevant to the design and testing of the reactor coolant boundary, while Section B lists references that support or are cited by Section A for these regulatory and technical requirements."
     },
     {
-      "source": "nuscale_ch01_0188",
-      "target": "nuscale_ch01_0005",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A discusses the applicability of regulatory criteria for Pressurized Water Reactors (PWRs) to the NuScale design, while Section B describes the NuScale reactor's containment type and design features, connecting them by indicating that NuScale is a type of PWR but with unique design elements."
-    },
-    {
-      "source": "nuscale_ch01_0188",
-      "target": "nuscale_ch01_0019",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses the applicability of regulatory criteria for Pressurized Water Reactors (PWRs) to the NuScale design, while Section B describes the NuScale NSSS's operating characteristics, specifically indicating it uses natural circulation and passive safety systems typical of a PWR, thus Section B provides design details that clarify and support the classification implied in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0188",
-      "target": "nuscale_ch01_0004",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section B describes the NuScale containment vessel as a cylindrical, steel, ASME BPVC Class MC containment designed for high-pressure transients, which supports the classification of the NuScale NSSS as a pressurized water reactor referenced in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0018",
-      "target": "nuscale_ch01_0186",
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0025",
       "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section B references Section A for material descriptions of pressurizer components, indicating that details in Section A support the component descriptions in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B references Section A by citing Section 5.2 for material descriptions of the RPV upper shell and upper head, establishing a direct cross-reference for detailed information."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0009",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A establishes that the NuScale RCS components, including safety valves, are designed and constructed in compliance with 10 CFR 50.55a and ASME BPVC requirements, while Section B elaborates on overpressure protection provisions and further references compliance with the same regulatory framework, thus Section B provides specific application details for the general compliance framework described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0013",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A discusses compliance with ASME BPVC requirements for reactor coolant pressure boundary components, while Section B lists references including ASME and EPRI documents that support or are cited in Section A's compliance claims."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B references Section A by directing the reader to Section 5.2 for material descriptions of pressurizer components, establishing a cross-reference for detailed information."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch05_0008",
+      "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A describes the physical and operational design of the NuScale reactor core and its support assembly, while Section B discusses regulatory conformance for inservice inspection and testing of reactor components, both referencing the NuScale Final Safety Analysis Report as their source."
+      "description": "Section A describes the function and design basis of the Decay Heat Removal System (DHRS) for cooling the Reactor Coolant System (RCS), while Section B establishes that the RCS components, including those relevant to DHRS, comply with regulatory codes such as ASME BPVC and 10 CFR 50.55a, thereby supporting the claim that the system is designed and constructed to required safety standards."
     },
     {
-      "source": "nuscale_ch01_0018",
-      "target": "nuscale_ch01_0005",
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0009",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A discusses the system evaluation and performance criteria for the NuScale Power Plant, while Section B addresses compliance with ASME and NRC overpressure protection codes, connecting them through the design and regulatory requirements for reactor safety valves."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0013",
       "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A provides a general description of the NuScale reactor's core and support assembly, while Section B specifies the type of containment vessel used for the reactor, both contributing technical details necessary to identify the reactor type."
+      "confidence": 0.8,
+      "description": "Section A provides a summary description and evaluation of the NuScale RCS system, while Section B lists references that support the technical and regulatory basis for the information in Section A."
     },
     {
-      "source": "nuscale_ch01_0018",
-      "target": "nuscale_ch01_0019",
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A provides a general system evaluation and references Section 5.4 for further details, while Section B contains those detailed descriptions of the Reactor Coolant System components, including the pressurizer, as referenced by Section A."
+    },
+    {
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch05_0009",
       "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A describes the physical configuration of the NuScale reactor core and vessel, while Section B details its operating characteristics, specifically that it uses natural circulation for coolant flow, both contributing information necessary to identify the reactor type."
+      "confidence": 0.7,
+      "description": "Section A discusses inspection requirements for DHRS actuation valves, while Section B addresses overpressure protection and code compliance for reactor coolant boundary components, connecting them through their shared reliance on ASME BPVC and OM Code standards for valve classification and testing."
     },
     {
-      "source": "nuscale_ch01_0018",
-      "target": "nuscale_ch01_0004",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the reactor core's physical arrangement and process overview, while Section B specifies the type and design standards of the containment vessel that houses the reactor, connecting them through the physical and safety design of the NuScale NSSS."
-    },
-    {
-      "source": "nuscale_ch01_0186",
-      "target": "nuscale_ch01_0005",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section B directly describes the reactor type and containment design of the NuScale NSSS, while Section A discusses regulatory conformance for pressurized water reactors, implying that NuScale is a PWR and thus connecting the regulatory context to the reactor type."
-    },
-    {
-      "source": "nuscale_ch01_0186",
-      "target": "nuscale_ch01_0019",
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0009",
       "relation": "SATISFIES",
-      "confidence": 0.95,
-      "description": "Section B describes the NuScale NSSS as a reactor that operates using natural circulation and passive safety systems, which are characteristic features of a pressurized water reactor (PWR), and Section A references regulatory criteria and guidance specifically for pressurized water reactors, thereby connecting the design type in B to the regulatory classification in A."
+      "confidence": 0.8,
+      "description": "Section A describes the reactor vent valves (RVVs) and their function in the RCS, while Section B references regulatory codes and standards (ASME BPVC, 10 CFR 50.55a) that set requirements for overpressure protection devices such as safety valves, connecting the design features in A to the regulatory requirements in B."
     },
     {
-      "source": "nuscale_ch01_0186",
-      "target": "nuscale_ch01_0004",
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0025",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A discusses regulatory conformance for pressurized water reactors (PWRs), while Section B describes the NuScale containment vessel as designed for a PWR, thus Section B provides design details that specify the reactor type referenced in Section A."
+      "description": "Section A provides a general system description of the RCS and mentions reactor vent valves (RVVs) as part of ECCS operation, while Section B specifies the detailed design and materials of pressurizer components, including references to other sections for further detail."
     },
     {
-      "source": "nuscale_ch01_0005",
-      "target": "nuscale_ch01_0019",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes the physical containment and vessel design of the NuScale reactor, while Section B outlines its operating characteristics such as natural circulation and modularity, together providing complementary details that specify the NuScale NSSS as a modular, integral pressurized water reactor."
-    },
-    {
-      "source": "nuscale_ch01_0019",
-      "target": "nuscale_ch01_0004",
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0004",
       "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the operating characteristics of the NuScale reactor, including its use of natural circulation and modular design, while Section B specifies the type of containment vessel used, both contributing technical details necessary to identify the reactor type in response to the analysis question."
+      "confidence": 0.6,
+      "description": "Section A discusses system evaluation criteria for the NuScale Power Plant, while Section B describes specific components of the RCS, such as reactor vent valves (RVVs), but neither section provides the number of reactor safety valves, with Section B offering more relevant component details that could support answering the analysis question."
+    },
+    {
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section B describes the presence and function of reactor vent valves (RVVs) in the NuScale RCS, while Section A discusses inspection requirements for actuation valves but does not specify the number of safety valves, thus Section A provides supporting detail about valve types and regulatory classification relevant to the valves mentioned in Section B."
     }
   ]
 }

@@ -1,56 +1,384 @@
 {
-  "question": "What is the role of the Decay Heat Removal System (DHRS)?",
-  "current_hop": 2,
+  "question": "What does Figure 1.2-1 depict about the NuScale plant site layout?",
+  "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0025": {
-      "node_id": "nuscale_ch05_0025",
-      "title": "References",
-      "summary": "This section details the materials used in the construction of the pressurizer and its components in the NuScale reactor, specifying alloys and standards for each part to ensure corrosion resistance and compatibility with operating environments. It references relevant sections of the BPVC (Boiler and Pressure Vessel Code) and lists the specific alloys and material specifications for the baffle plate, heater bundles, cover plate, heater sheaths, and bolting.",
+    "nuscale_ch01_0031": {
+      "node_id": "nuscale_ch01_0031",
+      "title": "Plant Cooling Water Systems",
+      "summary": "The plant cooling water systems in the NuScale design include several nonsafety-related systems that support plant operations. These systems consist of the reactor component cooling water system (RCCWS), reactor and spent fuel pool cooling systems, and the circulating water system, which collectively manage heat removal from various plant components and pools, transferring it to the site cooling water system or cooling towers. These systems ensure effective thermal management for both operational and maintenance needs.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "130",
+      "source_doc": "nuscale_ch01",
+      "page_range": "35",
       "hop": 1
     },
-    "nuscale_ch05_0003": {
-      "node_id": "nuscale_ch05_0003",
-      "title": "Design Basis",
-      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain fuel integrity, minimize solid deposits, and ensure uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
+    "nuscale_ch01_0015": {
+      "node_id": "nuscale_ch01_0015",
+      "title": "General Plant Description",
+      "summary": "This section provides an overview of the NuScale plant design, summarizing its main systems and safety features, including design criteria, emergency systems, and waste management. It explains the distinction between certified and site-specific design elements, noting that some information is representative or conceptual and marked accordingly, while security-sensitive details are withheld. Each COL applicant must reference the NuScale FSAR and provide site-specific details as required.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "8",
+      "source_doc": "nuscale_ch01",
+      "page_range": "26",
       "hop": 1
     },
-    "nuscale_ch05_0022": {
-      "node_id": "nuscale_ch05_0022",
-      "title": "Decay Heat Removal System",
-      "summary": "The Decay Heat Removal System (DHRS) is an engineered safety feature designed to remove residual and core decay heat following reactor shutdown, especially when normal cooling is unavailable, ensuring safe shutdown without external power. It maintains the reactor coolant system (RCS) temperature below 420°F within 36 hours to protect fuel and system integrity, and its reliability and risk significance are rigorously evaluated. The DHRS operates independently of the Emergency Core Cooling System (ECCS), but both can function together if needed.",
+    "nuscale_ch01_0016": {
+      "node_id": "nuscale_ch01_0016",
+      "title": "Principal Site Characteristics",
+      "summary": "This section provides a general overview of the NuScale plant design, describing key systems such as safety features, power conversion, fuel handling, and waste management. It explains that each Combined License (COL) applicant must reference the NuScale Final Safety Analysis Report (FSAR) and supplement it with site-specific information, while distinguishing between certified design elements and conceptual design information (CDI). Security-related details are specially marked and withheld according to regulatory requirements.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "106",
+      "source_doc": "nuscale_ch01",
+      "page_range": "26",
       "hop": 1
+    },
+    "nuscale_ch01_0038": {
+      "node_id": "nuscale_ch01_0038",
+      "title": "Main Control Room",
+      "summary": "The Main Control Room (MCR) is located below grade in the Control Room Building (CRB) and includes various support spaces such as offices, conference rooms, and equipment rooms. It houses control panels for all installed NuScale Power Modules (NPMs), allowing operators to monitor and control multiple reactors using digital control systems that ensure independence between safety and nonsafety systems. The MCR provides comprehensive plant information, alarms, and controls for effective operation and diagnostics.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "39",
+      "hop": 2
+    },
+    "nuscale_ch01_0842": {
+      "node_id": "nuscale_ch01_0842",
+      "title": "SRP 17.5, Rev 1: Quality Assurance Program Description - Design Certification, Early Site Permit and New COL applicantsII.Q Quality Assurance Records",
+      "summary": "This section confirms that NuScale’s Quality Assurance Program Description for Design Certification, Early Site Permit, and new Combined License (COL) applicants fully conforms to SRP 17.5, Rev 1 requirements regarding Quality Assurance Records. No exceptions or deviations are noted, indicating complete compliance with the regulatory criteria.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "320",
+      "hop": 2
+    },
+    "nuscale_ch01_0135": {
+      "node_id": "nuscale_ch01_0135",
+      "title": "Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review Standard (DSRS)",
+      "summary": "Table 1.9-3 summarizes NuScale’s conformance with the regulatory criteria outlined in NUREG-0800 (SRP) and DSRS, indicating whether each section’s acceptance criteria are met or applicable. The table shows that NuScale generally conforms to relevant SRP sections, while certain criteria are marked not applicable as they pertain only to Combined License (COL) applicants not referencing the Design Certification Application (DCA).",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "174",
+      "hop": 2
+    },
+    "nuscale_ch01_0068": {
+      "node_id": "nuscale_ch01_0068",
+      "title": "Electrical and Instrumentation and Control Drawings",
+      "summary": "This section describes the use of simplified electrical, instrumentation, and control (I&C) drawings in the NuScale Final Safety Analysis Report (FSAR) to visually clarify design information alongside the written text. It references tables and figures listing and explaining the symbols used in these diagrams, and notes that applicants referencing the NuScale design must provide site-specific diagrams and legends as needed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
+      "hop": 2
+    },
+    "nuscale_ch01_0069": {
+      "node_id": "nuscale_ch01_0069",
+      "title": "Piping and Instrumentation Diagrams",
+      "summary": "This section describes the use of simplified electrical, instrumentation and control (I&C), and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information. It lists the relevant diagrams and legends provided for both I&C and piping and instrumentation diagrams, and notes that site-specific diagrams and legends will be supplied by COL applicants referencing the NuScale design certification.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
+      "hop": 2
+    },
+    "nuscale_ch01_0134": {
+      "node_id": "nuscale_ch01_0134",
+      "title": "8.40 Methods for Measuring Effective Dose Equivalent from External Exposure",
+      "summary": "Section 8.40 states that the guidance for methods of measuring effective dose equivalent from external radiation exposure is not applicable to the NuScale facility, as these dosimetry methods are the responsibility of the COL applicant or licensee. Therefore, NuScale does not address this guidance in its safety analysis report.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "173",
+      "hop": 3
+    },
+    "nuscale_ch01_0033": {
+      "node_id": "nuscale_ch01_0033",
+      "title": "General Arrangement of Major Structures and Equipment",
+      "summary": "This section describes the general arrangement of major structures and equipment at the NuScale Power Plant, focusing on the central Reactor Building (RXB). The RXB is a large, reinforced concrete structure designed for safety and radiation protection, housing the NuScale Power Modules (NPMs) in a common reactor pool with individual bays arranged in two rows. The section also references detailed figures and notes that some buildings, like the administration and training building, are outside the scope of the report.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "36",
+      "hop": 3
+    },
+    "nuscale_ch01_0130": {
+      "node_id": "nuscale_ch01_0130",
+      "title": "1.9.5 Advanced and Evolutionary Light-Water Reactor Design Issues",
+      "summary": "This section explains that the NuScale design incorporates relevant operational experience and regulatory guidance, including NRC Bulletins, Generic Letters, and 10 CFR 21 notifications, to ensure safety and compliance. It also addresses advanced and evolutionary light-water reactor design issues as recommended by NRC guidance, specifically referencing SECY-93-087 and related policy documents.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "131",
+      "hop": 3
+    },
+    "nuscale_ch01_0361": {
+      "node_id": "nuscale_ch01_0361",
+      "title": "DSRS 9.3.4, Rev 0: Chemical and Volume Control System (PWR) (Including Boron Recovery System)II.5 Chemical and Volume Control System Design and Arrangement",
+      "summary": "This section summarizes the NuScale Chemical and Volume Control System (CVCS) design’s conformance with regulatory criteria, noting that the system generally meets requirements for design, arrangement, and leakage detection, with partial conformance regarding holdup tank venting and draining due to differences in NuScale’s design. It also clarifies that certain criteria, such as those for BWR standby liquid control, are not applicable to the NuScale PWR design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "251",
+      "hop": 3
+    },
+    "nuscale_ch01_0067": {
+      "node_id": "nuscale_ch01_0067",
+      "title": "Drawings and Other Detailed Information",
+      "summary": "This section describes the inclusion of simplified instrumentation, control, electrical, and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information alongside written descriptions. It references tables and figures listing and explaining the symbols used in these diagrams, and notes that applicants referencing the NuScale design must provide additional site-specific diagrams and legends as needed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0003",
+      "source": "nuscale_ch01_0031",
+      "target": "nuscale_ch01_0015",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A provides detailed material specifications for the pressurizer, which is identified in Section B as an integral component of the Reactor Coolant System (RCS), thereby specifying the construction details for a subsystem described more generally in Section B."
+      "description": "Section A provides specific details about the plant cooling water systems and power conversion system, which are components generally described in Section B's overall summary of the NuScale plant design."
     },
     {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0022",
+      "source": "nuscale_ch01_0031",
+      "target": "nuscale_ch01_0016",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed information about the plant cooling water systems and power conversion system, which are among the general facility features summarized in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0016",
+      "relation": "SEMANTIC",
+      "confidence": 1.0,
+      "description": "Section A and Section B are identical excerpts that both provide a general overview of the NuScale plant design, including site layout elements such as safety features and system arrangements, thus offering the foundational context for interpreting Figure 1.2-1."
+    },
+    {
+      "source": "nuscale_ch01_0038",
+      "target": "nuscale_ch01_0031",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the location and associated spaces of the Main Control Room within the plant site, while Section B outlines the arrangement and operational flexibility of the plant's power conversion and cooling water systems, both of which are physical features that would be depicted in Figure 1.2-1's site layout."
+    },
+    {
+      "source": "nuscale_ch01_0038",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific details about the location and associated spaces of the Main Control Room, which is one of the facility components generally described in Section B's summary of the overall plant layout."
+    },
+    {
+      "source": "nuscale_ch01_0038",
+      "target": "nuscale_ch01_0016",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific details about the Main Control Room's location and associated spaces, which are part of the overall facility layout generally described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0842",
+      "target": "nuscale_ch01_0031",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section B describes the plant cooling water systems and references figures depicting plant layout, which are part of the information Figure 1.2-1 would provide, while Section A outlines quality assurance requirements that must be met in the design and documentation of such systems and layouts."
+    },
+    {
+      "source": "nuscale_ch01_0842",
+      "target": "nuscale_ch01_0015",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B provides a general description of the NuScale plant site layout, which Figure 1.2-1 likely illustrates, while Section A addresses quality assurance program requirements that ensure the accuracy and integrity of such design descriptions."
+    },
+    {
+      "source": "nuscale_ch01_0842",
+      "target": "nuscale_ch01_0016",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section B provides a general description of the NuScale plant site layout, which is the subject depicted in Figure 1.2-1, while Section A outlines quality assurance program requirements that must be met during the design and documentation of such site characteristics."
+    },
+    {
+      "source": "nuscale_ch01_0135",
+      "target": "nuscale_ch01_0015",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A documents the NuScale plant's conformance with regulatory criteria, while Section B provides the general plant description that is referenced or summarized in the conformance table."
+    },
+    {
+      "source": "nuscale_ch01_0135",
+      "target": "nuscale_ch01_0016",
       "relation": "SEMANTIC",
       "confidence": 0.7,
-      "description": "Section A describes the materials and components of the pressurizer, which is part of the Reactor Coolant System (RCS) that the Decay Heat Removal System (DHRS) in Section B is designed to cool during certain events, connecting them through their roles in the RCS."
+      "description": "Section B provides the general plant description and principal site characteristics that are visually depicted in Figure 1.2-1, while Section A documents regulatory conformance but does not directly address the site layout."
     },
     {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch05_0022",
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0031",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the use of figures, such as site layout drawings, to visually clarify design information, while Section B discusses plant systems whose arrangement and integration would be depicted in such figures, connecting them through the visual representation of plant layout (e.g., Figure 1.2-1)."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0015",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section B describes the Decay Heat Removal System's function to remove residual and decay heat from the Reactor Coolant System (RCS), which is summarized in Section A as the system responsible for primary coolant circulation, thus Section B specifies a subsystem function that supports the overall purpose described in Section A."
+      "description": "Section A provides detailed drawings, including figures like Figure 1.2-1, that visually clarify the general plant layout described in Section B's summary of the overall facility design."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0016",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A provides detailed drawings, including figures, that visually clarify the design information summarized in Section B's general plant description, specifically supporting the understanding of site layout elements mentioned in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0031",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the use of figures (such as Figure 1.2-1) to visually clarify plant design information, while Section B provides a general description of plant systems and references figures (like Figure 1.2-3) to illustrate system arrangements, connecting both sections through their reliance on figures to depict site layout and system configuration."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed drawings, such as piping and instrumentation diagrams, that visually clarify and specify the general plant layout and systems described in Section B's general plant description."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0016",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed drawings, including figures like Figure 1.2-1, that visually clarify the general plant layout described in Section B's summary of the NuScale plant site characteristics."
+    },
+    {
+      "source": "nuscale_ch01_0038",
+      "target": "nuscale_ch01_0068",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the physical location and associated spaces of the Main Control Room, while Section B explains that figures (such as Figure 1.2-1) provide visual clarification of such design information, connecting the textual description in A to the visual depiction in B."
+    },
+    {
+      "source": "nuscale_ch01_0038",
+      "target": "nuscale_ch01_0069",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the physical location and associated spaces of the Main Control Room, while Section B explains that figures (such as Figure 1.2-1) provide visual clarification of such design information, connecting the textual description in A to the visual depiction in B."
+    },
+    {
+      "source": "nuscale_ch01_0842",
+      "target": "nuscale_ch01_0135",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A lists specific SRP 17.5 quality assurance program requirements and their conformance status, while Section B provides a broader table summarizing conformance with various SRP and DSRS sections, including SRP 17.5, thus Section A provides detailed specifications that support the summary information in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0842",
+      "target": "nuscale_ch01_0068",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B provides the detailed drawings, including Figure 1.2-1, that visually clarify the NuScale plant site layout, while Section A describes the quality assurance program that ensures such drawings and related records meet regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0135",
+      "target": "nuscale_ch01_0068",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A outlines regulatory conformance requirements for the NuScale FSAR, while Section B explains that figures (such as Figure 1.2-1) provide visual clarification of design information referenced in the FSAR, connecting regulatory criteria to specific design representations."
+    },
+    {
+      "source": "nuscale_ch01_0135",
+      "target": "nuscale_ch01_0069",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A outlines regulatory conformance requirements for the NuScale FSAR, while Section B explains that figures (such as Figure 1.2-1) provide visual clarification of design information referenced in the FSAR, connecting regulatory criteria to specific site layout depictions."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0069",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A and Section B both describe the use of simplified drawings (including figures like Figure 1.2-1) to visually clarify design information in the NuScale Final Safety Analysis Report, indicating that both types of diagrams serve as visual aids for understanding the plant site layout and related systems."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0031",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references Figure 1.2-2 to present the overall plant layout, while Section B references Figure 1.2-3 to show the arrangement of the power conversion and cooling water systems, indicating that each section uses a different figure to detail specific aspects of the NuScale plant site layout."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a specific reference to Figure 1.2-2 for the NuScale plant site layout, while Section B offers a general summary of the plant design and its major systems, establishing the context for the detailed arrangement shown in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0016",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific details about the general arrangement and layout of major structures and equipment, which elaborates on the overall facility description summarized in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0130",
+      "target": "nuscale_ch01_0015",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B provides a general description of the NuScale plant layout, which is the context for Figure 1.2-1, while Section A discusses regulatory conformance and operational experience that inform the design described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0361",
+      "target": "nuscale_ch01_0031",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the design and arrangement of the Chemical and Volume Control System (CVCS), while Section B describes the general plant layout and cooling water systems, both of which are depicted in site layout figures such as Figure 1.2-1, connecting them through their physical arrangement and integration within the NuScale plant site."
+    },
+    {
+      "source": "nuscale_ch01_0361",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A specifies the design and arrangement details of the Chemical and Volume Control System, which is one of the auxiliary systems generally described in Section B's overview of the plant layout and systems."
+    },
+    {
+      "source": "nuscale_ch01_0361",
+      "target": "nuscale_ch01_0016",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A discusses the design and arrangement of the Chemical and Volume Control System (CVCS), while Section B provides a general description of the overall NuScale plant layout, including auxiliary systems like the CVCS, thus Section A specifies details for the broader system overview in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0134",
+      "target": "nuscale_ch01_0130",
+      "relation": "SEMANTIC",
+      "confidence": 0.6,
+      "description": "Section A states that methods for measuring effective dose equivalent from external exposure are not applicable to the NuScale plant, while Section B discusses the incorporation of operational experience and regulatory guidance into the NuScale design, connecting them through the regulatory context of safety analysis but not through direct content or requirements."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0361",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A references the general arrangement and layout of major plant structures, which would include the location and arrangement of systems like the Chemical and Volume Control System discussed in Section B, thereby providing the physical context for the system's design and arrangement."
+    },
+    {
+      "source": "nuscale_ch01_0130",
+      "target": "nuscale_ch01_0361",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides general regulatory conformance context for the NuScale plant design, while Section B specifies how the Chemical and Volume Control System's design and arrangement (including its site layout) conform to those regulatory criteria, thus Section B provides detailed implementation for the general framework described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0067",
+      "target": "nuscale_ch01_0031",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A explains that figures, such as Figure 1.2-1, provide visual clarification of plant design details, while Section B describes the plant cooling water systems and references figures (e.g., Figure 1.2-3) to illustrate system arrangements, indicating that both sections use figures to visually represent and clarify different aspects of the NuScale plant site layout."
+    },
+    {
+      "source": "nuscale_ch01_0067",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed drawings and figures, such as Figure 1.2-1, that visually clarify and specify the general plant layout described in Section B's summary of the facility."
+    },
+    {
+      "source": "nuscale_ch01_0067",
+      "target": "nuscale_ch01_0016",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed drawings and figures that visually clarify the design information summarized in Section B's general description of the NuScale plant site layout."
     }
   ]
 }

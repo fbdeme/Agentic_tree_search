@@ -1,0 +1,160 @@
+{
+  "question": "Based on Table 5.3-2 and Table 5.3-3, are the beltline chemistry limits adequate to limit irradiation embrittlement?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch05_0016": {
+      "node_id": "nuscale_ch05_0016",
+      "title": "Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses",
+      "summary": "This section outlines the basis for establishing operational pressure and temperature limits for the reactor coolant pressure boundary (RCPB) to comply with regulatory requirements over the plant’s 60-year life. It describes the methodology used to calculate pressure-temperature limit curves, accounting for vessel embrittlement, and provides the relevant figures and tables that define acceptable operating conditions to prevent non-ductile failure of the reactor pressure vessel.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "72",
+      "hop": 1
+    },
+    "nuscale_ch05_0017": {
+      "node_id": "nuscale_ch05_0017",
+      "title": "Reactor Vessel Integrity",
+      "summary": "This section outlines the procedures and regulatory compliance measures to ensure the integrity of the NuScale reactor vessel throughout its 60-year design life. It details the development of operating procedures to maintain pressure-temperature limits, evaluates the vessel’s resistance to pressurized thermal shock and upper-shelf energy degradation, and confirms that all predicted values remain within regulatory safety criteria.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "73",
+      "hop": 1
+    },
+    "nuscale_ch05_0015": {
+      "node_id": "nuscale_ch05_0015",
+      "title": "Reactor Vessel Materials",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module's reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel, serving as a key barrier to fission product release. The RPV and its components are constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure integrity and safety throughout the plant's design lifetime.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
+      "hop": 1
+    },
+    "nuscale_ch05_0018": {
+      "node_id": "nuscale_ch05_0018",
+      "title": "References",
+      "summary": "This section outlines the inspection, shipment, installation, and inservice surveillance requirements for the NuScale reactor vessel, referencing relevant ASME and ASTM standards for quality assurance and material testing. It specifies procedures for maintaining a dry, controlled environment during shipment and details where further information on inspections, operating conditions, and fasteners can be found in the report. Key reference documents are listed at the end.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "74",
+      "hop": 2
+    },
+    "nuscale_ch05_0002": {
+      "node_id": "nuscale_ch05_0002",
+      "title": "Summary Description",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve independent modules, maintains proper coolant chemistry and boron concentration, and is engineered to prevent fuel design limit violations during all operating conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 2
+    },
+    "nuscale_ch05_0010": {
+      "node_id": "nuscale_ch05_0010",
+      "title": "Reactor Coolant Pressure Boundary Materials",
+      "summary": "The Reactor Coolant Pressure Boundary (RCPB) materials, including welds, are selected and fabricated in accordance with ASME BPVC standards and comply with relevant U.S. regulatory requirements to ensure high quality, environmental compatibility, and fracture resistance. These materials are subject to strict quality assurance measures and testing to meet fracture toughness criteria, with detailed specifications provided in referenced tables.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "29",
+      "hop": 2
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.6,
+      "description": "Section A discusses the structural and examination requirements for reactor vessel attachments, while Section B addresses the development of operating procedures to ensure compliance with pressure-temperature limits, both of which are connected through their focus on maintaining reactor vessel integrity as required by regulatory standards."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0015",
+      "relation": "REFERENCES",
+      "confidence": 0.7,
+      "description": "Section A discusses examination and welding requirements for reactor vessel attachments per ASME code, while Section B provides a general description of the reactor vessel and its materials, with both sections referencing the construction and integrity of the reactor pressure vessel as governed by ASME BPVC standards."
+    },
+    {
+      "source": "nuscale_ch05_0017",
+      "target": "nuscale_ch05_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the development of operating procedures to ensure compliance with pressure-temperature limits, which are based on the material properties and design described in Section B, thus linking procedural controls to the physical characteristics of the reactor vessel materials."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes inspection and handling requirements for the reactor pressure vessel, while Section B discusses the development of operating procedures to ensure compliance with pressure-temperature limits, both of which are connected by their roles in maintaining reactor vessel integrity and ensuring regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0015",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references the inspection, shipment, and handling requirements for the reactor pressure vessel, while Section B provides a general description of the reactor vessel and its materials; Section A's requirements are applied to the vessel described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0016",
+      "relation": "SPECIFIES",
+      "confidence": 0.7,
+      "description": "Section A provides a general overview of the reactor coolant system and its components, while Section B details specific ASME code requirements and analyses related to reactor vessel attachments, with both sections connected through their focus on the reactor pressure vessel and its compliance with regulatory standards."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0017",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A provides a general overview of the reactor coolant system, while Section B specifies the requirement for developing operating procedures to ensure reactor vessel integrity by not exceeding pressure-temperature limits, which is directly related to maintaining adequate beltline chemistry limits to control irradiation embrittlement."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0015",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B describes the reactor vessel materials and references the reactor coolant system described in Section A, establishing that the RPV is a component of the RCS introduced in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0010",
+      "target": "nuscale_ch05_0016",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A establishes that the reactor coolant pressure boundary materials comply with ASME and regulatory requirements, while Section B provides specific details on weld examinations and code compliance for attachments, together demonstrating that material selection and fabrication practices support the adequacy of chemistry limits in controlling irradiation embrittlement."
+    },
+    {
+      "source": "nuscale_ch05_0010",
+      "target": "nuscale_ch05_0017",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A specifies the material standards and regulatory compliance for the reactor coolant pressure boundary, which are prerequisites for the adequacy of the beltline chemistry limits discussed in Section B's focus on operating procedures to maintain vessel integrity."
+    },
+    {
+      "source": "nuscale_ch05_0010",
+      "target": "nuscale_ch05_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A states that the Reactor Coolant Pressure Boundary (RCPB) materials, including those in the reactor vessel, comply with ASME and regulatory requirements, while Section B describes the reactor vessel as a component of the RCPB, thus Section A's compliance claims apply to the materials discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0002",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references Section B by specifying that the reactor pressure vessel (RPV), which is part of the reactor coolant system (RCS) described in Section B, is subject to certain inspection, shipment, and installation requirements."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0010",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the handling, shipment, and storage requirements for the reactor pressure vessel (RPV) in accordance with ASME BPVC and NQA-1 standards, while Section B specifies that the reactor coolant pressure boundary (RCPB) materials, including those of the RPV, conform to ASME BPVC and regulatory requirements, thus Section A provides implementation details for the general material compliance described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0010",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the reactor coolant system, while Section B specifies that the materials used in the reactor coolant pressure boundary (including those in the RCS) meet ASME and regulatory requirements, thus connecting the system described in A to the material standards in B."
+    }
+  ]
+}

@@ -1,141 +1,229 @@
 {
-  "question": "Where is the containment vessel (CNV) installed?",
-  "current_hop": 3,
+  "question": "What is the RPV cross section configuration shown in Figure 5.3-1, and what are the vessel inner diameter dimensions from Table 5.3-1?",
+  "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0011": {
-      "node_id": "nuscale_ch05_0011",
-      "title": "Reactor Coolant Pressure Boundary Inservice Inspection and Testing",
-      "summary": "This section describes the materials and standards for threaded fasteners in the reactor coolant pressure boundary, emphasizing the use of nickel-based Alloy 718 for compatibility and stress corrosion cracking mitigation. It also outlines that preservice and inservice inspections and testing of pressure-retaining components are conducted according to the latest ASME BPVC Section XI requirements, as mandated by federal regulations, with inspection intervals and code editions specified in the inspection program.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "37",
-      "hop": 1
-    },
-    "nuscale_ch05_0004": {
-      "node_id": "nuscale_ch05_0004",
-      "title": "System Description",
-      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes components such as the reactor pressure vessel, pressurizer, and associated piping and controls. Its primary function is to transport heat from the reactor core to the steam generators using natural circulation, while also providing mechanisms for removing noncondensible gases and maintaining the integrity of the reactor coolant pressure boundary to prevent radionuclide release. The RCS interfaces with several other systems, including emergency core cooling and chemical control systems.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "9",
-      "hop": 1
-    },
     "nuscale_ch05_0014": {
       "node_id": "nuscale_ch05_0014",
       "title": "Reactor Vessel",
-      "summary": "The Reactor Vessel section describes the NuScale Power Module (NPM), which integrates the reactor core, steam generators, and pressurizer within a single reactor pressure vessel (RPV) surrounded by a containment vessel. The RPV serves as a key pressure-retaining component, supporting various reactor systems and providing a barrier to fission product release, with materials and fabrication standards ensuring integrity throughout the plant's design lifetime.",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module’s reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel surrounded by a containment vessel. The RPV is a key component of the reactor coolant system, serving as a barrier to fission product release and providing structural support for various reactor systems. Materials used for the RPV are selected according to ASME Boiler and Pressure Vessel Code standards to ensure integrity and safety throughout the plant’s design lifetime.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "67",
       "hop": 1
     },
-    "nuscale_ch05_0012": {
-      "node_id": "nuscale_ch05_0012",
-      "title": "Reactor Coolant Pressure Boundary Leakage Detection",
-      "summary": "The NuScale reactor coolant system (RCS) does not use traditional components with designed leakage, making it impractical to distinguish between identified and unidentified leakage inside containment using current instrumentation. Any leakage into containment, regardless of source, vaporizes and disperses quickly, so all leakage is treated as unidentified until specifically located and quantified by other means; leakage rates are determined by RCS inventory balance and compared to containment evacuation system (CES) flow rates. The installed leakage detection systems are reliable, redundant, and sensitive enough to support leak-before-break analyses.",
+    "nuscale_ch05_0000": {
+      "node_id": "nuscale_ch05_0000",
+      "title": "Preface",
+      "summary": "The Preface outlines the copyright and usage restrictions for the NuScale Standard Plant Design Certification Application, specifically Chapter Five on the Reactor Coolant System and Connecting Systems. It specifies that only the U.S. Nuclear Regulatory Commission (NRC) is authorized to use, copy, or disclose the information for regulatory purposes, and any copies must include the copyright notice. The section also references the table of contents for Chapter 5, which covers the summary description and design basis of the reactor coolant system.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "41",
+      "page_range": "1",
       "hop": 1
+    },
+    "nuscale_ch05_0017": {
+      "node_id": "nuscale_ch05_0017",
+      "title": "Reactor Vessel Integrity",
+      "summary": "This section outlines the procedures and regulatory compliance measures to ensure the integrity of the NuScale reactor vessel throughout its 60-year design life. It details the development of operating procedures to maintain pressure-temperature limits, evaluates the vessel’s resistance to pressurized thermal shock and upper-shelf energy degradation, and confirms that predicted material properties remain within safety criteria under anticipated operating conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "73",
+      "hop": 1
+    },
+    "nuscale_ch05_0011": {
+      "node_id": "nuscale_ch05_0011",
+      "title": "Reactor Coolant Pressure Boundary Inservice Inspection and Testing",
+      "summary": "This section describes the materials and design requirements for threaded fasteners in key reactor coolant system components, emphasizing the use of Alloy 718 for its compatibility and stress corrosion cracking resistance. It also outlines that preservice and inservice inspection and testing of pressure-retaining components are conducted according to the latest applicable ASME Boiler and Pressure Vessel Code (BPVC) standards, as mandated by federal regulations, with inspection intervals and code editions specified in the inspection program.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "37",
+      "hop": 2
+    },
+    "nuscale_ch05_0018": {
+      "node_id": "nuscale_ch05_0018",
+      "title": "References",
+      "summary": "This section outlines the inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fastener requirements for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It specifies procedures for maintaining vessel integrity during transport and operation, and lists the key codes and standards used for compliance.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "74",
+      "hop": 2
+    },
+    "nuscale_ch05_0019": {
+      "node_id": "nuscale_ch05_0019",
+      "title": "Reactor Coolant System Component and Subsystem Design",
+      "summary": "This section describes the design of the Reactor Coolant System (RCS) components and subsystems in the NuScale Power Module, detailing the integration of key elements such as the reactor vessel, steam generators, safety valves, and associated piping. It outlines the configuration and boundaries of the steam generator system, emphasizing the integral design of the steam generators within the reactor pressure vessel and the separation between primary and secondary sides.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
+      "hop": 3
+    },
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain proper coolant flow, water chemistry, and boron concentration to protect fuel integrity and support safe operation under normal and transient conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 4
     },
     "nuscale_ch05_0013": {
       "node_id": "nuscale_ch05_0013",
       "title": "References",
-      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as tables summarizing relevant ASME code cases for reactor components.",
+      "summary": "This section lists references and standards relevant to the integrity of the reactor coolant boundary in the NuScale Final Safety Analysis Report. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as tables summarizing applicable ASME code cases for materials and components used in nuclear facility applications.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "46",
-      "hop": 1
+      "hop": 4
     },
-    "nuscale_ch05_0021": {
-      "node_id": "nuscale_ch05_0021",
-      "title": "Reactor Coolant System Piping",
-      "summary": "The section discusses the design and degradation assessment of the NuScale reactor coolant system's steam generator (SG) tubing. It notes that the main degradation observed in similar operating reactors is wear from flow-induced vibration or foreign objects, and that NuScale's design—with its helical tubing and novel support structure—does not increase risk compared to existing designs. Prototypic testing and standard SG program guidelines are deemed sufficient, with wear identified as the most likely degradation mechanism and secondary side corrosion risks considered low.",
+    "nuscale_ch05_0006": {
+      "node_id": "nuscale_ch05_0006",
+      "title": "System Evaluation",
+      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance across various power levels by establishing steady-state parameters for both primary and secondary systems, considering criteria such as maximizing electrical generation and maintaining safety margins. Key parameters like coolant temperatures, flow rates, and pressures are calculated using thermal hydraulic software and verified by hand, with uncertainties addressed through testing data and design requirements. The design supports natural circulation with low pressure losses, and uncertainties related to steam generator tube plugging do not affect primary coolant flow rate determination.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "104",
-      "hop": 2
-    },
-    "nuscale_ch05_0022": {
-      "node_id": "nuscale_ch05_0022",
-      "title": "Decay Heat Removal System",
-      "summary": "The Decay Heat Removal System (DHRS) is an engineered safety feature designed to remove residual and core decay heat following reactor shutdown, especially when normal cooling is unavailable, ensuring safe shutdown without external power. It maintains the reactor coolant system (RCS) temperature below 420°F within 36 hours to protect fuel and system integrity, and its reliability and risk significance are evaluated through established programs. The DHRS operates independently of the Emergency Core Cooling System (ECCS), but both can function together if needed.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "106",
-      "hop": 2
+      "page_range": "12",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0011",
-      "target": "nuscale_ch05_0004",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section B states that reactor vent valves discharge to the CNV, implying the CNV is installed in a location to receive such discharges from the RPV, while Section A discusses components (threaded fasteners) used in the RPV and related boundaries, connecting both sections through their association with the RPV and its containment."
-    },
-    {
-      "source": "nuscale_ch05_0011",
-      "target": "nuscale_ch05_0012",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section B discusses leakage detection within the containment, implying that the containment vessel (CNV) is the location where such leakage would be detected, thus indirectly indicating the CNV's installation surrounds the RCS components discussed in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0011",
-      "target": "nuscale_ch05_0013",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A discusses the materials and standards for threaded fasteners in the reactor coolant pressure boundary and cites Section B as a reference for quality assurance and material reliability standards."
-    },
-    {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0014",
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0000",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section B states that the containment vessel (CNV) surrounds the reactor pressure vessel (RPV), thus specifying the installation location of the CNV, which is not directly described in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0012",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the CNV as the destination for discharged steam and gases from the reactor system, while Section B discusses leakage detection within the containment, implying that the CNV is installed as the containment for the reactor system."
-    },
-    {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0013",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A describes the function and operation of the CNV in the reactor system, while Section B lists references that provide supporting standards and guidelines for the integrity and quality assurance of reactor components, including the CNV."
+      "description": "Section A provides specific technical details about the reactor vessel that are part of the broader document introduced in Section B, which serves as the preface and copyright notice for the entire chapter."
     },
     {
       "source": "nuscale_ch05_0014",
-      "target": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0017",
       "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A states that the containment vessel (CNV) surrounds the reactor pressure vessel (RPV), while Section B refers to leakage detection inside the containment, thus both sections connect by describing the physical relationship and functional context of the CNV within the NuScale Power Module."
+      "confidence": 0.7,
+      "description": "Section A provides a general description of the reactor pressure vessel's configuration, while Section B discusses the development of operating procedures to ensure vessel integrity, both connected by their focus on the RPV's design and operational requirements."
     },
     {
-      "source": "nuscale_ch05_0012",
-      "target": "nuscale_ch05_0013",
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0014",
       "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A discusses leakage detection within the containment, while Section B lists references cited in Section A, indicating that Section A relies on the standards and guidelines referenced in Section B for its technical basis."
-    },
-    {
-      "source": "nuscale_ch05_0022",
-      "target": "nuscale_ch05_0004",
-      "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section B states that reactor vent valves discharge the pressurizer steam space directly to the CNV, indicating that the CNV is installed in a location accessible to the reactor coolant system and emergency core cooling system."
+      "description": "Section A references Section B by discussing the design and material requirements for RPV threaded fasteners, while Section B provides the general description and context of the RPV within the reactor system, connecting them through the shared subject of RPV design and integrity."
     },
     {
-      "source": "nuscale_ch05_0022",
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the materials and standards for RPV threaded fasteners, while Section B addresses operating procedures to ensure vessel integrity, both relating to maintaining the structural integrity and safe operation of the reactor pressure vessel as required by regulatory standards."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0014",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A references the inspection, shipment, and installation requirements for the RPV, while Section B provides a general description of the RPV's configuration and its role in the reactor system, connecting them through their focus on the RPV's design and handling."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0000",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A provides specific procedural and regulatory details about the reactor pressure vessel (RPV) inspection and handling, while Section B serves as the general preface and copyright notice for the entire document, establishing the context and ownership for the detailed sections like Section A."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A and Section B both reference compliance with ASME and technical specifications for the reactor pressure vessel (RPV), with Section A focusing on shipment, handling, and storage requirements, and Section B focusing on operational procedures to maintain vessel integrity, both of which are necessary for ensuring the RPV meets regulatory standards."
+    },
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0018",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A provides details about the materials and standards for RPV threaded fasteners, while Section B discusses inspection, shipment, and storage requirements for the RPV, both referencing ASME BPVC standards as a common regulatory basis."
+    },
+    {
+      "source": "nuscale_ch05_0019",
       "target": "nuscale_ch05_0014",
       "relation": "SPECIFIES",
-      "confidence": 0.98,
-      "description": "Section B states that the containment vessel (CNV) surrounds the reactor pressure vessel (RPV) within each NuScale Power Module (NPM), thereby specifying the installation location of the CNV."
+      "confidence": 0.85,
+      "description": "Section A provides a general description of the RPV and its components, while Section B offers a more detailed explanation of the RPV's configuration and its relationship to the reactor coolant system, thus specifying details for Section A's broader overview."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0000",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides specific technical details about the reactor pressure vessel (RPV) design, which are elaborated upon in the broader context introduced in Section B's preface to the chapter."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the physical configuration and components of the RPV, while Section B addresses the operational procedures and requirements to ensure the vessel's integrity under specified conditions, both relating to the vessel's design and operational limits."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides specific details about the reactor pressure vessel (RPV) that is generally introduced as part of the reactor coolant system (RCS) in Section A, connecting the general system description to the vessel's configuration and dimensions relevant to the analysis question."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides a general description of the reactor pressure vessel (RPV) as part of the reactor coolant system, while Section B discusses the operational procedures to ensure the RPV's integrity under specified conditions, connecting them through the design and operational requirements for the RPV."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0014",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides references that support the technical and regulatory basis for the reactor vessel design described in Section B, including standards and guidelines relevant to the RPV configuration and dimensions."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A provides references and source documents that may be used to support the technical and regulatory basis for the vessel configuration and dimensions described in Section B, which discusses the reactor vessel's integrity and operating procedures."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section B provides the detailed description of the Reactor Pressure Vessel (RPV), which is the subject whose cross section configuration and dimensions are sought in the analysis question, while Section A references the broader system evaluation and points to Section 5.4 for further details, thus Section B specifies the vessel details relevant to the question."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses system evaluation and performance optimization, while Section B addresses the development of operating procedures to ensure vessel integrity; both are connected through the need to maintain reactor vessel parameters (such as pressure and temperature) within design limits for safe operation."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0013",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides a general description of the reactor coolant system and its components, including the reactor pressure vessel (RPV), while Section B lists references that may support the technical and regulatory basis for the design and integrity of those components."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0006",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A provides a general description of the reactor pressure vessel (RPV) as part of the reactor coolant system, while Section B discusses the evaluation of system performance parameters, which depend on the RPV configuration and dimensions referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0006",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A provides references and source documents that may be cited to support or justify the technical descriptions and evaluations presented in Section B, such as design criteria or system performance."
     }
   ]
 }

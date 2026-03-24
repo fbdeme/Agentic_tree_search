@@ -1,0 +1,669 @@
+{
+  "question": "Based on Table 1.2-1 (12 modules, 160 MWt each) and Table 5.4-1 (SG parameters), is the SG sizing adequate for full-power heat transfer?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0058": {
+      "node_id": "nuscale_ch01_0058",
+      "title": "Steam Generator Thermal-Hydraulic Performance Testing - Electrically Heated Facility",
+      "summary": "This section describes the critical heat flux (CHF) testing conducted for the NuScale NuFuel HTP2™ fuel design using an electrically heated 5x5 simulated fuel bundle with AREVA HTP™/HMP™ spacer grid technology. The tests, performed at the AREVA Karlstein Thermal Hydraulics facility, aimed to gather CHF data, validate and develop CHF correlations, and collect thermal-hydraulic performance data under various operating conditions to support the NuScale reactor safety analysis.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "85",
+      "hop": 1
+    },
+    "nuscale_ch05_0020": {
+      "node_id": "nuscale_ch05_0020",
+      "title": "Steam Generators",
+      "summary": "The steam generators in the NuScale Power Module are integrated within the reactor pressure vessel (RPV), which also houses other key components such as the pressurizer, safety valves, and emergency cooling systems. The steam generator system includes feedwater and main steam piping, thermal relief valves, and access ports, with the RPV itself forming the outer pressure boundary for the steam generators and contributing to the reactor coolant pressure boundary.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
+      "hop": 1
+    },
+    "nuscale_ch05_0019": {
+      "node_id": "nuscale_ch05_0019",
+      "title": "Reactor Coolant System Component and Subsystem Design",
+      "summary": "This section describes the design of the Reactor Coolant System (RCS) components and subsystems in the NuScale Power Module, detailing the integration of the reactor, steam generators, pressurizer, safety and ECCS valves, and associated piping within the reactor pressure vessel (RPV). It also outlines the configuration and boundaries of the steam generator system, emphasizing the integral design of the steam generators within the RPV and the separation between primary and secondary sides.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
+      "hop": 1
+    },
+    "nuscale_ch01_0015": {
+      "node_id": "nuscale_ch01_0015",
+      "title": "General Plant Description",
+      "summary": "This section provides a summary of the NuScale plant’s overall design, describing key systems such as safety features, power conversion, fuel handling, cooling, waste management, and auxiliary systems. It explains that each Combined License (COL) applicant must reference the NuScale Final Safety Analysis Report (FSAR) and provide site-specific details where required, while distinguishing between certified design elements and conceptual design information (CDI). Security-related information is specially marked and withheld according to regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "26",
+      "hop": 1
+    },
+    "nuscale_ch01_0059": {
+      "node_id": "nuscale_ch01_0059",
+      "title": "Steam Generator Thermal-Hydraulic Performance Testing - Fluid-Heated Facility",
+      "summary": "The section describes thermal-hydraulic performance testing of the NuScale steam generator using an electrically-heated facility at SIET in Italy. The tests, which included various heating zones and types of experiments, allowed precise control and measurement of heat flux and pressure dynamics to support design validation, code benchmarking, and regulatory requirements. The results informed steam generator design aspects such as flow restrictor sizing and were reviewed by the NRC.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "86",
+      "hop": 1
+    },
+    "nuscale_ch01_0072": {
+      "node_id": "nuscale_ch01_0072",
+      "title": "Combined License Information Items",
+      "summary": "This section explains the interface requirements between the NuScale Power Plant certified design and the site-specific design provided in the combined license (COL) application. It distinguishes between conceptual design information (CDI) for non-certified portions and COL information items, which are site-specific responsibilities of the COL applicant. The section also notes that COL applicants must address all COL information items and provide a list of any departures from the certified design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "108",
+      "hop": 1
+    },
+    "nuscale_ch01_0282": {
+      "node_id": "nuscale_ch01_0282",
+      "title": "SRP BTP 8-3, Rev 3: Stability of Offsite Power SystemsB.2 Grid Capacity",
+      "summary": "This section states that the analysis of grid stability and capacity (SRP BTP 8-3, Rev 3) is not applicable to the NuScale design certification; instead, it is the responsibility of the COL (Combined License) applicant referencing the NuScale design. The NuScale Final Safety Analysis Report confirms conformance with regulatory criteria, but defers grid-related analyses to future applicants.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "241",
+      "hop": 2
+    },
+    "nuscale_ch01_0002": {
+      "node_id": "nuscale_ch01_0002",
+      "title": "Introduction",
+      "summary": "This section introduces the NuScale Final Safety Analysis Report (FSAR), which is required for standard design certification under 10 CFR 52. It outlines the scope of the report, describing the NuScale Power Module (NPM) design, its modular and scalable features, and key safety characteristics such as passive shutdown, compact containment, and advanced digital controls. The FSAR covers both individual module and multi-module plant configurations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "8",
+      "hop": 2
+    },
+    "nuscale_ch01_0447": {
+      "node_id": "nuscale_ch01_0447",
+      "title": "SRP 10.4.8, Rev 3: Steam Generator Blowdown SystemAll Various",
+      "summary": "The section summarizes NuScale’s conformance with regulatory criteria for various systems, noting that the NuScale steam generator design does not use a blowdown system, making SRP 10.4.8 not applicable. It also highlights that certain criteria and guidance, often written for large LWRs, are not relevant to NuScale’s unique design, and that systems like the auxiliary feedwater system are replaced by NuScale’s decay heat removal system, which differs in design and function.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "264",
+      "hop": 2
+    },
+    "nuscale_ch01_0443": {
+      "node_id": "nuscale_ch01_0443",
+      "title": "DSRS 10.4.7, Rev 0: Condensate and Feedwater SystemII.4 Heat Removal Capability (GDC 44)",
+      "summary": "The section explains that the NuScale Condensate and Feedwater System (CFWS) does not serve as a heat removal system to an ultimate heat sink, making certain regulatory criteria (GDC 44, 45, 46) not applicable. It also notes that while some guidance for large LWRs is not relevant, the system conforms to requirements regarding sharing of components and flow accelerated corrosion, and that NuScale’s design does not require auxiliary feedwater or blowdown systems.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "264",
+      "hop": 2
+    },
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes key components such as the reactor pressure vessel, pressurizer, and associated piping and controls. It removes heat from the reactor core to the steam generators using natural circulation, with various valves and systems in place to manage noncondensible gases and maintain system integrity during both normal and emergency operations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
+      "hop": 2
+    },
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain fuel integrity, minimize solid deposits, and ensure uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 2
+    },
+    "nuscale_ch01_0057": {
+      "node_id": "nuscale_ch01_0057",
+      "title": "Critical Heat Flux Testing - NuFuel HTP2™ Fuel Design",
+      "summary": "The primary goal of the Critical Heat Flux (CHF) testing for the NuFuel HTP2™ fuel design was to obtain CHF data specific to the NuScale fuel assembly using AREVA HMP™/HTP™ spacer grid technology, supplementing existing data from earlier designs. This data supported the development and validation of CHF correlations for NuScale applications and provided additional information on bundle mixing and pressure drop characteristics under various hydraulic conditions, using a 5x5 electrically-heated test section at the AREVA Karlstein facility.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "85",
+      "hop": 3
+    },
+    "nuscale_ch01_0738": {
+      "node_id": "nuscale_ch01_0738",
+      "title": "SRP 15.4.3, Rev 3: Control Rod Misoperation (System Malfunction or Operator Error)II.1 Thermal Margin Limits",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for control rod misoperation events, focusing on thermal margin limits. NuScale meets the requirements by using appropriate heat generation rate limits and the 95/95 MCHFR approach to ensure fuel and cladding integrity, and clarifies that certain criteria are not applicable due to differences in reactor design. The terminology and analysis methods are tailored to NuScale’s specific technology, with guidance for some events referenced in other regulatory sections.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "299",
+      "hop": 3
+    },
+    "nuscale_ch01_0732": {
+      "node_id": "nuscale_ch01_0732",
+      "title": "SRP 15.4.1, Rev 3: Uncontrolled Control Rod Assembly Withdrawal From a Subcritical or Low Power Startup ConditionII.1.A Thermal Margin Limits",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for various accident scenarios, highlighting that its passive natural circulation design eliminates the need for reactor coolant pumps, making certain criteria not applicable. For uncontrolled control rod assembly withdrawal, NuScale uses critical heat flux (CHF) and heat generation rate limits to ensure thermal margin and fuel safety, aligning with regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "298",
+      "hop": 3
+    },
+    "nuscale_ch05_0021": {
+      "node_id": "nuscale_ch05_0021",
+      "title": "Reactor Coolant System Piping",
+      "summary": "The section discusses the design and degradation assessment of the NuScale reactor coolant system's steam generator (SG) tubing. It notes that the main degradation observed in similar operating reactors is wear from flow-induced vibration or foreign objects, and that NuScale's design—with its helical tubing and novel support structure—does not increase risk compared to existing designs. Prototypic testing validates the new support design, and the most likely degradation mechanism remains wear, with secondary corrosion risks assessed as low and manageable within standard plugging criteria.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "104",
+      "hop": 3
+    },
+    "nuscale_ch01_0116": {
+      "node_id": "nuscale_ch01_0116",
+      "title": "Figure 1.7-3e: Piping and Instrumentation Diagram Legends",
+      "summary": "This section provides a comprehensive list of abbreviations and symbols used as legends in Piping and Instrumentation Diagrams (P&IDs) for the NuScale Final Safety Analysis Report. It categorizes identifiers for various analysis functions, measurement types, and instrumentation, ensuring clarity and standardization in interpreting technical drawings.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "106",
+      "hop": 4
+    },
+    "nuscale_ch01_0115": {
+      "node_id": "nuscale_ch01_0115",
+      "title": "Figure 1.7-3d: Piping and Instrumentation Diagram Legends",
+      "summary": "This section provides the legend for interpreting Piping and Instrumentation Diagrams (P&IDs) in the NuScale Final Safety Analysis Report. It details the identification letters used for instrumentation, explaining the meaning of each letter and their combinations to represent measured variables, functions, and device types. The legend ensures consistent understanding and communication of instrumentation symbols throughout the documentation.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "105",
+      "hop": 4
+    },
+    "nuscale_ch01_0018": {
+      "node_id": "nuscale_ch01_0018",
+      "title": "Principal Design Criteria",
+      "summary": "The section outlines the principal design criteria for the NuScale plant, focusing on the Site Cooling Water System (SCWS) and the reactor's heat transfer process. It describes the reactor core's natural circulation cooling mechanism and the flow of steam from the steam generators to the turbine and condenser, emphasizing the system's role in power generation and heat removal.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "28",
+      "hop": 4
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0058",
+      "target": "nuscale_ch05_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides critical heat flux testing data and correlations for the NuScale fuel design, which are necessary to validate the thermal-hydraulic performance and sizing of the steam generators described in Section B for adequate full-power heat transfer."
+    },
+    {
+      "source": "nuscale_ch01_0058",
+      "target": "nuscale_ch05_0019",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides critical heat flux testing data and correlations for the NuScale fuel design, which are used to validate the thermal-hydraulic performance and sizing of the steam generators described in Section B, ensuring they can adequately transfer full-power heat as specified in the design parameters."
+    },
+    {
+      "source": "nuscale_ch01_0058",
+      "target": "nuscale_ch01_0015",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A provides specific test data and validation for the steam generator's thermal-hydraulic performance, which supports the general plant description and design parameters outlined in Section B, particularly regarding the adequacy of the steam generator sizing for full-power heat transfer."
+    },
+    {
+      "source": "nuscale_ch01_0058",
+      "target": "nuscale_ch01_0059",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the objective and results of critical heat flux (CHF) testing for the NuScale fuel design, while Section B details the methodology of the electrically-heated steam generator performance tests that provide the CHF data referenced in Section A, thus Section B provides the experimental basis for the data used in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0058",
+      "target": "nuscale_ch01_0072",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides test data and validation for the steam generator's thermal-hydraulic performance, which supports the adequacy of the SG sizing described in Section B's certified design interfaces and component listings."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific design details of the steam generators, which are components summarized in Section B's general plant description, thus Section A specifies the technical parameters underlying Section B's overview."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch01_0059",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the design and configuration of the steam generators within each NuScale module, while Section B details the thermal-hydraulic performance testing conducted to validate the steam generators' heat transfer capabilities, thus providing evidence that the SG design can meet the heat transfer requirements implied by the module's rated power in Table 1.2-1."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch01_0072",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the detailed design and sizing information for the steam generators, which must be evaluated against the overall plant configuration and module power ratings specified in Section B to determine if the SG sizing is adequate for full-power heat transfer."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed design information about the reactor coolant system and steam generators, which are specific components summarized in the general plant description of Section B, thereby specifying the technical details underlying the broader overview."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch01_0059",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the design and configuration of the reactor coolant system, including the steam generators, while Section B details the thermal-hydraulic performance testing of the steam generator tubes, providing evidence that the SG design can handle the required heat transfer for full-power operation."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch01_0072",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the detailed design and components of the reactor coolant system, including the steam generators, while Section B references the certified design boundaries and identifies which components (such as the SGs) are included in the certified design per Table 1.2-1, thus connecting the specific SG sizing parameters to the overall plant configuration."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0059",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A provides a general overview of the plant design, including the steam generator's role and capacity, while Section B details the specific thermal-hydraulic performance testing conducted to validate the steam generator's heat transfer capability, thus Section B provides supporting evidence for the adequacy claims made in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0072",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general description of the plant design, including the systems relevant to SG sizing, while Section B specifies which systems and components (such as the SG) are part of the certified design and thus subject to sizing adequacy analysis."
+    },
+    {
+      "source": "nuscale_ch01_0059",
+      "target": "nuscale_ch01_0072",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A describes steam generator performance testing methods, while Section B outlines the certified design boundaries and references Table 1.2, which lists the number and size of modules relevant to SG sizing, thus connecting the test results in A to the design context in B."
+    },
+    {
+      "source": "nuscale_ch01_0282",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B provides experimental data and validation for the critical heat flux performance of the steam generator design referenced in Section A's module sizing, thereby supporting the assessment of whether the SG sizing is adequate for full-power heat transfer."
+    },
+    {
+      "source": "nuscale_ch01_0282",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides the specific design details and parameters of the steam generators (SGs), which must be evaluated against the overall plant configuration and power output described in Section A to determine if the SG sizing is adequate for full-power heat transfer."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch01_0058",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A provides the overall plant design parameters, including the number of modules and thermal power per module, which are necessary prerequisites for evaluating whether the steam generator sizing and performance data discussed in Section B are adequate for full-power heat transfer."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch05_0020",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A provides the overall design description and operational limits for the plant, establishing the context and requirements that Section B's detailed steam generator parameters must satisfy to ensure adequate full-power heat transfer."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides the overall design basis and operational limits for the plant, while Section B details the specific components (including steam generators) that must conform to those bases, connecting the general requirements to the specific SG sizing parameters."
+    },
+    {
+      "source": "nuscale_ch01_0447",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B provides experimental data and validation for the critical heat flux performance of the steam generator design referenced in Section A, supporting the assessment of whether the SG sizing (from Table 5.4-1) is adequate for full-power heat transfer as required by regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0447",
+      "target": "nuscale_ch05_0020",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria and acceptance standards that Section B's steam generator design parameters must satisfy to ensure adequate heat transfer at full power, connecting regulatory requirements to specific design implementation."
+    },
+    {
+      "source": "nuscale_ch01_0447",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria and acceptance standards (such as GDC 4) that must be satisfied by the reactor coolant system and its components, while Section B provides the specific design details of the reactor coolant system, including the steam generators, which are evaluated against those criteria."
+    },
+    {
+      "source": "nuscale_ch01_0443",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B provides experimental data and validation for the thermal-hydraulic performance of the steam generator, which supports the regulatory heat removal capability requirements outlined in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0443",
+      "target": "nuscale_ch05_0020",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A specifies the regulatory requirement (GDC 44) for heat removal capability, while Section B provides the design details of the steam generators that must satisfy this requirement for adequate full-power heat transfer."
+    },
+    {
+      "source": "nuscale_ch01_0443",
+      "target": "nuscale_ch05_0019",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A specifies the regulatory requirement (GDC 44) for heat removal capability that the condensate and feedwater system must satisfy, while Section B describes the design and configuration of the reactor coolant system and steam generators, which must meet those heat removal requirements."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the system configuration and operational features relevant to heat removal, while Section B details the testing and validation of critical heat flux correlations for the fuel design, which supports the assessment of whether the steam generator sizing (from Table 5.4-1) is adequate for full-power heat transfer as required by the system described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B describes the inclusion and design of two steam generators per module within the reactor pressure vessel, which directly relates to the module sizing and power output specified in Section A, providing the necessary context to assess whether the SG sizing supports full-power heat transfer for the 160 MWt modules."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general system description that mentions the presence of steam generators (SGs) as part of the RCS, while Section B specifies the detailed design and configuration of the SGs within each module, connecting the general system overview to the specific SG sizing relevant to the analysis question."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B provides experimental data and validation for the critical heat flux performance of the fuel design, which supports the adequacy of the steam generator sizing described in Section A for full-power heat transfer."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides the general design basis and system description for the reactor coolant system, while Section B specifies the detailed configuration and components of the system, including the steam generators whose sizing is in question."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides the general design basis and system description for the reactor coolant system, while Section B specifies the detailed components and subsystems—including the steam generators—thus elaborating on the general description in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0282",
+      "target": "nuscale_ch01_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides specific regulatory conformance details for backup power systems, while Section B offers a general introduction to the plant's design and safety analysis, with Section A specifying details that fall under the broader descriptions in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0282",
+      "target": "nuscale_ch01_0443",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section B (DSRS 10.4.7) sets the regulatory requirement for heat removal capability (GDC 44), which Section A (FSAR tables on module and SG sizing) must satisfy to ensure the steam generators are adequately sized for full-power heat transfer."
+    },
+    {
+      "source": "nuscale_ch01_0282",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides a general description of the reactor coolant system design, which is the basis for the specific steam generator (SG) sizing parameters referenced in Table 5.4-1, thus Section B's system overview is specified in detail by the SG parameters in Section A's referenced tables."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch01_0447",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides the overall design basis and operational limits for the NuScale plant, which includes the module and power ratings referenced in Table 1.2-1, while Section B discusses the conformance of the steam generator and related systems to regulatory criteria, connecting the design parameters to regulatory requirements for system adequacy."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch01_0443",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A introduces the FSAR, which includes design bases and operational limits relevant to SG sizing, while Section B outlines the regulatory acceptance criteria (GDC 44) for heat removal capability that the SG design must satisfy, connecting the design description to the regulatory requirement for adequate heat transfer."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch05_0004",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A provides the overall design bases and operational limits for the plant, which set the context for evaluating the adequacy of system components like the steam generator described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides the overall design bases and operational limits for the plant, which Section B elaborates on by specifying the design and function of the reactor coolant system that must conform to those bases."
+    },
+    {
+      "source": "nuscale_ch01_0447",
+      "target": "nuscale_ch01_0443",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A references the general regulatory criteria and conformance for steam generator systems, while Section B specifies the heat removal capability requirement (GDC 44) that Section A must satisfy to ensure adequate SG sizing for full-power heat transfer."
+    },
+    {
+      "source": "nuscale_ch01_0447",
+      "target": "nuscale_ch05_0004",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses regulatory criteria and conformance related to steam generator system design, while Section B provides a technical description of the reactor coolant system and its components, both of which must be considered together to determine if the steam generator sizing (from Tables 1.2-1 and 5.4-1) is adequate for full-power heat transfer as required by regulations."
+    },
+    {
+      "source": "nuscale_ch01_0447",
+      "target": "nuscale_ch05_0003",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria and conformance related to steam generator systems, while Section B provides the design basis and summary description of the reactor coolant system, which includes the steam generator, thus Section A's regulatory requirements are applied to the system described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0443",
+      "target": "nuscale_ch05_0004",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A specifies regulatory requirements for heat removal capability (GDC 44) that must be satisfied by the system described in Section B, which outlines the design features of the reactor coolant system (RCS) relevant to heat transfer and integrity."
+    },
+    {
+      "source": "nuscale_ch01_0443",
+      "target": "nuscale_ch05_0003",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A specifies the regulatory requirement for heat removal capability (GDC 44) that Section B's design basis for the reactor coolant system must satisfy, specifically regarding the adequacy of heat transfer via the steam generators."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides specific operational details (e.g., degasification, venting) that support the general system description and design basis outlined in Section B, particularly regarding the RCS's function and integrity."
+    },
+    {
+      "source": "nuscale_ch01_0057",
+      "target": "nuscale_ch01_0058",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A provides critical heat flux data and correlations for the NuFuel HTP2™ fuel design, which are prerequisites for the thermal-hydraulic performance testing of the steam generator described in Section B, as accurate CHF correlations are necessary to assess SG sizing adequacy for full-power heat transfer."
+    },
+    {
+      "source": "nuscale_ch01_0057",
+      "target": "nuscale_ch05_0020",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides critical heat flux data and correlations for the fuel design, which are necessary inputs to assess the thermal performance and sizing adequacy of the steam generators described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0057",
+      "target": "nuscale_ch05_0019",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides critical heat flux data and correlations for the NuFuel HTP2™ fuel design, which are necessary inputs to ensure that the steam generator (SG) sizing and heat transfer parameters described in Section B are adequate for safe and effective full-power operation."
+    },
+    {
+      "source": "nuscale_ch01_0738",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section B provides experimental data and validation for the critical heat flux correlations used in the NuScale fuel design, which directly supports the thermal margin limits and safety analysis requirements described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0738",
+      "target": "nuscale_ch05_0020",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section B provides the detailed design parameters and configuration of the steam generators (SGs), which must be evaluated against the thermal margin and heat generation limits referenced in Section A to determine if the SG sizing is adequate for full-power heat transfer."
+    },
+    {
+      "source": "nuscale_ch01_0738",
+      "target": "nuscale_ch05_0019",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section B describes the design and configuration of the reactor coolant system, including the steam generators (SGs), which are the components whose sizing adequacy is questioned in the analysis, while Section A outlines the regulatory thermal margin limits that the SGs must satisfy to ensure safe operation; thus, the information in Section B must be evaluated against the requirements in Section A to determine compliance."
+    },
+    {
+      "source": "nuscale_ch01_0732",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B provides critical heat flux testing data and correlations for the NuScale fuel design, which supports the thermal margin limits and adequacy assessments referenced in Section A for regulatory conformance."
+    },
+    {
+      "source": "nuscale_ch01_0732",
+      "target": "nuscale_ch05_0020",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section B provides the detailed design and configuration of the steam generators (SGs), which must be evaluated against the thermal margin limits and safety criteria outlined in Section A to determine if the SG sizing is adequate for full-power heat transfer."
+    },
+    {
+      "source": "nuscale_ch01_0732",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides the detailed design parameters of the steam generators (SGs) referenced in Table 5.4-1, which are necessary to evaluate whether the SG sizing is adequate for the full-power heat transfer requirements implied by the module configuration in Table 1.2-1, as considered in the analysis question."
+    },
+    {
+      "source": "nuscale_ch05_0021",
+      "target": "nuscale_ch01_0058",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section B provides critical heat flux test data and correlations that are necessary to validate the steam generator sizing and thermal-hydraulic performance discussed in Section A, making B a prerequisite for confirming A's adequacy."
+    },
+    {
+      "source": "nuscale_ch05_0021",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the design and operational experience of SG tubing relevant to wear and foreign object risks, while Section B outlines the overall configuration and components of the reactor module, including the presence of two SGs per module, thus Section A provides specific design considerations that support the general system description in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0021",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides a general overview of the reactor coolant system components, including the steam generators (SGs), while Section A discusses specific design considerations and operational experience relevant to SG tubing, both of which are necessary to assess whether the SG sizing and design are adequate for full-power heat transfer."
+    },
+    {
+      "source": "nuscale_ch01_0057",
+      "target": "nuscale_ch01_0738",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A provides critical heat flux test data and correlations for the NuFuel HTP2™ fuel design, which are used in Section B to demonstrate that the thermal margin limits (such as minimum critical heat flux ratio) required by regulatory criteria are satisfied."
+    },
+    {
+      "source": "nuscale_ch01_0057",
+      "target": "nuscale_ch01_0732",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides critical heat flux data and correlations for the NuScale fuel design, which are necessary to determine if the steam generator (SG) sizing in Section B maintains adequate thermal margin and thus supports full-power heat transfer capability."
+    },
+    {
+      "source": "nuscale_ch01_0057",
+      "target": "nuscale_ch05_0021",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides critical heat flux data and correlations for the NuScale fuel design, which are necessary inputs for evaluating the thermal performance and sizing of the steam generator discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0738",
+      "target": "nuscale_ch01_0732",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A and Section B both address thermal margin limits and conformance with regulatory criteria for control rod misoperation and withdrawal events, connecting them through their evaluation of whether the design's heat generation and removal capabilities (including SG sizing) meet safety analysis requirements."
+    },
+    {
+      "source": "nuscale_ch01_0738",
+      "target": "nuscale_ch05_0021",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses thermal margin limits and heat generation rate limits to ensure fuel safety, while Section B describes the steam generator (SG) tube design and its operational reliability, both of which are connected through the requirement that SG sizing and performance must support adequate heat removal to maintain thermal margins at full power."
+    },
+    {
+      "source": "nuscale_ch01_0732",
+      "target": "nuscale_ch05_0021",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines regulatory criteria and safety analysis requirements for thermal margin and system performance, while Section B provides specific design details and operational experience for the steam generator (SG) tubing, connecting them through the need to demonstrate that the SG design (Section B) satisfies the regulatory and safety requirements (Section A) for adequate heat transfer at full power."
+    },
+    {
+      "source": "nuscale_ch01_0116",
+      "target": "nuscale_ch05_0020",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides legend information for instrumentation diagrams, while Section B describes the steam generator design, with Section A's legend enabling interpretation of the instrumentation referenced in Section B's system descriptions."
+    },
+    {
+      "source": "nuscale_ch01_0116",
+      "target": "nuscale_ch05_0019",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides legend information for interpreting diagrams, while Section B describes the design and components of the reactor coolant system, so Section A is a prerequisite for understanding the technical details presented in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0115",
+      "target": "nuscale_ch05_0020",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A provides diagram legend information for interpreting instrumentation symbols, which is necessary for understanding the detailed steam generator (SG) design and parameters described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0018",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B provides experimental data and validation for the thermal performance of the steam generator design referenced in Section A, supporting the adequacy of SG sizing for full-power heat transfer."
+    },
+    {
+      "source": "nuscale_ch01_0018",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the plant and its cooling systems, while Section B specifies the detailed design and configuration of the steam generators within each module, connecting the overall plant heat removal needs to the specific SG sizing parameters."
+    },
+    {
+      "source": "nuscale_ch01_0018",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the plant and its cooling systems, while Section B specifies the detailed design and configuration of the reactor coolant system, including the steam generators whose sizing is in question."
+    },
+    {
+      "source": "nuscale_ch01_0116",
+      "target": "nuscale_ch01_0115",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A and Section B both provide legends for interpreting piping and instrumentation diagrams, with Section A detailing function identifiers and Section B explaining instrumentation identification letters, which together enable accurate reading of system diagrams relevant to evaluating SG sizing in the analysis question."
+    },
+    {
+      "source": "nuscale_ch01_0115",
+      "target": "nuscale_ch01_0018",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A provides diagram legends for instrumentation identification, which are used to interpret system diagrams relevant to the plant's heat transfer systems described in Section B's facility and cooling water system overview."
+    }
+  ]
+}

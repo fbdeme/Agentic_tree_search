@@ -1,0 +1,559 @@
+{
+  "question": "Compare the NuScale gross and net electrical output (Ch.01) with the reactor pool temperature constraint (Ch.05).",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0006": {
+      "node_id": "nuscale_ch01_0006",
+      "title": "Power Output",
+      "summary": "The NuScale Power Plant consists of up to 12 NuScale Power Modules (NPMs), each rated at 160 MWt and producing approximately 50 MWe, for a total net output of about 570 MWe when accounting for house loads. The actual electrical output may vary depending on environmental conditions, and the design includes a 2% margin for measurement uncertainty.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch01_0051": {
+      "node_id": "nuscale_ch01_0051",
+      "title": "Plant Features of Special Interest",
+      "summary": "This section describes special plant features of the NuScale Power Plant, highlighting structures such as the Central Utility Building and Diesel Generator Buildings, which house essential but nonsafety-related equipment and functions. It also emphasizes human factors engineering, noting that the plant design minimizes human error through automation, digital controls, and optimized workload management, in compliance with regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "43",
+      "hop": 1
+    },
+    "nuscale_ch01_0004": {
+      "node_id": "nuscale_ch01_0004",
+      "title": "Containment Type",
+      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and operates under vacuum during normal conditions, eliminating the need for insulation. The NuScale reactor is a passive, integral small modular pressurized water reactor with natural circulation and no external piping for steam generators or pressurizer, and each module produces about 50 MWe, with a 12-module plant yielding a net output of approximately 570 MWe.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the NuScale pressurizer, including the RPV upper shell, baffle plate, heater bundles, and associated components. It specifies the types of steel and nickel-based alloys used, their protective claddings, and relevant material standards, ensuring corrosion resistance and compatibility with operating environments. References to applicable sections and material specifications from the BPVC are also provided.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 1
+    },
+    "nuscale_ch05_0022": {
+      "node_id": "nuscale_ch05_0022",
+      "title": "Decay Heat Removal System",
+      "summary": "The Decay Heat Removal System (DHRS) is an engineered safety feature designed to remove residual and core decay heat from the reactor after shutdown, especially when normal cooling is unavailable, without relying on external power. It ensures the reactor coolant system (RCS) temperature drops below 420°F within 36 hours, maintaining fuel and pressure boundary safety limits, and its reliability and risk significance are systematically evaluated. The DHRS operates independently of the Emergency Core Cooling System (ECCS), but both can function together if needed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "106",
+      "hop": 1
+    },
+    "nuscale_ch01_0052": {
+      "node_id": "nuscale_ch01_0052",
+      "title": "Comparison with Other Facilities",
+      "summary": "This section compares the major design features and parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It provides a side-by-side summary of key specifications such as electrical output, core design, reactor coolant system, and safety systems, highlighting the differences in scale, configuration, and safety components between NuScale and conventional PWRs. The comparison is intended for reference and illustrative purposes only.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "79",
+      "hop": 1
+    },
+    "nuscale_ch05_0016": {
+      "node_id": "nuscale_ch05_0016",
+      "title": "Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses",
+      "summary": "This section outlines the methodology and regulatory compliance for establishing pressure-temperature limits for the reactor coolant pressure boundary (RCPB) over the plant’s 60-year lifespan. It describes how these limits are calculated using ASME and NRC guidelines, accounting for vessel embrittlement, and provides reference figures and tables for operational conditions to ensure protection against non-ductile failure.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "72",
+      "hop": 2
+    },
+    "nuscale_ch01_0043": {
+      "node_id": "nuscale_ch01_0043",
+      "title": "Ultimate Heat Sink",
+      "summary": "The Ultimate Heat Sink section describes a large, stainless steel-lined, reinforced concrete pool located below plant grade level, which serves as the final heat removal system for the plant. During normal operations, heat is removed from the pool via a cooling system and rejected to the atmosphere, while in the event of a total loss of AC power, decay heat is passively transferred to the pool, which has sufficient water inventory to ensure continued cooling. The spent fuel pool has its own independent cooling system.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "41",
+      "hop": 2
+    },
+    "nuscale_ch01_0732": {
+      "node_id": "nuscale_ch01_0732",
+      "title": "SRP 15.4.1, Rev 3: Uncontrolled Control Rod Assembly Withdrawal From a Subcritical or Low Power Startup ConditionII.1.A Thermal Margin Limits",
+      "summary": "This section summarizes NuScale's conformance with regulatory criteria for various safety analysis scenarios. For SRP 15.4.1, Rev 3, NuScale meets the thermal margin limits by using critical heat flux (CHF) as the appropriate metric and ensures fuel centerline temperature limits are maintained during slow reactivity insertions. Certain criteria related to forced coolant flow and pump failures are not applicable due to NuScale's use of passive natural circulation.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "298",
+      "hop": 2
+    },
+    "nuscale_ch01_0738": {
+      "node_id": "nuscale_ch01_0738",
+      "title": "SRP 15.4.3, Rev 3: Control Rod Misoperation (System Malfunction or Operator Error)II.1 Thermal Margin Limits",
+      "summary": "This section summarizes NuScale’s compliance with regulatory criteria for control rod misoperation events, focusing on thermal margin limits. It confirms that NuScale meets requirements for fuel centerline temperatures and uniform cladding strain, using appropriate methodologies such as CHF instead of DNBR, and notes that some criteria are not applicable due to differences in reactor design. Additionally, it clarifies that certain guidance for PWRs does not apply to NuScale’s design, which lacks reactor coolant pumps.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "299",
+      "hop": 2
+    },
+    "nuscale_ch01_0331": {
+      "node_id": "nuscale_ch01_0331",
+      "title": "SRP 9.2.5, Rev 3: Ultimate Heat SinkII.4 Cooling Water System Inspection",
+      "summary": "The NuScale design fully conforms to SRP 9.2.5, Rev 3, Section II.4 requirements for Cooling Water System Inspection, with no exceptions or additional comments noted. This indicates that the inspection criteria for the ultimate heat sink's cooling water system are met as required by regulatory standards.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "247",
+      "hop": 2
+    },
+    "nuscale_ch01_0282": {
+      "node_id": "nuscale_ch01_0282",
+      "title": "SRP BTP 8-3, Rev 3: Stability of Offsite Power SystemsB.2 Grid Capacity",
+      "summary": "This section states that the analysis of grid stability and capacity (SRP BTP 8-3, Rev 3) is not addressed in the NuScale design certification, as it is the responsibility of the COL (Combined License) applicant referencing the design. The NuScale report also confirms that backup diesel generators are used solely for standby power and not for other purposes, and that certain regulatory guidance documents do not apply to their electric power systems.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "241",
+      "hop": 3
+    },
+    "nuscale_ch01_0026": {
+      "node_id": "nuscale_ch01_0026",
+      "title": "Fission Product Removal and Control Systems",
+      "summary": "The only credited fission product removal and control system in the NuScale design is the containment vessel (CNV) working with the containment isolation system. Fission product control is achieved inherently by the design, as the CNV atmosphere is passively depleted, minimizing the release of radioactive materials.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "33",
+      "hop": 3
+    },
+    "nuscale_ch01_0023": {
+      "node_id": "nuscale_ch01_0023",
+      "title": "Containment Systems",
+      "summary": "The NuScale containment vessel (CNV) is maintained under vacuum during normal operation, which reduces moisture and corrosion, aids in leak detection, limits oxygen for safety, and eliminates the need for insulation. In the event of an emergency, passive cooling rapidly reduces pressure and temperature, and the plant’s design—featuring passive safety systems and a small fuel inventory—results in improved safety and a lower core damage frequency compared to conventional reactors.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "32",
+      "hop": 3
+    },
+    "nuscale_ch01_0303": {
+      "node_id": "nuscale_ch01_0303",
+      "title": "DSRS 9.1.3, Rev 0: Spent Fuel Pool Cooling and Cleanup SystemII.5 Specific Criteria to Meet GDC 63",
+      "summary": "This section summarizes the NuScale Spent Fuel Pool Cooling and Cleanup System’s conformance with regulatory criteria, specifically addressing GDC 63 and related requirements. The system fully conforms to GDC 63, GDC 5, GDC 61, and 10 CFR 20.1101(b), but only partially conforms to GDC 2 and GDC 4 due to the normal makeup water supply system not being seismic Category I or designed for postulated accidents; however, the ultimate heat sink (UHS) system meets these criteria. No exceptions are noted for GDC 63 compliance.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "243",
+      "hop": 3
+    },
+    "nuscale_ch01_0301": {
+      "node_id": "nuscale_ch01_0301",
+      "title": "DSRS 9.1.3, Rev 0: Spent Fuel Pool Cooling and Cleanup SystemII.3 Specific Criteria to Meet GDC 5",
+      "summary": "Section II.3 of DSRS 9.1.3, Rev 0, addresses the specific criteria to meet GDC 5 for the Spent Fuel Pool Cooling and Cleanup System. The document states that the design fully conforms to GDC 5 requirements, with no exceptions or additional notes.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "243",
+      "hop": 3
+    },
+    "nuscale_ch01_0268": {
+      "node_id": "nuscale_ch01_0268",
+      "title": "DSRS 8.3.2, Rev 0: DC Power Systems (Onsite)II.2 Conformance with RG 1.75",
+      "summary": "This section summarizes the NuScale design’s conformance with various regulatory criteria for onsite DC power systems. While the design conforms to some General Design Criteria (GDC), it supports exemptions or departures from others, such as GDC 17, 18, and 33, and complies with alternative principal design criteria for several additional GDCs. The section also notes partial conformance with certain regulatory guides as they apply to specific aspects of the design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "239",
+      "hop": 4
+    },
+    "nuscale_ch05_0006": {
+      "node_id": "nuscale_ch05_0006",
+      "title": "System Evaluation",
+      "summary": "This section describes the evaluation of the NuScale Power Plant’s system performance, focusing on optimizing steady-state parameters such as coolant temperatures, flow rates, and pressures to maximize electrical generation and maintain safety margins. Calculations using thermal hydraulic software and hand verification account for uncertainties and ensure the natural circulation design is effective, with low pressure losses and robust performance across various operating conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "12",
+      "hop": 4
+    },
+    "nuscale_ch01_0256": {
+      "node_id": "nuscale_ch01_0256",
+      "title": "DSRS 8.3.1, Rev 0: AC Power Systems (Onsite)II.7 Compliance with 10 CFR 50.65(a)(4)",
+      "summary": "This section summarizes NuScale’s compliance with various regulatory criteria for onsite AC power systems, noting full or partial conformance with several General Design Criteria (GDCs) and identifying specific exemptions for others (such as GDC 17, 18, and 33). It also clarifies that compliance with the maintenance rule (10 CFR 50.65(a)(4)) is not applicable at this stage and is the responsibility of the COL applicant referencing the certified design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "238",
+      "hop": 4
+    },
+    "nuscale_ch01_0014": {
+      "node_id": "nuscale_ch01_0014",
+      "title": "Acronyms and Abbreviations",
+      "summary": "This section explains the conventions used in the NuScale Final Safety Analysis Report (FSAR) for numbering tables, figures, and pages, as well as the handling of proprietary and sensitive information. Tables and figures are numbered according to their section, and sensitive content is withheld from the public version in accordance with regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "10",
+      "hop": 4
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0006",
+      "target": "nuscale_ch05_0022",
+      "relation": "LEADS_TO",
+      "confidence": 0.85,
+      "description": "The gross and net electrical output of the NuScale reactor (Section A) is constrained by the ability of the Decay Heat Removal System (Section B) to remove heat and maintain reactor pool temperature within specified limits, as inadequate heat removal would necessitate reduced power output to avoid exceeding temperature constraints."
+    },
+    {
+      "source": "nuscale_ch01_0006",
+      "target": "nuscale_ch01_0052",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section B provides nominal power output values for NuScale and typical PWRs, which can be directly compared to the reactor pool temperature constraint discussed in Section A to assess whether the gross and net electrical outputs are achievable without exceeding thermal limits."
+    },
+    {
+      "source": "nuscale_ch01_0004",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section B references material specifications and component descriptions from other sections, providing detailed information that supports the general containment design described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0004",
+      "target": "nuscale_ch05_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.6,
+      "description": "Section A describes the containment vessel's structural and pressure design, while Section B outlines the decay heat removal system's function to cool the reactor and maintain safe temperatures, with both sections relating through the containment's ability to support heat removal processes necessary to meet reactor pool temperature constraints that impact electrical output."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0022",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section B describes the Decay Heat Removal System's ability to remove residual and decay heat to maintain safe reactor pool temperatures, which is a prerequisite for achieving and sustaining the gross and net electrical output values discussed in Section A, as exceeding pool temperature constraints would limit or halt power generation."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch01_0052",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B provides the nominal gross and net electrical output values for the NuScale plant, which must be supported by the decay heat removal capability described in Section A to ensure reactor pool temperature constraints are not exceeded during operation and shutdown."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch01_0006",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A discusses pressure-temperature limits and vessel integrity requirements, which set constraints that must be considered when determining the allowable gross and net electrical output described in Section B, as exceeding these thermal limits could compromise reactor safety."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch01_0051",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A discusses pressure-temperature limits and weld requirements for the reactor vessel, which are prerequisites for ensuring the reactor pool temperature constraint in Section B is technically feasible and safe when considering the plant's gross and net electrical output."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch01_0004",
+      "relation": "REFERENCES",
+      "confidence": 0.7,
+      "description": "Section A discusses ASME code compliance for reactor vessel attachments, while Section B describes the containment vessel's ASME classification and design, with both sections referencing ASME BPVC standards as the connecting information."
+    },
+    {
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0006",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A describes the reactor pool's cooling capability, which constrains the maximum heat (and thus electrical output) that can be safely removed, while Section B provides information about the containment and power output, linking the plant's gross/net electrical output to the reactor pool temperature constraint."
+    },
+    {
+      "source": "nuscale_ch01_0732",
+      "target": "nuscale_ch01_0006",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section B describes the NuScale power output and containment design, which must operate within the thermal margin limits and safety constraints (such as reactor pool temperature) specified in Section A to ensure regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch01_0732",
+      "target": "nuscale_ch01_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses thermal margin limits and safety system requirements that are influenced by reactor power output, while Section B describes the containment vessel's design to withstand pressure transients, both of which are connected through the need to ensure that electrical output (gross/net) does not cause reactor pool temperatures or pressures to exceed containment and safety constraints."
+    },
+    {
+      "source": "nuscale_ch01_0738",
+      "target": "nuscale_ch01_0006",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses thermal margin limits and heat generation rate limits to ensure fuel safety, which directly constrain the maximum allowable reactor power, while Section B describes the containment vessel's design and mentions power output, thus the thermal constraints in Section A set upper bounds on the gross and net electrical output referenced in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0738",
+      "target": "nuscale_ch01_0051",
+      "relation": "LEADS_TO",
+      "confidence": 0.8,
+      "description": "Section A discusses thermal margin limits and heat generation rate constraints to ensure fuel safety, while Section B describes plant utility features such as chiller equipment that could influence reactor pool temperature, connecting the electrical output (which affects heat generation) with the need to maintain pool temperature within constraints."
+    },
+    {
+      "source": "nuscale_ch01_0738",
+      "target": "nuscale_ch01_0004",
+      "relation": "LEADS_TO",
+      "confidence": 0.85,
+      "description": "Section A discusses thermal margin limits and heat generation rate constraints to ensure fuel safety, which directly impacts the allowable gross and net electrical output in Section B, as the containment vessel's design and reactor pool temperature constraints must accommodate the heat removal requirements associated with those outputs."
+    },
+    {
+      "source": "nuscale_ch01_0331",
+      "target": "nuscale_ch01_0006",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "The gross and net electrical output of NuScale (Section B) is constrained by the reactor pool temperature limit (Section A), since the ultimate heat sink's ability to reject heat governs the maximum permissible power output."
+    },
+    {
+      "source": "nuscale_ch01_0331",
+      "target": "nuscale_ch01_0051",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses regulatory conformance for cooling water systems relevant to heat removal (which constrains reactor pool temperature), while Section B describes the Central Utility Building housing chiller equipment that supports plant cooling, thus both sections are connected through the plant's ability to maintain reactor pool temperature within constraints, which in turn affects allowable gross and net electrical output."
+    },
+    {
+      "source": "nuscale_ch01_0331",
+      "target": "nuscale_ch01_0004",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A discusses the cooling water system and its regulatory conformance, which is directly related to the reactor pool temperature constraint in Section B, as the cooling system's performance (influenced by gross and net electrical output) must ensure the containment vessel operates within safe temperature limits."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch01_0043",
+      "relation": "LEADS_TO",
+      "confidence": 0.8,
+      "description": "Section B describes the reactor pool's role in heat removal, which constrains the maximum allowable reactor pool temperature and thus limits the gross and net electrical output discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch01_0738",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A discusses pressure-temperature and structural requirements for the reactor vessel, while Section B outlines thermal margin and fuel temperature limits to ensure safety; both are related through their impact on allowable reactor pool temperature, which constrains the maximum gross and net electrical output of the NuScale reactor."
+    },
+    {
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0732",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the decay heat removal system's capability to cool the reactor pool, which directly constrains the maximum allowable reactor pool temperature and thus limits the gross and net electrical output discussed in Section B, as exceeding the pool temperature constraint would violate safety margins."
+    },
+    {
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0738",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the reactor pool's cooling capability, which constrains the maximum heat removal and thus limits the gross and net electrical output discussed in Chapter 1, while Section B specifies regulatory thermal margin limits that must be satisfied to ensure safe operation under various scenarios, connecting the pool temperature constraint to output limits."
+    },
+    {
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0331",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A describes the design and capability of the NuScale reactor's ultimate heat sink system to remove decay heat via the reactor pool, while Section B outlines the regulatory criteria (SRP 9.2.5) for the ultimate heat sink, connecting the system's performance (including pool temperature constraints) to compliance with regulatory requirements that indirectly affect allowable gross and net electrical output."
+    },
+    {
+      "source": "nuscale_ch01_0732",
+      "target": "nuscale_ch01_0738",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Both Section A and Section B address thermal margin limits and fuel temperature constraints in the context of control rod events, which are directly related to the reactor's ability to safely achieve and maintain gross and net electrical output within the reactor pool temperature constraint."
+    },
+    {
+      "source": "nuscale_ch01_0732",
+      "target": "nuscale_ch01_0331",
+      "relation": "LEADS_TO",
+      "confidence": 0.85,
+      "description": "Section A discusses thermal margin limits and safety system requirements that influence the reactor's ability to sustain gross and net electrical output, while Section B addresses the ultimate heat sink and cooling water system constraints, such as reactor pool temperature, which directly limit or enable the achievable electrical output."
+    },
+    {
+      "source": "nuscale_ch01_0738",
+      "target": "nuscale_ch01_0331",
+      "relation": "LEADS_TO",
+      "confidence": 0.9,
+      "description": "The gross and net electrical output from NuScale (Section A) is directly dependent on the reactor pool temperature constraint (Section B), since the ability to reject heat to the ultimate heat sink limits the maximum permissible reactor power and thus electrical output."
+    },
+    {
+      "source": "nuscale_ch01_0282",
+      "target": "nuscale_ch01_0006",
+      "relation": "LEADS_TO",
+      "confidence": 0.7,
+      "description": "Section B describes the NuScale containment vessel's design and pressure characteristics, which are influenced by reactor pool temperature constraints from Chapter 5, while Section A discusses electrical output and grid reliability, both of which are operationally limited by the same thermal constraints imposed by reactor pool temperature."
+    },
+    {
+      "source": "nuscale_ch01_0026",
+      "target": "nuscale_ch01_0006",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A describes the Emergency Core Cooling System's role in decay heat removal, which is a prerequisite for maintaining reactor pool temperature within constraints that ultimately affect the plant's ability to achieve its gross and net electrical output as discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0026",
+      "target": "nuscale_ch01_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the Emergency Core Cooling System's role in decay heat removal, which directly affects reactor pool temperature, while Section B details the containment vessel's design to withstand pressure transients, both of which are relevant to ensuring that electrical output does not exceed thermal constraints imposed by pool temperature limits."
+    },
+    {
+      "source": "nuscale_ch01_0023",
+      "target": "nuscale_ch01_0006",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Both Section A and Section B describe the NuScale containment vessel (CNV) being maintained at a vacuum during normal operations, with Section A focusing on the benefits and Section B on the design and regulatory classification, thus Section A provides details/specifications for B's general description."
+    },
+    {
+      "source": "nuscale_ch01_0023",
+      "target": "nuscale_ch01_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the operational vacuum condition of the containment vessel (CNV) and its benefits, while Section B specifies the CNV's design as a vacuum-maintained, ASME-certified pressure vessel, thus Section A provides operational details that specify Section B's general design description."
+    },
+    {
+      "source": "nuscale_ch01_0303",
+      "target": "nuscale_ch01_0006",
+      "relation": "LEADS_TO",
+      "confidence": 0.8,
+      "description": "The gross and net electrical output of the NuScale reactor (Section B) is constrained by the reactor pool temperature limits and cooling system capabilities described in Section A, since exceeding thermal limits could impact safe operation and compliance with regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0303",
+      "target": "nuscale_ch01_0051",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A discusses the design and regulatory conformance of the spent fuel pool cooling system, which is relevant to maintaining reactor pool temperature constraints that could impact the plant's electrical output described in Section B, thus linking the cooling system's capability (A) as a prerequisite for achieving and sustaining the electrical output (B) within safe temperature limits."
+    },
+    {
+      "source": "nuscale_ch01_0303",
+      "target": "nuscale_ch01_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the spent fuel pool cooling system's design criteria and its conformance with regulatory requirements, which is relevant to maintaining reactor pool temperature constraints, while Section B describes the containment vessel's design and pressure characteristics, both of which impact the plant's ability to safely manage heat removal and thus influence the achievable gross and net electrical output under thermal constraints."
+    },
+    {
+      "source": "nuscale_ch01_0301",
+      "target": "nuscale_ch01_0006",
+      "relation": "LEADS_TO",
+      "confidence": 0.85,
+      "description": "Section A discusses the spent fuel pool cooling system's design criteria and its reliance on the ultimate heat sink for heat removal, which is directly affected by the reactor's thermal output described in Section B, as higher gross and net electrical output increases heat rejection to the pool, impacting compliance with pool temperature constraints."
+    },
+    {
+      "source": "nuscale_ch01_0301",
+      "target": "nuscale_ch01_0051",
+      "relation": "LEADS_TO",
+      "confidence": 0.7,
+      "description": "Section A discusses the spent fuel pool cooling system's regulatory conformance and ultimate heat sink design, which is relevant to maintaining reactor pool temperature constraints that could impact the plant's electrical output described in Section B, as excessive pool temperatures may limit or affect gross and net electrical output."
+    },
+    {
+      "source": "nuscale_ch01_0301",
+      "target": "nuscale_ch01_0004",
+      "relation": "LEADS_TO",
+      "confidence": 0.8,
+      "description": "Section A discusses the spent fuel pool cooling system's regulatory conformance and ultimate heat sink design, which is relevant to maintaining reactor pool temperature constraints that can impact the plant's net and gross electrical output described in Section B, as excessive pool temperatures may necessitate power reduction or shutdown."
+    },
+    {
+      "source": "nuscale_ch01_0282",
+      "target": "nuscale_ch01_0026",
+      "relation": "LEADS_TO",
+      "confidence": 0.8,
+      "description": "Section A discusses the electrical output and power system constraints of the NuScale plant, while Section B describes the Emergency Core Cooling System's passive heat removal function, with both sections connected by the need to ensure that electrical output (gross/net) does not lead to reactor pool temperatures exceeding safety constraints, thus linking power generation to thermal safety limits."
+    },
+    {
+      "source": "nuscale_ch01_0282",
+      "target": "nuscale_ch01_0303",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "The gross and net electrical output from NuScale (Section A) is constrained by the reactor pool temperature limits specified in Section B, as exceeding these thermal limits could impact the ability to safely dissipate heat and thus restrict allowable power output."
+    },
+    {
+      "source": "nuscale_ch01_0282",
+      "target": "nuscale_ch01_0301",
+      "relation": "LEADS_TO",
+      "confidence": 0.8,
+      "description": "Section A provides information on the NuScale plant's electrical output and power system configuration, while Section B outlines the reactor pool temperature constraint as part of the spent fuel pool cooling system requirements; the electrical output in Section A is operationally limited by the thermal management constraints described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0026",
+      "target": "nuscale_ch01_0023",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the Emergency Core Cooling System's role in decay heat removal during accidents, while Section B explains that the containment vessel is maintained at a vacuum during normal operation to minimize heat transfer and corrosion, both of which are relevant to maintaining reactor pool temperature constraints that can impact gross and net electrical output."
+    },
+    {
+      "source": "nuscale_ch01_0026",
+      "target": "nuscale_ch01_0303",
+      "relation": "SATISFIES",
+      "confidence": 0.7,
+      "description": "Section A describes the emergency core cooling system's role in decay heat removal, which impacts reactor and pool temperatures, while Section B outlines regulatory criteria for spent fuel pool cooling systems that must maintain pool temperature within constraints, thus connecting the plant's heat removal capabilities (A) to the regulatory temperature limits (B)."
+    },
+    {
+      "source": "nuscale_ch01_0026",
+      "target": "nuscale_ch01_0301",
+      "relation": "LEADS_TO",
+      "confidence": 0.7,
+      "description": "Section A describes the emergency core cooling system's role in decay heat removal, which affects reactor and pool temperatures, while Section B outlines regulatory criteria for the spent fuel pool cooling system, both connected by the need to control heat removal to maintain pool temperature within constraints that ultimately impact allowable electrical output."
+    },
+    {
+      "source": "nuscale_ch01_0023",
+      "target": "nuscale_ch01_0303",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section B specifies regulatory criteria for spent fuel pool cooling (including temperature constraints) that must be satisfied by the plant's operational parameters, such as the gross and net electrical output described in Section A, to ensure adequate heat removal and safety."
+    },
+    {
+      "source": "nuscale_ch01_0023",
+      "target": "nuscale_ch01_0301",
+      "relation": "LEADS_TO",
+      "confidence": 0.7,
+      "description": "Section A describes containment system features affecting heat transfer, while Section B outlines regulatory criteria for spent fuel pool cooling, both of which are connected through their impact on reactor pool temperature constraints that in turn affect allowable gross and net electrical output."
+    },
+    {
+      "source": "nuscale_ch01_0303",
+      "target": "nuscale_ch01_0301",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A and Section B both address conformance with regulatory criteria for the spent fuel pool cooling and cleanup system, specifically referencing the same design features and exceptions regarding seismic categorization and quality group requirements, but each focuses on different General Design Criteria (GDC 63 in A and GDC 5 in B), thus connecting through shared design information and compliance context."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch01_0006",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A discusses how reactor power levels and associated thermal parameters are optimized to maximize electrical output, which is directly constrained by thermal limits such as reactor pool temperature, while Section B provides the containment design context for the power output figures referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0256",
+      "target": "nuscale_ch01_0006",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.7,
+      "description": "Section A discusses regulatory compliance for AC and offsite power systems, which are necessary to support the operation of the NuScale reactor at its specified gross and net electrical output described in Section B, and both sections are connected through the operational limits imposed by reactor pool temperature constraints that affect power generation capability."
+    },
+    {
+      "source": "nuscale_ch01_0256",
+      "target": "nuscale_ch01_0051",
+      "relation": "LEADS_TO",
+      "confidence": 0.7,
+      "description": "Section A discusses regulatory compliance for AC and offsite power systems, which are necessary to support the plant's electrical output (gross and net), while Section B describes the Central Utility Building that houses support systems (like chillers) essential for maintaining reactor pool temperature, thus linking electrical output capability with temperature constraints via supporting infrastructure."
+    },
+    {
+      "source": "nuscale_ch01_0268",
+      "target": "nuscale_ch05_0006",
+      "relation": "LEADS_TO",
+      "confidence": 0.85,
+      "description": "Section B discusses how steady-state parameters, including reactor pool temperature, are established as a function of reactor power to optimize electrical output, directly connecting the gross/net electrical output (Ch.01) with the reactor pool temperature constraint (Ch.05)."
+    },
+    {
+      "source": "nuscale_ch01_0268",
+      "target": "nuscale_ch01_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses specific conformance with regulatory criteria for power systems, while Section B explains the general use of DSRS and SRP as the technical basis for the NuScale FSAR, indicating that Section A's details are part of the broader evaluative framework described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch01_0256",
+      "relation": "SEMANTIC",
+      "confidence": 0.6,
+      "description": "Section A discusses how reactor power levels and associated thermal parameters are optimized to maximize electrical output, which is directly constrained by thermal limits such as reactor pool temperature, while Section B outlines regulatory requirements for AC power systems but does not directly address thermal or output constraints, making their relationship indirect and primarily contextual through overall plant performance and compliance."
+    },
+    {
+      "source": "nuscale_ch01_0256",
+      "target": "nuscale_ch01_0014",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A discusses compliance with regulatory criteria for AC and offsite power systems, while Section B explains the organizational structure and referencing system of the FSAR, which includes how detailed evaluations (such as those in Section A) are documented and referenced."
+    }
+  ]
+}

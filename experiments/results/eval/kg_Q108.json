@@ -1,0 +1,229 @@
+{
+  "question": "Compare the LTOP setpoints from Table 5.2-10 with the P-T limit curves described in Tables 5.3-6/7, explaining their relationship.",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch05_0016": {
+      "node_id": "nuscale_ch05_0016",
+      "title": "Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses",
+      "summary": "This section outlines the basis for establishing operational pressure and temperature limits for the reactor coolant pressure boundary (RCPB) to comply with regulatory requirements over the plant’s 60-year lifespan. It describes the use of ASME and NRC methodologies to calculate pressure-temperature limit curves, accounting for vessel embrittlement, and provides the relevant figures and tables for these limits to ensure protection against non-ductile failure.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "72",
+      "hop": 1
+    },
+    "nuscale_ch05_0013": {
+      "node_id": "nuscale_ch05_0013",
+      "title": "References",
+      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as tables summarizing relevant ASME code cases for reactor components.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "46",
+      "hop": 1
+    },
+    "nuscale_ch05_0009": {
+      "node_id": "nuscale_ch05_0009",
+      "title": "Overpressure Protection",
+      "summary": "This section outlines NuScale's compliance with NRC regulations and ASME Boiler and Pressure Vessel Code (BPVC) requirements for overpressure protection of the reactor coolant boundary. It details how code cases for design, fabrication, inspection, and testing are selected and verified according to specific regulatory guides and federal regulations, ensuring all conditions and provisions are met. A consolidated list of the applicable ASME code cases is provided in Table 5.2-1.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "21",
+      "hop": 1
+    },
+    "nuscale_ch05_0008": {
+      "node_id": "nuscale_ch05_0008",
+      "title": "Compliance with Codes and Code Cases",
+      "summary": "This section describes how the NuScale Power Modules (NPMs) comply with relevant regulatory requirements, specifically 10 CFR 50.55a and associated General Design Criteria, by designing, fabricating, and testing reactor coolant pressure boundary (RCPB) components to ASME Boiler and Pressure Vessel Code (BPVC) Class 1 standards. It also clarifies the classification of connected piping and references the applicable ASME BPVC edition and NRC regulatory guides used for the design certification.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "20",
+      "hop": 1
+    },
+    "nuscale_ch05_0015": {
+      "node_id": "nuscale_ch05_0015",
+      "title": "Reactor Vessel Materials",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module’s reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel, serving as a key barrier to fission product release. The RPV and its components are constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure integrity and safety throughout the plant’s design lifetime.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
+      "hop": 1
+    },
+    "nuscale_ch05_0017": {
+      "node_id": "nuscale_ch05_0017",
+      "title": "Reactor Vessel Integrity",
+      "summary": "This section outlines the procedures and regulatory compliance measures to ensure the integrity of the NuScale reactor vessel over its 60-year design life. It details the development of operating procedures to maintain pressure-temperature limits, evaluates the vessel’s resistance to pressurized thermal shock and upper-shelf energy degradation, and confirms that predicted material properties remain within regulatory safety margins throughout the vessel’s operational lifespan.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "73",
+      "hop": 1
+    },
+    "nuscale_ch05_0018": {
+      "node_id": "nuscale_ch05_0018",
+      "title": "References",
+      "summary": "This section outlines the requirements and procedures for inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fasteners for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It specifies compliance with ASME BPVC and NQA-1 standards for handling and storage, as well as measures to maintain a dry, controlled environment during shipment. Key references for these procedures and standards are also listed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "74",
+      "hop": 2
+    },
+    "nuscale_ch05_0002": {
+      "node_id": "nuscale_ch05_0002",
+      "title": "Summary Description",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve independent modules, maintains proper coolant chemistry and boron concentration, and is engineered to meet safety and performance requirements during normal and off-normal conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 3
+    },
+    "nuscale_ch05_0019": {
+      "node_id": "nuscale_ch05_0019",
+      "title": "Reactor Coolant System Component and Subsystem Design",
+      "summary": "This section describes the design of the NuScale Power Module's Reactor Coolant System (RCS) components and subsystems, including the reactor pressure vessel, steam generators, safety valves, and associated piping and valves. It outlines the integration of these components within the RPV, highlights the boundaries between primary and secondary systems, and references other sections for detailed design bases of specific valves and internals.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
+      "hop": 4
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0009",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "The LTOP setpoints from Table 5.2-10 are established to ensure that reactor pressure does not exceed the P-T limit curves described in Tables 5.3-6/7, thereby ensuring compliance with the pressure-temperature safety requirements for the reactor vessel."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0008",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A provides specific analyses and data on pressure-temperature limits and material properties for the reactor vessel, while Section B establishes that these analyses must comply with ASME BPVC and regulatory requirements, connecting the technical results in A to the regulatory framework in B."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0015",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "The LTOP setpoints from Table 5.2-10 are established to ensure that the reactor vessel does not exceed the pressure-temperature (P-T) limits defined by the curves in Tables 5.3-6/7, thereby protecting the vessel materials described in Section B from brittle fracture as analyzed in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A provides the technical basis and data for pressure-temperature (P-T) limits, while Section B describes the requirement to develop operating procedures that ensure these P-T limits are not exceeded, directly connecting the design values in A to the operational controls in B."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0009",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides references to industry standards and guidelines that underpin the technical basis for overpressure protection, while Section B discusses compliance with regulatory codes and standards (such as ASME BPVC and 10 CFR 50.55a) that govern the implementation of overpressure protection, thus Section A supports the regulatory framework described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0008",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A lists references, including industry standards and guidelines, that are cited to support the technical basis for compliance claims made in Section B regarding adherence to regulatory codes and standards for reactor coolant boundary integrity."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0015",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A provides references and standards that are applicable to the integrity and quality assurance of the reactor coolant boundary, which includes the reactor vessel materials described in Section B, thereby establishing the regulatory and technical framework for the material specifications and requirements discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0017",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "The LTOP setpoints from Table 5.2-10 are established to ensure that reactor coolant system pressures do not exceed the P-T limit curves described in Tables 5.3-6/7, thereby ensuring compliance with vessel integrity requirements."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0008",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A references the use of ASME BPVC code cases for design, fabrication, and construction, which are specified as being in compliance with the regulatory requirements outlined in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0015",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "The LTOP setpoints from Table 5.2-10 are established to ensure that the reactor coolant system pressure does not exceed the pressure-temperature (P-T) limits defined in Tables 5.3-6/7, thereby protecting the reactor vessel integrity."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0017",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "The LTOP setpoints from Table 5.2-10 are established to ensure that reactor coolant system pressures remain within the P-T limit curves described in Tables 5.3-6/7, thereby preventing vessel integrity violations during low-temperature operations."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0015",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A establishes that the reactor pressure vessel (RPV) and its components comply with ASME Code and regulatory requirements, while Section B describes the RPV as a pressure-retaining component whose integrity is governed by those same codes, thus linking the regulatory compliance in A to the physical system described in B."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0017",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A establishes compliance with regulatory codes for reactor pressure boundary integrity, while Section B describes the development of operating procedures (including LTOP setpoints) to ensure that pressure-temperature (P-T) limits—derived from those codes—are not exceeded, thus linking the regulatory requirements to their operational implementation."
+    },
+    {
+      "source": "nuscale_ch05_0015",
+      "target": "nuscale_ch05_0017",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "The LTOP setpoints from Table 5.2-10 are established to ensure that the reactor vessel pressure does not exceed the P-T limit curves described in Tables 5.3-6/7, thereby satisfying the regulatory requirements for vessel integrity."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0016",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "The LTOP setpoints from Table 5.2-10 are established to ensure that reactor coolant system pressures do not exceed the P-T limit curves described in Tables 5.3-6/7, thereby protecting the reactor vessel from brittle fracture during low-temperature operations."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0013",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the reactor coolant system design, which establishes the context for the technical requirements and standards referenced in Section B that ensure the integrity and safety of the system."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0009",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides a general description of the reactor coolant system, which is the system protected by the LTOP setpoints and P-T limit curves detailed in Section B, thus establishing the physical context for the regulatory requirements and operational limits described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0016",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "The LTOP setpoints from Table 5.2-10 are established to ensure that the reactor coolant system pressure does not exceed the pressure-temperature (P-T) limits defined by the curves in Tables 5.3-6/7, thereby ensuring compliance with vessel integrity requirements."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0013",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the design and components of the reactor coolant system, which establishes the physical and operational context for the LTOP setpoints and P-T limit curves, while Section B lists references that provide the technical and regulatory basis for the integrity requirements that the LTOP setpoints and P-T curves must satisfy."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0009",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "The LTOP setpoints from Table 5.2-10 are established to ensure that the pressure in the reactor coolant system does not exceed the P-T (pressure-temperature) limits defined in Tables 5.3-6/7, meaning the setpoints are directly derived from and must comply with the regulatory P-T limit curves."
+    }
+  ]
+}

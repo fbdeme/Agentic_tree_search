@@ -1,95 +1,437 @@
 {
-  "question": "What is the definition of the abbreviation RRV?",
-  "current_hop": 3,
+  "question": "Comparing Figures 1.2-5 and 5.1-1, what internal components of the NPM are visible in the cutaway views?",
+  "current_hop": 4,
   "nodes": {
     "nuscale_ch01_0063": {
       "node_id": "nuscale_ch01_0063",
       "title": "Emergency Core Cooling System Valve Design Certification Application Demonstration Test",
-      "summary": "This section describes the demonstration test program for the Emergency Core Cooling System (ECCS) valves in the NuScale reactor design. The program aimed to verify the functional performance of the ECCS valves—including their operation at reactor pressures and temperatures, and in borated coolant—using test setups that replicated actual system conditions and included unique design features like the inadvertent actuation block (IAB). Testing was conducted at a specialized facility using a representative valve assembly to ensure the valves met safety and operational requirements.",
+      "summary": "This section describes the demonstration test program for the Emergency Core Cooling System (ECCS) valves in the NuScale reactor design. The program aimed to verify the functional performance of ECCS valves—including their operation at reactor pressures and temperatures, and in borated coolant—using test setups that replicated actual valve configurations and features such as the inadvertent actuation block (IAB). Testing was conducted at a specialized facility to ensure the valves met safety and operational requirements.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "89",
       "hop": 1
     },
-    "nuscale_ch01_0117": {
-      "node_id": "nuscale_ch01_0117",
-      "title": "Figure 1.7-3f: Piping and In strumentation Diagram Legends",
-      "summary": "This section provides the legend for symbols used in NuScale's Piping and Instrumentation Diagrams (P&IDs), detailing the graphical representations for various instruments, sensors, and auxiliary devices such as flow meters, pressure and temperature sensors, and sample probes. It serves as a reference to interpret the P&ID drawings accurately by defining each symbol and its application within the system.",
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain fuel integrity, minimize solid deposits, and ensure uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "107",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
       "hop": 1
     },
-    "nuscale_ch01_0064": {
-      "node_id": "nuscale_ch01_0064",
-      "title": "NuScale Test and Inspection Plans",
-      "summary": "This section describes NuScale’s test and inspection plans for key reactor components, including control rod drive shafts and the Emergency Core Cooling System (ECCS) valves. The tests confirmed operability and performance under various conditions, and a dedicated program was conducted to demonstrate ECCS valve functionality—including unique design features—at reactor operating pressures and temperatures, using specialized test facilities.",
+    "nuscale_ch01_0032": {
+      "node_id": "nuscale_ch01_0032",
+      "title": "Radioactive Waste Management System",
+      "summary": "The section describes the radioactive waste management system at the NuScale Power Plant, noting that liquid, gaseous, and solid waste systems are detailed in Chapter 11, along with effluent monitoring. It also outlines the general arrangement of major plant structures, focusing on the Reactor Building (RXB), which is a reinforced, seismically designed concrete structure housing the nuclear power modules and providing radiation protection for personnel.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "89",
+      "page_range": "36",
       "hop": 1
+    },
+    "nuscale_ch01_0802": {
+      "node_id": "nuscale_ch01_0802",
+      "title": "SRP 15.8, Rev 2: Anticipated Transients without ScramII.2 Acceptance Criteria for Pressurized Water Reactors (PWRs)",
+      "summary": "The section explains that the NuScale reactor design uses a single-failure-proof crane system, in compliance with NUREG-0612 guidelines, ensuring that no credible single component failure can result in dropping a critical load such as a spent fuel cask. Because of this robust design, accident analyses for spent fuel cask or NPM drop events, including radiological consequence assessments, are not required or performed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "313",
+      "hop": 1
+    },
+    "nuscale_ch01_0033": {
+      "node_id": "nuscale_ch01_0033",
+      "title": "General Arrangement of Major Structures and Equipment",
+      "summary": "This section describes the general arrangement of major structures and equipment at a NuScale Power Plant, focusing on the central placement and design of the Reactor Building (RXB). The RXB is a large, reinforced concrete structure designed for safety and radiation protection, housing the NuScale Power Modules (NPMs) in a common reactor pool with individual bays arranged in two rows. The section also references detailed figures and notes that some buildings, like the administration and training building, are outside the scope of the report.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "36",
+      "hop": 1
+    },
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes key components such as the reactor pressure vessel, pressurizer, and associated piping and controls. It removes heat from the reactor core to the steam generators using natural circulation, and features systems for removing noncondensible gases and maintaining pressure boundary integrity to prevent radionuclide release. The RCS interfaces with several other systems, including emergency cooling and chemical control, to ensure safe and efficient operation.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch01_0002": {
+      "node_id": "nuscale_ch01_0002",
+      "title": "Introduction",
+      "summary": "The Introduction section outlines that this document is the Final Safety Analysis Report (FSAR) for the NuScale small modular reactor, submitted as part of the standard design certification process under 10 CFR 52. It describes the NuScale Power Module’s design, safety features, and scalability, highlighting key innovations such as passive safety systems, compact design, and advanced digital controls. The FSAR covers both individual module details and multi-module plant configurations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "8",
+      "hop": 2
+    },
+    "nuscale_ch05_0005": {
+      "node_id": "nuscale_ch05_0005",
+      "title": "System Components",
+      "summary": "This section describes the main components of the NuScale reactor system, focusing on the Reactor Pressure Vessel (RPV), Reactor Coolant System (RCS) piping, and the Pressurizer (PZR). The RPV serves as a primary barrier to fission product release and houses key reactor internals, while the RCS piping connects various subsystems and the PZR is integrated into the RPV to maintain system pressure. Each component's functions and connections within the overall reactor system are briefly outlined.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "10",
+      "hop": 2
+    },
+    "nuscale_ch01_0051": {
+      "node_id": "nuscale_ch01_0051",
+      "title": "Plant Features of Special Interest",
+      "summary": "This section describes special plant features of the NuScale Power Plant, including the Central Utility Building (CUB) and Diesel Generator Buildings (DGBs), which house essential but nonsafety-related systems and backup equipment. It also highlights human factors engineering (HFE) considerations, emphasizing fail-safe design, automation, digital controls, and workload management to minimize human error and meet regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "43",
+      "hop": 2
+    },
+    "nuscale_ch01_0015": {
+      "node_id": "nuscale_ch01_0015",
+      "title": "General Plant Description",
+      "summary": "This section provides a summary of the NuScale plant’s overall design, including key systems such as safety features, power conversion, fuel handling, cooling water, and waste management. It explains the distinction between certified and site-specific design elements, clarifies the use of representative information for context, and notes how security-related details are handled. Each COL applicant must reference the NuScale FSAR and provide site-specific information as required.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "26",
+      "hop": 2
+    },
+    "nuscale_ch01_0110": {
+      "node_id": "nuscale_ch01_0110",
+      "title": "Figure 1.7-1b: Electrical Symbols",
+      "summary": "This section provides a comprehensive legend of electrical symbols and abbreviations used in NuScale’s Final Safety Analysis Report drawings, including representations for switches, relays, indicators, and logic gates. It also explains the meaning of various indicator light colors, logic gate functions, and common abbreviations relevant to electrical and control systems.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "100",
+      "hop": 3
     },
     "nuscale_ch01_0111": {
       "node_id": "nuscale_ch01_0111",
       "title": "Figure 1.7-2: Instrumentatio n and Controls Symbol Legend",
-      "summary": "This section provides a legend explaining the symbols used for instrumentation and controls in NuScale’s safety analysis diagrams. It describes the logic gate functions, control room indicators, switch types, and other key symbols, ensuring clear interpretation of system status and control actions in the diagrams. Additionally, it includes notes on piping and instrumentation diagram conventions, such as vent and drain representations.",
+      "summary": "This section provides a legend explaining the symbols used for instrumentation and controls in the NuScale Final Safety Analysis Report. It defines the logic gate functions (AND, OR, NOT), bistable outputs, control room indicators, switches, and other control functions, as well as notes on piping and instrumentation diagram conventions.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "101",
-      "hop": 1
+      "hop": 3
     },
-    "nuscale_ch01_0112": {
-      "node_id": "nuscale_ch01_0112",
-      "title": "Figure 1.7-3a: Piping and Instrumentation Diagram Legends",
-      "summary": "This section provides the legend for piping and instrumentation diagrams (P&IDs) used in the NuScale Final Safety Analysis Report. It details the standard symbols and notations for various valves, fire and safety equipment, and specialty items, as well as conventions for vents, drains, and flow paths, ensuring consistent interpretation of P&ID drawings. Exceptions and specific system abbreviations are noted directly on the diagrams.",
+    "nuscale_ch01_0068": {
+      "node_id": "nuscale_ch01_0068",
+      "title": "Electrical and Instrumentation and Control Drawings",
+      "summary": "This section explains that the NuScale Final Safety Analysis Report includes simplified electrical, instrumentation, and control (I&C) drawings to visually clarify design information alongside the written text. It references tables and figures listing and explaining the symbols used in these diagrams, and notes that applicants referencing the NuScale design must provide additional site-specific diagrams and legends as needed.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "102",
-      "hop": 2
+      "page_range": "95",
+      "hop": 3
+    },
+    "nuscale_ch01_0806": {
+      "node_id": "nuscale_ch01_0806",
+      "title": "SRP 15.8, Rev 2: Anticipated Transients without ScramII.3.C Analysis Demonstrating the Failure Probability of Failing the ATWS Success Criteria is Sufficiently Small",
+      "summary": "The section summarizes NuScale’s approach to meeting regulatory criteria for Anticipated Transients Without Scram (ATWS) events. NuScale relies on internal diversity within its Module Protection System (MPS) and Reactor Protection System (RPS) to reduce ATWS risk, partially conforming to requirements for a diverse scram system and demonstrating a sufficiently low probability of ATWS failure. Certain equipment requirements do not apply to the NuScale design, and the approach is considered a simpler method to meet the intent of the ATWS Rule.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "314",
+      "hop": 3
+    },
+    "nuscale_ch01_0807": {
+      "node_id": "nuscale_ch01_0807",
+      "title": "DSRS 15.9.A, Rev 0: Thermal Hydraulic Stability Review ResponsibilitiesII.1 No requirements - null.",
+      "summary": "This section reviews NuScale’s conformance with regulatory criteria for anticipated transients without scram (ATWS) and thermal hydraulic stability. The NuScale design uses internal diversity within its module protection system (MPS) to address ATWS risks, partially meeting some regulatory requirements, while other requirements are not applicable or fully met due to the unique design features. For thermal hydraulic stability, the design meets the requirements of GDC 12, with no additional requirements specified in some areas.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "314",
+      "hop": 3
     }
   },
   "edges": [
     {
       "source": "nuscale_ch01_0063",
-      "target": "nuscale_ch01_0117",
-      "relation": "REFERENCES",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A mentions reactor vent valves (RVVs) as part of the ECCS, while Section B provides diagram legends that likely define abbreviations such as RRV, connecting the abbreviation's use in A to its definition in B."
+      "description": "Section A specifies the locations and functions of ECCS valves and related internal components, while Section B provides a general summary of the reactor coolant system and its internal structures, allowing identification of which internal components are visible in the referenced figures."
     },
     {
       "source": "nuscale_ch01_0063",
-      "target": "nuscale_ch01_0064",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A defines the abbreviation 'RVVs' as 'reactor vent valves,' which is referenced in Section B in the same context."
-    },
-    {
-      "source": "nuscale_ch01_0117",
-      "target": "nuscale_ch01_0064",
+      "target": "nuscale_ch01_0032",
       "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section B defines 'RVVs' as reactor vent valves, which is likely the intended abbreviation RRV in the analysis question, while Section A provides diagram legends but does not define RRV."
+      "description": "Section A discusses the design and testing of internal NPM components (ECCS valves, control rod drive shafts), while Section B references figures (including Figure 1.2-2) that present the general arrangement and layout of major plant structures and equipment, thus both sections provide information about the visibility and location of internal NPM components in cutaway views."
     },
     {
-      "source": "nuscale_ch01_0112",
+      "source": "nuscale_ch01_0063",
+      "target": "nuscale_ch01_0033",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes specific internal components of the NPM, such as ECCS valves and control rod drive shafts, whose locations and visibility can be cross-checked in the general arrangement and cutaway views referenced in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0063",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A identifies the location and function of the reactor vent valves (RVVs) as part of the ECCS, while Section B describes the RVVs' operational role in both normal and emergency conditions, connecting their physical presence in the NPM cutaway views to their described functions."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch01_0032",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the internal components of the NPM visible in cutaway views, while Section B references general plant layout figures that may include the NPM but does not detail its internal components, so Section A provides specific details that Section B's general description lacks."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch01_0033",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the internal components of the NPM, such as the reactor coolant system and its subsystems, while Section B references figures that show the general arrangement of major structures and equipment, thus Section A provides specific details that can be visually identified in the cutaway views referenced in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the main internal components of the NPM visible in cutaway views, while Section B specifies additional system features and functions related to those components, such as degasification and pressure boundary integrity."
+    },
+    {
+      "source": "nuscale_ch01_0032",
+      "target": "nuscale_ch01_0033",
+      "relation": "REFERENCES",
+      "confidence": 1.0,
+      "description": "Section A and Section B are identical excerpts that both reference the detailed discussion of the radioactive waste management system and the general arrangement of major structures and equipment, including references to figures and chapters for further detail."
+    },
+    {
+      "source": "nuscale_ch01_0032",
+      "target": "nuscale_ch05_0004",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Both Section A and Section B reference Figures 1.2-5 and 5.1-1, which provide cutaway views of the NPM, allowing identification of internal components by visually comparing the figures as described in their respective sections."
+    },
+    {
+      "source": "nuscale_ch01_0802",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section B provides a detailed description of internal NPM components and their functions, which are visually represented in the cutaway views compared in the analysis question, while Section A does not address internal component visibility."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides a general layout and references Figure 1.2-2 for the arrangement of major structures, while Section B describes specific internal components and functions of the reactor coolant system, both contributing information about which internal NPM components are depicted in the referenced cutaway figures."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch01_0063",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general introduction to the NuScale FSAR and its purpose, while Section B details specific technical test results and component locations relevant to the NPM's internal systems, connecting them by establishing the context (A) for the specific component information (B) needed to answer the analysis question about visible internal components."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the NuScale plant and references the inclusion of structures, systems, and components, while Section B specifies detailed descriptions of the reactor coolant system and its internal components, thereby elaborating on the general information from Section A."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch01_0032",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general introduction to the FSAR and its purpose, while Section B gives a more specific overview of the plant's systems and references figures that detail the arrangement of major structures and equipment, thus specifying details for the general description in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch01_0063",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the system components and their configuration, including the location of the reactor vent valves (RVVs) and reactor recirculation valves (RRVs), while Section B provides test results confirming the operability and placement of these same ECCS valves, thus both sections reference and detail the same internal NPM components visible in the cutaway views."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides specific operational details and mentions internal components (e.g., PZR, SGs, RVVs, RRVs) that are part of the general system described in Section B, which outlines the main internal components of the NPM (e.g., RPV, PZR, RVI)."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch01_0032",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes specific internal components and operational procedures of the NPM, while Section B references figures that provide general plant layouts, connecting them through the visual representation of internal components in the cutaway views."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0063",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B describes the location and function of internal NPM components (ECCS valves, RVVs) that are likely depicted in the cutaway views referenced in the analysis question, while Section A does not address internal NPM components."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B specifies the internal components of the NPM (such as the reactor pressure vessel, integral pressurizer, and reactor vessel internals) that are visible in the cutaway views referenced in the analysis question, while Section A does not address these components."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0032",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the Central Utility Building and its housed systems, while Section B outlines the radioactive waste management system and references figures showing plant layouts, connecting them through their descriptions of internal plant components visible in referenced figures."
+    },
+    {
+      "source": "nuscale_ch01_0015",
       "target": "nuscale_ch01_0063",
       "relation": "SPECIFIES",
       "confidence": 0.9,
-      "description": "Section B defines the abbreviation 'RRV' as 'reactor recirculation valve,' which is referenced in Section A's legend as a system abbreviation placeholder (XXXX), connecting the abbreviation's definition to its use in diagram notation."
+      "description": "Section A provides a general overview of the plant and its systems, including the internal components of the NPM, while Section B gives specific technical details about the Emergency Core Cooling System valves, which are among the internal components referenced in Section A's summary."
     },
     {
-      "source": "nuscale_ch01_0112",
-      "target": "nuscale_ch01_0117",
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the plant and its systems, while Section B specifies detailed components of the reactor coolant system that are part of the NPM and would be visible in cutaway views, thus Section B provides details for Section A's general description."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0032",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the plant's systems, including the radioactive waste management system, which Section B describes in more detail, specifying its components and referencing where further details can be found."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides a general introduction and overview of the NuScale plant design, while Section B describes specific internal system components and their operational details, thus Section B provides details/specifications for the general description in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A introduces the purpose and scope of the FSAR, while Section B provides a general description of the plant design that is further detailed in the subsequent chapters referenced by Section A."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific details about internal NPM components and their operational states, which are examples of the general systems and features broadly described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides specific details about the Central Utility Building and its internal components, which are part of the broader general plant description summarized in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0110",
+      "target": "nuscale_ch01_0063",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A provides electrical symbols used in system diagrams, which can be used to interpret the internal component representations in the cutaway views compared in Section B's discussion of ECCS valve locations and test results."
+    },
+    {
+      "source": "nuscale_ch01_0111",
+      "target": "nuscale_ch01_0063",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides a legend for instrumentation and control symbols used in figures, which is necessary to interpret the internal components shown in the cutaway views referenced in the analysis question, while Section B describes specific internal components (ECCS valves, RVVs) that may be visible in those views."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0063",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A provides visual drawings that can clarify the internal component layout of the NPM, which can be cross-referenced with Section B's description of specific ECCS valve locations and test results to identify which internal components are visible in the cutaway views."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed drawings and figures that visually clarify the design and internal components referenced in Section B's summary description of the reactor coolant system and its subsystems."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0032",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A and Section B both provide legends for Piping and Instrumentation Diagrams (P&IDs), with each section listing symbols and abbreviations used in the diagrams, which are necessary to interpret the meaning of abbreviations such as RRV."
+      "description": "Section A provides detailed drawings and figures that visually clarify the design and internal components of the NPM, which can be compared with the general arrangement and system descriptions in Section B to identify which internal components are visible in the cutaway views."
     },
     {
-      "source": "nuscale_ch01_0112",
-      "target": "nuscale_ch01_0064",
-      "relation": "SATISFIES",
+      "source": "nuscale_ch01_0806",
+      "target": "nuscale_ch01_0063",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides specific details about internal NPM components (e.g., control rod drive shafts, ECCS valves, RVVs) that are relevant to identifying which components are visible in the cutaway views referenced in the analysis question, thereby specifying the general system context discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0807",
+      "target": "nuscale_ch01_0063",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides specific test results and component details (e.g., control rod drive shafts, ECCS valves) that are among the internal components visible in the NPM cutaway views referenced in the analysis question, thus specifying the general internal component context implied by Section A's regulatory discussion."
+    },
+    {
+      "source": "nuscale_ch01_0110",
+      "target": "nuscale_ch01_0111",
+      "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section B defines RRV as 'reactor recirculation valve,' while Section A provides the legend indicating that 'XXXX' in valve labels corresponds to system abbreviations such as RRV, thus connecting the abbreviation to its meaning."
+      "description": "Section A provides the electrical symbols used in diagrams, while Section B provides the instrumentation and control logic symbols, together forming the complete legend necessary to interpret the internal component representations in the referenced figures."
+    },
+    {
+      "source": "nuscale_ch01_0110",
+      "target": "nuscale_ch01_0068",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides the specific electrical symbols that are used in the types of electrical and instrumentation drawings described generally in Section B, enabling interpretation of the figures referenced in the analysis question."
+    },
+    {
+      "source": "nuscale_ch01_0110",
+      "target": "nuscale_ch01_0806",
+      "relation": "SPECIFIES",
+      "confidence": 0.7,
+      "description": "Section A provides the electrical symbols used in system diagrams, which are relevant for understanding the design details referenced in Section B's discussion of the module protection system (MPS) and its compliance with regulatory requirements for diverse scram systems."
+    },
+    {
+      "source": "nuscale_ch01_0111",
+      "target": "nuscale_ch01_0068",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A provides the symbol legend necessary to interpret the instrumentation and control drawings referenced in Section B, enabling accurate understanding of the internal components depicted in the figures."
+    },
+    {
+      "source": "nuscale_ch01_0111",
+      "target": "nuscale_ch01_0806",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the instrumentation and controls symbol legend used to interpret system logic diagrams, which is necessary to understand the design features described in Section B regarding the module protection system's diversity for ATWS events."
+    },
+    {
+      "source": "nuscale_ch01_0111",
+      "target": "nuscale_ch01_0807",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the symbol legend necessary to interpret instrumentation and controls in figures such as those referenced in the analysis question, which is a prerequisite for understanding the internal components shown in the cutaway views compared in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0806",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides detailed drawings and visual clarifications of internal components, which can be used as evidence to support Section B's claims about the design's conformance with regulatory criteria for safety analysis."
+    },
+    {
+      "source": "nuscale_ch01_0806",
+      "target": "nuscale_ch01_0807",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A and Section B both discuss conformance with SRP 15.8 requirements for ATWS events in the NuScale FSAR, referencing the same regulatory criteria and design approach regarding the module protection system (MPS)."
     }
   ]
 }

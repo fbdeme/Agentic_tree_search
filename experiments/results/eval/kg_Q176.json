@@ -1,0 +1,637 @@
+{
+  "question": "Is the integral SG design described in both Ch.01 and Ch.05 adequate for addressing steam generator tube rupture (SGTR) concerns?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch05_0020": {
+      "node_id": "nuscale_ch05_0020",
+      "title": "Steam Generators",
+      "summary": "Each NuScale Power Module’s reactor pressure vessel contains two integral steam generators, which are part of the reactor coolant system and share the vessel’s pressure boundary. The steam generator system includes feedwater and main steam piping, thermal relief valves, and internal plenums, with the reactor pressure vessel itself forming the shell and pressure boundary for the steam generators.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
+      "hop": 1
+    },
+    "nuscale_ch01_0451": {
+      "node_id": "nuscale_ch01_0451",
+      "title": "BTP 10-2, Rev 4: Design Guidelines for Avoiding Water Hammers in Steam GeneratorsPSGD B.1 thru B.4Preheat Steam Generator Designs",
+      "summary": "This section explains that the NuScale plant design does not use preheat steam generator designs, so the regulatory guidelines for avoiding water hammers in such systems are not applicable. The NuScale design differs from traditional large PWRs and avoids water hammer issues through its unique configuration, making the referenced guidelines unnecessary.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "265",
+      "hop": 1
+    },
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the construction of the pressurizer and its components in the NuScale reactor, specifying alloys and standards for each part to ensure corrosion resistance and compatibility with operating environments. It references relevant sections of the ASME Boiler and Pressure Vessel Code (BPVC) and lists the specific alloys and material specifications for the baffle plate, heater bundles, cover plate, heater sheaths, and bolting.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 1
+    },
+    "nuscale_ch01_0452": {
+      "node_id": "nuscale_ch01_0452",
+      "title": "BTP 10-2, Rev 4: Design Guidelines for Avoiding Water Hammers in Steam GeneratorsOTSGD B.1 Once-Through Steam Generator Designs - Auxiliary Feedwater Supply",
+      "summary": "This section explains that the NuScale plant design does not use the steam generator configurations (top-feed, preheat, or once-through with auxiliary feedwater) addressed by BTP 10-2, Rev 4, and therefore the associated water hammer guidelines are not applicable. Instead, NuScale uses a passive Decay Heat Removal System (DHRS) that fulfills a similar safety function without the need for auxiliary feedwater pumps or external supply headers, inherently avoiding the water hammer issues targeted by these guidelines.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "265",
+      "hop": 1
+    },
+    "nuscale_ch05_0022": {
+      "node_id": "nuscale_ch05_0022",
+      "title": "Decay Heat Removal System",
+      "summary": "The Decay Heat Removal System (DHRS) is an engineered safety feature designed to remove residual and core decay heat from the reactor after shutdown, especially when normal cooling is unavailable, without relying on external power. It ensures the reactor coolant system temperature drops below 420°F within 36 hours, maintaining fuel and pressure boundary safety limits, and its reliability and risk significance are systematically evaluated. The DHRS operates independently of the Emergency Core Cooling System (ECCS), but both can function together if needed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "106",
+      "hop": 2
+    },
+    "nuscale_ch05_0019": {
+      "node_id": "nuscale_ch05_0019",
+      "title": "Reactor Coolant System Component and Subsystem Design",
+      "summary": "This section describes the design of the Reactor Coolant System (RCS) components and subsystems in the NuScale Power Module, detailing the integration of the reactor, steam generators, pressurizer, safety and ECCS valves, and associated piping within the reactor pressure vessel (RPV). It also outlines the configuration and boundaries of the steam generator system, emphasizing the integral design of the steam generators within the RPV and the separation between primary and secondary sides.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
+      "hop": 2
+    },
+    "nuscale_ch01_0112": {
+      "node_id": "nuscale_ch01_0112",
+      "title": "Figure 1.7-3a: Piping and Instrumentation Diagram Legends",
+      "summary": "This section provides the legend for Piping and Instrumentation Diagrams (P&IDs) used in the NuScale Final Safety Analysis Report, detailing the standardized symbols and notations for various valves, vents, drains, fire safety devices, and specialty items. It specifies that all vents and drains are represented by a 0.75\" normally closed valve unless otherwise noted, and includes notes on symbol usage and system abbreviations for clear diagram interpretation.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "102",
+      "hop": 2
+    },
+    "nuscale_ch01_0663": {
+      "node_id": "nuscale_ch01_0663",
+      "title": "DSRS 15.0.3, Rev 0: Design Basis Accident Radiological Consequence Analyses for the NuScale SMR DesignII.3 Technical Support Center Radiological Habitability",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for radiological consequence analyses during design basis accidents, specifically addressing the Technical Support Center (TSC) radiological habitability. It notes that the TSC meets dose acceptance criteria when AC power is available, but its function is transferred to the main control room if AC power is lost, indicating only partial conformance for this aspect.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "288",
+      "hop": 3
+    },
+    "nuscale_ch01_0662": {
+      "node_id": "nuscale_ch01_0662",
+      "title": "DSRS 15.0.3, Rev 0: Design Basis Accident Radiological Consequence Analyses for the NuScale SMR DesignII.2 Control Room Radiological Habitability",
+      "summary": "This section summarizes the NuScale SMR’s compliance with regulatory criteria for control room radiological habitability during design basis accidents, as outlined in DSRS 15.0.3. It confirms that the NuScale design meets all relevant requirements for protecting control room personnel from radiological consequences, with full conformance noted and no exceptions identified.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "288",
+      "hop": 3
+    },
+    "nuscale_ch01_0782": {
+      "node_id": "nuscale_ch01_0782",
+      "title": "SRP 15.6.5.B, Rev 1: Radiological Consequences of a Design Basis Loss-of-Coolant Accident: Leakage From Engineered Safety Feature Components Outside ContainmentII.1 ESF System Leakage Assumptions",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria regarding radiological consequences of a design basis loss-of-coolant accident (LOCA), specifically focusing on leakage from engineered safety feature (ESF) components outside containment. It notes that NuScale fully conforms to the ESF system leakage assumptions in SRP 15.6.5.B, Rev 1, with no exceptions. Some related guidance is only partially applicable due to superseding criteria in SRP Section 15.0.3 and differences between reactor types.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "308",
+      "hop": 3
+    },
+    "nuscale_ch05_0012": {
+      "node_id": "nuscale_ch05_0012",
+      "title": "Reactor Coolant Pressure Boundary Leakage Detection",
+      "summary": "The NuScale reactor coolant pressure boundary (RCPB) leakage detection system does not use traditional components with designed leakage rates, making it impractical to distinguish between identified and unidentified leakage inside containment using installed instrumentation. All leakage into containment is treated as unidentified until the source is located and quantified by other means, with the overall leakage rate determined by RCS inventory balance and compared to the containment evacuation system (CES) flow rate; the detection systems are reliable, redundant, and sensitive enough to support leak-before-break analyses.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "41",
+      "hop": 3
+    },
+    "nuscale_ch01_0325": {
+      "node_id": "nuscale_ch01_0325",
+      "title": "SRP 9.2.2, Rev 4: Reactor Auxiliary Cooling Water SystemII.5 Cooling Water System Inspection",
+      "summary": "The section states that the NuScale Reactor Auxiliary Cooling Water System does not serve a safety-related cooling or accident mitigation function, so the inspection requirements of SRP 9.2.2, Rev 4, II.5 are not applicable. This is consistent with previous acceptance criteria, as the system is not classified as safety-related.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "246",
+      "hop": 4
+    },
+    "nuscale_ch01_0710": {
+      "node_id": "nuscale_ch01_0710",
+      "title": "DSRS 15.2.1-15.2.5, Rev 0: Loss of External Load; Turbine Trip; Loss of Condenser Vacuum; Closure of Main Steam Isolation Valve; and Steam Pressure Regulator Failure (Closed)II.2.F Performance of Nonsafety-Related Systems and Single Failures of Active and Passive Systems",
+      "summary": "The section confirms that the NuScale design meets the regulatory criteria outlined in DSRS 15.2.1-15.2.5 for events such as loss of external load, turbine trip, loss of condenser vacuum, main steam isolation valve closure, and steam pressure regulator failure (closed), although the NuScale design does not include a steam pressure regulator. It states that the design conforms in areas such as fuel cladding integrity, incidents of moderate frequency, instrument setpoints, single failures, performance of nonsafety-related systems, and analytical modeling, with no exceptions noted.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "295",
+      "hop": 4
+    },
+    "nuscale_ch01_0657": {
+      "node_id": "nuscale_ch01_0657",
+      "title": "SRP 15.0.2, (March 2007): Review of Transient and Accident Analysis MethodsII.2 Accident Scenario Identification Process",
+      "summary": "This section outlines NuScale’s conformance with regulatory criteria for transient and accident analysis methods, specifically referencing SRP 15.0.2 (March 2007) regarding the accident scenario identification process. It states that NuScale fully conforms to the accident scenario identification process requirements, with no departures or exceptions noted for this aspect.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "287",
+      "hop": 4
+    },
+    "nuscale_ch01_0659": {
+      "node_id": "nuscale_ch01_0659",
+      "title": "SRP 15.0.2, (March 2007): Review of Transient and Accident Analysis MethodsII.4 Uncertainty Analysis",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for transient and accident analysis methods, noting partial or non-applicability where the guidance is BWR-specific or where NuScale uses alternative methodologies (such as AST for radiological consequences). It highlights that NuScale’s evaluation models for loss-of-coolant accidents (LOCAs) address only the technically relevant features required by regulations, and that certain exemptions from 10 CFR 50 Appendix K are supported. Overall, NuScale’s approach is tailored to its design, with specific departures from standard requirements where justified.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "287",
+      "hop": 4
+    },
+    "nuscale_ch01_0709": {
+      "node_id": "nuscale_ch01_0709",
+      "title": "DSRS 15.2.1-15.2.5, Rev 0: Loss of External Load; Turbine Trip; Loss of Condenser Vacuum; Closure of Main Steam Isolation Valve; and Steam Pressure Regulator Failure (Closed)II.2.E Most Limiting Plant System Single Failure",
+      "summary": "The section confirms that the NuScale design meets regulatory criteria for events such as loss of external load, turbine trip, loss of condenser vacuum, main steam isolation valve closure, and steam pressure regulator failure (closed), even though the design does not include a steam pressure regulator. For each scenario, including the most limiting plant system single failure, the design is shown to conform to safety requirements, with no exceptions or additional comments noted.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "295",
+      "hop": 4
+    },
+    "nuscale_ch01_0324": {
+      "node_id": "nuscale_ch01_0324",
+      "title": "SRP 9.2.2, Rev 4: Reactor Auxiliary Cooling Water SystemII.4 Cooling Water System",
+      "summary": "This section states that the NuScale Reactor Auxiliary Cooling Water System does not serve a safety-related cooling or accident mitigation function, so many regulatory criteria are not applicable. For criteria that are partially applicable, the system is designed to meet requirements for nonsafety-related portions, such as being classified as Seismic Category II where structural failure could impact safety-related systems.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "246",
+      "hop": 4
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch01_0451",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the integral steam generator (SG) design and its components within the NuScale module, while Section B discusses regulatory design guidelines (BTP 10-2) for steam generators and clarifies their applicability to the NuScale design, connecting them through the regulatory criteria that the SG design must address."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A describes the overall design and components of the integrated steam generator within the reactor pressure vessel, while Section B provides references to detailed material specifications for pressurizer components that are part of the same integrated vessel, connecting them through shared physical integration and referenced design details."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch01_0452",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the integral steam generator (SG) design and its components within the NuScale module, while Section B discusses regulatory guidelines for auxiliary feedwater systems and clarifies that the NuScale DHRS fulfills a similar function to the AFW system, connecting the SG design to regulatory expectations for SGTR mitigation."
+    },
+    {
+      "source": "nuscale_ch01_0451",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A discusses design guidelines and regulatory conformance for steam generator and auxiliary feedwater systems, while Section B provides detailed descriptions of reactor coolant system components, with both sections referencing the NuScale Final Safety Analysis Report as a connecting source of design information."
+    },
+    {
+      "source": "nuscale_ch01_0451",
+      "target": "nuscale_ch01_0452",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A and Section B both reference BTP 10-2, Rev 4 and discuss its application to different steam generator designs (preheat vs. once-through) in the context of NuScale's conformance with regulatory criteria, specifically highlighting the applicability of auxiliary feedwater system guidelines."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch01_0452",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides specific design details of the pressurizer as part of the integral SG system, while Section B discusses regulatory guidelines for auxiliary feedwater systems and clarifies that NuScale's DHRS, which is part of the integral SG design, fulfills a similar function, thus connecting the design features in A to the regulatory context in B."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the Decay Heat Removal System's role in removing decay heat when normal secondary-side cooling (such as that provided by the steam generators in Section B) is unavailable, indicating that the DHRS is a backup to the SGs for post-trip cooling and safe shutdown."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch01_0451",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the design basis and function of the Decay Heat Removal System (DHRS) for post-trip cooling, while Section B clarifies that the NuScale DHRS fulfills a similar safety function as the Auxiliary Feedwater System (AFW) in large PWRs, connecting the DHRS's role to established regulatory expectations for steam generator safety."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the reactor coolant system components, including the steam generators, while Section B focuses specifically on the steam generators as part of that system, thus Section B specifies details for the general description in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch01_0451",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the integral SG design and its components within the NuScale module, while Section B discusses regulatory guidelines (BTP 10-2) for steam generator design and notes the applicability of such guidelines to the NuScale system, thus connecting the design details in A to the regulatory criteria in B."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the reactor coolant system components, including the integral steam generators, while Section B references specific material details and cross-references other sections for further specification of pressurizer components, thus Section B provides detailed specifications for components generally described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0112",
+      "target": "nuscale_ch05_0020",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A provides the legend and symbols used in piping and instrumentation diagrams, which are necessary for interpreting the detailed steam generator design information described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0112",
+      "target": "nuscale_ch01_0451",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides the specific P&ID legend details necessary to interpret the integral SG design schematics, which are referenced in Section B's discussion of regulatory design guidelines for steam generator systems, thereby connecting the technical drawing conventions to the regulatory criteria for SGTR mitigation."
+    },
+    {
+      "source": "nuscale_ch01_0112",
+      "target": "nuscale_ch05_0025",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A provides the legend and symbology for interpreting piping and instrumentation diagrams (P&IDs), which are necessary for understanding the detailed component and subsystem design information referenced in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the function and design basis of the Decay Heat Removal System (DHRS), which is directly connected to the steam generators (SGs) described in Section B as part of the integrated reactor coolant system, thus linking the DHRS's ability to remove decay heat to the SG design's adequacy for SGTR scenarios."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch01_0112",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the functional design basis and operational role of the Decay Heat Removal System (DHRS), while Section B provides the standardized diagrammatic symbols and conventions used to represent system components (such as valves and flow paths) in the P&IDs that would include the DHRS, thus Section B specifies how the design described in Section A is visually and technically documented."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch01_0112",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the integral SG design and its components, while Section B provides the diagram legends necessary to interpret the piping and instrumentation diagrams referenced in Section A, thus enabling a detailed understanding of the SG design."
+    },
+    {
+      "source": "nuscale_ch01_0663",
+      "target": "nuscale_ch05_0020",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section B describes the design features of the integral steam generators (SGs) in the NuScale SMR, which are the subject of the radiological consequence analyses for design basis accidents (including SGTR) evaluated in Section A to determine regulatory conformance."
+    },
+    {
+      "source": "nuscale_ch01_0663",
+      "target": "nuscale_ch01_0451",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the radiological consequence analyses for design basis accidents, including SGTR, while Section B provides design guidelines for avoiding water hammers in steam generators, which is a specific design consideration that supports the overall safety analysis described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0663",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references the NuScale Final Safety Analysis Report, which includes the reactor coolant system component and subsystem design details found in Section B, thereby establishing a cross-reference between regulatory conformance analysis and specific design descriptions."
+    },
+    {
+      "source": "nuscale_ch01_0662",
+      "target": "nuscale_ch05_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section B describes the design features of the integral steam generators, which are the subject of the radiological consequence analyses and regulatory conformance discussed in Section A, thereby providing the technical basis for evaluating SGTR concerns as required by the regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0662",
+      "target": "nuscale_ch01_0451",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the radiological consequence analyses for design basis accidents, including SGTR, while Section B provides design guidelines for avoiding water hammers in steam generators, which is a specific design consideration that supports the overall safety analysis described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0662",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A references the NuScale Final Safety Analysis Report's component and subsystem design details found in Section B to demonstrate conformance with regulatory criteria for radiological consequence analyses, specifically regarding the adequacy of design features such as the integral SG for accident scenarios like SGTR."
+    },
+    {
+      "source": "nuscale_ch01_0782",
+      "target": "nuscale_ch05_0020",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section B describes the design features of the integral steam generators, which are referenced in Section A as part of the engineered safety features whose leakage and radiological consequences must be evaluated to conform with regulatory criteria for loss-of-coolant accidents, including SGTR scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0782",
+      "target": "nuscale_ch01_0451",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses radiological consequences and leakage assumptions for loss-of-coolant accidents, while Section B provides design guidelines for avoiding water hammers in steam generators, both of which are connected through their relevance to the safety and integrity of the steam generator system in the context of SGTR concerns."
+    },
+    {
+      "source": "nuscale_ch01_0782",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses regulatory requirements and conformance for radiological consequences and leakage assumptions in safety features, while Section B provides detailed design information about reactor coolant system components (including the pressurizer), which are relevant to evaluating whether the design meets the regulatory criteria described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the limitations of leakage detection in the reactor coolant pressure boundary, which is directly relevant to Section B's description of the integral steam generator (SG) design as part of the reactor coolant system, since effective SGTR mitigation depends on both SG design and the ability to detect leakage."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch01_0451",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the limitations of leakage detection in the NuScale reactor coolant pressure boundary, while Section B clarifies that certain traditional steam generator design guidelines (such as those for auxiliary feedwater systems) are not applicable to NuScale due to its different design, connecting them through the context of how NuScale's unique design affects both leakage detection and the applicability of standard SGTR mitigation guidelines."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B references Section A by indicating that the material of the RPV upper shell and upper head, which are part of the pressurizer, is described in Section 5.2 (Section A), thus connecting component material details to leakage detection context."
+    },
+    {
+      "source": "nuscale_ch01_0663",
+      "target": "nuscale_ch01_0662",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references the same regulatory criteria and conformance statements as Section B, specifically regarding the evaluation of radiological consequences for design basis accidents including SGTR, thereby structurally linking their content."
+    },
+    {
+      "source": "nuscale_ch01_0663",
+      "target": "nuscale_ch01_0782",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A provides the design basis accident radiological consequence analyses, including for steam generator tube rupture (SGTR), while Section B specifies the regulatory requirements and assumptions for evaluating radiological consequences of loss-of-coolant accidents, which include SGTR scenarios, thus Section A's analyses are intended to satisfy the requirements outlined in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0663",
+      "target": "nuscale_ch05_0012",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section B describes the limitations of leakage detection in the reactor coolant pressure boundary, which is a critical input for the radiological consequence analyses discussed in Section A when evaluating the adequacy of the integral SG design for SGTR scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0662",
+      "target": "nuscale_ch01_0782",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria for radiological consequence analyses, including control room habitability, while Section B specifies assumptions and requirements for engineered safety feature system leakage relevant to loss-of-coolant accidents, thus Section B provides detailed requirements that Section A's analyses must address to demonstrate adequacy for SGTR concerns."
+    },
+    {
+      "source": "nuscale_ch01_0662",
+      "target": "nuscale_ch05_0012",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A references the regulatory criteria for radiological consequence analyses, including control room habitability, while Section B provides specific details about the reactor coolant pressure boundary leakage detection relevant to those analyses."
+    },
+    {
+      "source": "nuscale_ch01_0782",
+      "target": "nuscale_ch05_0012",
+      "relation": "VIOLATES",
+      "confidence": 0.85,
+      "description": "Section B describes the limitations of leakage detection instrumentation for the reactor coolant pressure boundary, which directly impacts the ability to meet the leakage assumptions and programmatic requirements specified in Section A for evaluating radiological consequences of accidents such as SGTR."
+    },
+    {
+      "source": "nuscale_ch01_0325",
+      "target": "nuscale_ch05_0020",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the regulatory criteria and safety-related functions of the cooling water systems, while Section B describes the integral steam generator (SG) design and its components, with both sections connected through the adequacy of the SG design in meeting safety and accident mitigation requirements such as those for SGTR."
+    },
+    {
+      "source": "nuscale_ch01_0325",
+      "target": "nuscale_ch01_0451",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the applicability of cooling water system regulatory criteria to the NuScale design, while Section B provides design guidelines for avoiding water hammers in steam generators, both referencing the NuScale Final Safety Analysis Report and addressing aspects of steam generator safety relevant to SGTR concerns."
+    },
+    {
+      "source": "nuscale_ch01_0325",
+      "target": "nuscale_ch05_0025",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the regulatory conformance and applicability of cooling water systems for safety-related functions, while Section B provides detailed design information about reactor coolant system components, with both sections connected through their relevance to evaluating whether the integral SG design addresses SGTR concerns by ensuring appropriate system design and material selection."
+    },
+    {
+      "source": "nuscale_ch01_0710",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides the detailed design description of the integral steam generators (SGs) referenced in Section A's discussion of system performance and conformance with regulatory criteria, thereby specifying the technical basis for the adequacy claims made in Section A regarding SGTR concerns."
+    },
+    {
+      "source": "nuscale_ch01_0710",
+      "target": "nuscale_ch01_0451",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the performance and conformance of the NuScale integral SG design with respect to regulatory criteria for various transient events, while Section B provides design guidelines (BTP 10-2) for avoiding water hammers in steam generators, which are relevant to ensuring the SG design's adequacy in preventing SGTR-related failures; thus, Section A's evaluation of design performance is supported by Section B's specific design guidelines."
+    },
+    {
+      "source": "nuscale_ch01_0710",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A references the NuScale Final Safety Analysis Report's conformance with regulatory criteria for system performance during transients, while Section B provides detailed design specifications for reactor coolant system components, including the pressurizer, which are relevant to evaluating the adequacy of the integral SG design for SGTR concerns."
+    },
+    {
+      "source": "nuscale_ch01_0657",
+      "target": "nuscale_ch05_0020",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines the regulatory criteria and accident analysis methods (including SGTR scenarios) that the NuScale design must conform to, while Section B describes the integral steam generator design features in the NuScale reactor that are intended to address such accident scenarios, thus connecting the regulatory requirements to the specific design implementation."
+    },
+    {
+      "source": "nuscale_ch01_0657",
+      "target": "nuscale_ch01_0451",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the accident analysis methods and regulatory conformance for the NuScale design, including how it addresses critical heat flux relevant to SGTR, while Section B provides specific design guidelines for avoiding water hammers in steam generators, which are relevant to the integrity and safety of the SG design under accident conditions like SGTR."
+    },
+    {
+      "source": "nuscale_ch01_0657",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A discusses the regulatory criteria and accident analysis methods relevant to evaluating the adequacy of the integral SG design for accident scenarios like SGTR, while Section B provides specific design details of the reactor coolant system components, including the pressurizer, which are referenced in the safety analysis report to demonstrate conformance with those criteria."
+    },
+    {
+      "source": "nuscale_ch01_0659",
+      "target": "nuscale_ch05_0020",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A discusses the regulatory review criteria and analysis methods (including accident analysis and conformance with regulatory guidance) that must be satisfied by the steam generator (SG) design described in Section B, which details the physical configuration and components of the NuScale reactor including the integral SGs."
+    },
+    {
+      "source": "nuscale_ch01_0659",
+      "target": "nuscale_ch01_0451",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the adequacy of NuScale's accident analysis methods and their conformance with regulatory criteria, while Section B provides specific design guidelines for avoiding water hammers in steam generators, both of which are relevant to evaluating whether the integral SG design can address SGTR concerns by ensuring system integrity and safety under accident conditions."
+    },
+    {
+      "source": "nuscale_ch01_0659",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the regulatory criteria and analysis methods for transient and accident scenarios, including SGTR, while Section B provides detailed design information about reactor coolant system components such as the pressurizer, which are relevant to the system's response during such events."
+    },
+    {
+      "source": "nuscale_ch01_0709",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B describes the integral steam generator (SG) design features and components referenced in Section A's evaluation of system performance and conformance with regulatory criteria for accident scenarios, thus providing the technical basis for assessing whether the SG design addresses SGTR concerns as required by the regulatory analysis in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0709",
+      "target": "nuscale_ch01_0451",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the NuScale design's conformance with regulatory criteria for various steam system transients, while Section B provides design guidelines for avoiding water hammers in steam generators, both of which are connected through their relevance to the safety and integrity of the steam generator system under abnormal conditions such as SGTR."
+    },
+    {
+      "source": "nuscale_ch01_0709",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A discusses the regulatory conformance of the NuScale design with respect to system failures and fuel cladding integrity, while Section B provides detailed design information about reactor coolant system components, with both sections connected through their focus on the adequacy and integrity of pressure boundary components relevant to SGTR concerns."
+    },
+    {
+      "source": "nuscale_ch01_0324",
+      "target": "nuscale_ch05_0020",
+      "relation": "CONTRADICTS",
+      "confidence": 0.85,
+      "description": "Section A outlines that the site cooling water system does not serve a safety-related or accident mitigation function, while Section B describes the integral steam generator (SG) design and its components, indicating that the adequacy of the SG design for SGTR concerns must be evaluated independently of the site cooling water system's safety function."
+    },
+    {
+      "source": "nuscale_ch01_0324",
+      "target": "nuscale_ch01_0451",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A outlines the regulatory applicability and safety functions of the cooling water systems, while Section B provides design guidelines for avoiding water hammers in steam generators, both of which are connected through their relevance to the adequacy of the integral SG design in addressing SGTR concerns."
+    },
+    {
+      "source": "nuscale_ch01_0324",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides detailed component and material descriptions referenced in Section A's general discussion of system conformance, connecting specific design elements to broader regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0325",
+      "target": "nuscale_ch01_0710",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A discusses the applicability of cooling water system regulatory criteria to the NuScale design, while Section B addresses the performance of nonsafety-related systems and fuel cladding integrity under various transient events, both referencing the NuScale Final Safety Analysis Report to demonstrate conformance with regulatory requirements for different systems."
+    },
+    {
+      "source": "nuscale_ch01_0325",
+      "target": "nuscale_ch01_0657",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses the cooling water system's safety-related functions and their applicability, while Section B addresses the methods and criteria for accident scenario identification and analysis, including SGTR, thus Section A's determination of system functions informs whether the design described in Section B's accident analysis is supported by the actual system capabilities."
+    },
+    {
+      "source": "nuscale_ch01_0325",
+      "target": "nuscale_ch01_0659",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A discusses the applicability of cooling water systems for safety-related functions, while Section B addresses the methods and criteria for analyzing transient and accident scenarios, connecting them through the evaluation of system adequacy for accident mitigation such as SGTR."
+    },
+    {
+      "source": "nuscale_ch01_0325",
+      "target": "nuscale_ch01_0709",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the applicability of cooling water systems for accident mitigation, while Section B addresses the plant's conformance with regulatory criteria for various transient events, both providing evidence relevant to evaluating whether the integral SG design adequately addresses SGTR concerns."
+    },
+    {
+      "source": "nuscale_ch01_0325",
+      "target": "nuscale_ch01_0324",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A and Section B both reference the same regulatory criteria (SRP 9.2.2, Rev 4 and SRP 9.2.1, Rev 5) and provide parallel statements that the site cooling water system does not serve a safety-related or accident mitigation function, indicating that their content is substantively identical and mutually reinforcing in the context of SGTR concerns."
+    },
+    {
+      "source": "nuscale_ch01_0710",
+      "target": "nuscale_ch01_0657",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the NuScale design's conformance with regulatory criteria for various transient events, while Section B outlines the general process and criteria for accident scenario identification and analysis methods, with both sections connected by their focus on evaluating the adequacy of design and analysis methods (including the integral SG) in meeting regulatory requirements for accident scenarios such as SGTR."
+    },
+    {
+      "source": "nuscale_ch01_0710",
+      "target": "nuscale_ch01_0659",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the performance and conformance of the NuScale design with respect to specific transient events, while Section B outlines the methods and uncertainty analysis required for evaluating transient and accident scenarios, thus Section A's design results are evaluated using the analytical methods and criteria specified in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0710",
+      "target": "nuscale_ch01_0709",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A and Section B both address the NuScale design's conformance with regulatory criteria for various transient events, with Section A focusing on the performance of nonsafety-related systems and single failures, while Section B addresses the most limiting plant system single failure, both referencing the same DSRS sections and regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0710",
+      "target": "nuscale_ch01_0324",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the performance and regulatory conformance of nonsafety-related systems during certain transients, while Section B addresses the applicability and safety-related functions of the cooling water systems, with both sections connected by their evaluation of auxiliary and support systems' roles in accident mitigation, including SGTR scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0657",
+      "target": "nuscale_ch01_0659",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A outlines the process for identifying accident scenarios, which provides the necessary context and input for the uncertainty analysis described in Section B, as both are steps in the overall transient and accident analysis methodology for evaluating the adequacy of the integral SG design against SGTR concerns."
+    },
+    {
+      "source": "nuscale_ch01_0657",
+      "target": "nuscale_ch01_0709",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines the general regulatory guidance and accident analysis methods applicable to the NuScale design, while Section B applies these methods to specific transient scenarios, demonstrating conformance with fuel cladding integrity requirements relevant to SGTR concerns."
+    },
+    {
+      "source": "nuscale_ch01_0657",
+      "target": "nuscale_ch01_0324",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the accident analysis methods and regulatory conformance for transient and accident scenarios, including SGTR, while Section B addresses the cooling water systems that support reactor safety functions, connecting them through the need for adequate auxiliary systems to mitigate SGTR consequences."
+    },
+    {
+      "source": "nuscale_ch01_0659",
+      "target": "nuscale_ch01_0709",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines the general regulatory guidance and uncertainty analysis methods for transient and accident scenarios, while Section B applies these methods specifically to evaluate the NuScale design's response to steam system transients, including the adequacy of the integral SG design for maintaining fuel cladding integrity during such events."
+    },
+    {
+      "source": "nuscale_ch01_0659",
+      "target": "nuscale_ch01_0324",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses the adequacy of transient and accident analysis methods, including uncertainty analysis relevant to SGTR, while Section B addresses the role and applicability of the reactor auxiliary cooling water system, which is not credited for safety-related accident mitigation such as SGTR, thus Section A's analysis is performed independently of Section B's system functions."
+    },
+    {
+      "source": "nuscale_ch01_0709",
+      "target": "nuscale_ch01_0324",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the plant's conformance with regulatory criteria for various transient events affecting steam and turbine systems, while Section B addresses the applicability and safety functions of the cooling water systems, with both sections providing information relevant to the adequacy of the integral SG design in mitigating SGTR by detailing system functions and regulatory compliance."
+    }
+  ]
+}

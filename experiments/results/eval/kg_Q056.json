@@ -1,264 +1,719 @@
 {
-  "question": "Describe the flow of coolant between the steam generator and the reactor.",
+  "question": "What fuel enrichment limit is stated in Ch.01, and what does Ch.05 say about reactivity control through boron?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0743": {
-      "node_id": "nuscale_ch01_0743",
-      "title": "SRP 15.4.4-15.4.5, Rev 2: Startup of an Inactive Loop or Recirculation Loop at an Incorrect Temperature, and Flow Controller Malfunction Causing an Increase in BWR Core Flow RateII.C Events of Moderate Frequency",
-      "summary": "This section explains that the regulatory guidance in SRP 15.4.4-15.4.5, which addresses startup of inactive or recirculation loops at incorrect temperatures and flow controller malfunctions in PWR and BWR designs, does not apply to the NuScale reactor because it does not use reactor coolant pumps or forced coolant flow. Instead, any relevant postulated startup reactivity accidents for NuScale are addressed under DSRS 15.4.6, which covers inadvertent decreases in boron concentration.",
+    "nuscale_ch01_0123": {
+      "node_id": "nuscale_ch01_0123",
+      "title": "Table 1.9-2: Conformance with Regulatory Guides (Continued)",
+      "summary": "This section of the NuScale Final Safety Analysis Report summarizes the reactor's conformance with various NRC Regulatory Guides. It details whether NuScale's design and programs fully, partially, or do not conform to each guide, providing explanations and references to relevant FSAR sections. Some guides are marked as not applicable due to differences in standards or design approaches.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "300",
+      "page_range": "136",
       "hop": 1
     },
-    "nuscale_ch01_0745": {
-      "node_id": "nuscale_ch01_0745",
-      "title": "SRP 15.4.4-15.4.5, Rev 2: Startup of an Inactive Loop or Recirculation Loop at an Incorrect Temperature, and Flow Controller Malfunction Causing an Increase in BWR Core Flow RateII.E Single Failure",
-      "summary": "This section explains that the regulatory guidance in SRP 15.4.4-15.4.5 regarding startup of an inactive loop or recirculation loop at an incorrect temperature, and flow controller malfunction causing increased BWR core flow, is not applicable to the NuScale reactor design. This is because NuScale does not use reactor coolant pumps or forced coolant flow, and relevant accident scenarios are addressed under different guidance (DSRS 15.4.6).",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "301",
-      "hop": 1
-    },
-    "nuscale_ch01_0451": {
-      "node_id": "nuscale_ch01_0451",
-      "title": "BTP 10-2, Rev 4: Design Guidelines for Avoiding Water Hammers in Steam GeneratorsPSGD B.1 thru B.4Preheat Steam Generator Designs",
-      "summary": "This section explains that the NuScale plant design does not use top-feed, preheat, or once-through steam generator designs, so the specific regulatory guidelines for avoiding water hammers in these systems are not applicable. Instead, NuScale uses a passive natural circulation system (DHRS) that fulfills a similar safety function without the need for auxiliary feedwater pumps or the design features addressed by these guidelines.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "265",
-      "hop": 1
-    },
-    "nuscale_ch01_0452": {
-      "node_id": "nuscale_ch01_0452",
-      "title": "BTP 10-2, Rev 4: Design Guidelines for Avoiding Water Hammers in Steam GeneratorsOTSGD B.1 Once-Through Steam Generator Designs - Auxiliary Feedwater Supply",
-      "summary": "This section explains that the NuScale plant design does not use the steam generator configurations (top-feed, preheat, or once-through with auxiliary feedwater) addressed by BTP 10-2, Rev 4, and therefore the associated water hammer guidelines are not applicable. Instead, NuScale uses a passive Decay Heat Removal System (DHRS) that fulfills a similar safety function without the need for auxiliary feedwater pumps or external supply headers, inherently avoiding the water hammer issues targeted by these guidelines.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "265",
-      "hop": 1
-    },
-    "nuscale_ch01_0748": {
-      "node_id": "nuscale_ch01_0748",
-      "title": "SRP 15.4.6, Rev 2: Inadvertent Decrease in Boron Concentration in the Reactor Coolant System (PWR)II.2 Fuel Cladding Integrity",
-      "summary": "The section summarizes NuScale’s conformance with regulatory criteria regarding inadvertent decreases in boron concentration in the reactor coolant system, specifically addressing fuel cladding integrity. It states that NuScale’s design meets the relevant requirements, noting that Critical Heat Flux (CHF) is the appropriate term for the phenomenon in their system, and that operator action is not required to mitigate such events.",
+    "nuscale_ch01_0749": {
+      "node_id": "nuscale_ch01_0749",
+      "title": "SRP 15.4.6, Rev 2: Inadvertent Decrease in Boron Concentration in the Reactor Coolant System (PWR)II.3 Incidents of Moderate Frequency",
+      "summary": "This section confirms that the NuScale reactor design conforms to the regulatory criteria for incidents of moderate frequency related to inadvertent decreases in boron concentration in the reactor coolant system, as outlined in SRP 15.4.6, Rev 2. It notes that certain guidance is not applicable due to NuScale’s unique design, such as the absence of reactor coolant pumps, and that operator action is not required to mitigate such events.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "302",
       "hop": 1
     },
-    "nuscale_ch01_0747": {
-      "node_id": "nuscale_ch01_0747",
-      "title": "SRP 15.4.6, Rev 2: Inadvertent Decrease in Boron Concentration in the Reactor Coolant System (PWR)II.1 Reactor Coolant and Main Steam System Pressures",
-      "summary": "This section summarizes NuScale’s conformance with SRP 15.4.6, Rev 2, regarding inadvertent decreases in boron concentration in the reactor coolant system for PWRs. It states that NuScale’s design meets the relevant regulatory criteria for reactor coolant and main steam system pressures, fuel cladding integrity, incident frequency, and analysis methods, while noting that certain requirements (such as operator action and non-safety systems) are not applicable due to unique design features like the absence of reactor coolant pumps.",
+    "nuscale_ch01_0750": {
+      "node_id": "nuscale_ch01_0750",
+      "title": "SRP 15.4.6, Rev 2: Inadvertent Decrease in Boron Concentration in the Reactor Coolant System (PWR)II.4 Minimum Time Intervals for Required Operator Actions",
+      "summary": "The section states that for SRP 15.4.6, Rev 2, regarding minimum time intervals for required operator actions during an inadvertent decrease in boron concentration in the reactor coolant system, operator action is not required to mitigate such an event in the NuScale design. Therefore, this regulatory guidance is not applicable to NuScale, as the design inherently addresses the event without operator intervention.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "302",
       "hop": 1
+    },
+    "nuscale_ch01_0019": {
+      "node_id": "nuscale_ch01_0019",
+      "title": "Operating Characteristics",
+      "summary": "The NuScale Power Module (NPM) operates using natural circulation for reactor coolant flow, eliminating the need for pumps, and features a small, modular, integral pressurized water reactor design with passive safety systems that do not rely on electrical power. The NPM is partially immersed in a reactor pool, has dedicated emergency cooling and decay heat removal systems, and allows for flexible power maneuvering using control rods and boron concentration adjustments.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "29",
+      "hop": 1
+    },
+    "nuscale_ch01_0741": {
+      "node_id": "nuscale_ch01_0741",
+      "title": "SRP 15.4.4-15.4.5, Rev 2: Startup of an Inactive Loop or Recirculation Loop at an Incorrect Temperature, and Flow Controller Malfunction Causing an Increase in BWR Core Flow RateII.A RCS and MSS Pressures",
+      "summary": "The section explains that the regulatory guidance in SRP 15.4.4-15.4.5 regarding startup of an inactive loop or recirculation loop at an incorrect temperature, and flow controller malfunction, is not applicable to the NuScale reactor design because it does not use reactor coolant pumps or forced coolant flow. Instead, NuScale addresses similar postulated startup reactivity accidents under DSRS 15.4.6, which covers inadvertent decreases in boron concentration in the reactor coolant system.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "299",
+      "hop": 1
+    },
+    "nuscale_ch01_0755": {
+      "node_id": "nuscale_ch01_0755",
+      "title": "SRP 15.4.8, Rev 3: Spectrum of Rod Ejection Accidents (PWR)II.2 Effects of Postulated Reactivity Accidents",
+      "summary": "This section summarizes NuScale’s compliance with NRC regulatory criteria for analyzing the effects of postulated reactivity accidents, specifically rod ejection accidents in pressurized water reactors (PWRs). It confirms that NuScale’s safety analysis meets requirements for monitoring instrumentation, radiological dose limits, and accident effects, with some partial conformance regarding radiological consequence methodologies due to superseding guidance in SRP Section 15.0.3.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "303",
+      "hop": 1
+    },
+    "nuscale_ch05_0002": {
+      "node_id": "nuscale_ch05_0002",
+      "title": "Summary Description",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design prioritizes maintaining coolant flow, water chemistry, and boron concentration to protect fuel integrity and support plant safety during normal and abnormal conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 2
+    },
+    "nuscale_ch01_0097": {
+      "node_id": "nuscale_ch01_0097",
+      "title": "8.25 Air Sampling in the Workplace",
+      "summary": "Section 8.25 states that guidance on air sampling in the workplace is not applicable to the NuScale design, as it pertains to site-specific, programmatic activities that are the responsibility of the COL (Combined License) applicant or licensee. Therefore, NuScale does not address this guidance in its Final Safety Analysis Report.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "171",
+      "hop": 2
+    },
+    "nuscale_ch01_0361": {
+      "node_id": "nuscale_ch01_0361",
+      "title": "DSRS 9.3.4, Rev 0: Chemical and Volume Control System (PWR) (Including Boron Recovery System)II.5 Chemical and Volume Control System Design and Arrangement",
+      "summary": "This section summarizes the NuScale Final Safety Analysis Report’s conformance with regulatory criteria for the Chemical and Volume Control System (CVCS), including boron recovery. It confirms that the NuScale CVCS design generally meets the applicable requirements, with partial exceptions where certain criteria do not apply due to design differences, such as the absence of holdup tanks subject to vacuum conditions. The section also notes that some standards are not applicable to NuScale’s design, particularly those specific to BWRs.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "251",
+      "hop": 2
+    },
+    "nuscale_ch01_0364": {
+      "node_id": "nuscale_ch01_0364",
+      "title": "DSRS 9.3.4, Rev 0: Chemical and Volume Control System (PWR) (Including Boron Recovery System)II.8 ITAAC",
+      "summary": "This section summarizes the NuScale Final Safety Analysis Report’s conformance with regulatory criteria for the Chemical and Volume Control System (CVCS), including the Boron Recovery System. It confirms that the NuScale CVCS generally meets the requirements of DSRS 9.3.4, with partial conformance noted only for criteria related to holdup tank venting and draining, as the NuScale design does not include holdup tanks subject to vacuum conditions. Other referenced sections are either fully met or not applicable to the NuScale design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "251",
+      "hop": 2
+    },
+    "nuscale_ch01_0094": {
+      "node_id": "nuscale_ch01_0094",
+      "title": "8.22 Bioassay at Uranium Mills",
+      "summary": "Section 8.22, \"Bioassay at Uranium Mills,\" is marked as not applicable in the NuScale Final Safety Analysis Report because the guidance pertains only to uranium mills, which are outside the scope of the NuScale facility. Therefore, no conformance or further analysis is required for this section.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "171",
+      "hop": 2
     },
     "nuscale_ch01_0018": {
       "node_id": "nuscale_ch01_0018",
       "title": "Principal Design Criteria",
-      "summary": "The section describes the principal design criteria for the NuScale plant, focusing on the Site Cooling Water System (SCWS) and the overall facility process. It outlines the reactor core's heat transfer process, natural coolant circulation, steam generation, and the flow of superheated steam to the turbine and condenser, emphasizing the system's role in efficient heat removal and power generation.",
+      "summary": "The section outlines the principal design criteria for the NuScale plant, focusing on the Site Cooling Water System (SCWS) and the overall facility process. It describes the reactor core's heat transfer process, natural coolant circulation, steam generation, and the flow of superheated steam to the turbine and condenser, emphasizing the system's role in efficient heat removal and power generation.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "28",
       "hop": 2
     },
-    "nuscale_ch01_0044": {
-      "node_id": "nuscale_ch01_0044",
-      "title": "Chemical and Volume Control System",
-      "summary": "The Chemical and Volume Control System section describes the NuScale reactor’s passive decay heat removal system, which uses two independent trains, each capable of removing 100% of the decay heat via natural circulation and passive condensers in the reactor pool. In case of a steam generator tube failure or loss of AC power, the system isolates the affected components and passively transfers heat to a large, stainless steel-lined ultimate heat sink pool, ensuring continued cooling and safety without external power.",
+    "nuscale_ch01_0102": {
+      "node_id": "nuscale_ch01_0102",
+      "title": "8.30 Health Physics Surveys in Uranium Recovery Facilities",
+      "summary": "Section 8.30 states that health physics surveys in uranium recovery facilities are not applicable to the NuScale Final Safety Analysis Report, as this guidance pertains only to uranium recovery facilities. The responsibility for such activities lies with licensees operating those specific facilities, not with NuScale.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "41",
+      "page_range": "172",
       "hop": 2
     },
-    "nuscale_ch01_0436": {
-      "node_id": "nuscale_ch01_0436",
-      "title": "SRP 10.4.4, Rev 3: Turbine Bypass SystemII.3 MSIV Alternate Leakage Path",
-      "summary": "This section summarizes NuScale’s conformance with various regulatory criteria related to turbine bypass and associated systems. Specifically, it notes that the requirement for an MSIV Alternate Leakage Path under SRP 10.4.4, Rev 3 is not applicable to NuScale, as it applies only to BWRs (Boiling Water Reactors), not to NuScale’s design. The document also details compliance or exemptions for other related systems and criteria.",
+    "nuscale_ch01_0135": {
+      "node_id": "nuscale_ch01_0135",
+      "title": "Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review Standard (DSRS)",
+      "summary": "Table 1.9-3 summarizes NuScale’s conformance with the regulatory criteria outlined in NUREG-0800 (SRP) and DSRS. It lists each relevant SRP or DSRS section, states whether NuScale’s application conforms or if the criterion is not applicable, and provides brief comments or references to supporting sections. The table demonstrates that NuScale meets applicable requirements and identifies criteria not relevant to their application.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "263",
+      "page_range": "174",
       "hop": 3
+    },
+    "nuscale_ch05_0015": {
+      "node_id": "nuscale_ch05_0015",
+      "title": "Reactor Vessel Materials",
+      "summary": "The NuScale Power Module’s reactor pressure vessel (RPV) is a key component of the reactor coolant system, housing the core, steam generators, and pressurizer within a single vessel surrounded by a containment vessel. The RPV is constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure long-term integrity and safety, with all components and welds meeting strict standards for pressure retention and fracture toughness.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
+      "hop": 3
+    },
+    "nuscale_ch05_0006": {
+      "node_id": "nuscale_ch05_0006",
+      "title": "System Evaluation",
+      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance across various power levels by establishing steady-state parameters for both primary and secondary systems, such as coolant temperatures, flow rates, and pressures. These parameters are calculated using thermal hydraulic software and verified by hand, with uncertainties and design margins considered to ensure efficient operation and safety. The design supports natural circulation with low pressure losses, and uncertainties related to steam generator tube plugging do not affect primary coolant flow rate determination.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "12",
+      "hop": 3
+    },
+    "nuscale_ch05_0018": {
+      "node_id": "nuscale_ch05_0018",
+      "title": "References",
+      "summary": "This section outlines the requirements and procedures for the inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fasteners of the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It specifies the use of nondestructive examinations, controlled shipping environments, and quality assurance measures to ensure the integrity and safety of the reactor vessel.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "74",
+      "hop": 3
+    },
+    "nuscale_ch01_0064": {
+      "node_id": "nuscale_ch01_0064",
+      "title": "NuScale Test and Inspection Plans",
+      "summary": "This section describes NuScale’s test and inspection plans for key reactor components, including confirmation of control rod drive shaft operability and emergency core cooling system (ECCS) valve performance. The ECCS valve test program, conducted at a specialized facility, demonstrated that the valves—including their unique features—function correctly under reactor operating conditions and with borated coolant, ensuring safety and reliability.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "89",
+      "hop": 3
+    },
+    "nuscale_ch01_0063": {
+      "node_id": "nuscale_ch01_0063",
+      "title": "Emergency Core Cooling System Valve Design Certification Application Demonstration Test",
+      "summary": "This section describes the demonstration test program for the Emergency Core Cooling System (ECCS) valves in the NuScale reactor design. The test program aimed to verify the functional performance of the ECCS valves, including their operation at reactor pressures and temperatures and in borated coolant, as well as the effectiveness of unique design features like the inadvertent actuation block (IAB). Testing was conducted at a specialized facility using a representative valve assembly to ensure the system meets safety and operational requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "89",
+      "hop": 3
+    },
+    "nuscale_ch01_0794": {
+      "node_id": "nuscale_ch01_0794",
+      "title": "SRP 15.7.4, Rev 1: Radiological Consequences of Fuel Handling AccidentsII.5 Radiation Detection in Containment",
+      "summary": "The NuScale design does not use ESF-grade ventilation systems for accident mitigation; instead, nonsafety-related ventilation systems provide atmosphere cleanup during normal and anticipated conditions, but are not credited after an accident. While NuScale does not have a traditional containment building, it partially conforms to radiation detection criteria by applying relevant requirements to its Reactor Building, where fuel handling occurs within individual steel containment vessels.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "311",
+      "hop": 4
+    },
+    "nuscale_ch01_0056": {
+      "node_id": "nuscale_ch01_0056",
+      "title": "Critical Heat Flux Testing - Preliminary Fuel Design",
+      "summary": "This section outlines the verification and confirmation tests conducted to support the safety analysis of the NuScale Power Plant, focusing on areas where existing data was insufficient. Specifically, it describes two critical heat flux (CHF) test programs for the NuScale fuel design—one for the preliminary design, which aided code development and safety analysis, and another for the final design—highlighting the unique features of the NuScale fuel compared to standard PWRs.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "83",
+      "hop": 4
+    },
+    "nuscale_ch01_0747": {
+      "node_id": "nuscale_ch01_0747",
+      "title": "SRP 15.4.6, Rev 2: Inadvertent Decrease in Boron Concentration in the Reactor Coolant System (PWR)II.1 Reactor Coolant and Main Steam System Pressures",
+      "summary": "This section summarizes NuScale’s conformance with SRP 15.4.6, Rev 2, regarding inadvertent decreases in boron concentration in the reactor coolant system for PWRs. It states that NuScale’s design meets the relevant regulatory criteria, with certain requirements (such as operator action and non-safety systems) deemed not applicable due to design differences, like the absence of reactor coolant pumps. The section also notes that critical heat flux (CHF) is the appropriate term for fuel cladding integrity in the NuScale context.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "302",
+      "hop": 4
+    },
+    "nuscale_ch01_0748": {
+      "node_id": "nuscale_ch01_0748",
+      "title": "SRP 15.4.6, Rev 2: Inadvertent Decrease in Boron Concentration in the Reactor Coolant System (PWR)II.2 Fuel Cladding Integrity",
+      "summary": "The section summarizes NuScale’s conformance with regulatory criteria regarding inadvertent decreases in boron concentration in the reactor coolant system, specifically addressing fuel cladding integrity. It states that NuScale’s design meets the relevant requirements, with Critical Heat Flux (CHF) being the appropriate term for the phenomenon in their system, and that operator action is not required to mitigate such events. The guidance and analysis methods used are consistent with SRP 15.4.6, and certain criteria are not applicable due to NuScale’s unique design features.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "302",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0743",
-      "target": "nuscale_ch01_0745",
+      "source": "nuscale_ch01_0123",
+      "target": "nuscale_ch01_0749",
       "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A and Section B both state that the regulatory guidance for startup of inactive loops and flow controller malfunctions is not applicable to the NuScale design because it does not use reactor coolant pumps or forced flow, directly connecting the coolant flow characteristics between the steam generator and reactor to the inapplicability of these requirements."
+      "confidence": 0.7,
+      "description": "Section A lists regulatory guides and their conformance, while Section B discusses the applicability of specific SRP guidance on boron concentration control, both referencing how the NuScale design aligns with or diverges from regulatory requirements for reactivity control."
     },
     {
-      "source": "nuscale_ch01_0743",
-      "target": "nuscale_ch01_0451",
+      "source": "nuscale_ch01_0123",
+      "target": "nuscale_ch01_0750",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A lists regulatory guides and their conformance, referencing specific sections (including those related to reactivity control), while Section B discusses the applicability of regulatory guidance on boron concentration control in the context of the NuScale design, connecting through the regulatory requirements for reactivity control."
+    },
+    {
+      "source": "nuscale_ch01_0123",
+      "target": "nuscale_ch01_0741",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A lists regulatory conformance tables from Ch.01, which include references to sections (such as 5.2 and 5.3) that are relevant to reactivity control and fuel design, while Section B details how the design (including reactivity control and fuel temperature limits) conforms to specific SRP requirements, thus Section A structurally references and provides the context for the detailed compliance information found in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0123",
+      "target": "nuscale_ch01_0755",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A lists regulatory guides and their conformance status, while Section B details specific safety analysis results and their conformance to Standard Review Plan (SRP) sections, connecting them through the demonstration that design and operational features (such as fuel handling and reactivity control) meet regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0749",
+      "target": "nuscale_ch01_0750",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A and Section B both discuss the inapplicability of certain SRP guidance to the NuScale design due to the absence of reactor coolant pumps, referencing the same regulatory context and design features."
+    },
+    {
+      "source": "nuscale_ch01_0749",
+      "target": "nuscale_ch01_0019",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A references regulatory guidance that is not applicable to the NuScale design due to the absence of reactor coolant pumps, while Section B describes the NuScale design's reliance on natural circulation instead of pumps, thus providing the design basis for the inapplicability noted in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0749",
+      "target": "nuscale_ch01_0741",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A explains why certain PWR-specific guidance about boron concentration is not applicable to the NuScale design due to the absence of reactor coolant pumps, while Section B discusses how NuScale meets fuel temperature limits and clarifies the applicability of BWR-specific criteria, both referencing how regulatory requirements are addressed or not based on design features."
+    },
+    {
+      "source": "nuscale_ch01_0749",
+      "target": "nuscale_ch01_0755",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the inapplicability of certain PWR boron concentration decrease scenarios to the NuScale design due to the absence of reactor coolant pumps, while Section B addresses the conformance of NuScale's safety analysis with regulatory criteria for rod ejection accidents, both referencing how the design's features and analyses meet or render moot specific reactivity control requirements."
+    },
+    {
+      "source": "nuscale_ch01_0750",
+      "target": "nuscale_ch01_0019",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A references regulatory guidance that is not applicable to the NuScale design due to the absence of reactor coolant pumps, while Section B describes the NuScale design's reliance on natural circulation instead of pumps, thus providing the design basis for the inapplicability noted in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0750",
+      "target": "nuscale_ch01_0741",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A explains why certain PWR-specific boron reactivity control guidance is not applicable to the NuScale design due to the absence of reactor coolant pumps, while Section B discusses how NuScale meets fuel safety limits through alternative methods, indicating both sections address how the design conforms to or diverges from standard reactivity control and safety requirements."
+    },
+    {
+      "source": "nuscale_ch01_0750",
+      "target": "nuscale_ch01_0755",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the inapplicability of certain PWR-specific boron reactivity control scenarios to the NuScale design due to the absence of reactor coolant pumps, while Section B addresses the safety analysis and procedural controls for reactivity accidents, including rod ejection, thereby both sections relate through their focus on reactivity control and accident analysis in the context of NuScale's design features."
+    },
+    {
+      "source": "nuscale_ch01_0019",
+      "target": "nuscale_ch01_0755",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section B references regulatory criteria for reactivity accidents and conformance statements, which are supported by the operating characteristics and safety features described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0741",
+      "target": "nuscale_ch01_0755",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A and Section B both discuss the inapplicability of certain regulatory guidance for traditional PWRs to the NuScale design due to the absence of reactor coolant pumps and auxiliary feedwater pumps, which directly affects the flow of coolant between the steam generator and the reactor."
+      "description": "Section A and Section B both discuss NuScale's conformance with regulatory criteria for reactivity accidents, with Section A addressing limits and analysis methods for reactivity insertion events and Section B addressing procedural and safety analysis provisions for rod ejection and fuel loading errors, thus both sections are connected through their evaluation of reactivity control and accident mitigation in the context of regulatory compliance."
     },
     {
-      "source": "nuscale_ch01_0743",
-      "target": "nuscale_ch01_0452",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Both Section A and Section B explain why certain regulatory guidance related to coolant flow and auxiliary feedwater systems for traditional PWRs is not applicable to the NuScale design, specifically because NuScale does not use reactor coolant pumps or AFW pumps, thus connecting them through the unique features of NuScale's coolant flow between the steam generator and reactor."
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch01_0123",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section B lists regulatory guides and their conformance, including references to sections like 5.2 and 5.3, which are part of the broader system described in Section A's summary of the reactor coolant system, indicating that the detailed system in Section A is designed to meet the regulatory criteria referenced in Section B."
     },
     {
-      "source": "nuscale_ch01_0743",
-      "target": "nuscale_ch01_0748",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Both Section A and Section B state that the referenced SRP guidance is not applicable to the NuScale design because it does not use reactor coolant pumps or forced coolant flow, directly connecting their regulatory interpretations based on the same design feature."
-    },
-    {
-      "source": "nuscale_ch01_0743",
-      "target": "nuscale_ch01_0747",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A and Section B both state that the NuScale design does not require or include reactor coolant pumps, referencing the inapplicability of guidance related to forced reactor coolant flow and loops, thus connecting their discussion of coolant flow mechanisms."
-    },
-    {
-      "source": "nuscale_ch01_0745",
-      "target": "nuscale_ch01_0451",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Both Section A and Section B explain why certain regulatory guidance related to coolant flow and auxiliary feedwater systems for PWRs is not applicable to the NuScale design, specifically because NuScale does not use reactor coolant pumps or traditional AFW systems, which directly affects the flow of coolant between the steam generator and the reactor."
-    },
-    {
-      "source": "nuscale_ch01_0745",
-      "target": "nuscale_ch01_0452",
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch01_0749",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Both Section A and Section B explain why certain regulatory guidelines related to coolant flow and auxiliary feedwater systems are not applicable to the NuScale design due to its lack of reactor coolant pumps and use of a different heat removal system, thus providing context for how coolant flows between the steam generator and reactor in this specific design."
+      "description": "Section A describes the NuScale reactor coolant system's reliance on natural circulation without pumps, while Section B explains that certain regulatory guidance about boron concentration incidents is not applicable to NuScale due to its unique design lacking forced flow and pumps."
     },
     {
-      "source": "nuscale_ch01_0745",
-      "target": "nuscale_ch01_0748",
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch01_0750",
       "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Both Section A and Section B state that the NuScale design does not require or include reactor coolant pumps, connecting them through their shared explanation that guidance referring to forced reactor coolant flow and loops is not applicable."
+      "confidence": 0.85,
+      "description": "Section A describes the NuScale reactor coolant system's reliance on natural circulation without pumps, while Section B explains that certain regulatory guidance about boron concentration control is not applicable to NuScale because it lacks forced coolant flow and pumps, connecting them through the design feature (absence of pumps) that determines regulatory applicability."
     },
     {
-      "source": "nuscale_ch01_0745",
-      "target": "nuscale_ch01_0747",
+      "source": "nuscale_ch01_0097",
+      "target": "nuscale_ch01_0123",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section B provides a table of regulatory guide conformance, which is referenced in Section A's discussion of how the NuScale FSAR aligns with regulatory criteria, connecting them through the documentation of compliance with regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0361",
+      "target": "nuscale_ch01_0123",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A describes the design and arrangement of the Chemical and Volume Control System (CVCS), which is relevant to boron management for reactivity control, while Section B lists regulatory guide conformance, including quality assurance and seismic classification, which are prerequisites for the system's regulatory acceptability."
+    },
+    {
+      "source": "nuscale_ch01_0361",
+      "target": "nuscale_ch01_0749",
       "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Both Section A and Section B state that the NuScale design does not require or include reactor coolant pumps, connecting them through the shared information that forced reactor coolant flow and associated loops/pumps are not applicable to the NuScale system."
+      "confidence": 0.85,
+      "description": "Section A describes the design and arrangement of the Chemical and Volume Control System (CVCS), which manages boron concentration for reactivity control, while Section B addresses regulatory criteria for incidents involving inadvertent decreases in boron concentration, thus connecting the system's design (A) to its safety function and regulatory evaluation (B)."
     },
     {
-      "source": "nuscale_ch01_0451",
-      "target": "nuscale_ch01_0452",
+      "source": "nuscale_ch01_0361",
+      "target": "nuscale_ch01_0750",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the design and arrangement of the Chemical and Volume Control System (CVCS), which manages boron concentration for reactivity control, while Section B discusses regulatory criteria and operator actions related to inadvertent decreases in boron concentration, thus both sections are connected through the role of boron in reactivity control."
+    },
+    {
+      "source": "nuscale_ch01_0364",
+      "target": "nuscale_ch01_0123",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the design and regulatory conformance of the Chemical and Volume Control System (including boron recovery), while Section B lists the overall conformance of the facility with various regulatory guides, including those relevant to quality assurance and seismic design, thus Section A provides specific system-level details that support the broader regulatory compliance claims summarized in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0364",
+      "target": "nuscale_ch01_0749",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the design and conformance of the Chemical and Volume Control System (including boron recovery), which is directly relevant to Section B's focus on the safety analysis of incidents involving inadvertent decreases in boron concentration for reactivity control."
+    },
+    {
+      "source": "nuscale_ch01_0364",
+      "target": "nuscale_ch01_0750",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the design and conformance of the Chemical and Volume Control System (including boron recovery), which is directly related to Section B's discussion of boron concentration control as a means of reactivity management in the reactor coolant system."
+    },
+    {
+      "source": "nuscale_ch01_0094",
+      "target": "nuscale_ch01_0123",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section B provides a table of regulatory guide conformance, which is structurally referenced in Section A's discussion of how the NuScale FSAR conforms to various regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0094",
+      "target": "nuscale_ch01_0750",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A and Section B both discuss the applicability of regulatory guidance to the NuScale design, specifically noting which aspects are not applicable or only partially conform due to differences in design features such as reactor coolant pumps and operational responsibilities."
+    },
+    {
+      "source": "nuscale_ch01_0018",
+      "target": "nuscale_ch01_0123",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A provides a general description of the plant and its systems, while Section B lists how the plant's design conforms to specific regulatory guides, referencing sections (including Section 5) where details such as reactivity control through boron would be addressed."
+    },
+    {
+      "source": "nuscale_ch01_0018",
+      "target": "nuscale_ch01_0749",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A provides a general description of the plant and reactor core location, while Section B discusses the inapplicability of certain SRP guidance on boron concentration incidents due to NuScale's unique design without reactor coolant pumps, connecting them through the context of how plant design features affect reactivity control strategies."
+    },
+    {
+      "source": "nuscale_ch01_0018",
+      "target": "nuscale_ch01_0750",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A provides a general description of the plant and reactor core location, while Section B discusses regulatory guidance on boron concentration control and clarifies its applicability to the NuScale design, connecting through the context of reactivity control methods relevant to the reactor's design."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch01_0361",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the reactor coolant system's design, which is relevant to Section B's discussion of the chemical and volume control system (including boron control), as both sections address subsystems that interact to ensure safe reactivity management in the reactor."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch01_0364",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A discusses design guidelines for preheat steam generator designs, while Section B addresses once-through steam generator designs, both referencing the avoidance of water hammers and the role of auxiliary feedwater supply in the context of NuScale's conformance with regulatory criteria, thus specifying different technical details for related coolant flow systems."
+      "description": "Section A describes the reactor coolant system's design, which is relevant to reactivity control, while Section B addresses the chemical and volume control system, including boron recovery, which is directly related to reactivity control through boron; thus, Section A's system provides the context for Section B's specific reactivity control measures."
     },
     {
-      "source": "nuscale_ch01_0451",
-      "target": "nuscale_ch01_0748",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses design guidelines and system functions related to coolant flow and auxiliary systems in the NuScale reactor, while Section B addresses regulatory criteria for reactor coolant system integrity and notes the inapplicability of certain requirements due to NuScale's unique coolant flow design without pumps, thus both sections are connected by their discussion of how coolant flows between the steam generator and reactor in the context of NuScale's design."
+      "source": "nuscale_ch01_0361",
+      "target": "nuscale_ch01_0364",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the design and arrangement of the Chemical and Volume Control System (CVCS), while Section B outlines the Inspections, Tests, Analyses, and Acceptance Criteria (ITAAC) that verify the CVCS meets its design and regulatory requirements, thus Section B operationalizes and confirms the implementation of what Section A specifies."
     },
     {
-      "source": "nuscale_ch01_0451",
-      "target": "nuscale_ch01_0747",
+      "source": "nuscale_ch01_0361",
+      "target": "nuscale_ch01_0018",
       "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses design guidelines and system functions related to coolant flow and auxiliary systems in the NuScale reactor, while Section B addresses regulatory requirements and safety analysis for reactor coolant and main steam system pressures, both referencing the NuScale design's unique approach to coolant flow without traditional pumps, thus connecting through their discussion of system design and regulatory conformance regarding coolant flow."
+      "confidence": 0.7,
+      "description": "Section A discusses the design and arrangement of the Chemical and Volume Control System (CVCS), which is relevant for boron management and thus reactivity control, while Section B provides a general plant description including the reactor core setup, which is the context in which reactivity control (such as through boron) is applied."
     },
     {
-      "source": "nuscale_ch01_0452",
-      "target": "nuscale_ch01_0748",
+      "source": "nuscale_ch01_0094",
+      "target": "nuscale_ch01_0102",
       "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses design guidelines and system functions related to auxiliary feedwater and steam generator operation, while Section B addresses safety analysis criteria for reactor coolant system behavior, both referencing the NuScale design's lack of traditional reactor coolant loops and pumps, thus connecting through the design's unique coolant flow configuration."
+      "confidence": 0.7,
+      "description": "Section A and Section B both list regulatory guidance topics from the NuScale FSAR and indicate their applicability or non-applicability, connecting them through their shared focus on conformance with health physics and radiation protection criteria."
     },
     {
-      "source": "nuscale_ch01_0452",
-      "target": "nuscale_ch01_0747",
+      "source": "nuscale_ch01_0135",
+      "target": "nuscale_ch01_0123",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A describes design guidelines and system functions related to auxiliary feedwater and steam generator operation, while Section B outlines regulatory requirements and safety analysis criteria for reactor coolant and main steam system pressures; both are connected through their focus on the flow and control of coolant between the steam generator and reactor, specifically addressing how the NuScale design conforms to or differs from traditional PWR requirements."
+      "description": "Section A and Section B both document the NuScale FSAR's conformance with regulatory criteria, with Section A focusing on SRP/DSRS sections and Section B on Regulatory Guides, thus both provide evidence supporting the plant's compliance claims but reference different regulatory sources."
+    },
+    {
+      "source": "nuscale_ch01_0135",
+      "target": "nuscale_ch01_0749",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A lists regulatory conformance including SRP sections relevant to fuel enrichment limits, while Section B addresses regulatory guidance on boron concentration control, both referencing SRP criteria to demonstrate compliance with safety requirements."
+    },
+    {
+      "source": "nuscale_ch01_0135",
+      "target": "nuscale_ch01_0750",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A documents conformance with regulatory criteria including SRP sections, while Section B addresses the applicability of SRP guidance on boron concentration control, with both sections referencing SRP standards as the connecting information."
+    },
+    {
+      "source": "nuscale_ch05_0015",
+      "target": "nuscale_ch01_0123",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A describes the physical components and structure of the reactor vessel, while Section B lists regulatory conformance, including references to sections (such as 5.2 and 5.3) that detail requirements and descriptions for those components."
+    },
+    {
+      "source": "nuscale_ch05_0015",
+      "target": "nuscale_ch01_0749",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the physical components of the reactor vessel and its systems, while Section B discusses regulatory guidance on boron concentration control in the reactor coolant system, with both sections connected by their relevance to the reactor's design and safety features, specifically regarding how the reactor vessel (from Section A) is the location where boron concentration (from Section B) is managed for reactivity control."
+    },
+    {
+      "source": "nuscale_ch05_0015",
+      "target": "nuscale_ch01_0750",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the physical components of the reactor vessel and its systems, while Section B discusses regulatory guidance on boron concentration control and clarifies its applicability to the NuScale design, connecting them through the context of how reactivity is managed within the reactor system."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch01_0123",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A discusses system evaluation criteria for plant performance, while Section B lists regulatory guide conformance including references to sections (such as 5.4) that further detail system components mentioned in Section A, thus Section B structurally references and provides regulatory context for the technical descriptions in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch01_0749",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses system evaluation criteria for optimal plant performance, while Section B addresses regulatory conformance regarding boron concentration incidents, connecting them through the operational and safety requirements for reactivity control in the NuScale design."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch01_0750",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses system evaluation parameters for optimal reactor performance, while Section B addresses regulatory conformance regarding boron concentration control, both relating to how the NuScale design manages reactivity and safety through system design and boron use."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch01_0123",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references Section 5.3.1 for details on nondestructive examinations, while Section B lists conformance with regulatory guides and cross-references multiple sections including 5.3, indicating that Section B references or summarizes compliance aspects that are detailed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0064",
+      "target": "nuscale_ch01_0123",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section B references Section A by listing specific FSAR sections (including Ch.05) that demonstrate conformance with regulatory guides, thereby structurally linking the technical details (such as reactivity control and enrichment limits) found in those chapters."
+    },
+    {
+      "source": "nuscale_ch01_0064",
+      "target": "nuscale_ch01_0749",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses test results for control rod drive shafts and emergency core cooling system valves, while Section B addresses regulatory guidance on boron concentration incidents and clarifies its applicability to the NuScale design, connecting them through their focus on reactivity control mechanisms (control rods in A, boron in B) as part of the overall reactivity management strategy."
+    },
+    {
+      "source": "nuscale_ch01_0064",
+      "target": "nuscale_ch01_0750",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section B discusses regulatory criteria for boron concentration control in PWRs and clarifies their applicability to the NuScale design, while Section A provides test results for control rod operability, both addressing aspects of reactivity control but focusing on different mechanisms (boron vs. control rods)."
+    },
+    {
+      "source": "nuscale_ch01_0063",
+      "target": "nuscale_ch01_0123",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses ECCS valve and control rod drive shaft testing, while Section B lists regulatory guide conformance including quality assurance and seismic design, with both sections connected through their focus on demonstrating compliance with regulatory requirements for safety-related systems."
+    },
+    {
+      "source": "nuscale_ch01_0063",
+      "target": "nuscale_ch01_0749",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses ECCS valve and control rod operability, while Section B addresses regulatory guidance on boron concentration incidents, both relating to reactivity control mechanisms in the NuScale design."
+    },
+    {
+      "source": "nuscale_ch01_0063",
+      "target": "nuscale_ch01_0750",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses control rod operability and drop performance, while Section B addresses regulatory guidance on boron concentration control, with both sections relating to reactivity control mechanisms in the NuScale reactor design."
+    },
+    {
+      "source": "nuscale_ch01_0135",
+      "target": "nuscale_ch05_0006",
+      "relation": "SATISFIES",
+      "confidence": 0.7,
+      "description": "Section A outlines the regulatory conformance framework, which includes fuel enrichment limits as part of its acceptance criteria, while Section B discusses system evaluation parameters such as reactivity control (potentially through boron), thus connecting the regulatory requirements in Section A to the technical implementation in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0135",
+      "target": "nuscale_ch05_0018",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A references the overall conformance of the safety analysis report with regulatory criteria, while Section B provides specific details about reactor vessel inspection and handling, with Section A's general compliance claims being supported by the specific practices described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0135",
+      "target": "nuscale_ch01_0064",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A outlines conformance with regulatory criteria, while Section B provides test results that serve as evidence supporting the claims of operability and safety made in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0135",
+      "target": "nuscale_ch01_0063",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A outlines general conformance with regulatory criteria, while Section B provides specific test results that serve as evidence supporting the claims of compliance referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0015",
+      "target": "nuscale_ch05_0006",
+      "relation": "REFERENCES",
+      "confidence": 0.7,
+      "description": "Section A describes the physical components of the reactor vessel, while Section B discusses the evaluation of system performance parameters, with both sections referencing the reactor coolant system and its components as foundational information for understanding system operation and safety analysis."
+    },
+    {
+      "source": "nuscale_ch05_0015",
+      "target": "nuscale_ch05_0018",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B references Section A by specifying that the nondestructive examinations performed on the reactor vessel, described in Section 5.3.1 (which is part of Section A), are relevant to the inspection requirements."
+    },
+    {
+      "source": "nuscale_ch05_0015",
+      "target": "nuscale_ch01_0064",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the physical components and structure of the reactor vessel, while Section B discusses test results confirming the operability of control rod drive shafts and ECCS valves, both of which are integral to the safe operation and control of the reactor vessel described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0064",
+      "target": "nuscale_ch01_0063",
+      "relation": "REFERENCES",
+      "confidence": 1.0,
+      "description": "Section A and Section B are identical excerpts describing ECCS valve testing and control rod drive shaft operability, with Section B repeating the content of Section A."
+    },
+    {
+      "source": "nuscale_ch01_0794",
+      "target": "nuscale_ch01_0123",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes how the NuScale design meets certain regulatory guidelines for accident mitigation systems, while Section B lists the conformance of the NuScale design with various regulatory guides, including those referenced in Section A, thus Section A's claims are supported by the conformance details in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0794",
+      "target": "nuscale_ch01_0749",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section B discusses the control of reactivity through boron concentration in the reactor coolant system, which is a method relevant to the fuel enrichment limits that would be specified in Section A, as both are related to maintaining safe reactivity margins in the reactor core."
+    },
+    {
+      "source": "nuscale_ch01_0794",
+      "target": "nuscale_ch01_0750",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section B discusses the control of reactivity through boron concentration in the reactor coolant system, which is directly related to the fuel enrichment limits stated in Section A, as both parameters are critical to maintaining safe reactor operation and preventing criticality accidents."
+    },
+    {
+      "source": "nuscale_ch01_0056",
+      "target": "nuscale_ch01_0123",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A outlines testing programs that generate data to support the safety analysis, while Section B documents how the design conforms or partially conforms to regulatory guides, thus Section A's test results provide evidence that supports the conformance claims made in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0056",
+      "target": "nuscale_ch01_0749",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses testing programs for unique fuel design features supporting safety analysis, while Section B addresses regulatory conformance regarding boron concentration incidents, both relating to how design verification (A) underpins compliance with reactivity control requirements (B)."
+    },
+    {
+      "source": "nuscale_ch01_0056",
+      "target": "nuscale_ch01_0750",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses testing programs for unique design features supporting safety analysis, while Section B addresses regulatory criteria for boron concentration control and notes the inapplicability of certain guidance to the NuScale design, connecting them through the context of safety analysis and regulatory conformance."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0123",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A discusses the inapplicability of certain SRP guidance due to the NuScale design lacking reactor coolant pumps, while Section B lists regulatory guide conformance including references to sections (e.g., 5.2, 5.3, 5.4) that may address reactivity control and boron, thus Section B structurally references or points to the sections relevant to the topics discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0749",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A and Section B both address the applicability of regulatory guidance for PWR designs with respect to the NuScale reactor, specifically noting that certain requirements related to reactor coolant loops and pumps do not apply due to design differences."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0750",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A and Section B both discuss the inapplicability of certain SRP guidance to the NuScale design due to the absence of reactor coolant pumps, with Section A focusing on system pressures and Section B on operator action intervals, both referencing the same regulatory criteria and design features."
     },
     {
       "source": "nuscale_ch01_0748",
-      "target": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0123",
       "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A and Section B both discuss the applicability of regulatory guidance for PWR designs with forced coolant flow to the NuScale design, specifically noting that NuScale does not use reactor coolant pumps, which affects both fuel cladding integrity (A) and system pressures (B) in the context of coolant flow between the steam generator and reactor."
+      "confidence": 0.7,
+      "description": "Section A discusses the inapplicability of certain PWR-specific guidance to the NuScale design due to differences in reactor coolant system configuration, while Section B lists the NuScale FSAR's conformance with various regulatory guides, including those related to quality assurance and seismic design, indicating how the design aligns or partially aligns with regulatory expectations."
     },
     {
-      "source": "nuscale_ch01_0018",
-      "target": "nuscale_ch01_0743",
-      "relation": "SUPPORTS",
+      "source": "nuscale_ch01_0748",
+      "target": "nuscale_ch01_0749",
+      "relation": "REFERENCES",
       "confidence": 0.95,
-      "description": "Section A describes the physical configuration and flow path of the reactor coolant system, while Section B explains that certain regulatory requirements related to coolant loop startup and flow control are not applicable to the NuScale design due to its lack of reactor coolant pumps, directly connecting the design features in A to the regulatory applicability in B."
+      "description": "Section A and Section B both discuss the inapplicability of certain SRP guidance to the NuScale design due to the absence of reactor coolant pumps, referencing the same regulatory context and design features."
     },
     {
-      "source": "nuscale_ch01_0018",
-      "target": "nuscale_ch01_0745",
-      "relation": "SUPPORTS",
+      "source": "nuscale_ch01_0748",
+      "target": "nuscale_ch01_0750",
+      "relation": "REFERENCES",
       "confidence": 0.95,
-      "description": "Section A describes the physical configuration and flow path of the reactor core and coolant system, while Section B explains that certain regulatory requirements for coolant loop startup and flow control are not applicable to the NuScale design due to its lack of reactor coolant pumps and traditional loops, thus connecting the design features in A to the regulatory context in B."
+      "description": "Section A and Section B both discuss the inapplicability of certain SRP guidance to the NuScale design due to the absence of reactor coolant pumps and loops, referencing the same regulatory context and design features."
     },
     {
-      "source": "nuscale_ch01_0018",
-      "target": "nuscale_ch01_0451",
+      "source": "nuscale_ch01_0794",
+      "target": "nuscale_ch01_0056",
       "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A provides a general description of the reactor and cooling water system layout, while Section B discusses regulatory guidelines for steam generator design and clarifies that certain auxiliary feedwater system requirements do not apply to NuScale's design, connecting them through their focus on the systems involved in coolant flow between the steam generator and reactor."
+      "description": "Section B describes testing programs that generate data to support the safety analyses referenced in Section A, indicating that the results from B are used to substantiate the claims or analyses presented in A."
     },
     {
-      "source": "nuscale_ch01_0044",
-      "target": "nuscale_ch01_0743",
+      "source": "nuscale_ch01_0056",
+      "target": "nuscale_ch01_0748",
       "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A describes the passive, natural circulation coolant flow between the steam generator and reactor in the NuScale design, while Section B explains that regulatory criteria related to forced coolant flow and pumps are not applicable because NuScale uses natural circulation as described in Section A."
+      "confidence": 0.8,
+      "description": "Section A discusses testing programs that generate data to support safety analyses, while Section B addresses regulatory conformance regarding boron concentration and fuel cladding integrity, both relating to how design verification (A) supports meeting regulatory requirements for reactivity control and safety (B)."
     },
     {
-      "source": "nuscale_ch01_0044",
-      "target": "nuscale_ch01_0745",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section B explains that the regulatory guidance for forced-flow reactor coolant systems does not apply to the NuScale design, while Section A describes the NuScale system's use of natural circulation for coolant flow between the steam generator and reactor, thus providing the technical basis for the inapplicability stated in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0044",
-      "target": "nuscale_ch01_0451",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A describes the NuScale plant's decay heat removal system and its operation in cooling the reactor coolant system via the steam generator, while Section B references regulatory guidelines for auxiliary feedwater systems and clarifies that NuScale's DHRS serves a similar function, connecting them through the functional equivalence of DHRS to AFW in the context of coolant flow between the steam generator and reactor."
-    },
-    {
-      "source": "nuscale_ch01_0018",
-      "target": "nuscale_ch01_0044",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A provides a general description of the reactor core and its connection to the hot leg riser, while Section B details the closed-loop cooling system and its interaction with the steam generator (SG), together describing the flow path and cooling mechanisms between the reactor and SG."
-    },
-    {
-      "source": "nuscale_ch01_0436",
-      "target": "nuscale_ch01_0743",
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0748",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A provides regulatory criteria and conformance information for systems involved in coolant flow (such as steam and feedwater systems), while Section B explains why certain regulatory guidance on coolant loop startup and flow control is not applicable to the NuScale design due to its lack of reactor coolant pumps and loops, thus connecting them through the design features that determine coolant flow paths."
-    },
-    {
-      "source": "nuscale_ch01_0436",
-      "target": "nuscale_ch01_0745",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes regulatory criteria and conformance for systems involved in coolant flow (such as steam and feedwater systems), while Section B explains why certain regulatory guidance on coolant loop startup and flow control is not applicable to the NuScale design due to the absence of reactor coolant pumps, thus connecting them through the design's unique coolant flow configuration."
-    },
-    {
-      "source": "nuscale_ch01_0436",
-      "target": "nuscale_ch01_0451",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A references regulatory criteria for the steam and feedwater systems relevant to coolant flow, while Section B provides specific design guidelines (such as avoiding water hammers) that must be considered in the design and operation of the steam generator and its connection to the reactor, thus Section B specifies technical details that support the general regulatory framework outlined in Section A."
+      "description": "Section A discusses system pressures in the context of inadvertent boron dilution events, while Section B addresses fuel cladding integrity under the same event scenario, both referencing the same regulatory guidance and event (inadvertent decrease in boron concentration) as applied to the NuScale design."
     }
   ]
 }

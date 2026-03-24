@@ -1,0 +1,778 @@
+{
+  "question": "Based on Figure 1.2-6 (NPM cutaway) and Figure 5.3-1 (RPV cross section), is the annular gap between RPV and CNV adequate for the vacuum containment function?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0022": {
+      "node_id": "nuscale_ch01_0022",
+      "title": "Engineered Safety Feature Materials",
+      "summary": "The section describes how maintaining a vacuum in the NuScale Containment Vessel (CNV) offers several safety and operational benefits, such as reducing corrosion, aiding leak detection, and minimizing combustible gases. The design relies on passive safety systems and a smaller fuel inventory, which together lower the risk of core damage and eliminate the need for external power during accidents, resulting in improved safety compared to traditional nuclear plants.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "32",
+      "hop": 1
+    },
+    "nuscale_ch05_0014": {
+      "node_id": "nuscale_ch05_0014",
+      "title": "Reactor Vessel",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module's reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel surrounded by a containment vessel. The RPV serves as a key pressure-retaining component and barrier to fission product release, supporting various reactor systems and constructed according to ASME Boiler and Pressure Vessel Code standards. The materials used for the RPV are carefully selected and fabricated to ensure long-term integrity and compliance with regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
+      "hop": 1
+    },
+    "nuscale_ch05_0018": {
+      "node_id": "nuscale_ch05_0018",
+      "title": "References",
+      "summary": "This section outlines the inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fastener requirements for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It specifies procedures for maintaining vessel integrity during transport and operation, and lists the key codes and standards used for compliance.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "74",
+      "hop": 1
+    },
+    "nuscale_ch01_0167": {
+      "node_id": "nuscale_ch01_0167",
+      "title": "SRP 6.5.3, Rev 3: Fission Product Control Systems and StructuresII.1 Primary Containment",
+      "summary": "The NuScale design partially conforms to SRP 6.5.3, Rev 3 requirements for fission product control, as its passive containment vessel does not include active fission product clean-up or pressure suppression systems typical of conventional LWRs. Instead, fission product control is achieved through the inherent passive design, making certain SRP guidance not applicable. Additionally, requirements for secondary containment and other fission product control systems do not apply, as the NuScale design only credits the primary containment vessel and associated isolation features.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "229",
+      "hop": 1
+    },
+    "nuscale_ch01_0168": {
+      "node_id": "nuscale_ch01_0168",
+      "title": "SRP 6.5.3, Rev 3: Fission Product Control Systems and StructuresII.2 Secondary Containment",
+      "summary": "The NuScale design does not include secondary containment or fission product clean-up systems, as its passive safety features and submerged containment vessel inherently control fission products. Therefore, regulatory criteria related to secondary containment and associated systems are not applicable to the NuScale Power Module, and only certain containment parameters, such as leakage rates, are relevant for review.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "229",
+      "hop": 1
+    },
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is responsible for removing heat from the reactor core and transferring it to the steam generators using natural circulation, driven by density and elevation differences. The RCS includes key components such as the reactor pressure vessel, pressurizer, and associated valves, and interfaces with several other systems for safety and operational control, including degasification and emergency core cooling. The system is designed to maintain the integrity of the reactor coolant pressure boundary and facilitate the removal of noncondensible gases during both normal and emergency operations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch01_0020": {
+      "node_id": "nuscale_ch01_0020",
+      "title": "Safety Considerations",
+      "summary": "The NuScale design enhances safety by maintaining a vacuum in the containment vessel (CNV), which reduces moisture, aids in leak detection, and limits oxygen, thereby minimizing corrosion and combustible gas risks. Its passive safety systems and integral design eliminate large-break loss-of-coolant accident (LOCA) scenarios and reduce reliance on external power, resulting in a lower core damage frequency compared to conventional reactors. Additionally, the smaller fuel inventory leads to a reduced radioactive source term.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "32",
+      "hop": 1
+    },
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain fuel integrity, minimize solid deposits, and ensure uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 1
+    },
+    "nuscale_ch05_0000": {
+      "node_id": "nuscale_ch05_0000",
+      "title": "Preface",
+      "summary": "The Preface outlines the copyright and usage restrictions for the NuScale Standard Plant Design Certification Application, specifically Chapter Five on the Reactor Coolant System and Connecting Systems. It specifies that only the U.S. Nuclear Regulatory Commission (NRC) is authorized to use, copy, or disclose the document for regulatory purposes, and any copies must include the copyright notice. The section also references the table of contents for Chapter Five, which covers the summary description and design basis of the reactor coolant system.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "1",
+      "hop": 2
+    },
+    "nuscale_ch01_0002": {
+      "node_id": "nuscale_ch01_0002",
+      "title": "Introduction",
+      "summary": "This section introduces the NuScale Final Safety Analysis Report (FSAR), which is required for standard design certification under U.S. regulations. It outlines the scope of the report, describing the NuScale Power Module (NPM) as a modular, scalable nuclear steam supply system, and highlights key safety and design features such as passive safety systems, compact containment, and advanced digital controls.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "8",
+      "hop": 2
+    },
+    "nuscale_ch01_0001": {
+      "node_id": "nuscale_ch01_0001",
+      "title": "CHAPTER 1 INTRODUCTION AND GENERAL DESCRIPTION OF THE PLANT",
+      "summary": "This section introduces the NuScale Final Safety Analysis Report (FSAR), which is required for standard design certification under U.S. regulations. It provides an overview of the NuScale Power Module (NPM), a scalable, modular nuclear steam supply system, and highlights key safety and design features such as passive safety systems, compact containment, and advanced digital controls. The FSAR covers both individual module and multi-module plant configurations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "8",
+      "hop": 2
+    },
+    "nuscale_ch01_0862": {
+      "node_id": "nuscale_ch01_0862",
+      "title": "Table 1.9-4: Conformance with Interim Staff Guidance (ISG)",
+      "summary": "Table 1.9-4 summarizes NuScale’s conformance with various Interim Staff Guidance (ISG) sections, particularly regarding seismic issues and high-frequency ground motion. The table indicates that NuScale’s design generally conforms to the relevant ISG requirements, with some items partially conforming due to the need for site-specific information to be developed by future applicants. Certain ISGs, such as those related to financial qualifications and probabilistic risk assessment, are noted as not applicable to the current stage.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "324",
+      "hop": 3
+    },
+    "nuscale_ch05_0020": {
+      "node_id": "nuscale_ch05_0020",
+      "title": "Steam Generators",
+      "summary": "The steam generators (SGs) in the NuScale Power Module are integrated within the reactor pressure vessel (RPV), which also houses other key components such as the pressurizer and safety valves. The SG system includes feedwater and main steam piping, with the RPV forming the outer pressure boundary, and the SG tubes and associated welds contributing to the reactor coolant pressure boundary.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
+      "hop": 3
+    },
+    "nuscale_ch05_0013": {
+      "node_id": "nuscale_ch05_0013",
+      "title": "References",
+      "summary": "This section lists references and standards relevant to the integrity of the reactor coolant boundary in the NuScale Final Safety Analysis Report. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as specific ASME code cases related to materials, quality assurance, and inspection procedures for pressurized water reactors.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "46",
+      "hop": 3
+    },
+    "nuscale_ch01_0128": {
+      "node_id": "nuscale_ch01_0128",
+      "title": "1.9.3 Generic Issues",
+      "summary": "This section explains that NuScale assessed its design’s conformance with regulatory criteria, including the Standard Review Plan (SRP), Design-Specific Review Standard (DSRS), and NRC Interim Staff Guidance, documenting results in referenced tables. It also details compliance with Three Mile Island (TMI) requirements and the process for addressing unresolved and generic safety issues, referencing relevant NRC programs and reports.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "130",
+      "hop": 3
+    },
+    "nuscale_ch01_0694": {
+      "node_id": "nuscale_ch01_0694",
+      "title": "DSRS 15.1.6, Rev 0: Loss of Containment VacuumII.2 Specific CriteriaCladding Integrity",
+      "summary": "This section evaluates NuScale's conformance with regulatory criteria regarding radiological consequences of main steam line failures outside containment, specifically referencing SRP 15.1.5.A and DSRS 15.1.6. It notes partial conformance where NuScale applies relevant guidance, but clarifies that certain radiological acceptance criteria and methodologies are superseded by SRP Section 15.0.3. Additionally, it confirms conformance with specific criteria related to reactor coolant pressure under DSRS 15.1.6.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "293",
+      "hop": 3
+    },
+    "nuscale_ch01_0076": {
+      "node_id": "nuscale_ch01_0076",
+      "title": "Conformance with Standard Review Plan",
+      "summary": "NuScale reviewed the Standard Review Plan (SRP), including relevant guidance and acceptance criteria, to ensure conformance with regulatory requirements for their small modular reactor design. The results of this gap analysis and conformance with additional NRC guidance, such as the DSRS and Interim Staff Guidance, are documented in referenced tables. Additionally, NuScale assessed compliance with Three Mile Island (TMI) requirements and addressed unresolved and generic safety issues as required by NRC regulations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "130",
+      "hop": 3
+    },
+    "nuscale_ch01_0703": {
+      "node_id": "nuscale_ch01_0703",
+      "title": "DSRS 15.2.1-15.2.5, Rev 0: Loss of External Load; Turbine Trip; Loss of Condenser Vacuum; Closure of Main Steam Isolation Valve; and Steam Pressure Regulator Failure (Closed)II.1 Basic Objectives - Initiating Events",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for various initiating events, such as loss of external load, turbine trip, loss of condenser vacuum, main steam isolation valve closure, and steam pressure regulator failure. It notes that NuScale generally conforms to the relevant DSRS sections, except for partial conformance regarding the steam pressure regulator, as the NuScale design does not include this component. The section references Table 1.9-3, which details conformance with the Standard Review Plan and Design Specific Review Standard.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "294",
+      "hop": 4
+    },
+    "nuscale_ch05_0012": {
+      "node_id": "nuscale_ch05_0012",
+      "title": "Reactor Coolant Pressure Boundary Leakage Detection",
+      "summary": "The NuScale reactor coolant system (RCS) does not use traditional components with designed leakage, making it impractical to distinguish between identified and unidentified leakage inside containment using current instrumentation. All leakage into containment is treated as unidentified until the source is determined, with leakage rates monitored through RCS inventory balance and containment evacuation system (CES) flow rates, ensuring reliable detection to support safety analyses.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "41",
+      "hop": 4
+    },
+    "nuscale_ch01_0780": {
+      "node_id": "nuscale_ch01_0780",
+      "title": "SRP 15.6.5.A, Rev 1: Radiological Consequences of a Design Basis Loss-of-Coolant Accident Including Containment Leakage ContributionII.1 Calculated Doses and Containment Leakage Contribution",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for evaluating radiological consequences of a design basis loss-of-coolant accident (LOCA), including containment leakage. It notes that while NuScale’s analysis methods generally conform to guidance in SRP 15.6.5.A, some acceptance criteria and analysis models are superseded by SRP Section 15.0.3, and certain guidance applies only to boiling water reactors (BWRs). The section also confirms full conformance regarding engineered safety feature (ESF) system leakage assumptions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "308",
+      "hop": 4
+    },
+    "nuscale_ch01_0705": {
+      "node_id": "nuscale_ch01_0705",
+      "title": "DSRS 15.2.1-15.2.5, Rev 0: Loss of External Load; Turbine Trip; Loss of Condenser Vacuum; Closure of Main Steam Isolation Valve; and Steam Pressure Regulator Failure (Closed)II.2.A Reactor Coolant System and Main Steam System Pressures",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for various transient events, including loss of external load, turbine trip, loss of condenser vacuum, main steam isolation valve closure, and steam pressure regulator failure. It notes that the NuScale design generally conforms to the requirements, except for partial conformance regarding the steam pressure regulator, which is not present in the NuScale design. Analytical parameters and objectives for these events are addressed, with no significant deviations except as noted.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "294",
+      "hop": 4
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0022",
+      "target": "nuscale_ch05_0014",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A explains the functional importance of maintaining a vacuum in the CNV, which depends on the physical separation (annular gap) between the RPV and CNV described in Section B, thus linking the design feature to its safety function."
+    },
+    {
+      "source": "nuscale_ch01_0022",
+      "target": "nuscale_ch05_0018",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A explains the purpose and benefits of maintaining a vacuum in the CNV, which includes eliminating convective heat transfer in the annular gap, while Section B describes the requirement to maintain a dry environment for RPV surfaces, both of which are connected by the need for an adequate annular gap to support the vacuum containment function."
+    },
+    {
+      "source": "nuscale_ch01_0022",
+      "target": "nuscale_ch01_0167",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the functional benefits of maintaining a vacuum in the CNV, which is relevant to the adequacy of the annular gap for containment, while Section B references regulatory criteria for primary containment that partially apply to the NuScale design, connecting the design's vacuum containment approach to regulatory expectations."
+    },
+    {
+      "source": "nuscale_ch01_0022",
+      "target": "nuscale_ch01_0168",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A explains the functional benefits of maintaining a vacuum in the CNV, which is relevant to the adequacy of the annular gap for containment, while Section B discusses regulatory conformance regarding containment systems, connecting the design's vacuum containment approach to regulatory expectations."
+    },
+    {
+      "source": "nuscale_ch01_0022",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A explains the importance of maintaining a vacuum in the CNV for containment function, while Section B describes system features (degasification and venting) that help remove gases and thus support maintaining that vacuum, connecting the operational design to the containment requirement."
+    },
+    {
+      "source": "nuscale_ch01_0022",
+      "target": "nuscale_ch05_0003",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A explains the functional benefits of maintaining a vacuum in the CNV, which depends on the physical configuration shown in Section B's description of the RPV and its placement, thus Section B's design details provide the context necessary to assess whether the annular gap described in Section A is adequate for vacuum containment."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0018",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the physical arrangement of the RPV and CNV, including the annular gap, while Section B specifies the inspection and installation requirements that ensure the integrity and condition of the RPV and its surrounding environment, which are relevant to assessing the adequacy of the annular gap for vacuum containment."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch01_0167",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the physical configuration of the RPV and CNV, including the annular gap, while Section B outlines the regulatory requirements for primary containment, connecting them through the adequacy of the annular gap for vacuum containment as required by regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch01_0168",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the physical configuration of the RPV and CNV, including the annular gap, while Section B outlines the regulatory requirements for containment systems, connecting them through the need for the annular gap to meet vacuum containment function criteria."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the physical arrangement of the RPV and CNV, including the annular gap, while Section B explains the function of the RCS in removing noncondensible gases and maintaining pressure integrity, both of which are relevant to assessing whether the annular gap supports the vacuum containment function."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch01_0020",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A describes the physical arrangement and components of the RPV and its surrounding CNV, while Section B explains the functional requirement for the CNV to be maintained at a vacuum, which depends on the adequacy of the annular gap between the RPV and CNV for containment performance."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the physical arrangement of the RPV and CNV, including the annular gap, while Section B outlines the design basis and functional requirements of the reactor coolant system, which includes the RPV and its containment, thus Section A provides specific details that clarify the general system described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch01_0167",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the physical and environmental requirements for the Reactor Pressure Vessel (RPV), while Section B outlines the regulatory containment criteria that the RPV and its annular gap with the CNV must satisfy for vacuum containment, connecting them through the adequacy of the annular gap for regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch01_0168",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A provides details on the inspection and environmental maintenance of the RPV, which supports the vacuum containment function discussed in Section B's regulatory criteria for secondary containment adequacy."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A outlines inspection and environmental maintenance requirements for the RPV, while Section B describes system features for removing noncondensible gases and maintaining pressure boundary integrity, both of which are relevant to ensuring the annular gap's adequacy for vacuum containment by supporting system integrity and function."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes inspection and maintenance requirements for the RPV, including maintaining a dry environment, which supports the vacuum containment function described in Section B by helping to minimize moisture and corrosion within the CNV."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0003",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A references the inspection and installation requirements for the RPV, which are necessary to ensure that the design described in Section B (including the RPV as part of the RCS) meets its intended safety and functional roles, such as maintaining the annular gap for vacuum containment."
+    },
+    {
+      "source": "nuscale_ch01_0167",
+      "target": "nuscale_ch01_0168",
+      "relation": "SEMANTIC",
+      "confidence": 0.85,
+      "description": "Section A and Section B both discuss the NuScale containment vessel's partial conformance with SRP 6.5.3 due to the absence of fission product clean-up and pressure suppression systems, indicating that the same regulatory acceptance criterion applies to both primary and secondary containment in this context."
+    },
+    {
+      "source": "nuscale_ch01_0167",
+      "target": "nuscale_ch05_0004",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A outlines regulatory acceptance criteria for primary containment, while Section B describes the system features (including the annular gap and venting paths) that are intended to satisfy those containment requirements, specifically regarding the removal of noncondensible gases and maintaining containment integrity."
+    },
+    {
+      "source": "nuscale_ch01_0167",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes the functional benefits and operational rationale for maintaining a vacuum in the CNV, which supports the regulatory context in Section A regarding the containment's fission product control function, specifically as it relates to the adequacy of the containment design without traditional clean-up or suppression systems."
+    },
+    {
+      "source": "nuscale_ch01_0167",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines regulatory criteria for primary containment, while Section B describes the design basis of the reactor coolant system including the RPV, thus Section B provides specific design details relevant to evaluating whether the containment described in Section A is satisfied."
+    },
+    {
+      "source": "nuscale_ch01_0168",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B describes system features (e.g., degasification and venting to the CNV) that are relevant to the vacuum containment function discussed in Section A's regulatory criteria for secondary containment."
+    },
+    {
+      "source": "nuscale_ch01_0168",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes the functional benefits and operational rationale for maintaining a vacuum in the CNV, which supports the regulatory context in Section A regarding containment system requirements, specifically relating to the adequacy of containment design features such as the annular gap."
+    },
+    {
+      "source": "nuscale_ch01_0168",
+      "target": "nuscale_ch05_0003",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A outlines regulatory criteria for containment systems, including secondary containment functions relevant to vacuum containment, while Section B describes the design features of the reactor coolant system and its components (including the RPV), providing the technical context needed to assess whether the annular gap between the RPV and CNV meets the containment function requirements."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the system features (such as venting noncondensible gases from the RPV to the CNV) that support the vacuum containment function described in Section B, specifically by enabling the CNV to be maintained at a vacuum for safety and operational benefits."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes specific features of the RCS, such as degasification and venting functions that interact with the CNV, while Section B provides the general design basis and components of the RCS, establishing the context for Section A's details."
+    },
+    {
+      "source": "nuscale_ch01_0020",
+      "target": "nuscale_ch05_0003",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A explains the functional importance of maintaining a vacuum in the CNV, while Section B describes the physical configuration of the RPV within the NPM, providing context for evaluating whether the annular gap supports the vacuum containment function."
+    },
+    {
+      "source": "nuscale_ch05_0000",
+      "target": "nuscale_ch01_0022",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section B describes the functional requirements and benefits of maintaining a vacuum in the CNV, which provides the regulatory context for evaluating whether the annular gap shown in the figures referenced in Section A is adequate for this function."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch01_0022",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section B describes the functional benefits and requirements of maintaining a vacuum in the CNV, which provides context for evaluating whether the annular gap (referenced in Section A's figures) is adequate for this containment function."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides the overall context and regulatory basis for the NuScale design, while Section B details the physical arrangement of the RPV and CNV, including the annular gap relevant to the vacuum containment function, thus Section B specifies technical details that support the general description in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch05_0018",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A provides the overall context and regulatory basis for the safety analysis report, while Section B details specific requirements and procedures for the reactor pressure vessel (RPV), connecting them through the regulatory framework that governs both the general plant description and the specific inspection and installation requirements."
+    },
+    {
+      "source": "nuscale_ch01_0001",
+      "target": "nuscale_ch01_0022",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides the general description and regulatory context for the plant design, while Section B specifies the functional requirements and benefits of maintaining a vacuum in the CNV, which is directly related to the adequacy of the annular gap between the RPV and CNV for vacuum containment."
+    },
+    {
+      "source": "nuscale_ch01_0001",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides a general overview of the plant design and its safety analysis, while Section B gives specific details about the configuration and relationship between the RPV and CNV, including the annular gap relevant to the vacuum containment function."
+    },
+    {
+      "source": "nuscale_ch01_0001",
+      "target": "nuscale_ch05_0018",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the plant design and its safety analysis, while Section B specifies detailed requirements and procedures for the inspection, shipment, and environmental maintenance of the Reactor Pressure Vessel (RPV), with both sections connected through their focus on the RPV's design bases and operational safety."
+    },
+    {
+      "source": "nuscale_ch05_0000",
+      "target": "nuscale_ch01_0001",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A is the preface for Chapter Five of the Design Certification Application, while Section B introduces the overall Final Safety Analysis Report, with Section B establishing the regulatory and descriptive context that Section A's detailed chapter content supports."
+    },
+    {
+      "source": "nuscale_ch01_0862",
+      "target": "nuscale_ch05_0014",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A references regulatory conformance criteria, while Section B provides the physical description of the RPV and CNV arrangement, with the information in Section B supporting the evaluation of whether the design (including the annular gap) satisfies the regulatory requirements referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0862",
+      "target": "nuscale_ch05_0018",
+      "relation": "REFERENCES",
+      "confidence": 0.7,
+      "description": "Section A documents conformance with regulatory guidance, while Section B provides specific inspection and installation requirements for the Reactor Pressure Vessel (RPV), with both sections referencing compliance with standards relevant to the adequacy of the annular gap for containment function."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch01_0022",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the physical configuration of the RPV and its internals, which determines the annular gap with the CNV, while Section B explains the functional requirement for the CNV to maintain a vacuum, making the adequacy of the annular gap (from A) directly relevant to achieving the vacuum containment function (from B)."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0014",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A and Section B both describe the physical arrangement and components within the NuScale Power Module, specifically noting that the RPV is contained within the CNV and referencing the space and piping between them, which is directly relevant to assessing the adequacy of the annular gap for vacuum containment."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0018",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the components contained within the RPV, including its relationship to the overall NPM structure, while Section B outlines the inspection, shipment, and environmental requirements for the RPV, both of which provide context for understanding the physical configuration and maintenance of the annular gap relevant to the vacuum containment function."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch01_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A provides references and standards related to reactor coolant boundary integrity, while Section B describes the functional benefits and requirements of maintaining a vacuum in the CNV, connecting them through the regulatory and technical basis for the vacuum containment function."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0014",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A provides references to standards and guidelines relevant to the integrity and quality assurance of the reactor coolant boundary, which includes the RPV discussed in Section B as part of the NuScale Power Module's containment system."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0018",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A and Section B are related because both reference the ASME NQA-1-2008/1a-2009 Addenda quality assurance standard, which governs the requirements for the design, handling, and inspection of reactor components relevant to the adequacy of the annular gap for vacuum containment."
+    },
+    {
+      "source": "nuscale_ch01_0128",
+      "target": "nuscale_ch01_0022",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A discusses a gap analysis for regulatory conformance, while Section B describes the vacuum containment function of the CNV, with the adequacy of the annular gap being a design detail relevant to the regulatory acceptance criteria referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0128",
+      "target": "nuscale_ch05_0014",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses a gap analysis performed to ensure conformance with regulatory acceptance criteria, which would include evaluating physical gaps such as the annular gap between the RPV and CNV described in Section B's design description."
+    },
+    {
+      "source": "nuscale_ch01_0128",
+      "target": "nuscale_ch05_0018",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses a gap analysis for regulatory acceptance criteria, while Section B details inspection and installation requirements for the RPV, with both sections connected through their focus on compliance with regulatory standards for reactor vessel design and installation."
+    },
+    {
+      "source": "nuscale_ch01_0694",
+      "target": "nuscale_ch01_0022",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section B describes the function and benefits of maintaining a vacuum in the CNV, which is a prerequisite for evaluating whether the annular gap between the RPV and CNV (as depicted in the figures referenced in the analysis question) is adequate to satisfy the radiological containment criteria outlined in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0694",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B describes the physical configuration of the RPV and CNV, including the annular gap, which is the subject of the adequacy assessment required by the regulatory criteria referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0694",
+      "target": "nuscale_ch05_0018",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A outlines regulatory criteria and radiological dose guidelines for containment performance, while Section B describes the physical inspection, installation, and environmental maintenance requirements for the Reactor Pressure Vessel (RPV), both of which are connected through their relevance to ensuring the adequacy of the annular gap for vacuum containment as required by regulatory standards."
+    },
+    {
+      "source": "nuscale_ch01_0076",
+      "target": "nuscale_ch01_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A documents that a gap analysis was performed to ensure conformance with regulatory acceptance criteria, while Section B describes the functional benefits of maintaining a vacuum in the CNV, which depends on the adequacy of the annular gap between the RPV and CNV as referenced in the analysis question."
+    },
+    {
+      "source": "nuscale_ch01_0076",
+      "target": "nuscale_ch05_0014",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses the conformance review process against regulatory criteria (including gap analysis), which would encompass evaluating physical design features like the annular gap described in Section B, where the physical relationship between the RPV and CNV is specified."
+    },
+    {
+      "source": "nuscale_ch01_0076",
+      "target": "nuscale_ch05_0018",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the overall conformance of the design to regulatory criteria and references a gap analysis, while Section B provides specific details about the RPV's shipment, installation, and environmental controls, which are relevant to demonstrating compliance with the regulatory requirements discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0862",
+      "target": "nuscale_ch05_0020",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A outlines regulatory conformance with Interim Staff Guidance, while Section B provides technical design details of the reactor pressure vessel and its components, with Section A referencing the regulatory framework that Section B's design must satisfy."
+    },
+    {
+      "source": "nuscale_ch01_0862",
+      "target": "nuscale_ch05_0013",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A lists regulatory conformance with Interim Staff Guidance, while Section B provides references that support the technical basis for meeting those regulatory requirements, connecting them through the evidence needed to demonstrate compliance."
+    },
+    {
+      "source": "nuscale_ch01_0862",
+      "target": "nuscale_ch01_0128",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A documents conformance with specific Interim Staff Guidance (ISG) criteria, while Section B describes a broader gap analysis against Standard Review Plan (SRP) acceptance criteria, with both sections connected by their focus on regulatory compliance and evaluation of design adequacy."
+    },
+    {
+      "source": "nuscale_ch01_0862",
+      "target": "nuscale_ch01_0694",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A documents the design's conformance with regulatory guidance, while Section B outlines specific radiological containment criteria that the design must satisfy, connecting them through the requirement that the annular gap design (referenced in A) must meet the vacuum containment function criteria (specified in B)."
+    },
+    {
+      "source": "nuscale_ch01_0862",
+      "target": "nuscale_ch01_0076",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A details conformance with Interim Staff Guidance (ISG), while Section B describes conformance with the Standard Review Plan (SRP), both providing evidence of regulatory compliance for design features such as the annular gap between RPV and CNV, thus supporting the adequacy of the vacuum containment function."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch01_0128",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the physical components and design of the RPV, which are relevant to evaluating the adequacy of the annular gap for containment, while Section B discusses the process of reviewing regulatory criteria and gap analysis, which informs whether the design (including the annular gap) meets regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch01_0694",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A describes the physical configuration of the RPV and its internals, which determines the annular gap referenced in Section B's regulatory criteria for containment vacuum adequacy, thus providing the design basis information needed to assess compliance with the vacuum containment function requirements."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch01_0076",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the physical components and design of the RPV, which includes the annular gap relevant to containment, while Section B discusses the process of reviewing regulatory criteria (including gap analysis) to ensure design features like the annular gap meet acceptance criteria for containment functions."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch01_0128",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A lists references that provide technical and regulatory background, while Section B discusses the process of reviewing and ensuring conformance with regulatory criteria, connecting them through the use of referenced standards and guidelines to demonstrate compliance."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch01_0694",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides references to technical standards and guidelines relevant to reactor coolant boundary integrity, which are necessary for evaluating whether the annular gap described in Section B meets the regulatory criteria for containment vacuum adequacy."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch01_0076",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A lists references that provide technical standards and guidelines relevant to the reactor coolant boundary, while Section B discusses how the design conforms to regulatory acceptance criteria by referencing a gap analysis that evaluates compliance with the Standard Review Plan, thus connecting the technical basis (A) to the regulatory conformance process (B)."
+    },
+    {
+      "source": "nuscale_ch01_0128",
+      "target": "nuscale_ch01_0694",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes a gap analysis process to ensure conformance with regulatory acceptance criteria such as those in Section B, which specifies criteria for containment vacuum and radiological consequences, thus connecting the adequacy of the annular gap to regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0694",
+      "target": "nuscale_ch01_0076",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses specific regulatory criteria and partial conformance regarding radiological consequences and containment, while Section B describes the overall process and results of a gap analysis performed to assess conformance with the Standard Review Plan, thus Section B provides supporting context and evidence for the claims made in Section A about regulatory conformance."
+    },
+    {
+      "source": "nuscale_ch01_0703",
+      "target": "nuscale_ch01_0022",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines analytical parameters and regulatory conformance for loss of containment vacuum scenarios, while Section B describes the functional benefits and requirements of maintaining a vacuum in the CNV, connecting them through the need for the annular gap to support the vacuum containment function as analyzed in Section A and described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0703",
+      "target": "nuscale_ch05_0014",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A specifies the regulatory analytical parameters and objectives for evaluating containment vacuum loss, while Section B provides the physical design details of the RPV and its relationship to the CNV, which are necessary to assess whether the annular gap is adequate for the vacuum containment function."
+    },
+    {
+      "source": "nuscale_ch01_0703",
+      "target": "nuscale_ch05_0018",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A outlines the analytical parameters and regulatory conformance for containment vacuum loss scenarios, while Section B describes the physical inspection and installation requirements for the reactor pressure vessel (RPV), both of which are connected by the need to ensure the physical integrity and configuration (including the annular gap) support the containment vacuum function."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch01_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the challenges in detecting reactor coolant pressure boundary leakage inside the containment, while Section B explains that maintaining a vacuum in the CNV facilitates detection of such leakage, connecting the adequacy of the annular gap to the effectiveness of the vacuum containment function."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0014",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B describes the physical configuration of the RPV and CNV, establishing the existence of the annular gap, while Section A discusses the challenges in detecting leakage within this containment, connecting the adequacy of the gap to the effectiveness of vacuum containment and leakage detection."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0018",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the challenges in detecting leakage within the containment, while Section B outlines the inspection and environmental controls for the RPV, both of which are connected by their focus on ensuring the integrity and monitoring of the reactor pressure boundary relevant to the adequacy of the annular gap for containment function."
+    },
+    {
+      "source": "nuscale_ch01_0780",
+      "target": "nuscale_ch01_0022",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section B describes the vacuum containment function of the CNV, which is a key design feature whose adequacy (including the annular gap) must be evaluated to satisfy the radiological consequence and containment leakage requirements outlined in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0780",
+      "target": "nuscale_ch05_0014",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section B describes the physical configuration of the RPV and CNV, including the annular gap, which provides the design basis information needed to assess whether the containment leakage contribution analyzed in Section A meets regulatory requirements for vacuum containment function."
+    },
+    {
+      "source": "nuscale_ch01_0780",
+      "target": "nuscale_ch05_0018",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines the regulatory requirements and criteria for evaluating containment leakage and radiological consequences during a loss-of-coolant accident, while Section B provides specific design and inspection details for the reactor pressure vessel (RPV), which are necessary to assess whether the physical configuration (including the annular gap) meets the containment function requirements described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0705",
+      "target": "nuscale_ch01_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A provides analytical parameters and regulatory conformance for loss of containment vacuum scenarios, while Section B describes the functional purpose and benefits of maintaining a vacuum in the CNV, connecting them through the requirement that the annular gap supports the vacuum containment function analyzed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0705",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A specifies analytical parameters and regulatory conformance criteria for containment vacuum loss scenarios, while Section B provides the physical design details of the RPV and its relationship to the CNV, thus Section B provides the design information necessary to evaluate whether the annular gap described in Section A's analyses is adequate for the vacuum containment function."
+    },
+    {
+      "source": "nuscale_ch01_0705",
+      "target": "nuscale_ch05_0018",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A outlines the analytical parameters and regulatory conformance for containment vacuum loss scenarios, while Section B provides design and inspection details for the RPV, with both sections connected by the need to ensure that the physical configuration (including the annular gap) supports the containment vacuum function analyzed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0703",
+      "target": "nuscale_ch05_0012",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A specifies analytical parameters and regulatory conformance for loss of containment vacuum scenarios, which are directly relevant to assessing whether the physical annular gap (described in Section B) between the RPV and CNV is adequate for the vacuum containment function."
+    },
+    {
+      "source": "nuscale_ch01_0703",
+      "target": "nuscale_ch01_0780",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A provides analytical parameters and objectives for evaluating containment vacuum loss scenarios, which are necessary to assess whether the annular gap (as depicted in Figures 1.2-6 and 5.3-1) can maintain the vacuum containment function required by the radiological dose and leakage criteria specified in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0703",
+      "target": "nuscale_ch01_0705",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A specifies the analytical parameters and objectives for evaluating loss of containment vacuum events, while Section B provides the corresponding system pressure responses and confirms that the same analytical parameters are used, directly connecting the design evaluation to the regulatory requirements for vacuum containment adequacy."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch01_0780",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the limitations in detecting and distinguishing reactor coolant pressure boundary leakage inside containment, which directly impacts the ability to assess containment leakage contributions as required by the radiological consequence calculations in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch01_0705",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the inability to distinguish specific leakage sources inside containment, which impacts the assessment of the annular gap's adequacy for vacuum containment as analyzed in Section B's conformance with loss of containment vacuum scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0780",
+      "target": "nuscale_ch01_0705",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A addresses the calculation of radiological consequences and containment leakage during a loss-of-coolant accident, while Section B specifies analytical parameters for evaluating the loss of containment vacuum, both of which rely on the adequacy of the annular gap between the RPV and CNV to ensure containment integrity and vacuum function."
+    }
+  ]
+}

@@ -1,0 +1,834 @@
+{
+  "question": "Using Table 1.2-1 plant parameters, Table 5.3-1 RPV design, and Figure 5.3-1 cross section, is the RPV adequately designed for the stated operating conditions?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch05_0000": {
+      "node_id": "nuscale_ch05_0000",
+      "title": "Preface",
+      "summary": "The Preface outlines the copyright and usage restrictions for the NuScale Standard Plant Design Certification Application, specifically Chapter Five on the Reactor Coolant System and Connecting Systems. It details the permissions granted to the U.S. Nuclear Regulatory Commission (NRC) for internal use, review, and public disclosure, emphasizing that all copies must retain the copyright notice and any proprietary markings.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "1",
+      "hop": 1
+    },
+    "nuscale_ch01_0072": {
+      "node_id": "nuscale_ch01_0072",
+      "title": "Combined License Information Items",
+      "summary": "This section outlines the interface requirements between the NuScale Power Plant certified design and the site-specific design provided in the combined license (COL) application. It explains the types of interface requirements (conceptual design information and COL information items), and describes how COL applicants must address site-specific information and any departures from the certified design. Tables referenced in the section summarize these interfaces and list the required COL information items.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "108",
+      "hop": 1
+    },
+    "nuscale_ch01_0015": {
+      "node_id": "nuscale_ch01_0015",
+      "title": "General Plant Description",
+      "summary": "This section provides a summary of the NuScale plant’s overall design, describing its main systems such as safety features, power conversion, fuel handling, cooling, waste management, and auxiliary systems. It explains that each Combined License (COL) applicant must reference the NuScale Final Safety Analysis Report (FSAR) and provide site-specific details where required, while distinguishing between certified design elements and conceptual design information (CDI). Security-related information is specially marked and withheld according to regulations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "26",
+      "hop": 1
+    },
+    "nuscale_ch05_0017": {
+      "node_id": "nuscale_ch05_0017",
+      "title": "Reactor Vessel Integrity",
+      "summary": "This section outlines the procedures and regulatory compliance measures to ensure the integrity of the NuScale reactor vessel over its 60-year design life. It details the development of operating procedures to maintain pressure-temperature limits, evaluates the vessel’s resistance to pressurized thermal shock and upper-shelf energy degradation, and confirms that predicted material properties remain within safety criteria throughout the vessel’s operational lifespan.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "73",
+      "hop": 1
+    },
+    "nuscale_ch05_0014": {
+      "node_id": "nuscale_ch05_0014",
+      "title": "Reactor Vessel",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module’s reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel surrounded by a containment vessel. The RPV is a key pressure-retaining component that forms part of the reactor coolant pressure boundary, supporting various internal systems and ensuring the integrity of the system to prevent the release of fission products. Materials used for the RPV are selected according to ASME Boiler and Pressure Vessel Code standards to ensure long-term safety and durability.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
+      "hop": 1
+    },
+    "nuscale_ch01_0706": {
+      "node_id": "nuscale_ch01_0706",
+      "title": "DSRS 15.2.1-15.2.5, Rev 0: Loss of External Load; Turbine Trip; Loss of Condenser Vacuum; Closure of Main Steam Isolation Valve; and Steam Pressure Regulator Failure (Closed)II.2.B Fuel Cladding Integrity",
+      "summary": "The section confirms that the NuScale design meets the regulatory criteria outlined in DSRS 15.2.1-15.2.5 for events such as loss of external load, turbine trip, loss of condenser vacuum, closure of the main steam isolation valve, and steam pressure regulator failure (closed), specifically regarding fuel cladding integrity. The design does not include a steam pressure regulator, and there are no exceptions or non-conformances noted for incidents of moderate frequency, instrument setpoints, limiting single failures, or performance of nonsafety-related systems.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "295",
+      "hop": 2
+    },
+    "nuscale_ch05_0008": {
+      "node_id": "nuscale_ch05_0008",
+      "title": "Compliance with Codes and Code Cases",
+      "summary": "This section describes how the NuScale Power Module (NPM) and its reactor coolant pressure boundary (RCPB) components comply with relevant U.S. regulations, specifically 10 CFR 50.55a and associated General Design Criteria. It details that these components are designed, fabricated, and tested to ASME Boiler and Pressure Vessel Code (BPVC) Section III, 2013 Edition standards, and clarifies the classification of various piping and components according to their safety significance.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "20",
+      "hop": 2
+    },
+    "nuscale_ch05_0007": {
+      "node_id": "nuscale_ch05_0007",
+      "title": "Integrity of Reactor Coolant Boundary",
+      "summary": "This section describes the design features of each NuScale Power Module (NPM) that ensure the integrity of the reactor coolant pressure boundary (RCPB) throughout the plant’s design life, in accordance with regulatory definitions. It details the components and systems included in the RCPB, such as the reactor pressure vessel, containment isolation valves, safety valves, and associated piping, emphasizing their roles in maintaining pressure containment and system safety.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "19",
+      "hop": 2
+    },
+    "nuscale_ch01_0709": {
+      "node_id": "nuscale_ch01_0709",
+      "title": "DSRS 15.2.1-15.2.5, Rev 0: Loss of External Load; Turbine Trip; Loss of Condenser Vacuum; Closure of Main Steam Isolation Valve; and Steam Pressure Regulator Failure (Closed)II.2.E Most Limiting Plant System Single Failure",
+      "summary": "The section confirms that the NuScale design meets regulatory criteria for various postulated events such as loss of external load, turbine trip, loss of condenser vacuum, main steam isolation valve closure, and steam pressure regulator failure (closed), even though the design does not include a steam pressure regulator. For each scenario, the analysis concludes that fuel cladding integrity is maintained, incidents of moderate frequency are addressed, instrument setpoints are appropriate, and the most limiting single failure is adequately considered, with no exceptions or additional comments noted.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "295",
+      "hop": 2
+    },
+    "nuscale_ch05_0009": {
+      "node_id": "nuscale_ch05_0009",
+      "title": "Overpressure Protection",
+      "summary": "This section outlines NuScale’s compliance with NRC regulations and ASME code requirements for overpressure protection of the reactor coolant boundary. It details the use of specific ASME BPVC and OM code cases for design, fabrication, construction, preservice, and inservice inspections and testing, ensuring all selected code cases meet NRC-endorsed conditions. A consolidated list of these code cases is provided in Table 5.2-1.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "21",
+      "hop": 2
+    },
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the NuScale pressurizer, including low alloy steel for the baffle plate with stainless steel and nickel-based cladding for corrosion protection, and specifies the use of corrosion-resistant alloys for heater bundles, cover plates, and bolting. All materials are selected for compatibility with operating environments and comply with relevant BPVC Section II specifications.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 2
+    },
+    "nuscale_ch05_0010": {
+      "node_id": "nuscale_ch05_0010",
+      "title": "Reactor Coolant Pressure Boundary Materials",
+      "summary": "The Reactor Coolant Pressure Boundary (RCPB) materials, including welds, are selected and fabricated in accordance with ASME BPVC standards and meet all relevant regulatory requirements, such as 10 CFR 50 and its appendices. These materials are designed, constructed, and tested to ensure high quality, environmental compatibility, and fracture resistance, with detailed specifications provided in Table 5.2-4.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "29",
+      "hop": 3
+    },
+    "nuscale_ch01_0159": {
+      "node_id": "nuscale_ch01_0159",
+      "title": "DSRS 3.11, Rev. 0: Environmental Qualification of Mechanical and Electrical EquipmentII.24 Exposure of Organic Components on Engineered Safety Features Systems",
+      "summary": "This section summarizes NuScale’s conformance with DSRS 3.11, Rev. 0 requirements for the environmental qualification of mechanical and electrical equipment, specifically regarding the exposure of organic components in engineered safety features systems. The document states that NuScale’s design conforms to the relevant regulatory criteria, with no exceptions noted for this requirement. Maintenance, surveillance, and operational program implementation are identified as responsibilities of the COL applicant and are not addressed in this section.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "200",
+      "hop": 3
+    },
+    "nuscale_ch01_0309": {
+      "node_id": "nuscale_ch01_0309",
+      "title": "SRP 9.1.4, Rev 4: Light Load Handling System and Refueling Cavity DesignII.3 Specific Criteria to Meet GDC 61",
+      "summary": "The section documents NuScale’s conformance with regulatory criteria for the Light Load Handling System and Refueling Cavity Design, specifically addressing compliance with General Design Criterion (GDC) 61 as outlined in SRP 9.1.4, Rev 4. It confirms that the design meets the required criteria, with no exceptions or additional comments noted.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "244",
+      "hop": 3
+    },
+    "nuscale_ch01_0312": {
+      "node_id": "nuscale_ch01_0312",
+      "title": "SRP 9.1.5, Rev 1: Overhead Heavy Load Handling SystemsII.2 Specific Criteria to Meet GDC 2",
+      "summary": "This section documents NuScale’s conformance with regulatory criteria for overhead heavy load handling systems, specifically addressing compliance with General Design Criterion (GDC) 2. It confirms that the design meets the relevant requirements of SRP 9.1.5, Revision 1, with no exceptions or additional comments noted.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "244",
+      "hop": 3
+    },
+    "nuscale_ch01_0073": {
+      "node_id": "nuscale_ch01_0073",
+      "title": "Departures",
+      "summary": "This section outlines the interface requirements between the NuScale Power Plant’s certified design and the site-specific design provided in the Combined License (COL) application. It distinguishes between conceptual design information (CDI) for non-certified portions and COL information items, which are site-specific responsibilities of the COL applicant. Additionally, it requires COL applicants to provide a list of any departures from the certified design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "108",
+      "hop": 4
+    },
+    "nuscale_ch01_0738": {
+      "node_id": "nuscale_ch01_0738",
+      "title": "SRP 15.4.3, Rev 3: Control Rod Misoperation (System Malfunction or Operator Error)II.1 Thermal Margin Limits",
+      "summary": "This section summarizes NuScale’s compliance with regulatory criteria for control rod misoperation events, focusing on thermal margin limits. NuScale meets requirements by using appropriate heat generation rate limits and CHF (Critical Heat Flux) criteria to ensure fuel integrity, while some criteria are deemed not applicable due to differences in reactor design compared to traditional BWRs and PWRs. The guidance for certain accident scenarios is addressed in other sections specific to the NuScale reactor’s unique features.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "299",
+      "hop": 4
+    },
+    "nuscale_ch01_0632": {
+      "node_id": "nuscale_ch01_0632",
+      "title": "SRP 14.3.2, Rev 0: Structural and Systems Engineering - Inspections, Tests, Analyses, and Acceptance CriteriaAll Various",
+      "summary": "This section summarizes NuScale’s conformance with various regulatory criteria related to inspections, tests, analyses, and acceptance criteria (ITAAC) for structural and systems engineering. It details which regulatory requirements are fully, partially, or not applicable to the NuScale Design Certification Application (DCA) and Combined License (COL) applicants, noting that some criteria are only relevant for specific applicant types or situations. Methodologies for developing ITAAC are referenced as being provided in other SRP sections.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "284",
+      "hop": 4
+    },
+    "nuscale_ch01_0732": {
+      "node_id": "nuscale_ch01_0732",
+      "title": "SRP 15.4.1, Rev 3: Uncontrolled Control Rod Assembly Withdrawal From a Subcritical or Low Power Startup ConditionII.1.A Thermal Margin Limits",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for various reactor accident scenarios, highlighting that the NuScale design uses passive natural circulation, making some criteria for forced coolant flow inapplicable. For uncontrolled control rod withdrawal events, NuScale applies appropriate thermal margin limits and fuel temperature criteria, ensuring safety by using critical heat flux terminology and heat generation rate limits.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "298",
+      "hop": 4
+    },
+    "nuscale_ch01_0178": {
+      "node_id": "nuscale_ch01_0178",
+      "title": "DSRS 6.6, Rev. 0: Inservice Inspection and Testing of Class 2 and 3 ComponentsII.7 Structural Supports",
+      "summary": "This section confirms that the NuScale reactor design complies with the requirements for inservice inspection and testing of Class 2 and 3 components, including structural supports, as outlined in DSRS 6.6, Rev. 0. The design does not use ice condenser or pressure suppression pool systems, so related SRP criteria are not applicable. All relevant DSRS criteria for inspection, accessibility, examination methods, intervals, evaluation, pressure tests, and augmented ISI are met.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "230",
+      "hop": 4
+    },
+    "nuscale_ch01_0120": {
+      "node_id": "nuscale_ch01_0120",
+      "title": "1.8.2 Departures",
+      "summary": "Section 1.8.2 \"Departures\" states that any Combined License (COL) applicant referencing the NuScale Power Plant design certification must provide a list of departures from the certified design. This ensures that any differences between the certified design and the site-specific implementation are clearly identified and documented for regulatory review.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "108",
+      "hop": 4
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0000",
+      "target": "nuscale_ch01_0015",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.7,
+      "description": "Section A is the preface providing copyright and document control information for the reactor coolant system chapter, while Section B gives a general plant description summarizing design criteria and systems, with Section B providing context for the technical content that Section A introduces."
+    },
+    {
+      "source": "nuscale_ch05_0000",
+      "target": "nuscale_ch05_0017",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the document context and scope, while Section B details the requirement that operating procedures must ensure the reactor vessel's pressure-temperature limits (as specified in technical specifications) are not exceeded, directly connecting the design documentation to operational compliance."
+    },
+    {
+      "source": "nuscale_ch01_0072",
+      "target": "nuscale_ch01_0015",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references Section B by indicating that Section 1.2 (described in Section B) identifies the structures, systems, and components included in the certified design, which are relevant to the interface requirements discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0072",
+      "target": "nuscale_ch05_0017",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A outlines the interface requirements and identifies which components, such as the reactor pressure vessel (RPV), are included in the certified design, while Section B discusses the need for operating procedures to ensure the RPV operates within its design limits, connecting them through the regulatory requirement that site-specific procedures must align with the certified design's boundaries and specifications."
+    },
+    {
+      "source": "nuscale_ch01_0072",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A identifies the certified design boundaries and components, which includes the reactor vessel described in Section B, thereby establishing that the RPV in Section B falls within the scope defined in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch05_0017",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A provides the general plant design parameters and operating characteristics that establish the context and requirements for the reactor vessel, while Section B describes the procedures and compliance measures to ensure the reactor vessel operates within those specified limits."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch05_0014",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the plant's design criteria and operating characteristics, which set the context and requirements that Section B's detailed reactor vessel (RPV) design must satisfy to ensure adequate performance under those conditions."
+    },
+    {
+      "source": "nuscale_ch05_0017",
+      "target": "nuscale_ch05_0014",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the development of operating procedures to ensure that the reactor pressure vessel (RPV) operates within pressure-temperature limits, which are necessary to maintain the integrity of the RPV as described in Section B's general description of the RPV's function and structure."
+    },
+    {
+      "source": "nuscale_ch01_0706",
+      "target": "nuscale_ch05_0000",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria for fuel cladding integrity during specific transients, while Section B is the preface to the design certification application that contains the detailed plant and RPV design information needed to assess conformance with those criteria."
+    },
+    {
+      "source": "nuscale_ch01_0706",
+      "target": "nuscale_ch01_0072",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses the conformance of the RPV and related systems with regulatory criteria for specific transients, while Section B identifies which plant structures, systems, and components—including the RPV—are part of the certified design subject to those criteria, thus connecting the regulatory requirements to the specific design scope."
+    },
+    {
+      "source": "nuscale_ch01_0706",
+      "target": "nuscale_ch01_0015",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A references specific regulatory criteria for fuel cladding integrity under certain transients, while Section B provides the general plant description including principal design criteria and operating characteristics that are foundational for evaluating compliance with those criteria."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0000",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A specifies that the RPV is designed to comply with regulatory codes, while Section B is a preface providing context and copyright information for the document containing Section A."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch01_0072",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A asserts that the RPV and related components comply with regulatory codes (ASME BPVC, 10 CFR 50.55a), while Section B identifies which structures, systems, and components—including the RPV—are part of the certified design subject to those codes, thus connecting the scope of compliance to the specific plant elements."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch01_0015",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A states that the RPV and related components comply with specific regulatory codes, while Section B provides the general plant description including principal design criteria and operating characteristics that set the context for those regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch05_0000",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the integrity requirements for the reactor coolant pressure boundary, which is the subject matter introduced in Section B's preface to the chapter on the reactor coolant system and connecting systems."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch01_0072",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the integrity requirements and scope of the reactor coolant pressure boundary (RCPB), while Section B specifies which structures, systems, and components—including the RCPB—are part of the certified design subject to those requirements."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch01_0015",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A details the integrity requirements and boundaries for the reactor coolant pressure boundary, while Section B provides the general plant description including principal design criteria and operating characteristics that inform those integrity requirements."
+    },
+    {
+      "source": "nuscale_ch01_0709",
+      "target": "nuscale_ch05_0000",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria that the NuScale design must conform to, while Section B is the preface to the design certification application that contains the technical details and supporting documentation referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0709",
+      "target": "nuscale_ch01_0072",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria and conformance for plant system failures, while Section B specifies the interface requirements and identifies which structures, systems, and components (such as the RPV) are included in the certified design, thus Section B provides the scope and boundaries for the regulatory analysis discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0709",
+      "target": "nuscale_ch01_0015",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section B provides the general plant description and principal design criteria that form the basis for the regulatory conformance assessments detailed in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0000",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory compliance and code cases relevant to the design and construction of the reactor coolant boundary, which is the subject matter introduced in Section B's preface to Chapter Five on the Reactor Coolant System."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch01_0072",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A outlines the regulatory codes and standards (such as ASME BPVC and 10 CFR 50.55a) that the RPV design must comply with, while Section B defines the interface requirements and identifies which structures, systems, and components—including the RPV—are part of the certified design subject to those standards."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A specifies the regulatory codes and standards (ASME BPVC, 10 CFR 50.55a) that the RPV design must comply with, while Section B provides the general plant description including principal design criteria and operating characteristics that set the context for those requirements."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0000",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references specific sections and materials described elsewhere in the document, while Section B is the preface providing copyright and usage information for the entire chapter, thus Section A's content is structurally situated within the broader context established by Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch01_0072",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A details specific components and materials of the RPV and their documentation locations, while Section B outlines which structures, systems, and components (including the RPV) are part of the certified design and thus subject to the referenced requirements."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific details about the materials and components of the RPV and pressurizer, which are part of the broader plant systems generally described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0706",
+      "target": "nuscale_ch05_0008",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A discusses the plant's conformance with regulatory criteria for accident scenarios affecting fuel cladding integrity, while Section B specifies that the RPV is designed and constructed in compliance with ASME Code and 10 CFR 50.55a, thereby providing the regulatory basis that supports the adequacy of the RPV design for the operating conditions referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0706",
+      "target": "nuscale_ch05_0007",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses regulatory conformance for fuel cladding integrity during specific transient events, while Section B describes the design features that maintain the integrity of the reactor coolant pressure boundary, both of which are connected through the requirement that the RPV design must ensure safety under the operating and transient conditions described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0706",
+      "target": "nuscale_ch01_0709",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A and Section B both reference the same DSRS 15.2.1-15.2.5 regulatory criteria and NuScale FSAR conformance statements, but focus on different safety aspects (fuel cladding integrity in A, most limiting plant system single failure in B), thus they are structurally related by referencing the same regulatory basis while addressing different evaluation criteria."
+    },
+    {
+      "source": "nuscale_ch01_0706",
+      "target": "nuscale_ch05_0009",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the plant's conformance with regulatory criteria for operational events affecting fuel cladding integrity, while Section B details compliance with ASME and NRC overpressure protection requirements for the reactor coolant boundary, connecting them through the need for the RPV design to meet both operational safety and code-based integrity standards under specified conditions."
+    },
+    {
+      "source": "nuscale_ch01_0706",
+      "target": "nuscale_ch05_0025",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A outlines regulatory criteria for fuel cladding integrity during specific operational transients, while Section B provides detailed design information about the RPV and its components, which must be evaluated to determine if the RPV design satisfies the regulatory requirements described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0007",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A states that the RPV and associated components are designed and constructed in compliance with 10 CFR 50.55a and ASME BPVC Section III, which are the regulatory codes referenced in Section B's description of the integrity requirements for the reactor coolant pressure boundary (RCPB)."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch01_0709",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A states that the RPV is designed and constructed in compliance with ASME Code and 10 CFR 50.55a, which are regulatory requirements referenced in Section B's discussion of conformance with DSRS 15.2.1-15.2.5 accident scenarios."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0009",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A states that the RPV and associated components are designed and constructed in compliance with 10 CFR 50.55a and ASME BPVC Section III, while Section B elaborates on the specific provisions and code cases under 10 CFR 50.55a(b) and (z) that are applied, thus Section B provides further specification and detail to the general compliance claim in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B references Section A by directing the reader to Section 5.2 for material descriptions of the RPV upper shell and upper head, establishing a cross-reference for detailed compliance and material information."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch01_0709",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A describes the design features ensuring the integrity of the reactor coolant pressure boundary, which is a prerequisite for Section B's regulatory evaluation of system performance during postulated events such as turbine trip or loss of condenser vacuum."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch05_0009",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the design features ensuring the integrity of the reactor coolant pressure boundary, while Section B specifies the overpressure protection measures and code compliance that are part of maintaining that integrity, thus Section B provides detailed requirements that Section A must satisfy."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B references Section A by directing the reader to Section 5.2 for material descriptions of RPV components, establishing a cross-reference for detailed information."
+    },
+    {
+      "source": "nuscale_ch01_0709",
+      "target": "nuscale_ch05_0009",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the plant's conformance with regulatory criteria for specific transient events, while Section B details compliance with ASME and NRC overpressure protection requirements, both of which are connected through the need to ensure the reactor pressure vessel (RPV) integrity under design-basis conditions."
+    },
+    {
+      "source": "nuscale_ch01_0709",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A outlines regulatory requirements and accident scenarios that the RPV must withstand, while Section B provides specific design and material details of the RPV components relevant to demonstrating compliance with those requirements."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B references Section A for material descriptions of the RPV upper shell and upper head, indicating that the detailed material information in Section A supports the component descriptions in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0010",
+      "target": "nuscale_ch05_0000",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references Section B by indicating that details about RPV material conformance are provided in Section 5.3, which is part of the broader document introduced in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0010",
+      "target": "nuscale_ch01_0072",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A specifies that RPV materials conform to ASME and regulatory requirements, while Section B identifies which structures, systems, and components (including the RPV) are part of the certified design referenced in the analysis question, thus Section B provides the scope context for Section A's material compliance."
+    },
+    {
+      "source": "nuscale_ch05_0010",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A specifies that the RPV materials conform to ASME and regulatory requirements, while Section B provides the general plant description including principal design criteria and operating characteristics, thus Section A provides detailed material compliance information that supports the general design overview in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0159",
+      "target": "nuscale_ch05_0000",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A outlines regulatory requirements for environmental qualification of safety-related equipment, which Section B's preface introduces as the subject of the NuScale plant's design documentation that must conform to these requirements."
+    },
+    {
+      "source": "nuscale_ch01_0159",
+      "target": "nuscale_ch01_0072",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A outlines regulatory conformance for environmental qualification of safety-related equipment, while Section B specifies the interface requirements and boundaries for certified design components, connecting them through the identification and qualification of safety-related structures, systems, and components as required for licensing."
+    },
+    {
+      "source": "nuscale_ch01_0159",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A specifies regulatory requirements for environmental qualification and suitability of safety-related equipment, which Section B addresses at a high level by describing the plant's design features and safety systems that must conform to those requirements."
+    },
+    {
+      "source": "nuscale_ch01_0309",
+      "target": "nuscale_ch05_0000",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria and conformance statements that are applicable to the design and evaluation of systems like the RPV, while Section B is the preface to the NuScale plant design documentation where such design details (e.g., RPV design, plant parameters) are provided to demonstrate compliance with those criteria."
+    },
+    {
+      "source": "nuscale_ch01_0309",
+      "target": "nuscale_ch01_0072",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A specifies regulatory criteria and conformance requirements for plant systems, while Section B identifies the interface boundaries and components included in the certified design, connecting them by clarifying which systems and criteria from Section A apply to the certified design scope described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0309",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A lists specific regulatory criteria and conformance statements that the plant design must meet, while Section B provides the general plant description including principal design criteria and operating characteristics, thus Section B's general descriptions are specified in detail by Section A's regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0312",
+      "target": "nuscale_ch05_0000",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria and conformance statements that are relevant to the design and evaluation of plant systems, while Section B is the preface to the NuScale Design Certification Application, which contains the technical details and documentation that Section A's criteria would be applied to or evaluated against."
+    },
+    {
+      "source": "nuscale_ch01_0312",
+      "target": "nuscale_ch01_0072",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A specifies regulatory criteria and conformance requirements for heavy load handling and related systems, while Section B identifies the interface boundaries and components included in the certified design, connecting them by clarifying which structures and requirements are covered by the certified design versus those needing site-specific evaluation."
+    },
+    {
+      "source": "nuscale_ch01_0312",
+      "target": "nuscale_ch01_0015",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A specifies the regulatory criteria and conformance requirements that the RPV design (as described in Section B's general plant description) must satisfy to ensure adequate design for the stated operating conditions."
+    },
+    {
+      "source": "nuscale_ch05_0010",
+      "target": "nuscale_ch01_0159",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A states that the Reactor Coolant Pressure Boundary (RCPB) materials conform to ASME and regulatory requirements, while Section B confirms that the plant conforms to DSRS 3.11 requirements for environmental qualification and material suitability, thus Section A's material compliance supports Section B's regulatory conformance claims."
+    },
+    {
+      "source": "nuscale_ch05_0010",
+      "target": "nuscale_ch01_0309",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the conformance of RCPB materials (including the RPV) to ASME and regulatory requirements, while Section B lists the FSAR's conformance with specific regulatory criteria (such as GDC 2 and GDC 61), indicating that the design and material choices in Section A are intended to satisfy the regulatory requirements referenced in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0010",
+      "target": "nuscale_ch01_0312",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A specifies that the Reactor Coolant Pressure Boundary (RCPB) materials, including those for the Reactor Pressure Vessel (RPV), conform to ASME and regulatory requirements, which supports the regulatory conformance claims referenced in Section B regarding compliance with GDC 2 and related criteria."
+    },
+    {
+      "source": "nuscale_ch01_0159",
+      "target": "nuscale_ch01_0309",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A and Section B both document conformance with regulatory criteria for safety-related systems, but Section A focuses on environmental qualification of equipment while Section B addresses design criteria for handling systems and refueling cavity, with both sections supporting the overall regulatory compliance of plant systems relevant to the analysis question."
+    },
+    {
+      "source": "nuscale_ch01_0159",
+      "target": "nuscale_ch01_0312",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A and Section B both document conformance with regulatory criteria (such as GDC 2) for different safety-related systems, providing evidence that the plant's design (including the RPV and associated systems) meets the relevant regulatory requirements for environmental qualification and load handling, which together support the adequacy of the RPV design for operating conditions."
+    },
+    {
+      "source": "nuscale_ch01_0309",
+      "target": "nuscale_ch01_0312",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A and Section B both address conformance with specific criteria to meet GDC 2 for different handling systems, and each references the NuScale Final Safety Analysis Report's demonstration of compliance, thus connecting them through their evaluation of regulatory requirements for safety-related systems."
+    },
+    {
+      "source": "nuscale_ch01_0073",
+      "target": "nuscale_ch05_0000",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references the interface requirements and boundaries defined in the certified design, which are further detailed and elaborated upon in Section B's preface to Chapter Five, establishing the context for the RPV design analysis."
+    },
+    {
+      "source": "nuscale_ch01_0073",
+      "target": "nuscale_ch01_0015",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references Section B by indicating that Section 1.2 (described in Section B) identifies the structures, systems, and components included in the certified design, which Section A discusses in the context of interface requirements."
+    },
+    {
+      "source": "nuscale_ch01_0738",
+      "target": "nuscale_ch05_0000",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A discusses the conformance of the NuScale design with specific regulatory thermal margin limits, while Section B is the preface to the chapter containing the detailed technical design information (including RPV design and parameters) that Section A references for demonstrating compliance."
+    },
+    {
+      "source": "nuscale_ch01_0738",
+      "target": "nuscale_ch01_0072",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A discusses how the NuScale design conforms to specific SRP thermal margin and fuel integrity criteria, while Section B outlines the interface requirements and identifies which plant structures, systems, and components (such as the RPV) are part of the certified design referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0738",
+      "target": "nuscale_ch01_0015",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references specific regulatory criteria and how the NuScale design conforms to them, while Section B provides the general plant description that includes the principal design criteria and operating characteristics referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0632",
+      "target": "nuscale_ch05_0000",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references regulatory criteria and conformance requirements that must be met by the plant design described in Section B, establishing the regulatory framework within which the RPV design in Section B is evaluated."
+    },
+    {
+      "source": "nuscale_ch01_0632",
+      "target": "nuscale_ch01_0072",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A outlines the regulatory criteria and testing requirements for verifying plant structures and systems, while Section B specifies the interface requirements and identifies which structures, systems, and components (including the RPV) are part of the certified design subject to those criteria."
+    },
+    {
+      "source": "nuscale_ch01_0632",
+      "target": "nuscale_ch01_0015",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A references regulatory criteria and conformance for inspections, tests, and acceptance criteria that must be met by the plant described in Section B, which provides the general plant description including principal design criteria and operating characteristics."
+    },
+    {
+      "source": "nuscale_ch01_0732",
+      "target": "nuscale_ch05_0000",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria and safety analysis requirements that the RPV design in Section B must satisfy to ensure adequate design for operating conditions."
+    },
+    {
+      "source": "nuscale_ch01_0732",
+      "target": "nuscale_ch01_0072",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A references regulatory criteria and safety analysis requirements that the RPV design must satisfy, while Section B specifies the interface boundaries and identifies which plant structures, systems, and components (including the RPV) are part of the certified design subject to those criteria, thus connecting the regulatory requirements to the specific design scope."
+    },
+    {
+      "source": "nuscale_ch01_0732",
+      "target": "nuscale_ch01_0015",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A references specific regulatory requirements and criteria that the plant design, as generally described in Section B, must satisfy to ensure adequate safety margins and system performance under various conditions."
+    },
+    {
+      "source": "nuscale_ch01_0178",
+      "target": "nuscale_ch05_0000",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A references regulatory criteria and their applicability to the NuScale design, while Section B is the preface to the NuScale design documentation, indicating that Section A's discussion is contextually tied to the documentation introduced in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0178",
+      "target": "nuscale_ch01_0072",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses regulatory criteria that are not applicable to the NuScale design, while Section B describes how the certified design interfaces with site-specific elements, both referencing the scope and applicability of regulatory requirements to the plant design."
+    },
+    {
+      "source": "nuscale_ch01_0178",
+      "target": "nuscale_ch01_0015",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A references regulatory criteria and their applicability to the NuScale design, while Section B provides the general plant description that establishes the context for determining which regulatory criteria are relevant."
+    },
+    {
+      "source": "nuscale_ch01_0120",
+      "target": "nuscale_ch05_0000",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the interface requirements and boundaries between the certified plant design and site-specific design, while Section B is the preface to the chapter detailing the reactor coolant system, thus Section A sets the context for how Section B's technical content fits within the overall certified design framework."
+    },
+    {
+      "source": "nuscale_ch01_0120",
+      "target": "nuscale_ch01_0072",
+      "relation": "SEMANTIC",
+      "confidence": 0.95,
+      "description": "Section A and Section B both address the interface requirements between the certified design and the site-specific design in the COL application, with Section B essentially repeating or elaborating on the content of Section A, including references to the same figures and tables."
+    },
+    {
+      "source": "nuscale_ch01_0120",
+      "target": "nuscale_ch01_0015",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references Section B by indicating that Section 1.2 (described in Section B) identifies the structures, systems, and components included in the certified design, which is necessary for understanding the interface requirements discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0073",
+      "target": "nuscale_ch01_0738",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A identifies the certified design boundaries and included components (such as the RPV), while Section B specifies the regulatory thermal margin and fuel integrity criteria that the RPV design (as described in Section A) must satisfy."
+    },
+    {
+      "source": "nuscale_ch01_0073",
+      "target": "nuscale_ch01_0632",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A identifies the interface requirements and boundaries between the certified plant design and site-specific design, which must be addressed and verified through the inspections, tests, analyses, and acceptance criteria described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0073",
+      "target": "nuscale_ch01_0732",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A identifies the certified design boundaries and components, which must be evaluated against Section B's regulatory thermal margin limits to determine if the RPV design (as specified in Section A) satisfies the safety requirements outlined in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0073",
+      "target": "nuscale_ch01_0178",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A defines the interface requirements and boundaries for certified and site-specific plant design elements, which must be considered before applying the inservice inspection and testing regulatory criteria discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0073",
+      "target": "nuscale_ch01_0120",
+      "relation": "REFERENCES",
+      "confidence": 1.0,
+      "description": "Section A and Section B both address the interface requirements between the certified design and the site-specific design, referencing the same figures and tables to delineate boundaries and included components."
+    },
+    {
+      "source": "nuscale_ch01_0738",
+      "target": "nuscale_ch01_0632",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses the thermal margin limits and fuel/cladding safety criteria that the RPV design must satisfy, while Section B outlines the inspections, tests, and acceptance criteria that verify whether the RPV and related systems meet these safety and design requirements, thus Section B provides the verification process for the criteria established in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0738",
+      "target": "nuscale_ch01_0732",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A and Section B both address thermal margin limits and conformance with regulatory criteria for control rod misoperation scenarios, with Section A referencing specific SRP requirements for thermal margins and Section B referencing similar SRP requirements for uncontrolled control rod withdrawal, thus both sections are connected through their evaluation of compliance with thermal margin regulatory limits under different but related accident scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0738",
+      "target": "nuscale_ch01_0178",
+      "relation": "SEMANTIC",
+      "confidence": 0.6,
+      "description": "Section A discusses thermal margin limits and fuel/cladding integrity criteria for control rod misoperation events, while Section B addresses inservice inspection and structural support requirements for Class 2 and 3 components, with both sections referencing NuScale FSAR conformance to regulatory criteria but focusing on different aspects of reactor safety; thus, they are related only in that they both pertain to regulatory compliance for different systems/components."
+    },
+    {
+      "source": "nuscale_ch01_0738",
+      "target": "nuscale_ch01_0120",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A discusses how the NuScale design conforms to specific SRP thermal margin and fuel integrity criteria, while Section B outlines the interface requirements and boundaries between the certified design (including the RPV) and site-specific elements, connecting them through the identification of which plant parameters and components (such as the RPV) are governed by certified design requirements."
+    },
+    {
+      "source": "nuscale_ch01_0632",
+      "target": "nuscale_ch01_0732",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A outlines the inspection, testing, and acceptance criteria for structural and systems engineering, which must be satisfied to demonstrate that the RPV design in Section B meets the thermal margin limits and safety requirements for postulated events."
+    },
+    {
+      "source": "nuscale_ch01_0632",
+      "target": "nuscale_ch01_0178",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A outlines the inspection, testing, and acceptance criteria for structural and systems engineering, which must be satisfied before the inservice inspection and testing requirements for Class 2 and 3 components described in Section B can be applied."
+    },
+    {
+      "source": "nuscale_ch01_0632",
+      "target": "nuscale_ch01_0120",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria and conformance for inspections, tests, and acceptance criteria that must be met by the certified design, while Section B specifies the interface requirements and boundaries between the certified design (including the RPV) and site-specific design, connecting them through the definition of what is included in the certified design subject to those criteria."
+    },
+    {
+      "source": "nuscale_ch01_0732",
+      "target": "nuscale_ch01_0178",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A outlines regulatory requirements and conformance for thermal margin limits and system responses relevant to RPV operating conditions, while Section B addresses inservice inspection and structural support criteria for Class 2 and 3 components, both contributing to the overall assessment of whether the RPV design and its support systems meet regulatory expectations for safe operation."
+    },
+    {
+      "source": "nuscale_ch01_0732",
+      "target": "nuscale_ch01_0120",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria and conformance for plant safety analysis, while Section B specifies the interface requirements and boundaries for the certified design, meaning Section B provides the context and scope for what Section A's regulatory evaluations apply to."
+    },
+    {
+      "source": "nuscale_ch01_0178",
+      "target": "nuscale_ch01_0120",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria and their applicability to the NuScale design, while Section B specifies the interface requirements and identifies which structures, systems, and components (including the RPV) are part of the certified design, thus clarifying the scope to which the regulatory criteria in Section A apply."
+    }
+  ]
+}

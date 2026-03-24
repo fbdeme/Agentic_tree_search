@@ -1,146 +1,305 @@
 {
-  "question": "How is the reactor coolant circulation conducted in the NuScale NPM?",
+  "question": "What thermodynamic cycle does the NuScale plant use for power conversion?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0006": {
-      "node_id": "nuscale_ch05_0006",
-      "title": "System Evaluation",
-      "summary": "This section describes the evaluation of the NuScale Power Plant's system performance, focusing on optimizing steady-state parameters such as coolant temperatures, flow rates, and pressure to maximize electrical generation and maintain safety margins. Calculations using thermal hydraulic software and hand verification account for uncertainties and ensure the natural circulation design is effective, with low pressure losses and robust performance across different operating conditions.",
+    "nuscale_ch01_0439": {
+      "node_id": "nuscale_ch01_0439",
+      "title": "SRP 10.4.6, Rev 3: Condensate Cleanup SystemII.2 Maintain indirect cycle PWR water quality to avoid corrosion-induced failure of the reactor coolant pressure boundary (GDC 14)",
+      "summary": "The section outlines NuScale's conformance with regulatory criteria for maintaining indirect cycle PWR water quality to prevent corrosion-induced failure of the reactor coolant pressure boundary, as required by GDC 14. It notes that the NuScale steam generator design places primary water outside the tubes and secondary water inside, with no steam generator blowdown, resulting in secondary chemistry requirements that differ from standard guidelines.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "12",
+      "source_doc": "nuscale_ch01",
+      "page_range": "263",
       "hop": 1
     },
-    "nuscale_ch05_0003": {
-      "node_id": "nuscale_ch05_0003",
-      "title": "Design Basis",
-      "summary": "The Design Basis section describes the NuScale reactor coolant system (RCS), which uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator. The RCS is designed to ensure safe and efficient cooling, maintain water chemistry, and provide uniform boron concentration under all operating conditions, thereby protecting fuel integrity during normal and off-normal events.",
+    "nuscale_ch01_0029": {
+      "node_id": "nuscale_ch01_0029",
+      "title": "Power Conversion System",
+      "summary": "The Power Conversion System in the NuScale plant includes a main steam system, turbine generator, condenser, cooling tower, and condensate/feedwater system, allowing flexible operation of multiple NPMs for grid demand and maintenance. The plant also features dedicated systems for fuel handling, storage, and various cooling needs, including closed-loop and open-loop systems to support safe and efficient operation.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "8",
+      "source_doc": "nuscale_ch01",
+      "page_range": "35",
       "hop": 1
     },
-    "nuscale_ch05_0002": {
-      "node_id": "nuscale_ch05_0002",
-      "title": "Summary Description",
-      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve independent modules, maintains proper coolant chemistry and boron concentration, and is engineered to prevent fuel design limit violations during all operational conditions.",
+    "nuscale_ch01_0438": {
+      "node_id": "nuscale_ch01_0438",
+      "title": "SRP 10.4.6, Rev 3: Condensate Cleanup SystemII.1 Maintain direct cycle BWR plant water quality to avoid corrosion-induced failure of the reactor coolant pressure boundary (GDC 14)",
+      "summary": "This section summarizes NuScale’s conformance with various regulatory criteria for systems related to condensate cleanup and associated components. It notes that certain requirements are not applicable to NuScale’s design (e.g., those specific to BWRs or Class 2/3 components), while for applicable criteria, such as maintaining indirect cycle PWR water quality, NuScale’s design conforms but with differences in secondary chemistry requirements due to its unique steam generator configuration.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "8",
+      "source_doc": "nuscale_ch01",
+      "page_range": "263",
       "hop": 1
     },
-    "nuscale_ch05_0005": {
-      "node_id": "nuscale_ch05_0005",
-      "title": "System Components",
-      "summary": "This section describes the main components of the NuScale reactor system, focusing on the Reactor Pressure Vessel (RPV), Reactor Coolant System (RCS) piping, and the Pressurizer (PZR). The RPV serves as a primary barrier to fission product release and houses key reactor internals, while the RCS piping connects various system components and the PZR is integrated into the RPV to help control system pressure. Each component's functions and connections are briefly outlined, with references to further detailed sections.",
+    "nuscale_ch01_0030": {
+      "node_id": "nuscale_ch01_0030",
+      "title": "Fuel Handling and Storage Systems",
+      "summary": "The fuel handling and storage systems are located in the west end of the reactor building and include areas for the spent fuel pool, refueling pool, and dry dock. These facilities support safe storage and handling of nuclear fuel during refueling and maintenance operations.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "10",
+      "source_doc": "nuscale_ch01",
+      "page_range": "35",
       "hop": 1
     },
-    "nuscale_ch05_0024": {
-      "node_id": "nuscale_ch05_0024",
-      "title": "Pressurizer",
-      "summary": "The pressurizer in the NuScale reactor is integrated into the upper region of the reactor vessel and functions to regulate reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering reactor trips or safety system actuations, with instrumentation providing continuous monitoring and control.",
+    "nuscale_ch01_0415": {
+      "node_id": "nuscale_ch01_0415",
+      "title": "SRP 10.2, Rev 3: Turbine GeneratorII.1 Protect SSC important to safety from the effects of turbine missiles with a turbine overspeed protection system (GDC 4)",
+      "summary": "The NuScale plant design does not include or require safety-related emergency diesel generators, and therefore the associated systems (fuel oil storage, cooling water, starting, lubrication, and air intake/exhaust) and their regulatory criteria are not applicable. The plant’s safety functions do not rely on AC or DC power, making these SRP sections irrelevant to NuScale’s design.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "124",
-      "hop": 2
+      "source_doc": "nuscale_ch01",
+      "page_range": "260",
+      "hop": 3
     },
-    "nuscale_ch05_0023": {
-      "node_id": "nuscale_ch05_0023",
-      "title": "Reactor Coolant System High-Point Vents",
-      "summary": "This section outlines the testing and inspection requirements for the Reactor Coolant System’s DHRS (Decay Heat Removal System) components, ensuring compliance with ASME codes for Class 2 components. It specifies that DHRS actuation valves are exercised during cold shutdown conditions, with additional testing for valve position and actuator power, and includes a one-time in-situ test of the DHRS function during initial startup of the first reactor module.",
+    "nuscale_ch01_0188": {
+      "node_id": "nuscale_ch01_0188",
+      "title": "BTP 6-1, (March 2007): pH for Emergency Coolant Water for Pressurized Water ReactorsB.3 Hydrogen Generation from Aluminum Corrosion",
+      "summary": "The section reviews NuScale's conformance with regulatory criteria regarding pH control and hydrogen generation from aluminum corrosion in emergency coolant water for pressurized water reactors. While NuScale's design lacks certain systems referenced in the criteria (such as a containment spray system or sump), the intent of the guidelines is still met due to the collection and recirculation of ECCS water within the containment vessel. Some criteria, such as those related to minimum containment pressure and dual containment leakage, are deemed not applicable to the NuScale design.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "121",
-      "hop": 2
+      "source_doc": "nuscale_ch01",
+      "page_range": "232",
+      "hop": 3
+    },
+    "nuscale_ch01_0046": {
+      "node_id": "nuscale_ch01_0046",
+      "title": "Turbine Generator Building",
+      "summary": "The Turbine Generator Buildings (TGBs) in a NuScale Power Plant are nonsafety-related structures, each housing six turbine generator sets, their auxiliaries, condensers, condensate systems, and feedwater systems. These buildings also include laydown areas and overhead cranes to facilitate installation and maintenance activities.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "42",
+      "hop": 3
+    },
+    "nuscale_ch01_0186": {
+      "node_id": "nuscale_ch01_0186",
+      "title": "BTP 6-1, (March 2007): pH for Emergency Coolant Water for Pressurized Water ReactorsB.1 Minimum pH for Emergency Coolant Water",
+      "summary": "This section discusses NuScale’s conformance with regulatory criteria regarding the minimum pH requirements for emergency coolant water in pressurized water reactors. While certain aspects of the referenced guidance (BTP 6-1) do not directly apply due to differences in NuScale’s design—such as the absence of a containment spray system or sump—the intent of the pH acceptance criterion remains applicable because emergency coolant water is still collected and recirculated within the containment vessel.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "231",
+      "hop": 3
+    },
+    "nuscale_ch01_0705": {
+      "node_id": "nuscale_ch01_0705",
+      "title": "DSRS 15.2.1-15.2.5, Rev 0: Loss of External Load; Turbine Trip; Loss of Condenser Vacuum; Closure of Main Steam Isolation Valve; and Steam Pressure Regulator Failure (Closed)II.2.A Reactor Coolant System and Main Steam System Pressures",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for various transient events affecting the reactor coolant and main steam system pressures, such as loss of external load, turbine trip, loss of condenser vacuum, main steam isolation valve closure, and steam pressure regulator failure. The NuScale design generally conforms to the requirements, except for partial conformance regarding the steam pressure regulator, as the design does not include this component. Analytical parameters and objectives for these events are addressed, with no significant deviations noted except where the design differs from conventional systems.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "294",
+      "hop": 3
+    },
+    "nuscale_ch01_0710": {
+      "node_id": "nuscale_ch01_0710",
+      "title": "DSRS 15.2.1-15.2.5, Rev 0: Loss of External Load; Turbine Trip; Loss of Condenser Vacuum; Closure of Main Steam Isolation Valve; and Steam Pressure Regulator Failure (Closed)II.2.F Performance of Nonsafety-Related Systems and Single Failures of Active and Passive Systems",
+      "summary": "The section confirms that the NuScale design meets regulatory criteria for events such as loss of external load, turbine trip, loss of condenser vacuum, main steam isolation valve closure, and steam pressure regulator failure (closed), although the design does not include a steam pressure regulator. It states that the performance of nonsafety-related systems and single failures of both active and passive systems conform to requirements, with no exceptions noted. The analytical model used for these evaluations also conforms to the standards.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "295",
+      "hop": 3
+    },
+    "nuscale_ch01_0447": {
+      "node_id": "nuscale_ch01_0447",
+      "title": "SRP 10.4.8, Rev 3: Steam Generator Blowdown SystemAll Various",
+      "summary": "The section summarizes NuScale’s conformance with regulatory criteria for various systems, noting that the NuScale steam generator design does not use a blowdown system, making SRP 10.4.8 not applicable. It also highlights that certain criteria and guidance intended for large LWRs are not relevant to NuScale’s design, and that other systems, such as the auxiliary feedwater system, are replaced by functionally different systems in NuScale’s plant.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "264",
+      "hop": 4
+    },
+    "nuscale_ch01_0441": {
+      "node_id": "nuscale_ch01_0441",
+      "title": "DSRS 10.4.7, Rev 0: Condensate and Feedwater SystemII.2 Fluid Instabilities (GDC 4)",
+      "summary": "The section reviews NuScale’s conformance with regulatory criteria for the Condensate and Feedwater System, noting partial compliance with fluid instability requirements (GDC 4) due to differences from large LWR designs. Several criteria, including heat removal capability, inspection, and testing, are deemed not applicable because the system does not transfer heat to an ultimate heat sink. Additionally, NuScale’s design does not use a steam generator blowdown or auxiliary feedwater system, with the DHRS serving a similar but distinct function.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "264",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0006",
-      "target": "nuscale_ch05_0003",
-      "relation": "IS_PREREQUISITE_OF",
+      "source": "nuscale_ch01_0439",
+      "target": "nuscale_ch01_0029",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section B describes the components and arrangement of the NuScale plant's power conversion system, which Section A references in the context of regulatory criteria for systems such as condensate cleanup and main condensers, thereby connecting the design implementation (B) to the regulatory requirements (A) for the thermodynamic cycle."
+    },
+    {
+      "source": "nuscale_ch01_0439",
+      "target": "nuscale_ch01_0438",
+      "relation": "CONTRADICTS",
       "confidence": 0.95,
-      "description": "Section B describes the design basis that the NuScale NPM relies on natural circulation for reactor coolant flow, while Section A evaluates system performance based on these established design parameters."
+      "description": "Section A references maintaining water quality for an indirect cycle PWR, while Section B references maintaining water quality for a direct cycle BWR, thus contrasting the thermodynamic cycles relevant to the NuScale plant's regulatory conformance."
     },
     {
-      "source": "nuscale_ch05_0006",
-      "target": "nuscale_ch05_0002",
+      "source": "nuscale_ch01_0439",
+      "target": "nuscale_ch01_0030",
       "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section B provides a general overview stating that the NuScale NPM uses natural circulation for reactor coolant flow, while Section A discusses how system parameters are optimized within this natural circulation framework to achieve optimal performance."
+      "confidence": 0.85,
+      "description": "Section B describes the components of the NuScale power conversion system, which Section A references in the context of regulatory criteria for systems such as the condensate cleanup and main condenser, thus Section B provides the specific system details that Section A's regulatory requirements apply to."
     },
     {
-      "source": "nuscale_ch05_0006",
-      "target": "nuscale_ch05_0005",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A discusses the evaluation of system performance parameters for reactor coolant circulation, while Section B details specific operational steps and component actions (such as isolation of SGs and pressure adjustments) that implement and affect the coolant circulation described in Section A."
+      "source": "nuscale_ch01_0029",
+      "target": "nuscale_ch01_0438",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the components of the NuScale plant's power conversion system, which include a main steam system, turbine generator, condenser, and cooling tower, while Section B lists regulatory requirements and conformance statements for similar systems, indicating that the described system in Section A is intended to meet the regulatory expectations outlined in Section B."
     },
     {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch05_0005",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes the overall design principle of the NuScale NPM reactor coolant system relying on natural circulation, while Section B details specific operational steps and component actions (such as isolation of steam generators and pressurizer water level adjustments) that implement and support this circulation method."
+      "source": "nuscale_ch01_0029",
+      "target": "nuscale_ch01_0030",
+      "relation": "SEMANTIC",
+      "confidence": 1.0,
+      "description": "Section A and Section B are identical excerpts describing the components of the NuScale power conversion system, both providing information relevant to identifying the thermodynamic cycle used for power conversion."
     },
     {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch05_0005",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general overview of the reactor coolant system's reliance on natural circulation, while Section B details specific operational steps and components involved in managing coolant and pressure within that system, thus specifying how the general process described in A is implemented."
+      "source": "nuscale_ch01_0438",
+      "target": "nuscale_ch01_0030",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section B describes the components of the NuScale plant's power conversion system, which Section A references in the context of regulatory criteria for systems such as condensate cleanup and main condensers, thereby connecting the plant's design features to regulatory requirements."
     },
     {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0006",
+      "source": "nuscale_ch01_0415",
+      "target": "nuscale_ch01_0439",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A and Section B both reference NuScale's conformance with SRP chapters related to power conversion system components (e.g., turbine generator, condensate cleanup, main condenser), indicating the plant uses an indirect (Rankine) cycle typical of PWRs."
+    },
+    {
+      "source": "nuscale_ch01_0415",
+      "target": "nuscale_ch01_0438",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A and Section B both reference NuScale's conformance with SRP chapters related to power conversion system components, but neither section directly identifies the thermodynamic cycle used, instead focusing on regulatory compliance for specific subsystems."
+    },
+    {
+      "source": "nuscale_ch01_0188",
+      "target": "nuscale_ch01_0438",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses emergency coolant water chemistry requirements for pressurized water reactors, while Section B references regulatory criteria for condensate cleanup and main condenser systems, both of which are relevant to the thermodynamic cycle used in the NuScale plant by indicating the presence of a steam cycle (Rankine cycle) rather than a direct cycle BWR."
+    },
+    {
+      "source": "nuscale_ch01_0046",
+      "target": "nuscale_ch01_0439",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A describes the pressurizer's role in maintaining pressure equilibrium within the reactor coolant system, while Section B discusses the evaluation of system parameters (including coolant circulation) to optimize plant performance, connecting them through the operational requirements and design considerations for effective coolant circulation."
+      "description": "Section B references regulatory requirements for systems (e.g., main condenser, condensate cleanup) that are characteristic of an indirect (Rankine) cycle PWR, which is the thermodynamic cycle implied by the plant systems described in Section A."
     },
     {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0003",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes the pressurizer as an integral component of the reactor vessel that interacts with the naturally circulating reactor coolant, while Section B provides the overall design basis stating that the NuScale NPM relies on natural circulation for reactor coolant flow and includes the pressurizer as part of the RCS."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0002",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes the pressurizer as an integral component of the reactor vessel that interacts with the naturally circulating reactor coolant, while Section B provides a general overview of the reactor coolant system, specifying that it relies on natural circulation and includes the pressurizer as a subsystem component."
-    },
-    {
-      "source": "nuscale_ch05_0023",
-      "target": "nuscale_ch05_0006",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A details inspection and classification requirements for DHRS components, while Section B explains the functional connection of the DHRS to the steam and feed piping for decay heat removal, linking the design and operational aspects of the reactor coolant circulation."
-    },
-    {
-      "source": "nuscale_ch05_0023",
-      "target": "nuscale_ch05_0003",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section B describes the fundamental method of reactor coolant circulation (natural circulation without pumps) in the NuScale NPM, while Section A details inspection and testing requirements for components (such as DHRS valves) that are part of the systems supporting or connected to the reactor coolant system."
-    },
-    {
-      "source": "nuscale_ch05_0023",
-      "target": "nuscale_ch05_0002",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section B describes the overall method of reactor coolant circulation in the NuScale NPM (natural circulation without pumps), while Section A details inspection and classification requirements for components (such as valves) within the systems that support or interact with this circulation, thus providing specific implementation details for the general system described in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0023",
+      "source": "nuscale_ch01_0046",
+      "target": "nuscale_ch01_0438",
       "relation": "SUPPORTS",
       "confidence": 0.7,
-      "description": "Section A describes the pressurizer's role in maintaining pressure and facilitating coolant flow within the reactor vessel, while Section B outlines inspection requirements for high-point vents and related components, both of which are integral to ensuring proper reactor coolant circulation and system integrity."
+      "description": "Section A describes the startup and coolant processes in the NuScale plant, while Section B lists regulatory criteria and conformance statements for various power conversion system components, indicating that Section A's operational details are relevant to demonstrating compliance with Section B's regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0705",
+      "target": "nuscale_ch01_0439",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section B references the use of an indirect cycle PWR (pressurized water reactor) for water quality maintenance, which supports the inference from Section A's discussion of main steam and reactor coolant systems that the NuScale plant uses an indirect (Rankine) thermodynamic cycle for power conversion."
+    },
+    {
+      "source": "nuscale_ch01_0705",
+      "target": "nuscale_ch01_0029",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes the components and configuration of the NuScale plant's power conversion system, which provides the technical basis for the operational scenarios and pressure analyses discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0705",
+      "target": "nuscale_ch01_0438",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the reactor coolant and main steam system pressures during various transients, while Section B references the condensate cleanup system and main condenser systems, both of which are components relevant to the thermodynamic (Rankine) cycle used for power conversion in the NuScale plant."
+    },
+    {
+      "source": "nuscale_ch01_0710",
+      "target": "nuscale_ch01_0439",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses operational events and system responses in the NuScale plant, referencing components like the turbine and condenser, while Section B details the supporting systems (e.g., condensate cleanup, main condenser) that are integral to the indirect (Rankine) cycle used for power conversion, thus both sections provide information about the systems and components that define and support the plant's thermodynamic cycle."
+    },
+    {
+      "source": "nuscale_ch01_0710",
+      "target": "nuscale_ch01_0029",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes the components of the NuScale plant's power conversion system, which provides the technical basis for identifying the thermodynamic cycle used, while Section A discusses safety analysis scenarios that assume the existence and operation of this power conversion system."
+    },
+    {
+      "source": "nuscale_ch01_0710",
+      "target": "nuscale_ch01_0438",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses NuScale's response to turbine and condenser-related transients, while Section B describes systems (main condenser, condensate cleanup) that are integral to a Rankine steam cycle, thus both sections provide information about the plant's use of a steam-based thermodynamic cycle for power conversion."
+    },
+    {
+      "source": "nuscale_ch01_0415",
+      "target": "nuscale_ch01_0710",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A and Section B both reference the NuScale plant's conformance with regulatory criteria for turbine and power conversion system events, but neither directly specifies the thermodynamic cycle used for power conversion, instead focusing on safety and system response requirements."
+    },
+    {
+      "source": "nuscale_ch01_0188",
+      "target": "nuscale_ch01_0186",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A discusses the NuScale plant's partial conformance with BTP 6-1 requirements due to differences in system design, while Section B outlines the minimum pH requirements from BTP 6-1 that Section A references and addresses."
+    },
+    {
+      "source": "nuscale_ch01_0046",
+      "target": "nuscale_ch01_0710",
+      "relation": "SEMANTIC",
+      "confidence": 0.6,
+      "description": "Section A describes operational aspects of the NuScale plant's reactor coolant and startup process, while Section B discusses the plant's response to turbine and steam system transients, both referencing systems involved in the power conversion process but neither explicitly identifies the thermodynamic cycle used."
+    },
+    {
+      "source": "nuscale_ch01_0705",
+      "target": "nuscale_ch01_0710",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A and Section B both address the NuScale plant's response to turbine and steam system transients, with Section A focusing on system pressures and analytical parameters, while Section B discusses system performance and fuel cladding integrity under the same event scenarios, thus both sections provide complementary technical details for the same set of power conversion-related events."
+    },
+    {
+      "source": "nuscale_ch01_0447",
+      "target": "nuscale_ch01_0439",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A and Section B both reference subsystems (steam generator blowdown, condensate cleanup, main condenser) that are components of an indirect (Rankine) thermodynamic cycle, indicating that the NuScale plant uses such a cycle for power conversion."
+    },
+    {
+      "source": "nuscale_ch01_0447",
+      "target": "nuscale_ch01_0438",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A and Section B both reference NuScale's conformance with regulatory criteria for secondary-side systems (e.g., steam generator blowdown, condensate cleanup, main condenser), which are components typically associated with a Rankine thermodynamic cycle, thus both sections provide supporting evidence about the type of power conversion cycle used in the NuScale plant."
+    },
+    {
+      "source": "nuscale_ch01_0441",
+      "target": "nuscale_ch01_0439",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A and Section B both discuss subsystems (condensate, feedwater, and cleanup) that are components of the NuScale plant's power conversion cycle, providing regulatory context for their design and operation."
+    },
+    {
+      "source": "nuscale_ch01_0441",
+      "target": "nuscale_ch01_0029",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B describes the components of the NuScale plant's power conversion system, including the condensate and feedwater system, which Section A discusses in the context of regulatory conformance and fluid instability protection."
+    },
+    {
+      "source": "nuscale_ch01_0441",
+      "target": "nuscale_ch01_0438",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A and Section B both discuss NuScale's conformance with regulatory criteria for secondary-side systems (condensate, feedwater, and cleanup), but neither directly identifies the thermodynamic cycle used, instead focusing on system-specific safety and material requirements."
+    },
+    {
+      "source": "nuscale_ch01_0447",
+      "target": "nuscale_ch01_0441",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references Section B by citing the same DSRS 10.4.7, Rev 0: Condensate and Feedwater System II.2 Fluid Instabilities (GDC 4) content to discuss NuScale's conformance with regulatory criteria."
     }
   ]
 }

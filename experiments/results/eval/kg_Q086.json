@@ -1,169 +1,250 @@
 {
-  "question": "Explain NuScale's safety design philosophy.",
+  "question": "Compare the NuScale DHRS passive cooling mechanism with conventional auxiliary feedwater systems.",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0086": {
-      "node_id": "nuscale_ch01_0086",
-      "title": "8.10 Operating Philosophy for Maintaining Occupational Radiation Exposures as Low as Is Reasonably Achievable",
-      "summary": "Section 8.10 states that the operating philosophy for maintaining occupational radiation exposures as low as is reasonably achievable (ALARA) is considered a site-specific responsibility. The NuScale standard design does not directly address this guidance, as it is to be implemented by the COL applicant or licensee at each site.",
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes key components such as the reactor pressure vessel, pressurizer, and associated piping and controls. It removes heat from the reactor core to the steam generators using natural circulation, and features systems for removing noncondensible gases and maintaining pressure boundary integrity to prevent radionuclide release. The RCS interfaces with several other systems, including emergency core cooling and chemical control systems, to ensure safe and efficient operation.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "170",
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
       "hop": 1
     },
-    "nuscale_ch01_0852": {
-      "node_id": "nuscale_ch01_0852",
-      "title": "SRP Appendix 18-A, Rev 0: Crediting Manual Operator Actions in Diversity and Defense-in-Depth (D3) AnalysesC.1.B Review Criteria for Phase 1 (Analysis)",
-      "summary": "This section summarizes the NuScale Final Safety Analysis Report’s conformance with regulatory criteria regarding the crediting of manual operator actions in Diversity and Defense-in-Depth (D3) analyses, as outlined in SRP Appendix 18-A, Rev 0. It confirms that NuScale’s approach aligns with the updated review criteria for all phases of D3 analysis, superseding previous guidance, while noting that certain aspects of probabilistic risk assessment remain the responsibility of the COL applicant.",
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the NuScale pressurizer, including low alloy steel for the baffle plate with stainless steel and nickel-based cladding for corrosion protection, and specifies the use of corrosion-resistant alloys for heater bundles, cover plates, and bolting. All materials are selected for compatibility with operating environments and comply with relevant BPVC Section II specifications.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "322",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
       "hop": 1
     },
-    "nuscale_ch01_0853": {
-      "node_id": "nuscale_ch01_0853",
-      "title": "SRP Appendix 18-A, Rev 0: Crediting Manual Operator Actions in Diversity and Defense-in-Depth (D3) AnalysesC.2.B Review Criteria for Phase 2 (Preliminary Validation)",
-      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for crediting manual operator actions in Diversity and Defense-in-Depth (D3) analyses, as outlined in SRP Appendix 18-A, Rev 0. It confirms that NuScale meets the review criteria for all phases (analysis, preliminary validation, integrated system validation, and long-term integrity), superseding previous guidance, while noting that certain aspects of probabilistic risk assessment (PRA) are the responsibility of the COL applicant.",
+    "nuscale_ch05_0005": {
+      "node_id": "nuscale_ch05_0005",
+      "title": "System Components",
+      "summary": "This section describes key components of the NuScale reactor system. It details the Reactor Pressure Vessel (RPV) as the main barrier containing the reactor core and coolant, supporting various internal systems and providing necessary penetrations for instrumentation and safety systems. It also outlines the main Reactor Coolant System (RCS) piping and the integral pressurizer (PZR), highlighting their roles in system operation and safety.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "322",
+      "source_doc": "nuscale_ch05",
+      "page_range": "10",
       "hop": 1
     },
-    "nuscale_ch01_0025": {
-      "node_id": "nuscale_ch01_0025",
-      "title": "Control Room Habitability System",
-      "summary": "The Control Room Habitability System (CRHS) is a passive safety feature designed to protect plant operators from accidental releases of toxic or radioactive gases by supplying clean, compressed air to the main control room (MCR), even during power loss. The system maintains positive pressure in protected areas and has enough air storage to support the MCR for at least 72 hours after an incident.",
+    "nuscale_ch05_0022": {
+      "node_id": "nuscale_ch05_0022",
+      "title": "Decay Heat Removal System",
+      "summary": "The Decay Heat Removal System (DHRS) is an engineered safety feature designed to remove residual and core decay heat from the reactor after shutdown, especially when normal cooling is unavailable, without relying on external power. It ensures the reactor coolant system temperature drops below 420°F within 36 hours, maintaining fuel and pressure boundary safety limits, and its reliability and risk significance are evaluated through established programs. The DHRS operates independently of the Emergency Core Cooling System (ECCS), but both can function together if needed.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "33",
+      "source_doc": "nuscale_ch05",
+      "page_range": "106",
       "hop": 1
     },
-    "nuscale_ch01_0807": {
-      "node_id": "nuscale_ch01_0807",
-      "title": "DSRS 15.9.A, Rev 0: Thermal Hydraulic Stability Review ResponsibilitiesII.1 No requirements - null.",
-      "summary": "This section reviews NuScale’s conformance with regulatory criteria related to anticipated transients without scram (ATWS) and thermal hydraulic stability. The NuScale design partially or fully meets requirements by relying on internal diversity within its module protection system (MPS) rather than a separate diverse scram system, and it conforms to GDC 12 for thermal hydraulic stability. Some requirements are not applicable due to the unique features of the NuScale design.",
+    "nuscale_ch05_0019": {
+      "node_id": "nuscale_ch05_0019",
+      "title": "Reactor Coolant System Component and Subsystem Design",
+      "summary": "This section describes the design of the NuScale Power Module’s Reactor Coolant System (RCS) components and subsystems, including the reactor pressure vessel, steam generators, safety and emergency cooling valves, and associated piping. It details how the steam generators are integrated within the reactor vessel, forming part of the primary and secondary pressure boundaries, and references other sections for further design specifics of key components.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "314",
-      "hop": 4
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
+      "hop": 2
     },
-    "nuscale_ch01_0087": {
-      "node_id": "nuscale_ch01_0087",
-      "title": "8.11 Applications of Bioassay for Uranium",
-      "summary": "Section 8.11 discusses the application of bioassay for uranium, noting that most related regulatory guidance is site-specific and falls under the responsibility of the Combined Operating License (COL) applicant or licensee. The NuScale standard design certification only partially addresses requirements related to ensuring occupational radiation exposures are as low as reasonably achievable, with design-specific aspects incorporated as applicable.",
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain fuel integrity, minimize solid deposits, and ensure uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "170",
-      "hop": 4
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 2
     },
-    "nuscale_ch01_0803": {
-      "node_id": "nuscale_ch01_0803",
-      "title": "SRP 15.8, Rev 2: Anticipated Transients without ScramII.3.A.i Provide a diverse scram system",
-      "summary": "The NuScale design partially conforms to SRP 15.8, Rev 2 requirements for Anticipated Transients Without Scram (ATWS) by relying on internal diversity within the Module Protection System (MPS) rather than a separate diverse scram system. This approach is considered to meet the intent of the ATWS rule, although some criteria are not applicable or only partially met due to the unique features of the NuScale design.",
+    "nuscale_ch05_0002": {
+      "node_id": "nuscale_ch05_0002",
+      "title": "Summary Description",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation, eliminating the need for pumps and external piping, and is integrated within each NuScale Power Module (NPM). The RCS is designed to safely transfer heat from the reactor core, maintain proper coolant chemistry and boron concentration, and ensure fuel design limits are not exceeded during all operating conditions. These features collectively support the safety and performance requirements of each NPM.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "314",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 2
+    },
+    "nuscale_ch05_0020": {
+      "node_id": "nuscale_ch05_0020",
+      "title": "Steam Generators",
+      "summary": "Each NuScale Power Module (NPM) contains two steam generators (SGs) integrated within the reactor pressure vessel (RPV), which also houses other key reactor components. The steam generator system (SGS) includes feedwater and main steam piping, thermal relief valves, and access ports, with the RPV itself forming the outer pressure boundary for the SGs. The steam generator tubes and associated welds are part of the reactor coolant pressure boundary, ensuring separation between the primary and secondary sides.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
+      "hop": 3
+    },
+    "nuscale_ch05_0007": {
+      "node_id": "nuscale_ch05_0007",
+      "title": "Integrity of Reactor Coolant Boundary",
+      "summary": "This section describes the design features of each NuScale Power Module (NPM) that ensure the integrity of the reactor coolant pressure boundary (RCPB) throughout the plant’s design life, in accordance with regulatory definitions. It details the components and systems included in the RCPB, such as the reactor pressure vessel, containment isolation valves, safety valves, and associated piping, emphasizing their roles in maintaining pressure containment and system safety.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "19",
       "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0086",
-      "target": "nuscale_ch01_0852",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A discusses NuScale's philosophy and programmatic activities for maintaining occupational radiation exposures ALARA, while Section B outlines review criteria for crediting manual operator actions in defense-in-depth analyses, both reflecting different aspects of NuScale's overall safety design philosophy by addressing personnel safety and human factors in risk mitigation."
-    },
-    {
-      "source": "nuscale_ch01_0086",
-      "target": "nuscale_ch01_0853",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses NuScale's approach to maintaining occupational radiation exposures as low as reasonably achievable (ALARA), while Section B outlines review criteria for human factors engineering and operator actions in safety analyses, both contributing to the overall safety design philosophy by addressing different aspects of personnel safety and operational reliability."
-    },
-    {
-      "source": "nuscale_ch01_0086",
-      "target": "nuscale_ch01_0025",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A outlines programmatic controls for occupational radiation exposure, while Section B describes a passive safety system (ECCS) that, by design, limits radioactive releases during accidents, both contributing to NuScale's overall safety design philosophy of minimizing radiation exposure."
-    },
-    {
-      "source": "nuscale_ch01_0852",
-      "target": "nuscale_ch01_0853",
-      "relation": "IS_PREREQUISITE_OF",
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A outlines the Phase 1 (Analysis) review criteria for crediting manual operator actions in D3 analyses, while Section B provides the Phase 2 (Preliminary Validation) review criteria for the same context, with both sections sequentially addressing different stages of the regulatory evaluation process for NuScale's safety design philosophy."
+      "description": "Section A provides a general operational description of the reactor coolant system's degasification and pressure boundary functions, while Section B specifies the detailed materials and components of the pressurizer that enable those functions."
     },
     {
-      "source": "nuscale_ch01_0852",
-      "target": "nuscale_ch01_0025",
-      "relation": "SATISFIES",
-      "confidence": 0.85,
-      "description": "Section B describes the passive Emergency Core Cooling System (ECCS) design, which exemplifies the safety design philosophy referenced in Section A's discussion of defense-in-depth and diversity, thereby providing a concrete example of how NuScale's philosophy is implemented."
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the function of the RCS degasification line and reactor vent valves in removing noncondensible gases during both normal and emergency operations, while Section B details the operational steps involving these same components (degasification line, RVVs) during DHRS operation, showing how the system description in A is implemented procedurally in B."
     },
     {
-      "source": "nuscale_ch01_0853",
-      "target": "nuscale_ch01_0025",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section B describes the passive Emergency Core Cooling System (ECCS) design, which exemplifies the safety design philosophy referenced in Section A's regulatory criteria for defense-in-depth and diversity, thereby supporting the analysis of NuScale's safety philosophy."
-    },
-    {
-      "source": "nuscale_ch01_0807",
-      "target": "nuscale_ch01_0086",
-      "relation": "SEMANTIC",
-      "confidence": 0.7,
-      "description": "Section A discusses NuScale's safety design philosophy in the context of system design and regulatory conformance for thermal hydraulic stability and ATWS events, while Section B addresses operational philosophy for radiation exposure control, both reflecting different aspects of NuScale's overall safety approach but without direct informational or causal connection."
-    },
-    {
-      "source": "nuscale_ch01_0807",
-      "target": "nuscale_ch01_0852",
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0022",
       "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section A discusses NuScale's approach to meeting the intent of regulatory requirements for diverse scram systems as part of its safety design philosophy, while Section B provides the review criteria for crediting manual operator actions in diversity and defense-in-depth analyses, which are relevant to evaluating the adequacy of NuScale's safety design features."
+      "confidence": 0.9,
+      "description": "Section A describes features of the Reactor Coolant System (RCS) that enable removal of noncondensible gases and maintain pressure boundary integrity, which are prerequisites for the effective operation of the Decay Heat Removal System (DHRS) described in Section B, as the DHRS relies on the RCS to transfer decay heat safely."
     },
     {
-      "source": "nuscale_ch01_0807",
-      "target": "nuscale_ch01_0853",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses NuScale's approach to diversity in the module protection system to address ATWS events, while Section B provides review criteria for crediting manual operator actions in diversity and defense-in-depth analyses, connecting them through their focus on diverse safety measures and regulatory conformance for risk mitigation."
-    },
-    {
-      "source": "nuscale_ch01_0087",
-      "target": "nuscale_ch01_0086",
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0005",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A describes specific bioassay and monitoring applications that are part of the broader operating philosophy outlined in Section B for maintaining occupational radiation exposures as low as reasonably achievable (ALARA)."
+      "description": "Section A details the materials and components of the NuScale pressurizer, while Section B describes operational procedures involving the pressurizer during DHRS operation, connecting them through the use and function of the pressurizer in passive cooling scenarios."
     },
     {
-      "source": "nuscale_ch01_0087",
-      "target": "nuscale_ch01_0852",
-      "relation": "SEMANTIC",
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0022",
+      "relation": "SUPPORTS",
       "confidence": 0.7,
-      "description": "Section A discusses site-specific programmatic activities for personnel monitoring and dose recording, while Section B addresses criteria for crediting manual operator actions in defense-in-depth analyses; both sections relate to NuScale's safety design philosophy by addressing different aspects of human factors and operational safety, but they do not directly reference or specify each other."
+      "description": "Section A describes the materials and components of the pressurizer, which is part of the reactor coolant system, while Section B outlines the design basis and function of the Decay Heat Removal System (DHRS), with both sections connected through their roles in the overall reactor coolant system design and safety analysis."
     },
     {
-      "source": "nuscale_ch01_0803",
-      "target": "nuscale_ch01_0852",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses NuScale's approach to meeting the regulatory requirement for a diverse scram system as part of its safety design philosophy, while Section B addresses the review criteria for crediting manual operator actions in diversity and defense-in-depth analyses, both relating to how NuScale demonstrates compliance with NRC expectations for safety system diversity."
-    },
-    {
-      "source": "nuscale_ch01_0803",
-      "target": "nuscale_ch01_0853",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses NuScale's approach to meeting the diverse scram system requirement for ATWS events, while Section B addresses the review criteria for crediting manual operator actions in diversity and defense-in-depth analyses, both relating to how NuScale demonstrates compliance with regulatory expectations for safety system diversity."
-    },
-    {
-      "source": "nuscale_ch01_0807",
-      "target": "nuscale_ch01_0803",
-      "relation": "SATISFIES",
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch05_0022",
+      "relation": "SPECIFIES",
       "confidence": 0.9,
-      "description": "Section A describes how the NuScale design partially conforms to the regulatory requirement in Section B for providing a diverse scram system to address ATWS events, specifically by relying on internal diversity within the module protection system."
+      "description": "Section A describes the operational steps and components involved in preparing the NuScale system for DHRS activation, while Section B outlines the design basis and functional purpose of the DHRS in removing decay heat without external power, connecting them through the operational implementation (A) of the system described in design terms (B)."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A details the specific components and subsystems of the NuScale reactor coolant system, including the DHRS, while Section B provides a broader summary of the RCS functions and features, with both sections connecting through their descriptions of RCS design and operational capabilities."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the reactor coolant system components, including the DHRS, while Section B specifies detailed material information for the pressurizer, which is one of the components listed in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the overall design and components of the NuScale reactor coolant system, including the DHRS, while Section B provides operational details on how the DHRS is engaged and interacts with other systems such as the steam generators and feedwater systems, thus specifying the operational context for the components described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides specific details about the reactor coolant system's degasification and pressure-retaining features, which are general aspects introduced in Section A's overall design basis description."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the NuScale reactor coolant system, while Section B specifies detailed material and component information for the pressurizer, which is a subsystem mentioned in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A outlines the overall design basis and reliance on natural circulation for the NuScale reactor coolant system, while Section B details specific operational steps and component actions (such as DHRS heat exchangers and pressurizer operations) that implement and support the passive cooling mechanism described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides specific details about the reactor coolant system's degasification and pressure-retaining features, which are part of the general system overview described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the NuScale reactor coolant system, while Section B specifies detailed information about the pressurizer materials and components referenced in Section A's description."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the NuScale reactor coolant system's reliance on natural circulation, while Section B specifies operational steps and component actions (such as DHRS heat exchangers and isolation procedures) that implement and detail the passive cooling mechanism described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A lists the DHRS as a subsystem within the reactor coolant system, while Section B provides the design basis and overall description of the reactor coolant system that encompasses the DHRS."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A details the specific components and subsystems of the NuScale reactor coolant system, including the DHRS, while Section B provides a general overview of the RCS design and its reliance on natural circulation, thus Section A specifies the technical details for the general system described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the components of the NuScale reactor coolant system, including the steam generators and DHRS, while Section B provides a summary of the RCS functions, such as degasification and pressure boundary integrity, with both sections connected through their discussion of RCS components and their roles in system safety and operation."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the reactor coolant system components, including the DHRS and steam generators, while Section B specifies detailed material information and references for the pressurizer, which is one of the components listed in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the inclusion and design of the DHRS and steam generators within the NuScale reactor coolant system, while Section B details the operational sequence involving isolation of the steam generators and recirculation through the DHRS, thus Section B specifies operational procedures for the components described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section B describes how the pressure-retaining portions of the RCS contribute to maintaining the integrity of the reactor coolant pressure boundary, which is the focus of Section A's discussion on design features ensuring RCPB integrity."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides detailed material specifications for pressurizer components that are part of the reactor coolant pressure boundary described generally in Section A, thereby elaborating on the design features referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch05_0005",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A defines the integrity requirements for the reactor coolant pressure boundary, while Section B describes operational steps and system components (including DHRS and feedwater isolation) that are designed to maintain that boundary's integrity during specific plant conditions."
     }
   ]
 }

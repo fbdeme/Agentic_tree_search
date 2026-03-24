@@ -1,220 +1,212 @@
 {
-  "question": "What is the internal pressure condition of the NuScale containment vessel (CNV) during normal operation?",
+  "question": "What is the design life of a NuScale Power Module?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0012": {
-      "node_id": "nuscale_ch05_0012",
-      "title": "Reactor Coolant Pressure Boundary Leakage Detection",
-      "summary": "The NuScale reactor coolant pressure boundary (RCPB) leakage detection system does not use traditional components with designed leakage rates, making it impractical to distinguish between identified and unidentified leakage inside containment using installed instrumentation. All leakage into containment is treated as unidentified until its source is determined, with leakage rates monitored via RCS inventory balance and compared to containment evacuation system (CES) flow rates, ensuring reliable detection to support safety analyses.",
+    "nuscale_ch01_0050": {
+      "node_id": "nuscale_ch01_0050",
+      "title": "Diesel Generator Buildings",
+      "summary": "The Diesel Generator Buildings (DGBs) in the NuScale Power Plant each house a single backup diesel generator and their auxiliary equipment, but do not contain any safety-related systems or support emergency safety functions. Their primary role is to provide support and housing for the generators, associated equipment, and maintenance areas.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "41",
+      "source_doc": "nuscale_ch01",
+      "page_range": "43",
       "hop": 1
     },
-    "nuscale_ch05_0024": {
-      "node_id": "nuscale_ch05_0024",
-      "title": "Pressurizer",
-      "summary": "The pressurizer in the NuScale reactor is integrated into the upper region of the reactor vessel and functions to regulate reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering unnecessary reactor trips or safety system actuations. Instrumentation provides continuous monitoring of pressure and water level to support safe operation.",
+    "nuscale_ch01_0049": {
+      "node_id": "nuscale_ch01_0049",
+      "title": "Central Utility Building",
+      "summary": "The Central Utility Building (CUB) is a nonsafety-related structure that houses essential utility services for the plant, such as chiller equipment, air systems, water treatment, maintenance, and security functions. Additionally, the plant includes Diesel Generator Buildings (DGBs) for backup power, and its design incorporates human factors engineering to minimize errors and optimize control and automation.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "124",
+      "source_doc": "nuscale_ch01",
+      "page_range": "43",
       "hop": 1
     },
-    "nuscale_ch05_0011": {
-      "node_id": "nuscale_ch05_0011",
-      "title": "Reactor Coolant Pressure Boundary Inservice Inspection and Testing",
-      "summary": "This section describes the materials and design requirements for threaded fasteners used in key reactor coolant system components, emphasizing the use of Alloy 718 for its compatibility and stress corrosion cracking resistance. It also outlines that preservice and inservice inspection and testing of pressure-retaining components are conducted according to the latest ASME BPVC Section XI standards, as mandated by federal regulations, with inspection intervals and code editions specified in the inspection program.",
+    "nuscale_ch01_0036": {
+      "node_id": "nuscale_ch01_0036",
+      "title": "Refueling Operations",
+      "summary": "Refueling operations for a NuScale Power Module (NPM) are conducted independently from other modules. The process involves moving the NPM from its operating bay to the refueling pool, disassembling it for core refueling and maintenance, and then reassembling and returning it to service after inspections and tests are completed.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
+      "source_doc": "nuscale_ch01",
+      "page_range": "38",
+      "hop": 2
+    },
+    "nuscale_ch01_0015": {
+      "node_id": "nuscale_ch01_0015",
+      "title": "General Plant Description",
+      "summary": "This section provides an overview of the NuScale plant design, summarizing key systems such as safety features, power conversion, fuel handling, cooling, waste management, and auxiliary systems. It explains that each Combined License (COL) applicant must reference the NuScale Final Safety Analysis Report (FSAR) and provide site-specific details where required, with certain conceptual design information and security details clearly identified and delineated.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "26",
+      "hop": 2
+    },
+    "nuscale_ch01_0068": {
+      "node_id": "nuscale_ch01_0068",
+      "title": "Electrical and Instrumentation and Control Drawings",
+      "summary": "This section explains that the NuScale Final Safety Analysis Report includes simplified electrical, instrumentation, and control (I&C) drawings to visually clarify design information alongside the written text. It references tables and figures listing and explaining the symbols used in these diagrams, and notes that applicants referencing the NuScale design must provide additional site-specific diagrams and legends as needed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
+      "hop": 2
+    },
+    "nuscale_ch01_0035": {
+      "node_id": "nuscale_ch01_0035",
+      "title": "Fuel Handling and Reactor Maintenance Areas",
+      "summary": "The fuel handling and reactor maintenance areas are located at the west end of the Reactor Building and include spaces for the spent fuel pool, refueling pool, and dry dock, all designed to facilitate safe fuel handling and reactor maintenance operations. These areas provide equipment and access for refueling, fuel assembly transport, and temporary storage of both new and spent fuel, while ensuring radiation protection for personnel.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
       "page_range": "37",
-      "hop": 1
+      "hop": 2
     },
-    "nuscale_ch05_0004": {
-      "node_id": "nuscale_ch05_0004",
-      "title": "System Description",
-      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes components such as the reactor pressure vessel, pressurizer, and associated piping and controls. The RCS removes heat from the reactor core to the steam generators using natural circulation, and features systems for degasification and emergency core cooling to maintain safety and integrity of the reactor coolant pressure boundary.",
+    "nuscale_ch01_0013": {
+      "node_id": "nuscale_ch01_0013",
+      "title": "Proprietary Information",
+      "summary": "This section explains the organization and identification of text, tables, figures, and page numbering within the NuScale Final Safety Analysis Report (FSAR). It also clarifies that while the FSAR does not contain proprietary or safeguards information, some sensitive content is withheld from public disclosure in accordance with regulations, and a separate public version is provided with such material removed.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "9",
-      "hop": 1
-    },
-    "nuscale_ch05_0009": {
-      "node_id": "nuscale_ch05_0009",
-      "title": "Overpressure Protection",
-      "summary": "This section outlines NuScale's compliance with overpressure protection requirements by referencing applicable ASME Boiler and Pressure Vessel Code (BPVC) and Operations and Maintenance (OM) Code cases, as mandated by various sections of 10 CFR 50.55a and related Regulatory Guides (RGs). It details how code cases for design, fabrication, construction, preservice, and inservice inspections and testing are selected and verified to meet NRC-endorsed standards, with a consolidated list provided in Table 5.2-1.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "21",
-      "hop": 1
-    },
-    "nuscale_ch05_0003": {
-      "node_id": "nuscale_ch05_0003",
-      "title": "Design Basis",
-      "summary": "The Design Basis section describes the NuScale reactor coolant system (RCS), which uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator. The RCS is designed to ensure safe and efficient cooling, maintain water chemistry, and provide uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "8",
-      "hop": 1
-    },
-    "nuscale_ch05_0014": {
-      "node_id": "nuscale_ch05_0014",
-      "title": "Reactor Vessel",
-      "summary": "The Reactor Vessel section describes the NuScale Power Module's reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel surrounded by a containment vessel. The RPV serves as a key pressure-retaining component and barrier to fission product release, supporting various reactor systems and constructed according to ASME Boiler and Pressure Vessel Code standards. The materials used for the RPV are carefully selected to ensure integrity and compliance with regulatory requirements throughout the plant's design lifetime.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "67",
+      "source_doc": "nuscale_ch01",
+      "page_range": "10",
       "hop": 3
     },
-    "nuscale_ch05_0017": {
-      "node_id": "nuscale_ch05_0017",
-      "title": "Reactor Vessel Integrity",
-      "summary": "This section outlines the procedures and regulatory compliance measures for ensuring the integrity of the NuScale reactor vessel. It details the development of operating procedures to maintain pressure-temperature limits, evaluates the vessel’s resistance to pressurized thermal shock and upper-shelf energy degradation over a 60-year design life, and confirms that all criteria remain within regulatory limits.",
+    "nuscale_ch01_0012": {
+      "node_id": "nuscale_ch01_0012",
+      "title": "Page Numbering",
+      "summary": "Tables and figures in the FSAR are numbered sequentially within each section and placed at the end of the relevant section, while pages are numbered according to their section or appendix designation. The FSAR does not contain proprietary or safeguards information, but sensitive material is withheld from public disclosure and clearly marked, with a separate public version provided.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "73",
+      "source_doc": "nuscale_ch01",
+      "page_range": "10",
+      "hop": 3
+    },
+    "nuscale_ch01_0123": {
+      "node_id": "nuscale_ch01_0123",
+      "title": "Table 1.9-2: Conformance with Regulatory Guides (Continued)",
+      "summary": "This section of the NuScale Final Safety Analysis Report summarizes the reactor's conformance with various NRC Regulatory Guides. It details whether NuScale's design and quality assurance programs fully, partially, or do not conform to each guide, providing explanations and references to relevant report sections for each criterion. Some guides are marked as not applicable due to differences in standards or design approaches.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "136",
+      "hop": 4
+    },
+    "nuscale_ch01_0455": {
+      "node_id": "nuscale_ch01_0455",
+      "title": "DSRS 11.1, Rev 0: Coolant Source TermsII.2 RG 1.112",
+      "summary": "This section explains that several regulatory guidelines for auxiliary feedwater systems and steam generator designs are not applicable to the NuScale plant because its design differs significantly from large pressurized water reactors (PWRs). Specifically, NuScale uses a passive Decay Heat Removal System (DHRS) instead of pump-driven auxiliary feedwater systems, and its steam generator design avoids the configurations and associated risks (such as water hammer) addressed by these guidelines.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "265",
+      "hop": 4
+    },
+    "nuscale_ch01_0052": {
+      "node_id": "nuscale_ch01_0052",
+      "title": "Comparison with Other Facilities",
+      "summary": "This section compares the major design features and parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It highlights differences in size, output, core design, and safety systems, showing that NuScale uses a smaller, simpler, and more integrated design with fewer components and lower power output per module compared to conventional PWRs. The comparison is summarized in tables for clarity.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "79",
       "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0012",
-      "target": "nuscale_ch05_0024",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section B describes the pressurizer's integration with the reactor vessel and its function to rapidly communicate pressure changes with the reactor coolant system (RCS), which is the same system whose leakage and pressure conditions are discussed in Section A, thus both sections provide complementary technical context for understanding the internal pressure condition of the containment vessel during normal operation."
-    },
-    {
-      "source": "nuscale_ch05_0012",
-      "target": "nuscale_ch05_0011",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A discusses the challenges of detecting reactor coolant pressure boundary leakage inside containment, while Section B details the materials and standards for threaded fasteners used in the pressure boundary, both relating to the integrity and potential leakage sources affecting internal CNV pressure during normal operation."
-    },
-    {
-      "source": "nuscale_ch05_0012",
-      "target": "nuscale_ch05_0004",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section B describes that during normal operation, noncondensible gases are removed from the pressurizer (PZR) volume via a degasification line, indicating that the CNV is not normally exposed to RCS pressure, while Section A discusses leakage detection and the impracticality of distinguishing RCS leakage inside containment, connecting both sections through the context of internal containment conditions during normal operation."
-    },
-    {
-      "source": "nuscale_ch05_0012",
-      "target": "nuscale_ch05_0009",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A discusses the detection of reactor coolant pressure boundary leakage inside the containment, while Section B outlines the overpressure protection and code compliance for the reactor coolant boundary, connecting them through their focus on maintaining containment integrity and pressure control in accordance with regulatory requirements."
-    },
-    {
-      "source": "nuscale_ch05_0012",
-      "target": "nuscale_ch05_0003",
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0050",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A discusses the detection of reactor coolant pressure boundary leakage inside the containment, while Section B describes the design of the reactor coolant system, which determines the internal pressure conditions relevant to leakage detection."
+      "description": "Section A provides a general overview of the plant's systems and structures, including those described in Section B, which details specific utility and safety-related functions of the Diesel Generator Buildings and Central Utility Building."
     },
     {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0011",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A describes the pressurizer's role in maintaining and communicating pressure within the reactor coolant system, which directly determines the internal pressure condition relevant to the containment vessel during normal operation, while Section B discusses the material and design standards for fasteners that ensure the integrity of the pressure boundary under those pressure conditions."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0004",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section B states that during normal operation, noncondensible gases are removed from the pressurizer (PZR) volume at the top of the reactor pressure vessel (RPV) via a degasification line, which implies that the CNV is not directly exposed to PZR steam or pressure under normal conditions, while Section A describes the pressurizer's function and its integration with the RCS, providing context for the pressure conditions managed within the RCS but not directly specifying CNV pressure."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0009",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the pressurizer's role in maintaining and communicating pressure within the reactor coolant system, which directly relates to Section B's focus on overpressure protection and compliance with regulatory codes to ensure the integrity of the reactor coolant boundary under normal and abnormal pressure conditions."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0003",
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0049",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A describes the pressurizer's role in maintaining and communicating pressure within the reactor vessel, while Section B provides the overall design basis of the reactor coolant system, which includes the pressurizer as a component, thus Section A specifies details for the general system described in Section B."
+      "description": "Section B provides specific details about the Central Utility Building, which is one of the facility components generally described in Section A's summary of the overall plant design."
     },
     {
-      "source": "nuscale_ch05_0011",
-      "target": "nuscale_ch05_0009",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the material and design requirements for threaded fasteners in the reactor coolant pressure boundary, while Section B outlines compliance with overpressure protection codes and standards, both of which are connected through their reliance on ASME BPVC requirements for ensuring the integrity and safety of the reactor coolant boundary under pressure conditions."
-    },
-    {
-      "source": "nuscale_ch05_0011",
-      "target": "nuscale_ch05_0003",
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch01_0015",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A discusses the materials and inspection requirements for threaded fasteners in the reactor coolant pressure boundary, while Section B provides a general summary of the reactor coolant system design, with both sections connected by their focus on the integrity and configuration of the reactor coolant pressure boundary components."
+      "description": "Section A describes specific refueling operations for a NuScale Power Module, which are detailed procedures that fall under the broader general plant description and systems overview provided in Section B."
     },
     {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0009",
-      "relation": "SATISFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the system features that manage internal pressures in the CNV during normal operation, while Section B outlines the regulatory codes and standards (ASME BPVC, 10 CFR 50.55a) that these pressure management features must comply with, connecting the design implementation to regulatory requirements."
-    },
-    {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0003",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes specific features of the RCS, such as degasification and venting to the CNV during normal and emergency operations, which provide operational context and mechanisms relevant to understanding the internal pressure condition of the CNV discussed in Section B's general design basis."
-    },
-    {
-      "source": "nuscale_ch05_0009",
-      "target": "nuscale_ch05_0003",
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch01_0068",
       "relation": "REFERENCES",
       "confidence": 0.8,
-      "description": "Section A references regulatory codes and testing programs that ensure the integrity and overpressure protection of the reactor coolant boundary, while Section B provides a general description of the reactor coolant system's design, which includes the containment vessel whose pressure conditions are governed by the requirements in Section A."
+      "description": "Section A describes the operational procedures for refueling a NuScale Power Module, while Section B provides supporting drawings and figures that visually clarify design information referenced in Section A, such as component positions during operations."
     },
     {
-      "source": "nuscale_ch05_0014",
-      "target": "nuscale_ch05_0012",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A describes the physical arrangement of the reactor and containment vessels, while Section B discusses the detection of reactor coolant pressure boundary leakage within the containment, connecting them through the containment's role in housing and monitoring the reactor system during normal operation."
-    },
-    {
-      "source": "nuscale_ch05_0014",
-      "target": "nuscale_ch05_0024",
-      "relation": "SUPPORTS",
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch01_0035",
+      "relation": "IS_PREREQUISITE_OF",
       "confidence": 0.85,
-      "description": "Section A describes the containment vessel (CNV) as surrounding the reactor pressure vessel (RPV), while Section B explains that the pressurizer, integral to the RPV, rapidly communicates pressure changes within the reactor coolant system, thereby linking the internal pressure conditions of the RPV (and thus the CNV environment) to the pressurizer's operation."
+      "description": "Section A describes the process of moving a NuScale Power Module (NPM) for refueling, while Section B details the infrastructure (pipe fittings and connections) that enables such operations, connecting them through the operational prerequisites for NPM handling."
     },
     {
-      "source": "nuscale_ch05_0014",
-      "target": "nuscale_ch05_0011",
-      "relation": "SEMANTIC",
-      "confidence": 0.6,
-      "description": "Section A describes the physical arrangement of the containment vessel (CNV) surrounding the reactor pressure vessel (RPV), while Section B details the materials and standards for threaded fasteners used in the RPV and related pressure boundaries, connecting them through their shared focus on pressure-retaining components but not directly addressing CNV internal pressure conditions."
-    },
-    {
-      "source": "nuscale_ch05_0017",
-      "target": "nuscale_ch05_0012",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A discusses the development of operating procedures to ensure pressure-temperature limits are not exceeded during normal operation, while Section B addresses the detection of leakage from the reactor coolant pressure boundary, both relating to maintaining and monitoring internal pressure conditions within the containment vessel during normal operation."
-    },
-    {
-      "source": "nuscale_ch05_0017",
-      "target": "nuscale_ch05_0024",
-      "relation": "SUPPORTS",
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0068",
+      "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A discusses the development of operating procedures to ensure pressure-temperature limits are not exceeded during normal operation, while Section B describes the pressurizer's role in maintaining and communicating pressure within the reactor vessel, thus both sections are connected through their focus on controlling and maintaining internal pressure conditions during normal operation."
+      "description": "Section A provides a general overview of the plant design, while Section B offers detailed drawings that visually clarify and specify the systems described in Section A, including those relevant to the design life of the NuScale Power Module."
     },
     {
-      "source": "nuscale_ch05_0017",
-      "target": "nuscale_ch05_0011",
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0035",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the plant design, while Section B offers specific details about the fuel handling and reactor maintenance areas, thereby specifying aspects of the general description in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0013",
+      "target": "nuscale_ch01_0036",
       "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the general structure and regulatory basis of the FSAR, while Section B provides operational details about refueling, with both sections being connected by their roles in documenting and supporting the overall design and operation of the NuScale Power Module as required by regulatory guidance."
+    },
+    {
+      "source": "nuscale_ch01_0012",
+      "target": "nuscale_ch01_0049",
+      "relation": "SPECIFIES",
       "confidence": 0.8,
-      "description": "Section A discusses operating procedures to ensure pressure-temperature limits are not exceeded during normal operation, while Section B details the material and design standards for threaded fasteners that must withstand those same pressure conditions, connecting them through the shared requirement to maintain reactor coolant boundary integrity under specified pressures."
+      "description": "Section A describes the general structure and referencing system of the FSAR, while Section B provides specific content about the Central Utility Building, with Section A's guidance enabling the organization and identification of Section B's information."
+    },
+    {
+      "source": "nuscale_ch01_0123",
+      "target": "nuscale_ch01_0050",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A lists regulatory conformance for safety-related structures, systems, and components (SSCs), while Section B describes the Central Utility Building as a nonsafety-related structure, connecting them through the classification of plant structures by safety significance."
+    },
+    {
+      "source": "nuscale_ch01_0123",
+      "target": "nuscale_ch01_0049",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory conformance criteria for safety-related structures, while Section B describes the Central Utility Building as a nonsafety-related structure, connecting them through the classification of plant structures by safety significance."
+    },
+    {
+      "source": "nuscale_ch01_0123",
+      "target": "nuscale_ch01_0036",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A outlines regulatory conformance, including quality assurance and seismic design criteria, which establish the foundational requirements that directly impact the design life of the NuScale Power Module discussed in Section B's operational context."
+    },
+    {
+      "source": "nuscale_ch01_0123",
+      "target": "nuscale_ch01_0455",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A lists regulatory guides with which the NuScale design conforms or partially conforms, while Section B discusses the applicability of specific design guidelines and regulatory guides to the NuScale module, both providing evidence of regulatory conformance relevant to establishing the design life."
+    },
+    {
+      "source": "nuscale_ch01_0123",
+      "target": "nuscale_ch01_0052",
+      "relation": "SPECIFIES",
+      "confidence": 0.7,
+      "description": "Section B provides nominal design parameters for the NuScale Power Module, which may include design life information, while Section A lists regulatory guide conformance but does not directly address design life, making Section B a potential source of the specific design life value referenced in the analysis question."
+    },
+    {
+      "source": "nuscale_ch01_0455",
+      "target": "nuscale_ch01_0052",
+      "relation": "SATISFIES",
+      "confidence": 0.7,
+      "description": "Section B provides nominal design parameters for the NuScale Power Module, which may include design life information, while Section A discusses regulatory guidance and its applicability, thus Section B offers specific data that could satisfy regulatory requirements referenced or discussed in Section A."
     }
   ]
 }

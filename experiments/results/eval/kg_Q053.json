@@ -1,23 +1,23 @@
 {
-  "question": "Describe the structure of the helical tube bundle in the steam generator.",
+  "question": "What DHRS performance does Figure 5.4-7 schematic show, and what initial conditions from Table 5.1-2 apply?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0025": {
-      "node_id": "nuscale_ch05_0025",
-      "title": "References",
-      "summary": "This section details the materials used in the construction of the pressurizer and its components within the NuScale reactor coolant system, specifying alloys and standards for each part to ensure corrosion resistance and compatibility. It references relevant sections of the ASME Boiler and Pressure Vessel Code (BPVC) and lists the specific alloys and material specifications for the baffle plate, heater bundles, cover plate, bolting, and heater sheaths.",
+    "nuscale_ch05_0006": {
+      "node_id": "nuscale_ch05_0006",
+      "title": "System Evaluation",
+      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance across different power levels by establishing steady-state parameters such as coolant temperatures, flow rates, and pressures, using both software and manual calculations. The evaluation considers uncertainties in flow resistances and design requirements, ensuring efficient operation, safety margins, and support for the plant’s natural circulation design.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "130",
+      "page_range": "12",
       "hop": 1
     },
-    "nuscale_ch05_0019": {
-      "node_id": "nuscale_ch05_0019",
-      "title": "Reactor Coolant System Component and Subsystem Design",
-      "summary": "This section describes the design of the Reactor Coolant System (RCS) components and subsystems in the NuScale Power Module, detailing the integration of the reactor, steam generators, pressurizer, safety and ECCS valves, and associated piping within the reactor pressure vessel (RPV). It outlines the configuration and boundaries of the steam generator system, emphasizing that the steam generators are integral to the RPV and form part of the reactor coolant pressure boundary.",
+    "nuscale_ch05_0022": {
+      "node_id": "nuscale_ch05_0022",
+      "title": "Decay Heat Removal System",
+      "summary": "The Decay Heat Removal System (DHRS) is an engineered safety feature designed to remove residual and core decay heat following reactor shutdown, especially when normal cooling is unavailable, ensuring the reactor remains within safe temperature and pressure limits without external power. The system is evaluated for reliability and risk significance, and is designed to reduce the reactor coolant system average temperature below 420°F within 36 hours, meeting regulatory and industry safety requirements. The DHRS operates independently of the Emergency Core Cooling System (ECCS), but can function alongside it if ECCS is actuated.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "91",
+      "page_range": "106",
       "hop": 1
     },
     "nuscale_ch05_0020": {
@@ -28,29 +28,304 @@
       "source_doc": "nuscale_ch05",
       "page_range": "91",
       "hop": 1
+    },
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain proper coolant flow, water chemistry, and boron concentration to protect fuel integrity and support safe operation under normal and transient conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 1
+    },
+    "nuscale_ch05_0023": {
+      "node_id": "nuscale_ch05_0023",
+      "title": "Reactor Coolant System High-Point Vents",
+      "summary": "This section describes the testing and inspection requirements for the Decay Heat Removal System (DHRS) components in the NuScale reactor, ensuring compliance with ASME codes for Class 2 components. It details how DHRS actuation valves are exercised and tested, including during cold shutdown conditions, and outlines the initial in-situ test to verify the DHRS's ability to remove heat from the Reactor Coolant System (RCS) in the first installed module.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "121",
+      "hop": 1
+    },
+    "nuscale_ch05_0000": {
+      "node_id": "nuscale_ch05_0000",
+      "title": "Preface",
+      "summary": "The Preface outlines the copyright and usage restrictions for the NuScale Standard Plant Design Certification Application, specifically Chapter Five on the Reactor Coolant System and Connecting Systems. It specifies that only the U.S. Nuclear Regulatory Commission (NRC) is authorized to use, copy, or disclose the information for regulatory purposes, with public disclosure governed by NRC regulations and proprietary protections.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "1",
+      "hop": 1
+    },
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design removes noncondensible gases from the pressurizer (PZR) during both normal and emergency operations, helping maintain the integrity of the reactor coolant pressure boundary. The RCS, located inside the containment vessel, circulates coolant by natural convection to transfer heat from the reactor core to the steam generators, with its components and interfaces supporting safe and efficient reactor operation.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
+      "hop": 2
+    },
+    "nuscale_ch05_0005": {
+      "node_id": "nuscale_ch05_0005",
+      "title": "System Components",
+      "summary": "This section describes key components of the NuScale reactor system. It details the Reactor Pressure Vessel (RPV), which houses the reactor core and supports major systems, and outlines the main Reactor Coolant System (RCS) piping and its connections. The section also briefly introduces the pressurizer (PZR), emphasizing its integration with the RPV and its role in system operations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "10",
+      "hop": 2
+    },
+    "nuscale_ch05_0019": {
+      "node_id": "nuscale_ch05_0019",
+      "title": "Reactor Coolant System Component and Subsystem Design",
+      "summary": "This section describes the design of the NuScale Power Module’s Reactor Coolant System (RCS) components and subsystems, including the reactor pressure vessel, steam generators, safety and emergency valves, and associated piping. It details the integration of these components within the RPV, outlines their boundaries between primary and secondary systems, and references where further design specifics can be found in other report sections.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
+      "hop": 3
+    },
+    "nuscale_ch05_0018": {
+      "node_id": "nuscale_ch05_0018",
+      "title": "References",
+      "summary": "This section outlines the requirements and procedures for inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fasteners for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It specifies the use of nondestructive examinations, controlled shipping environments, and quality assurance measures, and lists the key codes and standards used as references.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "74",
+      "hop": 3
+    },
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the NuScale pressurizer, including the RPV upper shell, baffle plate, heater bundles, and associated components. It specifies the types of steel and nickel-based alloys used, their protective claddings, and their compliance with relevant BPVC material specifications to ensure corrosion resistance and compatibility with operating environments.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 3
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0019",
-      "relation": "SPECIFIES",
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0022",
+      "relation": "IS_PREREQUISITE_OF",
       "confidence": 0.95,
-      "description": "Section A provides detailed descriptions of specific pressurizer components and their materials, which are part of the broader system components listed in Section B's general overview of the reactor coolant system design."
+      "description": "Section A discusses the establishment of steady state parameters for system performance optimization, which are the initial conditions referenced in Section B's description of the DHRS's ability to remove decay heat under those conditions."
     },
     {
-      "source": "nuscale_ch05_0025",
+      "source": "nuscale_ch05_0006",
       "target": "nuscale_ch05_0020",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references the steam generators (SGs) and their role in DHRS performance and directs the reader to Section B for further description of the SGs, establishing a cross-reference based on component function and design."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the evaluation of system performance parameters, which are based on the design basis and system description provided in Section B, specifically regarding the reactor coolant system and its reliance on natural circulation."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0023",
       "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A describes the pressurizer components and materials within the reactor pressure vessel, while Section B provides a general overview of all major components inside the reactor pressure vessel, including the steam generators, thus structurally situating the pressurizer (from A) and the steam generators (from B) as co-located subsystems within the same vessel."
+      "confidence": 0.8,
+      "description": "Section A discusses the operational performance and criteria for the DHRS as part of the system evaluation, while Section B details the inspection and classification requirements for DHRS components, connecting them through the need for reliable DHRS operation under specified conditions."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0000",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides technical details and evaluation criteria for DHRS and SG performance, which are elaborated upon in the general context and copyright preface of Section B."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the DHRS's function and design basis for removing decay heat, while Section B identifies the DHRS as an integrated component within the reactor coolant system, establishing that the DHRS's performance (A) is implemented as part of the system described in B."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch05_0003",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A describes the DHRS's function to remove decay heat and ensure safe shutdown, while Section B outlines the RCS's reliance on natural circulation, which is a prerequisite for DHRS performance as depicted in Figure 5.4-7 and the initial conditions in Table 5.1-2."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch05_0023",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the DHRS's design basis and performance objectives, while Section B specifies inspection and classification requirements for DHRS components, connecting them through the operational and regulatory prerequisites for DHRS functionality."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific component details, including the DHRS and steam generators, that are part of the broader RCS design described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0023",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the components of the reactor coolant system, including the DHRS, while Section B specifies inspection and classification requirements for DHRS components, connecting them through the regulatory oversight applied to the DHRS described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0000",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific technical details about the reactor coolant system components, including the DHRS and steam generators, which are the subject of the broader regulatory context and document scope introduced in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0023",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general description of the reactor coolant system's reliance on natural circulation, which is the operational basis for the DHRS performance depicted in Figure 5.4-7, while Section B specifies inspection and classification requirements for DHRS components that ensure their readiness under the initial conditions from Table 5.1-2."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0000",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a summary description of the reactor coolant system design, which is the technical subject matter detailed in the broader document introduced by Section B's preface."
+    },
+    {
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch05_0000",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific inspection and classification details for DHRS components referenced in the broader context of the Reactor Coolant System described in Section B's preface."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0006",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A describes the system features (such as degasification and pressure boundary integrity) that set the initial conditions referenced in Table 5.1-2, which are necessary for understanding the DHRS performance depicted in Figure 5.4-7 as evaluated in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0022",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A describes the reactor coolant system's features relevant to pressure and gas removal, which set the initial conditions for DHRS operation as described in Section B, where the DHRS's function is to remove decay heat under those initial conditions."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the RCS degasification and venting functions relevant to emergency operations, while Section B identifies the DHRS as part of the RCS components, connecting the system functions in A to the DHRS performance context in B."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch05_0006",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A describes the operational steps and initial conditions (such as water levels and pressure equalization) required before DHRS activation, while Section B discusses the evaluation of DHRS performance under various steady-state parameters, thus Section A provides the initial conditions that are applied in the performance evaluation context of Section B."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch05_0022",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A describes the operational steps and initial conditions (such as water levels and pressure equalization) that must be established before the DHRS can be engaged, while Section B outlines the DHRS's design basis and performance objectives, thus Section A provides the initial conditions from Table 5.1-2 that are prerequisites for the DHRS performance depicted in Figure 5.4-7 as described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch05_0020",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A describes operational steps and initial conditions (such as water level and pressure adjustments) that must be established before DHRS operation, while Section B provides the design context of the reactor coolant system components, including the DHRS and steam generators, thus connecting the operational prerequisites in A to the system design in B."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the function of the degasification line and RVVs in removing noncondensible gases from the PZR during both normal and emergency operations, while Section B provides specific operational steps and component actions (e.g., venting nitrogen, isolating SGs, reducing PZR water level) that implement these functions as part of DHRS performance, thus Section B specifies the detailed procedures for the general system description in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0006",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the physical components of the DHRS within the reactor coolant system, while Section B explains how the DHRS (via the steam generators) is evaluated for performance under various initial conditions, connecting the system's design to its operational evaluation."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0022",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A lists the DHRS as a subsystem within the overall reactor coolant system design, while Section B provides the specific design basis and performance objectives for the DHRS, connecting the general system context to the detailed functional requirements."
     },
     {
       "source": "nuscale_ch05_0019",
       "target": "nuscale_ch05_0020",
-      "relation": "SPECIFIES",
+      "relation": "SEMANTIC",
       "confidence": 0.95,
-      "description": "Section A provides a general overview of the reactor coolant system components, including the steam generators, while Section B focuses specifically on the steam generators, which are one of the components listed in Section A."
+      "description": "Section A and Section B both describe the components contained within the reactor pressure vessel, including the decay heat removal system (DHRS) and steam generators (SGs), establishing that these subsystems are part of the same integrated system relevant to the DHRS performance shown in Figure 5.4-7 and the initial conditions in Table 5.1-2."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0006",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.7,
+      "description": "Section A outlines inspection and handling requirements for the reactor vessel, while Section B discusses system evaluation criteria for DHRS performance, with both sections connected through their reliance on compliance with ASME standards and operational prerequisites for safe and effective DHRS operation."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B describes the components contained within the reactor pressure vessel, including the decay heat removal system (DHRS), while Section A references the requirements and procedures for handling, inspecting, and maintaining the reactor pressure vessel that houses these components."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0006",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references the detailed material and component descriptions of the pressurizer, which are part of the Reactor Pressure Vessel (RPV) and are structurally connected to the Steam Generators (SGs) described in Section B, whose performance and integration with the Decay Heat Removal System (DHRS) are evaluated in the context of system operation and initial conditions."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the pressurizer components and materials, which are part of the Reactor Coolant System (RCS) shown in Figure 5.4-7, while Section B outlines the DHRS's function to remove decay heat from the RCS, connecting the physical system (A) to its safety function (B) under specified initial conditions."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the pressurizer as a component within the RPV, while Section B lists the pressurizer and steam generators as integral parts of the RPV and the overall reactor coolant system, connecting them as related subsystems within the same system context."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0018",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the design and components of the reactor coolant system, including the DHRS, while Section B details inspection, shipment, and installation requirements for the reactor vessel, which houses these components; thus, Section B's requirements ensure the integrity of the vessel that contains the systems described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides detailed material specifications for pressurizer components that are generally described as part of the reactor coolant system and its subsystems, including the DHRS, in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes inspection, shipment, and storage requirements for the reactor pressure vessel (RPV), while Section B details the materials and components of the pressurizer, which includes parts of the RPV, thus Section B provides specific component information that relates to the general RPV context in Section A."
     }
   ]
 }

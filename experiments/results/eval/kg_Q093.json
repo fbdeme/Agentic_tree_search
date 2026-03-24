@@ -1,329 +1,287 @@
 {
-  "question": "Verify the abbreviations related to the NRC and explain NuScale's NRC licensing approach through the text.",
+  "question": "Compare the primary coolant chemistry control in NuScale with conventional PWR chemistry programs.",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0117": {
-      "node_id": "nuscale_ch01_0117",
-      "title": "Figure 1.7-3f: Piping and In strumentation Diagram Legends",
-      "summary": "This section provides the legend for piping and instrumentation diagrams (P&IDs) used in the NuScale Final Safety Analysis Report. It lists and describes various symbols representing sample probes, pressure and temperature devices, flow measurement instruments, level sensors, and other auxiliary and accessory devices used in the diagrams. These legends ensure consistent interpretation of P&IDs throughout the documentation.",
+    "nuscale_ch05_0002": {
+      "node_id": "nuscale_ch05_0002",
+      "title": "Summary Description",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve modules, maintains proper coolant chemistry and boron concentration, and is engineered to prevent fuel design limit violations during normal and off-normal conditions.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "107",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
       "hop": 1
     },
-    "nuscale_ch01_0076": {
-      "node_id": "nuscale_ch01_0076",
-      "title": "Conformance with Standard Review Plan",
-      "summary": "NuScale reviewed the Standard Review Plan (SRP), including relevant guidance and acceptance criteria, and documented any gaps in a summary report submitted to the NRC. The company also assessed conformance with the Design-Specific Review Standard (DSRS) for small modular reactors and addressed applicable Three Mile Island (TMI) and generic safety issues as required by regulations, with details provided in referenced tables and FSAR sections.",
+    "nuscale_ch05_0020": {
+      "node_id": "nuscale_ch05_0020",
+      "title": "Steam Generators",
+      "summary": "Each NuScale Power Module (NPM) contains two steam generators (SGs) integrated within the reactor pressure vessel (RPV), which also houses other key components such as the pressurizer and safety valves. The steam generator system (SGS) includes feedwater and main steam piping, thermal relief valves, and access ports, with the RPV itself forming the outer pressure boundary for the SGs. The steam generator tubes and associated welds are part of the reactor coolant pressure boundary, ensuring safe separation between the primary and secondary sides.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "130",
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
       "hop": 1
     },
-    "nuscale_ch01_0111": {
-      "node_id": "nuscale_ch01_0111",
-      "title": "Figure 1.7-2: Instrumentatio n and Controls Symbol Legend",
-      "summary": "This section provides a legend explaining the symbols used for instrumentation and controls in NuScale’s safety analysis diagrams. It defines the logic gate functions (AND, OR, NOT), bistable outputs, control room indicators, switch types, and other control functions, ensuring clear interpretation of system diagrams and operational statuses. Additionally, it includes notes on piping and instrumentation diagram conventions, such as vent and drain representations.",
+    "nuscale_ch05_0005": {
+      "node_id": "nuscale_ch05_0005",
+      "title": "System Components",
+      "summary": "This section describes the main components of the NuScale reactor system, focusing on the Reactor Pressure Vessel (RPV), Reactor Coolant System (RCS) piping, and the Pressurizer (PZR). The RPV serves as a primary barrier to fission product release and houses key reactor internals, while the RCS piping connects various system components and the PZR is integrated into the RPV to help control system pressure. Each component's functions and connections are briefly outlined, with references to further detailed sections.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "101",
-      "hop": 1
-    },
-    "nuscale_ch01_0858": {
-      "node_id": "nuscale_ch01_0858",
-      "title": "SRP 19.2, Initial Issuance: Review of Risk Information Used to Support Permanent PlantSpecific Changes to the Licensing Basis: General GuidanceAll Various",
-      "summary": "This section summarizes NuScale’s conformance with various sections of the Standard Review Plan (SRP) related to risk information and safety requirements for licensing basis changes. It notes that SRP 19.2 is not applicable to NuScale but applies to licensees proposing plant-specific changes, while NuScale conforms or partially conforms to other SRP sections, with exceptions only where criteria are not relevant to its design (such as below-grade spent fuel pools). The table provides a structured overview of these conformance determinations.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "323",
-      "hop": 1
-    },
-    "nuscale_ch01_0129": {
-      "node_id": "nuscale_ch01_0129",
-      "title": "1.9.4 Operational Experience (Generic Communications)",
-      "summary": "NuScale reviewed the Standard Review Plan (SRP) and related guidance to ensure their design meets NRC regulatory criteria, documenting any gaps and their resolutions. They also assessed conformance with requirements from the Three Mile Island incident and addressed unresolved and generic safety issues as required by NRC regulations, referencing relevant reports and guidance. This information is summarized in specific tables and sections of their Final Safety Analysis Report.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "130",
-      "hop": 1
-    },
-    "nuscale_ch01_0859": {
-      "node_id": "nuscale_ch01_0859",
-      "title": "SRP 19.3, Rev 0: Regulatory Treatment of Non-Safety Systems for Passive Advanced Light Water ReactorsAll Various",
-      "summary": "This section summarizes NuScale’s conformance with SRP 19.3, Rev 0, which addresses the regulatory treatment of non-safety systems for passive advanced light water reactors. The document states that NuScale fully conforms to the requirements of SRP 19.3, with no exceptions or additional comments noted.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "323",
-      "hop": 1
-    },
-    "nuscale_ch01_0130": {
-      "node_id": "nuscale_ch01_0130",
-      "title": "1.9.5 Advanced and Evolutionary Light-Water Reactor Design Issues",
-      "summary": "This section describes how the NuScale design conforms to regulatory criteria by incorporating relevant operational experience and NRC guidance, including bulletins, generic letters, and 10 CFR 21 notifications, into its safety analysis and supplier evaluation processes. It also addresses advanced and evolutionary light-water reactor design issues, following NRC policy and technical guidance as outlined in SECY-93-087 and related documents.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "131",
-      "hop": 2
-    },
-    "nuscale_ch01_0013": {
-      "node_id": "nuscale_ch01_0013",
-      "title": "Proprietary Information",
-      "summary": "This section explains the organization and identification of text, tables, figures, and page numbering within the NuScale Final Safety Analysis Report (FSAR). It also clarifies that while the FSAR does not contain proprietary or safeguards information, some sensitive content is withheld from public disclosure in accordance with regulations, and a separate public version is provided with such material removed.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
+      "source_doc": "nuscale_ch05",
       "page_range": "10",
+      "hop": 1
+    },
+    "nuscale_ch05_0010": {
+      "node_id": "nuscale_ch05_0010",
+      "title": "Reactor Coolant Pressure Boundary Materials",
+      "summary": "The Reactor Coolant Pressure Boundary (RCPB) materials, including welds, are selected and fabricated in accordance with ASME BPVC standards and meet the requirements of relevant U.S. regulations such as 10 CFR 50 and its appendices. These materials are designed, constructed, and tested to ensure high quality, environmental compatibility, and fracture resistance, with specific material specifications detailed in Table 5.2-4.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "29",
+      "hop": 1
+    },
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes components such as the reactor pressure vessel, pressurizer, and associated piping and controls. It removes heat from the reactor core to the steam generators using natural circulation, and features systems for degasification and emergency core cooling to maintain safety and integrity of the reactor coolant pressure boundary.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
       "hop": 2
     },
-    "nuscale_ch01_0014": {
-      "node_id": "nuscale_ch01_0014",
-      "title": "Acronyms and Abbreviations",
-      "summary": "This section explains the conventions used in the NuScale Final Safety Analysis Report (FSAR) for numbering tables, figures, and pages, as well as the handling of proprietary and sensitive information. It clarifies that sensitive material is withheld from the public version in accordance with regulatory requirements, while all such content is clearly marked in the non-public version.",
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain proper coolant flow, water chemistry, and boron concentration to protect fuel integrity and support safe operation under normal and transient conditions.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "10",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
       "hop": 2
     },
-    "nuscale_ch01_0079": {
-      "node_id": "nuscale_ch01_0079",
-      "title": "Advanced and Evolutionary Light-Water Reactor Design Issues",
-      "summary": "This section explains that the NuScale Final Safety Analysis Report aligns with regulatory criteria by incorporating relevant operational experience and NRC guidance, including bulletins and generic letters, into the design. It also details the evaluation of supplier compliance with 10 CFR 21 notifications and confirms that all applicable notifications have been addressed, ensuring the design meets advanced and evolutionary light-water reactor licensing and policy issues as outlined by the NRC.",
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the construction of the NuScale pressurizer and its components, specifying alloys and standards for each part to ensure corrosion resistance and compatibility with operating environments. It references relevant sections of the BPVC (Boiler and Pressure Vessel Code) and lists the specific alloys and material specifications for the baffle plate, heater bundles, cover plate, heater sheaths, and bolting.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "131",
-      "hop": 2
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 3
+    },
+    "nuscale_ch05_0012": {
+      "node_id": "nuscale_ch05_0012",
+      "title": "Reactor Coolant Pressure Boundary Leakage Detection",
+      "summary": "The NuScale reactor coolant system (RCS) does not use traditional components with designed leakage rates, making it impractical to distinguish between identified and unidentified leakage inside containment using current instrumentation. Any leakage into containment, regardless of source, quickly vaporizes and disperses, so all leakage is treated as unidentified until specifically located and quantified by other means; the leakage rate is determined by RCS inventory balance and compared to the containment evacuation system (CES) flow. The installed leakage detection systems are reliable, redundant, and sensitive enough to support leak-before-break analyses.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "41",
+      "hop": 3
+    },
+    "nuscale_ch05_0011": {
+      "node_id": "nuscale_ch05_0011",
+      "title": "Reactor Coolant Pressure Boundary Inservice Inspection and Testing",
+      "summary": "This section describes the materials and standards used for threaded fasteners in key reactor coolant system components, emphasizing the use of Alloy 718 for its compatibility and stress corrosion cracking resistance. It also outlines the requirements for preservice and inservice inspection and testing of pressure-retaining components, specifying adherence to the latest ASME BPVC Section XI codes and relevant regulatory conditions for ongoing inspection intervals.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "37",
+      "hop": 3
+    },
+    "nuscale_ch05_0013": {
+      "node_id": "nuscale_ch05_0013",
+      "title": "References",
+      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It cites guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as specific ASME code cases relevant to reactor component materials, inspection, and safety requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "46",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0117",
-      "target": "nuscale_ch01_0076",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A provides the legend for abbreviations and symbols used in NuScale's technical diagrams, which supports understanding the NRC-related terminology referenced in Section B's discussion of regulatory conformance and licensing approach."
-    },
-    {
-      "source": "nuscale_ch01_0117",
-      "target": "nuscale_ch01_0111",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A and Section B both provide legend information for interpreting symbols and abbreviations used in NuScale's NRC licensing documentation, with Section A focusing on piping and instrumentation diagram legends and Section B on instrumentation and controls symbol legends, together supporting accurate understanding of NRC-related abbreviations and NuScale's licensing approach."
-    },
-    {
-      "source": "nuscale_ch01_0117",
-      "target": "nuscale_ch01_0858",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A provides the legend for abbreviations and symbols used in NuScale's safety analysis diagrams, which supports Section B by enabling accurate interpretation of how NuScale documents its NRC licensing approach and conformance with regulatory criteria."
-    },
-    {
-      "source": "nuscale_ch01_0117",
-      "target": "nuscale_ch01_0129",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A provides the legend for abbreviations and symbols used in NuScale's technical diagrams, which supports Section B's discussion of NuScale's approach to NRC licensing by ensuring that documentation and communication with the NRC are clear and standardized."
-    },
-    {
-      "source": "nuscale_ch01_0117",
-      "target": "nuscale_ch01_0859",
-      "relation": "SATISFIES",
-      "confidence": 0.8,
-      "description": "Section A provides diagram legends and abbreviations used in NuScale's safety analysis documentation, while Section B references the regulatory criteria (SRP 19.3) that NuScale's licensing approach claims to conform with, connecting the use of standardized abbreviations and documentation practices to regulatory compliance."
-    },
-    {
-      "source": "nuscale_ch01_0076",
-      "target": "nuscale_ch01_0111",
-      "relation": "SEMANTIC",
-      "confidence": 0.7,
-      "description": "Section A discusses NuScale's review and conformance with NRC regulatory criteria and references a gap analysis report, while Section B provides symbol legends for instrumentation and controls used in technical drawings, with both sections using NRC-related abbreviations but without direct cross-reference or dependency."
-    },
-    {
-      "source": "nuscale_ch01_0076",
-      "target": "nuscale_ch01_0858",
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0020",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A describes NuScale's process of reviewing and summarizing conformance with the SRP, while Section B provides specific SRP sections and NuScale's conformance status, thus Section A provides the general approach and Section B details the results for particular SRP criteria."
+      "description": "Section A provides a general overview of the NuScale reactor coolant system, while Section B specifies the detailed components within that system—including the steam generators—which are relevant to understanding how primary coolant chemistry is controlled and maintained."
     },
     {
-      "source": "nuscale_ch01_0076",
-      "target": "nuscale_ch01_0129",
-      "relation": "SUPPORTS",
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A and Section B both describe NuScale's process of reviewing the Standard Review Plan (SRP) and submitting a gap analysis summary report to the NRC, indicating that the content in B is a repetition or direct excerpt of A, thus they are semantically equivalent and reinforce each other's explanation of NuScale's NRC licensing approach."
+      "description": "Section A provides a general overview of the NuScale reactor coolant system, while Section B specifies operational details and chemistry control actions (such as water level adjustments and degasification) that are implemented within the system described in Section A."
     },
     {
-      "source": "nuscale_ch01_0076",
-      "target": "nuscale_ch01_0859",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A describes NuScale's process of reviewing and conforming to the Standard Review Plan (SRP), while Section B lists specific SRP sections (including 19.3) and explicitly states NuScale's conformance to them, thus Section B provides detailed evidence supporting the general approach outlined in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0111",
-      "target": "nuscale_ch01_0858",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A provides symbol legends and logic definitions for instrumentation and controls, while Section B lists regulatory criteria (including NRC abbreviations and references) that NuScale's licensing approach must conform to, connecting them through the use and explanation of NRC-related abbreviations and compliance context."
-    },
-    {
-      "source": "nuscale_ch01_0111",
-      "target": "nuscale_ch01_0129",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A provides symbol legends for instrumentation and controls used in NuScale's safety analysis drawings, while Section B discusses NuScale's review and conformance with NRC regulatory criteria, connecting them through the use of standardized symbols and terminology (including abbreviations) that support regulatory documentation and licensing approach."
-    },
-    {
-      "source": "nuscale_ch01_0111",
-      "target": "nuscale_ch01_0859",
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0010",
       "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the overall design and flow characteristics of the NuScale reactor coolant system, while Section B specifies the material standards and regulatory compliance for the reactor coolant pressure boundary, both of which are foundational to establishing and maintaining appropriate primary coolant chemistry control."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the integrated design of the NuScale reactor coolant system, including steam generators and associated subsystems, while Section B details operational procedures and chemistry control measures (such as wet layup and chemical volume control) for these components, showing how the system's design enables specific coolant chemistry management practices."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0010",
+      "relation": "LEADS_TO",
+      "confidence": 0.85,
+      "description": "Section A describes the components of the NuScale reactor coolant system, including steam generators that are directly affected by coolant chemistry, while Section B specifies the material standards and regulatory requirements for the reactor coolant pressure boundary, which are influenced by the effectiveness of coolant chemistry control in preventing corrosion and degradation."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch05_0010",
+      "relation": "LEADS_TO",
+      "confidence": 0.85,
+      "description": "Section A describes the operational procedures and chemistry control systems (such as the chemical volume control system) used to manage coolant chemistry, which directly affect the integrity and performance of the reactor coolant pressure boundary materials discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A details specific features of the NuScale RCS related to coolant chemistry control (degasification and gas removal), while Section B provides a general overview of the RCS components and their functions, with Section A specifying operational details for the general system described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the RCS degasification line and vent valves for removing noncondensible gases, while Section B lists the steam generators and associated RCS components, including the degasification vent lines, showing that both sections detail interconnected RCS subsystems relevant to coolant chemistry control."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the function of the degasification line and reactor vent valves in removing noncondensible gases from the pressurizer during both normal and emergency operations, while Section B provides specific operational steps and component actions (such as venting nitrogen and using the chemical volume control system) that implement and detail the chemistry control processes outlined in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the NuScale reactor coolant system design, while Section B specifies the detailed components within that system, including the steam generators, thus elaborating on the general description in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the NuScale reactor coolant system design, while Section B specifies operational procedures and system components (such as the chemical volume control system) that implement and control the coolant chemistry described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes specific features (degasification line and vent valves) for removing noncondensible gases from the primary coolant, which are part of the overall RCS described in Section B as providing circulation and containment of the primary coolant."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed material specifications for pressurizer components that are generally described as part of the reactor coolant system in Section B, connecting specific design details to the overall system summary."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A details the materials and components of the pressurizer, while Section B provides an overview of the reactor coolant system components, including the pressurizer and steam generators, thus Section A specifies details for the general system described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the materials and components of the NuScale pressurizer, while Section B outlines operational procedures involving the pressurizer and associated systems, with both sections connected through their focus on the pressurizer's role in coolant chemistry control and system operation."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0002",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section B explains that the NuScale RCS lacks traditional components like pumps and external piping, which Section A references as absent when discussing leakage detection challenges, connecting the system design to its operational implications."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0020",
+      "relation": "LEADS_TO",
+      "confidence": 0.85,
+      "description": "Section A discusses the challenges in detecting and distinguishing reactor coolant pressure boundary leakage in NuScale's integrated design, while Section B describes the integrated configuration of the reactor coolant system components, including the steam generators, which is the underlying design feature affecting leakage detection methods."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0005",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the challenges in detecting and distinguishing reactor coolant system (RCS) leakage in NuScale due to unique system design, while Section B describes the use of the chemical volume control system and other components to manage coolant chemistry and system conditions, both addressing aspects of primary coolant chemistry control in NuScale as compared to conventional PWRs."
+    },
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0002",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A specifies the material selection and compatibility of threaded fasteners with the borated water environment in the RCS, which supports the overall RCS design described in Section B by ensuring material integrity under the primary coolant chemistry conditions."
+    },
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the selection of threaded fastener materials for compatibility with the borated water environment in the RCS, while Section B outlines the components contained within the reactor pressure vessel, including those affected by coolant chemistry, thus Section A provides specific material compatibility details relevant to the general system described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0005",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the selection of threaded fastener materials for compatibility with the borated water environment in the reactor coolant system, while Section B describes operational procedures that involve controlling water chemistry (such as wet layup and degasification) in the primary system, both addressing aspects of primary coolant chemistry control in NuScale."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0012",
+      "relation": "SUPPORTS",
       "confidence": 0.7,
-      "description": "Section B lists and references regulatory documents (such as SRP 19.3) relevant to NuScale's NRC licensing approach, while Section A provides symbol legends for instrumentation and controls, which may use abbreviations but does not directly address NRC abbreviations or licensing approach; thus, Section B provides the regulatory context that Section A's technical details must ultimately conform to."
+      "description": "Section A describes the materials and components of the NuScale pressurizer, while Section B discusses the detection of leakage from the reactor coolant pressure boundary, both of which are connected through their relevance to maintaining the integrity and chemistry control of the primary coolant system."
     },
     {
-      "source": "nuscale_ch01_0858",
-      "target": "nuscale_ch01_0129",
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0011",
       "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section B describes NuScale's review and conformance process with the NRC's Standard Review Plan (SRP) sections, including those listed in Section A, thereby providing evidence of how NuScale's NRC licensing approach aligns with the regulatory criteria outlined in Section A."
+      "confidence": 0.85,
+      "description": "Section A describes the materials used in the pressurizer components, while Section B specifies the material selection and compatibility requirements for threaded fasteners in the reactor coolant pressure boundary, both of which are connected through their focus on material compatibility with the borated water environment in the primary coolant system."
     },
     {
-      "source": "nuscale_ch01_0858",
-      "target": "nuscale_ch01_0859",
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0011",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B specifies the material selection and compatibility of threaded fasteners with reactor coolant chemistry, which supports the leakage detection considerations discussed in Section A by ensuring fastener integrity in the borated water environment."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0002",
       "relation": "REFERENCES",
       "confidence": 0.95,
-      "description": "Section A references and summarizes the regulatory criteria from Section B, specifically noting NuScale's conformance with SRP 19.3 requirements for non-safety systems in passive advanced light water reactors."
+      "description": "Section A cites industry guidelines and standards relevant to primary coolant chemistry control, which provide the regulatory and technical basis for the system described in Section B's summary of the NuScale reactor coolant system design."
     },
     {
-      "source": "nuscale_ch01_0129",
-      "target": "nuscale_ch01_0859",
-      "relation": "SPECIFIES",
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0020",
+      "relation": "IS_PREREQUISITE_OF",
       "confidence": 0.95,
-      "description": "Section A describes NuScale's process of reviewing and conforming to NRC Standard Review Plan (SRP) criteria, while Section B lists specific SRP sections (such as 19.3) and documents NuScale's conformance to them, thus Section B provides detailed evidence supporting the general approach outlined in Section A."
+      "description": "Section A references industry guidelines and standards for primary water chemistry control, which provide the regulatory and technical basis for the design and operation of reactor coolant system components described in Section B, including the steam generators."
     },
     {
-      "source": "nuscale_ch01_0130",
-      "target": "nuscale_ch01_0117",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses NuScale's conformance with NRC regulatory criteria and references regulatory documents and operational experience, while Section B provides diagram legends that include abbreviations and symbols used in technical drawings, thus Section B supports the explanation of abbreviations referenced in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0130",
-      "target": "nuscale_ch01_0076",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A explains that NuScale incorporates NRC operational experience and guidance into its design as required by regulations, while Section B details NuScale's systematic review and gap analysis of the Standard Review Plan (SRP) to ensure conformance with NRC criteria, thus both sections are connected by their focus on demonstrating compliance with NRC licensing requirements through adherence to regulatory guidance and operational experience."
-    },
-    {
-      "source": "nuscale_ch01_0130",
-      "target": "nuscale_ch01_0111",
-      "relation": "SEMANTIC",
-      "confidence": 0.7,
-      "description": "Section A discusses NuScale's conformance with NRC regulatory criteria and references regulatory documents, while Section B provides symbol legends for instrumentation and controls diagrams, with both sections using NRC-related abbreviations and terminology that must be verified for clarity in the licensing approach."
-    },
-    {
-      "source": "nuscale_ch01_0013",
-      "target": "nuscale_ch01_0117",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A references the use of figures (such as Figure 1.1-1) to present detailed information, while Section B provides an example of such a figure (Figure 1.7-3f) containing diagram legends relevant to NRC-related abbreviations, thus Section A's general description is specified by the detailed content in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0013",
-      "target": "nuscale_ch01_0076",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A explains that the FSAR preparation used the SRP and DSRS as technical guidance, while Section B details how NuScale reviewed and summarized its conformance with the SRP, directly connecting the design approach in A to the regulatory review process in B."
-    },
-    {
-      "source": "nuscale_ch01_0013",
-      "target": "nuscale_ch01_0111",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A explains the general approach to documentation and references the use of figures such as Figure 1.1-1, while Section B provides a specific example of such a figure (Figure 1.7-2) containing symbol legends relevant to NRC-related abbreviations and NuScale's licensing documentation."
-    },
-    {
-      "source": "nuscale_ch01_0014",
-      "target": "nuscale_ch01_0117",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A explains the general approach to abbreviations and references the structure for tables and figures, while Section B provides a specific example of a figure (Figure 1.7-3f) that uses these conventions to present diagram legends and abbreviations."
-    },
-    {
-      "source": "nuscale_ch01_0014",
-      "target": "nuscale_ch01_0076",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A explains that the FSAR preparation used the SRP and DSRS as technical guidance, while Section B details NuScale's review and conformance process with the SRP, showing that A's general statement is specified and elaborated by B."
-    },
-    {
-      "source": "nuscale_ch01_0014",
-      "target": "nuscale_ch01_0111",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the general approach to abbreviations and references the use of tables and figures for clarification, while Section B provides a specific example of such a figure (Figure 1.7-2) that uses abbreviations and symbols explained in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0079",
-      "target": "nuscale_ch01_0117",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section B provides detailed diagram legends and abbreviations used in NuScale's safety analysis report, which are referenced or utilized in Section A's discussion of NRC regulatory conformance and licensing approach."
-    },
-    {
-      "source": "nuscale_ch01_0079",
-      "target": "nuscale_ch01_0076",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A explains that NuScale incorporates NRC operational experience and guidance into its design as required by regulations, while Section B details NuScale's systematic review and gap analysis of the Standard Review Plan (SRP) to ensure conformance with NRC criteria, thus both sections describe complementary aspects of NuScale's NRC licensing approach by showing how regulatory guidance and requirements are integrated and verified."
-    },
-    {
-      "source": "nuscale_ch01_0079",
-      "target": "nuscale_ch01_0111",
-      "relation": "REFERENCES",
-      "confidence": 0.85,
-      "description": "Section B provides the definitions of abbreviations and symbols (such as logic gates) used in NuScale's safety analysis documentation, which are referenced or applied in Section A's discussion of NRC regulatory conformance and operational experience."
-    },
-    {
-      "source": "nuscale_ch01_0130",
-      "target": "nuscale_ch01_0013",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A explains that NuScale's design incorporates NRC operational experience and regulatory guidance, while Section B states that the FSAR preparation is based on NRC's SRP and DSRS, with detailed conformance evaluation in Section 1.9, thus Section B provides the general approach and Section A specifies how that approach is implemented regarding NRC criteria."
-    },
-    {
-      "source": "nuscale_ch01_0130",
-      "target": "nuscale_ch01_0014",
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0005",
       "relation": "REFERENCES",
       "confidence": 0.95,
-      "description": "Section B provides the list and explanation of abbreviations (such as NRC, SRP, DSRS) that are referenced and used in Section A to describe NuScale's NRC licensing approach and regulatory conformance."
-    },
-    {
-      "source": "nuscale_ch01_0130",
-      "target": "nuscale_ch01_0079",
-      "relation": "SEMANTIC",
-      "confidence": 1.0,
-      "description": "Section A and Section B are identical excerpts, both describing how NuScale incorporates NRC Bulletins, Generic Letters, and regulatory guidance into its licensing approach per 10 CFR 52.41(b)(1)."
-    },
-    {
-      "source": "nuscale_ch01_0013",
-      "target": "nuscale_ch01_0014",
-      "relation": "SUPPORTS",
-      "confidence": 1.0,
-      "description": "Section A and Section B are identical excerpts, both referencing the use of NRC-related abbreviations (e.g., SRP, DSRS, FSAR) and describing how NuScale's licensing approach is based on NRC guidance documents."
-    },
-    {
-      "source": "nuscale_ch01_0013",
-      "target": "nuscale_ch01_0079",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A explains that the NuScale FSAR preparation is based on NRC technical guidance (DSRS and SRP), while Section B details how NuScale incorporates NRC operational experience and regulatory criteria into its design, showing that Section A's general approach is specified in more detail in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0014",
-      "target": "nuscale_ch01_0079",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A explains that the FSAR preparation used NRC guidance documents (DSRS and SRP) as a basis for the NuScale design, while Section B details how NuScale incorporates NRC operational experience and regulatory criteria into its design, showing that the licensing approach described in A is implemented through the conformance processes in B."
+      "description": "Section A lists references, including EPRI PWR Primary Water Chemistry Guidelines, which provide the regulatory and industry standards that inform the chemistry control practices described in Section B for NuScale's system components."
     }
   ]
 }

@@ -1,0 +1,220 @@
+{
+  "question": "Based on Table 5.2-5 and Table 5.2-4, are the water chemistry limits adequate to protect the specified RCS materials?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch05_0013": {
+      "node_id": "nuscale_ch05_0013",
+      "title": "References",
+      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as tables summarizing relevant ASME code cases for materials and components used in nuclear facility applications.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "46",
+      "hop": 1
+    },
+    "nuscale_ch05_0009": {
+      "node_id": "nuscale_ch05_0009",
+      "title": "Overpressure Protection",
+      "summary": "This section outlines NuScale's compliance with overpressure protection requirements by referencing applicable ASME Boiler and Pressure Vessel Code (BPVC) and Operations and Maintenance (OM) code cases, as mandated by various sections of 10 CFR 50.55a and related Regulatory Guides (RGs). It details how code cases for design, fabrication, construction, preservice, and inservice inspections and testing are selected and verified to meet NRC-endorsed standards, with a consolidated list provided in Table 5.2-1.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "21",
+      "hop": 1
+    },
+    "nuscale_ch05_0008": {
+      "node_id": "nuscale_ch05_0008",
+      "title": "Compliance with Codes and Code Cases",
+      "summary": "This section describes how the NuScale Power Modules (NPMs) comply with relevant regulatory requirements, specifically 10 CFR 50.55a and associated General Design Criteria, by designing, fabricating, and testing reactor coolant pressure boundary (RCPB) components to ASME Boiler and Pressure Vessel Code (BPVC) Class 1 standards. It also clarifies the classification of connected piping and references the applicable ASME BPVC edition and related regulatory guides used for the design certification.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "20",
+      "hop": 1
+    },
+    "nuscale_ch05_0002": {
+      "node_id": "nuscale_ch05_0002",
+      "title": "Summary Description",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, forming a key subsystem of each NuScale Power Module. The RCS is designed to ensure safe and efficient cooling, maintain water chemistry, and support uniform boron concentration under normal and abnormal conditions, thereby protecting fuel integrity and plant safety.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 1
+    },
+    "nuscale_ch05_0010": {
+      "node_id": "nuscale_ch05_0010",
+      "title": "Reactor Coolant Pressure Boundary Materials",
+      "summary": "The Reactor Coolant Pressure Boundary (RCPB) materials, including welds, are selected and fabricated in accordance with ASME BPVC standards and meet the regulatory requirements of 10 CFR 50, including General Design Criteria for quality, environmental compatibility, and fracture prevention. The materials used for Class 1 components, such as the reactor pressure vessel (RPV) and steam generators (SGs), are specified in Table 5.2-4, ensuring compliance with applicable material specifications and fracture toughness criteria.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "29",
+      "hop": 1
+    },
+    "nuscale_ch05_0020": {
+      "node_id": "nuscale_ch05_0020",
+      "title": "Steam Generators",
+      "summary": "Each NuScale Power Module’s reactor pressure vessel contains two integral steam generators, which are part of the reactor coolant system and share the vessel’s pressure boundary. The steam generator system includes feedwater and main steam piping, thermal relief valves, and access ports, with the reactor pressure vessel itself forming the shell and pressure boundary for the steam generators. The design ensures separation between the primary and secondary sides, with specific components forming the reactor coolant pressure boundary.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
+      "hop": 2
+    },
+    "nuscale_ch05_0017": {
+      "node_id": "nuscale_ch05_0017",
+      "title": "Reactor Vessel Integrity",
+      "summary": "This section outlines the procedures and regulatory compliance measures to ensure the integrity of the NuScale reactor vessel throughout its 60-year design life. It details the development of operating procedures to maintain pressure-temperature limits, evaluates the vessel’s resistance to pressurized thermal shock and upper-shelf energy degradation, and confirms that all predicted values remain within regulatory safety criteria.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "73",
+      "hop": 2
+    },
+    "nuscale_ch05_0022": {
+      "node_id": "nuscale_ch05_0022",
+      "title": "Decay Heat Removal System",
+      "summary": "The Decay Heat Removal System (DHRS) is an engineered safety feature designed to remove residual and core decay heat from the reactor after shutdown, especially when normal cooling is unavailable, without relying on external power. It ensures the reactor coolant system temperature drops below 420°F within 36 hours, maintaining fuel and pressure boundary safety limits, and its reliability and risk significance are rigorously evaluated. The DHRS operates independently of the Emergency Core Cooling System (ECCS), but both can function together if needed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "106",
+      "hop": 4
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0009",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides references to industry standards and guidelines (such as EPRI chemistry guidelines and ASME codes) that underpin the regulatory and technical basis for the water chemistry limits, while Section B discusses compliance with ASME and NRC regulatory requirements for the design and operation of the reactor coolant boundary, thus both sections are connected through their reliance on ASME and EPRI standards to ensure RCS material integrity."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0008",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A lists references, including EPRI water chemistry guidelines and ASME quality assurance standards, which are foundational documents that Section B relies on to demonstrate compliance with regulatory codes for the integrity of the Reactor Coolant Pressure Boundary (RCPB)."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0002",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A lists references, including water chemistry guidelines, that are relevant to the integrity of the Reactor Coolant Boundary, while Section B provides a summary description of the Reactor Coolant System (RCS) and its materials, thus Section A provides the regulatory and technical basis that supports the adequacy of water chemistry limits for protecting the RCS materials described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0010",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A provides references, including industry guidelines and standards, that are relevant to the water chemistry limits, while Section B describes the RCS materials and their compliance with ASME and regulatory requirements, connecting them through the standards that inform both material selection and chemistry control."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0008",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides specific details about overpressure protection and references the use of ASME BPVC code cases for design and construction, which are generally described as compliance requirements in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A specifies the regulatory codes and standards (such as ASME BPVC and 10 CFR 50.55a) that govern the design and integrity requirements for the reactor coolant boundary, while Section B provides a general description of the reactor coolant system and its components, establishing the context for which those codes and standards apply."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0010",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A references the applicable ASME BPVC codes and regulatory requirements for overpressure protection, while Section B specifies that the RCS materials conform to those same ASME BPVC codes and regulatory requirements, thus connecting the design and material selection to the regulatory framework."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A states that the RCS materials are designed and constructed in compliance with ASME Code requirements, while Section B provides a general description of the RCS and its components, establishing the context for which the code compliance applies."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0010",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A states that the reactor coolant pressure boundary components are designed and constructed in compliance with ASME BPVC Section III, while Section B specifies that the materials used for these components also conform to ASME BPVC Section III and Section II requirements, thus Section B provides the material-level details that fulfill the general compliance described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0010",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the components and configuration of the RCS, which includes the materials referenced in Section B, while Section B specifies the regulatory and code requirements that the RCS materials must meet, thus linking the system's design to its material standards."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0013",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A describes the components of the Reactor Coolant System, including steam generators that require protection from corrosion, while Section B lists references to industry water chemistry guidelines and materials reliability programs that establish the water chemistry limits intended to protect those RCS materials."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0009",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the RCS components and materials that require protection, while Section B outlines the regulatory codes and standards (ASME BPVC, 10 CFR 50.55a) that set requirements for the integrity and protection of those materials, thus connecting the design features to the regulatory framework for material protection."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0008",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the RCS components, including steam generators, that require protection, while Section B specifies that these components are designed and constructed to meet regulatory codes (ASME BPVC) which include water chemistry limits for material protection."
+    },
+    {
+      "source": "nuscale_ch05_0017",
+      "target": "nuscale_ch05_0013",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A discusses the development of operating procedures to ensure reactor vessel integrity by not exceeding pressure-temperature limits, while Section B lists references including the EPRI Primary Water Chemistry Guidelines, which provide the technical basis for water chemistry limits that protect RCS materials; thus, Section A's procedures are informed by and reference the standards in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0017",
+      "target": "nuscale_ch05_0009",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the development of operating procedures to ensure reactor vessel integrity by not exceeding pressure-temperature limits, while Section B outlines compliance with ASME and NRC overpressure protection requirements, both of which are connected through their shared goal of maintaining the integrity of the reactor coolant boundary under regulatory and procedural controls."
+    },
+    {
+      "source": "nuscale_ch05_0017",
+      "target": "nuscale_ch05_0008",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the development of operating procedures to ensure reactor vessel integrity by not exceeding pressure-temperature limits, while Section B establishes that the reactor coolant boundary components comply with ASME Code and regulatory requirements, connecting them through the shared goal of maintaining material integrity under specified operational and regulatory constraints."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the components of the reactor coolant system, including materials exposed to RCS water chemistry, while Section B discusses the development of operating procedures to ensure reactor vessel integrity by maintaining pressure-temperature limits, both of which are connected by the need to protect RCS materials from degradation due to operational and chemical conditions."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch05_0013",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the design basis for the Decay Heat Removal System, which must ensure protection of RCS materials, while Section B lists references including water chemistry guidelines that set the regulatory limits for protecting those materials; thus, Section A's adequacy is judged by whether it satisfies the requirements specified in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch05_0009",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A describes the design basis and function of the Decay Heat Removal System to maintain safe conditions, while Section B outlines compliance with ASME and NRC regulatory codes for the integrity of the reactor coolant boundary, connecting them through the requirement that system designs (like DHRS) must comply with these regulatory and code-based material protection standards."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch05_0008",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the design basis and operational function of the Decay Heat Removal System to ensure safe shutdown and protect fuel design limits, while Section B establishes that the Reactor Coolant Pressure Boundary components, which include those cooled by the DHRS, comply with regulatory codes (ASME BPVC) that set material and operational requirements, thus linking the system's operational adequacy to code-based material protection."
+    }
+  ]
+}

@@ -1,49 +1,470 @@
 {
-  "question": "Explain the functional boundaries of NuScale.",
+  "question": "What safety enhancement does Table 1.2-2 attribute to the integral RCS, and how does Figure 5.1-2 illustrate this design?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0072": {
-      "node_id": "nuscale_ch01_0072",
-      "title": "Combined License Information Items",
-      "summary": "This section explains the interface requirements between the NuScale Power Plant certified design and the site-specific design provided in the combined license (COL) application. It distinguishes between conceptual design information (CDI) for non-certified plant portions and COL information items, which are site-specific responsibilities of the COL applicant. The section also notes that COL applicants must address all COL information items and provide a list of any departures from the certified design.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "108",
-      "hop": 1
-    },
     "nuscale_ch01_0118": {
       "node_id": "nuscale_ch01_0118",
       "title": "1.8 Interfaces with Certified Design",
-      "summary": "This section explains the interface requirements between the NuScale Power Plant's certified design and the site-specific design provided in the combined license (COL) application. It distinguishes between conceptual design information (CDI) for non-certified plant portions and COL information items, which are site-specific responsibilities. The section also notes that COL applicants must address all COL information items and provide a list of any departures from the certified design.",
+      "summary": "This section describes the interface requirements between the NuScale Power Plant’s certified design and the site-specific design provided in the combined license (COL) application. It explains the types of interface requirements (conceptual design information and COL information items), identifies where these interfaces and information items are documented, and notes that COL applicants must address any departures from the certified design.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "108",
       "hop": 1
     },
-    "nuscale_ch01_0071": {
-      "node_id": "nuscale_ch01_0071",
-      "title": "Interfaces with Certified Design",
-      "summary": "This section outlines the interface requirements between the NuScale Power Plant certified design and the site-specific design provided in the combined license (COL) application. It distinguishes between conceptual design information (CDI) for non-certified plant portions and COL information items, which are site-specific responsibilities of the COL applicant. The section also notes that COL applicants must address all COL information items and provide a list of any departures from the certified design.",
+    "nuscale_ch01_0072": {
+      "node_id": "nuscale_ch01_0072",
+      "title": "Combined License Information Items",
+      "summary": "This section explains the interface requirements between the NuScale Power Plant’s certified design and the site-specific design elements provided in the Combined License (COL) application. It distinguishes between conceptual design information (CDI) for non-certified plant portions and COL information items, which are site-specific responsibilities of the COL applicant. The section also notes that COL applicants must provide a list of any departures from the certified design.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "108",
+      "hop": 1
+    },
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located within the containment vessel and includes components such as the reactor pressure vessel, pressurizer, and associated piping and controls. The RCS removes heat from the reactor core to the steam generators using natural circulation, and features systems for degasification and emergency core cooling to maintain safety and integrity during both normal and emergency operations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch05_0002": {
+      "node_id": "nuscale_ch05_0002",
+      "title": "Summary Description",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve independent modules, maintains proper coolant chemistry, and ensures uniform boron concentration to protect fuel integrity during all operating conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 1
+    },
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section describes the NuScale reactor coolant system (RCS), which uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator. The RCS is designed to ensure safe and efficient cooling, maintain water chemistry, and provide uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 1
+    },
+    "nuscale_ch01_0069": {
+      "node_id": "nuscale_ch01_0069",
+      "title": "Piping and Instrumentation Diagrams",
+      "summary": "This section describes the use of simplified electrical, instrumentation and control (I&C), and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information. It references tables and figures that list and explain the symbols used in these diagrams, and notes that site-specific diagrams and legends will be provided by COL applicants referencing the NuScale design certification.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
+      "hop": 1
+    },
+    "nuscale_ch01_0020": {
+      "node_id": "nuscale_ch01_0020",
+      "title": "Safety Considerations",
+      "summary": "The NuScale design enhances safety by maintaining a vacuum in the containment vessel (CNV), which reduces corrosion, aids leak detection, and limits combustible gases. Its passive safety systems and integral design eliminate the need for external power and large coolant loops, significantly lowering the risk of core damage compared to traditional nuclear plants.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "32",
       "hop": 2
+    },
+    "nuscale_ch01_0022": {
+      "node_id": "nuscale_ch01_0022",
+      "title": "Engineered Safety Feature Materials",
+      "summary": "The NuScale reactor’s containment vessel (CNV) is maintained under vacuum during normal operation, which reduces corrosion, aids in leak detection, minimizes heat transfer, and limits oxygen for safety. The design relies on passive safety features—such as natural cooling and elimination of external coolant loops—which lower the risk of core damage and reduce radioactive inventory compared to conventional reactors.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "32",
+      "hop": 2
+    },
+    "nuscale_ch01_0051": {
+      "node_id": "nuscale_ch01_0051",
+      "title": "Plant Features of Special Interest",
+      "summary": "This section describes key plant features of special interest in the NuScale Power Plant, including the Central Utility Building (CUB) and Diesel Generator Buildings (DGBs), which house essential but nonsafety-related systems and backup power equipment. It also highlights human factors considerations, such as fail-safe design, advanced automation, and digital controls, aimed at minimizing human error and optimizing operator workload, in compliance with regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "43",
+      "hop": 2
+    },
+    "nuscale_ch01_0067": {
+      "node_id": "nuscale_ch01_0067",
+      "title": "Drawings and Other Detailed Information",
+      "summary": "This section describes the inclusion of simplified instrumentation, control, electrical, and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information alongside written descriptions. It lists the types of diagrams provided, references legends for interpreting symbols, and notes that applicants referencing the NuScale design must supply site-specific diagrams and legends as needed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
+      "hop": 2
+    },
+    "nuscale_ch05_0023": {
+      "node_id": "nuscale_ch05_0023",
+      "title": "Reactor Coolant System High-Point Vents",
+      "summary": "This section describes the testing and inspection requirements for the Decay Heat Removal System (DHRS) components, including compliance with ASME codes for preservice and inservice inspections. It details how DHRS actuation valves are exercised and tested, primarily during cold shutdown conditions, and outlines the procedures for verifying valve function and position, including a one-time in-situ test for the first reactor module during initial startup.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "121",
+      "hop": 4
+    },
+    "nuscale_ch01_0863": {
+      "node_id": "nuscale_ch01_0863",
+      "title": "Table 1.9-8: Conformance with SECY-93-087, \"Policy, Technical, and Licensing Issues Pertaining to Evolutionary and Advanced Light-Water Reactor Designs\"",
+      "summary": "Table 1.9-8 summarizes NuScale’s conformance with SECY-93-087 policy and technical issues for advanced light-water reactor designs. The table lists each issue, NuScale’s conformance status (conforms, partially conforms, or not applicable), and relevant comments or references to supporting sections in the safety analysis report. This demonstrates how NuScale addresses regulatory expectations for safety and design features.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "348",
+      "hop": 4
+    },
+    "nuscale_ch01_0044": {
+      "node_id": "nuscale_ch01_0044",
+      "title": "Chemical and Volume Control System",
+      "summary": "The Chemical and Volume Control System section describes the NuScale reactor’s passive safety features, including two independent decay heat removal trains, each capable of fully cooling the reactor core. In the event of an accident or loss of power, heat is transferred from the reactor to a large, stainless steel-lined pool (the ultimate heat sink) via natural circulation, ensuring continued cooling without external power or active systems.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "41",
+      "hop": 4
+    },
+    "nuscale_ch01_0019": {
+      "node_id": "nuscale_ch01_0019",
+      "title": "Operating Characteristics",
+      "summary": "The NuScale Power Module (NPM) operates using natural circulation for reactor coolant flow, eliminating the need for reactor coolant pumps, and features a small, modular, integral pressurized water reactor design. It employs passive safety systems—including dedicated emergency core cooling and decay heat removal systems—that do not rely on electrical power, and its components are housed in steel containment partially immersed in water for effective heat removal. The NPM allows for flexible power maneuvering using control rods, soluble boron, or both, and is designed for modular fabrication and enhanced safety.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "29",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0072",
-      "target": "nuscale_ch01_0118",
+      "source": "nuscale_ch01_0118",
+      "target": "nuscale_ch01_0072",
       "relation": "REFERENCES",
-      "confidence": 1.0,
-      "description": "Section A repeats verbatim the content of Section B, indicating they are the same text and thus directly reference each other."
+      "confidence": 0.95,
+      "description": "Section A and Section B both discuss the interface requirements between the certified design and the site-specific design, referencing the same figures and tables to delineate boundaries and included components."
     },
     {
-      "source": "nuscale_ch01_0071",
+      "source": "nuscale_ch01_0118",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A references Table 1.2-2 as attributing a safety enhancement to the integral RCS, while Section B describes specific design features of the RCS that illustrate how this safety enhancement is achieved."
+    },
+    {
+      "source": "nuscale_ch01_0118",
+      "target": "nuscale_ch05_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B describes the integral RCS design and its reliance on natural circulation, which is the safety enhancement attributed in Table 1.2-2, while Figure 5.1-2 (referenced in Section B) visually illustrates this design feature."
+    },
+    {
+      "source": "nuscale_ch01_0118",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A references Table 1.2-2 as attributing safety enhancements to the integral RCS, while Section B describes the design basis of the RCS, providing details that illustrate how these enhancements are realized in the system's configuration."
+    },
+    {
+      "source": "nuscale_ch01_0118",
+      "target": "nuscale_ch01_0069",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references the use of figures and tables (such as Figure 1.2-2 and Table 1.8-1) to delineate design boundaries, while Section B explains that figures (including piping and instrumentation diagrams) visually clarify design information described in the text, indicating that figures and tables in Section A are supported by the detailed diagrams described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0072",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A references Table 1.2-2 as attributing a safety enhancement to the integral RCS, while Section B describes specific design features of the RCS (such as degasification and pressure boundary integrity) that illustrate how this safety enhancement is achieved."
+    },
+    {
+      "source": "nuscale_ch01_0072",
+      "target": "nuscale_ch05_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A identifies the certified design boundaries and components, which include the integral RCS, while Section B describes the integral RCS's reliance on natural circulation as a safety enhancement, thus Section B provides specific design details that fulfill the general identification in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0072",
+      "target": "nuscale_ch05_0003",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A references Table 1.2-2, which attributes safety enhancements to the integral RCS, while Section B describes the design basis of the RCS, providing technical details that illustrate and support the safety claims made in Table 1.2-2."
+    },
+    {
+      "source": "nuscale_ch01_0072",
+      "target": "nuscale_ch01_0069",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A identifies the certified design boundaries and references figures that represent the facility layout, while Section B explains that figures (such as piping and instrumentation diagrams) visually clarify design information described in the text, connecting the identification of design scope in Section A to the detailed illustration in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides a general overview of the integral RCS design, while Section A specifies detailed features—such as degasification and pressure boundary integrity—that enhance safety as referenced in Table 1.2-2 and illustrated in Figure 5.1-2."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B describes the integral RCS design, highlighting its reliance on natural circulation and absence of external piping, while Section A details specific safety features (like degasification and venting) that enhance safety as attributed in Table 1.2-2 and are illustrated in Figure 5.1-2."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch01_0069",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the safety function of the integral RCS, specifically its degasification and pressure boundary integrity features, while Section B explains that figures such as Figure 5.1-2 visually clarify these design features, thus Figure 5.1-2 illustrates the safety enhancements described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch01_0069",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a textual summary of the integral RCS design and its reliance on natural circulation, while Section B references figures (such as Figure 5.1-2) that visually clarify and illustrate the design described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch01_0069",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a textual summary of the integral RCS design and its reliance on natural circulation, while Section B explains that figures such as Figure 5.1-2 visually clarify and illustrate the design described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0020",
       "target": "nuscale_ch01_0118",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A describes specific safety benefits of the integral RCS design (such as vacuum maintenance in the CNV), while Section B references Section 1.2 as the source identifying certified design components, thus structurally linking the safety enhancements in A to the design boundaries discussed in B."
+    },
+    {
+      "source": "nuscale_ch01_0020",
+      "target": "nuscale_ch01_0072",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A describes specific safety benefits of the integral RCS design, while Section B references where in the documentation (Section 1.2 and associated figures/tables) these certified design features, including the RCS, are identified and delineated."
+    },
+    {
+      "source": "nuscale_ch01_0020",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the safety benefits of maintaining a vacuum in the CNV, which is enabled by the integral RCS design features detailed in Section B, such as degasification and pressure boundary integrity, thereby illustrating how the design supports the attributed safety enhancements."
+    },
+    {
+      "source": "nuscale_ch01_0022",
+      "target": "nuscale_ch01_0118",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B references Section A by noting that Section 1.2 (from which Section A is excerpted) identifies the structures, systems, and components included in the certified design, thereby establishing that the safety features described in Section A are part of the certified design scope."
+    },
+    {
+      "source": "nuscale_ch01_0022",
+      "target": "nuscale_ch01_0072",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B references Section A by stating that Section 1.2 (from which Section A is excerpted) identifies the structures, systems, and components included in the certified design, thereby connecting the safety features described in Section A to the broader regulatory context."
+    },
+    {
+      "source": "nuscale_ch01_0022",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the safety benefits of maintaining a vacuum in the containment vessel (CNV), which is enabled by the integral reactor coolant system (RCS) design detailed in Section B, where features like degasification lines and pressure-retaining boundaries support the vacuum environment and enhance safety."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0118",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B states that Section 1.2 (referenced in Section A) identifies the structures, systems, and components included in the certified design, establishing that Section A's discussion of plant features is part of the certified design scope addressed by Section B."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0072",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B states that Section 1.2 (referenced in Section A) identifies the structures, systems, and components included in the certified design, thus connecting Section A's plant feature descriptions to the regulatory interface requirements in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes the integral RCS's design features that maintain reactor coolant pressure boundary integrity, which Table 1.2-2 (referenced in the analysis question) attributes as a safety enhancement, and Figure 5.1-2 visually illustrates these features."
+    },
+    {
+      "source": "nuscale_ch01_0067",
+      "target": "nuscale_ch01_0118",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A provides detailed drawings and figures that visually clarify design information, which can include illustrations like Figure 5.1-2, while Section B identifies the certified design scope and references figures (such as Figure 1.2-1 and 1.2-2) that define boundaries, connecting the visual documentation in A to the certified design context in B."
+    },
+    {
+      "source": "nuscale_ch01_0067",
+      "target": "nuscale_ch01_0072",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides detailed drawings and figures that visually clarify design information, which can be used to illustrate or support the certified design boundaries and interfaces described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0067",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides visual figures, such as Figure 5.1-2, that clarify and illustrate the design features described in Section B, including the integral RCS and its safety enhancements."
+    },
+    {
+      "source": "nuscale_ch01_0020",
+      "target": "nuscale_ch01_0022",
       "relation": "SEMANTIC",
       "confidence": 1.0,
-      "description": "Section A and Section B are identical excerpts that both describe the interface requirements and boundaries between the NuScale certified design and the site-specific design, directly addressing the functional boundaries relevant to the analysis question."
+      "description": "Section A and Section B are identical excerpts describing the safety benefits of maintaining a vacuum in the CNV, thus both provide the same information regarding the integral RCS safety enhancement."
+    },
+    {
+      "source": "nuscale_ch01_0020",
+      "target": "nuscale_ch01_0067",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the safety benefits of the integral RCS design, while Section B explains that figures such as Figure 5.1-2 visually clarify these design features, thus Figure 5.1-2 illustrates the safety enhancements described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0022",
+      "target": "nuscale_ch01_0067",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the safety benefits of maintaining a vacuum in the CNV as part of the integral RCS design, while Section B explains that figures such as Figure 5.1-2 visually clarify and illustrate these design features described in the text."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0067",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section B explains that figures such as Figure 5.1-2 are provided to visually clarify design information described in the text, such as the safety enhancements attributed to the integral RCS in Table 1.2-2 referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch01_0118",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B identifies and delineates the certified design boundaries and components (including the integral RCS) referenced in Table 1.2-2, while Section A provides detailed inspection and testing requirements for specific RCS components within those certified boundaries."
+    },
+    {
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch01_0072",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section B identifies the certified design boundaries and components (including the RCS) referenced in Section A, which details inspection requirements for those components."
+    },
+    {
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes the integral RCS's degasification and venting features that enhance safety by removing noncondensible gases, while Section A details the inspection and classification requirements for components (such as valves) that implement these features, connecting the design's safety function to its regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch01_0863",
+      "target": "nuscale_ch01_0118",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A (Table 1.9-8) references regulatory conformance issues, while Section B (Section 1.8) specifies the interface requirements and boundaries for the certified design, with Section B identifying where in the documentation the certified design's structures, systems, and components are described, which Section A may reference for demonstrating regulatory conformance."
+    },
+    {
+      "source": "nuscale_ch01_0863",
+      "target": "nuscale_ch01_0072",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section B identifies and visually represents the certified design boundaries and components (including the integral RCS) referenced in Section A's regulatory conformance table, thereby providing the structural context for the safety enhancements attributed to the integral RCS."
+    },
+    {
+      "source": "nuscale_ch01_0863",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A (Table 1.9-8) references regulatory conformance requirements, while Section B (System Description) provides specific design features of the RCS that demonstrate how these requirements are met, connecting general regulatory expectations to concrete system attributes."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0118",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B references Section A by stating that Section 1.2 (where Section A is located) identifies the structures, systems, and components included in the certified design, thereby connecting the general interface requirements to the specific system descriptions in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0072",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A describes the functional capabilities of the Chemical and Volume Control System as part of the certified design, while Section B specifies that Section 1.2 (referenced in A) identifies which systems, such as the RCS, are included in the certified design, thus connecting the system's safety features to their regulatory boundaries."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Table 1.2-2 attributes enhanced safety to the integral RCS by highlighting its closed-loop, passive decay heat removal features (Section A), which Figure 5.1-2 illustrates by depicting the system's design elements such as the pressure-retaining boundaries and degasification lines (Section B)."
+    },
+    {
+      "source": "nuscale_ch01_0019",
+      "target": "nuscale_ch01_0118",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B states that Section 1.2 (referenced in Section A) identifies the structures, systems, and components included in the certified design, thereby connecting the operating characteristics described in Section A to the certified design boundaries discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0019",
+      "target": "nuscale_ch01_0072",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A describes the operating characteristics and safety features of the integral RCS, which are referenced in Section B as part of the certified design interfaces identified in Section 1.2."
+    },
+    {
+      "source": "nuscale_ch01_0019",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the integral RCS's safety feature of eliminating reactor coolant pumps by using natural circulation, while Section B illustrates how the RCS design (including pressure-retaining boundaries and degasification lines) supports this passive safety approach, thereby showing how the design in Figure 5.1-2 implements the safety enhancement attributed in Table 1.2-2."
+    },
+    {
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch01_0863",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section B (Table 1.9-8) lists regulatory conformance issues and references specific FSAR sections (such as Section 5.1) where design features—including those illustrated in Figure 5.1-2—are described, thus Section B cross-references the detailed design information found in Section A and related figures."
+    },
+    {
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch01_0044",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes the integral RCS's safety enhancement—passive decay heat removal via the DHRS—while Section A details the inspection and classification requirements for DHRS components that ensure this safety function is reliably maintained."
+    },
+    {
+      "source": "nuscale_ch05_0023",
+      "target": "nuscale_ch01_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B describes the integral RCS design feature of eliminating reactor coolant pumps and using natural circulation, which Table 1.2-2 attributes as a safety enhancement, while Figure 5.1-2 visually illustrates this design by showing the system layout."
+    },
+    {
+      "source": "nuscale_ch01_0863",
+      "target": "nuscale_ch01_0044",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B describes the design features of the integral RCS, specifically its passive decay heat removal capability, which is the safety enhancement attributed to the integral RCS in Table 1.2-2 referenced in the analysis question, thus providing detailed support for the general safety claim."
+    },
+    {
+      "source": "nuscale_ch01_0863",
+      "target": "nuscale_ch01_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B describes the integral RCS design feature—specifically, the use of natural circulation and absence of penetrations below the core—which is the safety enhancement attributed in Table 1.2-2, while Figure 5.1-2 visually illustrates these design characteristics."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B describes the integral RCS's use of natural circulation and passive safety systems, which Table 1.2-2 attributes as a safety enhancement, while Section A details how the Chemical and Volume Control System and decay heat removal equipment function within this design, illustrating the practical implementation referenced in Figure 5.1-2."
     }
   ]
 }

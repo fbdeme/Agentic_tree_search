@@ -1,0 +1,845 @@
+{
+  "question": "Is the 24-month refueling cycle (Ch.01) consistent with the Ch.05 RCS design for cooldown and depressurization?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0036": {
+      "node_id": "nuscale_ch01_0036",
+      "title": "Refueling Operations",
+      "summary": "Refueling operations for a NuScale Power Module (NPM) are conducted independently from other modules. The process involves moving the NPM from its operating bay to the refueling pool, disassembling it for core refueling and maintenance, and then reassembling and returning it to service after successful testing and inspection.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "38",
+      "hop": 1
+    },
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the construction of the pressurizer and its components within the NuScale reactor coolant system, specifying alloys and standards for each part to ensure corrosion resistance and compatibility. It references relevant sections of the BPVC (Boiler and Pressure Vessel Code) and lists the applicable material specifications for components such as the baffle plate, heater bundles, cover plate, and bolting.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 1
+    },
+    "nuscale_ch01_0439": {
+      "node_id": "nuscale_ch01_0439",
+      "title": "SRP 10.4.6, Rev 3: Condensate Cleanup SystemII.2 Maintain indirect cycle PWR water quality to avoid corrosion-induced failure of the reactor coolant pressure boundary (GDC 14)",
+      "summary": "The section outlines NuScale’s compliance with regulatory criteria for maintaining indirect cycle PWR water quality to prevent corrosion-induced failure of the reactor coolant pressure boundary, as required by GDC 14. It notes that in the NuScale design, primary water is outside the steam generator tubes and secondary water is inside, with no steam generator blowdown, resulting in secondary chemistry requirements that differ from standard guidelines.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "263",
+      "hop": 1
+    },
+    "nuscale_ch01_0309": {
+      "node_id": "nuscale_ch01_0309",
+      "title": "SRP 9.1.4, Rev 4: Light Load Handling System and Refueling Cavity DesignII.3 Specific Criteria to Meet GDC 61",
+      "summary": "This section documents NuScale’s conformance with regulatory criteria for the Light Load Handling System and Refueling Cavity Design, specifically addressing compliance with General Design Criterion (GDC) 61. It confirms that the design meets the required safety standards outlined in SRP 9.1.4, with no exceptions or additional comments noted.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "244",
+      "hop": 1
+    },
+    "nuscale_ch01_0438": {
+      "node_id": "nuscale_ch01_0438",
+      "title": "SRP 10.4.6, Rev 3: Condensate Cleanup SystemII.1 Maintain direct cycle BWR plant water quality to avoid corrosion-induced failure of the reactor coolant pressure boundary (GDC 14)",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for various systems, noting that certain requirements are not applicable due to design differences (e.g., BWR-only criteria or absence of Class 2/3 components). For the Condensate Cleanup System, NuScale confirms that BWR-specific water quality requirements do not apply, but for PWR systems, their design meets corrosion prevention standards, with unique secondary chemistry requirements due to the steam generator configuration.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "263",
+      "hop": 1
+    },
+    "nuscale_ch05_0000": {
+      "node_id": "nuscale_ch05_0000",
+      "title": "Preface",
+      "summary": "The Preface outlines the copyright and usage restrictions for the NuScale Standard Plant Design Certification Application, specifically Chapter Five, which covers the Reactor Coolant System and Connecting Systems. It specifies that only the U.S. Nuclear Regulatory Commission (NRC) is authorized to use, copy, or disclose the information for regulatory purposes, and any copies must include the appropriate copyright and proprietary notices.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "1",
+      "hop": 1
+    },
+    "nuscale_ch01_0862": {
+      "node_id": "nuscale_ch01_0862",
+      "title": "Table 1.9-4: Conformance with Interim Staff Guidance (ISG)",
+      "summary": "Table 1.9-4 summarizes NuScale’s conformance with various Interim Staff Guidance (ISG) sections, particularly regarding seismic issues and other regulatory criteria. The table indicates that NuScale’s design generally conforms to seismic-related ISGs, with some partial conformance where site-specific information is required, and notes that certain ISGs are not applicable to the current application stage.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "324",
+      "hop": 1
+    },
+    "nuscale_ch01_0662": {
+      "node_id": "nuscale_ch01_0662",
+      "title": "DSRS 15.0.3, Rev 0: Design Basis Accident Radiological Consequence Analyses for the NuScale SMR DesignII.2 Control Room Radiological Habitability",
+      "summary": "This section summarizes the NuScale SMR design’s conformance with regulatory criteria for radiological consequence analyses during design basis accidents, specifically addressing control room radiological habitability. It confirms that the NuScale design meets the relevant requirements for protecting control room personnel from radiological exposure during postulated accidents, as outlined in DSRS 15.0.3 and related sections. The document also notes partial conformance for the Technical Support Center, with full criteria met when AC power is available.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "288",
+      "hop": 2
+    },
+    "nuscale_ch01_0130": {
+      "node_id": "nuscale_ch01_0130",
+      "title": "1.9.5 Advanced and Evolutionary Light-Water Reactor Design Issues",
+      "summary": "This section describes how the NuScale Final Safety Analysis Report aligns with regulatory criteria, incorporating relevant operational experience and NRC guidance into the reactor design. It details the evaluation process for supplier compliance, including reviews of 10 CFR 21 notifications, and confirms that all applicable notifications have been addressed. Additionally, it references NRC policy and licensing issues for advanced and evolutionary light-water reactor designs, as outlined in SECY-93-087 and related guidance.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "131",
+      "hop": 2
+    },
+    "nuscale_ch01_0813": {
+      "node_id": "nuscale_ch01_0813",
+      "title": "DSRS 15.9.A, Rev 0: Thermal Hydraulic Stability Review ResponsibilitiesII.7 Criteria to determine the acceptability of the D&S System compliance with the requirements of GDC 20",
+      "summary": "The NuScale design does not use the exclusion zone or detect-and-suppress methods for thermal hydraulic stability; instead, existing reactor trip signals act preemptively to prevent conditions that could lead to flow instabilities or SAFDL violations. While the system partially conforms to GDC 20 requirements by tripping the reactor before instability can develop, it does not actively detect or suppress instabilities, and backup options are not required due to the inherent design features.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "315",
+      "hop": 2
+    },
+    "nuscale_ch01_0814": {
+      "node_id": "nuscale_ch01_0814",
+      "title": "DSRS 15.9.A, Rev 0: Thermal Hydraulic Stability Review ResponsibilitiesII.8 Detect and Suppress system to monitor process variables and systems.",
+      "summary": "The NuScale design does not use a Detect and Suppress (D&S) system to monitor process variables for thermal hydraulic stability, as reactor trip signals are designed to act before unstable flow oscillations can develop. Therefore, the D&S system is deemed not applicable, and stability is managed through existing reactor trip systems rather than by detecting and suppressing instabilities.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "315",
+      "hop": 2
+    },
+    "nuscale_ch01_0663": {
+      "node_id": "nuscale_ch01_0663",
+      "title": "DSRS 15.0.3, Rev 0: Design Basis Accident Radiological Consequence Analyses for the NuScale SMR DesignII.3 Technical Support Center Radiological Habitability",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for radiological consequence analyses during design basis accidents, specifically addressing the Technical Support Center (TSC) radiological habitability. It notes that the TSC meets dose acceptance criteria when AC power is available, but its function is transferred to the main control room if AC power is lost, indicating only partial conformance for this aspect.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "288",
+      "hop": 2
+    },
+    "nuscale_ch01_0387": {
+      "node_id": "nuscale_ch01_0387",
+      "title": "SRP 9.5.1.1, Rev 0: Fire Protection ProgramII.4 Fire Protection for Permanently Shutdown and Decommissioning Reactor Plants",
+      "summary": "Section SRP 9.5.1.1, Rev 0: Fire Protection for Permanently Shutdown and Decommissioning Reactor Plants is not applicable to the NuScale design, as it only applies to reactor licensees that have submitted certifications for license termination under 10 CFR 50.82. Therefore, NuScale does not address this criterion in its safety analysis report.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "255",
+      "hop": 2
+    },
+    "nuscale_ch05_0018": {
+      "node_id": "nuscale_ch05_0018",
+      "title": "References",
+      "summary": "This section outlines the inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fastener requirements for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It specifies procedures for maintaining vessel integrity during transport and operation, and lists the key codes and standards used for compliance.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "74",
+      "hop": 3
+    },
+    "nuscale_ch01_0044": {
+      "node_id": "nuscale_ch01_0044",
+      "title": "Chemical and Volume Control System",
+      "summary": "The Chemical and Volume Control System section describes the NuScale reactor’s passive safety features, including two independent decay heat removal trains, each capable of fully cooling the reactor core using natural circulation and passive condensers. In the event of a steam generator tube failure or loss of AC power, the system isolates the affected components and relies on heat transfer to a large, stainless steel-lined reactor pool (the ultimate heat sink) to safely dissipate decay heat, ensuring continued cooling without active power sources.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "41",
+      "hop": 3
+    },
+    "nuscale_ch01_0037": {
+      "node_id": "nuscale_ch01_0037",
+      "title": "Control Building",
+      "summary": "This section describes the refueling operations for a NuScale Power Module (NPM), which are conducted independently for each module. The process involves moving the NPM from its operating bay to the refueling pool, disassembling it for inspection, maintenance, and refueling, and then reassembling and returning it to service after successful testing and inspection.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "38",
+      "hop": 3
+    },
+    "nuscale_ch05_0016": {
+      "node_id": "nuscale_ch05_0016",
+      "title": "Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses",
+      "summary": "This section outlines the methodology and regulatory compliance for establishing pressure-temperature limits for the reactor coolant pressure boundary (RCPB) over the plant’s 60-year lifespan. It describes how these limits are calculated using ASME and NRC guidelines, accounting for vessel embrittlement, and provides the resulting curves and data to ensure protection against non-ductile failure during various operational conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "72",
+      "hop": 3
+    },
+    "nuscale_ch01_0659": {
+      "node_id": "nuscale_ch01_0659",
+      "title": "SRP 15.0.2, (March 2007): Review of Transient and Accident Analysis MethodsII.4 Uncertainty Analysis",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for transient and accident analysis methods, noting partial or non-applicability where NuScale’s design or methodologies differ from traditional requirements (such as using CHF instead of DNBR, and a modified AST methodology). It also highlights that NuScale’s evaluation models for loss-of-coolant accidents (LOCAs) address only the technically relevant features required by regulations, supporting exemptions from certain portions of 10 CFR 50 Appendix K.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "287",
+      "hop": 3
+    },
+    "nuscale_ch01_0657": {
+      "node_id": "nuscale_ch01_0657",
+      "title": "SRP 15.0.2, (March 2007): Review of Transient and Accident Analysis MethodsII.2 Accident Scenario Identification Process",
+      "summary": "This section outlines NuScale’s conformance with regulatory criteria for transient and accident analysis methods, specifically referencing SRP 15.0.2 (March 2007). It states that NuScale’s accident scenario identification process fully conforms to the guidance, while other areas either partially conform or are not applicable due to design differences or use of alternative methodologies. The NuScale design also supports exemptions from certain regulatory requirements, focusing only on technically relevant features for its evaluation models.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "287",
+      "hop": 3
+    },
+    "nuscale_ch01_0811": {
+      "node_id": "nuscale_ch01_0811",
+      "title": "DSRS 15.9.A, Rev 0: Thermal Hydraulic Stability Review ResponsibilitiesII.5 Detect and Suppress Method Trip of reactor before SAFDL violation",
+      "summary": "The NuScale design does not use the exclusion zone or detect and suppress (D&S) methods for thermal hydraulic stability; instead, existing reactor trip signals act preemptively to prevent violation of safety limits before unstable flow oscillations can develop. The system partially conforms to some regulatory criteria by ensuring reactor trips occur before safety limits are challenged, but does not employ dedicated D&S systems or backup options, as these are deemed unnecessary due to the design’s inherent protections.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "315",
+      "hop": 4
+    },
+    "nuscale_ch01_0035": {
+      "node_id": "nuscale_ch01_0035",
+      "title": "Fuel Handling and Reactor Maintenance Areas",
+      "summary": "The fuel handling and reactor maintenance areas are located at the west end of the Reactor Building and include spaces for the spent fuel pool, refueling pool, and dry dock, all designed to facilitate safe fuel handling and reactor maintenance operations. These areas provide equipment and access for refueling, fuel assembly transport, and storage, while ensuring radiation protection for personnel.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "37",
+      "hop": 4
+    },
+    "nuscale_ch05_0011": {
+      "node_id": "nuscale_ch05_0011",
+      "title": "Reactor Coolant Pressure Boundary Inservice Inspection and Testing",
+      "summary": "This section describes the materials and design requirements for threaded fasteners in key reactor coolant system components, emphasizing the use of Alloy 718 for its compatibility and stress corrosion cracking resistance. It also outlines that preservice and inservice inspection and testing of reactor coolant pressure boundary components are conducted according to the latest applicable ASME Boiler and Pressure Vessel Code (BPVC) standards, as mandated by federal regulations, with inspection intervals and code editions specified in the inspection program.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "37",
+      "hop": 4
+    },
+    "nuscale_ch01_0810": {
+      "node_id": "nuscale_ch01_0810",
+      "title": "DSRS 15.9.A, Rev 0: Thermal Hydraulic Stability Review ResponsibilitiesII.4 Detect and Suppress Method: Exclusion zone and buffer region methodology",
+      "summary": "The NuScale design does not use the exclusion zone or buffer region methodology for thermal hydraulic stability, as reactor trip signals are designed to prevent conditions that could lead to unstable flow oscillations. Instead, the existing reactor trip system (RTS) provides protection by tripping the reactor before safety limits are violated, making additional detect and suppress (D&S) methods unnecessary. As a result, backup D&S options and related instrumentation are not applicable, and the system partially conforms to criteria requiring detection and suppression of instabilities.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "315",
+      "hop": 4
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the operational process and independence of refueling cycles, while Section B provides detailed material specifications for RCS components that must withstand cooldown and depressurization during such operations, connecting the operational schedule to the technical capability."
+    },
+    {
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch01_0439",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the operational process and independence of refueling for each NPM, while Section B lists regulatory criteria and conformance statements related to system materials and water quality, which are prerequisites for ensuring that the RCS design supports safe cooldown and depressurization during the 24-month refueling cycle."
+    },
+    {
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch01_0309",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the operational process and independence of refueling for each module, while Section B lists regulatory criteria and conformance statements for refueling cavity and handling system design, connecting them through the requirement that operational procedures (A) must align with the design and regulatory criteria (B) for safe refueling."
+    },
+    {
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch01_0438",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the operational process and independence of refueling for each module, while Section B lists regulatory criteria and conformance statements related to system materials and water quality, which are prerequisites for ensuring that the refueling cycle does not compromise RCS integrity during cooldown and depressurization."
+    },
+    {
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch05_0000",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A describes the operational process and independence of refueling cycles, while Section B is a preface to the chapter detailing the RCS design, so Section A's operational requirements would need to be evaluated against the technical specifications in Section B to determine consistency."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch01_0439",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A details the materials and components of the pressurizer in the RCS, while Section B lists regulatory requirements for system materials and water quality to prevent corrosion and ensure conformance with GDC 14, thus Section A's material specifications are intended to satisfy the regulatory requirements outlined in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch01_0438",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A details the materials and components of the pressurizer in the RCS, while Section B lists regulatory criteria and conformance statements related to system materials and water quality, connecting them through the requirement to avoid corrosion-induced failure and ensure material suitability for the 24-month refueling cycle."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0000",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides detailed descriptions of specific Reactor Coolant System (RCS) component materials referenced in the general scope and copyright preface of Section B, connecting the technical content to the broader document context."
+    },
+    {
+      "source": "nuscale_ch01_0439",
+      "target": "nuscale_ch01_0309",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A outlines regulatory requirements for maintaining reactor coolant system (RCS) water quality and system integrity, which are necessary prerequisites for the safe operation and refueling cycle described in Section B, where the refueling cavity and handling systems must meet specific criteria to support the 24-month cycle."
+    },
+    {
+      "source": "nuscale_ch01_0439",
+      "target": "nuscale_ch01_0438",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A and Section B both address the requirement to maintain water quality to avoid corrosion-induced failure of the reactor coolant pressure boundary (GDC 14), but Section A focuses on indirect cycle PWRs while Section B focuses on direct cycle BWRs, thus specifying different system applicability for the same regulatory criterion."
+    },
+    {
+      "source": "nuscale_ch01_0439",
+      "target": "nuscale_ch05_0000",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria and conformance statements relevant to the RCS design, while Section B is the preface to the chapter detailing the RCS design, indicating that Section A's regulatory context applies to the content introduced in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0439",
+      "target": "nuscale_ch01_0862",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A lists regulatory criteria and conformance related to system design and water quality for the reactor coolant system, while Section B documents conformance with interim staff guidance, both serving as evidence that the design (including the 24-month refueling cycle) meets regulatory requirements for safety and operational consistency."
+    },
+    {
+      "source": "nuscale_ch01_0309",
+      "target": "nuscale_ch01_0438",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A outlines regulatory criteria and conformance for refueling and spent fuel handling systems, while Section B addresses criteria for maintaining reactor coolant system integrity and water quality, both of which are prerequisites for ensuring that a 24-month refueling cycle is feasible and consistent with RCS cooldown and depressurization design."
+    },
+    {
+      "source": "nuscale_ch01_0309",
+      "target": "nuscale_ch05_0000",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A references regulatory criteria and conformance related to refueling and spent fuel handling, which are operationally dependent on the Reactor Coolant System (RCS) design described in Section B, thus connecting the refueling cycle duration to the technical capabilities of the RCS."
+    },
+    {
+      "source": "nuscale_ch01_0309",
+      "target": "nuscale_ch01_0862",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A lists specific regulatory criteria and conformance statements for refueling and spent fuel systems, while Section B provides a table of conformance with interim staff guidance, both referencing how the design meets regulatory requirements, thus Section A's detailed criteria are supported by Section B's summary of conformance."
+    },
+    {
+      "source": "nuscale_ch01_0438",
+      "target": "nuscale_ch05_0000",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria and conformance statements relevant to the RCS design, while Section B is the preface to the chapter detailing the RCS design, thus Section A's regulatory requirements are intended to be addressed by the technical content introduced in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0438",
+      "target": "nuscale_ch01_0862",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A lists regulatory criteria and conformance statements for various systems, while Section B provides a table of conformance with Interim Staff Guidance, both serving as documentation of how the NuScale design (including refueling cycle and RCS design) meets regulatory requirements, thus connecting through their shared function of demonstrating compliance."
+    },
+    {
+      "source": "nuscale_ch05_0000",
+      "target": "nuscale_ch01_0862",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A is the preface to Chapter 5, which contains the RCS design details relevant to evaluating the 24-month refueling cycle from Chapter 1, while Section B is a table from Chapter 1 that documents conformance with regulatory guidance, including references to Chapter 5 for technical details."
+    },
+    {
+      "source": "nuscale_ch01_0662",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section B provides detailed specifications of the Reactor Coolant System (RCS) pressurizer design, which Section A references as part of the safety analysis to ensure that the RCS can support operational requirements such as the 24-month refueling cycle."
+    },
+    {
+      "source": "nuscale_ch01_0662",
+      "target": "nuscale_ch01_0439",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses radiological consequence analyses and control room habitability requirements, while Section B addresses maintaining water quality to prevent corrosion-induced failures in the reactor coolant pressure boundary; both sections are connected through their focus on ensuring the safety and integrity of the reactor coolant system, which is essential for supporting a 24-month refueling cycle by maintaining system reliability and regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch01_0130",
+      "target": "nuscale_ch01_0036",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A establishes that the NuScale design incorporates relevant operational experience and regulatory guidance, which underpins the refueling operations process described in Section B, ensuring that the 24-month refueling cycle is supported by proven and compliant design practices."
+    },
+    {
+      "source": "nuscale_ch01_0130",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A discusses the incorporation of operational experience and regulatory guidance into the NuScale design, while Section B provides specific material and component details for the Reactor Coolant System (RCS) pressurizer, with Section A's general regulatory conformance being specified by the detailed design information in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0130",
+      "target": "nuscale_ch01_0439",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the incorporation of operational experience and regulatory guidance into the NuScale design, while Section B lists specific SRP criteria and their conformance, connecting them through the regulatory requirements that the design must satisfy."
+    },
+    {
+      "source": "nuscale_ch01_0813",
+      "target": "nuscale_ch01_0036",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A outlines the thermal hydraulic stability and safety criteria (including cooldown and depressurization requirements) that the RCS design must meet, while Section B describes the operational steps and independence of refueling, connecting them through the need for the RCS design to support safe cooldown and depressurization during the 24-month refueling cycle."
+    },
+    {
+      "source": "nuscale_ch01_0813",
+      "target": "nuscale_ch05_0025",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A outlines regulatory criteria and protective actions for thermal hydraulic stability, which must be satisfied by the RCS design details and materials described in Section B to ensure the 24-month refueling cycle is supported by adequate cooldown and depressurization capabilities."
+    },
+    {
+      "source": "nuscale_ch01_0813",
+      "target": "nuscale_ch01_0439",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A discusses the thermal hydraulic stability and protective actions in the NuScale RCS design, while Section B addresses water quality and material integrity requirements for the RCS, both of which are necessary to ensure that the 24-month refueling cycle does not compromise system safety or integrity."
+    },
+    {
+      "source": "nuscale_ch01_0814",
+      "target": "nuscale_ch01_0036",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the thermal hydraulic stability and protective actions (such as reactor trip signals) that ensure safe operation and prevent violation of critical heat flux limits, which supports the feasibility of a 24-month refueling cycle described in Section B by ensuring the RCS design can maintain safe cooldown and depressurization during extended operation."
+    },
+    {
+      "source": "nuscale_ch01_0814",
+      "target": "nuscale_ch05_0025",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the thermal hydraulic stability and protective actions in the NuScale design, which are relevant to ensuring that the RCS (described in Section B) can safely accommodate operational cycles such as the 24-month refueling interval by preventing conditions (e.g., unstable flow, CHF violations) that could challenge RCS cooldown and depressurization capabilities."
+    },
+    {
+      "source": "nuscale_ch01_0814",
+      "target": "nuscale_ch01_0439",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses the detection and suppression of thermal hydraulic instabilities in the RCS, which is necessary to ensure safe cooldown and depressurization, while Section B outlines requirements for maintaining water quality and material integrity in the RCS to prevent corrosion and failure, both of which are prerequisites for supporting a 24-month refueling cycle by ensuring system reliability and safety."
+    },
+    {
+      "source": "nuscale_ch01_0663",
+      "target": "nuscale_ch01_0036",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section B describes the operational process and independence of refueling for each module, while Section A outlines the regulatory criteria for radiological consequences during accidents, with both sections connected through the need to ensure that refueling operations (including their frequency, such as a 24-month cycle) do not compromise the RCS design's ability to meet radiological safety requirements."
+    },
+    {
+      "source": "nuscale_ch01_0663",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria for accident analyses, while Section B provides detailed design information about the RCS pressurizer materials, with Section B specifying the technical details that Section A's general regulatory conformance would require for evaluation."
+    },
+    {
+      "source": "nuscale_ch01_0663",
+      "target": "nuscale_ch01_0439",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A discusses the radiological consequence analyses for design basis accidents, which depend on the reactor's operational parameters such as refueling cycle length, while Section B addresses the condensate cleanup system's role in maintaining water quality to prevent corrosion and ensure the integrity of the reactor coolant system, both of which are necessary to demonstrate that the RCS design supports safe operation over the proposed 24-month refueling cycle."
+    },
+    {
+      "source": "nuscale_ch01_0662",
+      "target": "nuscale_ch01_0130",
+      "relation": "REFERENCES",
+      "confidence": 0.7,
+      "description": "Section A references regulatory conformance for radiological consequence analyses, while Section B discusses incorporation of operational experience and regulatory guidance into the design, indicating that Section A's analyses are informed by the operational and regulatory context described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0662",
+      "target": "nuscale_ch01_0813",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A addresses radiological consequence analyses and control room habitability, while Section B outlines thermal hydraulic stability criteria and protective actions, both of which are connected through their reliance on the RCS design's ability to ensure safety during operational cycles such as the 24-month refueling interval."
+    },
+    {
+      "source": "nuscale_ch01_0662",
+      "target": "nuscale_ch01_0814",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A addresses radiological consequence analyses and control room habitability during design basis accidents, while Section B discusses thermal hydraulic stability and the detection/suppression of unstable flow conditions; both sections are related through their reliance on the reactor coolant system (RCS) design's ability to maintain safety margins during operational and accident scenarios, which is essential for supporting the feasibility of a 24-month refueling cycle."
+    },
+    {
+      "source": "nuscale_ch01_0662",
+      "target": "nuscale_ch01_0663",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A and Section B both address conformance with regulatory criteria for radiological consequence analyses in the NuScale SMR design, with Section A focusing on control room habitability and Section B on technical support center habitability, both referencing the same DSRS 15.0.3 requirements."
+    },
+    {
+      "source": "nuscale_ch01_0130",
+      "target": "nuscale_ch01_0813",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the incorporation of operational experience and regulatory guidance into the NuScale design, while Section B outlines the criteria and methods for ensuring thermal hydraulic stability and compliance with GDC 20, connecting them through the shared focus on regulatory conformance and safety analysis for the reactor's operational cycle."
+    },
+    {
+      "source": "nuscale_ch01_0130",
+      "target": "nuscale_ch01_0814",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the incorporation of operational experience and regulatory guidance into the NuScale design, while Section B details specific thermal hydraulic stability review responsibilities and protective actions in the NuScale design, connecting them through the shared context of regulatory compliance and operational safety features relevant to the refueling cycle and RCS design."
+    },
+    {
+      "source": "nuscale_ch01_0130",
+      "target": "nuscale_ch01_0663",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the incorporation of operational experience and regulatory guidance into the NuScale design, while Section B details the conformance of the design with specific radiological consequence analysis criteria, showing that Section A's general approach to regulatory compliance underpins the specific requirements addressed in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0130",
+      "target": "nuscale_ch01_0387",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the incorporation of operational experience and regulatory guidance into the NuScale design, while Section B clarifies that the NuScale design does not rely on ESF ventilation systems for accident mitigation, indicating that operational and regulatory considerations (A) inform the design choices and justifications (B)."
+    },
+    {
+      "source": "nuscale_ch01_0813",
+      "target": "nuscale_ch01_0814",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A outlines the criteria for determining D&S system compliance with GDC 20, while Section B describes the monitoring of process variables and systems as part of the detect and suppress methodology, both addressing aspects of thermal hydraulic stability and protective actions in the NuScale design."
+    },
+    {
+      "source": "nuscale_ch01_0813",
+      "target": "nuscale_ch01_0663",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A outlines the thermal hydraulic stability and protective actions of the RCS design, while Section B addresses the radiological consequences of design basis accidents, with both sections referencing the NuScale FSAR's conformance with regulatory criteria, thus connecting through their mutual reliance on the RCS's ability to maintain safety functions during operational and accident conditions."
+    },
+    {
+      "source": "nuscale_ch01_0814",
+      "target": "nuscale_ch01_0663",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the detection and suppression of thermal hydraulic instabilities to prevent conditions that could challenge RCS cooldown and depressurization, while Section B addresses the radiological consequences of design basis accidents, both of which are connected through their roles in ensuring the safety and regulatory compliance of the RCS design during operational cycles such as the 24-month refueling interval."
+    },
+    {
+      "source": "nuscale_ch01_0663",
+      "target": "nuscale_ch01_0387",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses radiological consequence analyses for design basis accidents, while Section B clarifies that the NuScale design does not rely on engineered safety feature (ESF) ventilation systems for accident mitigation, indicating that the radiological analyses in Section A are based on the use of nonsafety-related ventilation as described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch01_0439",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes inspection and handling requirements for the reactor pressure vessel (RPV), while Section B outlines regulatory criteria for maintaining water quality to prevent corrosion-induced failure of the reactor coolant pressure boundary, connecting them through the shared objective of ensuring RCS integrity over the refueling cycle."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0036",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A describes the RCS cooldown and decay heat removal capabilities, which are necessary to safely achieve the conditions required for refueling operations as outlined in Section B, thus connecting the technical design to the operational refueling cycle."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides detailed material specifications for pressurizer components that are part of the RCS design referenced in Section A's description of system operation during cooldown and depressurization."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0439",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the Chemical and Volume Control System's capability to manage RCS cooling and isolation during events, while Section B outlines regulatory requirements for maintaining water quality to prevent corrosion-induced failures, connecting them through the need for system design features (from A) to satisfy water quality and integrity requirements (from B) for safe long-term operation such as a 24-month refueling cycle."
+    },
+    {
+      "source": "nuscale_ch01_0037",
+      "target": "nuscale_ch01_0439",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the operational independence and procedures for refueling an individual NPM, while Section B outlines regulatory conformance for systems that maintain water quality and prevent corrosion in the reactor coolant system, connecting them through the need for RCS integrity and operational readiness to support the 24-month refueling cycle."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch01_0036",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section B describes the operational process and frequency of refueling (every 24 months), while Section A details the reactor vessel's compliance with ASME code requirements for structural integrity during cooldown and depressurization, which are necessary to ensure that the vessel can safely withstand the thermal and pressure transients associated with each refueling cycle."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A provides detailed ASME code compliance information for reactor vessel attachments, while Section B references the materials and design details of pressurizer components, with both sections connected through their discussion of RPV component materials and compliance with ASME BPVC requirements."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch01_0439",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A provides technical details and compliance information about reactor vessel materials and welds, while Section B outlines regulatory criteria for maintaining water quality to prevent corrosion of the reactor coolant pressure boundary, connecting them through the shared goal of ensuring RCS integrity over the refueling cycle."
+    },
+    {
+      "source": "nuscale_ch01_0659",
+      "target": "nuscale_ch01_0036",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section B describes the operational process and independence of refueling for each NuScale Power Module (NPM), while Section A outlines the regulatory criteria and analysis methods (including transient and accident analyses) that must be satisfied by the plant's design and operations, thus Section B's refueling operations must be evaluated against Section A's regulatory requirements to ensure the 24-month cycle is consistent with RCS cooldown and depressurization capabilities."
+    },
+    {
+      "source": "nuscale_ch01_0659",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A discusses the regulatory review and conformance of transient and accident analysis methods relevant to core and system performance, while Section B provides specific design details of the Reactor Coolant System (RCS) components, with the information in Section B serving as the technical basis referenced or evaluated in the analyses described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0659",
+      "target": "nuscale_ch01_0439",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the evaluation methods and regulatory conformance for transient and accident analyses, which include cooldown and depressurization scenarios relevant to the RCS design in Section B, which focuses on maintaining water quality and pressure boundary integrity—both necessary for supporting a 24-month refueling cycle."
+    },
+    {
+      "source": "nuscale_ch01_0657",
+      "target": "nuscale_ch01_0036",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the regulatory criteria and analysis methods for accident scenarios and system performance, which must be met by the plant's design, while Section B describes the specific refueling operations process that must conform to these criteria, connecting the operational cycle (24-month refueling) to the RCS design's ability to safely support cooldown and depressurization during refueling."
+    },
+    {
+      "source": "nuscale_ch01_0657",
+      "target": "nuscale_ch05_0025",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses the evaluation of accident scenarios and conformance with regulatory criteria for transient and accident analyses, which includes assessing whether the RCS design (as detailed in Section B) supports operational cycles like the 24-month refueling interval by ensuring adequate cooldown and depressurization capabilities."
+    },
+    {
+      "source": "nuscale_ch01_0657",
+      "target": "nuscale_ch01_0439",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the evaluation of accident scenarios and conformance with regulatory criteria for transient and accident analyses, while Section B addresses the design and regulatory compliance of systems (such as the condensate cleanup system) that maintain reactor coolant system (RCS) integrity, both of which are connected through their roles in ensuring the RCS can safely support operational cycles like the 24-month refueling interval."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch01_0044",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section B describes the Chemical and Volume Control System's capability to remove decay heat and cool the RCS, which supports the operational requirements for cooldown and depressurization that must be met for a 24-month refueling cycle as referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch01_0037",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section B describes the operational process and independence of refueling cycles, while Section A specifies the inspection and handling requirements for the reactor vessel, which must be met to ensure the RCS design supports safe cooldown and depressurization during the 24-month refueling cycle."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0016",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A outlines inspection and handling requirements for the reactor pressure vessel (RPV), while Section B details the pressure-temperature limits and weld examination standards that must be met, with both sections referencing ASME BPVC codes to ensure the RCS design supports operational cycles such as the 24-month refueling interval."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch01_0659",
+      "relation": "SEMANTIC",
+      "confidence": 0.6,
+      "description": "Section A describes inspection and handling requirements for the reactor pressure vessel, while Section B outlines regulatory criteria and analysis methods for transient and accident scenarios, with both sections connected through their relevance to ensuring the RCS design supports safe operation over the refueling cycle."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch01_0657",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A details inspection and handling requirements for the reactor pressure vessel, while Section B outlines the regulatory criteria and analysis methods for accident scenarios, with both sections connected through the need to ensure that the RCS design and operational practices (such as inspection and maintenance intervals) support compliance with safety analysis requirements for cooldown and depressurization during the 24-month refueling cycle."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0037",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A describes the RCS cooldown and decay heat removal capabilities, which are necessary to safely achieve the conditions required for refueling operations as described in Section B, thus linking the RCS design to the feasibility of the 24-month refueling cycle."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch05_0016",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the decay heat removal and cooldown capabilities of the RCS, while Section B details the reactor vessel's structural and material requirements under ASME code, with both sections connected through the need for the RCS design (A) to ensure vessel integrity and compliance with pressure-temperature limits (B) during the 24-month refueling cycle."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0659",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the design features of the Chemical and Volume Control System that enable RCS cooldown and depressurization, while Section B outlines the regulatory criteria and analysis methods (including uncertainty analysis) that must be satisfied to demonstrate that such design features support safe operation over the refueling cycle."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0657",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the Chemical and Volume Control System's capability to remove decay heat and cool the RCS, which supports the accident analysis methods and regulatory conformance discussed in Section B by providing evidence that the plant design can meet the safety requirements for cooldown and depressurization relevant to a 24-month refueling cycle."
+    },
+    {
+      "source": "nuscale_ch01_0037",
+      "target": "nuscale_ch05_0016",
+      "relation": "SATISFIES",
+      "confidence": 0.7,
+      "description": "Section A describes the operational process and independence of refueling for each module, while Section B details the reactor vessel's compliance with ASME code requirements for structural integrity during operations such as cooldown and depressurization, connecting them through the need for the RCS design (Section B) to support the operational refueling cycle (Section A)."
+    },
+    {
+      "source": "nuscale_ch01_0037",
+      "target": "nuscale_ch01_0659",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the operational process and independence of refueling for each NPM, while Section B outlines the regulatory criteria and analysis methods (including uncertainty and conformance) that must be satisfied by the RCS design, connecting them through the requirement that the refueling cycle and operations must align with the RCS's ability to safely manage cooldown and depressurization per regulatory standards."
+    },
+    {
+      "source": "nuscale_ch01_0037",
+      "target": "nuscale_ch01_0657",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the operational independence and movement of NPMs during refueling, while Section B outlines the regulatory criteria and analysis methods (including accident scenarios) that the RCS design must conform to, connecting them through the requirement that refueling operations (such as the 24-month cycle) must be consistent with the RCS's ability to safely manage cooldown and depressurization per regulatory standards."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch01_0659",
+      "relation": "SATISFIES",
+      "confidence": 0.7,
+      "description": "Section A provides technical details on reactor vessel material examinations and compliance with ASME code, while Section B outlines the regulatory criteria and methods for transient and accident analysis, connecting them through the need for the RCS design (Section A) to satisfy the regulatory analysis requirements (Section B) for cooldown and depressurization during the 24-month refueling cycle."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch01_0657",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A provides technical details on reactor vessel material examinations and compliance with ASME code, while Section B outlines the regulatory criteria and methods for evaluating transient and accident scenarios, connecting them through the need to ensure that material integrity and examination practices (A) support the ability to meet regulatory requirements for safe cooldown and depressurization during the 24-month refueling cycle (B)."
+    },
+    {
+      "source": "nuscale_ch01_0659",
+      "target": "nuscale_ch01_0657",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A discusses uncertainty analysis methods for transient and accident scenarios, while Section B outlines the process for identifying those accident scenarios, making B a prerequisite for the analyses described in A."
+    },
+    {
+      "source": "nuscale_ch01_0811",
+      "target": "nuscale_ch01_0036",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the thermal hydraulic stability and reactor trip mechanisms that ensure safety limits are not violated, while Section B outlines the independent refueling operations for each module, with both sections connected by the need for the RCS design (Section A) to support safe cooldown and depressurization during the 24-month refueling cycle described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0811",
+      "target": "nuscale_ch05_0025",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A discusses the thermal hydraulic stability and reactor trip mechanisms to prevent SAFDL violations, which are operational safety features that must be compatible with the RCS design described in Section B, specifically the pressurizer and its materials, to ensure safe cooldown and depressurization during a 24-month refueling cycle."
+    },
+    {
+      "source": "nuscale_ch01_0811",
+      "target": "nuscale_ch01_0439",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the detection and suppression of thermal hydraulic instabilities to prevent SAFDL violations, which supports Section B's requirement to maintain reactor coolant pressure boundary integrity by avoiding corrosion-induced failures, as both are aimed at ensuring safe RCS operation over the refueling cycle."
+    },
+    {
+      "source": "nuscale_ch01_0035",
+      "target": "nuscale_ch01_0036",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the physical provisions and locations for fuel handling and reactor maintenance, while Section B details the operational steps for refueling, with both sections connected by their focus on the infrastructure and procedures necessary to support the refueling process."
+    },
+    {
+      "source": "nuscale_ch01_0035",
+      "target": "nuscale_ch05_0025",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A describes operational activities (refueling outages) that depend on the RCS's ability to safely cool down and depressurize, which is detailed in Section B's design of pressurizer components, thus linking the refueling cycle's feasibility to the RCS design features."
+    },
+    {
+      "source": "nuscale_ch01_0035",
+      "target": "nuscale_ch01_0439",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the physical provisions and maintenance areas for refueling outages, while Section B outlines regulatory requirements for maintaining water quality to prevent corrosion in the reactor coolant system, connecting them through the need for proper maintenance and system design to support safe and compliant refueling cycles."
+    },
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch01_0036",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the material selection and integrity requirements for RCS threaded fasteners, which are relevant to ensuring that the RCS can withstand the mechanical and environmental stresses imposed by repeated cooldown and depressurization cycles associated with the 24-month refueling interval described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0025",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the material selection and inspection requirements for RCS threaded fasteners, while Section B details the materials used in pressurizer components, with both sections referencing the material compatibility and integrity of RCS boundary components as required for long-term operation such as a 24-month refueling cycle."
+    },
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch01_0439",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the material selection and inspection requirements for RCS pressure boundary fasteners to ensure integrity in the borated water environment, while Section B outlines regulatory criteria (GDC 14) requiring water quality maintenance to prevent corrosion-induced failure of the RCS boundary, thus both sections are connected through the shared goal of ensuring RCS boundary integrity against corrosion over the refueling cycle."
+    },
+    {
+      "source": "nuscale_ch01_0810",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B describes the detailed design and materials of the Reactor Coolant System (RCS) pressurizer, which is a key component whose performance and integrity must support the operational requirements such as the 24-month refueling cycle referenced in Section A's broader regulatory review context."
+    },
+    {
+      "source": "nuscale_ch01_0810",
+      "target": "nuscale_ch01_0439",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the exclusion zone and buffer region methodology for thermal hydraulic stability, while Section B addresses maintaining water quality to prevent corrosion-induced failure of the reactor coolant pressure boundary; both sections relate to ensuring the integrity and safe operation of the reactor coolant system, which is necessary for supporting a 24-month refueling cycle by preventing conditions that could compromise cooldown and depressurization capabilities."
+    },
+    {
+      "source": "nuscale_ch01_0811",
+      "target": "nuscale_ch01_0035",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section B describes the physical provisions and locations for fuel handling and reactor maintenance necessary for refueling outages, which are operationally required to implement the 24-month refueling cycle referenced in the analysis question, while Section A addresses the thermal hydraulic safety criteria that must be maintained during such operations, connecting them through the operational prerequisites for safe refueling."
+    },
+    {
+      "source": "nuscale_ch01_0811",
+      "target": "nuscale_ch05_0011",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the detection and suppression of thermal hydraulic instabilities to prevent SAFDL violations, which is relevant to ensuring safe operation during cooldown and depressurization cycles described in Section B, where the integrity and material selection of RCS components (such as threaded fasteners) are specified to withstand operational stresses including those from refueling cycles."
+    },
+    {
+      "source": "nuscale_ch01_0811",
+      "target": "nuscale_ch01_0810",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references and elaborates on the same exclusion zone and buffer region methodology described in Section B, specifying that this method is not applicable to the NuScale design because reactor trip signals are used instead to prevent CHF violations."
+    },
+    {
+      "source": "nuscale_ch01_0035",
+      "target": "nuscale_ch05_0011",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the operational context and maintenance access for refueling outages, while Section B details the material and inspection requirements for RCS components that must be maintained during such outages, connecting them through the need for RCS integrity during the 24-month refueling cycle."
+    },
+    {
+      "source": "nuscale_ch01_0035",
+      "target": "nuscale_ch01_0810",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes operational provisions for refueling outages, while Section B clarifies that the NuScale design does not use the exclusion zone methodology for thermal hydraulic stability, indicating that the RCS design relies on reactor trip signals rather than exclusion zones to maintain safety during cooldown and depressurization, which is relevant to the feasibility of a 24-month refueling cycle."
+    },
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch01_0810",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the material selection and design compliance of RCS threaded fasteners for integrity under operational conditions, while Section B discusses the exclusion of certain thermal hydraulic stability methodologies in the NuScale design, with both sections relating to the ability of the RCS to maintain integrity and safety during operational cycles such as the 24-month refueling interval."
+    }
+  ]
+}

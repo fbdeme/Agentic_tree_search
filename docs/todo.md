@@ -9,17 +9,19 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 ### Evaluation
 - [x] ~~Run full 100-question benchmark evaluation~~ → Completed (v0.3.1), 99/100 success
 - [x] ~~Analyze results by question type~~ → See history.md v0.3.1 for full breakdown
-- [ ] Fix Faithfulness metric timeout — 45% failure rate. Root cause: answer length + KG size, not images. Consider shorter answers or lighter evaluator.
-- [x] ~~Investigate image_only low FactCorr~~ → Root cause: wrong images delivered (page-number ordering). Fixed by relevance-based selection (v0.3.2)
-- [ ] image_only FactCorr still low after fix (Vision extracts info but wording differs from expected answer)
-- [ ] Address Factual Correctness structural limitation — agent's detailed answers penalized vs terse expected answers
+- [x] ~~Run multihop benchmark (200q)~~ → 200/200 success, judgment CR=0.82, SATISFIES 659 instances
+- [ ] Fix Faithfulness measurement rate — only 19.5% (39/200) measured on multihop. KG avg 52 edges overflows RAGAs.
+- [ ] Improve single_evidence CR (0.45) — BM25 precision for finding one specific node. Browse-first likely solution.
+- [ ] Address judgment FC=0.34 — agent's reasoning claims beyond expected answer get penalized by RAGAs
 
 ### Search (Action) Enhancement
 - [x] ~~Fix tree summary truncation~~ → Replaced with tool-based exploration (v0.3.0)
 - [x] ~~Multi-document search reliability~~ → search() spans all documents (v0.3.0)
 - [x] ~~BM25 search ranking~~ → Replaces naive keyword match, specific nodes rank higher (v0.3.1)
-- [ ] **Action history / search memory**: Agent repeats same keywords across hops (Q035: "pressurizer volume" × 4 hops). Need to pass previous search queries + results in prompt so agent tries different keywords. Could be simple (search log in prompt) or structural (action history as State extension). See history.md v0.4.1 analysis.
-- [ ] Encourage browse tool usage — agent defaults to search-only, rarely does hierarchical drill-down
+- [x] ~~Action history / search memory~~ → Agent Memory implemented (v0.4.2). Search log prevents keyword repetition.
+- [ ] **Browse-first pattern**: First hop browses document structure before searching. Solves single_evidence CR=0.45.
+- [ ] **Query expansion**: Auto-generate keyword variants (PZR↔pressurizer). Zero LLM cost.
+- [ ] **Follow-reference tool**: When node mentions "see Table 5.1-1", follow that reference directly.
 - [ ] Store `end_index` in tree nodes (not just `page_index`) for accurate page range
 
 ### Data Quality
@@ -101,6 +103,8 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 - [x] Research proposal with updated methodology (docs/research_proposal.md)
 - [x] BM25 search ranking replacing naive keyword match (v0.3.1)
 - [x] Full 100-question benchmark: 58 min (4x parallel), 99/100 success (v0.3.1)
+- [x] Agent Memory: search history prevents keyword repetition (v0.4.2)
+- [x] Multihop benchmark (200q): 100 min (8x parallel), 200/200 success, SATISFIES 659 instances (v0.4.2)
 - [x] Relevance-based image selection: question keywords vs caption overlap (v0.3.2)
 - [x] BM25 caption indexing: reference captions now searchable (v0.3.2)
 - [x] Root cause analysis: Faithfulness N/A = answer length + KG size, not images (v0.3.2)

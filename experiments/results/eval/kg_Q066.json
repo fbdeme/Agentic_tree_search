@@ -1,109 +1,528 @@
 {
-  "question": "Describe the pressurizer region of the reactor vessel.",
-  "current_hop": 2,
+  "question": "Compare the NuScale Power Module as shown in Figure 1.2-4 (Ch.01) with the detailed component view in Figure 5.1-1 (Ch.05). What additional detail does Ch.05 provide?",
+  "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0006": {
-      "node_id": "nuscale_ch05_0006",
-      "title": "System Evaluation",
-      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance across various power levels by establishing steady-state parameters such as coolant temperatures, flow rates, and pressures, using both software and manual calculations. It details how uncertainties and design considerations are addressed to ensure efficient operation, maximize electrical generation, and maintain safety margins, particularly emphasizing the low pressure losses that support the plant’s natural circulation design.",
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain proper coolant flow, water chemistry, and boron concentration to protect fuel integrity and support safe operation under normal and transient conditions.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "12",
+      "page_range": "8",
       "hop": 1
     },
-    "nuscale_ch05_0014": {
-      "node_id": "nuscale_ch05_0014",
-      "title": "Reactor Vessel",
-      "summary": "The Reactor Vessel section describes the NuScale Power Module's reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel, all surrounded by a containment vessel. The RPV serves as a key pressure boundary to prevent the release of fission products and provides structural support for various reactor components. Materials for the RPV are selected according to ASME Boiler and Pressure Vessel Code standards to ensure integrity and safety throughout the plant's design life.",
+    "nuscale_ch01_0068": {
+      "node_id": "nuscale_ch01_0068",
+      "title": "Electrical and Instrumentation and Control Drawings",
+      "summary": "This section explains that the NuScale Final Safety Analysis Report includes simplified electrical, instrumentation, and control (I&C) drawings to visually clarify design information alongside the text. It lists the types of diagrams provided, references tables and figures for diagram legends, and notes that applicants referencing the NuScale design must supply site-specific diagrams and legends as needed.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "67",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
       "hop": 1
     },
-    "nuscale_ch05_0023": {
-      "node_id": "nuscale_ch05_0023",
-      "title": "Reactor Coolant System High-Point Vents",
-      "summary": "This section outlines the testing and inspection requirements for the DHRS (Decay Heat Removal System) components in the NuScale reactor, ensuring compliance with ASME codes for Class 2 components. It specifies that DHRS actuation valves are exercised during cold shutdown conditions, and details the procedures for valve testing, position verification, and a one-time in-situ test of the DHRS function during initial startup.",
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes components such as the reactor pressure vessel, pressurizer, and associated piping and controls. The RCS removes heat from the reactor core to the steam generators using natural circulation, and features systems for degasification and emergency core cooling to maintain safety and integrity. It interfaces with several other systems, including chemical control, emergency cooling, and sampling systems.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "121",
+      "page_range": "9",
       "hop": 1
     },
-    "nuscale_ch05_0017": {
-      "node_id": "nuscale_ch05_0017",
-      "title": "Reactor Vessel Integrity",
-      "summary": "This section outlines the procedures and regulatory compliance measures to ensure the integrity of the NuScale reactor vessel over its 60-year design life. It details the development of operating procedures to maintain pressure-temperature limits, evaluates the vessel's resistance to pressurized thermal shock and upper-shelf energy degradation, and confirms that all predicted values remain within regulatory safety criteria.",
+    "nuscale_ch01_0069": {
+      "node_id": "nuscale_ch01_0069",
+      "title": "Piping and Instrumentation Diagrams",
+      "summary": "This section describes the use of simplified electrical, instrumentation and control (I&C), and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information. It lists the relevant diagrams and legends used for both I&C and piping and instrumentation diagrams, and notes that site-specific diagrams and legends will be provided by COL applicants referencing the NuScale design certification.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "73",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
       "hop": 1
     },
-    "nuscale_ch05_0024": {
-      "node_id": "nuscale_ch05_0024",
-      "title": "Pressurizer",
-      "summary": "The pressurizer in the NuScale reactor is integrated into the upper region of the reactor vessel and functions to regulate reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering reactor trips or safety system actuations, with instrumentation providing continuous monitoring and control.",
+    "nuscale_ch05_0019": {
+      "node_id": "nuscale_ch05_0019",
+      "title": "Reactor Coolant System Component and Subsystem Design",
+      "summary": "This section describes the design of the NuScale Power Module’s Reactor Coolant System (RCS) components and subsystems, including the reactor pressure vessel, steam generators, safety and emergency valves, and associated piping. It details how the steam generators are integrated within the reactor vessel, forming part of the primary and secondary pressure boundaries, and references where further design specifics can be found in other report sections.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "124",
-      "hop": 1
+      "page_range": "91",
+      "hop": 2
+    },
+    "nuscale_ch01_0785": {
+      "node_id": "nuscale_ch01_0785",
+      "title": "SRP 15.6.5.D, Rev 1: Radiological Consequences of a Design Basis Loss-of-Coolant Accident: Leakage From Main Steam Isolation Valve Leakage Control System (BWR)All Various",
+      "summary": "The section explains that SRP 15.6.5.D, Rev 1, which addresses the radiological consequences of a loss-of-coolant accident due to leakage from the Main Steam Isolation Valve Leakage Control System, applies only to Boiling Water Reactors (BWRs) and is therefore not applicable to the NuScale design. Other related SRP guidance is only partially applicable, as some acceptance criteria are superseded by SRP Section 15.0.3, and only relevant portions are considered for the NuScale application.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "309",
+      "hop": 2
+    },
+    "nuscale_ch01_0015": {
+      "node_id": "nuscale_ch01_0015",
+      "title": "General Plant Description",
+      "summary": "This section provides an overview of the NuScale plant design, summarizing key systems such as safety features, power conversion, fuel handling, cooling water, and waste management. It explains the distinction between certified and site-specific design elements, noting that some conceptual design information is included for context, and highlights how security-related details are handled. The section also references figures illustrating the plant layout and system boundaries.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "26",
+      "hop": 2
+    },
+    "nuscale_ch01_0807": {
+      "node_id": "nuscale_ch01_0807",
+      "title": "DSRS 15.9.A, Rev 0: Thermal Hydraulic Stability Review ResponsibilitiesII.1 No requirements - null.",
+      "summary": "This section reviews NuScale's conformance with regulatory criteria related to anticipated transients without scram (ATWS) and thermal hydraulic stability. The NuScale design partially or fully meets requirements by relying on internal diversity within its module protection system (MPS) and reactor protection system (RPS) to address ATWS risks, and it conforms to GDC 12 for thermal hydraulic stability, with some requirements not applicable to the design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "314",
+      "hop": 3
+    },
+    "nuscale_ch01_0038": {
+      "node_id": "nuscale_ch01_0038",
+      "title": "Main Control Room",
+      "summary": "The Main Control Room (MCR) is located below grade in the Control Room Building (CRB) and includes various support spaces such as offices, conference rooms, and equipment rooms. It houses control panels for all installed NuScale Power Modules (NPMs), allowing reactor operators to monitor and control multiple NPMs using digital control systems that ensure independence between safety and nonsafety systems. The MCR provides comprehensive plant information, alarms, and controls to support effective monitoring and diagnostics.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "39",
+      "hop": 3
+    },
+    "nuscale_ch01_0067": {
+      "node_id": "nuscale_ch01_0067",
+      "title": "Drawings and Other Detailed Information",
+      "summary": "This section describes the inclusion of simplified instrumentation, control, electrical, and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information alongside the written text. It lists the types of diagrams provided, references tables and figures for diagram legends, and notes that applicants referencing the NuScale design must supply site-specific diagrams and legends as needed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
+      "hop": 3
+    },
+    "nuscale_ch01_0111": {
+      "node_id": "nuscale_ch01_0111",
+      "title": "Figure 1.7-2: Instrumentatio n and Controls Symbol Legend",
+      "summary": "This section provides a legend explaining the symbols used for instrumentation and controls in NuScale’s safety analysis diagrams. It defines the logic gate functions, control room indicators, switch types, and other symbols relevant to system status and operations, ensuring clear interpretation of the diagrams. Additionally, it includes notes on piping and instrumentation diagram conventions, such as vent and drain representations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "101",
+      "hop": 4
+    },
+    "nuscale_ch01_0016": {
+      "node_id": "nuscale_ch01_0016",
+      "title": "Principal Site Characteristics",
+      "summary": "This section provides a general overview of the NuScale plant design, outlining key systems such as safety features, power conversion, fuel handling, and waste management. It explains that each Combined License (COL) applicant must reference the NuScale Final Safety Analysis Report (FSAR) and supplement it with site-specific information, while distinguishing between certified design elements and conceptual design information (CDI). Security-related details are specially marked and withheld according to regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "26",
+      "hop": 4
+    },
+    "nuscale_ch01_0797": {
+      "node_id": "nuscale_ch01_0797",
+      "title": "SRP 15.7.5, Rev 2: Spent Fuel Cask Drop AccidentsII.2 Radioactivity Control Features of Fuel Storage and Handling Systems",
+      "summary": "The NuScale reactor building crane (RBC) is designed to be single-failure-proof per NUREG-0612, ensuring that no credible single component failure can result in dropping a critical load such as a spent fuel cask. Because of this robust design, load drop evaluations and accident analyses for radiological consequences are not required or performed for spent fuel cask or NPM drop accidents. Thus, the section concludes that the regulatory criteria for radioactivity control features are met through the crane's design, making further accident analysis not applicable.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "312",
+      "hop": 4
+    },
+    "nuscale_ch01_0110": {
+      "node_id": "nuscale_ch01_0110",
+      "title": "Figure 1.7-1b: Electrical Symbols",
+      "summary": "This section provides a legend of electrical symbols and abbreviations used in NuScale’s Final Safety Analysis Report drawings, including representations for switches, relays, transformers, and logic gates. It also explains the meaning of indicator light colors, logic gate functions, and common abbreviations relevant to electrical and control systems.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "100",
+      "hop": 4
+    },
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the NuScale pressurizer, including low alloy steel for the baffle plate, stainless steel and nickel-based alloys for cladding and components, all in accordance with relevant BPVC specifications. It also references where further material descriptions can be found in other report sections and lists the applicable standards for each material used.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0006",
-      "target": "nuscale_ch05_0014",
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch01_0068",
       "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section B specifies that the pressurizer is contained within the reactor pressure vessel, providing a concrete detail about the pressurizer region that is relevant to the analysis question, while Section A discusses system evaluation but does not directly address the pressurizer."
+      "confidence": 0.95,
+      "description": "Section A provides a detailed textual description of the reactor coolant system components within the NuScale Power Module, while Section B explains that figures (such as those in Ch.01) offer simplified visual representations of these systems, with Ch.05 adding more component-level detail beyond the overview in Ch.01."
     },
     {
-      "source": "nuscale_ch05_0006",
-      "target": "nuscale_ch05_0023",
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides specific component-level details (such as the degasification line and reactor vent valves) that elaborate on the general system overview described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch01_0069",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides detailed drawings and diagrams that visually clarify and specify the components and instrumentation described generally in Section A's summary of the reactor coolant system."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides a more detailed functional and component-level description of the reactor coolant system (RCS) and its subsystems, expanding upon the general visual and schematic overview referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0069",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section B provides more detailed piping and instrumentation diagrams that specify the internal components and connections of the NuScale Power Module, expanding upon the general overview presented in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch01_0069",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides detailed drawings and visual clarifications of the NuScale Power Module's components and instrumentation, which supplement and expand upon the general system description given in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed component and subsystem design information for the Reactor Coolant System, specifying the individual parts and their functions, whereas Section B gives a general summary of the Reactor Coolant System's purpose and main features, with Section A elaborating on the general overview presented in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch01_0068",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B (Ch.01 Figure 1.2-4) provides a simplified overview of the NuScale Power Module, while Section A (Ch.05 Figure 5.1-1) specifies additional component-level details such as the internal arrangement of the reactor pressure vessel and associated subsystems."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a detailed breakdown of the NuScale Power Module's internal components, while Section B offers a higher-level summary of system functions, with Section A specifying the detailed component information that elaborates on the general system description in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0785",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides a detailed summary description of the Reactor Coolant System (RCS) as a subsystem of the NuScale Power Module, which is referenced in Section A's broader discussion of regulatory conformance and accident analysis for the NuScale design."
+    },
+    {
+      "source": "nuscale_ch01_0785",
+      "target": "nuscale_ch01_0068",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A discusses the regulatory criteria and conformance for radiological consequences of accidents, while Section B provides the detailed electrical and instrumentation drawings that visually clarify the design information referenced in Section A's analysis."
+    },
+    {
+      "source": "nuscale_ch01_0785",
+      "target": "nuscale_ch05_0004",
       "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria for radiological consequences of loss-of-coolant accidents, while Section B provides specific system descriptions (e.g., degasification line, reactor vent valves) that are relevant to demonstrating conformance with those criteria."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a high-level overview of the NuScale Power Module and its systems, while Section B offers a detailed breakdown of the reactor coolant system components within the module, thus specifying the general description from Section A."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0068",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides detailed electrical and instrumentation drawings that visually clarify and specify the general plant design and system descriptions summarized in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides detailed descriptions of specific reactor coolant system components and their functions, which expand upon the general overview of plant systems and safety features introduced in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch01_0785",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A provides the detailed design and components of the NuScale Power Module's reactor coolant system, which are the physical basis for the radiological consequence calculations and regulatory conformance discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides a general overview of the NuScale Power Module and its systems, while Section A offers detailed specifications and descriptions of the Reactor Coolant System components referenced in Section B's summary."
+    },
+    {
+      "source": "nuscale_ch01_0785",
+      "target": "nuscale_ch01_0015",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria and conformance related to radiological consequences, while Section B provides the general plant description that includes the systems and features whose details and compliance are evaluated in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0807",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides a detailed component-level description of the NuScale Power Module's reactor coolant system, which adds specificity to the general module overview referenced in Section A's discussion of system-level regulatory conformance."
+    },
+    {
+      "source": "nuscale_ch01_0807",
+      "target": "nuscale_ch01_0068",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides detailed electrical and instrumentation drawings that visually clarify and supplement the general design descriptions referenced in Section A, enabling a more granular understanding of the NuScale Power Module's components and their arrangement."
+    },
+    {
+      "source": "nuscale_ch01_0807",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides detailed descriptions of specific NuScale Power Module components (such as the degasification line and reactor vent valves) that are only generally depicted in the overall module view referenced in Section A, thereby specifying the internal features and functions that support the general system overview."
+    },
+    {
+      "source": "nuscale_ch01_0038",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B (Ch.05) provides a detailed breakdown of the reactor coolant system components within the NuScale Power Module, expanding on the general plant layout depicted in Section A (Ch.01) by specifying subsystem elements like the RPV, PZR, and RVI."
+    },
+    {
+      "source": "nuscale_ch01_0038",
+      "target": "nuscale_ch01_0068",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides detailed electrical and instrumentation drawings that visually clarify and supplement the general spatial and functional description of the Main Control Room given in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0038",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides detailed descriptions of specific reactor coolant system components and their functions, which are not shown in the general plant layout of Section A, thereby offering additional technical detail beyond the spatial and functional overview in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0067",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides general and simplified drawings of the NuScale Power Module, while Section B offers a more detailed breakdown of the reactor coolant system components within the module, specifying additional internal elements not shown in the overview."
+    },
+    {
+      "source": "nuscale_ch01_0067",
+      "target": "nuscale_ch01_0068",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides a specific subset (electrical and I&C drawings) that is referenced in the broader context of Section A's general description of drawings and detailed information."
+    },
+    {
+      "source": "nuscale_ch01_0067",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B (Ch.05) provides a more detailed component-level description of the NuScale Power Module, such as specific functions of the RCS and associated valves, which elaborates on the general overview depicted in Section A (Ch.01)'s figure."
+    },
+    {
+      "source": "nuscale_ch01_0807",
+      "target": "nuscale_ch01_0038",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides a detailed breakdown of the Main Control Room's associated spaces and physical layout, which adds specific component-level detail to the general NuScale Power Module overview referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0807",
+      "target": "nuscale_ch01_0067",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides detailed drawings and component-level information that visually clarify and supplement the general design descriptions referenced in Section A, enabling a more granular understanding of the NuScale Power Module's systems as discussed in the regulatory context."
+    },
+    {
+      "source": "nuscale_ch01_0038",
+      "target": "nuscale_ch01_0067",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section B provides detailed drawings and visual clarifications that supplement the general plant description and spatial layout of the Main Control Room described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0111",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B (Ch.05) provides a detailed summary of the reactor coolant system components and their functions within the NuScale Power Module, whereas Section A (Ch.01) only provides the symbol legend for instrumentation and controls used in figures, so Ch.05 adds specific component-level detail not present in Ch.01."
+    },
+    {
+      "source": "nuscale_ch01_0111",
+      "target": "nuscale_ch01_0068",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A provides the symbol legend necessary to interpret the instrumentation and control drawings referenced in Section B, which describes the use and purpose of such drawings in the report."
+    },
+    {
+      "source": "nuscale_ch01_0111",
+      "target": "nuscale_ch05_0004",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A provides the symbol legend necessary to interpret instrumentation and control diagrams, which is a prerequisite for understanding the detailed component view and system descriptions in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0016",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides a detailed breakdown of the reactor coolant system components within the NuScale Power Module, expanding upon the general plant description and system overview given in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0016",
+      "target": "nuscale_ch01_0068",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides detailed electrical and instrumentation/control drawings that visually clarify and specify the general plant description summarized in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0016",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides detailed component-level descriptions of the Reactor Coolant System (RCS) and its specific functions, which expand upon the general plant overview and system listings presented in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0797",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides a detailed summary of the reactor coolant system components within the NuScale Power Module, which are depicted more generally in the overall module illustration referenced in Section A, thus specifying the internal design details that Section A references at a higher level."
+    },
+    {
+      "source": "nuscale_ch01_0797",
+      "target": "nuscale_ch01_0068",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides detailed electrical and instrumentation/control drawings that visually clarify and specify the design features referenced generally in Section A's discussion of the reactor building crane's safety functions."
+    },
+    {
+      "source": "nuscale_ch01_0797",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides a more detailed component-level description of the NuScale Power Module's reactor coolant system, including specific features like degasification lines and reactor vent valves, which are only generally depicted in the overall module illustration referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0110",
+      "target": "nuscale_ch05_0003",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A provides the standardized electrical symbols used in NuScale FSAR drawings, which are referenced in Section B's detailed component descriptions of the reactor coolant system in the NuScale Power Module."
+    },
+    {
+      "source": "nuscale_ch01_0110",
+      "target": "nuscale_ch01_0068",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides the specific electrical symbols used in drawings, while Section B explains the general purpose and context of these electrical and I&C drawings, with A specifying the details for B's general description."
+    },
+    {
+      "source": "nuscale_ch01_0110",
+      "target": "nuscale_ch05_0004",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A provides the standardized electrical symbols used in NuScale FSAR drawings, which are necessary to interpret the detailed component view in Section B's system description and associated figures, thus enabling a more granular understanding of the RCS components and their instrumentation as depicted in Ch.05."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed specifications of the pressurizer components and their materials, which elaborates on the general system-level description of the NuScale Power Module and its reactor coolant system given in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch01_0068",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section B provides simplified drawings for visual clarification of the NuScale Power Module's design as introduced in Section A, while Section A offers detailed descriptions and material specifications for specific components referenced in those drawings."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific material and component details for the pressurizer, which are part of the broader system described in Section B, thus elaborating on the general system overview with detailed component information."
+    },
+    {
+      "source": "nuscale_ch01_0111",
+      "target": "nuscale_ch01_0016",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A provides the symbol legend necessary to interpret instrumentation and controls diagrams referenced in Section B's general plant description, specifically supporting understanding of the instrumentation and controls systems mentioned in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0111",
+      "target": "nuscale_ch01_0797",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the legend for instrumentation and control symbols used in NuScale FSAR drawings, which is necessary to interpret the system diagrams and design details referenced in Section B's discussion of the reactor building crane's safety features."
+    },
+    {
+      "source": "nuscale_ch01_0111",
+      "target": "nuscale_ch01_0110",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides the legend for instrumentation and control logic symbols, while Section B provides the legend for electrical symbols, with both sections offering complementary symbol definitions necessary for interpreting NuScale FSAR drawings."
+    },
+    {
+      "source": "nuscale_ch01_0111",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides detailed descriptions of specific NuScale Power Module components (e.g., pressurizer materials and subcomponents) that are only generally depicted in the overall module view referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0016",
+      "target": "nuscale_ch01_0797",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the plant's systems, including fuel handling and storage, while Section B gives specific regulatory conformance details for the fuel handling system, particularly the reactor building crane's compliance with safety guidelines."
+    },
+    {
+      "source": "nuscale_ch01_0016",
+      "target": "nuscale_ch01_0110",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of plant systems including instrumentation and electrical systems, while Section B specifies the detailed electrical symbols used to represent those systems in diagrams, thus providing the graphical details referenced in Section A's summary."
+    },
+    {
+      "source": "nuscale_ch01_0016",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides detailed specifications and material descriptions for specific components (e.g., pressurizer, RPV upper shell) that are only generally referenced in Section A's overall plant description."
+    },
+    {
+      "source": "nuscale_ch01_0797",
+      "target": "nuscale_ch01_0110",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section B provides the standardized electrical symbols used in NuScale FSAR figures, which are necessary for interpreting the component details shown in both Figure 1.2-4 (Ch.01) and Figure 5.1-1 (Ch.05) referenced in the analysis question."
+    },
+    {
+      "source": "nuscale_ch01_0797",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides detailed component-level descriptions of the pressurizer and its materials, which expands upon the general system-level overview of the NuScale Power Module referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0110",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
       "confidence": 0.7,
-      "description": "Section A discusses the system evaluation and performance criteria for the NuScale reactor, including the DHRS and its connection to steam and feed piping, while Section B details the inspection and classification requirements for DHRS components, thus both sections are related through their focus on the DHRS and its integration and regulatory compliance within the reactor coolant system."
-    },
-    {
-      "source": "nuscale_ch05_0006",
-      "target": "nuscale_ch05_0017",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses the establishment of steady state values for primary and secondary side parameters, which include pressure and temperature relevant to the pressurizer region, while Section B addresses the development of operating procedures to ensure that pressure-temperature limits (which depend on those parameters) are not exceeded, thus linking the design values from A to the operational controls in B."
-    },
-    {
-      "source": "nuscale_ch05_0006",
-      "target": "nuscale_ch05_0024",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section B provides a detailed description of the pressurizer region of the reactor vessel, which is the specific subsystem whose performance and parameters are evaluated in the broader system evaluation context of Section A."
-    },
-    {
-      "source": "nuscale_ch05_0014",
-      "target": "nuscale_ch05_0017",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the physical configuration of the reactor vessel, including the pressurizer region as part of the vessel, while Section B addresses the operational procedures developed to ensure the integrity of the reactor vessel (including the pressurizer region) under specified pressure-temperature limits."
-    },
-    {
-      "source": "nuscale_ch05_0014",
-      "target": "nuscale_ch05_0024",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section B specifies that the pressurizer is formed by the upper region of the reactor vessel described in Section A, detailing its physical location and separation within the vessel."
-    },
-    {
-      "source": "nuscale_ch05_0023",
-      "target": "nuscale_ch05_0017",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section B discusses the development of operating procedures to ensure reactor vessel pressure-temperature limits are not exceeded, which is related to Section A's focus on inspection and classification of components (such as valves) that are part of the reactor coolant system and could affect pressurizer region integrity."
-    },
-    {
-      "source": "nuscale_ch05_0017",
-      "target": "nuscale_ch05_0024",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section B specifies that the pressurizer is the upper region of the reactor vessel, providing concrete details that clarify the general context of reactor vessel integrity discussed in Section A."
+      "description": "Section B provides detailed descriptions of specific pressurizer components and their materials, while Section A lists electrical symbols that may be used in diagrams representing those or related components, thus Section A provides symbolic representation tools for the detailed components described in Section B."
     }
   ]
 }

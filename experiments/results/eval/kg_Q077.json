@@ -1,58 +1,69 @@
 {
-  "question": "Describe the characteristics of the Operating Floor.",
+  "question": "According to Table 1.3-1, how does NuScale's electrical output compare to a typical PWR?",
   "current_hop": 4,
   "nodes": {
+    "nuscale_ch01_0189": {
+      "node_id": "nuscale_ch01_0189",
+      "title": "BTP 6-2, Rev 3: Minimum Containment Pressure Model for PWR ECCS PerformanceAll (B.1 thru B.3)Various",
+      "summary": "This section reviews NuScale’s conformance with regulatory criteria related to containment pressure and water chemistry for PWR ECCS performance. It concludes that certain criteria are not fully applicable to the NuScale design due to differences such as the absence of a containment spray system, sump, or secondary containment, and that some guidance (like BTP 6-2, Rev 3) is not applicable because a LOCA in NuScale does not result in core uncovery. Where relevant, NuScale applies the intent of the criteria to its unique design features.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "232",
+      "hop": 1
+    },
+    "nuscale_ch01_0052": {
+      "node_id": "nuscale_ch01_0052",
+      "title": "Comparison with Other Facilities",
+      "summary": "This section compares the major design features and parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It highlights differences in size, output, core design, and safety systems, showing that NuScale uses a smaller, simpler, and more integrated design with fewer components and lower power output per module compared to conventional PWRs. The comparison is summarized in tables for clarity.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "79",
+      "hop": 1
+    },
+    "nuscale_ch01_0006": {
+      "node_id": "nuscale_ch01_0006",
+      "title": "Power Output",
+      "summary": "The NuScale Power Plant consists of up to 12 NuScale Power Modules (NPMs), each rated at 160 MWt and producing approximately 50 MWe, for a total net output of about 570 MWe when accounting for house loads. The actual electrical output may vary depending on environmental conditions, and the design includes a 2% margin for measurement uncertainty.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch01_0439": {
+      "node_id": "nuscale_ch01_0439",
+      "title": "SRP 10.4.6, Rev 3: Condensate Cleanup SystemII.2 Maintain indirect cycle PWR water quality to avoid corrosion-induced failure of the reactor coolant pressure boundary (GDC 14)",
+      "summary": "The section outlines NuScale’s conformance with regulatory criteria for maintaining indirect cycle PWR water quality to prevent corrosion-induced failure of the reactor coolant pressure boundary, as required by GDC 14. It states that the NuScale steam generator design differs from traditional designs, with primary water outside and secondary water inside the tubes, and no steam generator blowdown, resulting in different secondary chemistry requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "263",
+      "hop": 1
+    },
     "nuscale_ch01_0110": {
       "node_id": "nuscale_ch01_0110",
       "title": "Figure 1.7-1b: Electrical Symbols",
-      "summary": "This section provides a comprehensive legend of electrical symbols and abbreviations used in NuScale’s Final Safety Analysis Report drawings, including representations for switches, relays, indicators, and logic gates. It explains the meaning of each symbol and describes the logic functions (AND, OR, NOT, bistable outputs) used in instrumentation and control diagrams.",
+      "summary": "This section provides a comprehensive legend of electrical symbols and abbreviations used in NuScale’s Final Safety Analysis Report drawings, including representations for switches, relays, transformers, and logic gates. It also explains the meanings of various indicator lights, control devices, and logic functions relevant to instrumentation and control systems.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "100",
       "hop": 1
     },
-    "nuscale_ch01_0354": {
-      "node_id": "nuscale_ch01_0354",
-      "title": "SRP 9.3.3, Rev 3: Equipment and Floor Drainage SystemII.1 Protection Against Natural Phenomena",
-      "summary": "The section confirms that the NuScale equipment and floor drainage system meets the regulatory criteria for protection against natural phenomena, with full conformance noted and no exceptions. The system is designed to withstand environmental and dynamic effects, and it does not allow any portion of the drain system to penetrate the containment barrier, ensuring control of radioactive material releases.",
+    "nuscale_ch01_0558": {
+      "node_id": "nuscale_ch01_0558",
+      "title": "DSRS 12.3-12.4, Rev 0: Radiation Protection Design FeaturesII.9 RG 8.15",
+      "summary": "This section summarizes the NuScale Final Safety Analysis Report’s conformance with various regulatory guides related to radiation protection design features, as outlined in DSRS 12.3-12.4, Rev 0. It details whether each regulatory guide is applicable, and if so, whether NuScale’s design fully or partially conforms, with references to supporting sections or tables for further information. Several guides are noted as not applicable, while others are partially or fully met.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "250",
-      "hop": 1
-    },
-    "nuscale_ch01_0038": {
-      "node_id": "nuscale_ch01_0038",
-      "title": "Main Control Room",
-      "summary": "The Main Control Room (MCR) is located below grade in the Control Room Building (CRB) and includes various support spaces such as offices, conference rooms, and equipment rooms. It houses control panels for all installed NuScale Power Modules (NPMs), allowing reactor operators to monitor and control multiple NPMs using digital control systems that ensure independence between safety and nonsafety systems. The MCR provides comprehensive plant information, alarms, and controls for effective monitoring and diagnostics.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "39",
-      "hop": 1
-    },
-    "nuscale_ch01_0355": {
-      "node_id": "nuscale_ch01_0355",
-      "title": "SRP 9.3.3, Rev 3: Equipment and Floor Drainage SystemII.2 Environmental and Dynamic Effects",
-      "summary": "The section confirms that the NuScale equipment and floor drainage system meets the regulatory requirements for protection against environmental and dynamic effects, with no exceptions noted. It states that the system conforms to the relevant criteria, ensuring safety and compliance with established standards.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "250",
+      "page_range": "278",
       "hop": 1
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0354",
-      "target": "nuscale_ch01_0355",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A addresses protection of the operating floor against natural phenomena, while Section B addresses the operating floor's response to environmental and dynamic effects, both contributing specific safety-related characteristics relevant to the analysis question."
-    },
-    {
-      "source": "nuscale_ch01_0038",
-      "target": "nuscale_ch01_0355",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A describes the location and associated spaces of the Main Control Room, which is below grade and not on the Operating Floor, while Section B discusses regulatory criteria for equipment and floor drainage systems relevant to various plant areas, including the Operating Floor, thus Section A provides contextual information that helps distinguish the Operating Floor from other plant areas referenced in Section B."
+      "source": "nuscale_ch01_0189",
+      "target": "nuscale_ch01_0006",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A references regulatory criteria and partial conformance related to PWR systems, while Section B describes the NuScale containment and power output, connecting them through the comparison of NuScale's design and output to typical PWR standards as required by regulatory analysis."
     }
   ]
 }

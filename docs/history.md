@@ -365,13 +365,65 @@ Edge distribution (1,328 total): SPECIFIES 525 (39.5%), SUPPORTS 442 (33.3%), RE
 
 ---
 
+---
+
+## v0.4.2 — Agent Memory + Multihop Benchmark (`TBD`)
+
+**Date**: 2026-03-20 ~ 2026-03-24
+
+### Agent Memory
+Search history tracked per hop and passed in `_plan_tool_actions` prompt. Prevents keyword repetition. Q035 fix confirmed: agent tries different terms each hop, finds answer at hop 4 via `search("RCS volume")`.
+
+### Multihop Benchmark (200 questions)
+
+New benchmark from `github.com/kimmbk/GWM_Benchmark`:
+- 200 questions, 3 reasoning types (factual/comparative/judgment), 3 complexity levels (single/multi/cross_document)
+- Designed specifically for multi-evidence, multi-hop evaluation
+
+**Full Results:**
+
+| Metric | Overall | factual (70) | comparative (65) | judgment (65) |
+|--------|---------|-------------|------------------|--------------|
+| Faithfulness | 0.56 (n=39) | 0.43 | **0.86** | **0.82** |
+| Answer Relevancy | **0.81** | 0.80 | 0.77 | **0.85** |
+| Context Recall | **0.68** | 0.54 | 0.70 | **0.82** |
+| Factual Correctness | **0.38** | 0.35 | **0.46** | 0.34 |
+| Keyword Hit | 0.65 | **0.71** | 0.65 | 0.60 |
+
+**By Complexity (Context Recall):**
+
+|  | single_evidence | multi_evidence | cross_document |
+|--|-----------------|----------------|----------------|
+| factual | 0.33 | 0.60 | 0.88 |
+| comparative | 0.64 | 0.52 | 0.91 |
+| judgment | 0.60 | 0.70 | **0.94** |
+
+**Edge Distribution (8,069 total):**
+SUPPORTS 33%, SPECIFIES 31%, REFERENCES 14%, IS_PREREQUISITE_OF 10%, **SATISFIES 8.2% (659)**, SEMANTIC 2%, LEADS_TO 1%, CONTRADICTS 0.6%, VIOLATES 0.02%
+
+**Key Findings:**
+1. judgment CR=0.82: Regulatory judgment questions trigger broadest exploration, finding evidence from both design specs and requirements.
+2. cross_document CR=0.92: Counterintuitively highest — Agent Memory drives diverse search across both chapters.
+3. SATISFIES 659 instances (judgment alone: 359) — validates the core thesis that regulatory judgment edges emerge in multi-hop queries.
+4. comparative FC=0.46 (highest): Comparison answers naturally produce claim-by-claim structure that matches RAGAs evaluation well.
+5. single_evidence CR=0.45 (lowest): Paradoxically hardest — finding one specific node requires exact BM25 match.
+6. VIOLATES only 2 instances: Not an agent limitation — FSAR is a certification document where all designs pass requirements.
+7. Faithfulness measured only 19.5% (39/200): KG avg 52 edges for judgment → token overflow in RAGAs claim extraction.
+8. 200/200 questions succeeded, 0 errors.
+
+**KG Stats:**
+| Type | Avg Nodes | Avg Edges | Avg Hops |
+|------|-----------|-----------|----------|
+| factual | 10.8 | 29.2 | 3.4 |
+| comparative | 12.9 | 40.5 | 3.6 |
+| judgment | 15.0 | 52.3 | 3.8 |
+
+---
+
 ## Known Issues (Unresolved)
 
-1. **Search keyword repetition**: Agent repeats same keywords across hops (no action history). Need search history in prompt or action memory module. See todo.md.
-2. **Factual Correctness structurally low**: RAGAs penalizes extra claims. Metric limitation.
-3. **Faithfulness timeout**: Correlated with answer length + KG size.
-4. **image_only FactCorr still low**: Vision wording differs from expected answer.
-5. **QA dataset errors**: Q004 expected answer contains factual error.
-6. **browse tool under-utilized**: Agent defaults to search-heavy strategy.
-7. **KGNode.to_dict() missing references**: Not serialized to JSON exports.
-8. **Edge explosion**: Q003 produced 45 edges. May need limits.
+1. **single_evidence CR=0.45**: BM25 precision too low for finding one specific node. Browse-first pattern needed.
+2. **Faithfulness measurement 19.5%**: Large KGs (avg 52 edges) overflow RAGAs claim extraction. Need shorter context or lighter evaluator.
+3. **judgment FC=0.34**: Agent adds reasoning claims beyond expected answer → RAGAs penalizes.
+4. **browse tool under-utilized**: Agent defaults to search-heavy strategy.
+5. **VIOLATES rare (2/8069)**: Structural — FSAR describes compliant designs only.

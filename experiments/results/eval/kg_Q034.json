@@ -1,116 +1,215 @@
 {
-  "question": "What is the volume of the SG region?",
+  "question": "What are the ECCS valve types and their actuation mechanism in the NuScale design?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0006": {
-      "node_id": "nuscale_ch05_0006",
-      "title": "System Evaluation",
-      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance across various power levels by establishing steady-state parameters such as coolant temperatures, flow rates, and pressures, using both software and manual calculations. It details how uncertainties and design considerations are addressed to ensure efficient operation, maximize electrical generation, and maintain safety margins, particularly emphasizing the low pressure losses that support the plant’s natural circulation design.",
+    "nuscale_ch05_0022": {
+      "node_id": "nuscale_ch05_0022",
+      "title": "Decay Heat Removal System",
+      "summary": "The Decay Heat Removal System (DHRS) is an engineered safety feature designed to remove residual and core decay heat from the reactor after shutdown, especially when normal cooling is unavailable, without relying on external power. It ensures the reactor coolant system temperature drops below 420°F within 36 hours, maintaining fuel and pressure boundary safety limits, and its reliability and risk significance are rigorously evaluated. The DHRS operates independently of the Emergency Core Cooling System (ECCS), but both can function together if needed.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "12",
-      "hop": 1
-    },
-    "nuscale_ch05_0024": {
-      "node_id": "nuscale_ch05_0024",
-      "title": "Pressurizer",
-      "summary": "The pressurizer, integrated into the upper region of the reactor vessel and separated by a baffle plate, regulates Reactor Coolant System (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering reactor trips or safety system actuations, with instrumentation providing continuous monitoring and control.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "124",
-      "hop": 1
-    },
-    "nuscale_ch05_0004": {
-      "node_id": "nuscale_ch05_0004",
-      "title": "System Description",
-      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes components such as the reactor pressure vessel, pressurizer, and associated piping and controls. Its primary function is to transport heat from the reactor core to the steam generators using natural circulation, while also providing mechanisms for removing noncondensible gases and maintaining the integrity of the reactor coolant pressure boundary to prevent radionuclide release. The RCS interfaces with several other systems, including emergency core cooling and chemical control systems.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "9",
-      "hop": 1
-    },
-    "nuscale_ch05_0005": {
-      "node_id": "nuscale_ch05_0005",
-      "title": "System Components",
-      "summary": "This section describes the main components of the NuScale reactor system, focusing on the Reactor Pressure Vessel (RPV), Reactor Coolant System (RCS) piping, and the Pressurizer (PZR). The RPV serves as a primary barrier to fission product release and houses key reactor internals, while the RCS piping connects various subsystems and the PZR is integrated into the RPV to maintain system pressure. Each component's functions and connections are briefly outlined, with references to further detailed sections.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "10",
+      "page_range": "106",
       "hop": 1
     },
     "nuscale_ch05_0025": {
       "node_id": "nuscale_ch05_0025",
       "title": "References",
-      "summary": "This section details the materials used in the NuScale pressurizer, including the RPV upper shell, baffle plate, heater bundles, and associated components. It specifies the use of low alloy steel, various stainless steels, and nickel-based alloys, all in accordance with relevant BPVC Section II material specifications, to ensure corrosion resistance and compatibility with operating environments.",
+      "summary": "This section details the materials used in the NuScale pressurizer, including the RPV upper shell, baffle plate, heater bundles, and associated components. It specifies the types of steel and nickel-based alloys used, their protective cladding, and compliance with relevant BPVC material specifications to ensure corrosion resistance and compatibility with operating environments.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "130",
+      "hop": 1
+    },
+    "nuscale_ch05_0013": {
+      "node_id": "nuscale_ch05_0013",
+      "title": "References",
+      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as tables summarizing relevant ASME code cases for reactor components.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "46",
+      "hop": 1
+    },
+    "nuscale_ch05_0023": {
+      "node_id": "nuscale_ch05_0023",
+      "title": "Reactor Coolant System High-Point Vents",
+      "summary": "This section describes the testing and inspection requirements for the Decay Heat Removal System (DHRS) components, including compliance with ASME codes for preservice and inservice inspections. It details the classification and testing procedures for DHRS actuation valves, including full-stroke exercising during cold shutdown conditions and verification tests, as well as a one-time in-situ test of the DHRS function during initial reactor module startup.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "121",
+      "hop": 1
+    },
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain fuel integrity, minimize solid deposits, and ensure uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
       "hop": 2
+    },
+    "nuscale_ch05_0011": {
+      "node_id": "nuscale_ch05_0011",
+      "title": "Reactor Coolant Pressure Boundary Inservice Inspection and Testing",
+      "summary": "This section describes the materials and standards for threaded fasteners used in key reactor coolant system components, specifying the use of Alloy 718 for its compatibility and stress corrosion cracking resistance. It also outlines the requirements for preservice and inservice inspection and testing of reactor coolant pressure boundary components, which must comply with the latest applicable editions of the ASME Boiler and Pressure Vessel Code as mandated by federal regulations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "37",
+      "hop": 2
+    },
+    "nuscale_ch05_0009": {
+      "node_id": "nuscale_ch05_0009",
+      "title": "Overpressure Protection",
+      "summary": "This section outlines NuScale's compliance with NRC regulations and ASME code requirements for overpressure protection of the reactor coolant boundary. It details how applicable ASME BPVC and OM code cases are selected and used for design, fabrication, construction, preservice, and inservice inspections and testing, ensuring all code cases meet NRC-endorsed conditions. A consolidated list of the specific code cases used is provided in Table 5.2-1.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "21",
+      "hop": 2
+    },
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes components such as the reactor pressure vessel, pressurizer, and associated piping and controls. The RCS removes heat from the reactor core by natural circulation and interfaces with several other systems for safety and operational functions, including degasification and emergency core cooling. Its pressure-retaining parts help maintain the integrity of the reactor coolant pressure boundary, serving as a barrier to radionuclide release.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
+      "hop": 2
+    },
+    "nuscale_ch05_0021": {
+      "node_id": "nuscale_ch05_0021",
+      "title": "Reactor Coolant System Piping",
+      "summary": "The section discusses the design and degradation assessment of the NuScale reactor coolant system's steam generator (SG) tubing. It notes that the main degradation observed in similar operating reactors is wear from flow-induced vibration or foreign objects, and that NuScale's design—with its helical tubing and novel support structure—does not increase risk compared to existing designs. Prototypic testing and standard SG program guidelines are deemed sufficient, with wear remaining the most likely degradation mechanism and corrosion risks assessed as low.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "104",
+      "hop": 3
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0006",
-      "target": "nuscale_ch05_0024",
-      "relation": "REFERENCES",
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch05_0023",
+      "relation": "SPECIFIES",
       "confidence": 0.9,
-      "description": "Section A references Section 5.4 for further description of the SGs, while Section B is an excerpt from Section 5.4 but focuses on the pressurizer, not the SG region, indicating that Section A points to the general location where SG volume information might be found, but Section B does not provide that information."
+      "description": "Section B specifies that the DHRS actuation valves (part of ECCS) are classified as Category B valves and subject to certain inspection requirements, providing details about the valve types and their regulatory classification, which supports answering the analysis question that Section A introduces by describing the DHRS function."
     },
     {
-      "source": "nuscale_ch05_0006",
-      "target": "nuscale_ch05_0004",
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0013",
       "relation": "REFERENCES",
-      "confidence": 0.9,
-      "description": "Section A references Section 5.4 for further description of the SGs, which may contain the volume information needed to answer the analysis question, while Section B does not provide SG volume details."
+      "confidence": 0.95,
+      "description": "Section A references Section B by directing the reader to Section 5.2 for material descriptions relevant to the pressurizer components."
     },
     {
-      "source": "nuscale_ch05_0006",
-      "target": "nuscale_ch05_0005",
-      "relation": "REFERENCES",
-      "confidence": 0.9,
-      "description": "Section A references Section B by indicating that further details about the SGs, which are relevant to determining the SG region volume, are provided in Section 5.4 where Section B is located."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0004",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the pressurizer region as the upper part of the reactor vessel, while Section B refers to the PZR (pressurizer) volume at the top of the RPV, both identifying the same physical region relevant to determining the SG region's volume."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0005",
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0023",
       "relation": "SUPPORTS",
       "confidence": 0.7,
-      "description": "Section A describes the pressurizer region and its separation from the reactor coolant system, while Section B discusses system operations involving the steam generators (SGs) and pressurizer water level adjustments, connecting them through operational procedures that affect both regions."
+      "description": "Section B specifies that the DHRS actuation valves (part of ECCS) are classified as Category B valves and describes their inspection requirements, while Section A provides references that may support or justify these design and inspection practices."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0022",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the reactor coolant system's design, while Section B specifies the decay heat removal system as a subsystem that operates within the reactor coolant system described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the reactor coolant system design, while Section B specifies detailed component information (such as materials and nozzle descriptions) that elaborates on elements mentioned in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0013",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A provides a general description of the NuScale reactor coolant system design, while Section B lists references that may support or inform the technical basis for the system's integrity and quality assurance, but does not directly specify ECCS valve types or actuation mechanisms."
+    },
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A describes the materials and standards for threaded fasteners in reactor coolant system components, while Section B references Section 5.2 (from Section A) for material descriptions of pressurizer components, thus connecting the two sections through cross-referencing of material specifications."
+    },
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0013",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A discusses the use of specific threaded fastener materials and references Section B, which lists the standards and guidelines (such as ASME and EPRI documents) that these materials and their selection must comply with."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B references Section A by citing Section 5.2 for material descriptions of the RPV upper shell and upper head, establishing a cross-reference for detailed information."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0013",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A references Section B by citing external standards and guidelines (such as ASME and EPRI documents) that are listed in Section B's references, establishing the regulatory and technical basis for overpressure protection and reactor coolant boundary integrity."
     },
     {
       "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0005",
-      "relation": "SUPPORTS",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
       "confidence": 0.8,
-      "description": "Section A describes the degasification line and reactor vent valves used to remove gases from the PZR, while Section B details operational steps involving the SGs and PZR water level adjustments, connecting both sections through the operational context of the PZR and its interaction with the SG region."
+      "description": "Section A describes the function and operation of reactor vent valves (RVVs) as part of the ECCS, while Section B provides material and component details for the pressurizer, which includes references to sections that may contain further information about valve components, thus Section B specifies details for the general system described in Section A."
     },
     {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0006",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A references Section 5.4 for further details, which is where Section B provides a system evaluation and description of the SG, thus Section A cross-references the section in which Section B is located."
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0013",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the function and operation of ECCS-related valves (RVVs) in the NuScale design, while Section B lists references that may provide supporting standards or guidelines for the design and integrity of these valves, connecting them through the regulatory and technical basis for valve selection and operation."
     },
     {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0024",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A references Section B by citing its detailed description of the pressurizer components and their locations within the reactor vessel, specifically pointing to the upper region above the naturally circulating reactor coolant as described in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0004",
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0011",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A provides detailed descriptions of the pressurizer's structural components, while Section B describes the system-level function and operational context of the pressurizer within the reactor coolant system, connecting the physical design to its operational role."
+      "description": "Section A provides a general overview of the reactor coolant system's design and components, while Section B specifies the materials and standards for threaded fasteners used in several RCS components mentioned in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0009",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general description of the reactor coolant system's design, which is the system where ECCS valves would be located, while Section B discusses the regulatory codes and standards (ASME BPVC, 10 CFR 50.55a) that govern the design and testing of components such as ECCS valves, connecting the system's physical description to its regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B specifies that reactor vent valves (RVVs) are used as part of ECCS operation and describes their actuation (opened to discharge PZR steam space), providing details that Section A's general RCS description does not include."
+    },
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0009",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A and Section B both reference the use and compliance with ASME BPVC codes for materials and testing of reactor coolant boundary components, establishing a shared regulatory and design basis."
+    },
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section B identifies reactor vent valves (RVVs) as part of the ECCS operation, while Section A discusses the material and design requirements for pressure boundary components, which would include the valves mentioned in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section B describes the reactor vent valves (RVVs) and their role in ECCS operation, providing specific information about ECCS valve types and actuation, which is not addressed in Section A."
     }
   ]
 }

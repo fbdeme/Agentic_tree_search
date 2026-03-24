@@ -1,146 +1,794 @@
 {
-  "question": "Explain what ECCS is and how it operates.",
+  "question": "How does the NuScale single control room concept differ from conventional multi-unit plants?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0189": {
-      "node_id": "nuscale_ch01_0189",
-      "title": "BTP 6-2, Rev 3: Minimum Containment Pressure Model for PWR ECCS PerformanceAll (B.1 thru B.3)Various",
-      "summary": "This section explains that the guidance in BTP 6-2, Rev 3 regarding minimum containment pressure models for PWR ECCS performance is not applicable to the NuScale design, as a postulated LOCA in NuScale does not result in core uncovery. Therefore, the regulatory criteria addressed in BTP 6-2 do not apply to the NuScale reactor.",
+    "nuscale_ch01_0372": {
+      "node_id": "nuscale_ch01_0372",
+      "title": "SRP 9.4.1, Rev 3: Control Room Area Ventilation SystemII.4 Control Room",
+      "summary": "This section summarizes NuScale’s conformance with SRP 9.4.1, Rev 3 requirements for the Control Room Area Ventilation System. It confirms compliance with criteria related to protection against natural phenomena, environmental effects, and control room sharing, noting that up to 12 modules share a single control room. For radioactive material release, the system does not use emergency filtration but instead supplies clean air from compressed air tanks to maintain control room habitability during accidents.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "232",
+      "page_range": "252",
       "hop": 1
     },
-    "nuscale_ch01_0188": {
-      "node_id": "nuscale_ch01_0188",
-      "title": "BTP 6-1, (March 2007): pH for Emergency Coolant Water for Pressurized Water ReactorsB.3 Hydrogen Generation from Aluminum Corrosion",
-      "summary": "The section reviews NuScale's conformance with regulatory criteria regarding pH control and hydrogen generation from aluminum corrosion in emergency coolant water. While NuScale's design lacks certain systems referenced in the criteria (such as a containment spray system or sump), the intent of the requirements is still met due to the collection and recirculation of ECCS water within the containment vessel. Other criteria related to minimum containment pressure and bypass leakage are deemed not applicable to the NuScale design.",
+    "nuscale_ch01_0370": {
+      "node_id": "nuscale_ch01_0370",
+      "title": "SRP 9.4.1, Rev 3: Control Room Area Ventilation SystemII.2 Environmental and Dynamic Effects",
+      "summary": "The section confirms that the NuScale Final Safety Analysis Report meets the regulatory criteria outlined in SRP 9.4.1, Rev 3, specifically regarding environmental and dynamic effects on the Control Room Area Ventilation System. It states that the design conforms to these requirements, with no exceptions or additional comments noted for this criterion.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "232",
+      "page_range": "252",
       "hop": 1
     },
-    "nuscale_ch01_0028": {
-      "node_id": "nuscale_ch01_0028",
-      "title": "Instrumentation, Controls, and Electrical Systems",
-      "summary": "The Emergency Core Cooling System (ECCS) in the NuScale design provides passive decay heat removal during a loss-of-coolant accident using independent vent and recirculation valves, operating without active power. The Control Room Habitability System (CRHS) passively supplies clean, compressed air to protect operators during emergencies, while fission product removal relies on the containment vessel and isolation system, utilizing passive processes for safety.",
+    "nuscale_ch01_0864": {
+      "node_id": "nuscale_ch01_0864",
+      "title": "Nuclear Power Plants to be Operated on Multi-Unit Sites",
+      "summary": "This section outlines requirements for COL applicants referencing the NuScale Power Plant design certification to assess and manage potential hazards from construction activities at multi-unit sites. The evaluation must ensure that safety-related structures, systems, and components of both existing and new units are protected, and that operational safety limits are not exceeded. These requirements do not apply to construction activities at individual NuScale Power Plants with operating modules.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "33",
+      "page_range": "352",
       "hop": 1
     },
-    "nuscale_ch01_0063": {
-      "node_id": "nuscale_ch01_0063",
-      "title": "Emergency Core Cooling System Valve Design Certification Application Demonstration Test",
-      "summary": "This section describes the demonstration test program for the Emergency Core Cooling System (ECCS) valves in the NuScale reactor design. The test program aimed to verify the functional performance of the ECCS valves, including their operation at reactor pressures and temperatures and in borated coolant, as well as the effectiveness of unique design features like the inadvertent actuation block (IAB). Testing was conducted at a specialized facility using a test article representative of the reactor recirculation valve (RRV) to ensure the valves meet safety and operational requirements.",
+    "nuscale_ch01_0020": {
+      "node_id": "nuscale_ch01_0020",
+      "title": "Safety Considerations",
+      "summary": "The NuScale design enhances safety by maintaining a vacuum in the containment vessel (CNV), which reduces corrosion, aids in leak detection, and limits combustible gases. Its passive safety systems and integral design eliminate the need for external power and large coolant loops, significantly lowering the risk of core damage and improving safety compared to traditional nuclear plants.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "89",
+      "page_range": "32",
       "hop": 1
     },
-    "nuscale_ch01_0024": {
-      "node_id": "nuscale_ch01_0024",
-      "title": "Emergency Core Cooling System",
-      "summary": "The Emergency Core Cooling System (ECCS) in the NuScale design is a fully passive system that removes decay heat during a loss-of-coolant accident (LOCA) using three independent reactor vent valves and two recirculation valves, all of which are closed during normal operation. During an emergency, the system vents steam into containment for condensation and recirculates water back to the core, with heat ultimately transferred passively to the reactor pool.",
+    "nuscale_ch01_0402": {
+      "node_id": "nuscale_ch01_0402",
+      "title": "DSRS 9.5.2, Rev 0: Communication SystemsII.11 Compliance with GDC 19",
+      "summary": "This section explains that the NuScale design departs from GDC 19 by supporting an exemption and instead complies with a NuScale-specific principal design criterion (PDC-19). The design ensures that communication equipment is available in the control room to support all normal and emergency operations, including intra-plant and off-site communications, even during equipment failures or power loss. Additionally, certain regulatory requirements (10 CFR 73.45) are not applicable to NuScale, as it does not reprocess spent fuel or handle special nuclear material.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "33",
+      "page_range": "258",
       "hop": 1
     },
-    "nuscale_ch01_0017": {
-      "node_id": "nuscale_ch01_0017",
-      "title": "Facility Description",
-      "summary": "The Facility Description section outlines the NuScale plant’s core cooling and power generation process. It describes how the reactor core heats coolant, which circulates naturally to transfer heat to steam generators, producing superheated steam that drives a turbine and generates electricity. The section also notes that site-specific details exist for cooling systems and equipment layout.",
+    "nuscale_ch01_0023": {
+      "node_id": "nuscale_ch01_0023",
+      "title": "Containment Systems",
+      "summary": "The NuScale containment vessel (CNV) is maintained under vacuum during normal operations, which reduces moisture and corrosion, aids in leak detection, and limits oxygen for safety. In the event of an emergency, passive cooling rapidly reduces pressure and temperature, and the plant’s design—featuring passive safety systems and a small fuel inventory—results in improved safety and a lower core damage frequency compared to conventional reactors.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "28",
+      "page_range": "32",
+      "hop": 1
+    },
+    "nuscale_ch01_0111": {
+      "node_id": "nuscale_ch01_0111",
+      "title": "Figure 1.7-2: Instrumentatio n and Controls Symbol Legend",
+      "summary": "This section provides a legend explaining the symbols used for instrumentation and controls in NuScale’s safety analysis diagrams. It defines the logic gate functions, control room indicators, switch types, and other symbols relevant to system status and operations, ensuring clear interpretation of the diagrams. Additionally, it includes notes on piping and instrumentation diagram conventions, such as vent and drain valve representations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "101",
+      "hop": 1
+    },
+    "nuscale_ch01_0865": {
+      "node_id": "nuscale_ch01_0865",
+      "title": "Nuclear Power Plants to be Operated on Multi-Unit Sites",
+      "summary": "This section outlines requirements for COL applicants referencing the NuScale Power Plant design certification to assess and manage potential hazards from construction activities at multi-unit sites. The evaluation must ensure that safety-related structures, systems, and components of both existing and new units are protected, and that operational safety limits are not exceeded. These requirements do not apply to construction activities at a single NuScale plant with operating modules.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "352",
+      "hop": 1
+    },
+    "nuscale_ch01_0066": {
+      "node_id": "nuscale_ch01_0066",
+      "title": "Material Referenced",
+      "summary": "This section lists the topical and technical reports incorporated by reference in the NuScale Power Plant Design Certification Application, as detailed in Tables 1.6-1 and 1.6-2. These reports cover various aspects such as quality assurance, risk significance, safety classification, accident analysis methodologies, and fuel evaluation methods, and are referenced throughout specific sections of the Final Safety Analysis Report (FSAR).",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "91",
+      "hop": 2
+    },
+    "nuscale_ch01_0852": {
+      "node_id": "nuscale_ch01_0852",
+      "title": "SRP Appendix 18-A, Rev 0: Crediting Manual Operator Actions in Diversity and Defense-in-Depth (D3) AnalysesC.1.B Review Criteria for Phase 1 (Analysis)",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for crediting manual operator actions in Diversity and Defense-in-Depth (D3) analyses, as outlined in SRP Appendix 18-A, Rev 0. It confirms that NuScale meets the review criteria for all phases of D3 analysis, with SRP Appendix 18-A superseding previous guidance, while also noting that certain aspects of probabilistic risk assessment remain the responsibility of the COL applicant.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "322",
+      "hop": 2
+    },
+    "nuscale_ch01_0014": {
+      "node_id": "nuscale_ch01_0014",
+      "title": "Acronyms and Abbreviations",
+      "summary": "This section explains the conventions used in the NuScale Final Safety Analysis Report (FSAR) for numbering and organizing text, tables, figures, and pages, as well as the handling of proprietary and sensitive information. It clarifies that sensitive material is withheld from the public version in accordance with regulatory requirements, while the public version excludes such content.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "10",
+      "hop": 2
+    },
+    "nuscale_ch01_0853": {
+      "node_id": "nuscale_ch01_0853",
+      "title": "SRP Appendix 18-A, Rev 0: Crediting Manual Operator Actions in Diversity and Defense-in-Depth (D3) AnalysesC.2.B Review Criteria for Phase 2 (Preliminary Validation)",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for crediting manual operator actions in Diversity and Defense-in-Depth (D3) analyses, as outlined in SRP Appendix 18-A, Rev 0. It confirms that NuScale meets the review criteria for all phases (analysis, preliminary validation, integrated system validation, and long-term integrity), superseding previous guidance, while noting that certain aspects of probabilistic risk assessment (PRA) remain the responsibility of the COL applicant.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "322",
+      "hop": 2
+    },
+    "nuscale_ch01_0050": {
+      "node_id": "nuscale_ch01_0050",
+      "title": "Diesel Generator Buildings",
+      "summary": "The Diesel Generator Buildings (DGBs) in the NuScale Power Plant each house a single backup diesel generator and their auxiliary equipment, serving as support structures without any safety-related systems or functions supporting engineered safety features (ESFs). The DGBs contain diesel engines, generators, HVAC systems, and maintenance areas.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "43",
       "hop": 3
+    },
+    "nuscale_ch01_0851": {
+      "node_id": "nuscale_ch01_0851",
+      "title": "SRP 18.0, Rev 2: Human Factors EngineeringII.C Review of the HFE Aspects of Modifications Affecting Risk Important Human Actions",
+      "summary": "This section states that the SRP 18.0, Rev 2 criteria for reviewing human factors engineering (HFE) aspects of modifications affecting risk-important human actions are not applicable to NuScale, as they pertain to existing reactor licensees. However, NuScale conforms to the review criteria in SRP Appendix 18-A for crediting manual operator actions in diversity and defense-in-depth (D3) analyses, while site-specific hazards and PRA updates are the responsibility of the COL applicant under SRP 19.0.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "322",
+      "hop": 3
+    },
+    "nuscale_ch01_0164": {
+      "node_id": "nuscale_ch01_0164",
+      "title": "SRP 6.4, Rev 3: Control Room Habitability SystemII.7 Toxic Gas Hazards",
+      "summary": "The NuScale control room habitability system does not rely on emergency ventilation but instead uses compressed air tanks to provide clean air during accidents, eliminating the risk of toxic gas or radioactive material entering through ventilation inlets. The guidance on toxic gas hazards is only partially applicable, as programmatic requirements are the responsibility of the COL applicant. Additionally, certain regulatory criteria related to air filtration and containment spray systems are not applicable to the NuScale design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "228",
+      "hop": 3
+    },
+    "nuscale_ch01_0161": {
+      "node_id": "nuscale_ch01_0161",
+      "title": "SRP 6.4, Rev 3: Control Room Habitability SystemII.5 Relative Location of Source and Control Room",
+      "summary": "The NuScale design does not rely on traditional control room emergency ventilation systems for habitability during accidents; instead, it uses compressed air tanks to supply clean air, preventing the entry of radioactive or toxic materials. As a result, several regulatory criteria related to ventilation systems and ESF filtration are not applicable, though some dose guidelines and toxic gas hazard requirements are partially addressed or deferred to the COL applicant.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "228",
+      "hop": 3
+    },
+    "nuscale_ch01_0049": {
+      "node_id": "nuscale_ch01_0049",
+      "title": "Central Utility Building",
+      "summary": "The Central Utility Building (CUB) is a non-safety-related structure that houses essential utility services for the plant, such as chiller equipment, air systems, water treatment, maintenance, and security functions. Additionally, the plant includes Diesel Generator Buildings (DGBs) for backup power, and its design incorporates human factors engineering to minimize errors and optimize control and automation.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "43",
+      "hop": 3
+    },
+    "nuscale_ch01_0069": {
+      "node_id": "nuscale_ch01_0069",
+      "title": "Piping and Instrumentation Diagrams",
+      "summary": "This section describes the use of simplified electrical, instrumentation and control (I&C), and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information. It references tables and figures that list and explain the symbols and diagrams used, and notes that site-specific diagrams and legends will be provided by COL applicants referencing the NuScale design certification.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
+      "hop": 4
+    },
+    "nuscale_ch01_0068": {
+      "node_id": "nuscale_ch01_0068",
+      "title": "Electrical and Instrumentation and Control Drawings",
+      "summary": "This section describes the use of simplified electrical, instrumentation, and control (I&C) drawings in the NuScale Final Safety Analysis Report (FSAR) to visually clarify design information alongside the written text. It references tables and figures that list and explain the symbols used in these diagrams, and notes that applicants referencing the NuScale design must provide additional site-specific diagrams and legends as needed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
+      "hop": 4
+    },
+    "nuscale_ch01_0048": {
+      "node_id": "nuscale_ch01_0048",
+      "title": "Security Buildings",
+      "summary": "The Security Buildings (SCBs) at a NuScale Power Plant are nonsafety-related structures that include the primary access control building. These buildings support plant security functions but are not classified as safety-related, distinguishing them from other critical plant infrastructure.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "42",
+      "hop": 4
+    },
+    "nuscale_ch01_0061": {
+      "node_id": "nuscale_ch01_0061",
+      "title": "Control Rod Drive Mechanism Proof Test",
+      "summary": "The NuScale Integral System Test Program uses the NIST-1 facility, a scaled model of the NuScale Power Module (NPM), to generate thermal-hydraulic data for system characterization and validation of safety analysis codes such as NRELAP5 and PIM. These tests ensure that the unique features and safety methodologies of the NPM are accurately represented and validated, supporting the design certification process.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "87",
+      "hop": 4
+    },
+    "nuscale_ch01_0062": {
+      "node_id": "nuscale_ch01_0062",
+      "title": "Control Rod Assembly Drop and Control Rod Drive Shaft Alignment Test",
+      "summary": "This section describes the testing and validation of the NuScale control rod assembly (CRA) drop and drive shaft alignment, including remote connect/disconnect operations. The tests, conducted at Curtiss Wright facilities, demonstrated reliable and repeatable engagement and disengagement of the CRA, informing design improvements but not establishing the final design basis. The NPM features longer, remotely disconnectable drive shafts with multiple alignment supports to ensure proper operation.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "88",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0189",
-      "target": "nuscale_ch01_0188",
+      "source": "nuscale_ch01_0372",
+      "target": "nuscale_ch01_0370",
       "relation": "REFERENCES",
-      "confidence": 0.85,
-      "description": "Section A references the operation of ECCS and its interaction with containment water chemistry requirements, while Section B details specific pH and hydrogen generation considerations during ECCS operation, both connected by the regulatory evaluation of ECCS water chemistry in the NuScale design."
+      "confidence": 0.95,
+      "description": "Section A references Section B by listing SRP 9.4.1, Rev 3: Control Room Area Ventilation SystemII.2 Environmental and Dynamic Effects as a regulatory criterion with which the NuScale design claims conformance, thereby connecting the general regulatory requirement (Section B) to the NuScale-specific analysis (Section A)."
     },
     {
-      "source": "nuscale_ch01_0189",
-      "target": "nuscale_ch01_0028",
-      "relation": "REFERENCES",
-      "confidence": 0.9,
-      "description": "Section B provides a general description of the ECCS and its operation, which is referenced in Section A's discussion of regulatory conformance and specific design features."
-    },
-    {
-      "source": "nuscale_ch01_0189",
-      "target": "nuscale_ch01_0063",
+      "source": "nuscale_ch01_0372",
+      "target": "nuscale_ch01_0864",
       "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section B provides specific test results and operational details of the ECCS valves, which serve as concrete evidence supporting the general regulatory conformance claims about ECCS operation discussed in Section A."
+      "confidence": 0.85,
+      "description": "Section A discusses the conformance of the NuScale control room area ventilation system, including the sharing of structures, systems, and components, while Section B addresses the evaluation of hazards and operational considerations for multi-unit sites, connecting them through the topic of how shared systems and operational concepts (like a single control room) are managed in multi-unit plant contexts."
     },
     {
-      "source": "nuscale_ch01_0189",
-      "target": "nuscale_ch01_0024",
-      "relation": "SATISFIES",
-      "confidence": 0.9,
-      "description": "Section B describes the design and operation of the ECCS, while Section A references regulatory criteria and acceptance conditions (including water collection during ECCS operation) that the NuScale ECCS must address, thus Section B's information is used to demonstrate conformance with Section A's regulatory requirements."
-    },
-    {
-      "source": "nuscale_ch01_0188",
-      "target": "nuscale_ch01_0028",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section B describes the design and operation of the ECCS, while Section A references regulatory criteria (BTP 6-1) that partially apply to the NuScale ECCS operation, specifically regarding water chemistry and system components."
-    },
-    {
-      "source": "nuscale_ch01_0188",
-      "target": "nuscale_ch01_0063",
+      "source": "nuscale_ch01_0372",
+      "target": "nuscale_ch01_0020",
       "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A discusses the regulatory criteria and chemical requirements for ECCS water during operation, while Section B provides test results confirming the operability of ECCS valves in the NuScale design, thus Section B supports the operational aspect referenced in Section A."
+      "description": "Section A discusses regulatory conformance for control room systems, including sharing of structures and systems, while Section B describes specific safety features of the NuScale plant (such as maintaining a vacuum in the containment vessel), with both sections connected through their implications for the design and operation of the single control room concept versus conventional multi-unit plants."
     },
     {
-      "source": "nuscale_ch01_0188",
-      "target": "nuscale_ch01_0024",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A references regulatory criteria for ECCS water chemistry and notes how the NuScale design conforms or differs, while Section B describes the design and operation of the ECCS in the NuScale plant, thus Section A's discussion of regulatory conformance is directly connected to the ECCS operational details provided in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0028",
-      "target": "nuscale_ch01_0063",
+      "source": "nuscale_ch01_0372",
+      "target": "nuscale_ch01_0402",
       "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A describes the function and configuration of the ECCS, while Section B provides test results confirming the operability of ECCS valves as described in Section A, thus supporting the operational claims made in Section A."
+      "confidence": 0.8,
+      "description": "Section A discusses the conformance of the NuScale control room area ventilation system with regulatory criteria, while Section B addresses the NuScale control room's communication systems and its exemption from GDC 19, both relating to how the single control room concept meets or departs from conventional regulatory requirements for multi-unit plants."
     },
     {
-      "source": "nuscale_ch01_0028",
-      "target": "nuscale_ch01_0024",
-      "relation": "SEMANTIC",
-      "confidence": 1.0,
-      "description": "Section A and Section B are identical excerpts describing the components and operation of the ECCS, providing the same information about its function and configuration."
+      "source": "nuscale_ch01_0372",
+      "target": "nuscale_ch01_0023",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses regulatory conformance for control room systems, including sharing of structures and systems, while Section B describes the unique containment system design (vacuum containment) in NuScale, which impacts how control room systems interface with containment compared to conventional plants."
     },
     {
-      "source": "nuscale_ch01_0063",
-      "target": "nuscale_ch01_0024",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes the testing and design verification of ECCS valves, while Section B provides a general overview of the ECCS's function and components, with Section A specifying technical details that support and elaborate on the general description in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0017",
-      "target": "nuscale_ch01_0188",
-      "relation": "REFERENCES",
-      "confidence": 0.7,
-      "description": "Section B discusses regulatory criteria for emergency coolant water chemistry during ECCS operation, while Section A provides a general facility and system description without directly addressing ECCS, thus Section B partially references and interprets requirements relevant to the systems described in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0017",
-      "target": "nuscale_ch01_0028",
+      "source": "nuscale_ch01_0372",
+      "target": "nuscale_ch01_0111",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section B explains the function and operation of the Emergency Core Cooling System (ECCS), which is the direct answer to the analysis question, while Section A provides general facility and process context but does not address ECCS specifically; thus, Section B specifies the relevant operational details that Section A does not cover."
+      "description": "Section A discusses regulatory conformance for control room systems, while Section B provides the symbol legend for instrumentation and control logic diagrams referenced in those systems, meaning Section B specifies the graphical and logical details used to interpret the systems described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0372",
+      "target": "nuscale_ch01_0865",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the conformance of the NuScale control room area ventilation system, including the sharing of structures, systems, and components, while Section B addresses the evaluation of hazards and operational considerations for nuclear power plants on multi-unit sites, connecting them through the topic of shared systems and safety evaluations in multi-unit configurations."
+    },
+    {
+      "source": "nuscale_ch01_0370",
+      "target": "nuscale_ch01_0864",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses regulatory conformance for control room area ventilation and sharing of systems in the NuScale design, while Section B outlines requirements for evaluating hazards and interactions among multiple units at a multi-unit site, connecting them through the need to address shared systems and safety evaluations in the context of the single control room concept versus conventional multi-unit arrangements."
+    },
+    {
+      "source": "nuscale_ch01_0370",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A outlines regulatory conformance for control room area ventilation and system sharing, while Section B describes specific safety features of the NuScale plant (such as maintaining a vacuum in the CNV), with both sections connected through their implications for control room safety and operational differences compared to conventional plants."
+    },
+    {
+      "source": "nuscale_ch01_0370",
+      "target": "nuscale_ch01_0402",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A addresses the control room area ventilation system and its conformance with regulatory criteria, while Section B discusses communication systems and notes that the NuScale design departs from standard GDC 19 compliance due to its unique single control room concept, connecting them through the shared context of how the NuScale design meets or departs from conventional regulatory requirements for multi-unit plants."
+    },
+    {
+      "source": "nuscale_ch01_0370",
+      "target": "nuscale_ch01_0023",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses regulatory conformance for control room area ventilation and sharing of systems, while Section B describes the unique containment vacuum system in NuScale, both of which are connected by their impact on the design and operation of the single control room concept compared to conventional multi-unit plants."
+    },
+    {
+      "source": "nuscale_ch01_0370",
+      "target": "nuscale_ch01_0111",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria and conformance for control room systems in the NuScale design, while Section B provides the symbol legend for instrumentation and control logic diagrams used in the NuScale FSAR, connecting them by showing that the detailed logic representations in Section B are used to demonstrate or document the system functions and compliance discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0370",
+      "target": "nuscale_ch01_0865",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses regulatory conformance for control room systems, including sharing of structures and systems, while Section B outlines requirements for evaluating hazards at multi-unit sites, connecting them through the need to address how shared or single control room concepts impact safety evaluations in multi-unit contexts."
+    },
+    {
+      "source": "nuscale_ch01_0864",
+      "target": "nuscale_ch01_0402",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the evaluation of hazards for multi-unit sites, while Section B addresses how the NuScale design, including its single control room concept, departs from conventional GDC 19 requirements for control room habitability, connecting them through the regulatory treatment of multi-unit operational safety and control room design."
+    },
+    {
+      "source": "nuscale_ch01_0864",
+      "target": "nuscale_ch01_0023",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A outlines regulatory requirements for evaluating hazards at multi-unit sites, while Section B describes technical features of the NuScale containment system, with both sections relating to the overall safety and operational considerations for multi-unit nuclear plant designs."
+    },
+    {
+      "source": "nuscale_ch01_0864",
+      "target": "nuscale_ch01_0111",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.7,
+      "description": "Section A discusses regulatory requirements for evaluating hazards at multi-unit sites, while Section B provides symbol definitions for instrumentation and controls diagrams, with the connection being that understanding the control logic symbols in Section B is necessary to interpret the control room design referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0020",
+      "target": "nuscale_ch01_0402",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B states that the NuScale control room design departs from conventional GDC 19 requirements, while Section A describes unique safety features (such as the CNV vacuum) that may enable or justify this departure, connecting the design's technical basis to its regulatory treatment."
+    },
+    {
+      "source": "nuscale_ch01_0020",
+      "target": "nuscale_ch01_0111",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A discusses safety benefits of the NuScale containment design, while Section B provides the legend for instrumentation and control logic symbols used in system diagrams, with the connection being that understanding the control logic (Section B) is necessary to interpret how safety features (Section A) are monitored and controlled."
+    },
+    {
+      "source": "nuscale_ch01_0020",
+      "target": "nuscale_ch01_0865",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A describes specific safety features of the NuScale design, while Section B outlines regulatory requirements for evaluating hazards at multi-unit sites, connecting them through the context of how NuScale's unique design (including the single control room concept) must be assessed for compliance with multi-unit site regulations."
+    },
+    {
+      "source": "nuscale_ch01_0402",
+      "target": "nuscale_ch01_0111",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A discusses the NuScale control room's compliance with regulatory criteria, specifically noting an exemption from GDC 19 due to its unique design, while Section B provides the symbol legend for instrumentation and control logic used in the plant's systems, which are relevant for understanding how the single control room manages multiple modules."
+    },
+    {
+      "source": "nuscale_ch01_0402",
+      "target": "nuscale_ch01_0865",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the NuScale control room's exemption from GDC 19 due to its unique design, while Section B outlines requirements for evaluating hazards at multi-unit sites, connecting them through the need to address safety and regulatory compliance for the single control room concept in a multi-unit context."
+    },
+    {
+      "source": "nuscale_ch01_0023",
+      "target": "nuscale_ch01_0111",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.7,
+      "description": "Section B provides the symbol legend necessary to interpret instrumentation and control diagrams that may be referenced in Section A's discussion of containment system functions."
+    },
+    {
+      "source": "nuscale_ch01_0111",
+      "target": "nuscale_ch01_0865",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A provides the instrumentation and controls symbol legend used in NuScale's control room design, while Section B outlines regulatory requirements for evaluating hazards at multi-unit sites, connecting them through the need for control room instrumentation to support safe multi-unit operation."
+    },
+    {
+      "source": "nuscale_ch01_0066",
+      "target": "nuscale_ch01_0372",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A lists the topical reports and technical documents referenced in the NuScale FSAR, while Section B demonstrates how the NuScale FSAR conforms to specific regulatory criteria (such as SRP 9.4.1) relevant to the control room, thus Section A provides the source material that supports the regulatory conformance claims made in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0066",
+      "target": "nuscale_ch01_0370",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A lists the topical reports and technical documents referenced in the NuScale FSAR, while Section B demonstrates how the NuScale FSAR claims conformance with specific regulatory criteria (such as SRP 9.4.1) that are likely detailed or supported by the referenced materials in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0066",
+      "target": "nuscale_ch01_0864",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A lists referenced topical reports, including those relevant to quality assurance, which provide foundational information that supports the requirements and evaluations described in Section B for operating multi-unit sites."
+    },
+    {
+      "source": "nuscale_ch01_0852",
+      "target": "nuscale_ch01_0372",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A addresses human factors engineering and operator actions in the NuScale control room, while Section B discusses the control room area ventilation system, with both sections referencing the NuScale Final Safety Analysis Report and its conformance with regulatory criteria for the single control room concept."
+    },
+    {
+      "source": "nuscale_ch01_0852",
+      "target": "nuscale_ch01_0370",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A addresses human factors and operator actions in the control room, while Section B discusses the control room area ventilation system, with both sections referencing the NuScale Final Safety Analysis Report to demonstrate conformance with regulatory criteria for the single control room concept."
+    },
+    {
+      "source": "nuscale_ch01_0852",
+      "target": "nuscale_ch01_0864",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A outlines human factors engineering and operator action criteria specific to the NuScale single control room concept, while Section B addresses regulatory requirements for evaluating hazards at multi-unit sites, connecting them through the need to assess how the single control room approach impacts safety and risk management in a multi-unit context."
+    },
+    {
+      "source": "nuscale_ch01_0014",
+      "target": "nuscale_ch01_0372",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A explains that the NuScale FSAR uses the SRP as a technical basis for its design, while Section B details specific conformance of the NuScale design with SRP 9.4.1 requirements for the control room area ventilation system, connecting the general use of SRP guidance in A to the specific application in B."
+    },
+    {
+      "source": "nuscale_ch01_0014",
+      "target": "nuscale_ch01_0370",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A explains that the NuScale FSAR uses the SRP as a technical basis and references conformance evaluations in Section 1.9, while Section B provides specific conformance statements to SRP 9.4.1 criteria, showing that Section A's general process leads to the detailed regulatory conformance in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0014",
+      "target": "nuscale_ch01_0864",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A describes the general structure and referencing conventions of the NuScale FSAR, while Section B presents a specific regulatory requirement for evaluating hazards at multi-unit sites, with Section A indicating that such requirements (like those in Section B) are addressed and cross-referenced in the FSAR."
+    },
+    {
+      "source": "nuscale_ch01_0853",
+      "target": "nuscale_ch01_0372",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A addresses human factors engineering and operator actions in the NuScale control room, while Section B discusses the control room area ventilation system, with both sections referencing the NuScale Final Safety Analysis Report to demonstrate conformance with regulatory criteria for the single control room concept."
+    },
+    {
+      "source": "nuscale_ch01_0853",
+      "target": "nuscale_ch01_0370",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A addresses human factors engineering and operator actions in the NuScale control room, while Section B discusses the control room area ventilation system, with both sections referencing the NuScale Final Safety Analysis Report to demonstrate conformance with regulatory criteria for the single control room concept."
+    },
+    {
+      "source": "nuscale_ch01_0853",
+      "target": "nuscale_ch01_0864",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses human factors engineering and operator actions in the context of the NuScale control room, while Section B addresses regulatory requirements for evaluating hazards at multi-unit sites, connecting them through the operational and safety implications of the single control room concept versus conventional multi-unit arrangements."
+    },
+    {
+      "source": "nuscale_ch01_0066",
+      "target": "nuscale_ch01_0852",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A lists the topical reports and technical documents referenced in the NuScale FSAR, while Section B outlines the regulatory review criteria (SRP Appendix 18-A) that the NuScale FSAR claims to conform to, connecting them through the FSAR's demonstration of compliance with regulatory human factors engineering requirements."
+    },
+    {
+      "source": "nuscale_ch01_0066",
+      "target": "nuscale_ch01_0014",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A lists topical reports and technical documents referenced in the NuScale FSAR, while Section B explains the conventions for identifying tables and figures within the FSAR, connecting them through the organizational structure of referenced materials."
+    },
+    {
+      "source": "nuscale_ch01_0066",
+      "target": "nuscale_ch01_0853",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A lists the topical and technical reports referenced in the NuScale FSAR, while Section B outlines the regulatory review criteria (from SRP Appendix 18-A) that the NuScale FSAR claims conformance with, connecting them through the FSAR's use of referenced reports to demonstrate compliance with regulatory human factors engineering requirements."
+    },
+    {
+      "source": "nuscale_ch01_0852",
+      "target": "nuscale_ch01_0014",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the NuScale FSAR's conformance with SRP and DSRS regulatory criteria for human factors engineering, while Section B explains that the FSAR preparation and evaluation are based on SRP and DSRS guidance, directly connecting the regulatory framework referenced in Section A to the overall FSAR structure in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0852",
+      "target": "nuscale_ch01_0853",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A outlines the Phase 1 analysis criteria for crediting manual operator actions in D3 analyses, while Section B provides the Phase 2 preliminary validation criteria for the same context, with both sections referencing the same regulatory framework and sequentially building on each other in the review process."
+    },
+    {
+      "source": "nuscale_ch01_0014",
+      "target": "nuscale_ch01_0853",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A explains that the NuScale FSAR was prepared using guidance from the SRP and DSRS, while Section B provides specific SRP criteria (Appendix 18-A) relevant to human factors and operator actions, showing that the FSAR's approach is based on and evaluated against these regulatory standards."
+    },
+    {
+      "source": "nuscale_ch01_0050",
+      "target": "nuscale_ch01_0372",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the physical plant structures and utility services, while Section B addresses regulatory conformance for the control room area ventilation system, with both sections connected through the design and operation of shared plant infrastructure that supports the single control room concept."
+    },
+    {
+      "source": "nuscale_ch01_0050",
+      "target": "nuscale_ch01_0864",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the physical plant structures and utility services, while Section B outlines regulatory requirements for evaluating hazards at multi-unit sites, connecting them through the need to assess how shared or separate infrastructure (like those in Section A) impacts safety evaluations required in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0851",
+      "target": "nuscale_ch01_0372",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A addresses human factors engineering considerations for modifications affecting risk-important human actions, while Section B discusses the control room area ventilation system, with both sections referencing aspects of the NuScale control room design and its conformance with regulatory criteria, specifically highlighting how shared systems and human actions are evaluated in the context of a single control room concept."
+    },
+    {
+      "source": "nuscale_ch01_0851",
+      "target": "nuscale_ch01_0370",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A addresses human factors engineering criteria for modifications affecting human actions in the control room, while Section B discusses the control room area ventilation system and its sharing among units, both relating to the design and operation of the NuScale single control room concept as compared to conventional multi-unit plants by specifying different regulatory aspects that must be satisfied."
+    },
+    {
+      "source": "nuscale_ch01_0851",
+      "target": "nuscale_ch01_0864",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A discusses human factors engineering criteria for modifications affecting human actions, noting their inapplicability to new designs like NuScale, while Section B outlines requirements for evaluating hazards at multi-unit sites, connecting them through their focus on regulatory considerations for multi-unit plant operation and safety analysis."
+    },
+    {
+      "source": "nuscale_ch01_0164",
+      "target": "nuscale_ch01_0372",
+      "relation": "CONTRADICTS",
+      "confidence": 0.85,
+      "description": "Section A explains that the NuScale control room uses compressed air tanks for habitability during accidents, eliminating reliance on emergency ventilation, while Section B addresses the conformance of the control room ventilation system with regulatory criteria, indicating that NuScale's approach differs from conventional systems that depend on shared ventilation."
+    },
+    {
+      "source": "nuscale_ch01_0164",
+      "target": "nuscale_ch01_0370",
+      "relation": "CONTRADICTS",
+      "confidence": 0.85,
+      "description": "Section A explains that the NuScale control room uses compressed air tanks instead of emergency ventilation for habitability during accidents, while Section B addresses the conformance of the control room area ventilation system with regulatory criteria, highlighting that NuScale's approach differs from conventional systems that rely on shared ventilation."
+    },
+    {
+      "source": "nuscale_ch01_0164",
+      "target": "nuscale_ch01_0864",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes how the NuScale single control room uses a unique habitability system (compressed air tanks) that differs from conventional designs, while Section B outlines regulatory requirements for evaluating hazards at multi-unit sites, connecting them through the need to address control room safety in both single and multi-unit contexts."
+    },
+    {
+      "source": "nuscale_ch01_0161",
+      "target": "nuscale_ch01_0372",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A explains that the NuScale control room habitability system uses compressed air tanks instead of conventional emergency ventilation, making certain SRP 6.4 guidance not applicable, while Section B confirms that the NuScale design conforms to SRP 9.4.1 requirements for control room ventilation, indicating that the unique habitability approach in A is still compliant with the broader regulatory expectations in B."
+    },
+    {
+      "source": "nuscale_ch01_0161",
+      "target": "nuscale_ch01_0370",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A explains that the NuScale control room habitability system uses compressed air tanks instead of relying on emergency ventilation, while Section B confirms that the control room ventilation system conforms to regulatory requirements for environmental and dynamic effects, showing that NuScale's unique approach satisfies the relevant regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0161",
+      "target": "nuscale_ch01_0864",
+      "relation": "CONTRADICTS",
+      "confidence": 0.85,
+      "description": "Section A explains that the NuScale control room habitability system uses a unique clean air source approach, which is different from conventional systems referenced in Section B that require evaluation of hazards for multi-unit sites, highlighting a design difference relevant to the analysis question."
+    },
+    {
+      "source": "nuscale_ch01_0049",
+      "target": "nuscale_ch01_0372",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the Central Utility Building's role in housing common utility services for the plant, while Section B addresses regulatory conformance for the control room area ventilation system, with both sections connected by their relevance to shared infrastructure and systems supporting the single control room concept in NuScale compared to conventional multi-unit plants."
+    },
+    {
+      "source": "nuscale_ch01_0049",
+      "target": "nuscale_ch01_0370",
+      "relation": "SPECIFIES",
+      "confidence": 0.7,
+      "description": "Section A describes the Central Utility Building's general plant services, while Section B details regulatory conformance for the control room area ventilation system, with both sections connected through the provision and support of shared plant infrastructure necessary for control room operation."
+    },
+    {
+      "source": "nuscale_ch01_0049",
+      "target": "nuscale_ch01_0864",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the Central Utility Building's functions in the NuScale plant, while Section B outlines regulatory requirements for evaluating hazards at multi-unit sites, connecting them through the context of how plant design (including centralized facilities like the CUB) must be assessed for safety impacts in multi-unit configurations."
+    },
+    {
+      "source": "nuscale_ch01_0050",
+      "target": "nuscale_ch01_0164",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the physical plant structures and utility systems, while Section B explains how the NuScale control room habitability system's use of compressed air tanks (rather than conventional ventilation) makes certain regulatory guidance on control room location and ventilation inapplicable, thus connecting the plant's physical design to its regulatory conformance."
+    },
+    {
+      "source": "nuscale_ch01_0050",
+      "target": "nuscale_ch01_0049",
+      "relation": "SEMANTIC",
+      "confidence": 0.95,
+      "description": "Section A and Section B both describe the Central Utility Building (CUB) and its functions, with Section A including additional context about Diesel Generator Buildings, but the CUB content is identical in both sections."
+    },
+    {
+      "source": "nuscale_ch01_0851",
+      "target": "nuscale_ch01_0164",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Both Section A and Section B discuss how specific SRP criteria are not applicable to the NuScale design due to its unique features (single control room and alternative habitability provisions), highlighting how NuScale's approach differs from conventional multi-unit plants that the SRP criteria were originally intended for."
+    },
+    {
+      "source": "nuscale_ch01_0851",
+      "target": "nuscale_ch01_0161",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses human factors engineering criteria that are not applicable to NuScale due to its unique design, while Section B explains that conventional control room habitability requirements do not apply because NuScale uses a different clean air system, both highlighting how NuScale's single control room concept diverges from conventional multi-unit plant requirements."
+    },
+    {
+      "source": "nuscale_ch01_0164",
+      "target": "nuscale_ch01_0161",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A explains that the NuScale control room habitability system uses compressed air tanks instead of emergency ventilation, which is the subject of the regulatory guidance in Section B, thereby rendering the guidance in Section B not applicable to NuScale's design."
+    },
+    {
+      "source": "nuscale_ch01_0164",
+      "target": "nuscale_ch01_0049",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A explains that the NuScale control room habitability system uses compressed air tanks instead of relying on emergency ventilation, while Section B describes the Central Utility Building as housing the instrument air system, which is likely related to the provision of compressed air for the control room."
+    },
+    {
+      "source": "nuscale_ch01_0161",
+      "target": "nuscale_ch01_0049",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A explains that the NuScale control room habitability system uses compressed air tanks instead of relying on emergency ventilation, while Section B describes the Central Utility Building as housing the instrument air system, which could be related to supplying compressed air for the control room, thus connecting the design feature in A to the plant infrastructure in B."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0372",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A provides detailed design drawings, including instrumentation and control layouts, which visually clarify the single control room concept, while Section B outlines the regulatory criteria and conformance for control room systems, connecting the design details in A to the regulatory requirements in B."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0370",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A provides detailed design drawings and information about the NuScale control room's instrumentation and control systems, while Section B outlines the regulatory requirements and conformance statements for the control room area ventilation system, connecting them through the need for the design (A) to satisfy the regulatory criteria (B) for control room safety and functionality."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0864",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A provides detailed design drawings, including instrumentation and control layouts, which are relevant for understanding the single control room concept described in Section B's context of multi-unit site operation."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0372",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A provides detailed design drawings and information about the NuScale control room's electrical and I&C systems, which are referenced in Section B to demonstrate conformance with regulatory requirements for control room area ventilation and system sharing in multi-unit contexts."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0370",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A provides detailed design drawings of the NuScale control room's instrumentation and control systems, while Section B documents the plant's conformance with regulatory requirements for control room area ventilation, connecting them through the design features that must meet these regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0864",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides detailed electrical and I&C drawings that visually clarify the design of the NuScale control room, which supports the evaluation in Section B regarding the safety and operational considerations for multi-unit sites."
+    },
+    {
+      "source": "nuscale_ch01_0048",
+      "target": "nuscale_ch01_0370",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section B references regulatory criteria for the control room area ventilation system, which is a key aspect of the single control room concept discussed in the analysis question, while Section A describes operational processes (CVCS, boron control) that are managed from the control room, thus Section A's operational details are governed by the regulatory requirements referenced in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0048",
+      "target": "nuscale_ch01_0864",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes operational details of the NuScale module startup process, while Section B outlines regulatory requirements for evaluating hazards at multi-unit sites, with both sections connected by their relevance to operational and safety considerations in multi-unit plant configurations."
+    },
+    {
+      "source": "nuscale_ch01_0061",
+      "target": "nuscale_ch01_0372",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the testing and validation of the NuScale reactor's integrated systems, while Section B outlines regulatory conformance for the control room area ventilation system, with both sections connected through their focus on demonstrating that the NuScale design (including the single control room concept) meets safety and regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0061",
+      "target": "nuscale_ch01_0370",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the NuScale integral system test program, which provides technical data and validation for the reactor design, while Section B documents NuScale's conformance with regulatory criteria for control room systems, indicating that the test results from Section A support the regulatory compliance claims in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0061",
+      "target": "nuscale_ch01_0864",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the testing and validation of the NuScale reactor's integrated systems, while Section B outlines regulatory requirements for evaluating hazards at multi-unit sites, connecting them through the need for validated system performance data (from A) to inform safety evaluations required in B."
+    },
+    {
+      "source": "nuscale_ch01_0062",
+      "target": "nuscale_ch01_0864",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses specific testing and validation of control rod assembly components for the NuScale design, while Section B outlines regulatory requirements for evaluating hazards at multi-unit sites, connecting them through the need to demonstrate that new design features (like those in Section A) are compatible with multi-unit operational safety as required in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0068",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of piping and instrumentation diagrams and references the electrical and instrumentation and control drawings detailed in Section B, indicating that the latter are a subset or specific instance of the former."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0048",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides detailed instrumentation and control diagrams that visually clarify the design of the NuScale control room, while Section B describes operational processes and systems (such as CVCS and RCS control) that are managed from the control room, thus connecting the physical design (A) to its operational context (B)."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0061",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A provides detailed design drawings, including instrumentation and control layouts, which are referenced in Section B's testing program to validate system performance and safety methodologies for the NuScale design."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0062",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides detailed instrumentation and control diagrams that visually clarify the design, which supports the testing and validation activities described in Section B for the control rod assembly and drive shaft alignment in the NuScale control room concept."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0048",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides detailed electrical and instrumentation control drawings that visually clarify the design of the NuScale control room, while Section B describes operational processes and systems (such as CVCS and RCS) that are managed from the control room, connecting the physical design to its operational use in the single control room concept."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0061",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides detailed design drawings and figures for instrumentation and control systems, which are visually clarified for understanding the NuScale control room layout, while Section B describes the testing program that validates the safety and operational methodologies underlying those same systems, connecting the design documentation to its empirical validation."
+    },
+    {
+      "source": "nuscale_ch01_0068",
+      "target": "nuscale_ch01_0062",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A provides detailed electrical and instrumentation drawings that visually clarify the design of control systems, which are relevant to Section B's discussion of control rod assembly testing and alignment, as these tests depend on the correct implementation and understanding of the I&C systems depicted in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0048",
+      "target": "nuscale_ch01_0061",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section B describes the integral system test program that provides thermal-hydraulic data and informs safety methodology for the NuScale design, which supports the operational processes described in Section A, such as startup and boron control in the reactor coolant system."
+    },
+    {
+      "source": "nuscale_ch01_0048",
+      "target": "nuscale_ch01_0062",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section B describes testing and validation requirements for new control rod drive designs, which are a prerequisite for the safe and reliable operation of the NuScale modules described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0061",
+      "target": "nuscale_ch01_0062",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the overall integral system test program for the NuScale design, while Section B details specific tests (control rod assembly drop and drive shaft alignment) that are part of the broader testing program outlined in Section A."
     }
   ]
 }

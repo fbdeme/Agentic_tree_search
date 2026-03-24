@@ -1,0 +1,276 @@
+{
+  "question": "Is the NuScale natural circulation design adequate for removing core heat without reactor coolant pumps?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch05_0002": {
+      "node_id": "nuscale_ch05_0002",
+      "title": "Summary Description",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, relying on integrated components within each NuScale Power Module (NPM). The RCS is designed to safely transfer heat from the reactor core, maintain proper coolant chemistry and boron concentration, and ensure fuel integrity during normal and off-normal conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 1
+    },
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain fuel integrity, minimize solid deposits, and ensure uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 1
+    },
+    "nuscale_ch05_0022": {
+      "node_id": "nuscale_ch05_0022",
+      "title": "Decay Heat Removal System",
+      "summary": "The Decay Heat Removal System (DHRS) is an engineered safety feature designed to remove residual and core decay heat from the reactor when normal cooling is unavailable, ensuring safe shutdown without external power. It maintains the reactor coolant system temperature below 420°F within 36 hours after an event, protecting fuel and pressure boundaries, and its reliability and risk significance are rigorously evaluated. The DHRS operates independently of the Emergency Core Cooling System (ECCS), but both can function together if needed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "106",
+      "hop": 1
+    },
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the NuScale reactor pressurizer, specifying the types of steel and alloys for each component, such as the baffle plate, heater bundles, cover plate, and bolting, all chosen for corrosion resistance and compatibility with operating environments. It also references relevant material specifications from the ASME Boiler and Pressure Vessel Code (BPVC) to ensure compliance and safety.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 2
+    },
+    "nuscale_ch05_0013": {
+      "node_id": "nuscale_ch05_0013",
+      "title": "References",
+      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as tables summarizing relevant ASME code cases for materials and components used in nuclear facility applications.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "46",
+      "hop": 2
+    },
+    "nuscale_ch05_0005": {
+      "node_id": "nuscale_ch05_0005",
+      "title": "System Components",
+      "summary": "This section describes key components of the NuScale reactor system. It details the Reactor Pressure Vessel (RPV), which houses the reactor core and supports major systems, and outlines the main Reactor Coolant System (RCS) piping and its connections. The section also briefly introduces the pressurizer (PZR), which is integral to the RPV, and references further detailed descriptions in later sections.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "10",
+      "hop": 2
+    },
+    "nuscale_ch05_0024": {
+      "node_id": "nuscale_ch05_0024",
+      "title": "Pressurizer",
+      "summary": "The pressurizer in the NuScale reactor is integrated into the upper region of the reactor vessel and functions to regulate reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering reactor trips or safety system actuations, with instrumentation providing real-time monitoring and control.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "124",
+      "hop": 2
+    },
+    "nuscale_ch05_0006": {
+      "node_id": "nuscale_ch05_0006",
+      "title": "System Evaluation",
+      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance across various power levels by establishing steady-state parameters for both primary and secondary systems, such as coolant temperatures, flow rates, and pressures. These parameters are calculated using thermal hydraulic software and verified by hand, with uncertainties and design margins considered to ensure efficient operation and safety. The design supports natural circulation with low pressure losses, and uncertainties related to steam generator tube plugging do not affect primary coolant flow rate determination.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "12",
+      "hop": 2
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0003",
+      "relation": "SEMANTIC",
+      "confidence": 1.0,
+      "description": "Section A and Section B are identical excerpts describing the NuScale reactor coolant system's reliance on natural circulation without pumps, providing both a summary and the design basis for the analysis question."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A explains that the NuScale design uses natural circulation without reactor coolant pumps for primary coolant flow, while Section B details that the Decay Heat Removal System (DHRS) is specifically designed to remove core decay heat under these conditions, thereby supporting the adequacy of the natural circulation approach."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the reliance on natural circulation for primary coolant flow in the NuScale design, while Section B details the Decay Heat Removal System's capability to remove core heat without external power, both addressing the adequacy of heat removal without reactor coolant pumps."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed component and material specifications for the pressurizer, which is one of the RCS subsystems generally described in Section B as part of the natural circulation-based reactor coolant system."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed component and material specifications for the pressurizer, which is one of the subsystems described more generally in Section B's summary of the reactor coolant system design that relies on natural circulation."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0022",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the materials and components of the pressurizer, which is part of the reactor coolant system, while Section B outlines the design basis and function of the Decay Heat Removal System (DHRS) that relies on the reactor coolant system to remove core heat without pumps; thus, Section A provides specific component details that support the general system function described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0002",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides references to technical standards and guidelines that underpin the integrity and quality assurance of the reactor coolant boundary, which supports the summary in Section B describing the NuScale design's reliance on natural circulation without pumps."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0003",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides references to technical standards and industry guidelines that underpin the integrity and quality assurance of the reactor coolant boundary, which supports the design basis described in Section B regarding the use of natural circulation without reactor coolant pumps in the NuScale system."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A lists references and standards that underpin the technical and quality assurance basis for the NuScale reactor coolant boundary, while Section B describes the design basis and function of the Decay Heat Removal System, which relies on the integrity and standards referenced in Section A to ensure adequate heat removal without pumps."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch05_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B explains that the NuScale design relies on natural circulation without reactor coolant pumps, while Section A details specific system components and operational steps that implement this design approach."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B establishes that the NuScale design relies on natural circulation without reactor coolant pumps, while Section A describes specific system components and operational steps that implement this design basis."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch05_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes operational steps and system configurations (such as recirculation through the DHRS heat exchangers) that enable the Decay Heat Removal System (DHRS) described in Section B to function as designed for removing core heat without reactor coolant pumps."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the design and function of the pressurizer as an integral component of the reactor vessel, while Section B provides a general overview of the reactor coolant system, explicitly noting that it relies on natural circulation and includes the integral pressurizer described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the pressurizer's integration and function within the reactor vessel, while Section B provides the overall design basis for the reactor coolant system, explicitly noting reliance on natural circulation and inclusion of the integral pressurizer, thus Section A specifies details for the general system described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0022",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the pressurizer's role in maintaining pressure stability in the reactor coolant system, which is necessary for the natural circulation that Section B's Decay Heat Removal System relies on to remove core heat without pumps."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A evaluates the system performance parameters that result from the natural circulation design described in Section B, which specifies that the NuScale RCS relies solely on natural circulation without pumps."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0003",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A evaluates the system's performance criteria for heat removal using natural circulation, while Section B describes the design basis that the NuScale reactor relies solely on natural circulation without pumps, thus Section A's evaluation is directly assessing the adequacy of the design described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0022",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the system evaluation criteria for optimal performance, referencing the use of the steam generators (SGs) for decay heat removal, while Section B specifies the design basis and function of the Decay Heat Removal System (DHRS), which utilizes the SGs to remove core decay heat without external power, thus providing detailed support for the adequacy of natural circulation in heat removal."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0013",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references Section B by citing Section 5.2 for material descriptions of the pressurizer components, thereby connecting the component design details in A to the material integrity and standards discussed in B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0005",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A describes the materials and components of the pressurizer, which are referenced in Section B's operational sequence for depressurizing and preparing the reactor coolant system for natural circulation heat removal."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed material specifications and component descriptions for the pressurizer, which is generally described in Section B as part of the reactor vessel and its functional integration with the natural circulation region."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0006",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides detailed component and material specifications for the pressurizer, which is part of the reactor coolant system described in Section B's system evaluation of heat removal performance, thus Section A specifies the technical details for components whose performance is evaluated in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0005",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A lists references that provide standards and guidelines cited in Section B's summary description of system components and operational procedures relevant to the NuScale natural circulation design."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0024",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A lists references and standards cited in the NuScale FSAR, while Section B provides a detailed description of the pressurizer design as part of the reactor coolant system, with Section A serving as a source of supporting documentation for the technical details in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0006",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides references to technical standards and guidelines that underpin the integrity and quality assurance of the reactor coolant boundary, which supports the system evaluation in Section B regarding the adequacy of the NuScale natural circulation design for core heat removal."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes operational steps involving the pressurizer water level and pressure adjustments that rely on the pressurizer's design features detailed in Section B, specifically the baffle plate enabling rapid pressure communication between the pressurizer and the reactor coolant system."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch05_0006",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the operational steps and system components involved in preparing the NuScale reactor for decay heat removal, while Section B evaluates the system's ability to remove decay heat via the steam generators and DHRS, thus Section A's described procedures and components support the evaluation in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0006",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the pressurizer's role in maintaining pressure stability within the reactor coolant system, which is essential for the natural circulation process evaluated in Section B's system performance analysis."
+    }
+  ]
+}

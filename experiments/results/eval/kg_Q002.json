@@ -1,310 +1,349 @@
 {
-  "question": "How many NPMs can be operated in a single Reactor Building at the NuScale power plant?",
+  "question": "What is the operating pressure of the NuScale Reactor Coolant System?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0001": {
-      "node_id": "nuscale_ch01_0001",
-      "title": "CHAPTER 1 INTRODUCTION AND GENERAL DESCRIPTION OF THE PLANT",
-      "summary": "This section introduces the NuScale Final Safety Analysis Report (FSAR), which is required for standard design certification under U.S. regulations. It provides an overview of the NuScale Power Module (NPM), a modular, scalable nuclear steam supply system designed for safe, flexible operation, highlighting key safety features such as passive shutdown and cooling, compact design, and advanced digital controls. The FSAR covers both individual module and multi-module plant configurations, focusing on safety analysis and regulatory compliance.",
+    "nuscale_ch01_0160": {
+      "node_id": "nuscale_ch01_0160",
+      "title": "DSRS 3.11, Rev. 0: Environmental Qualification of Mechanical and Electrical EquipmentII.25 Design and Procurement Specifications",
+      "summary": "This section summarizes NuScale’s conformance with various regulatory criteria related to the environmental qualification of mechanical and electrical equipment, as well as design and procurement specifications. It notes that certain requirements, such as DSRS 3.11 II.25, are not applicable to NuScale and are instead items for the COL (Combined License) applicant, while other standards (e.g., SRP 3.12 and 3.13) are confirmed as being met. Additionally, guidance specific to BWR plants is marked as not applicable to NuScale.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "8",
+      "page_range": "201",
       "hop": 1
     },
-    "nuscale_ch01_0036": {
-      "node_id": "nuscale_ch01_0036",
-      "title": "Refueling Operations",
-      "summary": "Refueling operations for a NuScale Power Module (NPM) are conducted independently from other modules. The process involves moving the NPM from its operating bay to the refueling pool, disassembling it for inspection, maintenance, and refueling, and then reassembling and returning it to service after successful testing and startup procedures.",
+    "nuscale_ch01_0705": {
+      "node_id": "nuscale_ch01_0705",
+      "title": "DSRS 15.2.1-15.2.5, Rev 0: Loss of External Load; Turbine Trip; Loss of Condenser Vacuum; Closure of Main Steam Isolation Valve; and Steam Pressure Regulator Failure (Closed)II.2.A Reactor Coolant System and Main Steam System Pressures",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for various transient events affecting the reactor coolant and main steam systems, such as loss of external load, turbine trip, and main steam isolation valve closure. It notes that NuScale generally conforms to the requirements, except for partial conformance regarding the steam pressure regulator, as the NuScale design does not include this component. The analysis confirms that system pressures are addressed according to regulatory standards.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "38",
+      "page_range": "294",
       "hop": 1
     },
-    "nuscale_ch01_0035": {
-      "node_id": "nuscale_ch01_0035",
-      "title": "Fuel Handling and Reactor Maintenance Areas",
-      "summary": "The fuel handling and reactor maintenance areas are located at the west end of the Reactor Building and include spaces for the spent fuel pool, refueling pool, and dry dock, with facilities designed for safe fuel handling and maintenance operations. These areas provide radiation protection for personnel, support the transport and storage of new and spent fuel assemblies, and include equipment such as cranes and pallet jacks to facilitate fuel movement and inspection.",
+    "nuscale_ch01_0052": {
+      "node_id": "nuscale_ch01_0052",
+      "title": "Comparison with Other Facilities",
+      "summary": "This section compares the major design features and parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It highlights differences in size, output, core design, and safety systems, showing that NuScale uses significantly smaller modules, fewer components, and simplified systems compared to conventional PWRs. The comparison is summarized in tables for easy reference.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "37",
+      "page_range": "79",
       "hop": 1
     },
-    "nuscale_ch01_0002": {
-      "node_id": "nuscale_ch01_0002",
-      "title": "Introduction",
-      "summary": "The Introduction section outlines that this document is the Final Safety Analysis Report (FSAR) for the NuScale small modular reactor, submitted as part of the design certification process under 10 CFR 52. It provides an overview of the NuScale Power Module (NPM), its modular and scalable design, and highlights key safety features such as passive shutdown capability, compact containment, and advanced digital controls.",
+    "nuscale_ch01_0019": {
+      "node_id": "nuscale_ch01_0019",
+      "title": "Operating Characteristics",
+      "summary": "The NuScale Power Module (NPM) operates using natural circulation for reactor coolant flow, eliminating the need for reactor coolant pumps, and features a small, modular, integral pressurized water reactor design. The NPM is protected by passive safety systems—including dedicated emergency core cooling and decay heat removal systems—that do not rely on electrical power, and its components are designed for in-shop fabrication and ease of installation. Power output can be adjusted using turbine bypass, control rods, and soluble boron concentration changes.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "8",
+      "page_range": "29",
       "hop": 1
+    },
+    "nuscale_ch01_0706": {
+      "node_id": "nuscale_ch01_0706",
+      "title": "DSRS 15.2.1-15.2.5, Rev 0: Loss of External Load; Turbine Trip; Loss of Condenser Vacuum; Closure of Main Steam Isolation Valve; and Steam Pressure Regulator Failure (Closed)II.2.B Fuel Cladding Integrity",
+      "summary": "The section confirms that the NuScale design meets the regulatory criteria outlined in DSRS 15.2.1-15.2.5 for events such as loss of external load, turbine trip, loss of condenser vacuum, closure of the main steam isolation valve, and steam pressure regulator failure (closed), specifically regarding fuel cladding integrity. It notes that NuScale does not have a steam pressure regulator and that the design conforms to requirements for incidents of moderate frequency, instrument setpoints, single failures, and performance of nonsafety-related systems, with no exceptions or additional comments.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "295",
+      "hop": 2
+    },
+    "nuscale_ch01_0774": {
+      "node_id": "nuscale_ch01_0774",
+      "title": "SRP 15.6.3, Rev 2: Radiological Consequences of Steam Generator Tube Failure (PWR)II (No Number) Last two sentences of the last paragraph of Section II on page 15.6.32 - Plant-Specific Technical Specifications for Primary and Secondary Coolant System Iodine Activity",
+      "summary": "The NuScale Final Safety Analysis Report partially conforms to SRP 15.6.3 guidance regarding technical specifications for primary and secondary coolant iodine activity, but the radiological acceptance criteria are superseded by SRP Section 15.0.3. Additionally, certain SRP sections are not applicable to the NuScale design, and for loss-of-coolant accident analyses, SRP Section 15.0.3 governs the radiological criteria and methodologies.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "307",
+      "hop": 2
+    },
+    "nuscale_ch01_0709": {
+      "node_id": "nuscale_ch01_0709",
+      "title": "DSRS 15.2.1-15.2.5, Rev 0: Loss of External Load; Turbine Trip; Loss of Condenser Vacuum; Closure of Main Steam Isolation Valve; and Steam Pressure Regulator Failure (Closed)II.2.E Most Limiting Plant System Single Failure",
+      "summary": "The section confirms that the NuScale design meets regulatory criteria for events such as loss of external load, turbine trip, loss of condenser vacuum, main steam isolation valve closure, and steam pressure regulator failure (closed), even though the design does not include a steam pressure regulator. For each scenario, including the most limiting plant system single failure, the design is shown to conform to safety requirements, with no exceptions or additional comments noted.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "295",
+      "hop": 2
+    },
+    "nuscale_ch01_0769": {
+      "node_id": "nuscale_ch01_0769",
+      "title": "SRP 15.6.1, Rev 2: Inadvertent Opening of a PWR Pressurizer Relief Valve or a BWR Pressure Relief ValveAll Various",
+      "summary": "The NuScale design partially conforms to SRP 15.6.1, which addresses the inadvertent opening of pressurizer relief valves, because it does not use power-operated relief valves (PORVs) that are susceptible to such failures. Instead, NuScale uses spring-loaded ASME code safety relief valves, and any mechanical failure of these is considered bounded by analyses of inadvertent ECCS valve actuation. Thus, the specific guidance for PORVs is not fully applicable to the NuScale design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "305",
+      "hop": 2
+    },
+    "nuscale_ch01_0715": {
+      "node_id": "nuscale_ch01_0715",
+      "title": "DSRS 15.2.1-15.2.5, Rev 0: Loss of External Load; Turbine Trip; Loss of Condenser Vacuum; Closure of Main Steam Isolation Valve; and Steam Pressure Regulator Failure (Closed)II.3.D Values of Parameters Used in Analytical Model - Instrumentation Setpoints for Mitigating System Actuation",
+      "summary": "This section confirms that the NuScale Final Safety Analysis Report meets the regulatory criteria outlined in DSRS 15.2.1-15.2.5 for various transient events, including loss of external load, turbine trip, loss of condenser vacuum, main steam isolation valve closure, and steam pressure regulator failure. Specifically, it states that the analytical model's parameters—such as instrumentation setpoints for mitigating system actuation—are in conformance, with no exceptions noted.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "296",
+      "hop": 3
+    },
+    "nuscale_ch01_0722": {
+      "node_id": "nuscale_ch01_0722",
+      "title": "DSRS 15.2.7, Rev 0: Loss of Normal Feedwater FlowII.1 Fuel and System Pressure Parameters met",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for various design basis events, including loss of normal feedwater flow. It confirms that fuel and system pressure parameters are met, events are properly categorized, and analytical models conform to requirements, with no exceptions noted for DSRS 15.2.7. The document demonstrates compliance with relevant safety standards and analytical methods for these scenarios.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "297",
+      "hop": 3
     },
     "nuscale_ch01_0051": {
       "node_id": "nuscale_ch01_0051",
       "title": "Plant Features of Special Interest",
-      "summary": "This section describes key plant features of special interest in the NuScale Power Plant, including the Central Utility Building (CUB) and Diesel Generator Buildings (DGBs), which house essential but nonsafety-related systems and backup power equipment. It also highlights human factors considerations, such as fail-safe design, centralized multi-module control, digital interfaces, and workload management, all aimed at minimizing human error and meeting regulatory requirements.",
+      "summary": "This section describes key plant features of special interest in the NuScale Power Plant, including the Central Utility Building (CUB) and Diesel Generator Buildings (DGBs), which house essential but nonsafety-related systems and backup power equipment. It also highlights human factors considerations, emphasizing fail-safe design, automation, digital controls, and workload management to minimize human error and meet regulatory requirements.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "43",
-      "hop": 1
+      "hop": 4
     },
-    "nuscale_ch01_0003": {
-      "node_id": "nuscale_ch01_0003",
-      "title": "Plant Location",
-      "summary": "The Plant Location section of the NuScale Final Safety Analysis Report introduces the document as required for standard design certification, outlining the NuScale Power Module (NPM) design and its safety features. The NPM is a modular, scalable nuclear steam supply system that can operate from one to twelve modules within a single facility, featuring advanced safety systems that require no external power for shutdown and cooling, compact design, and comprehensive digital controls. The report details both individual module and multi-module plant designs, emphasizing the unique safety and operational characteristics of the NuScale system.",
+    "nuscale_ch01_0786": {
+      "node_id": "nuscale_ch01_0786",
+      "title": "DSRS 15.6.6, Rev 0: Inadvertent Operation of ECCSII.1 RCS pressure below 110 percent design value.",
+      "summary": "This section reviews NuScale’s conformance with regulatory criteria regarding radiological consequences of loss-of-coolant accidents and inadvertent operation of ECCS. It notes partial conformance with some SRP guidance due to superseding criteria in SRP Section 15.0.3, and confirms full conformance with DSRS 15.6.6 requirements for RCS pressure and minimum DNBR. Certain criteria are noted as not applicable because they pertain only to BWRs.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "8",
-      "hop": 2
+      "page_range": "309",
+      "hop": 4
     },
-    "nuscale_ch01_0031": {
-      "node_id": "nuscale_ch01_0031",
-      "title": "Plant Cooling Water Systems",
-      "summary": "The plant cooling water systems at NuScale include several nonsafety-related systems essential for plant operation, such as the reactor component cooling water system (RCCWS), reactor pool and spent fuel pool cooling systems, and the circulating water system. These systems transfer heat from various plant components and pools to the site cooling water system or cooling towers, supporting efficient plant cooling and operation.",
+    "nuscale_ch01_0701": {
+      "node_id": "nuscale_ch01_0701",
+      "title": "DSRS 15.1.6, Rev 0: Loss of Containment VacuumII.4 Analytical ParametersMaximize Heat Transfer from RCS to Containment and Reactor Pool",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for DSRS 15.1.6, specifically regarding analytical parameters for the loss of containment vacuum scenario. It confirms that the NuScale design maximizes heat transfer from the Reactor Coolant System (RCS) to the containment and reactor pool, meeting the requirements without exceptions. The table also notes overall compliance with relevant sections of the Standard Review Plan (SRP) and Design Specific Review Standard (DSRS).",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "35",
-      "hop": 2
-    },
-    "nuscale_ch01_0018": {
-      "node_id": "nuscale_ch01_0018",
-      "title": "Principal Design Criteria",
-      "summary": "The section describes the principal design criteria for the NuScale plant, focusing on the Site Cooling Water System (SCWS) and the overall facility process. It outlines the reactor core's heat transfer process, natural coolant circulation, steam generation, and the flow of superheated steam to the turbine and condenser, emphasizing the system's role in efficient heat removal and power generation.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "28",
-      "hop": 2
-    },
-    "nuscale_ch01_0032": {
-      "node_id": "nuscale_ch01_0032",
-      "title": "Radioactive Waste Management System",
-      "summary": "The section describes the radioactive waste management system at the NuScale Power Plant, noting that liquid, gaseous, and solid waste systems are detailed in Chapter 11, along with effluent monitoring. It also outlines the general arrangement of major structures, focusing on the Reactor Building (RXB), which is a reinforced, seismically designed concrete structure housing the nuclear power modules and essential systems, and provides radiation protection for personnel.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "36",
-      "hop": 2
-    },
-    "nuscale_ch01_0370": {
-      "node_id": "nuscale_ch01_0370",
-      "title": "SRP 9.4.1, Rev 3: Control Room Area Ventilation SystemII.2 Environmental and Dynamic Effects",
-      "summary": "The section confirms that the NuScale Final Safety Analysis Report meets the regulatory criteria outlined in SRP 9.4.1, Rev 3, specifically regarding the control room area ventilation system’s protection against environmental and dynamic effects. The report states that there are no exceptions or deviations from the standard requirements for this aspect.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "252",
-      "hop": 3
-    },
-    "nuscale_ch01_0372": {
-      "node_id": "nuscale_ch01_0372",
-      "title": "SRP 9.4.1, Rev 3: Control Room Area Ventilation SystemII.4 Control Room",
-      "summary": "This section summarizes NuScale’s conformance with SRP 9.4.1, Rev 3 requirements for the Control Room Area Ventilation System, confirming compliance with criteria related to protection against natural phenomena, environmental effects, and system sharing. The control room ventilation system does not use emergency filtration for accident conditions; instead, it provides clean air via compressed air tanks to ensure operator safety. The review also notes that up to 12 modules share the same control room, and the system meets all relevant regulatory standards except for aspects related to ESF atmosphere cleanup systems.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "252",
-      "hop": 3
+      "page_range": "294",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0001",
-      "target": "nuscale_ch01_0036",
+      "source": "nuscale_ch01_0160",
+      "target": "nuscale_ch01_0052",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section B describes operational procedures for individual NPMs within the reactor pool, which are part of the overall plant design and operational limits introduced in Section A."
+      "description": "Section B provides nominal design parameters, including the operating pressure of the NuScale Reactor Coolant System, which is the specific information sought in the analysis question, while Section A discusses regulatory conformance and does not provide the operating pressure value."
     },
     {
-      "source": "nuscale_ch01_0001",
-      "target": "nuscale_ch01_0035",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A provides the general description and regulatory context for the NuScale plant design, while Section B offers specific details about the physical arrangement and maintenance areas for NPMs, with both sections together informing the operational configuration (including the number of NPMs) within a single Reactor Building."
-    },
-    {
-      "source": "nuscale_ch01_0036",
-      "target": "nuscale_ch01_0035",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the independence of refueling operations for each NPM, while Section B details the physical infrastructure (pipe fittings, electrical connections, and maintenance areas) that supports such operations, indicating that the facility is designed to accommodate multiple NPMs being serviced or operated independently."
-    },
-    {
-      "source": "nuscale_ch01_0036",
-      "target": "nuscale_ch01_0002",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A provides specific operational details about NPM refueling independence within the reactor building, which supports the general plant description and design bases outlined in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0035",
-      "target": "nuscale_ch01_0002",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides specific details about the fuel handling and reactor maintenance areas, which are part of the general plant description introduced in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0003",
-      "target": "nuscale_ch01_0036",
-      "relation": "SUPPORTS",
+      "source": "nuscale_ch01_0160",
+      "target": "nuscale_ch01_0019",
+      "relation": "SATISFIES",
       "confidence": 0.7,
-      "description": "Section B describes the independent refueling operations of individual NPMs within the reactor building, which provides operational context that supports the general plant description and design bases outlined in Section A."
+      "description": "Section B provides the operating characteristics of the NuScale Reactor Coolant System, which are the specific design results that would be evaluated against the regulatory requirements and specifications referenced in Section A."
     },
     {
-      "source": "nuscale_ch01_0003",
-      "target": "nuscale_ch01_0035",
+      "source": "nuscale_ch01_0705",
+      "target": "nuscale_ch01_0052",
       "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section B provides specific details about the location and arrangement of fuel handling and reactor maintenance areas, which are part of the general plant description introduced in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0031",
-      "target": "nuscale_ch01_0001",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A discusses the operational flexibility of multiple NPMs per plant as permitted by the site license, while Section B introduces the FSAR as the document that describes the design bases and operational limits, thus Section B provides the regulatory framework within which Section A's operational details are defined."
-    },
-    {
-      "source": "nuscale_ch01_0031",
-      "target": "nuscale_ch01_0036",
-      "relation": "SUPPORTS",
       "confidence": 0.95,
-      "description": "Section A describes that multiple NPMs can be operated per plant and individually managed, while Section B explains that refueling operations for one NPM do not affect the operation of others, both supporting the concept of multiple independently operable NPMs in a single Reactor Building."
+      "description": "Section B provides the nominal operating pressure of the NuScale Reactor Coolant System in a comparison table, while Section A discusses pressure analyses and regulatory conformance but does not specify the operating pressure value, making Section B the source of the specific information needed to answer the analysis question."
     },
     {
-      "source": "nuscale_ch01_0031",
-      "target": "nuscale_ch01_0035",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the operational flexibility of multiple NPMs per plant as permitted by the site license, while Section B details the physical infrastructure (fuel handling and maintenance areas) that supports installation, refueling, and removal of NPMs, connecting both sections through the operational and physical accommodation of multiple NPMs in the Reactor Building."
-    },
-    {
-      "source": "nuscale_ch01_0018",
-      "target": "nuscale_ch01_0001",
+      "source": "nuscale_ch01_0705",
+      "target": "nuscale_ch01_0019",
       "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A provides specific details about the plant's systems and facility layout, which are elaborations of the general plant description and design bases introduced in Section B."
+      "confidence": 0.7,
+      "description": "Section B provides the general operating characteristics of the NuScale Reactor Coolant System, while Section A references specific analytical parameters and regulatory conformance related to system pressures, connecting them through the context of operating conditions and regulatory compliance."
     },
     {
-      "source": "nuscale_ch01_0018",
-      "target": "nuscale_ch01_0036",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.8,
-      "description": "Section B describes operational procedures for refueling individual NPMs within the reactor building, which presupposes the facility layout and systems described in Section A, indicating that the design and arrangement in Section A enable the independent operation and refueling described in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0018",
-      "target": "nuscale_ch01_0035",
-      "relation": "SPECIFIES",
-      "confidence": 0.8,
-      "description": "Section A provides a general description of the reactor facility and its systems, while Section B details the specific areas and provisions for handling and maintaining NPMs within the facility, connecting through their shared focus on facility layout and operational provisions for NPMs."
-    },
-    {
-      "source": "nuscale_ch01_0032",
-      "target": "nuscale_ch01_0001",
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0019",
       "relation": "REFERENCES",
-      "confidence": 0.8,
-      "description": "Section A references the general plant layout and points to figures and sections that may contain information about the arrangement of NPMs, while Section B introduces the FSAR and states that it includes design bases and operational limits, which would encompass the maximum number of NPMs per Reactor Building."
+      "confidence": 0.85,
+      "description": "Section A references Table 1.3-1 for nominal design parameters, which likely includes the operating pressure, while Section B describes the operating characteristics of the NuScale Power Module but does not specify the operating pressure."
     },
     {
-      "source": "nuscale_ch01_0032",
-      "target": "nuscale_ch01_0036",
+      "source": "nuscale_ch01_0706",
+      "target": "nuscale_ch01_0705",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A discusses fuel cladding integrity and references the same DSRS sections as Section B, which specifically addresses Reactor Coolant System and Main Steam System pressures, thus Section A references Section B for pressure-related information relevant to cladding integrity."
+    },
+    {
+      "source": "nuscale_ch01_0706",
+      "target": "nuscale_ch01_0052",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides nominal design parameters, including the operating pressure of the NuScale Reactor Coolant System, which Section A does not specify but may reference for accident analysis context."
+    },
+    {
+      "source": "nuscale_ch01_0774",
+      "target": "nuscale_ch01_0705",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides analytical parameters, including pressures, for the Reactor Coolant System, which are necessary to address the operating conditions referenced in Section A's discussion of technical specifications and regulatory conformance."
+    },
+    {
+      "source": "nuscale_ch01_0774",
+      "target": "nuscale_ch01_0052",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section B provides nominal design parameters, including operating pressure, for the NuScale Reactor Coolant System, which are referenced or used in Section A to assess conformance with regulatory criteria related to coolant system specifications."
+    },
+    {
+      "source": "nuscale_ch01_0709",
+      "target": "nuscale_ch01_0160",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses operational transients and system failures relevant to the reactor coolant system, while Section B addresses the design and qualification specifications for mechanical and electrical equipment, both of which are connected through the need to define and withstand the operating pressure of the reactor coolant system as a design input and qualification parameter."
+    },
+    {
+      "source": "nuscale_ch01_0709",
+      "target": "nuscale_ch01_0705",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section B provides the specific analytical parameters and pressure values for the Reactor Coolant System, which Section A references in its broader discussion of system failures and regulatory conformance."
+    },
+    {
+      "source": "nuscale_ch01_0709",
+      "target": "nuscale_ch01_0052",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B provides the nominal operating pressure of the NuScale Reactor Coolant System in a comparison table, which is the specific design value that Section A's regulatory analysis (including accident scenarios) would reference or evaluate for compliance."
+    },
+    {
+      "source": "nuscale_ch01_0769",
+      "target": "nuscale_ch01_0160",
       "relation": "IS_PREREQUISITE_OF",
       "confidence": 0.85,
-      "description": "Section B describes operational independence and movement logistics for individual NPMs within the reactor building, which presupposes the general plant layout and arrangement of major structures and equipment described in Section A."
+      "description": "Section A discusses initial conditions and input parameters for safety analyses, which include operating pressure values that are necessary for the design and procurement specifications referenced in Section B."
     },
     {
-      "source": "nuscale_ch01_0032",
-      "target": "nuscale_ch01_0035",
+      "source": "nuscale_ch01_0769",
+      "target": "nuscale_ch01_0705",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A provides a general description of the plant layout and references a figure showing the arrangement of major structures, while Section B specifies the location and function of the fuel handling and reactor maintenance areas within that layout, connecting the general arrangement to specific operational areas relevant to NPM operation."
+      "description": "Section B provides specific information about Reactor Coolant System pressures, which is the operating parameter in question, while Section A references related regulatory criteria and accident analyses but does not specify the operating pressure itself."
     },
     {
-      "source": "nuscale_ch01_0003",
-      "target": "nuscale_ch01_0031",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section B explains that multiple NPMs can be operated per plant and managed individually, which provides operational context that supports the general plant description in Section A regarding the facility's design and operational limits."
-    },
-    {
-      "source": "nuscale_ch01_0003",
-      "target": "nuscale_ch01_0018",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A provides the overall purpose and scope of the FSAR, while Section B gives specific design details about plant systems and facility layout, both contributing contextual information necessary to determine the number of NPMs that can be operated in a single Reactor Building."
-    },
-    {
-      "source": "nuscale_ch01_0003",
-      "target": "nuscale_ch01_0032",
+      "source": "nuscale_ch01_0769",
+      "target": "nuscale_ch01_0052",
       "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides the nominal operating pressure of the NuScale Reactor Coolant System in a comparison table, which is the specific design value sought in the analysis question, while Section A lists regulatory criteria and input parameters but does not provide the operating pressure itself."
+    },
+    {
+      "source": "nuscale_ch01_0706",
+      "target": "nuscale_ch01_0774",
+      "relation": "SUPPORTS",
       "confidence": 0.7,
-      "description": "Section A provides a general introduction to the NuScale FSAR and its purpose, while Section B begins to describe the general arrangement of major plant structures, which may include information relevant to the number of NPMs per Reactor Building."
+      "description": "Section A discusses NuScale's conformance with regulatory criteria for various transient events affecting the reactor coolant system, while Section B addresses plant-specific technical specifications for primary and secondary coolant system iodine activity, both referencing the NuScale Final Safety Analysis Report and regulatory compliance, thus connecting through their focus on regulatory requirements for the reactor coolant system."
     },
     {
-      "source": "nuscale_ch01_0031",
-      "target": "nuscale_ch01_0018",
-      "relation": "SUPPORTS",
+      "source": "nuscale_ch01_0706",
+      "target": "nuscale_ch01_0709",
+      "relation": "SEMANTIC",
+      "confidence": 0.85,
+      "description": "Section A and Section B both discuss conformance with regulatory criteria for the same set of NuScale reactor transient events, referencing the same DSRS sections and Final Safety Analysis Report content, but focus on different safety aspects (fuel cladding integrity in A, most limiting single failure in B) without providing direct information about operating pressure."
+    },
+    {
+      "source": "nuscale_ch01_0706",
+      "target": "nuscale_ch01_0769",
+      "relation": "SEMANTIC",
       "confidence": 0.8,
-      "description": "Section A discusses the operation of multiple NPMs per plant and their incremental service based on site license, while Section B describes the site-specific design and operation of the cooling water system that supports these NPMs, connecting them through the dependency of NPM operation on adequate cooling system design."
+      "description": "Section A and Section B both reference NuScale FSAR conformance with DSRS/SRP chapters related to reactor coolant system transients, but neither provides the specific operating pressure value, instead discussing regulatory compliance for different accident scenarios."
     },
     {
-      "source": "nuscale_ch01_0031",
-      "target": "nuscale_ch01_0032",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A describes the operation and serviceability of multiple NPMs per plant as permitted by the site license, while Section B references the general arrangement and layout of major structures, which would include the spatial and systems constraints relevant to how many NPMs can be housed in a single Reactor Building."
-    },
-    {
-      "source": "nuscale_ch01_0018",
-      "target": "nuscale_ch01_0032",
+      "source": "nuscale_ch01_0774",
+      "target": "nuscale_ch01_0709",
       "relation": "SEMANTIC",
       "confidence": 0.7,
-      "description": "Section A describes the principal design criteria and general plant description, while Section B outlines the radioactive waste management system and references the general arrangement of major structures, both providing complementary details about the plant layout but neither directly addresses or constrains the number of NPMs per Reactor Building."
+      "description": "Section A discusses technical specifications for coolant system iodine activity in the context of radiological consequences, while Section B addresses system responses and integrity under various operational transients, both referencing the NuScale Reactor Coolant System but neither directly providing or specifying its operating pressure."
     },
     {
-      "source": "nuscale_ch01_0370",
-      "target": "nuscale_ch01_0001",
+      "source": "nuscale_ch01_0774",
+      "target": "nuscale_ch01_0769",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A and Section B both reference NuScale FSAR conformance with SRP/DSRS criteria for reactor coolant system events, but neither provides the specific operating pressure value; instead, they discuss regulatory compliance for accident analyses involving the coolant system."
+    },
+    {
+      "source": "nuscale_ch01_0709",
+      "target": "nuscale_ch01_0769",
+      "relation": "SEMANTIC",
+      "confidence": 0.6,
+      "description": "Section A and Section B both reference NuScale FSAR conformance with regulatory criteria for accident analyses, but neither provides the operating pressure of the NuScale Reactor Coolant System nor directly references each other; they are related only by their general context of accident analysis input parameters."
+    },
+    {
+      "source": "nuscale_ch01_0715",
+      "target": "nuscale_ch01_0705",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references the values of parameters used in the analytical model, while Section B specifically details the Reactor Coolant System and Main Steam System pressures, thus Section A relies on the pressure information provided in Section B to define its analytical setpoints."
+    },
+    {
+      "source": "nuscale_ch01_0715",
+      "target": "nuscale_ch01_0052",
       "relation": "REFERENCES",
       "confidence": 0.85,
-      "description": "Section A references regulatory criteria and conformance for specific systems (such as the Control Room Area Ventilation System), while Section B provides the general description and design bases of the NuScale plant, which includes the operational limits (such as the number of NPMs per Reactor Building) that Section A's regulatory conformance would apply to."
+      "description": "Section B provides the nominal operating pressure value for the NuScale Reactor Coolant System, which is a parameter referenced in Section A as being used in the analytical model for safety analysis."
     },
     {
-      "source": "nuscale_ch01_0370",
-      "target": "nuscale_ch01_0036",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section B describes the independent refueling operations of individual NPMs within the reactor building, while Section A outlines regulatory conformance for shared systems (such as ventilation) that support safe operation of multiple NPMs, thus Section A's requirements set the operational and safety context within which Section B's described activities occur."
+      "source": "nuscale_ch01_0722",
+      "target": "nuscale_ch01_0160",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A discusses system pressure parameters relevant to accident analyses, while Section B addresses design and procurement specifications for equipment qualification, both of which rely on the operating pressure of the Reactor Coolant System as a key input for their respective evaluations."
     },
     {
-      "source": "nuscale_ch01_0370",
-      "target": "nuscale_ch01_0035",
+      "source": "nuscale_ch01_0722",
+      "target": "nuscale_ch01_0705",
       "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A outlines regulatory conformance and requirements for systems such as the Control Room Area Ventilation System, while Section B describes the physical layout and operational features of the fuel handling and reactor maintenance areas, both of which are connected by their relevance to the number and arrangement of NPMs that can be accommodated and safely operated within a single Reactor Building."
+      "confidence": 0.85,
+      "description": "Section A and Section B both address the conformance of the NuScale Reactor Coolant System pressures with regulatory criteria under different transient scenarios, providing complementary evidence regarding system pressure parameters."
     },
     {
-      "source": "nuscale_ch01_0372",
-      "target": "nuscale_ch01_0001",
+      "source": "nuscale_ch01_0722",
+      "target": "nuscale_ch01_0052",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides the nominal operating pressure value for the NuScale Reactor Coolant System, which is the specific design parameter referenced in Section A as being met or conformed with regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0715",
+      "target": "nuscale_ch01_0722",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A and Section B both reference analytical models and parameter values (including system pressures) used in the NuScale Final Safety Analysis Report to demonstrate conformance with regulatory criteria for different transient events, indicating that the pressure values in Section B are derived from or consistent with the modeling approach described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0052",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides nominal design parameters, including operating pressure, for the NuScale Reactor Coolant System, which is the specific information needed to answer the analysis question, whereas Section A does not address operating pressure."
+    },
+    {
+      "source": "nuscale_ch01_0786",
+      "target": "nuscale_ch01_0705",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A references the regulatory limit that the RCS pressure must remain below 110 percent of the design value, while Section B provides analytical parameters and scenarios that would determine or test the actual RCS pressure during various transients, thus Section B provides the design results that are evaluated against the requirement in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0786",
+      "target": "nuscale_ch01_0052",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A references regulatory limits on RCS pressure (below 110 percent design value), while Section B provides nominal design parameters (including operating pressure) for the NuScale reactor, thus Section B supplies the specific operating pressure value relevant to the regulatory context described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0701",
+      "target": "nuscale_ch01_0705",
       "relation": "REFERENCES",
       "confidence": 0.85,
-      "description": "Section A references regulatory criteria and conformance for specific systems (such as the Control Room Area Ventilation System) that are detailed in the broader plant design and operational limits described in Section B."
+      "description": "Section A lists analytical parameters for loss of containment vacuum scenarios, while Section B addresses the pressures in the Reactor Coolant System and Main Steam System under various transient conditions, both referencing the same analytical parameters and scenarios to ensure regulatory conformance."
     },
     {
-      "source": "nuscale_ch01_0372",
-      "target": "nuscale_ch01_0036",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section B describes the independent refueling operations of individual NPMs within the reactor building, which is relevant to Section A's discussion of shared systems and structures (such as ventilation) that must accommodate multiple NPMs, thus connecting operational independence to regulatory requirements for shared facility systems."
-    },
-    {
-      "source": "nuscale_ch01_0372",
-      "target": "nuscale_ch01_0035",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A discusses regulatory conformance for shared systems and structures, including operation of the Control Room Ventilation System (CRVS), while Section B describes the physical layout and provisions for handling multiple NPMs in the reactor building, connecting them through the need to ensure that shared systems (like CRVS) can support the number of NPMs present."
-    },
-    {
-      "source": "nuscale_ch01_0370",
-      "target": "nuscale_ch01_0372",
-      "relation": "REFERENCES",
-      "confidence": 0.85,
-      "description": "Section A addresses environmental and dynamic effects relevant to the control room area ventilation system, while Section B addresses the control room itself, with both sections referencing the same regulatory criteria (SRP 9.4.1, Rev 3) and thus are structurally connected by their shared regulatory context."
+      "source": "nuscale_ch01_0701",
+      "target": "nuscale_ch01_0052",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides the nominal design parameters, including the operating pressure of the NuScale Reactor Coolant System, which Section A references as analytical parameters for accident analysis, thus Section B specifies the values used in Section A's analysis."
     }
   ]
 }

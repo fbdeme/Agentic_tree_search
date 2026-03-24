@@ -1,391 +1,709 @@
 {
-  "question": "Describe the cross-sectional view of the configuration consisting of 12 modules.",
+  "question": "What does Ch.01 state about the NuScale spent fuel pool design, and what implications does the 24-month refueling cycle have for Ch.05 RCS operations?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0068": {
-      "node_id": "nuscale_ch01_0068",
-      "title": "Electrical and Instrumentation and Control Drawings",
-      "summary": "This section explains that the NuScale Final Safety Analysis Report includes simplified electrical, instrumentation, and control (I&C) drawings to visually clarify design information alongside the text. It lists the types of diagrams provided, references tables and figures for diagram legends, and notes that applicants referencing the NuScale design must supply site-specific diagrams and legends as needed.",
+    "nuscale_ch01_0043": {
+      "node_id": "nuscale_ch01_0043",
+      "title": "Ultimate Heat Sink",
+      "summary": "The Ultimate Heat Sink for the NuScale plant is a large, stainless steel-lined, reinforced concrete pool located below grade, comprising the reactor, refueling, and spent fuel pool areas. During normal operations, heat is removed via the reactor pool cooling system and rejected to the atmosphere, while in the event of a total loss of AC power, decay heat is passively transferred to the pool, which has sufficient water inventory to ensure continued cooling through heat-up and boiling.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "95",
+      "page_range": "41",
       "hop": 1
     },
-    "nuscale_ch01_0372": {
-      "node_id": "nuscale_ch01_0372",
-      "title": "SRP 9.4.1, Rev 3: Control Room Area Ventilation SystemII.4 Control Room",
-      "summary": "This section summarizes NuScale’s conformance with SRP 9.4.1, Rev 3 requirements for the Control Room Area Ventilation System. It confirms that the system meets regulatory criteria for protection against natural phenomena, environmental effects, and control room sharing, and clarifies that the control room habitability system uses compressed air tanks for clean air rather than emergency filtration during accidents. The review also notes that certain criteria related to ESF atmosphere cleanup systems are not applicable to the NuScale design.",
+    "nuscale_ch01_0303": {
+      "node_id": "nuscale_ch01_0303",
+      "title": "DSRS 9.1.3, Rev 0: Spent Fuel Pool Cooling and Cleanup SystemII.5 Specific Criteria to Meet GDC 63",
+      "summary": "This section summarizes the NuScale Spent Fuel Pool Cooling and Cleanup System’s conformance with regulatory criteria, specifically addressing compliance with General Design Criteria (GDC) 63. The system fully meets the requirements of GDC 63, with no exceptions noted, as referenced in sections 9.1.3.1 and 9.1.3.5 of the report.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "252",
+      "page_range": "243",
       "hop": 1
     },
-    "nuscale_ch01_0039": {
-      "node_id": "nuscale_ch01_0039",
-      "title": "Technical Support Center",
-      "summary": "The Technical Support Center (TSC) is designed in compliance with NUREG-0696 requirements and provides additional support as detailed in Section 13.3. It functions alongside the Main Control Room (MCR), which uses advanced digital control systems and human-factored displays to enable operators to monitor, control, and respond to plant operations efficiently. The TSC enhances overall plant safety and coordination during both normal and emergency conditions.",
+    "nuscale_ch01_0301": {
+      "node_id": "nuscale_ch01_0301",
+      "title": "DSRS 9.1.3, Rev 0: Spent Fuel Pool Cooling and Cleanup SystemII.3 Specific Criteria to Meet GDC 5",
+      "summary": "Section II.3 of DSRS 9.1.3, Rev 0, states that the Spent Fuel Pool Cooling and Cleanup System fully conforms to the specific criteria required to meet General Design Criterion (GDC) 5, with no exceptions noted. This indicates that the system design ensures structures, systems, and components important to safety are not shared among multiple units in a way that could compromise safety functions.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "40",
+      "page_range": "243",
       "hop": 1
     },
     "nuscale_ch01_0051": {
       "node_id": "nuscale_ch01_0051",
       "title": "Plant Features of Special Interest",
-      "summary": "This section describes key plant features of special interest in the NuScale Power Plant, including the Central Utility Building (CUB) and Diesel Generator Buildings (DGBs), which house essential but nonsafety-related equipment and backup systems. It also highlights human factors engineering (HFE) considerations, emphasizing fail-safe design, automation, digital controls, and workload management to minimize human error and meet regulatory requirements.",
+      "summary": "This section describes special plant features of the NuScale Power Plant, highlighting structures such as the Central Utility Building and Diesel Generator Buildings, which house essential but non-safety-related equipment and services. It also emphasizes human factors engineering, noting that the plant design minimizes human error through automation, digital controls, and optimized workload management, in compliance with regulatory requirements.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "43",
       "hop": 1
     },
-    "nuscale_ch01_0370": {
-      "node_id": "nuscale_ch01_0370",
-      "title": "SRP 9.4.1, Rev 3: Control Room Area Ventilation SystemII.2 Environmental and Dynamic Effects",
-      "summary": "The section confirms that the NuScale Final Safety Analysis Report meets the requirements of SRP 9.4.1, Rev 3, specifically regarding environmental and dynamic effects on the Control Room Area Ventilation System. It states that the system conforms to regulatory criteria, with no exceptions noted for this aspect.",
+    "nuscale_ch01_0439": {
+      "node_id": "nuscale_ch01_0439",
+      "title": "SRP 10.4.6, Rev 3: Condensate Cleanup SystemII.2 Maintain indirect cycle PWR water quality to avoid corrosion-induced failure of the reactor coolant pressure boundary (GDC 14)",
+      "summary": "The section outlines NuScale’s conformance with regulatory criteria for maintaining indirect cycle PWR water quality to prevent corrosion-induced failure of the reactor coolant pressure boundary, as required by GDC 14. It notes that the NuScale steam generator design places primary water outside and secondary water inside the tubes, with no steam generator blowdown, resulting in secondary chemistry requirements that differ from standard guidelines.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "252",
+      "page_range": "263",
       "hop": 1
     },
-    "nuscale_ch01_0062": {
-      "node_id": "nuscale_ch01_0062",
-      "title": "Control Rod Assembly Drop and Control Rod Drive Shaft Alignment Test",
-      "summary": "This section describes the testing and validation of the NuScale control rod assembly (CRA) drop and drive shaft alignment, focusing on the reliability and repeatability of the new remote disconnect mechanism. Testing at Curtiss Wright facilities demonstrated that the remote disconnect system reliably engages and disengages the CRA, and the results have informed improvements in drive rod position detection circuitry, though they do not establish the final design basis. The NPM design features longer, remotely disconnectable drive shafts with multiple alignment supports to ensure proper operation.",
+    "nuscale_ch01_0294": {
+      "node_id": "nuscale_ch01_0294",
+      "title": "DSRS 9.1.2, Rev 0: New and Spent Fuel StorageII.3 Specific Criteria to Meet GDC 5",
+      "summary": "The section demonstrates that the NuScale design fully conforms to the specific criteria of DSRS 9.1.2, Rev 0, Section II.3, which addresses the requirements of GDC 5 for new and spent fuel storage. No exceptions or additional requirements are noted, and relevant compliance details are referenced in sections 9.1.2.1 and 9.1.2.3 of the report.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "88",
-      "hop": 1
-    },
-    "nuscale_ch01_0069": {
-      "node_id": "nuscale_ch01_0069",
-      "title": "Piping and Instrumentation Diagrams",
-      "summary": "This section describes the use of simplified electrical, instrumentation and control (I&C), and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information. It lists the relevant diagrams and legends used for both I&C and piping and instrumentation diagrams, and notes that site-specific diagrams and legends will be provided by COL applicants referencing the NuScale design certification.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "95",
+      "page_range": "242",
       "hop": 2
     },
-    "nuscale_ch01_0015": {
-      "node_id": "nuscale_ch01_0015",
-      "title": "General Plant Description",
-      "summary": "This section provides an overview of the NuScale plant design, summarizing key systems such as safety features, power conversion, fuel handling, cooling, and waste management. It explains the distinction between certified and site-specific design elements, noting that some information is representative or conceptual and marked accordingly, while security-related details are withheld per regulations.",
+    "nuscale_ch01_0790": {
+      "node_id": "nuscale_ch01_0790",
+      "title": "SRP 15.7.4, Rev 1: Radiological Consequences of Fuel Handling AccidentsII.1 Acceptability of Site and Dose Mitigating ESF Systems",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for radiological consequences of fuel handling accidents. It notes that certain acceptance criteria from SRP 15.7.4 are not applicable or are superseded by newer guidance (SRP 15.0.3), while others only partially apply due to differences in NuScale’s reactor design, such as the absence of a traditional containment building. Overall, the NuScale design addresses relevant criteria where applicable and explains deviations based on its unique features.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "26",
+      "page_range": "310",
       "hop": 2
     },
-    "nuscale_ch01_0067": {
-      "node_id": "nuscale_ch01_0067",
-      "title": "Drawings and Other Detailed Information",
-      "summary": "This section describes the inclusion of simplified instrumentation, control, electrical, and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information alongside written descriptions. It references tables and figures listing and explaining the symbols used in these diagrams, and notes that applicants referencing the NuScale design must provide additional site-specific diagrams and legends as needed.",
+    "nuscale_ch01_0054": {
+      "node_id": "nuscale_ch01_0054",
+      "title": "Requirements for Additional Technical Information",
+      "summary": "This section outlines the verification and confirmation testing programs for unique design features of the NuScale Power Plant, which are essential to support its safety analysis. It details completed and ongoing tests focused on areas lacking prior data or operational experience, including fuel design, steam generator, control rod assemblies, and integrated system phenomena. Specifically, it describes critical heat flux (CHF) testing for the preliminary fuel design, which informed code development and safety analysis for the final fuel design.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "95",
+      "page_range": "83",
+      "hop": 2
+    },
+    "nuscale_ch01_0055": {
+      "node_id": "nuscale_ch01_0055",
+      "title": "NuScale Testing Programs",
+      "summary": "This section outlines the NuScale testing programs designed to verify and confirm unique design features of the NuScale Power Plant that support its safety analysis. It details completed and ongoing tests focused on areas lacking prior data or operational experience, including fuel design, steam generator, control rod assemblies, and integrated system phenomena. Specifically, it describes critical heat flux (CHF) testing for the preliminary fuel design, which informed code development and safety analysis for the final design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "83",
+      "hop": 2
+    },
+    "nuscale_ch01_0791": {
+      "node_id": "nuscale_ch01_0791",
+      "title": "SRP 15.7.4, Rev 1: Radiological Consequences of Fuel Handling AccidentsII.2 Radioactivity Control Features of Fuel Storage and Handling Systems",
+      "summary": "This section explains that the NuScale design partially conforms to SRP 15.7.4, Rev 1, regarding radioactivity control features for fuel storage and handling systems. Specifically, only the criteria relevant to systems inside the Reactor Building apply, since NuScale does not use a traditional containment building for fuel storage and handling; instead, each module has its own compact steel containment vessel, which does not house these systems. Therefore, requirements for containment-based fuel handling systems are not applicable to the NuScale design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "310",
+      "hop": 2
+    },
+    "nuscale_ch01_0287": {
+      "node_id": "nuscale_ch01_0287",
+      "title": "SRP BTP 8-8, (Feb 2012): Onsite (Emergency Diesel Generators) and Offsite Power Sources Allowed Outage Time ExtensionsAll Various",
+      "summary": "The NuScale Final Safety Analysis Report states that requirements for allowed outage times for onsite and offsite AC power sources are not applicable due to the plant’s nonreliance on AC power for safety-related functions. The report also details conformance or partial conformance with various regulatory criteria for electrical systems and fuel storage, noting where certain requirements do not apply to passive plant designs.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "242",
+      "hop": 2
+    },
+    "nuscale_ch01_0298": {
+      "node_id": "nuscale_ch01_0298",
+      "title": "DSRS 9.1.2, Rev 0: New and Spent Fuel StorageII.7 Criticality Monitors and Subcriticality Margin",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for new and spent fuel storage, specifically addressing criticality monitors and subcriticality margin. It details compliance with various General Design Criteria (GDC) and regulatory requirements, noting that the design meets or partially meets the criteria, with no significant exceptions or required emergency safety features for ventilation. The section also clarifies that certain requirements are not applicable due to the passive nature of the plant design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "242",
       "hop": 3
     },
-    "nuscale_ch01_0120": {
-      "node_id": "nuscale_ch01_0120",
-      "title": "1.8.2 Departures",
-      "summary": "Section 1.8.2 describes the requirement for a Combined License (COL) applicant referencing the NuScale Power Plant design certification to provide a list of any departures from the certified design. This ensures that any differences between the certified design and the site-specific implementation are clearly identified and addressed in the licensing process.",
+    "nuscale_ch01_0387": {
+      "node_id": "nuscale_ch01_0387",
+      "title": "SRP 9.5.1.1, Rev 0: Fire Protection ProgramII.4 Fire Protection for Permanently Shutdown and Decommissioning Reactor Plants",
+      "summary": "This section explains that the fire protection requirements for permanently shutdown and decommissioning reactor plants (as outlined in SRP 9.5.1.1, Rev 0, II.4) are not applicable to the NuScale design, since these criteria only apply to reactor licensees who have submitted certifications for license termination under 10 CFR 50.82. The NuScale Final Safety Analysis Report clarifies that such provisions do not pertain to their current licensing stage.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "108",
+      "page_range": "255",
       "hop": 3
     },
-    "nuscale_ch01_0073": {
-      "node_id": "nuscale_ch01_0073",
-      "title": "Departures",
-      "summary": "This section outlines the interface requirements between the NuScale Power Plant’s certified design and the site-specific design provided in the combined license (COL) application. It explains the types of interface requirements (CDI and COL), the identification of COL information items, and notes that COL applicants must provide a list of any departures from the certified design. Tables and figures referenced in the section help clarify the boundaries and responsibilities between certified and site-specific elements.",
+    "nuscale_ch01_0309": {
+      "node_id": "nuscale_ch01_0309",
+      "title": "SRP 9.1.4, Rev 4: Light Load Handling System and Refueling Cavity DesignII.3 Specific Criteria to Meet GDC 61",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for the Light Load Handling System and Refueling Cavity Design, specifically addressing compliance with General Design Criterion (GDC) 61. The document confirms that the design meets the required criteria, with no exceptions or additional comments noted.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "108",
+      "page_range": "244",
       "hop": 3
     },
-    "nuscale_ch01_0117": {
-      "node_id": "nuscale_ch01_0117",
-      "title": "Figure 1.7-3f: Piping and In strumentation Diagram Legends",
-      "summary": "This section provides the legend for symbols used in NuScale's Piping and Instrumentation Diagrams (P&IDs), detailing the graphical representations for various instruments, sensors, and auxiliary devices. It includes symbols for flow, pressure, temperature, and level measurement devices, as well as sample analysis and burner monitoring equipment, ensuring standardized interpretation of P&ID drawings.",
+    "nuscale_ch01_0799": {
+      "node_id": "nuscale_ch01_0799",
+      "title": "SRP 15.7.5, Rev 2: Spent Fuel Cask Drop AccidentsII.4 ESF Grade Atmosphere Clean-Up System in Spent Fuel Storage Area",
+      "summary": "The section explains that the RBC system’s single-failure-proof crane design, in accordance with NUREG-0612 guidelines, ensures that no credible single component failure can result in the loss of load control. Because of this robust design, load drop evaluations and accident analyses for radiological consequences of spent fuel cask or NPM drops are not required, and thus, no such analyses have been performed.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "107",
-      "hop": 4
+      "page_range": "313",
+      "hop": 3
     },
-    "nuscale_ch01_0072": {
-      "node_id": "nuscale_ch01_0072",
-      "title": "Combined License Information Items",
-      "summary": "This section explains the interface requirements between the NuScale Power Plant certified design and the site-specific design provided in the combined license (COL) application. It distinguishes between conceptual design information (CDI) for non-certified plant portions and COL information items, which are site-specific responsibilities of the COL applicant. The section also notes that COL applicants must address all COL information items and provide a list of any departures from the certified design.",
+    "nuscale_ch01_0130": {
+      "node_id": "nuscale_ch01_0130",
+      "title": "1.9.5 Advanced and Evolutionary Light-Water Reactor Design Issues",
+      "summary": "This section explains that the NuScale design incorporates operational experience and regulatory guidance, including NRC Bulletins, Generic Letters, and 10 CFR 21 notifications, to ensure safety and compliance. It also addresses advanced and evolutionary light-water reactor design issues, referencing NRC policy and technical guidance such as SECY-93-087 and related staff requirements.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "108",
+      "page_range": "131",
+      "hop": 3
+    },
+    "nuscale_ch01_0036": {
+      "node_id": "nuscale_ch01_0036",
+      "title": "Refueling Operations",
+      "summary": "Refueling operations for a NuScale Power Module (NPM) are conducted independently from other modules. The process involves moving the NPM from its operating bay to the refueling pool, disassembling it for inspection, maintenance, and refueling, and then reassembling and returning it to service after successful testing and startup procedures.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "38",
+      "hop": 3
+    },
+    "nuscale_ch01_0438": {
+      "node_id": "nuscale_ch01_0438",
+      "title": "SRP 10.4.6, Rev 3: Condensate Cleanup SystemII.1 Maintain direct cycle BWR plant water quality to avoid corrosion-induced failure of the reactor coolant pressure boundary (GDC 14)",
+      "summary": "This section summarizes NuScale’s conformance with various regulatory criteria for systems related to condensate cleanup and associated components. It notes that certain requirements are not applicable to NuScale’s design (such as those specific to BWRs), while for others, such as maintaining indirect cycle PWR water quality, NuScale’s design conforms but with differences in secondary chemistry requirements due to its unique steam generator configuration.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "263",
       "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0068",
-      "target": "nuscale_ch01_0372",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A provides detailed drawings and figures that visually clarify the design configuration, which can be used to illustrate or support the regulatory conformance statements about the control room area ventilation system and module configuration described in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0068",
-      "target": "nuscale_ch01_0039",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A provides drawings and figures that visually clarify design information, which can include the cross-sectional configuration of the 12 modules described in Section B's general plant description."
-    },
-    {
-      "source": "nuscale_ch01_0068",
-      "target": "nuscale_ch01_0051",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A provides detailed drawings and figures that visually clarify the design configuration, which can include the cross-sectional view of the 12-module configuration described in Section B's general plant features."
-    },
-    {
-      "source": "nuscale_ch01_0068",
-      "target": "nuscale_ch01_0370",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A provides detailed drawings and figures that can visually clarify the configuration of the 12-module system, which supports Section B's regulatory conformance statements regarding environmental and dynamic effects for the control room area ventilation system."
-    },
-    {
-      "source": "nuscale_ch01_0068",
-      "target": "nuscale_ch01_0062",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A provides drawings and figures that visually clarify the design configuration, which can be used to understand the physical arrangement relevant to the module configuration described in the analysis question, while Section B discusses testing and alignment of specific components (control rod assemblies) that would be depicted in such drawings."
-    },
-    {
-      "source": "nuscale_ch01_0372",
-      "target": "nuscale_ch01_0039",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A outlines regulatory conformance for the control room area ventilation system, which is relevant to Section B's description of the technical support center and its monitoring of multiple reactor modules, as both sections address the configuration and operational oversight of shared systems in a multi-module plant."
-    },
-    {
-      "source": "nuscale_ch01_0372",
-      "target": "nuscale_ch01_0051",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A outlines regulatory criteria and conformance for control room area ventilation systems, while Section B describes the physical plant features, including the Central Utility Building that houses utility services potentially relevant to the configuration of the 12 modules."
-    },
-    {
-      "source": "nuscale_ch01_0372",
-      "target": "nuscale_ch01_0370",
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0303",
       "relation": "REFERENCES",
       "confidence": 0.95,
-      "description": "Section A references Section B by listing SRP 9.4.1, Rev 3: Control Room Area Ventilation SystemII.2 Environmental and Dynamic Effects as a regulatory criterion with which the design must conform, thereby connecting the general conformance summary (A) to the specific environmental and dynamic effects requirements (B)."
+      "description": "Section A describes the ultimate heat sink system's design and function for decay heat removal in the reactor pool, while Section B references the ultimate heat sink as the seismic Category I supply system for spent fuel pool cooling, connecting them through the UHS's role in both reactor and spent fuel cooling safety functions."
     },
     {
-      "source": "nuscale_ch01_0039",
-      "target": "nuscale_ch01_0370",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A describes the digital control system displays for each reactor module, while Section B references regulatory criteria (SRP 9.4.1) related to the control room area ventilation system, both of which are relevant to the configuration and operation of a multi-module plant such as the 12-module configuration in the analysis question."
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0301",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A describes the ultimate heat sink system's design and capabilities, which Section B references as the seismic Category I supply for spent fuel pool cooling under accident conditions, connecting them through the UHS's role in meeting regulatory criteria for spent fuel cooling."
     },
     {
-      "source": "nuscale_ch01_0039",
-      "target": "nuscale_ch01_0062",
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0051",
+      "relation": "CONTRADICTS",
+      "confidence": 0.8,
+      "description": "Section A describes the decay heat removal system's reliance on the reactor pool as an ultimate heat sink, while Section B lists the Central Utility Building's nonsafety-related utility functions, indicating that the systems in Section A depend on safety-related structures not covered by the utilities in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0439",
       "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A describes the digital control systems and operator interfaces for monitoring each reactor module, while Section B details testing and validation of the control rod drive mechanisms that are part of the reactor module configuration, connecting them through the operational and safety assurance of the 12-module plant design."
+      "description": "Section A describes the decay heat removal system's design and operation for cooling the reactor coolant system (RCS), while Section B lists regulatory requirements for water quality and material toughness that the NuScale design claims to conform with or not be applicable, connecting them through the need for effective heat removal and water quality maintenance in RCS operations."
+    },
+    {
+      "source": "nuscale_ch01_0303",
+      "target": "nuscale_ch01_0301",
+      "relation": "SEMANTIC",
+      "confidence": 0.95,
+      "description": "Section A and Section B both discuss the NuScale spent fuel pool cooling and cleanup system's conformance with regulatory criteria, specifically referencing the same design features and exceptions regarding seismic categorization and quality group requirements, thus providing parallel evaluations under different General Design Criteria (GDC 63 in A and GDC 5 in B)."
+    },
+    {
+      "source": "nuscale_ch01_0303",
+      "target": "nuscale_ch01_0051",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the spent fuel pool cooling system's regulatory conformance, specifically noting that the normal makeup water supply is not seismic Category I, while Section B describes the Central Utility Building as housing common utility services, including demineralized water equipment, which is relevant to the spent fuel pool's water supply."
+    },
+    {
+      "source": "nuscale_ch01_0303",
+      "target": "nuscale_ch01_0439",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the spent fuel pool cooling system's conformance with seismic and quality requirements, while Section B outlines the condensate cleanup system's role in maintaining water quality to prevent reactor coolant pressure boundary corrosion; both sections are connected through their focus on systems that ensure safe reactor operation and compliance with regulatory criteria, particularly regarding water quality and safety functions."
+    },
+    {
+      "source": "nuscale_ch01_0301",
+      "target": "nuscale_ch01_0051",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the safety classification and regulatory conformance of the spent fuel pool cooling system, noting that normal makeup water is not seismic Category I, while Section B describes the Central Utility Building as a nonsafety-related structure housing utility services, including demineralized water, which could be relevant to the spent fuel pool's water supply."
+    },
+    {
+      "source": "nuscale_ch01_0301",
+      "target": "nuscale_ch01_0439",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the spent fuel pool cooling system's conformance with seismic and quality requirements, while Section B addresses the condensate cleanup system's role in maintaining water quality to prevent corrosion in the reactor coolant system; both sections are connected through their implications for maintaining safe reactor coolant system (RCS) operations, especially over the extended 24-month refueling cycle, as water quality and cooling system integrity are interdependent for long-term operational safety."
     },
     {
       "source": "nuscale_ch01_0051",
-      "target": "nuscale_ch01_0370",
-      "relation": "SATISFIES",
-      "confidence": 0.8,
-      "description": "Section A describes the Central Utility Building and its housed systems, which are relevant to the configuration of the 12 modules, while Section B references regulatory criteria (SRP 9.4.1) that the plant's systems, including those in the CUB, must conform to, thus connecting the physical configuration to regulatory requirements."
-    },
-    {
-      "source": "nuscale_ch01_0051",
-      "target": "nuscale_ch01_0062",
-      "relation": "SEMANTIC",
+      "target": "nuscale_ch01_0439",
+      "relation": "SUPPORTS",
       "confidence": 0.7,
-      "description": "Section A describes the Central Utility Building (CUB), which is a plant structure that may house systems relevant to the configuration of the 12 modules referenced in the analysis question, while Section B discusses testing of control rod assemblies that are components within those modules, thus both sections provide information about different aspects (infrastructure and component testing) of the 12-module configuration."
+      "description": "Section A describes the physical plant features and utility systems housed in the Central Utility Building, while Section B outlines regulatory requirements for maintaining water quality in the reactor coolant system to prevent corrosion, connecting them through the need for plant infrastructure (from A) to support compliance with water quality standards (from B)."
     },
     {
-      "source": "nuscale_ch01_0370",
-      "target": "nuscale_ch01_0062",
-      "relation": "SEMANTIC",
-      "confidence": 0.6,
-      "description": "Section A outlines regulatory criteria and conformance for ventilation and containment systems, while Section B details testing and validation of control rod assembly alignment, with both sections connected through their relevance to the overall safety and configuration of the 12-module system described in the analysis question."
+      "source": "nuscale_ch01_0294",
+      "target": "nuscale_ch01_0043",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses regulatory criteria for spent fuel storage and the nonreliance on AC power for safety functions, while Section B describes the NuScale plant's passive decay heat removal system, both of which are connected by the design's reliance on passive safety features to ensure spent fuel and RCS cooling during extended refueling cycles."
     },
     {
-      "source": "nuscale_ch01_0069",
-      "target": "nuscale_ch01_0068",
+      "source": "nuscale_ch01_0294",
+      "target": "nuscale_ch01_0303",
       "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general overview of the types of drawings included (such as piping, instrumentation, electrical, and mechanical), while Section B specifies the subset focused on electrical and instrumentation and control drawings, both referencing the same source and context."
+      "confidence": 0.85,
+      "description": "Section A outlines the regulatory context and criteria for spent fuel storage, while Section B details how the NuScale spent fuel pool cooling system design conforms (or partially conforms) to those criteria, specifically referencing seismic and quality group requirements that impact operational implications such as the 24-month refueling cycle."
     },
     {
-      "source": "nuscale_ch01_0069",
-      "target": "nuscale_ch01_0372",
+      "source": "nuscale_ch01_0294",
+      "target": "nuscale_ch01_0301",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A and Section B both address how the NuScale spent fuel pool design meets regulatory criteria (specifically GDC 5), with Section A focusing on storage and power independence, and Section B detailing the cooling and cleanup system's conformance and exceptions, thus Section B provides specific technical details that elaborate on the general compliance described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0790",
+      "target": "nuscale_ch01_0043",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria and conformance related to fuel handling accidents and radiological consequences, while Section B describes the NuScale spent fuel pool's ultimate heat sink and decay heat removal systems, with both sections connected through the requirement that the spent fuel pool and RCS operations must ensure adequate cooling and radiological safety during and after refueling cycles."
+    },
+    {
+      "source": "nuscale_ch01_0790",
+      "target": "nuscale_ch01_0303",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A references the acceptability of site and dose mitigating systems for fuel handling accidents, while Section B specifies the spent fuel pool cooling system's conformance to regulatory criteria, connecting them through the requirement that spent fuel pool design and operations (including refueling cycles) must ensure radiological safety during fuel handling and storage."
+    },
+    {
+      "source": "nuscale_ch01_0790",
+      "target": "nuscale_ch01_0301",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses regulatory conformance for radiological consequences of fuel handling accidents, while Section B details the spent fuel pool cooling system's design conformance, both connecting through the requirement that the spent fuel pool design (Section B) must support safe fuel handling operations and accident mitigation as evaluated in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0054",
+      "target": "nuscale_ch01_0043",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines the testing and verification programs for unique NuScale design features that support safety analysis, while Section B describes the ultimate heat sink and decay heat removal systems that are among the features likely subject to such testing, connecting them through the need to validate the performance of critical safety systems."
+    },
+    {
+      "source": "nuscale_ch01_0054",
+      "target": "nuscale_ch01_0303",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A outlines the testing programs for unique NuScale design features that support safety analysis, which provides evidence for Section B's discussion of how the spent fuel pool cooling system conforms (or partially conforms) to regulatory criteria such as GDC 63."
+    },
+    {
+      "source": "nuscale_ch01_0054",
+      "target": "nuscale_ch01_0301",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A outlines the testing programs for unique NuScale design features that support safety analysis, while Section B details how the spent fuel pool cooling system design conforms (or partially conforms) to regulatory criteria, with both sections connected through the verification of design features that ensure regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch01_0055",
+      "target": "nuscale_ch01_0043",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A outlines the testing programs that verify unique NuScale design features supporting safety analysis, while Section B describes the ultimate heat sink system, which is one of the key safety-related design features likely subject to such verification, thus Section A's testing programs provide evidence supporting the safety claims made in Section B about decay heat removal."
+    },
+    {
+      "source": "nuscale_ch01_0055",
+      "target": "nuscale_ch01_0303",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the testing programs that generate data to support the safety analysis of unique NuScale design features, which are necessary to demonstrate conformance with the regulatory criteria for the spent fuel pool cooling system as outlined in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0055",
+      "target": "nuscale_ch01_0301",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the testing programs that generate data to support the safety analysis of unique NuScale design features, which are necessary to demonstrate conformance with the regulatory criteria for the spent fuel pool cooling system discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0791",
+      "target": "nuscale_ch01_0043",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses regulatory conformance and radiological control features related to fuel handling and storage, while Section B describes the NuScale spent fuel pool's ultimate heat sink and decay heat removal systems, with both sections connected through their focus on ensuring safe cooling and radiological safety during fuel handling and storage operations."
+    },
+    {
+      "source": "nuscale_ch01_0791",
+      "target": "nuscale_ch01_0303",
       "relation": "SATISFIES",
       "confidence": 0.85,
-      "description": "Section A provides detailed drawings and diagrams that visually clarify the design configuration, which can be used to describe the cross-sectional view of the 12-module configuration referenced in the analysis question, while Section B lists regulatory criteria and conformance statements that the design (including the configuration) must meet."
+      "description": "Section A discusses regulatory conformance for radiological consequences of fuel handling accidents, while Section B details the spent fuel pool cooling system's compliance with safety criteria, both addressing how the NuScale spent fuel pool design meets regulatory requirements for safety and accident mitigation."
     },
     {
-      "source": "nuscale_ch01_0069",
-      "target": "nuscale_ch01_0039",
+      "source": "nuscale_ch01_0791",
+      "target": "nuscale_ch01_0301",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses regulatory conformance for radiological consequences of fuel handling accidents in the NuScale spent fuel pool, while Section B details the spent fuel pool cooling system's design conformance with safety criteria, both addressing how the spent fuel pool's design and operational features meet regulatory requirements for safety and accident mitigation."
+    },
+    {
+      "source": "nuscale_ch01_0287",
+      "target": "nuscale_ch01_0043",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A discusses the inapplicability of AC power outage time restrictions due to NuScale's nonreliance on AC power for safety functions, while Section B describes the passive, closed-loop decay heat removal system that enables this nonreliance by providing cooling without AC power."
+    },
+    {
+      "source": "nuscale_ch01_0287",
+      "target": "nuscale_ch01_0303",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A provides detailed drawings and diagrams that visually clarify the design configuration, which supports the general plant description in Section B by offering the specific cross-sectional information needed to describe the 12-module configuration."
+      "description": "Section A discusses the inapplicability of AC power outage time restrictions due to NuScale's nonreliance on AC power for safety functions, while Section B describes the spent fuel pool cooling system's reliance on a seismic Category I ultimate heat sink for accident conditions, connecting them through the design's independence from AC power for critical safety systems."
     },
     {
-      "source": "nuscale_ch01_0015",
-      "target": "nuscale_ch01_0068",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general overview of the plant's configuration, while Section B offers detailed drawings that visually clarify and specify the design aspects summarized in Section A, including the arrangement of the 12 modules."
-    },
-    {
-      "source": "nuscale_ch01_0015",
-      "target": "nuscale_ch01_0372",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.95,
-      "description": "Section A provides a general overview of the plant's configuration, including the arrangement of modules, which forms the basis for understanding specific systems like the control room ventilation described in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0015",
-      "target": "nuscale_ch01_0039",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A provides a general overview of the plant's configuration, including the existence of multiple modules, while Section B details the digital control systems used to monitor and manage each reactor module, thus specifying how the general configuration is operated and supervised."
-    },
-    {
-      "source": "nuscale_ch01_0069",
-      "target": "nuscale_ch01_0015",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides detailed drawings and figures that visually clarify the design described in the general overview given in Section B, specifically supporting the understanding of the 12-module configuration mentioned in the analysis question."
-    },
-    {
-      "source": "nuscale_ch01_0067",
-      "target": "nuscale_ch01_0068",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general overview of the types of drawings and detailed information available, while Section B specifically refers to the electrical and instrumentation and control drawings that are part of the detailed information described in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0067",
-      "target": "nuscale_ch01_0372",
+      "source": "nuscale_ch01_0287",
+      "target": "nuscale_ch01_0301",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A provides detailed drawings and figures that visually clarify the design configuration of the 12 modules, which supports Section B's regulatory conformance statements by serving as evidence that the design meets the requirements for control room area ventilation and related systems."
+      "description": "Section A discusses the nonreliance on AC power for safety-related functions in the NuScale design, which affects the applicability of outage time restrictions for power sources, while Section B outlines the spent fuel pool cooling system's conformance to seismic and quality standards, both connected by the implication that the spent fuel pool's safety functions (including during extended refueling cycles) do not depend on AC power, thus influencing operational and regulatory requirements for RCS operations."
     },
     {
-      "source": "nuscale_ch01_0067",
-      "target": "nuscale_ch01_0039",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A provides detailed drawings and figures that visually clarify the design configuration, which supports the description in Section B regarding the arrangement and monitoring of the 12 reactor modules in the plant."
-    },
-    {
-      "source": "nuscale_ch01_0120",
-      "target": "nuscale_ch01_0068",
+      "source": "nuscale_ch01_0294",
+      "target": "nuscale_ch01_0790",
       "relation": "REFERENCES",
       "confidence": 0.85,
-      "description": "Section A references general interface requirements and points to figures that represent the overall facility configuration, while Section B describes the provision of detailed drawings (including figures) that visually clarify design information such as the cross-sectional view of the 12-module configuration."
+      "description": "Section A outlines the design and regulatory criteria for spent fuel storage, which are referenced in Section B's evaluation of the radiological consequences of fuel handling accidents, as the adequacy of spent fuel pool design directly impacts the acceptability of site dose consequences during such events."
     },
     {
-      "source": "nuscale_ch01_0120",
-      "target": "nuscale_ch01_0372",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section A identifies and describes the certified design boundaries and interfaces, which provide the context for understanding how the configuration of 12 modules (including their cross-sectional arrangement) relates to the regulatory conformance statements in Section B regarding shared structures and systems such as the Control Room Area Ventilation System."
-    },
-    {
-      "source": "nuscale_ch01_0120",
-      "target": "nuscale_ch01_0039",
-      "relation": "SPECIFIES",
-      "confidence": 0.8,
-      "description": "Section A references the general facility representation and boundaries (including figures) that are further detailed in Section B's description of digital control system displays for each reactor module, connecting the overall configuration to specific monitoring provisions for the 12-module setup."
-    },
-    {
-      "source": "nuscale_ch01_0073",
-      "target": "nuscale_ch01_0068",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A identifies the overall facility configuration and boundaries, while Section B provides detailed drawings that visually clarify the design information referenced in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0073",
-      "target": "nuscale_ch01_0372",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A identifies and describes the certified design boundaries and interfaces, which provide the context and scope for the systems (such as the Control Room Area Ventilation System) discussed in Section B, thereby specifying which parts of the facility's configuration are relevant to the regulatory criteria addressed in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0073",
-      "target": "nuscale_ch01_0039",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A references Figure 1.2-1 and Figure 1.2-2, which provide visual representations of the overall facility and boundaries relevant to the configuration of 12 modules described in the analysis question, while Section B describes the digital control systems and monitoring displays associated with each reactor module, thus both sections provide complementary information about the configuration and operation of the 12-module setup."
-    },
-    {
-      "source": "nuscale_ch01_0067",
-      "target": "nuscale_ch01_0120",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A provides detailed drawings and figures that visually clarify the design configuration, which can be used to describe the cross-sectional view of the 12-module configuration referenced in the analysis question, while Section B outlines the interface requirements and identifies which structures, systems, and components are part of the certified design, thus specifying the scope and boundaries relevant to interpreting the drawings in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0067",
-      "target": "nuscale_ch01_0073",
+      "source": "nuscale_ch01_0294",
+      "target": "nuscale_ch01_0054",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A provides detailed drawings and figures that visually clarify the design configuration, which can be used to describe the cross-sectional view of the 12-module configuration referenced in the analysis question, while Section B defines the interface boundaries and identifies which structures, systems, and components (including the 12 modules) are part of the certified design, thus establishing the scope for which Section A's drawings are applicable."
+      "description": "Section B outlines the testing programs required to verify unique design features that support the safety analysis described in Section A, which details how the NuScale spent fuel pool design conforms to regulatory criteria."
     },
     {
-      "source": "nuscale_ch01_0117",
-      "target": "nuscale_ch01_0068",
+      "source": "nuscale_ch01_0294",
+      "target": "nuscale_ch01_0055",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes testing programs that provide data to support the safety analysis of unique design features referenced in Section A's discussion of regulatory conformance for the NuScale spent fuel pool, thereby supporting the claims made in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0294",
+      "target": "nuscale_ch01_0791",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A outlines the design criteria and regulatory conformance for spent fuel storage, while Section B addresses the radiological consequences and control features of fuel handling accidents, with both sections connected through their focus on ensuring the safety and regulatory compliance of the NuScale spent fuel pool design."
+    },
+    {
+      "source": "nuscale_ch01_0294",
+      "target": "nuscale_ch01_0287",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references and summarizes the guidance from Section B regarding the inapplicability of outage time extensions for AC power sources due to NuScale's nonreliance on AC power for safety-related functions."
+    },
+    {
+      "source": "nuscale_ch01_0790",
+      "target": "nuscale_ch01_0054",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A discusses the NuScale spent fuel pool design's conformance with regulatory criteria for radiological consequences, while Section B outlines the requirement for verification and confirmation tests of unique design features, meaning Section B's testing programs provide supporting evidence for the safety claims made in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0790",
+      "target": "nuscale_ch01_0055",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A references regulatory criteria and conformance related to radiological consequences of fuel handling accidents, while Section B describes testing programs that provide data to support the safety analyses required by those criteria, thus Section B supports the claims and compliance discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0790",
+      "target": "nuscale_ch01_0791",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A provides the specific diagram legends necessary to interpret the types of symbols and components shown in the general electrical and instrumentation drawings described in Section B."
+      "description": "Section A addresses the acceptability of the site and dose mitigating engineered safety features (ESF) systems for fuel handling accidents, while Section B details the radioactivity control features of the fuel storage and handling systems, both under SRP 15.7.4 and referencing the same regulatory criteria, thus Section B specifies the technical controls that support the general acceptability discussed in Section A."
     },
     {
-      "source": "nuscale_ch01_0117",
-      "target": "nuscale_ch01_0372",
-      "relation": "IS_PREREQUISITE_OF",
+      "source": "nuscale_ch01_0790",
+      "target": "nuscale_ch01_0287",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the NuScale spent fuel pool design's conformance with regulatory criteria for radiological consequences of fuel handling accidents, while Section B addresses the inapplicability of AC power outage time extensions due to NuScale's nonreliance on AC power for safety functions, connecting them through the operational implications of the 24-month refueling cycle on safety system requirements."
+    },
+    {
+      "source": "nuscale_ch01_0054",
+      "target": "nuscale_ch01_0791",
+      "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A provides diagram legends for interpreting piping and instrumentation drawings, which are necessary for understanding the detailed configuration referenced in Section B's regulatory conformance statements about the control room area ventilation system."
+      "description": "Section A describes the verification and confirmation testing programs for unique NuScale design features, which provide supporting data for the safety analyses referenced in Section B, where conformance with regulatory criteria for fuel handling accidents and radiological consequences is evaluated."
     },
     {
-      "source": "nuscale_ch01_0117",
-      "target": "nuscale_ch01_0039",
-      "relation": "IS_PREREQUISITE_OF",
+      "source": "nuscale_ch01_0054",
+      "target": "nuscale_ch01_0287",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the testing programs for unique NuScale design features that support safety analysis, while Section B discusses regulatory conformance regarding AC power source requirements, both relating to how NuScale's design and verification approach addresses or obviates certain regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0055",
+      "target": "nuscale_ch01_0791",
+      "relation": "SATISFIES",
       "confidence": 0.85,
-      "description": "Section A provides diagram legends for interpreting piping and instrumentation drawings, which are necessary for understanding the cross-sectional configuration of the 12-module system described in Section B's general plant description."
+      "description": "Section A describes the testing programs that generate data to support the safety analysis of unique NuScale design features, while Section B outlines the regulatory criteria and conformance for radiological consequences of fuel handling accidents, meaning the results from A are intended to demonstrate compliance with the requirements in B."
     },
     {
-      "source": "nuscale_ch01_0072",
-      "target": "nuscale_ch01_0068",
+      "source": "nuscale_ch01_0055",
+      "target": "nuscale_ch01_0287",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes testing programs that generate data to support the safety analysis, while Section B discusses regulatory conformance regarding power source outage times, both connecting through the verification of design features and operational requirements for safety-related functions."
+    },
+    {
+      "source": "nuscale_ch01_0298",
+      "target": "nuscale_ch01_0043",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses regulatory criteria and operational restrictions for spent fuel storage, while Section B describes the passive decay heat removal system that ensures cooling of the reactor coolant system (RCS), with both sections connected by the need to maintain subcriticality and adequate cooling during extended refueling cycles such as the 24-month interval."
+    },
+    {
+      "source": "nuscale_ch01_0298",
+      "target": "nuscale_ch01_0303",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A outlines the regulatory conformance and operational considerations for spent fuel storage, while Section B specifies the design criteria and exceptions for the spent fuel pool cooling system, with both sections connected by their focus on ensuring the safety and regulatory compliance of the NuScale spent fuel pool design."
+    },
+    {
+      "source": "nuscale_ch01_0298",
+      "target": "nuscale_ch01_0301",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A outlines the regulatory criteria and conformance for new and spent fuel storage, including criticality and power supply considerations, while Section B details the specific design criteria and conformance for the spent fuel pool cooling system, with both sections connected through their focus on the safety and regulatory compliance of the NuScale spent fuel pool design."
+    },
+    {
+      "source": "nuscale_ch01_0387",
+      "target": "nuscale_ch01_0043",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A explains that the NuScale design does not rely on engineered safety feature (ESF) ventilation systems for post-accident mitigation, while Section B describes the passive decay heat removal capabilities of the ultimate heat sink, both addressing different aspects of post-accident safety systems and their roles in maintaining safe conditions in the reactor and spent fuel pool."
+    },
+    {
+      "source": "nuscale_ch01_0387",
+      "target": "nuscale_ch01_0303",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A states that the NuScale design does not rely on engineered safety feature (ESF) ventilation systems for accident mitigation, while Section B specifies that the spent fuel pool cooling system relies on the ultimate heat sink (UHS) for accident conditions, connecting both sections through their discussion of safety system dependencies and design choices for accident scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0387",
+      "target": "nuscale_ch01_0301",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A explains that the NuScale design does not rely on engineered safety feature (ESF) ventilation systems for post-accident fission product removal, while Section B details the spent fuel pool cooling and cleanup system's conformance with regulatory criteria, specifically noting reliance on the ultimate heat sink (UHS) for accident conditions; both sections are connected by their discussion of how safety systems (ventilation and cooling) are designed to meet or partially meet regulatory requirements for accident mitigation."
+    },
+    {
+      "source": "nuscale_ch01_0309",
+      "target": "nuscale_ch01_0043",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A outlines regulatory criteria and conformance for the NuScale spent fuel pool and refueling systems, while Section B describes the ultimate heat sink and decay heat removal systems that support safe RCS operations during refueling cycles, connecting them through the operational and safety requirements imposed by the 24-month refueling interval."
+    },
+    {
+      "source": "nuscale_ch01_0309",
+      "target": "nuscale_ch01_0303",
       "relation": "SPECIFIES",
       "confidence": 0.9,
-      "description": "Section A identifies the overall facility configuration and references figures that represent the facility layout, while Section B provides the detailed drawings (including cross-sectional views) that visually clarify the configuration described in Section A."
+      "description": "Section A references the NuScale spent fuel pool design's conformance with regulatory criteria, while Section B provides specific details about how the spent fuel pool cooling and cleanup system meets or partially meets those same regulatory criteria, thus Section B specifies the technical and compliance details referenced in Section A."
     },
     {
-      "source": "nuscale_ch01_0072",
-      "target": "nuscale_ch01_0372",
+      "source": "nuscale_ch01_0309",
+      "target": "nuscale_ch01_0301",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A identifies and describes the boundaries and interfaces of the certified design, which includes the configuration of the 12 modules, while Section B details regulatory criteria and conformance for systems (such as the Control Room Area Ventilation System) that are part of or interact with those modules, thus Section A provides the structural context for the systems addressed in Section B."
+      "description": "Section A references the NuScale spent fuel pool design's conformance with regulatory criteria, while Section B details the specific criteria and partial conformance of the spent fuel pool cooling system, thus Section A's general compliance statements are specified and elaborated by Section B's technical details."
     },
     {
-      "source": "nuscale_ch01_0072",
-      "target": "nuscale_ch01_0039",
-      "relation": "SPECIFIES",
+      "source": "nuscale_ch01_0799",
+      "target": "nuscale_ch01_0043",
+      "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A outlines the interface requirements and identifies the boundaries and components of the certified design, which includes the configuration of 12 modules referenced in the analysis question, while Section B describes the control and monitoring systems that are implemented for each reactor module within that configuration."
+      "description": "Section A discusses the design features of the spent fuel handling system that ensure safety during cask operations, while Section B describes the decay heat removal capabilities of the reactor cooling system, both of which are connected by their roles in maintaining safety during spent fuel management and RCS operations, especially over extended refueling cycles."
     },
     {
-      "source": "nuscale_ch01_0117",
-      "target": "nuscale_ch01_0072",
+      "source": "nuscale_ch01_0799",
+      "target": "nuscale_ch01_0303",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes how the spent fuel handling crane's single-failure-proof design eliminates the need for cask drop accident analysis, while Section B outlines the spent fuel pool cooling system's conformance to safety criteria, both addressing different safety aspects of the NuScale spent fuel pool as required by regulatory standards."
+    },
+    {
+      "source": "nuscale_ch01_0799",
+      "target": "nuscale_ch01_0301",
+      "relation": "SEMANTIC",
+      "confidence": 0.85,
+      "description": "Section A describes how the NuScale spent fuel pool crane design eliminates the need for accident analysis by conforming to single-failure-proof criteria, while Section B details the spent fuel pool cooling system's conformance to seismic and quality standards, both addressing different regulatory aspects of spent fuel pool safety and compliance."
+    },
+    {
+      "source": "nuscale_ch01_0130",
+      "target": "nuscale_ch01_0043",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the incorporation of operational experience and regulatory guidance into the NuScale design, while Section B describes specific design features (decay heat removal and ultimate heat sink) that reflect such operational experience and regulatory requirements, connecting them through the implementation of evolved safety systems."
+    },
+    {
+      "source": "nuscale_ch01_0130",
+      "target": "nuscale_ch01_0303",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the NuScale design's incorporation of operational experience and regulatory guidance, while Section B details how the spent fuel pool cooling system conforms (with exceptions) to specific regulatory criteria, connecting them through the shared focus on regulatory compliance for the NuScale spent fuel pool design."
+    },
+    {
+      "source": "nuscale_ch01_0130",
+      "target": "nuscale_ch01_0301",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the incorporation of operational experience and regulatory guidance into the NuScale design, while Section B details how the spent fuel pool cooling system conforms (with exceptions) to specific regulatory criteria, connecting them through the shared focus on regulatory compliance and design evolution for safety systems."
+    },
+    {
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch01_0043",
+      "relation": "LEADS_TO",
+      "confidence": 0.85,
+      "description": "Section A describes the movement and handling of the NuScale Power Module (NPM) during refueling operations, which necessitates cooling and decay heat removal provided by the systems described in Section B, indicating that the spent fuel pool and RCS operations during refueling rely on the ultimate heat sink and decay heat removal capabilities."
+    },
+    {
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch01_0303",
       "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A describes the operational process of moving a NuScale Power Module (NPM) for refueling, which necessitates the use of the spent fuel pool, while Section B outlines the regulatory criteria and conformance status for the spent fuel pool cooling and cleanup system that must support safe refueling operations."
+    },
+    {
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch01_0301",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the operational process of moving a NuScale Power Module (NPM) to the refueling pool during refueling, while Section B outlines the regulatory criteria and conformance status for the spent fuel pool cooling system, connecting them through the need for adequate spent fuel pool cooling and shielding during and after refueling operations."
+    },
+    {
+      "source": "nuscale_ch01_0298",
+      "target": "nuscale_ch01_0387",
+      "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A provides diagram legends used to interpret detailed drawings, which are necessary for understanding the cross-sectional configuration referenced in Section B's discussion of certified design interfaces."
+      "description": "Section A discusses the NuScale spent fuel pool's nonreliance on AC power for safety-related functions, while Section B notes that the NuScale design does not rely on engineered safety feature ventilation systems for accident mitigation, both highlighting design choices that affect operational and safety strategies relevant to the implications of a 24-month refueling cycle."
+    },
+    {
+      "source": "nuscale_ch01_0298",
+      "target": "nuscale_ch01_0309",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the NuScale spent fuel storage and its conformance with regulatory criteria, while Section B outlines the criteria for the refueling cavity and spent fuel pool cooling systems, both of which are connected through their focus on ensuring the safety and regulatory compliance of spent fuel handling and storage operations."
+    },
+    {
+      "source": "nuscale_ch01_0298",
+      "target": "nuscale_ch01_0799",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines the regulatory criteria and design features for spent fuel storage, including nonreliance on AC power, while Section B describes how the spent fuel handling system (e.g., single-failure-proof crane) satisfies accident analysis requirements, connecting them through the design's compliance with safety and regulatory expectations for spent fuel pool operations."
+    },
+    {
+      "source": "nuscale_ch01_0298",
+      "target": "nuscale_ch01_0130",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses specific regulatory criteria and operational restrictions for spent fuel storage and power systems, while Section B addresses how operational experience and NRC guidance are incorporated into the NuScale design, connecting them through the application of regulatory requirements and operational lessons to the spent fuel pool and RCS operations."
+    },
+    {
+      "source": "nuscale_ch01_0298",
+      "target": "nuscale_ch01_0036",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A outlines regulatory criteria and safety analysis requirements for spent fuel storage and criticality monitoring, while Section B describes the operational process of refueling, which must conform to the safety and storage requirements specified in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0387",
+      "target": "nuscale_ch01_0309",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A discusses the NuScale design's approach to engineered safety feature ventilation systems and their non-reliance for accident mitigation, while Section B outlines the regulatory criteria and conformance for the spent fuel pool cooling, cleanup, and refueling cavity design, connecting them through the shared context of how the NuScale design meets or does not require certain safety features for spent fuel management."
+    },
+    {
+      "source": "nuscale_ch01_0387",
+      "target": "nuscale_ch01_0799",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A explains that the NuScale design does not rely on ESF ventilation systems for accident mitigation, while Section B states that the single-failure-proof crane design in the spent fuel area eliminates the need for accident analysis of cask drops, both referencing how specific safety features or design choices address or obviate certain regulatory requirements for accident mitigation."
+    },
+    {
+      "source": "nuscale_ch01_0387",
+      "target": "nuscale_ch01_0130",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses how the NuScale design does not rely on engineered safety feature (ESF) ventilation systems for accident mitigation, while Section B establishes that the NuScale design incorporates relevant operational experience and regulatory guidance, connecting them through the design's evolutionary approach and compliance with updated NRC criteria."
+    },
+    {
+      "source": "nuscale_ch01_0387",
+      "target": "nuscale_ch01_0036",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the fire protection and ventilation system requirements for the NuScale design, noting that ESF ventilation is not relied upon for accident mitigation, while Section B outlines the independent refueling operations for NuScale modules, which could be affected by the fire protection and ventilation provisions described in Section A during the 24-month refueling cycle."
+    },
+    {
+      "source": "nuscale_ch01_0309",
+      "target": "nuscale_ch01_0799",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines the regulatory criteria and conformance for the NuScale spent fuel pool and refueling cavity design, while Section B addresses accident analysis requirements for spent fuel cask drops, both referencing the NuScale Final Safety Analysis Report and demonstrating how the design features (e.g., single-failure-proof crane) satisfy regulatory safety requirements for spent fuel handling."
+    },
+    {
+      "source": "nuscale_ch01_0309",
+      "target": "nuscale_ch01_0130",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A outlines the NuScale spent fuel pool and refueling cavity design's conformance with specific regulatory criteria, while Section B discusses how the NuScale design incorporates relevant operational experience and regulatory guidance, connecting them through the requirement that design features (like the spent fuel pool) must address lessons learned and regulatory expectations as described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0309",
+      "target": "nuscale_ch01_0036",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines the regulatory criteria and conformance requirements for the NuScale spent fuel pool and refueling cavity design, while Section B describes the operational procedures for refueling, with both sections connected by the need for the spent fuel pool and refueling systems to support safe and independent refueling cycles, such as the 24-month interval mentioned in the analysis question."
+    },
+    {
+      "source": "nuscale_ch01_0799",
+      "target": "nuscale_ch01_0130",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes how the NuScale spent fuel pool design meets specific regulatory criteria for accident prevention by referencing single-failure-proof requirements, while Section B explains that the design incorporates relevant operational experience and regulatory guidance, thus Section A's conformance is supported by the broader regulatory context provided in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0799",
+      "target": "nuscale_ch01_0036",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the single-failure-proof design of the RBC system, which is used during refueling operations detailed in Section B, specifically for moving the NPM between pools, thereby ensuring safe handling of critical loads during the refueling process."
+    },
+    {
+      "source": "nuscale_ch01_0130",
+      "target": "nuscale_ch01_0036",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A establishes that the NuScale design incorporates relevant operational experience and regulatory guidance, while Section B details the specific refueling operations enabled by this design, connecting the general regulatory conformance in A to the practical implementation in B."
+    },
+    {
+      "source": "nuscale_ch01_0438",
+      "target": "nuscale_ch01_0043",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A outlines regulatory criteria and conformance for systems affecting water quality and radioactivity control, while Section B describes the NuScale plant's ultimate heat sink and decay heat removal systems, with both sections connected through their focus on maintaining reactor coolant system integrity and safe heat removal as required by regulatory standards."
+    },
+    {
+      "source": "nuscale_ch01_0438",
+      "target": "nuscale_ch01_0303",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A references the NuScale FSAR's conformance with regulatory criteria for reactor coolant and condensate systems, while Section B addresses the spent fuel pool cooling system's partial conformance to seismic and quality requirements, both sections connecting through their evaluation of NuScale's compliance with NRC General Design Criteria (GDC) for safety-related systems."
+    },
+    {
+      "source": "nuscale_ch01_0438",
+      "target": "nuscale_ch01_0301",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A references the NuScale FSAR's conformance with regulatory criteria for reactor coolant and related systems, while Section B details the spent fuel pool cooling system's compliance, with both sections connecting through the implications of design and operational requirements (such as the 24-month refueling cycle) on system conformance and safety margins."
     }
   ]
 }

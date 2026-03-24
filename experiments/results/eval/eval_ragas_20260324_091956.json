@@ -1,0 +1,162 @@
+{
+  "timestamp": "2026-03-24T09:19:56.087995",
+  "evaluation_framework": "RAGAs v0.4",
+  "config": {
+    "model": "gpt-4.1",
+    "evaluator_model": "gpt-4.1",
+    "embedding_model": "text-embedding-3-small",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 5,
+    "errors": 0
+  },
+  "metrics_description": {
+    "faithfulness": "Fraction of claims in the answer that are supported by the retrieved context (0-1)",
+    "answer_relevancy": "How relevant the answer is to the question, measured by reverse question generation (0-1)",
+    "context_recall": "Fraction of expected answer sentences supported by retrieved context (0-1)",
+    "factual_correctness": "Factual overlap between agent answer and expected answer (0-1)",
+    "keyword_hit": "Fraction of expected keywords present in the agent answer (0-1)"
+  },
+  "summary": {
+    "faithfulness": 0.8207,
+    "answer_relevancy": 0.7382,
+    "context_recall": 0.4,
+    "factual_correctness": 0.26,
+    "keyword_hit": 0.4498
+  },
+  "by_type": {
+    "text_only": {
+      "count": 5,
+      "faithfulness": 0.8207,
+      "answer_relevancy": 0.7382,
+      "context_recall": 0.4,
+      "factual_correctness": 0.26,
+      "keyword_hit": 0.4498
+    }
+  },
+  "results": [
+    {
+      "id": "Q001",
+      "type": "text_only",
+      "question": "What is the total net electrical output of a full 12-module NuScale plant?",
+      "expected_answer": "The total net electrical output of a full NuScale plant with 12 modules is approximately 570 MWe.",
+      "agent_answer": "Core Conclusion:\nThe total net electrical output of a full 12-module NuScale plant is approximately 570 MWe.\n\nSupporting Evidence:\n- Node [nuscale_ch01_0007] states: \"each module produces about 50 MWe, with a 12-module plant yielding a net output of approximately 570 MWe.\"\n- Node [nuscale_ch01_0004] confirms: \"each module produces about 50 MWe, with a 12-module plant yielding a net output of approximately 570 MWe.\"\n- Node [nuscale_ch01_0006] specifies: \"each [NuScale Power Module] rated at 160 MWt and producing approximately 50 MWe, for a total net output of about 570 MWe when accounting for house loads.\"\n- Node [nuscale_ch01_0008] reiterates: \"each module produces about 50 MWe, with a 12-module plant yielding a net output of approximately 570 MWe.\"\n\nUncertainties:\n- Node [nuscale_ch01_0006] notes that \"the actual electrical output may vary depending on environmental conditions,\" and \"the design includes a 2% margin for measurement uncertainty.\"\n\nSummary:\nThe evidence consistently indicates that the net electrical output for a full 12-module NuScale plant is approximately 570 MWe, though actual output may vary slightly due to environmental factors and measurement uncertainty (2% margin).",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "context_recall": 1.0,
+      "factual_correctness": 0.4,
+      "keyword_hit": 0.75,
+      "kg_nodes": 4,
+      "kg_edges": 0,
+      "hops_used": 1,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 19.8,
+      "eval_sec": 24.2,
+      "total_sec": 44.0,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0007] Schedule | node: [nuscale_ch01_0004] Containment Type | node: [nuscale_ch01_0006] Power Output | node: [nuscale_ch01_0008] Format and Content",
+        "Hop 2: Early stop — evidence sufficient"
+      ]
+    },
+    {
+      "id": "Q002",
+      "type": "text_only",
+      "question": "What is the operating pressure of the NuScale Reactor Coolant System?",
+      "expected_answer": "The NuScale RCS operates at 1850 psia.",
+      "agent_answer": "**Core Conclusion:**  \nThe operating pressure of the NuScale Reactor Coolant System (RCS) is **1,850 psia**.\n\n**Supporting Evidence:**  \n- This value is explicitly stated in [Table 1.2-1: Overall Characteristics of a NuScale Power Plant], which lists “RCS normal operating pressure | 1,850 psia” for the NuScale design (node: [nuscale_ch01_0052]).\n- [Table 1.3-1: NuScale Plant Comparison with Other Facilities] also confirms this value, showing “Operating pressure (psia)” as “1,850” for NuScale, compared to 2,250 psia for a typical PWR (node: [nuscale_ch01_0052]).\n- The knowledge graph links these tables directly to the analysis question via the “SPECIFIES” relationship, confirming that these are the authoritative sources for the RCS operating pressure.\n\n**Uncertainties:**  \n- There are no uncertainties regarding the nominal operating pressure value, as it is consistently reported across multiple official tables in the NuScale FSAR.\n- The value refers to normal operating conditions; transient or accident conditions may result in different pressures, but these are not the subject of the current query.\n\n**References to Knowledge Graph Nodes:**  \n- [nuscale_ch01_0052] (Comparison with Other Facilities; Table 1.3-1, Table 1.2-1)\n- [nuscale_ch01_0135] (Conformance tables referencing design parameters)\n\n**Summary:**  \nThe NuScale Reactor Coolant System operates at a nominal pressure of **1,850 psia** under normal conditions, as specified in the official design tables ([nuscale_ch01_0052], Table 1.2-1 and Table 1.3-1). There is no ambiguity in this value for standard operation.",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8706,
+      "context_recall": 1.0,
+      "factual_correctness": 0.5,
+      "keyword_hit": 0.5,
+      "kg_nodes": 18,
+      "kg_edges": 56,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 142.6,
+      "eval_sec": 31.2,
+      "total_sec": 173.8,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0160] DSRS 3.11, Rev. 0: Environmental Qualifi | node: [nuscale_ch01_0705] DSRS 15.2.1-15.2.5, Rev 0: Loss of Exter | node: [nuscale_ch01_0052] Comparison with Other Facilities | node: [nuscale_ch01_0019] Operating Characteristics | edge: IS_PREREQUISITE_OF | edge: SPECIFIES | edge: SATISFIES | edge: REFERENCES | edge: SUPPORTS | edge: SPECIFIES",
+        "Hop 2: node: [nuscale_ch01_0562] DSRS 12.3-12.4, Rev 0: Radiation Protect | node: [nuscale_ch01_0706] DSRS 15.2.1-15.2.5, Rev 0: Loss of Exter | node: [nuscale_ch01_0135] Table 1.9-3: Conformance with NUREG-0800 | node: [nuscale_ch01_0709] DSRS 15.2.1-15.2.5, Rev 0: Loss of Exter | node: [nuscale_ch01_0020] Safety Considerations | edge: SPECIFIES | edge: REFERENCES | edge: SPECIFIES | edge: REFERENCES | edge: REFERENCES | edge: SPECIFIES | edge: IS_PREREQUISITE_OF | edge: REFERENCES | edge: SPECIFIES | edge: SEMANTIC | edge: SUPPORTS | edge: SPECIFIES | edge: REFERENCES | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS",
+        "Hop 3: node: [nuscale_ch01_0786] DSRS 15.6.6, Rev 0: Inadvertent Operatio | node: [nuscale_ch01_0769] SRP 15.6.1, Rev 2: Inadvertent Opening o | node: [nuscale_ch01_0701] DSRS 15.1.6, Rev 0: Loss of Containment  | node: [nuscale_ch01_0774] SRP 15.6.3, Rev 2: Radiological Conseque | node: [nuscale_ch01_0058] Steam Generator Thermal-Hydraulic Perfor | edge: SPECIFIES | edge: SUPPORTS | edge: REFERENCES | edge: IS_PREREQUISITE_OF | edge: REFERENCES | edge: SPECIFIES | edge: IS_PREREQUISITE_OF | edge: REFERENCES | edge: REFERENCES | edge: REFERENCES | edge: SATISFIES | edge: SUPPORTS | edge: SUPPORTS | edge: REFERENCES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: IS_PREREQUISITE_OF | edge: SUPPORTS | edge: SUPPORTS",
+        "Hop 4: node: [nuscale_ch01_0112] Figure 1.7-3a: Piping and Instrumentatio | node: [nuscale_ch01_0051] Plant Features of Special Interest | node: [nuscale_ch01_0714] DSRS 15.2.1-15.2.5, Rev 0: Loss of Exter | node: [nuscale_ch01_0113] Figure 1.7-3b: Piping and In strumentati | edge: SEMANTIC | edge: IS_PREREQUISITE_OF | edge: IS_PREREQUISITE_OF | edge: REFERENCES | edge: REFERENCES | edge: SUPPORTS | edge: IS_PREREQUISITE_OF | edge: SEMANTIC | edge: SUPPORTS | edge: IS_PREREQUISITE_OF"
+      ]
+    },
+    {
+      "id": "Q003",
+      "type": "text_only",
+      "question": "What type of steam generator does NuScale use?",
+      "expected_answer": "NuScale uses helical coil steam generators integrated within the reactor pressure vessel.",
+      "agent_answer": "**Core Conclusion:**  \nNuScale uses a once-through steam generator (OTSG) design.\n\n**Supporting Evidence:**  \n- Node [nuscale_ch01_0452] explicitly states: “the NuScale plant design does not use the steam generator configurations (top-feed, preheat, or once-through with auxiliary feedwater) addressed by BTP 10-2, Rev 4... Instead, NuScale uses a passive Decay Heat Removal System (DHRS)...” and clarifies that the water hammer guidelines for other types are not applicable, confirming that NuScale’s design is a once-through steam generator (OTSG) but without auxiliary feedwater.\n- Node [nuscale_ch01_0451] further confirms that NuScale does not use preheat steam generator designs, reinforcing that the design is not of the preheat or recirculating type.\n- Node [nuscale_ch01_0059] describes “thermal-hydraulic performance testing of the NuScale steam generator using an electrically-heated facility,” which is consistent with once-through tube arrangements.\n- The cutaway and flow diagrams in Figures 1.2-6 and 1.2-7 visually show a vertical, once-through steam generator integrated within the reactor pressure vessel, with feedwater entering at the bottom and steam exiting at the top, matching the OTSG configuration.\n\n**Uncertainties:**  \n- There is no explicit mention of the exact tube material or detailed internal geometry in the provided nodes, but the type (once-through) is unambiguously supported.\n\n**Summary:**  \nNuScale employs a once-through steam generator (OTSG) design, as directly supported by regulatory and technical documentation ([nuscale_ch01_0452], [nuscale_ch01_0451], [nuscale_ch01_0059]) and illustrated in Figures 1.2-6 and 1.2-7.",
+      "faithfulness": null,
+      "answer_relevancy": 0.9795,
+      "context_recall": 0.0,
+      "factual_correctness": 0.0,
+      "keyword_hit": 0.333,
+      "kg_nodes": 7,
+      "kg_edges": 15,
+      "hops_used": 2,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 48.8,
+      "eval_sec": 50.2,
+      "total_sec": 99.0,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0003] Plant Location | node: [nuscale_ch01_0452] BTP 10-2, Rev 4: Design Guidelines for A | node: [nuscale_ch01_0451] BTP 10-2, Rev 4: Design Guidelines for A | node: [nuscale_ch01_0058] Steam Generator Thermal-Hydraulic Perfor | node: [nuscale_ch01_0059] Steam Generator Thermal-Hydraulic Perfor | node: [nuscale_ch01_0113] Figure 1.7-3b: Piping and In strumentati | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS | edge: SPECIFIES | edge: CONTRADICTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS",
+        "Hop 2: node: [nuscale_ch01_0114] Figure 1.7-3c: Piping and In strumentati | edge: SEMANTIC | edge: SUPPORTS | edge: SPECIFIES",
+        "Hop 3: Early stop — evidence sufficient"
+      ]
+    },
+    {
+      "id": "Q004",
+      "type": "text_only",
+      "question": "What is the fuel type used in the NuScale reactor?",
+      "expected_answer": "NuScale uses UO2 (uranium dioxide) fuel in a standard 17x17 lattice configuration.",
+      "agent_answer": "**Core Conclusion:**  \nThe NuScale reactor uses uranium dioxide (UO₂) fuel with enrichment of less than 4.95%.\n\n**Supporting Evidence:**  \n- Table 1.2-1: Overall Characteristics of a NuScale Power Plant (node: [Table 1.2-1], referenced in the knowledge graph) explicitly states under \"Reactor Core\" that the fuel is \"UO₂ (<4.95% enrichment)\".\n- This is further supported by the context in [nuscale_ch01_0056] and [nuscale_ch01_0055], which discuss testing programs for the unique NuScale fuel design, and by [nuscale_ch01_0094], which references uranium in the context of regulatory conformance, implying uranium-based fuel.\n- The comparison with other facilities in [nuscale_ch01_0052] and the detailed design parameters confirm that NuScale is a pressurized water reactor (PWR) type, which conventionally uses uranium dioxide fuel.\n\n**Uncertainties:**  \n- The exact enrichment value is specified as \"<4.95%\", but the precise operational enrichment may vary within this limit.\n- No mention is made of alternative or mixed-oxide fuels; all evidence points to standard low-enriched uranium dioxide.\n\n**Summary Statement:**  \nThe NuScale reactor uses low-enriched uranium dioxide (UO₂) fuel, with enrichment below 4.95%, as specified in Table 1.2-1 (node: [Table 1.2-1]) and supported by multiple nodes referencing uranium-based fuel and PWR design characteristics. No evidence of alternative fuel types is present in the provided documentation.",
+      "faithfulness": 0.7273,
+      "answer_relevancy": 0.8407,
+      "context_recall": 0.0,
+      "factual_correctness": 0.4,
+      "keyword_hit": 0.333,
+      "kg_nodes": 14,
+      "kg_edges": 27,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 99.0,
+      "eval_sec": 29.8,
+      "total_sec": 128.8,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0056] Critical Heat Flux Testing - Preliminary | node: [nuscale_ch01_0094] 8.22 Bioassay at Uranium Mills | node: [nuscale_ch01_0055] NuScale Testing Programs | node: [nuscale_ch01_0645] DSRS 15.0, Rev 0: Introduction - Transie | node: [nuscale_ch01_0052] Comparison with Other Facilities | node: [nuscale_ch01_0102] 8.30 Health Physics Surveys in Uranium R | edge: SUPPORTS | edge: SUPPORTS | edge: SEMANTIC | edge: SPECIFIES | edge: SPECIFIES",
+        "Hop 2: node: [nuscale_ch01_0733] SRP 15.4.1, Rev 3: Uncontrolled Control  | edge: SUPPORTS | edge: SUPPORTS",
+        "Hop 3: node: [nuscale_ch01_0081] Table 1.9-2: Conformance with Regulatory | node: [nuscale_ch01_0123] Table 1.9-2: Conformance with Regulatory | node: [nuscale_ch01_0019] Operating Characteristics | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS",
+        "Hop 4: node: [nuscale_ch01_0743] SRP 15.4.4-15.4.5, Rev 2: Startup of an  | node: [nuscale_ch01_0018] Principal Design Criteria | node: [nuscale_ch01_0740] SRP 15.4.3, Rev 3: Control Rod Misoperat | node: [nuscale_ch01_0737] SRP 15.4.2, Rev 3: Uncontrolled Control  | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: REFERENCES | edge: SPECIFIES | edge: REFERENCES"
+      ]
+    },
+    {
+      "id": "Q005",
+      "type": "text_only",
+      "question": "What is the design life of a NuScale Power Module?",
+      "expected_answer": "The NuScale Power Module has a 60-year design life.",
+      "agent_answer": "**Core Conclusion:**  \nThe design life of a NuScale Power Module is not explicitly stated in the provided knowledge graph or referenced tables and figures.\n\n**Supporting Evidence:**  \n- The nodes reviewed ([nuscale_ch01_0015] General Plant Description, [nuscale_ch01_0049] Central Utility Building, [nuscale_ch01_0050] Diesel Generator Buildings, [nuscale_ch01_0051] Plant Features of Special Interest, [nuscale_ch01_0123] Table 1.9-2: Conformance with Regulatory Guides, and others) provide detailed descriptions of plant layout, safety features, and regulatory conformance, but do not specify a numerical design life for the NuScale Power Module.\n- Table 1.2-2 (“Design Features of a NuScale Power Module”) lists technical and safety features but does not mention design life.\n- Figures (e.g., Figure 1.2-6: Cutaway View of NuScale Power Module) illustrate module structure and flow paths, but do not address operational lifespan.\n\n**Uncertainties:**  \n- The absence of a direct statement about design life in the available sections means the answer cannot be confirmed from the current evidence.  \n- It is possible that the design life is specified elsewhere in the FSAR or supporting documentation not included in the current knowledge graph.\n\n**Summary:**  \nBased on the evidence from the provided nodes and tables, the design life of a NuScale Power Module is not specified in the current context. Further review of additional documentation would be required to provide a definitive answer.",
+      "faithfulness": 0.5556,
+      "answer_relevancy": 0.0,
+      "context_recall": 0.0,
+      "factual_correctness": 0.0,
+      "keyword_hit": 0.333,
+      "kg_nodes": 10,
+      "kg_edges": 10,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 73.4,
+      "eval_sec": 32.7,
+      "total_sec": 106.2,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0049] Central Utility Building | node: [nuscale_ch01_0050] Diesel Generator Buildings",
+        "Hop 2: node: [nuscale_ch01_0048] Security Buildings | node: [nuscale_ch01_0051] Plant Features of Special Interest | edge: SUPPORTS",
+        "Hop 3: node: [nuscale_ch01_0013] Proprietary Information | node: [nuscale_ch01_0012] Page Numbering | edge: SPECIFIES",
+        "Hop 4: node: [nuscale_ch01_0015] General Plant Description | node: [nuscale_ch01_0068] Electrical and Instrumentation and Contr | node: [nuscale_ch01_0455] DSRS 11.1, Rev 0: Coolant Source TermsII | node: [nuscale_ch01_0123] Table 1.9-2: Conformance with Regulatory | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: CONTRADICTS | edge: CONTRADICTS | edge: SPECIFIES | edge: SPECIFIES | edge: SUPPORTS"
+      ]
+    }
+  ]
+}

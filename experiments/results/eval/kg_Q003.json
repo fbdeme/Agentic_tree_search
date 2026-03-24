@@ -1,577 +1,377 @@
 {
-  "question": "In the NuScale design, is AC or DC power required for safety shutdown and cooling?",
+  "question": "What type of steam generator does NuScale use?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0251": {
-      "node_id": "nuscale_ch01_0251",
-      "title": "DSRS 8.3.1, Rev 0: AC Power Systems (Onsite)II.4 Compliance with GDC 17",
-      "summary": "This section summarizes NuScale’s compliance with various General Design Criteria (GDC) for onsite AC power systems. While the design conforms to some GDCs (such as GDC 2, 4, and 50), it departs from others (including GDC 17, 18, 33, and 34-44), for which NuScale supports exemptions or uses alternative principal design criteria. The document references specific sections for detailed explanations of these compliance positions.",
+    "nuscale_ch01_0059": {
+      "node_id": "nuscale_ch01_0059",
+      "title": "Steam Generator Thermal-Hydraulic Performance Testing - Fluid-Heated Facility",
+      "summary": "The electrically-heated steam generator tests at the SIET facility used instrumented tubes with controlled boundary conditions to simulate different heat flux zones for subcooled, boiling, and superheated regions, enabling precise measurement and analysis. The data collected supported evaluation of pressure fluctuations, informed the design of flow restrictors, validated thermal-hydraulic models, and defined steam outlet conditions, with oversight from the NRC to ensure compliance with safety procedures.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "238",
+      "page_range": "86",
       "hop": 1
     },
-    "nuscale_ch01_0252": {
-      "node_id": "nuscale_ch01_0252",
-      "title": "DSRS 8.3.1, Rev 0: AC Power Systems (Onsite)II.5 Compliance with GDC 18",
-      "summary": "This section summarizes NuScale’s compliance with various General Design Criteria (GDC) for onsite AC power systems. While the design conforms to some GDCs (such as GDC 2, 4, and 50), it departs from others (including GDC 17, 18, 33, and 34-44), for which NuScale supports exemptions or uses alternative principal design criteria. The document references specific sections for detailed explanations of these compliance statements.",
+    "nuscale_ch01_0451": {
+      "node_id": "nuscale_ch01_0451",
+      "title": "BTP 10-2, Rev 4: Design Guidelines for Avoiding Water Hammers in Steam GeneratorsPSGD B.1 thru B.4Preheat Steam Generator Designs",
+      "summary": "This section explains that the NuScale plant design does not use top-feed, preheat, or once-through steam generator designs, and therefore the regulatory guidelines for avoiding water hammers in such systems are not applicable. Instead, NuScale uses a passive natural circulation system (DHRS) that fulfills a similar safety function without the need for auxiliary feedwater pumps or external supply headers, inherently precluding water hammer concerns addressed by the cited guidelines.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "238",
+      "page_range": "265",
       "hop": 1
     },
-    "nuscale_ch01_0267": {
-      "node_id": "nuscale_ch01_0267",
-      "title": "DSRS 8.3.2, Rev 0: DC Power Systems (Onsite)II.1 Conformance with RG 1.32",
-      "summary": "This section summarizes NuScale’s conformance with various regulatory criteria for onsite DC power systems. It notes full compliance with some General Design Criteria (GDC), while for others (GDC 17, 18, 33, 34, 35, 38, 41, and 44), NuScale supports exemptions or alternative criteria. Specifically, conformance with Regulatory Guide (RG) 1.32 is only partial, applying to certain aspects of the Emergency DC Supply System (EDSS) design.",
+    "nuscale_ch01_0058": {
+      "node_id": "nuscale_ch01_0058",
+      "title": "Steam Generator Thermal-Hydraulic Performance Testing - Electrically Heated Facility",
+      "summary": "This section describes the critical heat flux (CHF) testing conducted for the NuScale NuFuel HTP2™ fuel design, which uses AREVA HMP™/HTP™ spacer grid technology. The testing aimed to gather CHF data, validate and develop CHF correlations, and measure thermal-hydraulic characteristics using an electrically heated 5x5 simulated fuel bundle at the AREVA Karlstein facility. The results support the safety analysis and design validation for NuScale’s reactor application.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "239",
+      "page_range": "85",
       "hop": 1
     },
-    "nuscale_ch01_0022": {
-      "node_id": "nuscale_ch01_0022",
-      "title": "Engineered Safety Feature Materials",
-      "summary": "The section describes how maintaining a vacuum in the containment vessel (CNV) of the NuScale reactor provides multiple safety benefits, such as reducing corrosion, aiding leak detection, and minimizing combustible gases. The design relies on passive safety systems and a smaller fuel inventory, which together lower the risk of core damage and eliminate the need for external power during accidents, resulting in improved safety compared to traditional nuclear plants.",
+    "nuscale_ch01_0113": {
+      "node_id": "nuscale_ch01_0113",
+      "title": "Figure 1.7-3b: Piping and In strumentation Diagram Legends",
+      "summary": "This section provides the legend for piping and instrumentation diagrams (P&IDs) used in the NuScale Final Safety Analysis Report, detailing standard symbols and abbreviations for valve positions, actuator types, and control elements. It explains the normal operating status of valves, exceptions, and the meaning of various actuator and valve status codes to ensure consistent interpretation of P&ID drawings.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "32",
+      "page_range": "103",
       "hop": 1
     },
-    "nuscale_ch01_0324": {
-      "node_id": "nuscale_ch01_0324",
-      "title": "SRP 9.2.2, Rev 4: Reactor Auxiliary Cooling Water SystemII.4 Cooling Water System",
-      "summary": "This section states that the NuScale Reactor Auxiliary Cooling Water System does not serve a safety-related cooling or accident mitigation function, so many regulatory criteria are not applicable. For applicable criteria, such as protection against natural phenomena and environmental/dynamic effects, the system partially conforms, with relevant design features and additional information referenced in other report sections.",
+    "nuscale_ch01_0452": {
+      "node_id": "nuscale_ch01_0452",
+      "title": "BTP 10-2, Rev 4: Design Guidelines for Avoiding Water Hammers in Steam GeneratorsOTSGD B.1 Once-Through Steam Generator Designs - Auxiliary Feedwater Supply",
+      "summary": "This section explains that the NuScale plant design does not use the steam generator configurations (top-feed, preheat, or once-through with auxiliary feedwater) addressed by BTP 10-2, Rev 4, and therefore the associated water hammer guidelines are not applicable. Instead, NuScale uses a passive Decay Heat Removal System (DHRS) that fulfills a similar safety function without the need for auxiliary feedwater pumps or external supply headers, inherently avoiding the water hammer issues targeted by these guidelines.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "246",
+      "page_range": "265",
       "hop": 1
     },
-    "nuscale_ch01_0269": {
-      "node_id": "nuscale_ch01_0269",
-      "title": "DSRS 8.3.2, Rev 0: DC Power Systems (Onsite)II.3 Conformance with RG 1.81",
-      "summary": "This section summarizes the NuScale Final Safety Analysis Report’s conformance with various regulatory criteria for onsite DC power systems. It details compliance or departures from General Design Criteria (GDC) and Regulatory Guides, noting that while NuScale generally conforms to several GDCs, it seeks exemptions from others (such as GDC 17, 18, and 33) and partially conforms to RG 1.32 for certain design aspects. The section also clarifies that some requirements are addressed through alternative principal design criteria.",
+    "nuscale_ch01_0003": {
+      "node_id": "nuscale_ch01_0003",
+      "title": "Plant Location",
+      "summary": "The section introduces the NuScale Final Safety Analysis Report (FSAR), which is required for standard design certification under 10 CFR 52. It provides an overview of the NuScale Power Module (NPM), a modular, scalable nuclear steam supply system, and highlights key design features such as passive safety systems, compact containment, and advanced digital controls. The FSAR covers both single-module and multi-module (up to 12) plant configurations.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "239",
+      "page_range": "8",
       "hop": 1
     },
-    "nuscale_ch01_0079": {
-      "node_id": "nuscale_ch01_0079",
-      "title": "Advanced and Evolutionary Light-Water Reactor Design Issues",
-      "summary": "This section describes how the NuScale Final Safety Analysis Report ensures compliance with regulatory criteria by incorporating relevant operational experience and NRC guidance, including reviews of NRC Bulletins, Generic Letters, and 10 CFR 21 notifications. It also addresses advanced and evolutionary light-water reactor design issues, referencing NRC policy and technical guidance to ensure all applicable licensing and safety requirements are met.",
+    "nuscale_ch01_0773": {
+      "node_id": "nuscale_ch01_0773",
+      "title": "SRP 15.6.3, Rev 2: Radiological Consequences of Steam Generator Tube Failure (PWR)II (No Number) First sentence of the last paragraph of Section II on page 15.6.32 - Methodology and Assumptions for Calculating Radiological Consequences",
+      "summary": "The section discusses the methodology and assumptions for calculating radiological consequences of a steam generator tube failure in a pressurized water reactor (PWR). It states that while the guidance for calculating these consequences is applicable to the NuScale Design Certification Application (DCA), the specific radiological acceptance criteria are superseded by those in SRP Section 15.0.3, as referenced in the review interfaces. Thus, only the calculation methodology is followed, not the acceptance criteria from this section.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "131",
-      "hop": 1
-    },
-    "nuscale_ch01_0325": {
-      "node_id": "nuscale_ch01_0325",
-      "title": "SRP 9.2.2, Rev 4: Reactor Auxiliary Cooling Water SystemII.5 Cooling Water System Inspection",
-      "summary": "The section states that the NuScale site cooling water system does not serve a safety-related or accident mitigation function, so many regulatory criteria, including cooling water system inspection, are not applicable. For criteria that are partially applicable, such as protection against natural phenomena and environmental effects, the system conforms to requirements for non-safety-related systems and provides additional supporting information in referenced sections.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "246",
-      "hop": 1
-    },
-    "nuscale_ch01_0020": {
-      "node_id": "nuscale_ch01_0020",
-      "title": "Safety Considerations",
-      "summary": "The NuScale design enhances safety by maintaining a vacuum in the containment vessel (CNV), which reduces corrosion, aids in leak detection, and limits combustible gases. Its passive safety systems and integral design eliminate the need for external power and large coolant loops, significantly lowering the risk of core damage and improving safety compared to traditional nuclear plants.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "32",
-      "hop": 1
-    },
-    "nuscale_ch01_0387": {
-      "node_id": "nuscale_ch01_0387",
-      "title": "SRP 9.5.1.1, Rev 0: Fire Protection ProgramII.4 Fire Protection for Permanently Shutdown and Decommissioning Reactor Plants",
-      "summary": "This section explains that the fire protection requirements for permanently shutdown and decommissioning reactor plants (SRP 9.5.1.1, II.4) are not applicable to the NuScale design, as these criteria only apply to reactor licensees who have submitted certifications for license termination under 10 CFR 50.82. The NuScale Final Safety Analysis Report clarifies that such requirements do not pertain to their design or current licensing stage.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "255",
-      "hop": 1
-    },
-    "nuscale_ch01_0278": {
-      "node_id": "nuscale_ch01_0278",
-      "title": "SRP Appendix 8-A, Rev1: General Agenda, Station Site VisitsAll Various",
-      "summary": "This section summarizes NuScale’s conformance with various regulatory criteria related to DC power systems and station blackout requirements. It notes that NuScale partially conforms to several regulatory guides, with some requirements not applicable due to the design’s passive safety features and the responsibilities assigned to the COL applicant. Additionally, SRP Appendix 8-A is identified as governing NRC staff site visits during licensing reviews, and is not directly applicable to the design certification.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "240",
+      "page_range": "306",
       "hop": 2
     },
-    "nuscale_ch01_0275": {
-      "node_id": "nuscale_ch01_0275",
-      "title": "DSRS 8.4, Rev 0: Station BlackoutII.1 Compliance with 10 CFR 50.63 and the guidelines of RG 1.155",
-      "summary": "This section summarizes NuScale’s compliance with regulatory requirements for station blackout (SBO) and related DC power systems. It notes that NuScale partially conforms to 10 CFR 50.63 and RG 1.155, as well as other related guidance, mainly due to the passive safety design that allows safety functions to be maintained without AC power for 72 hours after an SBO event. Some requirements, such as alternate AC power sources, are deemed not applicable to the NuScale design, and certain responsibilities are assigned to the COL applicant.",
+    "nuscale_ch01_0060": {
+      "node_id": "nuscale_ch01_0060",
+      "title": "NuScale Integral System Test Program",
+      "summary": "The NuScale Integral System Test Program was established to collect thermal-hydraulic data for system characterization and to validate safety analysis codes using a scaled model of the NuScale Power Module (NPM) design. The NIST-1 facility replicates key reactor systems and supports the development and validation of proprietary safety codes, ensuring accurate modeling of the NPM’s unique features. Testing at NIST-1 has provided essential data for NuScale’s safety analysis and design certification efforts.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "240",
+      "page_range": "87",
       "hop": 2
     },
-    "nuscale_ch01_0129": {
-      "node_id": "nuscale_ch01_0129",
-      "title": "1.9.4 Operational Experience (Generic Communications)",
-      "summary": "NuScale reviewed the Standard Review Plan (SRP) and related guidance to ensure their design meets NRC regulatory criteria, documenting any gaps and their resolutions. The company also assessed conformance with NRC requirements related to Three Mile Island and unresolved generic safety issues, incorporating relevant information and resolutions into their Final Safety Analysis Report (FSAR) as required by regulations.",
+    "nuscale_ch01_0114": {
+      "node_id": "nuscale_ch01_0114",
+      "title": "Figure 1.7-3c: Piping and In strumentation Diagram Legends",
+      "summary": "This section provides the legend for symbols used in NuScale's Piping and Instrumentation Diagrams (P&IDs), detailing the graphical representations for various equipment such as tanks, vessels, pumps, compressors, heat exchangers, filters, and HVAC components. It serves as a reference to interpret the different types of process and mechanical equipment shown in the facility's engineering drawings.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "130",
+      "page_range": "104",
       "hop": 2
     },
-    "nuscale_ch01_0412": {
-      "node_id": "nuscale_ch01_0412",
-      "title": "SRP 9.5.6, Rev 3: Emergency Diesel Engine Starting SystemAll (II.1 thru II.4)Compliance with GDC 2, GDC 4, GDC 5, and GDC 17",
-      "summary": "The NuScale plant design does not include or require safety-related emergency diesel generators or their associated systems, such as starting, fuel oil, cooling, lubrication, or air intake/exhaust systems. As a result, compliance with the referenced General Design Criteria (GDC) and Standard Review Plan (SRP) sections is not applicable, since no AC or DC power is relied upon for the performance of NuScale plant safety functions.",
+    "nuscale_ch01_0772": {
+      "node_id": "nuscale_ch01_0772",
+      "title": "SRP 15.6.3, Rev 2: Radiological Consequences of Steam Generator Tube Failure (PWR)II (No Number) First paragraph and Items (1) and (2) of Section II on page 15.6.32 - Acceptability of Site and Dose Mitigating ESF Systems",
+      "summary": "The guidance in SRP 15.6.3, Rev 2 regarding the calculation of radiological consequences from a postulated steam generator tube failure is applicable to the NuScale Design Certification Application (DCA). However, the specific radiological acceptance criteria referenced in this section are superseded by those in SRP Section 15.0.3, meaning only the calculation methodology is followed, not the acceptance limits.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "260",
+      "page_range": "306",
+      "hop": 2
+    },
+    "nuscale_ch01_0052": {
+      "node_id": "nuscale_ch01_0052",
+      "title": "Comparison with Other Facilities",
+      "summary": "This section compares the major design features and parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It highlights differences in size, output, and system components, showing that NuScale uses significantly smaller modules, fewer fuel assemblies, and simplified systems, such as having no external coolant loops or reactor coolant pumps. The comparison is intended to illustrate the unique aspects and safety features of the NuScale design relative to conventional PWRs.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "79",
       "hop": 3
     },
-    "nuscale_ch01_0413": {
-      "node_id": "nuscale_ch01_0413",
-      "title": "SRP 9.5.7, Rev 3: Emergency Diesel Engine Lubrication SystemAll (II.1 thru II.4) Compliance with GDC 2, GDC 4, GDC 5, and GDC 17",
-      "summary": "The NuScale plant design does not require or include safety-related emergency diesel generators, and therefore the associated systems (fuel oil storage, cooling water, starting, lubrication, and air intake/exhaust) and their compliance with GDC 2, 4, 5, and 17 are not applicable. The plant does not rely on AC or DC power for the performance of its safety functions.",
+    "nuscale_ch01_0453": {
+      "node_id": "nuscale_ch01_0453",
+      "title": "BTP 10-2, Rev 4: Design Guidelines for Avoiding Water Hammers in Steam GeneratorsOTSGD B.2 Once-Through Steam Generator Designs - Tests and Test Procedures",
+      "summary": "This section explains that the NuScale plant design does not use the steam generator configurations (top-feed, preheat, or once-through with auxiliary feedwater) addressed by BTP 10-2, Rev 4 guidelines for avoiding water hammers. Instead, NuScale uses a passive natural circulation system (DHRS) that inherently avoids the water hammer concerns targeted by these guidelines, making the specific regulatory criteria not applicable.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "260",
-      "hop": 3
+      "page_range": "265",
+      "hop": 4
+    },
+    "nuscale_ch01_0000": {
+      "node_id": "nuscale_ch01_0000",
+      "title": "Preface",
+      "summary": "The Preface outlines the copyright and usage restrictions for the NuScale Standard Plant Design Certification Application, specifying that only the U.S. Nuclear Regulatory Commission (NRC) is authorized to use, copy, or disclose the document as needed for regulatory purposes. It also notes that proprietary information is protected, and any copies made must include the appropriate copyright and proprietary notices.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "1",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0251",
-      "target": "nuscale_ch01_0252",
+      "source": "nuscale_ch01_0059",
+      "target": "nuscale_ch01_0451",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the thermal-hydraulic testing of steam generator tubes using electrically-heated methods, while Section B references regulatory guidelines for preheat steam generator designs and clarifies that NuScale's design fulfills similar functions to traditional systems but with different implementation, connecting them through the type and function of the steam generator used in NuScale's design."
+    },
+    {
+      "source": "nuscale_ch01_0059",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the thermal-hydraulic performance testing of the steam generator using electrically-heated tubes, while Section B details critical heat flux testing for the NuScale fuel design using a similar electrically-heated facility, indicating both sections discuss different aspects of testing using electrically-heated setups relevant to NuScale's steam generator and fuel design."
+    },
+    {
+      "source": "nuscale_ch01_0059",
+      "target": "nuscale_ch01_0452",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B references 'Once-Through Steam Generator Designs' as relevant to NuScale, while Section A describes testing of steam generator tubes consistent with once-through designs, thus Section A provides supporting technical detail for the design type referenced in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0059",
+      "target": "nuscale_ch01_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides specific technical details about steam generator testing methods, while Section B gives a general overview of the NuScale plant and its documentation, with Section A specifying details for the broader context described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0451",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses design guidelines and regulatory conformance for steam generators, while Section B details thermal-hydraulic performance testing of the NuScale steam generator, with both sections connected by their focus on the technical and regulatory aspects of NuScale's steam generator design."
+    },
+    {
+      "source": "nuscale_ch01_0451",
+      "target": "nuscale_ch01_0113",
       "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A and Section B both reference compliance with regulatory criteria (GDC 17 and GDC 18, respectively) for AC power systems in the NuScale design, and each points to Section 8.4 for details on passive design and station blackout, indicating they are structurally connected by cross-referencing the same supporting information."
-    },
-    {
-      "source": "nuscale_ch01_0251",
-      "target": "nuscale_ch01_0267",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A discusses the regulatory compliance and applicability of onsite AC power systems for safety functions, while Section B addresses the regulatory compliance and applicability of onsite DC power systems, together indicating that both AC and DC power systems are evaluated for their roles in safety shutdown and cooling in the NuScale design."
-    },
-    {
-      "source": "nuscale_ch01_0251",
-      "target": "nuscale_ch01_0022",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A discusses regulatory compliance for onsite and offsite AC power systems and references passive design features for station blackout, while Section B describes the containment vessel's vacuum environment and its passive safety benefits, indicating that the NuScale design relies on passive (non-AC/DC powered) features for safety shutdown and cooling."
-    },
-    {
-      "source": "nuscale_ch01_0251",
-      "target": "nuscale_ch01_0324",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A discusses regulatory compliance for onsite and offsite AC power systems, while Section B states that the site cooling water system does not serve a safety-related cooling or accident mitigation function, indicating that safety shutdown and cooling do not rely on AC or DC powered cooling water systems."
-    },
-    {
-      "source": "nuscale_ch01_0251",
-      "target": "nuscale_ch01_0269",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A discusses the regulatory compliance of the NuScale design with respect to AC power systems and references where passive design features and station blackout (SBO) are addressed, while Section B addresses the compliance of DC power systems, indicating that both AC and DC power systems are evaluated for regulatory conformance but do not specify that either is required for safety shutdown and cooling, implying reliance on passive safety features."
-    },
-    {
-      "source": "nuscale_ch01_0251",
-      "target": "nuscale_ch01_0079",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A outlines the NuScale design's compliance with regulatory requirements for AC power systems and references where passive design and station blackout (i.e., loss of AC power) are addressed, while Section B establishes that the NuScale design incorporates operational experience and NRC guidance relevant to power system requirements, thus supporting the regulatory context for Section A's compliance claims."
-    },
-    {
-      "source": "nuscale_ch01_0251",
-      "target": "nuscale_ch01_0325",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A discusses regulatory compliance for onsite AC power systems and references passive design features for station blackout, while Section B states that the site cooling water system does not serve a safety-related function, indicating that safety shutdown and cooling do not rely on AC or DC powered cooling water systems."
-    },
-    {
-      "source": "nuscale_ch01_0251",
-      "target": "nuscale_ch01_0020",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses regulatory compliance for onsite AC power systems and references passive design features for station blackout, while Section B describes how the NuScale containment vessel's vacuum environment eliminates the need for certain active cooling functions, implying reduced reliance on AC or DC power for safety shutdown and cooling."
-    },
-    {
-      "source": "nuscale_ch01_0251",
-      "target": "nuscale_ch01_0387",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A discusses compliance with AC power system requirements for safety functions, while Section B clarifies that the NuScale design does not rely on engineered safety feature (ESF) ventilation systems for accident mitigation, indicating that safety shutdown and cooling do not depend on such systems or their power sources."
-    },
-    {
-      "source": "nuscale_ch01_0252",
-      "target": "nuscale_ch01_0267",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.95,
-      "description": "Section A discusses the regulatory compliance and applicability of onsite AC power systems for the NuScale design, while Section B addresses the regulatory compliance and applicability of onsite DC power systems, with both sections providing information necessary to determine whether AC or DC power is required for safety shutdown and cooling in the NuScale design."
-    },
-    {
-      "source": "nuscale_ch01_0252",
-      "target": "nuscale_ch01_0022",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses regulatory compliance for AC power systems and station blackout scenarios, while Section B describes passive safety features (such as maintaining a vacuum in the CNV) that reduce reliance on active power sources for safety functions, thus supporting the claim that AC or DC power may not be required for safety shutdown and cooling in the NuScale design."
-    },
-    {
-      "source": "nuscale_ch01_0252",
-      "target": "nuscale_ch01_0324",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses regulatory compliance for onsite and offsite AC power systems in the NuScale design, while Section B states that the site cooling water system does not serve a safety-related function, indicating that safety shutdown and cooling do not depend on AC or DC powered cooling water systems."
-    },
-    {
-      "source": "nuscale_ch01_0252",
-      "target": "nuscale_ch01_0269",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A discusses the regulatory compliance and applicability of AC power systems for safety functions, while Section B addresses the regulatory compliance and applicability of DC power systems, together providing information on whether either AC or DC power is required for safety shutdown and cooling in the NuScale design."
-    },
-    {
-      "source": "nuscale_ch01_0252",
-      "target": "nuscale_ch01_0079",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A specifies regulatory compliance requirements for AC power systems in the NuScale design, while Section B provides context that the NuScale design incorporates operational experience and NRC guidance relevant to power system requirements, thereby supporting the regulatory basis for Section A."
-    },
-    {
-      "source": "nuscale_ch01_0252",
-      "target": "nuscale_ch01_0325",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A discusses the regulatory compliance of NuScale's onsite AC power systems for safety functions, while Section B clarifies that the site cooling water system is not safety-related and does not require power for accident mitigation, indicating that neither AC nor DC power is required for safety shutdown and cooling in this context."
-    },
-    {
-      "source": "nuscale_ch01_0252",
-      "target": "nuscale_ch01_0020",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A discusses regulatory compliance for AC power systems and references passive design features, while Section B describes how the NuScale design's containment vacuum eliminates the need for certain active systems, implying reduced reliance on AC or DC power for safety functions."
-    },
-    {
-      "source": "nuscale_ch01_0252",
-      "target": "nuscale_ch01_0387",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A discusses compliance with AC power system requirements for safety functions, while Section B clarifies that the NuScale design does not rely on engineered safety feature (ESF) ventilation systems (which could require power) for accident mitigation, connecting them through the information that safety shutdown and cooling do not depend on powered ESF ventilation."
-    },
-    {
-      "source": "nuscale_ch01_0267",
-      "target": "nuscale_ch01_0022",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A discusses the regulatory compliance and requirements for AC and DC power systems in the NuScale design, while Section B describes the containment vessel's vacuum environment, which reduces the need for active cooling and thus supports the claim that AC power is not required for safety shutdown and cooling."
-    },
-    {
-      "source": "nuscale_ch01_0267",
-      "target": "nuscale_ch01_0324",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A states that no onsite AC power system equipment is required for safety shutdown and cooling, while Section B indicates that the site cooling water system does not serve a safety-related cooling or accident mitigation function, together implying that neither AC power nor the conventional cooling water system is required for safety functions in the NuScale design."
-    },
-    {
-      "source": "nuscale_ch01_0267",
-      "target": "nuscale_ch01_0269",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A and Section B both state that no onsite AC power system equipment is required for compliance, implying that DC power (as discussed in both sections) is the required source for safety shutdown and cooling in the NuScale design."
-    },
-    {
-      "source": "nuscale_ch01_0267",
-      "target": "nuscale_ch01_0079",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A specifies the regulatory compliance status of AC and DC power systems in the NuScale design, while Section B provides the context that NuScale's design incorporates relevant operational experience and regulatory guidance, connecting the specific power system requirements in A to the broader regulatory framework in B."
-    },
-    {
-      "source": "nuscale_ch01_0267",
-      "target": "nuscale_ch01_0325",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A states that no onsite AC power system equipment is required for safety functions, while Section B clarifies that the site cooling water system does not serve a safety-related function, together indicating that neither AC power nor the associated cooling water systems are required for safety shutdown and cooling in the NuScale design."
-    },
-    {
-      "source": "nuscale_ch01_0267",
-      "target": "nuscale_ch01_0020",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A specifies that no onsite AC power system equipment is required for safety shutdown and cooling, while Section B describes design features (such as maintaining a vacuum in the CNV) that reduce reliance on active systems like AC power, thus supporting the claim that AC power is not required."
-    },
-    {
-      "source": "nuscale_ch01_0267",
-      "target": "nuscale_ch01_0387",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses the regulatory compliance and requirements for AC and DC power systems in the NuScale design, while Section B clarifies that the NuScale design does not rely on engineered safety feature (ESF) ventilation systems for accident mitigation, implying that safety shutdown and cooling functions are not dependent on AC-powered ESF ventilation; thus, Section B supports Section A's implication that DC power is sufficient for safety shutdown and cooling."
-    },
-    {
-      "source": "nuscale_ch01_0022",
-      "target": "nuscale_ch01_0324",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section B states that the site cooling water system does not serve a safety-related cooling or accident mitigation function, which implies that neither AC nor DC power is required for these functions, while Section A describes design features that reduce reliance on active systems for safety shutdown and cooling."
-    },
-    {
-      "source": "nuscale_ch01_0022",
-      "target": "nuscale_ch01_0079",
-      "relation": "SUPPORTS",
       "confidence": 0.7,
-      "description": "Section B states that the NuScale design conforms to NRC regulatory criteria and incorporates operational experience, while Section A describes a specific design feature (the CNV vacuum) that contributes to safety, implying that the design choices in A are part of the overall regulatory conformance discussed in B."
+      "description": "Section A discusses regulatory guidelines and design conformance for steam generators, while Section B provides detailed P&ID legends used in NuScale's safety analysis report, with both sections referencing documentation related to NuScale's steam generator systems."
     },
     {
-      "source": "nuscale_ch01_0022",
-      "target": "nuscale_ch01_0325",
+      "source": "nuscale_ch01_0451",
+      "target": "nuscale_ch01_0452",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses preheat steam generator designs while Section B discusses once-through steam generator designs, both in the context of NuScale's conformance with regulatory criteria, indicating that these are alternative steam generator types considered for NuScale."
+    },
+    {
+      "source": "nuscale_ch01_0451",
+      "target": "nuscale_ch01_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses specific design guidelines and regulatory conformance related to steam generators in the NuScale FSAR, while Section B introduces the FSAR document that contains general descriptions of the plant, including the steam generator type, thus Section B provides the broader context for the specific details in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0058",
+      "target": "nuscale_ch01_0452",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section B states that the site cooling water system does not serve a safety-related cooling or accident mitigation function, which implies that neither AC nor DC power for these systems is required for safety shutdown and cooling, while Section A describes containment features but does not specify power requirements, thus Section B provides information that supports answering the analysis question."
+      "description": "Section B references the use of once-through steam generator designs in the context of regulatory guidelines, which implies that NuScale uses a once-through steam generator, thus providing information that answers the analysis question posed in Section A."
     },
     {
-      "source": "nuscale_ch01_0022",
-      "target": "nuscale_ch01_0387",
+      "source": "nuscale_ch01_0058",
+      "target": "nuscale_ch01_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides specific technical testing details related to the NuScale fuel and steam generator performance, while Section B offers a general overview of the NuScale plant design, with Section A specifying details for the broader descriptions in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0113",
+      "target": "nuscale_ch01_0452",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B discusses design guidelines for once-through steam generator designs and explicitly references the NuScale design in the context of regulatory conformance, while Section A provides P&ID legends but does not specify the steam generator type; thus, Section B provides the relevant information that Section A lacks."
+    },
+    {
+      "source": "nuscale_ch01_0452",
+      "target": "nuscale_ch01_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses specific design guidelines and regulatory conformance related to steam generator types and auxiliary feedwater systems, while Section B provides the general introduction and scope of the NuScale Final Safety Analysis Report, which includes descriptions of plant systems such as the steam generator; thus, Section A specifies details for the general descriptions found in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0773",
+      "target": "nuscale_ch01_0059",
       "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section B states that the NuScale design does not rely on engineered safety feature (ESF) ventilation systems for accident mitigation, which implies that the safety shutdown and cooling functions discussed in Section A are achieved without reliance on such systems, indirectly addressing the power requirements for these functions."
+      "confidence": 0.85,
+      "description": "Section B describes the thermal-hydraulic performance testing methodology for NuScale's steam generator tubes, providing technical details that support the information in Section A regarding NuScale's conformance with regulatory criteria for steam generator tube failure analysis."
     },
     {
-      "source": "nuscale_ch01_0324",
-      "target": "nuscale_ch01_0269",
+      "source": "nuscale_ch01_0773",
+      "target": "nuscale_ch01_0451",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section B discusses design guidelines for preheat steam generator designs and references the NuScale Final Safety Analysis Report, which is also cited in Section A as part of its conformance with regulatory criteria, thus both sections are connected through their reliance on the NuScale FSAR to address regulatory requirements for steam generator design and performance."
+    },
+    {
+      "source": "nuscale_ch01_0773",
+      "target": "nuscale_ch01_0058",
       "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A states that the site cooling water system does not serve a safety-related function, while Section B indicates that no onsite AC power system equipment is required for safety functions, connecting both by showing that neither AC power nor the cooling water system is required for safety shutdown and cooling in the NuScale design."
+      "confidence": 0.85,
+      "description": "Section B provides technical testing data and design details (e.g., CHF testing for the steam generator and fuel design) that support the regulatory conformance discussions in Section A regarding NuScale's steam generator performance and safety analysis."
     },
     {
-      "source": "nuscale_ch01_0324",
-      "target": "nuscale_ch01_0079",
+      "source": "nuscale_ch01_0060",
+      "target": "nuscale_ch01_0059",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the overall NuScale integral system test program, which includes system-level thermal-hydraulic testing, while Section B details a specific steam generator thermal-hydraulic performance test that provides data relevant to the steam generator's design and operation as referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0060",
+      "target": "nuscale_ch01_0451",
       "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A states that the site cooling water system does not serve a safety-related cooling or accident mitigation function, while Section B explains that the NuScale design incorporates operational experience and NRC guidance for relevant issues, implying that safety functions are addressed differently than in traditional designs."
+      "description": "Section A describes the testing and validation of the NuScale reactor's thermal-hydraulic systems, while Section B discusses regulatory guidelines for steam generator designs and clarifies that certain guidelines for large PWRs do not apply to NuScale due to its different design (specifically, the use of DHRS instead of AFW), thus Section B provides regulatory context for interpreting the technical information in Section A."
     },
     {
-      "source": "nuscale_ch01_0324",
-      "target": "nuscale_ch01_0325",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A and Section B both state that the site cooling water system does not serve a safety-related cooling or accident mitigation function, indicating that neither AC nor DC power is required for these safety functions in the NuScale design."
-    },
-    {
-      "source": "nuscale_ch01_0324",
-      "target": "nuscale_ch01_0020",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A states that the site cooling water system does not serve a safety-related cooling or accident mitigation function, while Section B describes design features (such as maintaining a vacuum in the CNV) that reduce reliance on active cooling systems, together supporting the claim that neither AC nor DC power is required for safety shutdown and cooling."
-    },
-    {
-      "source": "nuscale_ch01_0324",
-      "target": "nuscale_ch01_0387",
+      "source": "nuscale_ch01_0060",
+      "target": "nuscale_ch01_0058",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A states that the site cooling water system does not serve a safety-related function, while Section B clarifies that the NuScale design does not rely on engineered safety feature (ESF) ventilation systems for accident mitigation, both indicating that certain traditional safety-related systems (including those potentially requiring AC or DC power) are not necessary for NuScale's safety shutdown and cooling."
+      "description": "Section A describes the integral system test program for the overall NuScale reactor system, while Section B details specific thermal-hydraulic performance testing of the steam generator using an electrically heated facility, with both sections connected by their focus on generating thermal-hydraulic data to validate and inform the NuScale reactor's design and safety analysis."
     },
     {
-      "source": "nuscale_ch01_0269",
-      "target": "nuscale_ch01_0079",
+      "source": "nuscale_ch01_0114",
+      "target": "nuscale_ch01_0451",
+      "relation": "CONTRADICTS",
+      "confidence": 0.7,
+      "description": "Section A provides diagram legends for various components, including vessels and pumps, but does not specify the type of steam generator, while Section B discusses regulatory guidelines for steam generator design and clarifies that certain guidelines for large PWRs do not apply to NuScale, implying a difference in steam generator design."
+    },
+    {
+      "source": "nuscale_ch01_0772",
+      "target": "nuscale_ch01_0059",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A specifies the NuScale design's compliance with regulatory requirements for AC and DC power systems, while Section B provides the context that the NuScale design incorporates operational experience and NRC guidance relevant to such systems, connecting them through the regulatory and operational basis for power system requirements."
+      "description": "Section B provides technical details about the steam generator tube testing method (electrically-heated, fluid-heated facility) that supports the regulatory conformance discussion in Section A regarding NuScale's steam generator design."
     },
     {
-      "source": "nuscale_ch01_0269",
-      "target": "nuscale_ch01_0325",
+      "source": "nuscale_ch01_0772",
+      "target": "nuscale_ch01_0451",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section B discusses design guidelines for preheat steam generator designs and references the NuScale Final Safety Analysis Report, which is also cited in Section A as part of its conformance with regulatory criteria, thus both sections are connected through their reliance on the NuScale FSAR to address regulatory requirements for steam generator design and safety analysis."
+    },
+    {
+      "source": "nuscale_ch01_0772",
+      "target": "nuscale_ch01_0058",
       "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A states that no onsite AC power system equipment is required for safety shutdown and cooling, while Section B indicates that the site cooling water system does not serve a safety-related cooling or accident mitigation function, together implying that neither AC power nor the conventional cooling water system is required for safety functions in the NuScale design."
+      "confidence": 0.8,
+      "description": "Section B provides technical testing data on the thermal-hydraulic performance of the NuScale steam generator, which supports the regulatory conformance discussions in Section A regarding steam generator tube failure analysis."
     },
     {
-      "source": "nuscale_ch01_0269",
-      "target": "nuscale_ch01_0020",
+      "source": "nuscale_ch01_0773",
+      "target": "nuscale_ch01_0060",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A discusses the regulatory conformance and requirements for AC and DC power systems in the NuScale design, while Section B describes the plant's safety features, such as maintaining a vacuum in the containment vessel, which reduces reliance on active power systems for safety functions; together, these sections indicate that the NuScale design minimizes or eliminates the need for AC power for safety shutdown and cooling, relying instead on passive features and possibly DC power."
+      "description": "Section B describes the NuScale Integral System Test Program, which provides technical data and validation for the NuScale Power Module (NPM) design referenced in Section A's regulatory conformance discussion, thereby supporting the regulatory analysis in Section A."
     },
     {
-      "source": "nuscale_ch01_0269",
-      "target": "nuscale_ch01_0387",
+      "source": "nuscale_ch01_0773",
+      "target": "nuscale_ch01_0114",
       "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A specifies that no onsite AC power system equipment is required for safety shutdown and cooling in the NuScale design, while Section B confirms that engineered safety feature (ESF) ventilation systems, which might otherwise require AC power, are not relied upon for accident mitigation, indicating that safety functions do not depend on AC power."
+      "confidence": 0.6,
+      "description": "Section A discusses regulatory conformance and methodology for analyzing steam generator tube failures in NuScale's safety analysis report, while Section B provides diagram legends for equipment types (including vessels) used in NuScale's system drawings, thus Section B could provide visual or technical context for the steam generator type referenced in Section A."
     },
     {
-      "source": "nuscale_ch01_0079",
-      "target": "nuscale_ch01_0325",
-      "relation": "SPECIFIES",
+      "source": "nuscale_ch01_0773",
+      "target": "nuscale_ch01_0772",
+      "relation": "REFERENCES",
       "confidence": 0.85,
-      "description": "Section A discusses the NuScale design's conformance with regulatory criteria and operational experience, while Section B specifies that the site cooling water system does not serve a safety-related cooling or accident mitigation function, indicating that the design does not rely on these systems (and thus their associated AC or DC power) for safety shutdown and cooling."
+      "description": "Section A references the methodology and assumptions for calculating radiological consequences of steam generator tube failure, while Section B provides the regulatory criteria and acceptability of site and dose mitigating ESF systems for such failures, thus Section A's analysis is based on the requirements and criteria specified in Section B."
     },
     {
-      "source": "nuscale_ch01_0079",
-      "target": "nuscale_ch01_0020",
+      "source": "nuscale_ch01_0060",
+      "target": "nuscale_ch01_0772",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the NuScale integral system test program, which includes testing of the reactor coolant system and steam generator, while Section B discusses regulatory criteria for evaluating radiological consequences of steam generator tube failure, connecting them through the need for test data (from A) to demonstrate conformance with regulatory requirements (in B)."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0059",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides a general comparison of NuScale's design features, including steam generator parameters, while Section B details the specific thermal-hydraulic performance testing conducted on the steam generator tubes, thus Section B provides supporting technical evidence for the design features summarized in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0451",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides a comparison of NuScale's steam generator design features and parameters with those of a typical PWR, while Section B discusses regulatory guidelines for steam generator designs and clarifies that certain guidelines for large PWRs do not apply to NuScale due to differences in system design."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides a general comparison of NuScale's design features, including steam generator type, while Section B details thermal-hydraulic testing related to the steam generator's fuel design, thus Section B provides supporting technical evidence for the design features summarized in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0453",
+      "target": "nuscale_ch01_0059",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes thermal-hydraulic performance testing conducted on isolated tubes representative of a once-through steam generator, which is referenced in Section A as the design type used by NuScale."
+    },
+    {
+      "source": "nuscale_ch01_0453",
+      "target": "nuscale_ch01_0451",
+      "relation": "CONTRADICTS",
+      "confidence": 0.85,
+      "description": "Section A discusses once-through steam generator designs and their associated tests, while Section B discusses preheat steam generator designs, both in the context of NuScale's conformance with regulatory criteria, thus contrasting two different steam generator types relevant to the analysis question."
+    },
+    {
+      "source": "nuscale_ch01_0453",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A references design guidelines and regulatory conformance for once-through steam generator designs, while Section B describes thermal-hydraulic performance testing conducted on the NuScale steam generator, both connecting through the focus on the once-through steam generator type used by NuScale."
+    },
+    {
+      "source": "nuscale_ch01_0000",
+      "target": "nuscale_ch01_0059",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B provides technical details about the steam generator tube testing methodology, which supports the general plant description referenced in Section A, thereby offering evidence relevant to identifying the type of steam generator used by NuScale."
+    },
+    {
+      "source": "nuscale_ch01_0000",
+      "target": "nuscale_ch01_0451",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section B discusses design guidelines for steam generators and references the NuScale Final Safety Analysis Report, while Section A is the preface to the NuScale Design Certification Application, indicating that Section B's technical content is part of the detailed documentation introduced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0000",
+      "target": "nuscale_ch01_0058",
       "relation": "SPECIFIES",
       "confidence": 0.8,
-      "description": "Section A discusses the incorporation of operational experience and regulatory guidance into the NuScale design, while Section B describes specific design features (the CNV vacuum) that result from or align with such regulatory considerations, connecting general regulatory conformance to a concrete plant feature."
+      "description": "Section B discusses thermal-hydraulic performance testing and critical heat flux data for the NuScale steam generator and fuel design, providing technical details that are referenced or elaborated upon in the general plant description found in Section A."
     },
     {
-      "source": "nuscale_ch01_0079",
-      "target": "nuscale_ch01_0387",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A discusses the incorporation of operational experience and regulatory guidance into the NuScale design, while Section B clarifies that the NuScale design does not rely on engineered safety feature (ESF) ventilation systems for accident mitigation, indicating that certain traditional safety system requirements (such as those potentially requiring AC or DC power) are not applicable."
-    },
-    {
-      "source": "nuscale_ch01_0325",
-      "target": "nuscale_ch01_0020",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A states that the site cooling water system does not serve a safety-related cooling or accident mitigation function, while Section B describes the containment vessel's vacuum design features that reduce the need for active cooling systems, together indicating that neither AC nor DC power is required for safety shutdown and cooling in the NuScale design."
-    },
-    {
-      "source": "nuscale_ch01_0325",
-      "target": "nuscale_ch01_0387",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A states that the site cooling water system does not serve a safety-related function, while Section B clarifies that the NuScale design does not rely on engineered safety feature ventilation systems for accident mitigation, indicating both sections describe systems that do not require safety-related power for shutdown and cooling."
-    },
-    {
-      "source": "nuscale_ch01_0020",
-      "target": "nuscale_ch01_0387",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the containment vessel's vacuum environment and its safety benefits, while Section B clarifies that the NuScale design does not rely on engineered safety feature (ESF) ventilation systems (which could require AC or DC power) for accident mitigation, indicating that safety shutdown and cooling do not depend on such powered systems."
-    },
-    {
-      "source": "nuscale_ch01_0278",
-      "target": "nuscale_ch01_0251",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A discusses the NuScale design's partial conformance with regulatory criteria for DC power systems, while Section B addresses compliance with AC power system requirements, together providing information on whether safety shutdown and cooling rely on AC or DC power."
-    },
-    {
-      "source": "nuscale_ch01_0278",
-      "target": "nuscale_ch01_0252",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A discusses the NuScale design's partial conformance with regulatory criteria for DC power systems, while Section B addresses compliance with regulatory requirements for AC power systems, together providing information on whether AC or DC power is required for safety shutdown and cooling in the NuScale design."
-    },
-    {
-      "source": "nuscale_ch01_0278",
-      "target": "nuscale_ch01_0267",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A discusses partial conformance of the NuScale design with regulatory guidance for DC power systems, while Section B clarifies that no onsite AC power system is required for safety shutdown and cooling, directly addressing the analysis question by indicating DC (not AC) power is relied upon."
-    },
-    {
-      "source": "nuscale_ch01_0275",
-      "target": "nuscale_ch01_0251",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section B references Section A by directing the reader to Section 8.4 (Station Blackout) for details on how the NuScale design conforms with 10 CFR 50.63 requirements for passive safety shutdown and cooling, thus connecting AC power system requirements to the station blackout and DC power system analysis."
-    },
-    {
-      "source": "nuscale_ch01_0275",
-      "target": "nuscale_ch01_0252",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section B references Section A by directing readers to Section 8.4 (Station Blackout) for details on compliance with 10 CFR 50.63, thereby connecting the discussion of AC power systems to the requirements and analysis found in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0275",
-      "target": "nuscale_ch01_0267",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A references the partial and full conformance of the NuScale design with regulatory guides for DC power systems, while Section B specifies that no onsite AC power system equipment is required for safety shutdown and cooling, directly connecting the regulatory requirements for DC and AC power to the analysis question."
-    },
-    {
-      "source": "nuscale_ch01_0129",
-      "target": "nuscale_ch01_0251",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes NuScale's review and conformance process with regulatory criteria, while Section B lists specific regulatory requirements and compliance statements for AC power systems, showing that Section A's general process encompasses the specific requirements detailed in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0129",
-      "target": "nuscale_ch01_0252",
+      "source": "nuscale_ch01_0453",
+      "target": "nuscale_ch01_0000",
       "relation": "REFERENCES",
       "confidence": 0.85,
-      "description": "Section A describes NuScale's review process for regulatory criteria, including those in Section B, which lists specific compliance requirements for AC power systems and passive design under relevant regulations."
-    },
-    {
-      "source": "nuscale_ch01_0129",
-      "target": "nuscale_ch01_0267",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes NuScale's review of regulatory criteria and gap analysis for conformance, while Section B provides specific compliance statements regarding AC and DC power system requirements, connecting them by showing how the design's regulatory review (A) is reflected in the specific power system compliance outcomes (B)."
-    },
-    {
-      "source": "nuscale_ch01_0278",
-      "target": "nuscale_ch01_0275",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A and Section B both reference the NuScale Final Safety Analysis Report's conformance with regulatory criteria for DC power systems, specifically citing partial conformance with RG 1.153 as it applies to the EDSS design, thus connecting their discussion of DC power requirements for safety functions."
-    },
-    {
-      "source": "nuscale_ch01_0278",
-      "target": "nuscale_ch01_0129",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A details NuScale's partial conformance with regulatory criteria for DC power systems, while Section B describes a gap analysis reviewing SRP acceptance criteria, including those relevant to DC power requirements, thus connecting them through the evaluation of regulatory compliance for power systems."
-    },
-    {
-      "source": "nuscale_ch01_0275",
-      "target": "nuscale_ch01_0129",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A details NuScale's partial and full conformance with regulatory guidance for DC power systems relevant to safety functions, while Section B describes a gap analysis process that evaluates how well the NuScale design, including power requirements, aligns with Standard Review Plan acceptance criteria—thus, Section B provides supporting evidence for the compliance claims made in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0412",
-      "target": "nuscale_ch01_0251",
-      "relation": "CONTRADICTS",
-      "confidence": 0.85,
-      "description": "Section A states that the NuScale design does not rely on AC or DC power for safety functions, while Section B discusses regulatory compliance for AC power systems, indicating that NuScale's passive safety design eliminates the need for such power sources for shutdown and cooling."
-    },
-    {
-      "source": "nuscale_ch01_0412",
-      "target": "nuscale_ch01_0252",
-      "relation": "CONTRADICTS",
-      "confidence": 0.85,
-      "description": "Section A states that the NuScale plant design does not rely on AC or DC power for safety functions, while Section B discusses compliance with AC power system requirements, indicating that NuScale's passive safety design obviates the need for such power sources for shutdown and cooling."
-    },
-    {
-      "source": "nuscale_ch01_0412",
-      "target": "nuscale_ch01_0267",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A states that the NuScale plant design does not rely on AC or DC power for safety functions, while Section B confirms that no onsite AC or DC power systems are required to meet regulatory criteria, both supporting the conclusion that neither AC nor DC power is required for safety shutdown and cooling."
-    },
-    {
-      "source": "nuscale_ch01_0413",
-      "target": "nuscale_ch01_0251",
-      "relation": "CONTRADICTS",
-      "confidence": 0.85,
-      "description": "Section A states that the NuScale plant design does not rely on AC or DC power for safety functions, while Section B discusses regulatory compliance for AC power systems, indicating that the plant's passive safety design eliminates the need for such power sources for shutdown and cooling."
-    },
-    {
-      "source": "nuscale_ch01_0413",
-      "target": "nuscale_ch01_0252",
-      "relation": "CONTRADICTS",
-      "confidence": 0.85,
-      "description": "Section A states that the NuScale plant design does not rely on AC or DC power for safety functions, while Section B discusses regulatory compliance for AC power systems, indicating that the NuScale design's passive safety approach means these AC power requirements are not applicable."
-    },
-    {
-      "source": "nuscale_ch01_0413",
-      "target": "nuscale_ch01_0267",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A states that the NuScale plant design does not rely on AC or DC power for safety functions, while Section B confirms that no onsite AC or DC power systems are required to conform to certain regulatory standards, both indicating that neither AC nor DC power is required for safety shutdown and cooling."
-    },
-    {
-      "source": "nuscale_ch01_0412",
-      "target": "nuscale_ch01_0413",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Both Section A and Section B state that the NuScale plant design does not require or include safety-related emergency diesel generators and does not rely on AC or DC power for safety functions, thus providing consistent evidence regarding the power requirements for safety shutdown and cooling."
+      "description": "Section A references the NuScale Final Safety Analysis Report and its conformance with regulatory criteria, while Section B is the preface to the NuScale Standard Plant Design Certification Application, which includes the referenced safety analysis report, thus Section A cites Section B as a source document."
     }
   ]
 }

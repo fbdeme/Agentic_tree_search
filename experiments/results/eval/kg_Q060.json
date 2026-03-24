@@ -1,331 +1,892 @@
 {
-  "question": "Describe the multi-module NuScale power plant layout.",
+  "question": "What does Ch.01 state about the plant control room, and how does Ch.05 describe the interface with RCS instrumentation?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0015": {
-      "node_id": "nuscale_ch01_0015",
-      "title": "General Plant Description",
-      "summary": "This section provides a summary of the NuScale plant’s overall design, including key systems such as safety features, power conversion, fuel handling, cooling water, and waste management. It explains the distinction between certified and site-specific design elements, clarifies the use of conceptual design information (CDI), and notes that each COL applicant must reference the NuScale FSAR while providing site-specific details as required by regulations.",
+    "nuscale_ch05_0012": {
+      "node_id": "nuscale_ch05_0012",
+      "title": "Reactor Coolant Pressure Boundary Leakage Detection",
+      "summary": "The NuScale reactor coolant system (RCS) does not use traditional components with designed leakage rates, making it impractical to distinguish between identified and unidentified leakage inside containment using current instrumentation. Any leakage into containment, regardless of source, quickly vaporizes and disperses, so all leakage is treated as unidentified until specifically located and quantified by other means; leakage detection relies on RCS inventory balance and comparison with containment evacuation system (CES) flow rates. The installed leakage detection systems are reliable, redundant, and sensitive enough to support leak-before-break analyses.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "26",
+      "source_doc": "nuscale_ch05",
+      "page_range": "41",
       "hop": 1
     },
-    "nuscale_ch01_0068": {
-      "node_id": "nuscale_ch01_0068",
-      "title": "Electrical and Instrumentation and Control Drawings",
-      "summary": "This section explains that the NuScale Final Safety Analysis Report includes simplified electrical, instrumentation, and control (I&C) drawings to visually clarify design information alongside the written text. It lists the types of diagrams provided, references tables and figures for diagram legends, and notes that applicants referencing the NuScale design must supply site-specific diagrams and legends as needed.",
+    "nuscale_ch01_0510": {
+      "node_id": "nuscale_ch01_0510",
+      "title": "DSRS 11.5, Rev 0: Process and Effluent Radiological Monitoring Instrumentation and Sampling SystemsII.7 Descriptions of design features and instrumentation used in primary and secondary coolant system leakage detection",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for radiological monitoring and sampling systems, specifically addressing the design features and instrumentation used for detecting leakage in primary and secondary coolant systems. It notes that NuScale’s design generally conforms to the relevant DSRS and NUREG-0800 requirements, with some site-specific operational program responsibilities deferred to the COL applicant. Partial conformance is noted where certain regulatory aspects, such as testing and operational programs, are not addressed at this stage.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "95",
+      "page_range": "272",
       "hop": 1
     },
-    "nuscale_ch01_0004": {
-      "node_id": "nuscale_ch01_0004",
-      "title": "Containment Type",
-      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and is maintained at a vacuum during normal operations, eliminating the need for insulation. The NuScale reactor is a passive, integral small modular pressurized water reactor (SMR) with natural circulation and no external piping for steam generators or pressurizer, and each module produces about 50 MWe, with a 12-module plant yielding approximately 570 MWe net output.",
+    "nuscale_ch01_0370": {
+      "node_id": "nuscale_ch01_0370",
+      "title": "SRP 9.4.1, Rev 3: Control Room Area Ventilation SystemII.2 Environmental and Dynamic Effects",
+      "summary": "The section summarizes NuScale’s conformance with SRP 9.4.1, Rev 3 requirements for the Control Room Area Ventilation System, specifically regarding environmental and dynamic effects. It states that NuScale meets the regulatory criteria with no exceptions or additional comments for this aspect.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "9",
+      "page_range": "252",
       "hop": 1
     },
-    "nuscale_ch01_0067": {
-      "node_id": "nuscale_ch01_0067",
-      "title": "Drawings and Other Detailed Information",
-      "summary": "This section describes the inclusion of simplified instrumentation, control, electrical, and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information alongside written descriptions. It lists the types of diagrams provided, references legends for interpreting symbols, and notes that applicants referencing the NuScale design must supply additional site-specific diagrams and legends as needed.",
+    "nuscale_ch01_0372": {
+      "node_id": "nuscale_ch01_0372",
+      "title": "SRP 9.4.1, Rev 3: Control Room Area Ventilation SystemII.4 Control Room",
+      "summary": "This section summarizes NuScale’s conformance with SRP 9.4.1, Rev 3 requirements for the Control Room Area Ventilation System. It confirms compliance with criteria for protection against natural phenomena, environmental effects, and sharing of systems, noting that up to 12 modules share the same control room. For radioactive material release control, the NuScale design uses compressed air tanks for clean air instead of emergency filtration systems during accident conditions.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "95",
+      "page_range": "252",
       "hop": 1
     },
-    "nuscale_ch01_0003": {
-      "node_id": "nuscale_ch01_0003",
-      "title": "Plant Location",
-      "summary": "The section introduces the NuScale Final Safety Analysis Report (FSAR), which is required for standard design certification under 10 CFR 52. It describes the modular NuScale Power Module (NPM), its key safety features, and the scalable plant design that allows up to twelve modules to operate within a single facility, highlighting unique safety and operational characteristics.",
+    "nuscale_ch01_0511": {
+      "node_id": "nuscale_ch01_0511",
+      "title": "DSRS 11.6, Rev 0: Guidance on Instrumentation and Control Design Features for Process and Effluent Radiological Monitoring, and Area Radiation and Airborne Radioactivity MonitoringII.1 Installation of instrumentation or sampling equipment",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for the installation of instrumentation and sampling equipment related to radiological monitoring. It indicates that NuScale’s design generally meets the requirements of DSRS 11.6, including monitoring of release points and radiation exposure, with some site-specific operational program responsibilities deferred to the COL applicant. Partial conformance is noted for compliance with certain post-TMI action plan items, as some aspects are outside NuScale’s scope.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "8",
+      "page_range": "272",
       "hop": 1
+    },
+    "nuscale_ch05_0024": {
+      "node_id": "nuscale_ch05_0024",
+      "title": "Pressurizer",
+      "summary": "The pressurizer, integrated into the upper region of the reactor vessel and separated by a baffle plate, regulates Reactor Coolant System (RCS) pressure by maintaining a saturated steam-water interface during various operating conditions. It uses heaters and spray flow to control pressure, and its design ensures that normal transients do not trigger unnecessary reactor trips or safety system actuations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "124",
+      "hop": 1
+    },
+    "nuscale_ch01_0072": {
+      "node_id": "nuscale_ch01_0072",
+      "title": "Combined License Information Items",
+      "summary": "This section explains the interface requirements between the NuScale Power Plant certified design and the site-specific design provided in the Combined License (COL) application. It distinguishes between conceptual design information (CDI) for non-certified portions and COL information items, which are site-specific responsibilities of the COL applicant. The section also notes that COL applicants must address all COL information items and provide a list of any departures from the certified design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "108",
+      "hop": 2
+    },
+    "nuscale_ch01_0504": {
+      "node_id": "nuscale_ch01_0504",
+      "title": "DSRS 11.5, Rev 0: Process and Effluent Radiological Monitoring Instrumentation and Sampling SystemsII.1 Installation of Instrumentation and Monitoring Equipment and Sampling and Analyses of Normal and Potential Effluent Pathways",
+      "summary": "This section reviews NuScale’s conformance with regulatory criteria for process and effluent radiological monitoring instrumentation and sampling systems. It notes that while the design generally meets requirements, there are partial conformances due to exceptions in certain regulatory guidance areas, and some responsibilities—particularly administrative and procedural controls—are deferred to the COL (Combined License) applicant.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "271",
+      "hop": 2
+    },
+    "nuscale_ch01_0853": {
+      "node_id": "nuscale_ch01_0853",
+      "title": "SRP Appendix 18-A, Rev 0: Crediting Manual Operator Actions in Diversity and Defense-in-Depth (D3) AnalysesC.2.B Review Criteria for Phase 2 (Preliminary Validation)",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria regarding the crediting of manual operator actions in Diversity and Defense-in-Depth (D3) analyses, as outlined in SRP Appendix 18-A, Rev 0. It confirms that NuScale’s approach aligns with the updated review criteria for all phases of D3 analysis, superseding previous guidance, while noting that certain aspects of probabilistic risk assessment remain the responsibility of the COL applicant.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "322",
+      "hop": 2
+    },
+    "nuscale_ch01_0066": {
+      "node_id": "nuscale_ch01_0066",
+      "title": "Material Referenced",
+      "summary": "This section lists the topical and technical reports referenced in the NuScale Power Plant Design Certification Application, as detailed in Tables 1.6-1 and 1.6-2. These reports cover various aspects such as quality assurance, risk significance, safety classification, accident analysis, and methodology qualifications, and are incorporated by reference into the Final Safety Analysis Report (FSAR).",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "91",
+      "hop": 2
+    },
+    "nuscale_ch01_0505": {
+      "node_id": "nuscale_ch01_0505",
+      "title": "DSRS 11.5, Rev 0: Process and Effluent Radiological Monitoring Instrumentation and Sampling SystemsII.2 Instrumentation and Monitoring Equipment and Sampling and Analysis of Radioactive Waste Process Systems (Including Appendix 11.5A)",
+      "summary": "This section reviews NuScale’s conformance with regulatory criteria for process and effluent radiological monitoring instrumentation and sampling systems. It notes that while the design partially meets the acceptance criteria for instrumentation, monitoring, and sampling of radioactive waste process systems, some aspects of the regulatory guidance are not fully addressed and administrative/procedural controls are the responsibility of the COL applicant. Specific regulatory guides and areas of partial conformance are referenced throughout.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "271",
+      "hop": 2
+    },
+    "nuscale_ch01_0852": {
+      "node_id": "nuscale_ch01_0852",
+      "title": "SRP Appendix 18-A, Rev 0: Crediting Manual Operator Actions in Diversity and Defense-in-Depth (D3) AnalysesC.1.B Review Criteria for Phase 1 (Analysis)",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for crediting manual operator actions in Diversity and Defense-in-Depth (D3) analyses, as outlined in SRP Appendix 18-A, Rev 0. It confirms that NuScale meets the review criteria for all phases of D3 analysis, superseding previous guidance, while noting that certain aspects of probabilistic risk assessment (PRA) remain the responsibility of the COL applicant.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "322",
+      "hop": 2
+    },
+    "nuscale_ch01_0747": {
+      "node_id": "nuscale_ch01_0747",
+      "title": "SRP 15.4.6, Rev 2: Inadvertent Decrease in Boron Concentration in the Reactor Coolant System (PWR)II.1 Reactor Coolant and Main Steam System Pressures",
+      "summary": "This section summarizes NuScale’s conformance with SRP 15.4.6, Rev 2, regarding inadvertent decreases in boron concentration in the reactor coolant system for PWRs. It states that NuScale’s design meets the relevant regulatory criteria for reactor coolant and main steam system pressures, fuel cladding integrity, incident frequency, and analysis methods, while noting that operator action is not required for mitigation and some guidance is not applicable due to design differences (e.g., absence of reactor coolant pumps).",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "302",
+      "hop": 3
+    },
+    "nuscale_ch01_0110": {
+      "node_id": "nuscale_ch01_0110",
+      "title": "Figure 1.7-1b: Electrical Symbols",
+      "summary": "This section provides a legend of electrical symbols and abbreviations used in NuScale’s Final Safety Analysis Report drawings, including representations for switches, relays, transformers, and logic gates. It also explains the meaning of indicator light colors, logic gate functions, and common abbreviations relevant to electrical and control systems.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "100",
+      "hop": 3
+    },
+    "nuscale_ch01_0115": {
+      "node_id": "nuscale_ch01_0115",
+      "title": "Figure 1.7-3d: Piping and Instrumentation Diagram Legends",
+      "summary": "This section provides the legend for interpreting Piping and Instrumentation Diagrams (P&IDs) in the NuScale Final Safety Analysis Report. It details the identification letters used for instrumentation, explaining the meaning of each letter and their combinations to represent measured variables, functions, and device types. The table helps users understand how to read and interpret instrument codes and symbols on the diagrams.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "105",
+      "hop": 3
+    },
+    "nuscale_ch01_0708": {
+      "node_id": "nuscale_ch01_0708",
+      "title": "DSRS 15.2.1-15.2.5, Rev 0: Loss of External Load; Turbine Trip; Loss of Condenser Vacuum; Closure of Main Steam Isolation Valve; and Steam Pressure Regulator Failure (Closed)II.2.D Instrument Setpoints - Impact on Plant Response",
+      "summary": "The section confirms that the NuScale design meets regulatory criteria for events such as loss of external load, turbine trip, loss of condenser vacuum, main steam isolation valve closure, and steam pressure regulator failure (closed), even though NuScale does not have a steam pressure regulator. For instrument setpoints and their impact on plant response, as well as other safety-related criteria, the design is shown to conform with no exceptions or additional comments.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "295",
+      "hop": 3
+    },
+    "nuscale_ch01_0748": {
+      "node_id": "nuscale_ch01_0748",
+      "title": "SRP 15.4.6, Rev 2: Inadvertent Decrease in Boron Concentration in the Reactor Coolant System (PWR)II.2 Fuel Cladding Integrity",
+      "summary": "The section summarizes NuScale’s conformance with regulatory criteria regarding inadvertent decreases in boron concentration in the reactor coolant system, specifically addressing fuel cladding integrity. It states that NuScale meets the relevant requirements, noting that Critical Heat Flux (CHF) is the appropriate term for their design, and that operator action is not required to mitigate such events. The analysis methods and assumptions also conform to the applicable standards.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "302",
+      "hop": 3
     },
     "nuscale_ch01_0038": {
       "node_id": "nuscale_ch01_0038",
       "title": "Main Control Room",
-      "summary": "The Main Control Room (MCR) is located below grade in the Control Room Building (CRB) and includes various support spaces such as offices, conference rooms, and equipment rooms. It houses control panels for all installed NuScale Power Modules (NPMs), allowing operators to monitor and control multiple reactors using digital systems that ensure independence between safety and nonsafety functions. The MCR also provides comprehensive plant information and automated system monitoring for effective operation and diagnostics.",
+      "summary": "The Main Control Room (MCR) is located below grade in the Control Room Building (CRB) and includes various support spaces such as offices, conference rooms, and equipment rooms. It houses control panels for all installed NuScale Power Modules (NPMs), allowing reactor operators to monitor and control multiple NPMs using digital control systems that ensure independence between safety and nonsafety systems. The MCR provides comprehensive monitoring, alarms, and controls for plant operations, with additional display stations for shared systems and diagnostics.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "39",
-      "hop": 1
-    },
-    "nuscale_ch01_0051": {
-      "node_id": "nuscale_ch01_0051",
-      "title": "Plant Features of Special Interest",
-      "summary": "This section describes key plant features of special interest in the NuScale Power Plant, including the Central Utility Building (CUB) and Diesel Generator Buildings (DGBs), which house essential but nonsafety-related systems and backup power equipment. It also highlights human factors considerations, emphasizing fail-safe design, automation, digital controls, and workload management to minimize human error and meet regulatory requirements.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "43",
-      "hop": 2
-    },
-    "nuscale_ch01_0043": {
-      "node_id": "nuscale_ch01_0043",
-      "title": "Ultimate Heat Sink",
-      "summary": "The Ultimate Heat Sink section describes a large, stainless steel-lined, reinforced concrete pool located below plant grade level, which serves as the final heat removal system for the plant. During normal operations, heat is removed from the pool via a cooling system and rejected to the atmosphere, while in the event of a total loss of AC power, decay heat is passively transferred to the pool, which has sufficient water inventory to ensure continued cooling. The spent fuel pool is cooled independently by its own system.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "41",
       "hop": 3
     },
-    "nuscale_ch01_0303": {
-      "node_id": "nuscale_ch01_0303",
-      "title": "DSRS 9.1.3, Rev 0: Spent Fuel Pool Cooling and Cleanup SystemII.5 Specific Criteria to Meet GDC 63",
-      "summary": "This section summarizes the NuScale Spent Fuel Pool Cooling and Cleanup System’s conformance with regulatory criteria, specifically addressing GDC 63. It states that the system fully conforms to the requirements of GDC 63, with no exceptions noted.",
+    "nuscale_ch01_0224": {
+      "node_id": "nuscale_ch01_0224",
+      "title": "DSRS 7.2.6, Rev 0: Derivation of System InputsAll Various",
+      "summary": "This section summarizes NuScale's conformance with various regulatory guides and standards related to digital instrumentation and control (I&C) systems, noting areas of full or partial compliance. Specifically, for DSRS 7.2.6, Rev 0, it states that the derivation of system inputs conforms to requirements, and there are no specific DSRS acceptance criteria for this item.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "243",
-      "hop": 3
-    },
-    "nuscale_ch01_0036": {
-      "node_id": "nuscale_ch01_0036",
-      "title": "Refueling Operations",
-      "summary": "Refueling operations for a NuScale Power Module (NPM) are conducted independently from other modules. The process involves moving the NPM from its operating bay to the refueling pool, disassembling it for inspection, maintenance, and refueling, and then reassembling and returning it to service after successful testing and startup procedures.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "38",
+      "page_range": "235",
       "hop": 4
     },
-    "nuscale_ch01_0035": {
-      "node_id": "nuscale_ch01_0035",
-      "title": "Fuel Handling and Reactor Maintenance Areas",
-      "summary": "The fuel handling and reactor maintenance areas are located at the west end of the Reactor Building and include spaces for the spent fuel pool, refueling pool, and dry dock, with provisions for safe transport and handling of fuel assemblies and reactor modules. These areas are designed to facilitate refueling, storage, and inspection activities while ensuring radiation protection for personnel.",
+    "nuscale_ch01_0069": {
+      "node_id": "nuscale_ch01_0069",
+      "title": "Piping and Instrumentation Diagrams",
+      "summary": "This section describes the use of simplified instrumentation, control, electrical, and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information alongside written text. It lists the relevant diagrams and legends for both electrical/I&C and piping/instrumentation systems, and notes that site-specific diagrams and legends will be provided by COL applicants referencing the NuScale design certification.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "37",
+      "page_range": "95",
+      "hop": 4
+    },
+    "nuscale_ch01_0225": {
+      "node_id": "nuscale_ch01_0225",
+      "title": "DSRS 7.2.7, Rev 0: Setpoints II.1 Conformance to RG 1.105",
+      "summary": "This section summarizes the NuScale Final Safety Analysis Report’s conformance with various regulatory guides and standards related to digital instrumentation and control (I&C) systems. It details which criteria are fully or partially met for equipment qualification, reliability, protective actions, interlocks, and system input derivation, referencing specific regulatory guides and IEEE standards. Where partial conformance exists, further details are provided in referenced tables.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "235",
+      "hop": 4
+    },
+    "nuscale_ch01_0687": {
+      "node_id": "nuscale_ch01_0687",
+      "title": "DSRS 15.1.5, Rev 0: Steam System Piping Failures Inside and Outside of ContainmentII.9 AssumptionsPostulated Failure of Seismic Main Steam Line",
+      "summary": "This section outlines the assumptions related to postulated failures of both seismic and non-seismic main steam lines in the NuScale Final Safety Analysis Report, confirming conformance with DSRS 15.1.5 requirements. It notes that operator action is not required to mitigate steam line break consequences, and clarifies that radiological analysis requirements are superseded by SRP Section 15.0.3 for design certification applications, while nonradiological analysis provisions remain applicable.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "292",
       "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0015",
-      "target": "nuscale_ch01_0068",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general overview of the plant layout, while Section B offers detailed electrical and instrumentation drawings that visually clarify and specify aspects of the general description in Section A."
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch01_0510",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A describes the limitations of installed RCS leakage detection instrumentation, while Section B references regulatory criteria (DSRS 11.5, II.7) that require descriptions of such instrumentation, connecting them through the topic of leakage detection system design and regulatory conformance."
     },
     {
-      "source": "nuscale_ch01_0015",
-      "target": "nuscale_ch01_0004",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general overview of the plant layout, while Section B specifies the type and design details of the containment vessel, which is one of the key systems described in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0015",
-      "target": "nuscale_ch01_0067",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general overview of the plant layout and systems, while Section B offers detailed drawings and figures that visually clarify and specify the information summarized in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0015",
-      "target": "nuscale_ch01_0003",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a detailed summary of the plant's physical layout and systems, which elaborates on the general design description introduced in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0015",
-      "target": "nuscale_ch01_0038",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general overview of the plant layout, while Section B specifies the detailed location and associated spaces of the Main Control Room within that overall layout."
-    },
-    {
-      "source": "nuscale_ch01_0068",
-      "target": "nuscale_ch01_0004",
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch01_0370",
       "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A provides detailed electrical and instrumentation drawings that visually clarify the design and layout of plant systems, which support the understanding of the containment vessel type and its integration described in Section B."
+      "description": "Section A discusses the limitations of RCS leakage detection instrumentation, while Section B references regulatory conformance for the control room ventilation system, indicating that the plant's ability to detect and respond to RCS leakage (from A) is relevant to ensuring the control room environment is protected as required by regulatory criteria (from B)."
     },
     {
-      "source": "nuscale_ch01_0068",
-      "target": "nuscale_ch01_0067",
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch01_0372",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the limitations of RCS leakage detection instrumentation, which impacts the ability of the control room (addressed in Section B) to receive precise information about RCS leakage via its interface with plant instrumentation."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch01_0511",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the limitations of installed RCS instrumentation in detecting and distinguishing leakage, while Section B outlines regulatory guidance and acceptance criteria for the design features and instrumentation required for coolant system leakage detection, connecting them through the topic of instrumentation adequacy for leakage monitoring."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0024",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the limitations of RCS leakage detection instrumentation, which impacts how the control room (as referenced in Ch.01) can interface with and interpret data from RCS instrumentation described in Section B, since the pressurizer's design affects pressure communication but does not resolve the inability to distinguish leakage sources."
+    },
+    {
+      "source": "nuscale_ch01_0510",
+      "target": "nuscale_ch01_0370",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes instrumentation for coolant system leakage detection, which provides critical input to the control room described in Section B, where the control room ventilation system must respond to such instrumentation signals to ensure habitability."
+    },
+    {
+      "source": "nuscale_ch01_0510",
+      "target": "nuscale_ch01_0372",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes instrumentation for coolant system leakage detection, which provides input data that interfaces with the control room systems described in Section B, ensuring operators are informed of RCS conditions."
+    },
+    {
+      "source": "nuscale_ch01_0510",
+      "target": "nuscale_ch01_0511",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines the design features and instrumentation for coolant system leakage detection, while Section B addresses the installation of such instrumentation or sampling equipment, thus Section B operationalizes the design concepts specified in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0510",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the instrumentation used for detecting leakage in the primary and secondary coolant systems, which is relevant to Section B's description of the pressurizer as part of the RCS, since effective leakage detection instrumentation (A) must interface with and monitor components like the pressurizer (B) to ensure plant safety."
+    },
+    {
+      "source": "nuscale_ch01_0370",
+      "target": "nuscale_ch01_0372",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A outlines the environmental and dynamic effects requirements for the control room area ventilation system, while Section B specifically addresses the control room itself, indicating that the requirements in A provide context and prerequisites for the detailed considerations in B."
+    },
+    {
+      "source": "nuscale_ch01_0370",
+      "target": "nuscale_ch01_0511",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines regulatory conformance for the control room area ventilation system, while Section B provides guidance on the installation and design features of instrumentation relevant to monitoring radiological conditions, thus Section B specifies instrumentation requirements that interface with the control room systems described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0370",
+      "target": "nuscale_ch05_0024",
+      "relation": "LEADS_TO",
+      "confidence": 0.7,
+      "description": "Section A discusses the control room area ventilation system's regulatory conformance, while Section B describes the design and function of the pressurizer as part of the reactor coolant system (RCS), with the connection being that the control room's interface with RCS instrumentation (as referenced in the analysis question) depends on the proper functioning and monitoring of RCS components like the pressurizer."
+    },
+    {
+      "source": "nuscale_ch01_0372",
+      "target": "nuscale_ch01_0511",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A outlines the regulatory conformance of the control room area ventilation system, while Section B describes the requirements for instrumentation and control design features relevant to radiological monitoring, with both sections connected through the need for the control room to interface with and utilize RCS instrumentation for safety and monitoring purposes."
+    },
+    {
+      "source": "nuscale_ch01_0372",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A outlines regulatory conformance for the control room area ventilation system, which is essential for maintaining a safe environment for operators, while Section B describes the design of the pressurizer as part of the reactor coolant system (RCS), whose instrumentation would interface with the control room to provide operators with critical pressure data."
+    },
+    {
+      "source": "nuscale_ch01_0511",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines the requirements and guidance for instrumentation and control design, including those used for monitoring the reactor coolant system (RCS), while Section B describes the physical design and function of the pressurizer as part of the RCS, thus Section A's instrumentation requirements are intended to be applied to the systems described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0072",
+      "target": "nuscale_ch05_0012",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines the interface requirements and boundaries between the certified plant design (including the control room) and site-specific elements, while Section B describes limitations of RCS instrumentation relevant to those interfaces, specifically noting the inability to distinguish certain leakages with the installed instrumentation."
+    },
+    {
+      "source": "nuscale_ch01_0072",
+      "target": "nuscale_ch01_0510",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A outlines the interface requirements and boundaries between the certified plant design and site-specific elements, while Section B specifies that certain instrumentation and operational program responsibilities (such as RCS leakage detection) are site-specific and fall under the COL applicant's purview, thus both sections connect by delineating which aspects of control room and RCS instrumentation are covered by the certified design versus those left to the COL applicant."
+    },
+    {
+      "source": "nuscale_ch01_0072",
+      "target": "nuscale_ch01_0370",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A outlines the interface requirements between the certified plant design (including the control room) and site-specific elements, while Section B details how the control room area ventilation system (CRVS) conforms to regulatory criteria, thus Section B provides evidence that supports the interface requirements described in Section A regarding the control room's regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch01_0504",
+      "target": "nuscale_ch05_0012",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A discusses the installation and conformance of radiological monitoring instrumentation relevant to plant systems, while Section B details the limitations of installed RCS instrumentation in detecting and distinguishing reactor coolant pressure boundary leakage, thus both sections address how instrumentation in the plant (including the control room interface) is designed and its capabilities or limitations in monitoring system status."
+    },
+    {
+      "source": "nuscale_ch01_0504",
+      "target": "nuscale_ch01_0510",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the installation and conformance of radiological monitoring instrumentation, while Section B provides specific descriptions of design features and instrumentation used for detecting leakage in the primary and secondary coolant systems, thus Section B specifies the technical details for the general installation requirements outlined in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0504",
+      "target": "nuscale_ch01_0370",
       "relation": "REFERENCES",
-      "confidence": 1.0,
-      "description": "Section A and Section B are identical excerpts from the NuScale Final Safety Analysis Report, both providing references to electrical and instrumentation and control drawings that visually clarify the plant's design layout."
+      "confidence": 0.8,
+      "description": "Section A addresses the installation and monitoring of radiological instrumentation relevant to effluent pathways, while Section B discusses the control room area ventilation system, with both sections referencing the NuScale Final Safety Analysis Report and regulatory conformance, thereby connecting the plant control room's environmental controls with the instrumentation interfaces described in the analysis question."
     },
     {
-      "source": "nuscale_ch01_0068",
-      "target": "nuscale_ch01_0003",
+      "source": "nuscale_ch01_0853",
+      "target": "nuscale_ch05_0012",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses human factors engineering and operator actions in the control room context, while Section B describes the limitations of RCS instrumentation in distinguishing leakage types, connecting them through the reliance on operator actions to interpret ambiguous instrumentation data in the control room."
+    },
+    {
+      "source": "nuscale_ch01_0853",
+      "target": "nuscale_ch01_0510",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A addresses human factors and operator actions in the control room, while Section B describes the instrumentation for RCS leakage detection that interfaces with the control room, connecting them through the reliance of operator actions on accurate instrumentation data."
+    },
+    {
+      "source": "nuscale_ch01_0853",
+      "target": "nuscale_ch01_0370",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A addresses human factors engineering and operator actions in the control room, while Section B specifies the environmental and operational requirements for the control room area ventilation system, both relating to the plant control room's safety and functionality as required by regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0066",
+      "target": "nuscale_ch05_0012",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A lists referenced topical reports, including those relevant to quality assurance, which provide foundational information that supports the detailed technical discussion in Section B about RCS leakage detection and instrumentation interfaces."
+    },
+    {
+      "source": "nuscale_ch01_0066",
+      "target": "nuscale_ch01_0510",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A lists referenced topical reports and their FSAR sections, which may include reports relevant to instrumentation and control room design, while Section B describes regulatory criteria and design features for coolant system leakage detection instrumentation, indicating that Section A provides the referenced basis or supporting documentation for the instrumentation described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0066",
+      "target": "nuscale_ch01_0370",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A lists referenced topical reports and technical reports that are incorporated by reference in the NuScale FSAR, while Section B demonstrates conformance of the FSAR with specific regulatory criteria for the control room area ventilation system, indicating that the referenced materials in A support the regulatory compliance claims in B."
+    },
+    {
+      "source": "nuscale_ch01_0505",
+      "target": "nuscale_ch05_0012",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A outlines the regulatory conformance and applicability of radiological monitoring and sampling systems, while Section B describes the limitations of RCS instrumentation in detecting and distinguishing leakage, connecting them through the topic of instrumentation interfaces relevant to plant control room monitoring."
+    },
+    {
+      "source": "nuscale_ch01_0505",
+      "target": "nuscale_ch01_0510",
       "relation": "SPECIFIES",
       "confidence": 0.9,
-      "description": "Section A provides detailed electrical and I&C drawings that visually clarify aspects of the plant layout described in the general overview of Section B."
+      "description": "Section A provides general requirements and conformance statements for radiological monitoring and sampling systems, while Section B specifies the design features and instrumentation used for detecting leakage in the primary and secondary coolant systems, thus Section B provides detailed implementation information for the broader criteria outlined in Section A."
     },
     {
-      "source": "nuscale_ch01_0068",
-      "target": "nuscale_ch01_0038",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A provides detailed electrical and instrumentation drawings that visually clarify the design and layout of plant areas, which includes the Main Control Room described in Section B, thus offering supporting visual context for the spatial and functional description in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0004",
-      "target": "nuscale_ch01_0067",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general description of the containment vessel's type and design, while Section B offers detailed drawings and figures that visually clarify and specify the design information described in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0004",
-      "target": "nuscale_ch01_0003",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides specific details about the containment vessel design, which is one of the structures described more generally in Section B's overview of the plant layout and safety analysis."
-    },
-    {
-      "source": "nuscale_ch01_0004",
-      "target": "nuscale_ch01_0038",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the design and structural characteristics of the NuScale containment vessel, while Section B details the location and associated spaces of the main control room, both of which are components that together define aspects of the multi-module NuScale power plant layout."
-    },
-    {
-      "source": "nuscale_ch01_0067",
-      "target": "nuscale_ch01_0003",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides detailed drawings and figures that visually clarify the plant layout described in general terms in Section B's introduction and overview."
-    },
-    {
-      "source": "nuscale_ch01_0067",
-      "target": "nuscale_ch01_0038",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A provides detailed drawings and figures that visually clarify the plant layout, which includes the Main Control Room and its associated spaces described in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0003",
-      "target": "nuscale_ch01_0038",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general introduction and overview of the NuScale plant design, while Section B specifies the detailed layout and associated spaces of the Main Control Room within that plant, connecting the general plant description to a specific facility component."
-    },
-    {
-      "source": "nuscale_ch01_0051",
-      "target": "nuscale_ch01_0015",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides specific details about the Central Utility Building and its functions, which are part of the overall facility described in general terms in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0051",
-      "target": "nuscale_ch01_0068",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes specific plant structures and their functions, while Section B provides drawings and figures that visually clarify the layout and arrangement of such structures, connecting textual descriptions to visual representations."
-    },
-    {
-      "source": "nuscale_ch01_0051",
-      "target": "nuscale_ch01_0004",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the Central Utility Building and its role in housing shared utility services for the plant, while Section B describes the containment vessel design for individual reactor modules, together providing complementary details about different structural components that make up the overall multi-module NuScale power plant layout."
-    },
-    {
-      "source": "nuscale_ch01_0043",
-      "target": "nuscale_ch01_0015",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides specific details about the ultimate heat sink and decay heat removal systems, which are components summarized in Section B's general plant description of the NuScale facility layout."
-    },
-    {
-      "source": "nuscale_ch01_0043",
-      "target": "nuscale_ch01_0068",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the functional design and layout of the ultimate heat sink system, while Section B provides supporting electrical and I&C drawings that visually clarify and detail the system's configuration as described in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0043",
-      "target": "nuscale_ch01_0004",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the ultimate heat sink and decay heat removal system, which relies on the reactor pool where the containment vessels (described in Section B) are immersed, thus connecting the cooling function to the physical containment layout."
-    },
-    {
-      "source": "nuscale_ch01_0303",
-      "target": "nuscale_ch01_0015",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides specific regulatory criteria and conformance details for the spent fuel pool cooling system, which is one of the plant systems broadly described in Section B's general overview of the NuScale power plant layout."
-    },
-    {
-      "source": "nuscale_ch01_0303",
-      "target": "nuscale_ch01_0068",
-      "relation": "REFERENCES",
-      "confidence": 0.85,
-      "description": "Section A outlines regulatory criteria and conformance details for the spent fuel pool cooling system, while Section B provides the associated electrical and instrumentation drawings that visually clarify the design layout referenced in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0303",
-      "target": "nuscale_ch01_0004",
+      "source": "nuscale_ch01_0505",
+      "target": "nuscale_ch01_0370",
       "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A discusses the spent fuel pool cooling system's design criteria and conformance, referencing the ultimate heat sink (UHS) as a safety-related system, while Section B describes the containment vessel's structural and pressure characteristics, both providing specific design features relevant to the overall NuScale multi-module plant layout."
+      "description": "Section A discusses instrumentation and monitoring equipment relevant to radiological monitoring, which provides input data that interfaces with the control room systems described in Section B, specifically regarding the environmental and dynamic effects managed by the control room area ventilation system."
     },
     {
-      "source": "nuscale_ch01_0043",
-      "target": "nuscale_ch01_0303",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A describes the ultimate heat sink system's design and function, while Section B references the ultimate heat sink as the seismic Category I supply system for spent fuel cooling, connecting them through the UHS's role in both reactor and spent fuel pool safety."
+      "source": "nuscale_ch01_0852",
+      "target": "nuscale_ch05_0012",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses regulatory criteria and human factors engineering considerations for operator actions in the control room, while Section B describes the limitations of RCS instrumentation in distinguishing leakage types, connecting them through the need for operator awareness and response to instrumentation limitations in the control room."
     },
     {
-      "source": "nuscale_ch01_0036",
-      "target": "nuscale_ch01_0015",
+      "source": "nuscale_ch01_0852",
+      "target": "nuscale_ch01_0510",
       "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides detailed information about refueling operations for individual NuScale Power Modules, which is one of the specific systems summarized in Section B's general plant description."
+      "confidence": 0.85,
+      "description": "Section A addresses the human factors engineering and operator actions in the control room, while Section B describes the instrumentation used for detecting coolant system leakage, with the interface being that operators in the control room rely on the RCS instrumentation described in Section B to perform their actions as discussed in Section A."
     },
     {
-      "source": "nuscale_ch01_0036",
-      "target": "nuscale_ch01_0068",
+      "source": "nuscale_ch01_0852",
+      "target": "nuscale_ch01_0370",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A addresses human factors engineering and operator actions in the control room, while Section B specifies environmental and operational requirements for the control room area ventilation system, both relating to the safety and functionality of the plant control room as required by regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0072",
+      "target": "nuscale_ch01_0504",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines the interface requirements and boundaries between the certified plant design and site-specific elements, while Section B clarifies that certain instrumentation and monitoring responsibilities, including those relevant to the control room's interface with RCS instrumentation, are site-specific and thus fall under the COL applicant's purview."
+    },
+    {
+      "source": "nuscale_ch01_0072",
+      "target": "nuscale_ch01_0853",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines the interface requirements and boundaries between the certified plant design (including the control room) and site-specific elements, while Section B provides regulatory review criteria for manual operator actions and human factors engineering relevant to those interfaces, particularly regarding the control room's interaction with RCS instrumentation."
+    },
+    {
+      "source": "nuscale_ch01_0072",
+      "target": "nuscale_ch01_0066",
       "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references the interface requirements and boundaries between certified and site-specific designs, while Section B lists the topical and technical reports (such as quality assurance) that are incorporated by reference to support those requirements."
+    },
+    {
+      "source": "nuscale_ch01_0072",
+      "target": "nuscale_ch01_0505",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A outlines the interface requirements and boundaries between the certified plant design (including the control room) and site-specific elements, while Section B details how instrumentation and monitoring systems (such as those interfacing with the RCS) must conform to regulatory criteria, thus Section A establishes the context for how the control room interfaces described in Section B are governed by certified versus site-specific responsibilities."
+    },
+    {
+      "source": "nuscale_ch01_0072",
+      "target": "nuscale_ch01_0852",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A outlines the interface requirements between the certified plant design (including the control room) and site-specific elements, while Section B provides regulatory review criteria for manual operator actions (such as those performed in the control room) in the context of defense-in-depth analyses, thus Section A's design boundaries inform the applicability of Section B's regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0504",
+      "target": "nuscale_ch01_0853",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the installation and conformance of radiological monitoring instrumentation relevant to the control room, while Section B outlines review criteria for manual operator actions and human factors engineering that would interface with such instrumentation, connecting through the operational use and validation of control room instrumentation."
+    },
+    {
+      "source": "nuscale_ch01_0504",
+      "target": "nuscale_ch01_0066",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the conformance of instrumentation and monitoring equipment installation with regulatory criteria, while Section B lists the referenced materials and topical reports (such as the Quality Assurance Program) that provide supporting documentation for these design and operational claims."
+    },
+    {
+      "source": "nuscale_ch01_0504",
+      "target": "nuscale_ch01_0505",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A addresses the installation and monitoring of instrumentation for effluent pathways, while Section B focuses on similar instrumentation and monitoring for radioactive waste process systems, both referencing conformance with regulatory criteria and thus providing complementary details about radiological monitoring relevant to plant control and RCS interfaces."
+    },
+    {
+      "source": "nuscale_ch01_0504",
+      "target": "nuscale_ch01_0852",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A addresses the installation and monitoring of instrumentation relevant to plant systems, while Section B outlines review criteria for manual operator actions and human factors in system interfaces, connecting through their mutual focus on instrumentation and operator interaction in the control room context."
+    },
+    {
+      "source": "nuscale_ch01_0853",
+      "target": "nuscale_ch01_0066",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A discusses the review criteria for human factors engineering and operator actions in the control room, while Section B lists the referenced materials and topical reports (such as the Quality Assurance Program) that provide supporting documentation for these criteria."
+    },
+    {
+      "source": "nuscale_ch01_0853",
+      "target": "nuscale_ch01_0505",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A addresses human factors engineering and operator actions in the control room, while Section B describes the requirements for instrumentation and monitoring equipment that interface with the RCS, connecting through the need for operators to interact with and rely on these instruments for safe plant operation."
+    },
+    {
+      "source": "nuscale_ch01_0853",
+      "target": "nuscale_ch01_0852",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references and builds upon the review criteria established in Section B, indicating that the Phase 2 (Preliminary Validation) criteria in Section A are based on and follow from the Phase 1 (Analysis) criteria described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0066",
+      "target": "nuscale_ch01_0505",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A lists topical reports incorporated by reference in the NuScale FSAR, while Section B discusses the FSAR's conformance with regulatory criteria for instrumentation and monitoring systems, indicating that Section A provides referenced documentation that supports or underpins the regulatory compliance claims made in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0066",
+      "target": "nuscale_ch01_0852",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A lists referenced topical reports, including those relevant to quality assurance and potentially human factors, while Section B discusses regulatory review criteria for manual operator actions and notes conformance with these criteria, indicating that the referenced reports in Section A provide supporting documentation for the regulatory compliance described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0505",
+      "target": "nuscale_ch01_0852",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses instrumentation and monitoring equipment relevant to radiological monitoring in the plant, while Section B addresses review criteria for manual operator actions and human factors engineering, both of which are connected through the need for reliable instrumentation interfaces (such as RCS instrumentation) in the control room to support operator actions and regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch05_0012",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the inapplicability of certain PWR-specific control room and RCS instrumentation requirements to the NuScale design, while Section B describes the limitations of RCS leakage detection instrumentation in the NuScale plant, both highlighting how the unique design affects control room interface with RCS monitoring."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0510",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the applicability of regulatory guidance for reactor coolant system (RCS) design and control, while Section B describes the instrumentation used for detecting leakage in the primary and secondary coolant systems, connecting them through their focus on RCS monitoring and control interfaces relevant to the control room."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0370",
+      "relation": "REFERENCES",
+      "confidence": 0.7,
+      "description": "Section A discusses the applicability of reactor coolant system (RCS) instrumentation requirements in the context of NuScale's design, while Section B addresses the control room area ventilation system and its regulatory conformance, with both sections referencing how plant systems (including the control room and RCS instrumentation) interface with regulatory criteria for safety and operation."
+    },
+    {
+      "source": "nuscale_ch01_0110",
+      "target": "nuscale_ch05_0012",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides the electrical symbols used for instrumentation such as pressure, temperature, and flow switches, which are relevant to the RCS instrumentation interface described in Section B, where the limitations of installed instrumentation for detecting RCS leakage are discussed."
+    },
+    {
+      "source": "nuscale_ch01_0110",
+      "target": "nuscale_ch01_0510",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the electrical symbols used in system diagrams, which are necessary for understanding the design features and instrumentation described in Section B for primary and secondary coolant system leakage detection."
+    },
+    {
+      "source": "nuscale_ch01_0110",
+      "target": "nuscale_ch01_0370",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the electrical symbols used in system diagrams, which are necessary for interpreting the detailed design and operation of systems like the control room ventilation described in Section B, thus Section A is a prerequisite for understanding the technical content referenced in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0115",
+      "target": "nuscale_ch05_0012",
+      "relation": "IS_PREREQUISITE_OF",
       "confidence": 0.9,
-      "description": "Section A describes the physical process and independence of refueling operations for individual modules, while Section B provides drawings and figures that visually clarify the plant layout and component positions referenced in Section A."
+      "description": "Section A provides the instrumentation identification legends used in plant diagrams, which are necessary for interpreting the RCS leakage detection instrumentation described in Section B."
     },
     {
-      "source": "nuscale_ch01_0036",
-      "target": "nuscale_ch01_0004",
-      "relation": "SPECIFIES",
+      "source": "nuscale_ch01_0115",
+      "target": "nuscale_ch01_0510",
+      "relation": "IS_PREREQUISITE_OF",
       "confidence": 0.95,
-      "description": "Section A describes the movement of an individual NuScale Power Module (NPM) during refueling operations, which involves relocating the NPM (housed within its containment vessel) to the refueling area, while Section B specifies the design and structural characteristics of the containment vessel (CNV) that houses each NPM; thus, Section B provides the technical details for the containment referenced in Section A's operational description."
+      "description": "Section A provides the legend and identification scheme for instrumentation symbols used in plant diagrams, which is necessary for interpreting the design features and instrumentation described in Section B for RCS leakage detection."
     },
     {
-      "source": "nuscale_ch01_0035",
-      "target": "nuscale_ch01_0015",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides specific details about the location and function of the fuel handling and reactor maintenance areas, which are components summarized in the overall facility description in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0035",
-      "target": "nuscale_ch01_0068",
-      "relation": "SUPPORTS",
+      "source": "nuscale_ch01_0115",
+      "target": "nuscale_ch01_0370",
+      "relation": "IS_PREREQUISITE_OF",
       "confidence": 0.85,
-      "description": "Section A describes the physical locations and functions of fuel handling and reactor maintenance areas, while Section B provides drawings and figures that visually clarify the layout and arrangement of electrical and I&C systems, supporting the understanding of the plant layout described in Section A."
+      "description": "Section A provides the legend for instrumentation identification used in diagrams, which is necessary for interpreting how the plant control room interfaces with RCS instrumentation as described in Section B's regulatory conformance statements."
     },
     {
-      "source": "nuscale_ch01_0035",
-      "target": "nuscale_ch01_0004",
+      "source": "nuscale_ch01_0708",
+      "target": "nuscale_ch05_0012",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the plant's response to various operational transients and the role of instrument setpoints in the control room, while Section B describes limitations of RCS instrumentation in detecting and distinguishing leakage, thus Section B provides context on the instrumentation interface that impacts the control room's ability to monitor RCS integrity as referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0708",
+      "target": "nuscale_ch01_0510",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the plant's response to various operational transients and the role of instrumentation setpoints in the control room, while Section B describes the design features and instrumentation used for detecting leakage in the reactor coolant system (RCS), thus both sections are connected through their focus on instrumentation relevant to plant safety and control room operations."
+    },
+    {
+      "source": "nuscale_ch01_0708",
+      "target": "nuscale_ch01_0370",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses plant response and instrumentation setpoints relevant to operational events, while Section B addresses the control room ventilation system's conformance with environmental and safety criteria, with both sections referencing aspects of control room safety and operational interfaces as required by regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0748",
+      "target": "nuscale_ch05_0012",
       "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A describes the physical location and function of fuel handling and reactor maintenance areas within the plant layout, while Section B details the design and classification of the containment vessel that houses the reactor modules, thus both sections provide complementary information about key structural components and their arrangement in the multi-module NuScale power plant layout."
+      "description": "Section B describes the limitations of RCS instrumentation in distinguishing leakage sources, which is relevant to Section A's discussion of plant control room functions and interfaces with RCS instrumentation as required by regulatory criteria."
     },
     {
-      "source": "nuscale_ch01_0036",
-      "target": "nuscale_ch01_0035",
+      "source": "nuscale_ch01_0748",
+      "target": "nuscale_ch01_0510",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the applicability of regulatory guidance for reactor coolant system (RCS) events in the NuScale design, while Section B describes the design features and instrumentation used for detecting leakage in the primary and secondary coolant systems, connecting them through their focus on RCS monitoring and instrumentation interfaces."
+    },
+    {
+      "source": "nuscale_ch01_0038",
+      "target": "nuscale_ch05_0012",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the physical layout and associated spaces of the main control room, while Section B discusses the limitations of RCS instrumentation in detecting and distinguishing leakage, implying that the control room's interface with this instrumentation is constrained by these detection limitations."
+    },
+    {
+      "source": "nuscale_ch01_0038",
+      "target": "nuscale_ch01_0510",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the physical layout and associated spaces of the main control room, while Section B outlines the regulatory requirements for instrumentation used in coolant system leakage detection, which must interface with the control room for monitoring and control purposes."
+    },
+    {
+      "source": "nuscale_ch01_0038",
+      "target": "nuscale_ch01_0370",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the physical layout and associated spaces of the main control room, while Section B references regulatory criteria (SRP 9.4.1) that the control room's ventilation and environmental systems must conform to, connecting the plant's design features to regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0110",
+      "relation": "REFERENCES",
+      "confidence": 0.7,
+      "description": "Section A discusses the applicability of regulatory guidance for reactor coolant system events in the context of the NuScale design, while Section B provides the standardized electrical symbols used in system diagrams, which would be referenced when describing instrumentation interfaces such as those between the control room and RCS instrumentation."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0115",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides the instrumentation identification legend that is used in piping and instrumentation diagrams referenced in Section A's discussion of reactor coolant system pressures and control, thereby specifying how control room interfaces with RCS instrumentation are depicted."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0708",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A and Section B both discuss how the NuScale design's unique features (such as the absence of reactor coolant pumps and steam pressure regulators) affect the applicability of standard regulatory guidance and the plant's instrumentation interface, connecting them through their evaluation of design-specific deviations from typical PWR requirements."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0748",
+      "relation": "LEADS_TO",
+      "confidence": 0.85,
+      "description": "Section A discusses reactor coolant and main steam system pressures in the context of inadvertent boron dilution, while Section B addresses fuel cladding integrity under the same event scenario, both referencing the same regulatory criteria and design features, thus connecting system pressure behavior to fuel integrity outcomes."
+    },
+    {
+      "source": "nuscale_ch01_0747",
+      "target": "nuscale_ch01_0038",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B describes the physical layout and associated spaces of the main control room, which is the operational hub where instrumentation interfaces described in Section A (such as RCS instrumentation) would be monitored and controlled, thus connecting the plant's physical control environment to the regulatory and design requirements for system monitoring."
+    },
+    {
+      "source": "nuscale_ch01_0110",
+      "target": "nuscale_ch01_0115",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A describes the process and independence of refueling operations for individual modules, while Section B specifies the physical locations and supporting infrastructure (such as pipe fittings and maintenance areas) that enable these operations within the multi-module plant layout."
+      "description": "Section A provides the electrical symbols used in system diagrams, while Section B specifies the legend for instrumentation identification letters, together enabling interpretation of control room and RCS instrumentation interfaces in plant documentation."
+    },
+    {
+      "source": "nuscale_ch01_0110",
+      "target": "nuscale_ch01_0708",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the electrical symbols and component representations (such as switches and indicators) that are used in system diagrams, which are necessary for understanding the instrumentation interfaces described in Section B's discussion of instrument setpoints and plant response."
+    },
+    {
+      "source": "nuscale_ch01_0110",
+      "target": "nuscale_ch01_0748",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the electrical symbols used in plant instrumentation diagrams, which are necessary for understanding how the control room interfaces with RCS instrumentation as discussed in Section B's regulatory context."
+    },
+    {
+      "source": "nuscale_ch01_0110",
+      "target": "nuscale_ch01_0038",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the standardized electrical symbols used in plant diagrams, which are necessary for interpreting the control room's interface with RCS instrumentation as described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0115",
+      "target": "nuscale_ch01_0708",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the legend for instrumentation identification used in diagrams, which is necessary for interpreting how the control room interfaces with RCS instrumentation as discussed in Section B's regulatory analysis of plant response and setpoints."
+    },
+    {
+      "source": "nuscale_ch01_0115",
+      "target": "nuscale_ch01_0748",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the instrumentation identification conventions used in plant diagrams, which are necessary for understanding how the control room interfaces with RCS instrumentation as discussed in Section B's regulatory context."
+    },
+    {
+      "source": "nuscale_ch01_0115",
+      "target": "nuscale_ch01_0038",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the instrumentation identification legends used in piping and instrumentation diagrams, which are essential for understanding how instrumentation (including RCS instrumentation) is labeled and referenced in plant documentation, while Section B describes the physical layout and associated spaces of the main control room, where such instrumentation is monitored and controlled."
+    },
+    {
+      "source": "nuscale_ch01_0708",
+      "target": "nuscale_ch01_0748",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A and Section B both discuss how the NuScale design differs from standard PWR/BWR designs by lacking certain systems (e.g., steam pressure regulator, reactor coolant pumps), which impacts the applicability of regulatory criteria and the interface with plant instrumentation, including the control room and RCS instrumentation."
+    },
+    {
+      "source": "nuscale_ch01_0708",
+      "target": "nuscale_ch01_0038",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B describes the physical layout and associated spaces of the main control room (MCR), while Section A discusses the plant's response to operational events and the role of instrumentation setpoints, which are monitored and managed from the MCR, thus connecting the control room's function to the instrumentation interface described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0748",
+      "target": "nuscale_ch01_0038",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides a physical and functional description of the main control room (MCR), which is the operational hub referenced in Section A's discussion of plant control and response to reactor coolant system events, thereby connecting the regulatory analysis of control room functions (Section A) with the facility's actual layout and capabilities (Section B)."
+    },
+    {
+      "source": "nuscale_ch01_0224",
+      "target": "nuscale_ch05_0012",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A outlines the regulatory conformance and qualification criteria for digital instrumentation and control systems relevant to the control room, while Section B describes the limitations of RCS instrumentation in detecting and distinguishing leakage, thus Section A's requirements set the standards that Section B's instrumentation implementation must satisfy or address."
+    },
+    {
+      "source": "nuscale_ch01_0224",
+      "target": "nuscale_ch01_0510",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A specifies the conformance of digital I&C safety systems (including those relevant to the control room) to IEEE standards, which underpins the design features and instrumentation for RCS leakage detection described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0224",
+      "target": "nuscale_ch01_0370",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A references the conformance of digital safety systems and equipment qualification standards relevant to control room instrumentation, while Section B specifies the environmental and operational requirements for the control room area ventilation system, thus Section A provides the technical basis that supports the regulatory compliance claims made in Section B regarding control room safety."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch05_0012",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides diagrams and figures that visually clarify the design and instrumentation interfaces, which support the understanding of the leakage detection limitations described in Section B regarding the RCS instrumentation."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0510",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides detailed drawings and figures of instrumentation and control systems, which visually clarify the design features that Section B describes in terms of regulatory conformance for coolant system leakage detection instrumentation."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0370",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides detailed drawings and figures, including instrumentation and control layouts, which visually clarify the design information relevant to the control room, while Section B documents the plant's conformance with regulatory requirements for the control room area ventilation system, thus Section A's design details support Section B's regulatory compliance claims."
+    },
+    {
+      "source": "nuscale_ch01_0225",
+      "target": "nuscale_ch05_0012",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines the conformance of the plant's digital instrumentation and control (I&C) systems—including those relevant to the control room—to regulatory guidance, while Section B describes the limitations of the installed RCS instrumentation in detecting and distinguishing reactor coolant pressure boundary leakage, thus connecting the control room's reliance on instrumentation to the technical capabilities and limitations described."
+    },
+    {
+      "source": "nuscale_ch01_0225",
+      "target": "nuscale_ch01_0510",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A specifies the conformance of control room instrumentation and setpoints to regulatory guidance, while Section B describes the design features and instrumentation for monitoring RCS leakage, thus Section A provides the regulatory compliance context for the instrumentation interfaces described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0225",
+      "target": "nuscale_ch01_0370",
+      "relation": "SEMANTIC",
+      "confidence": 0.8,
+      "description": "Section A addresses the conformance of instrumentation and control (I&C) systems, including setpoints and equipment qualification, while Section B addresses the conformance of the control room area ventilation system (CRVS) to regulatory criteria, with both sections referencing the NuScale Final Safety Analysis Report's demonstration of compliance with different but related regulatory requirements for control room safety and functionality."
+    },
+    {
+      "source": "nuscale_ch01_0687",
+      "target": "nuscale_ch05_0012",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A references the NuScale FSAR's conformance with regulatory criteria for steam system piping failures, while Section B describes the limitations of RCS leakage detection instrumentation, both of which are connected through the plant's safety analysis assumptions regarding control room awareness and instrumentation interface for postulated failures."
+    },
+    {
+      "source": "nuscale_ch01_0687",
+      "target": "nuscale_ch01_0510",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses assumptions and conformance related to steam system piping failures, while Section B describes the design features and instrumentation for coolant system leakage detection, with both sections connected by their focus on instrumentation and monitoring relevant to plant safety and control room information interfaces."
+    },
+    {
+      "source": "nuscale_ch01_0687",
+      "target": "nuscale_ch01_0370",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses assumptions and conformance related to steam system piping failures, which could impact control room safety, while Section B addresses the control room ventilation system's ability to handle environmental and dynamic effects, thus both sections are related through their focus on ensuring control room safety under accident conditions."
+    },
+    {
+      "source": "nuscale_ch01_0224",
+      "target": "nuscale_ch01_0069",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A discusses the conformance of the plant's digital instrumentation and control (I&C) systems, including those relevant to the control room, with regulatory criteria, while Section B provides the detailed drawings and diagrams (including RCS instrumentation interfaces) that visually clarify and support the design information described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0224",
+      "target": "nuscale_ch01_0225",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A and Section B both reference conformance with the same regulatory guides (RG 1.172, RG 1.173) and IEEE Std 7-4.3.2, indicating that the requirements and quality standards for plant control room systems and RCS instrumentation interfaces are evaluated against the same regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0224",
+      "target": "nuscale_ch01_0687",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A outlines the conformance of digital I&C safety systems (including those relevant to the control room) with regulatory and IEEE standards, while Section B lists the assumptions and conformance regarding system responses (including instrumentation) during steam system piping failures, thus Section A's design and qualification of control room systems provide the technical basis for the instrumentation interface described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0225",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides detailed drawings and figures that visually clarify the design and instrumentation interfaces, which support the regulatory conformance claims about instrumentation and control systems described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0687",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides detailed drawings and figures, including instrumentation and control diagrams, that visually clarify the design information referenced in Section B's discussion of regulatory conformance for steam system piping failures, thus supporting the assumptions and analyses described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0225",
+      "target": "nuscale_ch01_0687",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A outlines the conformance of digital I&C safety systems (including control room interfaces) to regulatory and IEEE standards, which provides the technical and regulatory basis for the plant control room's ability to monitor and interface with RCS instrumentation as discussed in Section B's postulated accident scenarios."
     }
   ]
 }

@@ -1,0 +1,730 @@
+{
+  "question": "Is the NuScale approach of eliminating emergency diesel generators (Ch.01) adequately justified by the passive safety systems in Ch.05?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0413": {
+      "node_id": "nuscale_ch01_0413",
+      "title": "SRP 9.5.7, Rev 3: Emergency Diesel Engine Lubrication SystemAll (II.1 thru II.4) Compliance with GDC 2, GDC 4, GDC 5, and GDC 17",
+      "summary": "The NuScale plant design does not require or include safety-related emergency diesel generators, and therefore the associated systems (fuel oil storage, cooling water, starting, lubrication, and air intake/exhaust) and their compliance with GDC 2, 4, 5, and 17 are not applicable. The plant does not rely on AC or DC power for the performance of its safety functions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "260",
+      "hop": 1
+    },
+    "nuscale_ch01_0812": {
+      "node_id": "nuscale_ch01_0812",
+      "title": "DSRS 15.9.A, Rev 0: Thermal Hydraulic Stability Review ResponsibilitiesII.6 Backup options if licensing solutions declared inoperable",
+      "summary": "The NuScale design does not use exclusion zone or detect-and-suppress methods for thermal hydraulic stability, as reactor trip signals act before unstable flow oscillations can develop. Backup options are not required because existing technical specifications for the Reactor Trip System (RTS) already control allowable unavailabilities of protective trips, ensuring safety without additional measures.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "315",
+      "hop": 1
+    },
+    "nuscale_ch01_0050": {
+      "node_id": "nuscale_ch01_0050",
+      "title": "Diesel Generator Buildings",
+      "summary": "The Diesel Generator Buildings (DGBs) in the NuScale Power Plant each house a single backup diesel generator and their auxiliary equipment, but do not contain any safety-related systems or support engineered safety functions (ESFs). Their primary purpose is to provide support and housing for the generators, associated equipment, and maintenance areas.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "43",
+      "hop": 1
+    },
+    "nuscale_ch01_0022": {
+      "node_id": "nuscale_ch01_0022",
+      "title": "Engineered Safety Feature Materials",
+      "summary": "The NuScale reactor containment vessel (CNV) is maintained under vacuum during normal operations, which reduces corrosion, aids in leak detection, and limits combustible gases. The design uses passive safety features—such as natural heat removal and elimination of large external coolant loops—which improve safety, reduce core damage frequency, and minimize radioactive source term compared to conventional reactors.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "32",
+      "hop": 1
+    },
+    "nuscale_ch01_0020": {
+      "node_id": "nuscale_ch01_0020",
+      "title": "Safety Considerations",
+      "summary": "The NuScale design enhances safety by maintaining a vacuum in the containment vessel (CNV), which reduces corrosion, aids in leak detection, and limits combustible gases. Its passive safety systems and integral design eliminate the need for external power and large coolant loops, significantly lowering the risk of core damage and making the plant safer than conventional light water reactors.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "32",
+      "hop": 1
+    },
+    "nuscale_ch01_0412": {
+      "node_id": "nuscale_ch01_0412",
+      "title": "SRP 9.5.6, Rev 3: Emergency Diesel Engine Starting SystemAll (II.1 thru II.4)Compliance with GDC 2, GDC 4, GDC 5, and GDC 17",
+      "summary": "The NuScale plant design does not include or require safety-related emergency diesel generators, and therefore the associated systems (fuel oil storage, cooling water, starting, lubrication, and air intake/exhaust) and their compliance with regulatory criteria are not applicable. The plant’s safety functions do not rely on either AC or DC power sources.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "260",
+      "hop": 1
+    },
+    "nuscale_ch01_0669": {
+      "node_id": "nuscale_ch01_0669",
+      "title": "DSRS 15.1.1-15.1.4, Rev 0: Decrease in Feedwater Temperature, Increase in Feedwater Flow, Increase in Steam Flow, and Inadvertent Opening of the Turbine Bypass System or Inadvertent Operation of the Decay Heat Removal SystemII.4 Specific CriterionInstrument Spans and Setpoints use RG 1.105",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for abnormal operating occurrences such as changes in feedwater temperature, flow, steam flow, and inadvertent system operations. It confirms that NuScale meets requirements for system pressure, maintains the minimum critical heat flux ratio (MCHFR) above safety limits, ensures that anticipated operational occurrences (AOOs) do not escalate to more serious conditions, and uses Regulatory Guide 1.105 for instrument spans and setpoints. Overall, NuScale’s design aligns with the relevant sections of the Standard Review Plan and Design Specific Review Standard.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "289",
+      "hop": 2
+    },
+    "nuscale_ch01_0044": {
+      "node_id": "nuscale_ch01_0044",
+      "title": "Chemical and Volume Control System",
+      "summary": "The Chemical and Volume Control System section describes the NuScale reactor’s closed-loop, two-phase natural circulation cooling system, which uses two independent trains of decay heat removal equipment, each capable of fully cooling the reactor. In the event of a steam generator tube failure or loss of AC power, passive systems transfer decay heat to a large, stainless steel-lined pool (the ultimate heat sink), ensuring continued cooling through natural circulation and heat rejection to the atmosphere or external sinks.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "41",
+      "hop": 2
+    },
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain fuel integrity, minimize solid deposits, and ensure uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 2
+    },
+    "nuscale_ch01_0024": {
+      "node_id": "nuscale_ch01_0024",
+      "title": "Emergency Core Cooling System",
+      "summary": "The Emergency Core Cooling System (ECCS) in the NuScale design is a fully passive system that removes decay heat during a loss-of-coolant accident (LOCA) using three independent reactor vent valves and two recirculation valves, all of which are closed during normal operation. During ECCS activation, steam is vented and condensed in the containment vessel, with recirculation valves allowing water to cool the core, and heat is ultimately transferred passively to the reactor pool.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "33",
+      "hop": 2
+    },
+    "nuscale_ch01_0063": {
+      "node_id": "nuscale_ch01_0063",
+      "title": "Emergency Core Cooling System Valve Design Certification Application Demonstration Test",
+      "summary": "This section describes the demonstration test program for the Emergency Core Cooling System (ECCS) valves in the NuScale reactor design. The program aimed to verify the functional performance of the ECCS valves, including their operation at reactor pressures and temperatures and in borated coolant, as well as the effectiveness of unique design features like the inadvertent actuation block (IAB). Testing was conducted at a specialized facility using a test article representative of the reactor recirculation valve (RRV) to ensure the valves meet safety and operational requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "89",
+      "hop": 2
+    },
+    "nuscale_ch01_0666": {
+      "node_id": "nuscale_ch01_0666",
+      "title": "DSRS 15.1.1-15.1.4, Rev 0: Decrease in Feedwater Temperature, Increase in Feedwater Flow, Increase in Steam Flow, and Inadvertent Opening of the Turbine Bypass System or Inadvertent Operation of the Decay Heat Removal SystemII.1 Specific CriterionSystem Pressure",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for abnormal operational events such as changes in feedwater temperature, flow, steam flow, and inadvertent system operations. It confirms that NuScale meets requirements for system pressure, critical heat flux limits, event classification, and instrument setpoints, ensuring plant safety and compliance with the Standard Review Plan and Design Specific Review Standard. No exceptions or non-conformances are noted.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "289",
+      "hop": 2
+    },
+    "nuscale_ch01_0202": {
+      "node_id": "nuscale_ch01_0202",
+      "title": "DSRS 7.1.5, Rev 0: Diversity and Defense in DepthII.1 Methods for performing D3 analyses of reactor protection systems",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for reactor protection systems, specifically focusing on diversity and defense-in-depth (D3) analyses. It details compliance with various regulatory guides and standards, including NUREG/CR-6303, SECY-93-087, and 10 CFR 50.62, confirming that the NuScale I&C design meets the required guidelines for safety, independence, redundancy, and quality assurance.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "234",
+      "hop": 3
+    },
+    "nuscale_ch01_0209": {
+      "node_id": "nuscale_ch01_0209",
+      "title": "DSRS 7.2.1 Rev. 0: Quality II.2 Conformance to RG 1.152",
+      "summary": "This section summarizes NuScale’s conformance with various regulatory guides and standards for safety-related instrumentation and control (I&C) systems. Specifically, DSRS 7.2.1 Rev. 0: Quality II.2 confirms that the NuScale design meets the requirements of Regulatory Guide (RG) 1.152, as referenced in Table 1.9-2. The document provides a cross-reference to where detailed compliance information can be found.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "234",
+      "hop": 3
+    },
+    "nuscale_ch01_0278": {
+      "node_id": "nuscale_ch01_0278",
+      "title": "SRP Appendix 8-A, Rev1: General Agenda, Station Site VisitsAll Various",
+      "summary": "This section summarizes NuScale’s conformance with various regulatory criteria related to DC power systems and station blackout requirements. It notes that NuScale partially conforms to several regulatory guides, with some requirements not applicable due to the design’s passive safety features and the responsibilities assigned to the COL applicant. Additionally, SRP Appendix 8-A is identified as not applicable, as it pertains to NRC staff site visits during licensing reviews rather than design certification.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "240",
+      "hop": 3
+    },
+    "nuscale_ch01_0275": {
+      "node_id": "nuscale_ch01_0275",
+      "title": "DSRS 8.4, Rev 0: Station BlackoutII.1 Compliance with 10 CFR 50.63 and the guidelines of RG 1.155",
+      "summary": "This section summarizes NuScale’s compliance with regulatory requirements for station blackout (SBO) and related DC power systems. The design partially conforms to several regulatory guides (RG 1.155, RG 1.153, RG 1.63) and 10 CFR 50.63, with some requirements not applicable due to the passive safety features of the NuScale design, which can maintain safety functions for 72 hours without AC power. Responsibilities for certain maintenance and site-specific requirements are assigned to the COL applicant referencing the certified design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "240",
+      "hop": 3
+    },
+    "nuscale_ch01_0712": {
+      "node_id": "nuscale_ch01_0712",
+      "title": "DSRS 15.2.1-15.2.5, Rev 0: Loss of External Load; Turbine Trip; Loss of Condenser Vacuum; Closure of Main Steam Isolation Valve; and Steam Pressure Regulator Failure (Closed)II.3.A Values of Parameters Used in Analytical Model - Initial Power Level and Modes of Operation",
+      "summary": "This section confirms that the analytical models used for evaluating events such as loss of external load, turbine trip, loss of condenser vacuum, main steam isolation valve closure, and steam pressure regulator failure (closed) conform to the regulatory criteria specified in DSRS 15.2.1-15.2.5. It specifically states that the values of parameters used in the models—such as initial power level, modes of operation, scram characteristics, core burnup, and instrumentation setpoints—are in compliance, with no exceptions noted. The referenced table indicates ongoing conformance with the applicable sections of the Standard Review Plan and Design Specific Review Standard.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "296",
+      "hop": 3
+    },
+    "nuscale_ch01_0715": {
+      "node_id": "nuscale_ch01_0715",
+      "title": "DSRS 15.2.1-15.2.5, Rev 0: Loss of External Load; Turbine Trip; Loss of Condenser Vacuum; Closure of Main Steam Isolation Valve; and Steam Pressure Regulator Failure (Closed)II.3.D Values of Parameters Used in Analytical Model - Instrumentation Setpoints for Mitigating System Actuation",
+      "summary": "This section confirms that the NuScale Final Safety Analysis Report meets the regulatory criteria for DSRS 15.2.1-15.2.5 events, including loss of external load, turbine trip, loss of condenser vacuum, main steam isolation valve closure, and steam pressure regulator failure (closed). Specifically, it states that the analytical model's parameters—such as instrumentation setpoints for mitigating system actuation—conform to requirements, with no exceptions noted.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "296",
+      "hop": 3
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0413",
+      "target": "nuscale_ch01_0812",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A explains that the NuScale design eliminates the need for emergency diesel generators by not relying on AC or DC power for safety functions, while Section B describes how passive safety features (e.g., reactor trip signals) provide protective actions without backup power, thus supporting the justification for eliminating emergency diesel generators."
+    },
+    {
+      "source": "nuscale_ch01_0413",
+      "target": "nuscale_ch01_0050",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A states that the NuScale design does not require or include safety-related emergency diesel generators due to reliance on passive safety systems, while Section B describes the Central Utility Building as nonsafety-related and does not mention housing emergency diesel generators, supporting the claim in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0413",
+      "target": "nuscale_ch01_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A states that NuScale's design eliminates the need for emergency diesel generators by not relying on AC or DC power for safety functions, while Section B describes passive safety features (such as maintaining a vacuum in the containment vessel) that support this design choice."
+    },
+    {
+      "source": "nuscale_ch01_0413",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A states that NuScale does not require emergency diesel generators due to reliance on passive safety systems, while Section B describes specific passive safety features (e.g., vacuum in the CNV) that contribute to plant safety, thus providing technical justification for the design choice in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0413",
+      "target": "nuscale_ch01_0412",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A and Section B both state that the NuScale plant design does not require or include safety-related emergency diesel generators, referencing the same regulatory criteria and justifying non-applicability based on the plant's reliance on passive safety systems rather than AC or DC power."
+    },
+    {
+      "source": "nuscale_ch01_0812",
+      "target": "nuscale_ch01_0050",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the NuScale design's reliance on passive safety systems and reactor trip signals instead of traditional backup options like emergency diesel generators, while Section B describes the diesel generator buildings as nonsafety-related, indicating that the design intentionally does not depend on them for safety functions."
+    },
+    {
+      "source": "nuscale_ch01_0812",
+      "target": "nuscale_ch01_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses backup safety options and the exclusion of certain methods in the NuScale design, while Section B describes passive safety features (vacuum in the CNV) that contribute to system reliability, thus Section B provides supporting evidence for the adequacy of passive safety systems referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0812",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes passive safety features of the NuScale design (such as maintaining a vacuum in the containment vessel) that support the justification in Section A for not requiring traditional backup options like emergency diesel generators."
+    },
+    {
+      "source": "nuscale_ch01_0812",
+      "target": "nuscale_ch01_0412",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A discusses NuScale's reliance on passive safety systems and reactor trip signals to prevent thermal hydraulic instability, while Section B states that the NuScale design does not require emergency diesel generators because no AC or DC power is needed for safety functions, thus both sections provide technical and regulatory justification for eliminating emergency diesel generators based on passive safety features."
+    },
+    {
+      "source": "nuscale_ch01_0050",
+      "target": "nuscale_ch01_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the Central Utility Building's functions, which do not include safety-related emergency diesel generators, while Section B outlines passive safety features (such as the containment vessel vacuum) that may serve as justification for not requiring diesel generators, connecting them through the adequacy of passive safety as a replacement for active backup power."
+    },
+    {
+      "source": "nuscale_ch01_0050",
+      "target": "nuscale_ch01_0412",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the physical infrastructure related to utility services, including the absence of safety-related emergency diesel generators, while Section B explicitly states that the NuScale design does not require or include such generators because safety functions do not rely on AC or DC power, thus Section B provides the regulatory justification for the design approach described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0022",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 1.0,
+      "description": "Section A and Section B are identical excerpts describing the benefits of maintaining a vacuum in the CNV, thus they reinforce each other's claims about safety feature materials and safety considerations."
+    },
+    {
+      "source": "nuscale_ch01_0022",
+      "target": "nuscale_ch01_0412",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B states that the NuScale design does not require emergency diesel generators because no AC or DC power is relied upon for safety functions, while Section A describes features of the containment vessel that support passive safety, thus Section A provides evidence supporting the justification in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0020",
+      "target": "nuscale_ch01_0412",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes passive safety features of the NuScale design that reduce reliance on active systems, while Section B states that emergency diesel generators are not required because no AC or DC power is needed for safety functions, thus Section A's design features are used to justify the elimination described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0669",
+      "target": "nuscale_ch01_0413",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A discusses the NuScale plant's conformance with regulatory criteria for certain operational transients, while Section B explicitly states that the NuScale design does not require emergency diesel generators due to reliance on passive safety systems, thus Section B provides justification for the design approach referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0669",
+      "target": "nuscale_ch01_0812",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes how NuScale's system pressure and instrument setpoints conform to regulatory criteria for certain transients, while Section B explains that NuScale's design uses reactor trip signals (rather than backup options like exclusion zones) to prevent thermal hydraulic instability, both addressing how passive and automatic systems replace traditional active safety features like emergency diesel generators."
+    },
+    {
+      "source": "nuscale_ch01_0669",
+      "target": "nuscale_ch01_0050",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses regulatory criteria and conformance for system responses to certain operational events, while Section B describes the physical plant structures and notes that the Central Utility Building (where diesel generators would typically be located) is nonsafety-related, connecting them through the context of whether safety functions (like emergency power) are required or justified by passive safety systems."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0413",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the passive safety systems (decay heat removal via natural circulation and passive condensers) that eliminate the need for emergency diesel generators, while Section B documents that the NuScale design does not include or require emergency diesel generators because no AC or DC power is relied upon for safety functions, thus Section A's design approach is presented as the justification for the regulatory position in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0812",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the passive decay heat removal capabilities of the NuScale system, which are intended to fulfill the backup safety functions that Section B requires as alternatives to traditional active systems like emergency diesel generators."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0050",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the passive safety systems (decay heat removal) that are intended to replace the emergency diesel generators referenced in Section B, thus providing the technical justification for their elimination."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch01_0413",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the passive safety features of the NuScale reactor coolant system that rely on natural circulation and do not require active components, while Section B states that emergency diesel generators are not included or required because no AC or DC power is needed for safety functions, thus Section A's design approach is used to justify the regulatory position in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch01_0812",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the NuScale reactor's reliance on passive natural circulation for coolant flow, while Section B outlines regulatory review criteria for backup safety options, connecting them through the need to justify the elimination of active safety systems (like emergency diesel generators) by demonstrating that passive systems meet regulatory safety requirements."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch01_0050",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the design basis for the reactor coolant system relying on passive natural circulation without active pumps, while Section B notes that the Central Utility Building, which would typically house emergency diesel generators, is nonsafety-related and does not mention such generators, connecting the justification for eliminating emergency diesel generators to the reliance on passive safety systems."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0413",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the passive ECCS design that removes decay heat without AC or DC power, while Section B states that emergency diesel generators are not required because no safety functions rely on such power, thus Section A's passive system is presented as the justification for the elimination referenced in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0812",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the passive Emergency Core Cooling System (ECCS) as NuScale's method for decay heat removal during a LOCA, while Section B outlines regulatory review criteria for backup safety options, indicating that NuScale relies on passive systems and reactor trip signals instead of traditional backup options like emergency diesel generators."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0050",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the passive Emergency Core Cooling System (ECCS) that provides decay heat removal without reliance on active systems like diesel generators, while Section B notes that diesel generator buildings are not safety-related, connecting them through the justification that passive systems in A replace the safety function traditionally provided by B."
+    },
+    {
+      "source": "nuscale_ch01_0063",
+      "target": "nuscale_ch01_0413",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A provides test evidence of the operability and effectiveness of passive safety system components (ECCS valves), which is used to justify the claim in Section B that emergency diesel generators are not required for NuScale's safety functions."
+    },
+    {
+      "source": "nuscale_ch01_0063",
+      "target": "nuscale_ch01_0812",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides test results confirming the operability of ECCS valves, which are part of the passive safety systems that serve as justification for eliminating emergency diesel generators as discussed in Section B's regulatory review context."
+    },
+    {
+      "source": "nuscale_ch01_0063",
+      "target": "nuscale_ch01_0050",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the testing and operability of the Emergency Core Cooling System (ECCS) valves, which are part of the passive safety systems intended to justify the elimination of emergency diesel generators described in Section B as nonsafety-related infrastructure."
+    },
+    {
+      "source": "nuscale_ch01_0666",
+      "target": "nuscale_ch01_0413",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A documents that NuScale's passive safety systems conform to regulatory criteria for specific accident scenarios without referencing emergency diesel generators, while Section B states that the NuScale design does not require emergency diesel generators for safety functions, implying reliance on passive systems instead of active backup power."
+    },
+    {
+      "source": "nuscale_ch01_0666",
+      "target": "nuscale_ch01_0812",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A documents that the NuScale design conforms to regulatory criteria for certain transient events without specifying backup power sources, while Section B discusses the absence of exclusion zone backup options and reliance on inherent reactor trip signals rather than active backup systems like emergency diesel generators, thus both sections address how passive or inherent safety features replace traditional backup power requirements."
+    },
+    {
+      "source": "nuscale_ch01_0666",
+      "target": "nuscale_ch01_0050",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses regulatory criteria for system pressure response to certain transients, while Section B describes the non-safety-related status of the diesel generator buildings, connecting them by indicating that emergency diesel generators are not classified as safety-related in the NuScale design, which is relevant to justifying their elimination based on passive safety system performance."
+    },
+    {
+      "source": "nuscale_ch01_0669",
+      "target": "nuscale_ch01_0044",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines regulatory criteria and accident scenarios that require conformance, while Section B describes the passive safety features (such as the decay heat removal system) that are designed to address those scenarios, thus providing evidence that the passive systems can satisfy the regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0669",
+      "target": "nuscale_ch05_0003",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes the passive safety features of the NuScale reactor coolant system, which Section A references as part of its justification for eliminating emergency diesel generators by demonstrating conformance with regulatory criteria for system pressure and response to transients."
+    },
+    {
+      "source": "nuscale_ch01_0669",
+      "target": "nuscale_ch01_0024",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section B describes the passive Emergency Core Cooling System (ECCS) that provides decay heat removal during a loss-of-coolant accident, which supports the justification in Section A for eliminating emergency diesel generators by demonstrating conformance with regulatory criteria for system pressure and accident response."
+    },
+    {
+      "source": "nuscale_ch01_0669",
+      "target": "nuscale_ch01_0063",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B provides test results confirming the operability and performance of the Emergency Core Cooling System (ECCS) valves, which supports the justification in Section A that passive safety systems (such as ECCS) can adequately address certain accident scenarios, thereby supporting the elimination of emergency diesel generators as discussed in the regulatory conformance context."
+    },
+    {
+      "source": "nuscale_ch01_0669",
+      "target": "nuscale_ch01_0666",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed instrument spans and setpoints (using RG 1.105) that specify how the system pressure criteria in Section B are monitored and controlled for the same set of transients."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch05_0003",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the passive decay heat removal capability of the chemical and volume control system, which supports the design basis in Section B that relies on natural circulation and passive safety features instead of active components like emergency diesel generators."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0024",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the passive decay heat removal capability of the Chemical and Volume Control System, while Section B details the Emergency Core Cooling System's passive heat removal during a LOCA, together providing evidence that passive systems can fulfill the safety functions traditionally served by emergency diesel generators."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0063",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the passive decay heat removal capability of the NuScale system, while Section B provides test results confirming the operability of the emergency core cooling system valves, both of which are passive safety features that together support the justification for eliminating emergency diesel generators."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0666",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the passive decay heat removal capability of the NuScale system, while Section B states that the system conforms to regulatory criteria for specific transients, indicating that the passive system in A satisfies the requirements in B."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch01_0024",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A describes the passive natural circulation design of the reactor coolant system, which is a prerequisite for the passive Emergency Core Cooling System detailed in Section B, as both systems together form the basis for eliminating the need for emergency diesel generators."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch01_0063",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the reliance on passive natural circulation in the reactor coolant system, while Section B provides test evidence confirming the operability of key emergency core cooling system valves that are integral to the passive safety approach, thus supporting the justification for eliminating emergency diesel generators."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch01_0666",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the NuScale reactor's reliance on passive natural circulation for coolant flow, while Section B outlines regulatory criteria for system pressure response to certain transients, connecting them through the need for the passive system in A to satisfy the safety performance requirements in B."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0063",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the passive ECCS design and its function in decay heat removal, while Section B provides test results confirming the operability and performance of ECCS valves, thereby supporting the adequacy of the passive safety justification for eliminating emergency diesel generators."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0666",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the passive Emergency Core Cooling System (ECCS) design, which is intended to remove decay heat without active components, while Section B lists regulatory criteria (DSRS 15.1.1-15.1.4) that the NuScale design claims to conform to, thus connecting the ECCS's passive safety function to the regulatory requirements for system pressure control during certain transients."
+    },
+    {
+      "source": "nuscale_ch01_0063",
+      "target": "nuscale_ch01_0666",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides test results demonstrating the operability of ECCS valves, which are part of the passive safety systems that are relevant to justifying the elimination of emergency diesel generators as discussed in Section B's regulatory conformance criteria."
+    },
+    {
+      "source": "nuscale_ch01_0202",
+      "target": "nuscale_ch01_0413",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A outlines the conformance of NuScale's instrumentation and control systems with regulatory criteria for safety, while Section B explicitly states that the NuScale design does not require emergency diesel generators because no AC or DC power is relied upon for safety functions, thus connecting the justification for eliminating EDGs (Section B) to the safety system design principles and regulatory compliance described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0202",
+      "target": "nuscale_ch01_0812",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A outlines the regulatory criteria and conformance for instrumentation and control (I&C) systems important to safety, while Section B addresses backup options and protective actions for thermal hydraulic stability, connecting them through the requirement that passive safety systems and I&C must collectively ensure safety in the absence of emergency diesel generators."
+    },
+    {
+      "source": "nuscale_ch01_0202",
+      "target": "nuscale_ch01_0050",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A outlines the regulatory criteria and acceptance standards for safety system design, including requirements for redundancy and independence, while Section B describes the physical plant structures and notes that the Central Utility Building, which could house emergency diesel generators, is nonsafety-related and does not mention such generators, connecting them through the implication that the design omits safety-related diesel generators in favor of other safety provisions."
+    },
+    {
+      "source": "nuscale_ch01_0209",
+      "target": "nuscale_ch01_0413",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A documents NuScale's conformance with regulatory criteria for safety-related instrumentation and control systems, while Section B explicitly states that the NuScale design does not require emergency diesel generators due to its reliance on passive safety systems, thus Section B provides the justification that Section A's safety approach does not depend on emergency diesel generators."
+    },
+    {
+      "source": "nuscale_ch01_0209",
+      "target": "nuscale_ch01_0812",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A outlines NuScale's conformance with regulatory criteria for safety-related I&C systems, while Section B discusses backup safety options and the exclusion of certain thermal hydraulic stability methods, both addressing how the design meets or substitutes for traditional safety requirements such as emergency diesel generators."
+    },
+    {
+      "source": "nuscale_ch01_0209",
+      "target": "nuscale_ch01_0050",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A outlines regulatory conformance requirements for safety-related instrumentation and control systems, while Section B describes the Central Utility Building as a nonsafety-related structure that does not include emergency diesel generators, connecting them through the absence of safety classification for backup power systems."
+    },
+    {
+      "source": "nuscale_ch01_0278",
+      "target": "nuscale_ch01_0413",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A documents partial conformance of NuScale's DC power system design with regulatory guidance for emergency power, while Section B states that the NuScale design does not require emergency diesel generators due to reliance on passive safety systems, thus Section B provides the justification that Section A's partial conformance is acceptable."
+    },
+    {
+      "source": "nuscale_ch01_0278",
+      "target": "nuscale_ch01_0812",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses partial conformance of NuScale's DC power systems (including elimination of emergency diesel generators) with regulatory guidance, while Section B addresses backup safety options and the design's reliance on passive safety features instead of traditional backup power, thus Section A's design choices are justified by the passive safety system evidence in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0278",
+      "target": "nuscale_ch01_0050",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses partial conformance with regulatory criteria for onsite DC power systems, including aspects related to emergency diesel generator system (EDSS) design, while Section B describes the physical plant structures and notes that the Central Utility Building (CUB) is nonsafety-related and does not house safety-related diesel generators, connecting them through the absence and classification of emergency diesel generators in the NuScale design."
+    },
+    {
+      "source": "nuscale_ch01_0275",
+      "target": "nuscale_ch01_0413",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A discusses partial conformance with regulatory guidance for onsite DC power systems and emergency diesel generator (EDG) design, while Section B states that the NuScale design does not include safety-related EDGs and claims that no AC or DC power is relied upon for safety functions, thus connecting them through the justification for eliminating EDGs based on passive safety system reliance."
+    },
+    {
+      "source": "nuscale_ch01_0275",
+      "target": "nuscale_ch01_0812",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses partial conformance with regulatory criteria for onsite DC power systems and emergency diesel generator design, while Section B describes the NuScale design's reliance on passive safety features (such as reactor trip signals and thermal hydraulic stability) as backup options, thus Section B provides the technical justification that supports the elimination of emergency diesel generators referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0275",
+      "target": "nuscale_ch01_0050",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses regulatory conformance and partial compliance regarding emergency diesel generator (EDG) design and requirements, while Section B describes the physical plant structures, explicitly noting that the Central Utility Building (CUB) is nonsafety-related and does not include safety-related diesel generators, thus Section B provides context for the absence of EDGs referenced in Section A's regulatory discussion."
+    },
+    {
+      "source": "nuscale_ch01_0712",
+      "target": "nuscale_ch01_0413",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides the analytical model and operational parameters used to demonstrate safety system performance during specific transients, while Section B states that the NuScale design does not require emergency diesel generators because no AC or DC power is relied upon for safety functions, thus Section A's analysis is intended to justify the design approach described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0712",
+      "target": "nuscale_ch01_0812",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides the analytical model parameters and conformance for transient events relevant to loss of power scenarios, while Section B discusses backup safety options and the exclusion of certain methods in the NuScale design, both addressing how passive safety features and operational responses compensate for the absence of emergency diesel generators."
+    },
+    {
+      "source": "nuscale_ch01_0712",
+      "target": "nuscale_ch01_0050",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the analytical modeling and regulatory conformance for certain transient events without referencing emergency diesel generators, while Section B describes the physical plant structures and notes that the Central Utility Building (where diesel generators would typically be housed) is nonsafety-related, implying that emergency diesel generators are not part of the safety case—thus, Section B provides contextual support for the design approach analyzed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0715",
+      "target": "nuscale_ch01_0413",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides analytical model parameters and setpoints for mitigating system actuation in various transient scenarios, while Section B states that the NuScale design does not require emergency diesel generators because no AC or DC power is relied upon for safety functions, thus Section A's reliance on passive safety system parameters is used to justify the elimination described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0715",
+      "target": "nuscale_ch01_0812",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides the analytical model parameters and instrumentation setpoints for mitigating system actuation during certain transients, while Section B discusses backup options and protective actions (such as reactor trip signals) that prevent thermal hydraulic instability, both addressing how passive safety features respond to loss-of-power scenarios relevant to justifying the elimination of emergency diesel generators."
+    },
+    {
+      "source": "nuscale_ch01_0715",
+      "target": "nuscale_ch01_0050",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the analytical model and instrumentation setpoints for mitigating system actuation in response to certain plant transients, while Section B describes the physical plant structures and notes that the Central Utility Building (where diesel generators would typically be located) is nonsafety-related, connecting them through the implication that emergency diesel generators are not required for safety-related functions due to reliance on passive safety systems."
+    },
+    {
+      "source": "nuscale_ch01_0202",
+      "target": "nuscale_ch01_0209",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A and Section B both document conformance of NuScale's I&C systems to the same set of regulatory criteria and guidance (e.g., RG 1.75, RG 1.152, RG 1.53), with Section B referencing the same acceptance criteria and regulatory guides as Section A."
+    },
+    {
+      "source": "nuscale_ch01_0202",
+      "target": "nuscale_ch01_0278",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A outlines the conformance of NuScale's I&C systems with regulatory criteria for defense-in-depth and redundancy, while Section B details partial conformance of NuScale's DC power systems (including aspects related to emergency power) with regulatory guidance, thus Section A's justification for eliminating emergency diesel generators is supported by the evidence of partial regulatory conformance in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0202",
+      "target": "nuscale_ch01_0275",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A outlines the conformance of NuScale's instrumentation and control systems with regulatory criteria for defense-in-depth and redundancy, while Section B addresses compliance with station blackout requirements and the partial conformance of DC power systems in the absence of emergency diesel generators, thus Section A's safety system design is intended to support the justification in Section B for eliminating emergency diesel generators."
+    },
+    {
+      "source": "nuscale_ch01_0202",
+      "target": "nuscale_ch01_0712",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A specifies the fundamental design principles and regulatory conformance for safety system independence and redundancy, which are prerequisites for the analytical models and parameter values used in Section B to justify system performance during transient events."
+    },
+    {
+      "source": "nuscale_ch01_0202",
+      "target": "nuscale_ch01_0715",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A specifies the design principles and regulatory conformance for instrumentation and control (I&C) systems important to safety, while Section B applies these principles by using I&C setpoints in analytical models to demonstrate mitigation of specific transient events, thus connecting the general requirements in A to their application in B."
+    },
+    {
+      "source": "nuscale_ch01_0209",
+      "target": "nuscale_ch01_0278",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A details NuScale's conformance with regulatory criteria for I&C systems important to safety, while Section B addresses partial conformance of NuScale's DC power systems (including aspects related to emergency power) with relevant regulatory guides, thus both sections are connected through their evaluation of compliance with safety-related regulatory requirements for critical systems."
+    },
+    {
+      "source": "nuscale_ch01_0209",
+      "target": "nuscale_ch01_0275",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A outlines NuScale's conformance with regulatory criteria for instrumentation and control (I&C) systems important to safety, while Section B addresses compliance with station blackout requirements and the partial conformance of DC power systems in the absence of emergency diesel generators, thus Section A's safety system design claims are directly relevant to Section B's justification for eliminating emergency diesel generators."
+    },
+    {
+      "source": "nuscale_ch01_0209",
+      "target": "nuscale_ch01_0712",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A lists regulatory conformance for I&C system design principles, while Section B provides analytical model parameters for transient events, with both sections connected through their reliance on regulatory criteria to justify the adequacy of passive safety systems in the absence of emergency diesel generators."
+    },
+    {
+      "source": "nuscale_ch01_0209",
+      "target": "nuscale_ch01_0715",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A specifies the regulatory conformance and quality requirements for instrumentation and control (I&C) systems important to safety, while Section B provides the analytical model and instrumentation setpoints used to demonstrate that these I&C systems can adequately mitigate specific transient events, thus connecting the design requirements in A to the operational justification in B."
+    },
+    {
+      "source": "nuscale_ch01_0278",
+      "target": "nuscale_ch01_0275",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A and Section B both assess NuScale's conformance with regulatory guidance (e.g., RG 1.153, RG 1.63) regarding onsite DC power systems and emergency diesel generator (EDG) requirements, with Section B specifically addressing compliance in the context of station blackout scenarios, thus providing the regulatory context for evaluating the adequacy of eliminating EDGs as discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0278",
+      "target": "nuscale_ch01_0712",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses partial conformance of NuScale's DC power system (including aspects of emergency diesel generator elimination) with regulatory guidance, while Section B provides analytical modeling of plant response to transients that would test the adequacy of passive safety systems in the absence of emergency diesel generators, thus Section B provides evidence relevant to justifying the approach described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0278",
+      "target": "nuscale_ch01_0715",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses partial conformance of the NuScale design with regulatory criteria for onsite DC power systems, including aspects related to emergency diesel generator (EDG) requirements, while Section B presents analytical models and setpoints for passive safety system actuation during specific transients, thereby providing technical justification for the elimination of EDGs as referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0275",
+      "target": "nuscale_ch01_0712",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses partial conformance with regulatory criteria for onsite DC power systems and emergency diesel generator design, while Section B provides analytical models and parameter values for transient events that would test the adequacy of passive safety systems in the absence of emergency diesel generators, thus Section B's analyses are used to justify or challenge the design approach described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0275",
+      "target": "nuscale_ch01_0715",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses partial conformance of NuScale's DC power systems (including elimination of emergency diesel generators) with regulatory guidance, while Section B presents analytical models and setpoints for passive safety system actuation during transient events, thus Section B provides evidence supporting whether the passive systems can compensate for the absence of emergency diesel generators as described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0712",
+      "target": "nuscale_ch01_0715",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A provides the initial power levels and modes of operation used in the analytical model, which are necessary prerequisites for the instrumentation setpoints for mitigating system actuation described in Section B, as the setpoints depend on these initial conditions."
+    }
+  ]
+}

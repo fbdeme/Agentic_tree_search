@@ -1,0 +1,150 @@
+{
+  "timestamp": "2026-03-24T09:22:44.692914",
+  "evaluation_framework": "RAGAs v0.4",
+  "config": {
+    "model": "gpt-4.1",
+    "evaluator_model": "gpt-4.1",
+    "embedding_model": "text-embedding-3-small",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 5,
+    "errors": 1
+  },
+  "metrics_description": {
+    "faithfulness": "Fraction of claims in the answer that are supported by the retrieved context (0-1)",
+    "answer_relevancy": "How relevant the answer is to the question, measured by reverse question generation (0-1)",
+    "context_recall": "Fraction of expected answer sentences supported by retrieved context (0-1)",
+    "factual_correctness": "Factual overlap between agent answer and expected answer (0-1)",
+    "keyword_hit": "Fraction of expected keywords present in the agent answer (0-1)"
+  },
+  "summary": {
+    "faithfulness": 0.8846,
+    "answer_relevancy": 0.9116,
+    "context_recall": 0.7917,
+    "factual_correctness": 0.5375,
+    "keyword_hit": 0.4
+  },
+  "by_type": {
+    "text_only": {
+      "count": 4,
+      "faithfulness": 0.8846,
+      "answer_relevancy": 0.9116,
+      "context_recall": 0.7917,
+      "factual_correctness": 0.5375,
+      "keyword_hit": 0.4
+    }
+  },
+  "results": [
+    {
+      "id": "Q071",
+      "type": "text_only",
+      "question": "How does the NuScale natural circulation driving force compare to forced circulation in a conventional PWR?",
+      "expected_answer": "NuScale relies on buoyancy-driven natural circulation with no RCPs, producing lower flow rates than forced circulation PWRs. This is acceptable because the lower power density of the NuScale core requires less coolant flow for adequate heat removal.",
+      "agent_answer": "**Core Conclusion:**  \nThe NuScale reactor relies on natural circulation for coolant flow, which provides a significantly lower driving force compared to the forced circulation (pump-driven) systems used in conventional PWRs. However, the NuScale design compensates for this by minimizing flow resistance and optimizing system geometry.\n\n**Supporting Evidence:**  \n- **Natural Circulation in NuScale:**  \n  - “The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator…” ([nuscale_ch05_0002], [nuscale_ch05_0003], [nuscale_ch05_0004]).\n  - Figures 5.1-1 and 5.1-3 show the integrated, vertical arrangement of the core and steam generators, which maximizes the elevation difference (driving head) for natural circulation.\n- **Comparison to Forced Circulation:**  \n  - Conventional PWRs use reactor coolant pumps to provide a much higher driving force, enabling higher flow rates and overcoming greater system resistance.\n  - NuScale’s system evaluation notes: “The analysis also accounts for uncertainties in flow resistance and system design, emphasizing the plant’s low pressure losses and natural circulation capabilities.” ([nuscale_ch05_0006])\n- **Flow Rates:**  \n  - Table 5.1-2 shows NuScale’s best-estimate core flow at 100% power is 587 kg/s, achieved solely by natural circulation.\n  - In contrast, conventional PWRs typically achieve much higher flow rates (several thousand kg/s) due to pump-driven forced circulation.\n- **Design Adaptations:**  \n  - The NuScale RCS is designed with “low pressure losses” and “optimized system geometry” ([nuscale_ch05_0006]), compensating for the weaker natural circulation driving force.\n\n**Uncertainties:**  \n- The exact quantitative comparison of driving force (e.g., pressure head in meters or psi) is not provided in the knowledge graph, but the qualitative difference is clear.\n\n**Summary:**  \nNuScale’s natural circulation driving force is much lower than the forced circulation in conventional PWRs, but the design’s low resistance and vertical integration enable sufficient coolant flow for safe operation.  \n**References:** [nuscale_ch05_0002], [nuscale_ch05_0003], [nuscale_ch05_0004], [nuscale_ch05_0006], Table 5.1-2, Figures 5.1-1, 5.1-3.",
+      "faithfulness": 0.7692,
+      "answer_relevancy": 0.8122,
+      "context_recall": 0.5,
+      "factual_correctness": 0.59,
+      "keyword_hit": 0.2,
+      "kg_nodes": 11,
+      "kg_edges": 30,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 98.4,
+      "eval_sec": 34.3,
+      "total_sec": 132.6,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0002] Summary Description | node: [nuscale_ch05_0003] Design Basis | node: [nuscale_ch05_0004] System Description | node: [nuscale_ch05_0006] System Evaluation | edge: REFERENCES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS",
+        "Hop 2: node: [nuscale_ch05_0012] Reactor Coolant Pressure Boundary Leakag | node: [nuscale_ch05_0016] Pressure-Temperature Limits, Pressurized | node: [nuscale_ch05_0017] Reactor Vessel Integrity | node: [nuscale_ch05_0005] System Components | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: IS_PREREQUISITE_OF | edge: SUPPORTS | edge: SUPPORTS | edge: SPECIFIES | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SPECIFIES",
+        "Hop 3: node: [nuscale_ch05_0020] Steam Generators | node: [nuscale_ch05_0021] Reactor Coolant System Piping | edge: SPECIFIES | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS | edge: IS_PREREQUISITE_OF | edge: SUPPORTS | edge: SUPPORTS",
+        "Hop 4: node: [nuscale_ch05_0022] Decay Heat Removal System | edge: SUPPORTS | edge: IS_PREREQUISITE_OF | edge: IS_PREREQUISITE_OF"
+      ]
+    },
+    {
+      "id": "Q072",
+      "type": "text_only",
+      "question": "How does the NuScale containment differ from a conventional large dry containment?",
+      "expected_answer": "NuScale uses a compact steel containment vessel (CNV) operating under vacuum, while conventional PWRs use large concrete dry containments at near-atmospheric pressure. The NuScale CNV is submerged in the reactor pool, providing direct heat transfer capability, while conventional containments rely on spray and fan cooler systems.",
+      "agent_answer": "**Core Conclusion:**  \nThe NuScale containment differs fundamentally from a conventional large dry containment in its size, configuration, and safety systems: it is a small, steel, evacuated (vacuum) pressure vessel that relies on passive safety features and lacks many of the active systems and secondary containment found in conventional designs.\n\n**Supporting Evidence:**\n\n1. **Containment Type and Size:**  \n   - NuScale uses a \"Steel Pressure Vessel\" with an inner diameter of 14 ft-2 in. and a height of 75 ft-8.5 in., compared to a conventional \"PCCV\" (prestressed concrete containment vessel) with an inner diameter of 140 ft and height of 205 ft (Table 1.3-1, node [nuscale_ch01_0052]).\n   - The NuScale containment is shown as a compact, integral vessel in Figure 1.2-6.\n\n2. **Vacuum and Passive Features:**  \n   - The NuScale containment is maintained under vacuum during normal operation, which reduces corrosion, aids leak detection, and limits combustible gases (nodes [nuscale_ch01_0020], [nuscale_ch01_0022]).\n   - Passive safety systems eliminate the need for external power and large external piping, reducing the risk of large-break LOCAs (Table 1.2-2, node [nuscale_ch01_0052]).\n\n3. **Absence of Conventional Systems:**  \n   - NuScale does **not** include a containment spray system, sump, or secondary containment, nor does it use fission product clean-up or pressure suppression systems (nodes [nuscale_ch01_0168], [nuscale_ch01_0189], [nuscale_ch01_0167], [nuscale_ch01_0169], [nuscale_ch01_0171]).\n   - Table 1.3-2 shows that systems like the containment spray, hydrogen recombiner, and emergency diesel generators are present in conventional plants but **absent** in NuScale.\n\n4. **Fission Product Control:**  \n   - Fission product control in NuScale is achieved by the containment vessel and its isolation features, not by active clean-up or suppression systems (node [nuscale_ch01_0169]).\n\n**Uncertainties:**  \nNo significant uncertainties are noted; all claims are directly supported by the referenced nodes and tables.\n\n**Summary:**  \nNuScale’s containment is a small, steel, evacuated vessel relying on passive safety, with no secondary containment, spray, or suppression systems—unlike the large, complex, actively managed containments of conventional PWRs.",
+      "faithfulness": null,
+      "answer_relevancy": 0.9468,
+      "context_recall": 1.0,
+      "factual_correctness": 0.32,
+      "keyword_hit": 0.6,
+      "kg_nodes": 16,
+      "kg_edges": 52,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 130.7,
+      "eval_sec": 57.7,
+      "total_sec": 188.4,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0014] Acronyms and Abbreviations | node: [nuscale_ch01_0168] SRP 6.5.3, Rev 3: Fission Product Contro | node: [nuscale_ch01_0189] BTP 6-2, Rev 3: Minimum Containment Pres | node: [nuscale_ch01_0035] Fuel Handling and Reactor Maintenance Ar | node: [nuscale_ch01_0188] BTP 6-1, (March 2007): pH for Emergency  | node: [nuscale_ch01_0167] SRP 6.5.3, Rev 3: Fission Product Contro | edge: REFERENCES | edge: REFERENCES | edge: SPECIFIES | edge: REFERENCES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: REFERENCES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS",
+        "Hop 2: node: [nuscale_ch01_0020] Safety Considerations | node: [nuscale_ch01_0052] Comparison with Other Facilities | node: [nuscale_ch01_0022] Engineered Safety Feature Materials | node: [nuscale_ch01_0003] Plant Location | edge: SPECIFIES | edge: SUPPORTS | edge: REFERENCES | edge: SUPPORTS | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: REFERENCES | edge: SPECIFIES | edge: SPECIFIES | edge: SUPPORTS | edge: SEMANTIC | edge: SPECIFIES | edge: SUPPORTS | edge: REFERENCES | edge: SPECIFIES",
+        "Hop 3: node: [nuscale_ch01_0048] Security Buildings | node: [nuscale_ch01_0050] Diesel Generator Buildings | edge: IS_PREREQUISITE_OF | edge: SUPPORTS | edge: CONTRADICTS | edge: SUPPORTS",
+        "Hop 4: node: [nuscale_ch01_0169] SRP 6.5.3, Rev 3: Fission Product Contro | node: [nuscale_ch01_0171] SRP 6.5.5, Rev 1: Pressure Suppression P | node: [nuscale_ch01_0390] SRP 9.5.1.1, Rev 0: Fire Protection Prog | node: [nuscale_ch01_0391] SRP 9.5.1.2, Rev 0: Risk-Informed, Perfo | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: REFERENCES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SEMANTIC | edge: SEMANTIC | edge: SEMANTIC | edge: SUPPORTS | edge: SUPPORTS"
+      ]
+    },
+    {
+      "id": "Q073",
+      "type": "text_only",
+      "question": "How does the NuScale passive safety approach compare to active safety systems in conventional PWRs?",
+      "expected_answer": "NuScale uses passive safety systems that operate without AC power or operator action, relying on natural forces like gravity and natural circulation. Conventional PWRs require active pumps, diesel generators, and operator actions for emergency core cooling and heat removal.",
+      "agent_answer": "**Core Conclusion:**  \nThe NuScale passive safety approach fundamentally differs from the active safety systems in conventional PWRs by eliminating reliance on external power and active mechanical/electrical components for core cooling and accident mitigation, resulting in a lower core damage frequency and simplified safety case.\n\n**Supporting Evidence:**  \n- **Passive Safety Systems:** NuScale’s design uses passive safety features such as a vacuum in the containment vessel (CNV) to reduce corrosion, facilitate leak detection, and minimize heat transfer and combustible gases ([nuscale_ch01_0021], [nuscale_ch01_0020], [nuscale_ch01_0022]).  \n- **No Need for Active Systems:** The Emergency Core Cooling System (ECCS) is fully passive, using reactor vent and recirculation valves that operate without external power. During an accident, steam is vented and condensed within containment, and water is recirculated passively to cool the core ([nuscale_ch01_0024], Figure 1.2-9).  \n- **Comparison with Conventional PWRs:** Conventional PWRs require multiple active systems—such as safety injection pumps, emergency diesel generators, and safety-related electrical distribution—to perform safety functions ([Table 1.3-2]). NuScale eliminates these, as shown by the absence of such components in its design ([Table 1.3-1], [nuscale_ch01_0052]).  \n- **Regulatory Implications:** Regulatory requirements for active AC power systems (e.g., open phase condition criteria) are not applicable to NuScale due to its passive approach ([nuscale_ch01_0289]).  \n- **Lower Core Damage Frequency:** The passive design and small core inventory reduce the risk of large-break LOCA and result in a lower core damage frequency compared to conventional reactors ([nuscale_ch01_0021], [nuscale_ch01_0020], [nuscale_ch01_0022]).\n\n**Uncertainties:**  \n- The evidence does not quantify the exact reduction in core damage frequency.\n- Some regulatory conformance for active equipment is only partially applicable ([nuscale_ch01_0150]).\n\n**Summary Table Reference:**  \n- Table 1.3-2 shows that NuScale does not require active safety systems (e.g., safety injection, emergency diesel generators), unlike conventional PWRs.\n\n**In summary:**  \nNuScale’s passive safety approach replaces the need for active safety systems found in conventional PWRs, relying instead on inherent physical processes and design features to ensure safety during accidents.",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9033,
+      "context_recall": 1.0,
+      "factual_correctness": 0.71,
+      "keyword_hit": 0.2,
+      "kg_nodes": 16,
+      "kg_edges": 65,
+      "hops_used": 3,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 137.9,
+      "eval_sec": 36.7,
+      "total_sec": 174.6,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0021] Engineered Safety Features and Emergency | node: [nuscale_ch01_0020] Safety Considerations | node: [nuscale_ch01_0022] Engineered Safety Feature Materials | node: [nuscale_ch01_0289] SRP BTP 8-9, Rev. 0: Open Phase Conditio | node: [nuscale_ch01_0150] DSRS 3.11, Rev. 0: Environmental Qualifi | edge: SATISFIES | edge: IS_PREREQUISITE_OF | edge: SATISFIES | edge: CONTRADICTS | edge: SATISFIES | edge: CONTRADICTS | edge: CONTRADICTS",
+        "Hop 2: node: [nuscale_ch01_0209] DSRS 7.2.1 Rev. 0: Quality II.2 Conforma | node: [nuscale_ch01_0202] DSRS 7.1.5, Rev 0: Diversity and Defense | node: [nuscale_ch01_0052] Comparison with Other Facilities | node: [nuscale_ch01_0736] SRP 15.4.2, Rev 3: Uncontrolled Control  | node: [nuscale_ch01_0024] Emergency Core Cooling System | node: [nuscale_ch01_0063] Emergency Core Cooling System Valve Desi | edge: SATISFIES | edge: SUPPORTS | edge: SATISFIES | edge: SATISFIES | edge: SATISFIES | edge: SATISFIES | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: REFERENCES | edge: SUPPORTS | edge: SUPPORTS | edge: SATISFIES | edge: SATISFIES | edge: SPECIFIES | edge: SATISFIES | edge: SATISFIES | edge: SUPPORTS | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS",
+        "Hop 3: node: [nuscale_ch01_0324] SRP 9.2.2, Rev 4: Reactor Auxiliary Cool | node: [nuscale_ch01_0682] DSRS 15.1.5, Rev 0: Steam System Piping  | node: [nuscale_ch01_0325] SRP 9.2.2, Rev 4: Reactor Auxiliary Cool | node: [nuscale_ch01_0192] BTP 6-5, Rev 3: Currently the Responsibi | node: [nuscale_ch01_0680] DSRS 15.1.5, Rev 0: Steam System Piping  | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: CONTRADICTS | edge: SUPPORTS | edge: CONTRADICTS | edge: SATISFIES | edge: SEMANTIC | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS",
+        "Hop 4: Early stop — evidence sufficient"
+      ]
+    },
+    {
+      "id": "Q074",
+      "type": "text_only",
+      "error": "Error code: 400 - {'error': {'message': \"We could not parse the JSON body of your request. (HINT: This likely means you aren't using your HTTP library correctly. The OpenAI API expects a JSON payload, but what was sent was not valid JSON. If you have trouble figuring out how to fix this, please contact us through our help center at help.openai.com.)\", 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+      "keyword_hit": 0,
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_recall": null,
+      "factual_correctness": null
+    },
+    {
+      "id": "Q075",
+      "type": "text_only",
+      "question": "How does NuScale's integral steam generator design differ from external U-tube steam generators?",
+      "expected_answer": "NuScale uses helical coil SGs integrated within the RPV annulus, with primary coolant on the shell side and feedwater/steam inside the tubes. Conventional PWRs use external U-tube SGs with primary coolant inside the tubes. The integral design eliminates large primary piping between RPV and SG.",
+      "agent_answer": "**Core Conclusion:**  \nNuScale’s integral steam generator design is fundamentally different from traditional external U-tube steam generators because it is fully contained within the reactor pressure vessel (RPV) and uses a helical, once-through tube bundle, eliminating the need for external piping and large U-tube structures.\n\n**Supporting Evidence:**\n\n1. **Integral Location:**  \n   - The steam generators are “integrated within the reactor pressure vessel, forming part of the reactor coolant pressure boundary” ([nuscale_ch05_0020], [nuscale_ch05_0014], [nuscale_ch05_0019], [nuscale_ch05_0015]).  \n   - This contrasts with external U-tube steam generators, which are located outside the RPV and require large external piping.\n\n2. **Tube Bundle Design:**  \n   - NuScale uses a “helical, once-through” tube bundle ([Table 5.4-2], node [nuscale_ch05_0021]), as shown in Figure 5.4-1.  \n   - Traditional designs use U-shaped tubes arranged vertically in a separate vessel.\n\n3. **System Integration and Safety:**  \n   - The integral design “eliminates external piping and relies on natural circulation without pumps” ([nuscale_ch05_0003]), reducing potential leak paths and simplifying safety analysis.\n   - The RPV “houses the reactor core, steam generators, and pressurizer within a single vessel” ([nuscale_ch05_0014], [nuscale_ch05_0015]).\n\n4. **Support Structure:**  \n   - The helical tubes are supported by a novel internal support structure (see Figures 5.4-6 and 5.4-7), designed to minimize vibration and wear ([nuscale_ch05_0021]).\n\n**Uncertainties:**  \n- The knowledge graph does not provide a direct side-by-side comparison with all operational aspects of external U-tube steam generators, but the core structural and system integration differences are clearly described.\n\n**Summary:**  \nNuScale’s steam generators are integral, helical, and once-through, fully contained within the RPV, unlike external U-tube steam generators, which are separate vessels with U-shaped tubes and require external piping.  \n(Evidence: [nuscale_ch05_0020], [nuscale_ch05_0014], [nuscale_ch05_0015], [nuscale_ch05_0021], Table 5.4-2, Figures 5.4-1, 5.4-6, 5.4-7)",
+      "faithfulness": null,
+      "answer_relevancy": 0.9842,
+      "context_recall": 0.6667,
+      "factual_correctness": 0.53,
+      "keyword_hit": 0.6,
+      "kg_nodes": 7,
+      "kg_edges": 15,
+      "hops_used": 3,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 54.9,
+      "eval_sec": 62.3,
+      "total_sec": 117.3,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0019] Reactor Coolant System Component and Sub | node: [nuscale_ch05_0025] References | edge: REFERENCES",
+        "Hop 2: node: [nuscale_ch05_0020] Steam Generators | node: [nuscale_ch05_0014] Reactor Vessel | node: [nuscale_ch05_0015] Reactor Vessel Materials | edge: REFERENCES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: REFERENCES | edge: SUPPORTS | edge: SUPPORTS",
+        "Hop 3: node: [nuscale_ch05_0021] Reactor Coolant System Piping | node: [nuscale_ch05_0003] Design Basis | edge: SPECIFIES | edge: REFERENCES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES",
+        "Hop 4: no results"
+      ]
+    }
+  ]
+}

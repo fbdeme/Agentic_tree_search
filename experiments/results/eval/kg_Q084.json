@@ -1,125 +1,404 @@
 {
-  "question": "Explain the material of the steam generator tubes and their heat exchange performance.",
+  "question": "How does the NuScale operating pressure in Table 1.2-1 compare to the LTOP setpoints in Table 5.2-10?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0002": {
-      "node_id": "nuscale_ch05_0002",
-      "title": "Summary Description",
-      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve independent modules, maintains proper coolant chemistry, and ensures uniform boron concentration to protect fuel integrity during all operating conditions.",
+    "nuscale_ch01_0557": {
+      "node_id": "nuscale_ch01_0557",
+      "title": "DSRS 12.3-12.4, Rev 0: Radiation Protection Design FeaturesII.8 RG 8.10",
+      "summary": "This section summarizes the NuScale Final Safety Analysis Report’s conformance with various regulatory guides related to radiation protection design features. It details whether each regulatory guide is applicable, not applicable, or partially/conforms, with references to supporting sections or tables for further information. The document demonstrates a structured approach to regulatory compliance, noting specific areas of full, partial, or non-applicability.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "8",
+      "source_doc": "nuscale_ch01",
+      "page_range": "278",
       "hop": 1
     },
-    "nuscale_ch05_0022": {
-      "node_id": "nuscale_ch05_0022",
-      "title": "Decay Heat Removal System",
-      "summary": "The Decay Heat Removal System (DHRS) is an engineered safety feature designed to remove residual and core decay heat during non-LOCA events when normal cooling is unavailable, ensuring safe shutdown of the NuScale Power Module without external power. The system maintains the reactor coolant system (RCS) temperature below 420°F within 36 hours after an initiating event, preventing fuel or pressure boundary limits from being exceeded, and its reliability and risk significance are evaluated through established programs and criteria.",
+    "nuscale_ch01_0015": {
+      "node_id": "nuscale_ch01_0015",
+      "title": "General Plant Description",
+      "summary": "This section provides a summary of the NuScale plant’s overall design, including key systems such as safety features, power conversion, fuel handling, cooling, and waste management. It explains the distinction between certified and site-specific design elements, clarifies the use of representative information for context, and notes how security-related details are handled. The section also references figures illustrating the plant layout and system boundaries.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "106",
+      "source_doc": "nuscale_ch01",
+      "page_range": "26",
       "hop": 1
     },
-    "nuscale_ch05_0020": {
-      "node_id": "nuscale_ch05_0020",
-      "title": "Steam Generators",
-      "summary": "The steam generators (SGs) in the NuScale Power Module are integrated within the reactor pressure vessel (RPV), which also houses other key components such as the pressurizer and safety valves. The SG system includes feedwater and main steam piping, thermal relief valves, and access ports, with the RPV itself forming the outer pressure boundary for the SGs and their associated components.",
+    "nuscale_ch01_0228": {
+      "node_id": "nuscale_ch01_0228",
+      "title": "DSRS 7.2.8, Rev 0: Auxiliary FeaturesAll Various",
+      "summary": "This section summarizes NuScale’s conformance with various regulatory criteria for auxiliary features and related systems. It notes that for DSRS 7.2.8 (Auxiliary Features), there are no specific acceptance criteria, but overall, the NuScale design conforms to applicable standards and guidance across multiple DSRS sections, including setpoints, control of access, system interactions, and display/monitoring requirements. Where partial conformance or additional references are noted, further details are provided in referenced tables.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "91",
+      "source_doc": "nuscale_ch01",
+      "page_range": "236",
       "hop": 1
     },
-    "nuscale_ch05_0025": {
-      "node_id": "nuscale_ch05_0025",
-      "title": "References",
-      "summary": "This section details the materials used in the construction of the NuScale pressurizer and its components, specifying alloys and standards for each part to ensure corrosion resistance and compatibility with operating environments. It references relevant sections of the BPVC (Boiler and Pressure Vessel Code) and lists the specific alloys and material specifications for the baffle plate, heater bundles, cover plate, heater sheaths, and bolting.",
+    "nuscale_ch01_0227": {
+      "node_id": "nuscale_ch01_0227",
+      "title": "DSRS 7.2.7, Rev 0: Setpoints II.3 Generic Letter (GL) 91-04",
+      "summary": "This section summarizes NuScale’s conformance with various regulatory criteria for nuclear safety-related instrumentation setpoints and control systems. It confirms that NuScale’s setpoint methodology aligns with NRC guidance, including Generic Letter 91-04, and relevant industry standards such as ISA-67.04.01-2006 and IEEE Std 7-4.3.2-2003. The document also notes areas of full or partial compliance with additional regulatory guides for auxiliary features, control access, system interactions, and monitoring requirements.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "130",
+      "source_doc": "nuscale_ch01",
+      "page_range": "236",
       "hop": 1
     },
-    "nuscale_ch05_0003": {
-      "node_id": "nuscale_ch05_0003",
-      "title": "Design Basis",
-      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain fuel integrity, minimize solid deposits, and ensure uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
+    "nuscale_ch01_0019": {
+      "node_id": "nuscale_ch01_0019",
+      "title": "Operating Characteristics",
+      "summary": "The NuScale Power Module (NPM) operates using natural circulation for reactor coolant flow, eliminating the need for pumps, and features a small, modular, integral pressurized water reactor design with passive safety systems that do not rely on electrical power. The NPM is partially immersed in a reactor pool, has dedicated emergency cooling and decay heat removal systems, and allows for flexible power maneuvering through control rods and boron concentration adjustments. The Nuclear Steam Supply System (NSSS) integrates the reactor core, steam generators, and pressurizer within the reactor pressure vessel, further enhancing safety and efficiency.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "8",
+      "source_doc": "nuscale_ch01",
+      "page_range": "29",
+      "hop": 1
+    },
+    "nuscale_ch01_0072": {
+      "node_id": "nuscale_ch01_0072",
+      "title": "Combined License Information Items",
+      "summary": "This section outlines the interface requirements between the NuScale Power Plant certified design and the site-specific design provided in the combined license (COL) application. It distinguishes between conceptual design information (CDI) for non-certified portions and COL information items, which are site-specific responsibilities of the COL applicant. The section also notes that COL applicants must address all COL information items and provide a list of any departures from the certified design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "108",
+      "hop": 1
+    },
+    "nuscale_ch01_0160": {
+      "node_id": "nuscale_ch01_0160",
+      "title": "DSRS 3.11, Rev. 0: Environmental Qualification of Mechanical and Electrical EquipmentII.25 Design and Procurement Specifications",
+      "summary": "This section outlines NuScale’s conformance with various regulatory criteria related to the environmental qualification of mechanical and electrical equipment, as well as design and procurement specifications. It notes that certain requirements, such as DSRS 3.11 II.25, are not applicable to NuScale and are instead items for the COL applicant, while other standards (e.g., SRP 3.12 and 3.13) are confirmed as being met. Additionally, guidance specific to BWR plants is marked as not applicable to NuScale’s design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "201",
+      "hop": 1
+    },
+    "nuscale_ch01_0558": {
+      "node_id": "nuscale_ch01_0558",
+      "title": "DSRS 12.3-12.4, Rev 0: Radiation Protection Design FeaturesII.9 RG 8.15",
+      "summary": "This section summarizes the NuScale Final Safety Analysis Report’s conformance with various regulatory guides related to radiation protection design features. It details whether each Regulatory Guide (RG) is applicable, not applicable, conforms, or partially conforms, with references to relevant sections for further information. The table provides a structured overview of compliance status for each guide, supporting regulatory review and transparency.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "278",
+      "hop": 1
+    },
+    "nuscale_ch01_0014": {
+      "node_id": "nuscale_ch01_0014",
+      "title": "Acronyms and Abbreviations",
+      "summary": "This section explains the conventions used in the NuScale Final Safety Analysis Report (FSAR) for numbering tables, figures, and pages, as well as the handling of proprietary and sensitive information. Tables and figures are numbered according to their section, and sensitive content is withheld from the public version in accordance with regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "10",
       "hop": 2
     },
-    "nuscale_ch05_0019": {
-      "node_id": "nuscale_ch05_0019",
-      "title": "Reactor Coolant System Component and Subsystem Design",
-      "summary": "This section describes the design of the NuScale Power Module’s Reactor Coolant System (RCS) components and subsystems, including the reactor pressure vessel, steam generators, safety and emergency valves, and associated piping. It details how the steam generators are integrated into the reactor vessel, forming part of the reactor coolant pressure boundary, and outlines the separation between the primary and secondary sides within the system.",
+    "nuscale_ch01_0706": {
+      "node_id": "nuscale_ch01_0706",
+      "title": "DSRS 15.2.1-15.2.5, Rev 0: Loss of External Load; Turbine Trip; Loss of Condenser Vacuum; Closure of Main Steam Isolation Valve; and Steam Pressure Regulator Failure (Closed)II.2.B Fuel Cladding Integrity",
+      "summary": "The section confirms that the NuScale design meets the regulatory criteria outlined in DSRS 15.2.1-15.2.5 for events such as loss of external load, turbine trip, loss of condenser vacuum, closure of the main steam isolation valve, and steam pressure regulator failure (closed), specifically regarding fuel cladding integrity. It notes that NuScale does not have a steam pressure regulator and that the design conforms to requirements for incidents of moderate frequency, instrument setpoints, single failures, and performance of nonsafety-related systems, with no exceptions or additional comments.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "91",
+      "source_doc": "nuscale_ch01",
+      "page_range": "295",
+      "hop": 2
+    },
+    "nuscale_ch01_0709": {
+      "node_id": "nuscale_ch01_0709",
+      "title": "DSRS 15.2.1-15.2.5, Rev 0: Loss of External Load; Turbine Trip; Loss of Condenser Vacuum; Closure of Main Steam Isolation Valve; and Steam Pressure Regulator Failure (Closed)II.2.E Most Limiting Plant System Single Failure",
+      "summary": "The section confirms that the NuScale design meets regulatory criteria for events such as loss of external load, turbine trip, loss of condenser vacuum, main steam isolation valve closure, and steam pressure regulator failure (closed), even though NuScale does not have a steam pressure regulator. For each scenario, the design is shown to conform to requirements for fuel cladding integrity, incidents of moderate frequency, instrument setpoints, most limiting single failures, and performance of nonsafety-related systems, with no exceptions or additional comments noted.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "295",
+      "hop": 2
+    },
+    "nuscale_ch01_0722": {
+      "node_id": "nuscale_ch01_0722",
+      "title": "DSRS 15.2.7, Rev 0: Loss of Normal Feedwater FlowII.1 Fuel and System Pressure Parameters met",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for various design basis events, including loss of normal feedwater flow and loss of nonemergency AC power. For each event, the document confirms compliance with system pressure, fuel integrity, and analytical modeling requirements, noting that NuScale categorizes events as anticipated operational occurrences (AOO) and infrequent events (IE), and applies conservative analytical methods as required.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "297",
       "hop": 3
+    },
+    "nuscale_ch01_0052": {
+      "node_id": "nuscale_ch01_0052",
+      "title": "Comparison with Other Facilities",
+      "summary": "This section compares the major design features and parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It highlights differences in size, output, and safety systems, noting that NuScale uses significantly smaller modules, fewer components, and simplified systems compared to conventional PWRs. The provided tables summarize these distinctions for reference and comparison.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "79",
+      "hop": 3
+    },
+    "nuscale_ch01_0715": {
+      "node_id": "nuscale_ch01_0715",
+      "title": "DSRS 15.2.1-15.2.5, Rev 0: Loss of External Load; Turbine Trip; Loss of Condenser Vacuum; Closure of Main Steam Isolation Valve; and Steam Pressure Regulator Failure (Closed)II.3.D Values of Parameters Used in Analytical Model - Instrumentation Setpoints for Mitigating System Actuation",
+      "summary": "This section confirms that the NuScale Final Safety Analysis Report meets the regulatory criteria outlined in DSRS 15.2.1-15.2.5 for various transient events, including loss of external load, turbine trip, loss of condenser vacuum, main steam isolation valve closure, and steam pressure regulator failure (closed). Specifically, it states that the analytical model's parameters—such as instrumentation setpoints for mitigating system actuation—conform to the requirements, with no exceptions noted.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "296",
+      "hop": 3
+    },
+    "nuscale_ch01_0705": {
+      "node_id": "nuscale_ch01_0705",
+      "title": "DSRS 15.2.1-15.2.5, Rev 0: Loss of External Load; Turbine Trip; Loss of Condenser Vacuum; Closure of Main Steam Isolation Valve; and Steam Pressure Regulator Failure (Closed)II.2.A Reactor Coolant System and Main Steam System Pressures",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for various transient events affecting the reactor coolant and main steam system pressures, such as loss of external load, turbine trip, and main steam isolation valve closure. It notes that NuScale generally conforms to the requirements, except for partial conformance regarding the steam pressure regulator, as the NuScale design does not include this component.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "294",
+      "hop": 3
+    },
+    "nuscale_ch01_0769": {
+      "node_id": "nuscale_ch01_0769",
+      "title": "SRP 15.6.1, Rev 2: Inadvertent Opening of a PWR Pressurizer Relief Valve or a BWR Pressure Relief ValveAll Various",
+      "summary": "The NuScale design partially conforms to SRP 15.6.1, which addresses the inadvertent opening of pressurizer or pressure relief valves, because it does not use power-operated relief valves (PORVs) that are susceptible to inadvertent operation. Instead, NuScale uses spring-loaded ASME code safety relief valves, and any mechanical failure is bounded by analyses of inadvertent ECCS valve actuation. Thus, the guidance is only partially applicable to NuScale’s design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "305",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch05_0022",
-      "relation": "LEADS_TO",
+      "source": "nuscale_ch01_0557",
+      "target": "nuscale_ch01_0019",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section B provides the operating characteristics, including the NuScale operating pressure (from Table 1.2-1), which must be compared against the LTOP setpoints (from Table 5.2-10) to determine if the operating pressure satisfies the regulatory safety limits implied by the LTOP setpoints, as required by the analysis question."
+    },
+    {
+      "source": "nuscale_ch01_0557",
+      "target": "nuscale_ch01_0072",
+      "relation": "REFERENCES",
+      "confidence": 0.7,
+      "description": "Section A lists regulatory guidance and conformance statements related to radiation protection, while Section B outlines the interface requirements and boundaries between the certified NuScale design and site-specific COL items, with both sections referencing tables (e.g., Table 1.2-1) that may contain relevant design values such as operating pressure, thus structurally connecting them through cross-referenced documentation."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0228",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the plant's operating characteristics, which includes the operating pressure found in Table 1.2-1, while Section B discusses the regulatory conformance of setpoint methodologies relevant to the LTOP setpoints in Table 5.2-10, connecting them through the need to ensure that operating pressures comply with regulatory setpoint requirements."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0227",
+      "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A describes the overall reactor coolant system, which includes the steam generator tubes as part of its components, while Section B discusses the decay heat removal system that relies on the reactor coolant system (and thus the steam generator tubes) for transferring heat during shutdown scenarios."
+      "description": "Section A provides a general overview of the plant's operating characteristics, including operating pressure (as found in Table 1.2-1), while Section B confirms that the setpoint methodology (relevant to LTOP setpoints in Table 5.2-10) conforms to regulatory requirements, thus connecting the plant's design values to their regulatory compliance."
     },
     {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch05_0020",
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0019",
       "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general overview of the reactor coolant system, which includes the steam generators mentioned in Section B, while Section B gives specific details about the components and design of the steam generators within that system."
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the plant design, while Section B specifies the operating characteristics, including the operating pressure, which is the value to be compared against the LTOP setpoints in the analysis question."
     },
     {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch05_0025",
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0072",
       "relation": "REFERENCES",
       "confidence": 0.85,
-      "description": "Section A provides a general overview of the reactor coolant system, while Section B references specific sections where the materials of certain components (including those relevant to the steam generator) are described in detail, thus connecting the summary to the detailed material specifications."
+      "description": "Section A provides a general description of the plant, including operating characteristics such as pressure, while Section B references Section 1.2 (from A) to identify which systems and components are included in the certified design, thus connecting the general plant description to the interface requirements for licensing."
     },
     {
-      "source": "nuscale_ch05_0022",
-      "target": "nuscale_ch05_0020",
+      "source": "nuscale_ch01_0228",
+      "target": "nuscale_ch01_0227",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references the setpoint methodology and its regulatory conformance, while Section B provides the specific regulatory guidance (GL 91-04) and methodology (TR-616-49121) that Section A claims to follow, connecting them through the setpoint determination process relevant to LTOP setpoints."
+    },
+    {
+      "source": "nuscale_ch01_0228",
+      "target": "nuscale_ch01_0019",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses the setpoint methodology and regulatory conformance for safety-related instrumentation, which includes the methodology used to establish LTOP setpoints found in Table 5.2-10, while Section B describes the NuScale module's operating characteristics, including the operating pressure listed in Table 1.2-1, thus connecting the two sections through the comparison of actual operating pressure values to regulatory setpoints."
+    },
+    {
+      "source": "nuscale_ch01_0228",
+      "target": "nuscale_ch01_0072",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses the methodology and regulatory conformance for setpoints, which includes LTOP setpoints, while Section B identifies the certified design boundaries and references Table 1.2-1 where the NuScale operating pressure is specified; thus, Section A's setpoint methodology is applied to the operating pressure value found in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0227",
+      "target": "nuscale_ch01_0019",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the setpoint methodology and regulatory conformance for safety-related instrumentation, which includes LTOP setpoints, while Section B provides the operating characteristics of the NuScale module, including its operating pressure, thus connecting the design value (operating pressure) with the regulatory requirement (LTOP setpoints)."
+    },
+    {
+      "source": "nuscale_ch01_0227",
+      "target": "nuscale_ch01_0072",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the regulatory conformance of NuScale's setpoint methodology, which underpins the determination of LTOP setpoints in Table 5.2-10, while Section B identifies the certified design boundaries (including operating pressure in Table 1.2-1) that must interface with site-specific requirements, thus connecting the methodology for setpoint determination to the design values that must be compared."
+    },
+    {
+      "source": "nuscale_ch01_0019",
+      "target": "nuscale_ch01_0072",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the general operating characteristics of the NuScale module, including its design for natural circulation and passive safety, while Section B outlines the interface requirements and identifies which systems and components (such as those in Section A) are included in the certified design, thus specifying the scope of what Section A's information applies to."
+    },
+    {
+      "source": "nuscale_ch01_0014",
+      "target": "nuscale_ch01_0015",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section B provides the general context and overview of plant operating characteristics, which includes the operating pressure referenced in Table 1.2-1, while Section A explains the document structure and how to locate specific tables such as Table 1.2-1 and Table 5.2-10."
+    },
+    {
+      "source": "nuscale_ch01_0014",
+      "target": "nuscale_ch01_0228",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section B describes the regulatory conformance of NuScale's setpoint methodology, which is directly relevant for evaluating whether the operating pressure values in Section A's referenced tables comply with LTOP setpoint requirements."
+    },
+    {
+      "source": "nuscale_ch01_0706",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides the general plant description, including operating characteristics such as the NuScale operating pressure found in Table 1.2-1, which is the design value that must be compared against the LTOP setpoints referenced in Section A to assess regulatory conformance."
+    },
+    {
+      "source": "nuscale_ch01_0706",
+      "target": "nuscale_ch01_0228",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses the NuScale design's conformance with regulatory criteria for fuel cladding integrity under various transient conditions, while Section B addresses the methodology for establishing safety-related setpoints (such as LTOP setpoints), connecting them through the need to ensure that operating pressures (from Section A/Table 1.2-1) do not exceed safety setpoints (from Section B/Table 5.2-10) to maintain regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch01_0709",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides the general plant description, including operating characteristics such as the NuScale operating pressure found in Table 1.2-1, which is then compared in the analysis question to the LTOP setpoints referenced in Section A's discussion of regulatory conformance and safety analysis."
+    },
+    {
+      "source": "nuscale_ch01_0709",
+      "target": "nuscale_ch01_0228",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses the NuScale plant's design and operational scenarios, while Section B addresses the methodology and regulatory conformance for setting safety-related instrumentation setpoints, which includes the LTOP setpoints that must be compared to the operating pressure from Section A."
+    },
+    {
+      "source": "nuscale_ch01_0014",
+      "target": "nuscale_ch01_0706",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A provides information about the organization and identification of tables in the NuScale FSAR, which is necessary to locate and interpret the operating pressure in Table 1.2-1, while Section B discusses regulatory conformance related to fuel cladding integrity under certain operational events, which would be evaluated using data such as the operating pressure and LTOP setpoints found in those tables."
+    },
+    {
+      "source": "nuscale_ch01_0706",
+      "target": "nuscale_ch01_0709",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A and Section B both reference the same DSRS 15.2.1-15.2.5 regulatory criteria and NuScale FSAR conformance statements, indicating that they are structurally connected by cross-referencing the same regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0722",
+      "target": "nuscale_ch01_0015",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section B provides the general plant description, including operating characteristics such as the NuScale operating pressure found in Table 1.2-1, which is a design value that Section A references when evaluating conformance with regulatory criteria like LTOP setpoints in Table 5.2-10."
+    },
+    {
+      "source": "nuscale_ch01_0722",
+      "target": "nuscale_ch01_0228",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A provides information on system pressure parameters and their regulatory conformance, while Section B details the methodology and regulatory compliance for setpoints, connecting them through the comparison of operating pressure values (from Section A) to LTOP setpoints (from Section B) to assess regulatory adequacy."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides the general plant description and operating characteristics, including the operating pressure listed in Table 1.2-1, which is then compared in Section A to similar parameters from other facilities for context."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0228",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides nominal design parameters for the NuScale plant, which include operating pressure values, while Section B discusses the regulatory conformance of setpoint methodologies, indicating that the setpoints (such as LTOP) are established in accordance with regulatory standards and methodologies that would use the design values from Section A as input."
+    },
+    {
+      "source": "nuscale_ch01_0715",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses instrumentation setpoints for system actuation (such as LTOP setpoints) used in analytical models, while Section B provides the general plant description including operating characteristics like the NuScale operating pressure, thus connecting the specific setpoints in A to the general operating values in B for comparison."
+    },
+    {
+      "source": "nuscale_ch01_0715",
+      "target": "nuscale_ch01_0228",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section B identifies the steam generators as components within the reactor coolant system that are directly connected to the decay heat removal system described in Section A, establishing that the material and performance of the steam generator tubes are integral to the DHRS's ability to remove decay heat as required."
+      "description": "Section A discusses the analytical model parameters, including instrumentation setpoints for system actuation, while Section B describes the methodology and regulatory conformance for determining those setpoints, thus Section B provides the regulatory basis and methodology that supports the setpoints referenced in Section A."
     },
     {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch05_0022",
-      "relation": "LEADS_TO",
+      "source": "nuscale_ch01_0705",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A describes the overall reactor coolant system, which includes the steam generator tubes as part of its components, while Section B details the decay heat removal system that relies on the heat exchange performance of these tubes to remove residual heat during specific events."
+      "description": "Section B provides the general plant description, including operating characteristics such as the NuScale operating pressure found in Table 1.2-1, while Section A addresses regulatory conformance and analytical parameters, including LTOP setpoints from Table 5.2-10, thus Section A uses the design values specified in Section B to assess compliance with regulatory limits."
     },
     {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch05_0020",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general overview of the reactor coolant system, while Section B specifies the inclusion and design details of the steam generators within that system, connecting the general system description to the specific components relevant to the analysis question."
-    },
-    {
-      "source": "nuscale_ch05_0019",
-      "target": "nuscale_ch05_0002",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A provides detailed design information about the steam generators as components within the reactor coolant system, while Section B gives a general overview of the reactor coolant system and its subsystems, including the steam generators."
-    },
-    {
-      "source": "nuscale_ch05_0019",
-      "target": "nuscale_ch05_0022",
-      "relation": "LEADS_TO",
+      "source": "nuscale_ch01_0705",
+      "target": "nuscale_ch01_0228",
+      "relation": "SATISFIES",
       "confidence": 0.85,
-      "description": "Section A describes the components of the reactor coolant system, including the steam generators, while Section B explains the function of the decay heat removal system, which relies on the steam generators for heat exchange to remove decay heat."
+      "description": "Section A provides the NuScale operating pressure values from Table 1.2-1, while Section B describes the methodology and regulatory conformance for determining LTOP setpoints in Table 5.2-10, allowing a direct comparison to assess whether the operating pressure satisfies the LTOP safety limits."
     },
     {
-      "source": "nuscale_ch05_0019",
-      "target": "nuscale_ch05_0020",
+      "source": "nuscale_ch01_0722",
+      "target": "nuscale_ch01_0052",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A references the NuScale operating pressure as a design parameter, while Section B provides nominal NuScale operating pressure values for comparison with other facilities, allowing direct comparison to the LTOP setpoints in Table 5.2-10."
+    },
+    {
+      "source": "nuscale_ch01_0722",
+      "target": "nuscale_ch01_0715",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A provides information on system pressure parameters and their conformance with regulatory criteria, while Section B details the instrumentation setpoints (such as LTOP) used in analytical models, thus Section A's operating pressure values are directly compared to Section B's LTOP setpoints to assess regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch01_0722",
+      "target": "nuscale_ch01_0705",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Both Section A and Section B reference the NuScale Final Safety Analysis Report's conformance with regulatory criteria for system pressures, providing the context in which the operating pressure (Table 1.2-1) and LTOP setpoints (Table 5.2-10) are evaluated against regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0715",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A provides the nominal NuScale operating pressure value, which is the design result to be compared against the LTOP setpoints (regulatory limits) provided in Section B, to determine if the operating pressure satisfies the LTOP safety requirements."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0705",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A provides the nominal NuScale operating pressure value, which can be directly compared to the LTOP setpoints referenced in Section B to assess whether the operating pressure is within regulatory safety limits."
+    },
+    {
+      "source": "nuscale_ch01_0715",
+      "target": "nuscale_ch01_0705",
       "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general overview of the reactor coolant system components, including the steam generators, while Section B focuses specifically on the steam generators, which are one of the components listed in Section A."
+      "confidence": 0.85,
+      "description": "Section A provides the instrumentation setpoints, including LTOP setpoints, used in the analytical model, while Section B details the reactor coolant system and main steam system pressures, allowing a direct comparison between the operating pressure (from Table 1.2-1) and the LTOP setpoints (from Table 5.2-10)."
+    },
+    {
+      "source": "nuscale_ch01_0769",
+      "target": "nuscale_ch01_0015",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section B provides the general plant description, including operating characteristics such as the NuScale operating pressure found in Table 1.2-1, which is the design value that must be compared to the LTOP setpoints (regulatory safety limits) referenced in Section A's discussion of conformance with regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0769",
+      "target": "nuscale_ch01_0228",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the NuScale operating pressure values, while Section B describes the methodology and regulatory conformance for determining setpoints such as the LTOP setpoints, thus connecting the operating pressure data to the regulatory basis for setpoint selection."
     }
   ]
 }

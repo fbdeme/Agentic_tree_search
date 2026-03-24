@@ -1,153 +1,439 @@
 {
-  "question": "Explain the management of radiation exposure for RPV materials.",
+  "question": "Looking at Figure 1.2-6, how does the cutaway view of the NPM show the relative sizes of the containment and reactor vessels?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0015": {
-      "node_id": "nuscale_ch05_0015",
-      "title": "Reactor Vessel Materials",
-      "summary": "The Reactor Vessel Materials section describes the NuScale Power Module's reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a containment vessel. The RPV is constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure long-term integrity and safety, serving as a critical barrier to the release of fission products and supporting key reactor components.",
+    "nuscale_ch01_0002": {
+      "node_id": "nuscale_ch01_0002",
+      "title": "Introduction",
+      "summary": "This section introduces the NuScale Final Safety Analysis Report (FSAR), which is required for standard design certification under U.S. nuclear regulations. It outlines the scope of the report, describing the NuScale Power Module (NPM) as a modular, scalable nuclear steam supply system, and highlights key safety and design features such as passive safety systems, compact containment, and advanced digital controls.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "67",
+      "source_doc": "nuscale_ch01",
+      "page_range": "8",
       "hop": 1
     },
-    "nuscale_ch05_0011": {
-      "node_id": "nuscale_ch05_0011",
-      "title": "Reactor Coolant Pressure Boundary Inservice Inspection and Testing",
-      "summary": "This section describes the materials and standards used for threaded fasteners in key reactor coolant system components, emphasizing the use of Alloy 718 for its compatibility and stress corrosion cracking resistance. It also outlines the requirements for preservice and inservice inspection and testing of pressure-retaining components, specifying adherence to the latest ASME BPVC Section XI codes and relevant regulatory conditions for ongoing inspection intervals.",
+    "nuscale_ch01_0051": {
+      "node_id": "nuscale_ch01_0051",
+      "title": "Plant Features of Special Interest",
+      "summary": "This section describes key plant features of special interest in the NuScale Power Plant, including the Central Utility Building (CUB) and Diesel Generator Buildings (DGB), which house essential but nonsafety-related systems and backup power equipment. It also highlights human factors considerations, emphasizing fail-safe design, automation, digital controls, and workload management to minimize human error and meet regulatory requirements.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
+      "source_doc": "nuscale_ch01",
+      "page_range": "43",
+      "hop": 1
+    },
+    "nuscale_ch01_0036": {
+      "node_id": "nuscale_ch01_0036",
+      "title": "Refueling Operations",
+      "summary": "Refueling operations for a NuScale Power Module (NPM) are conducted independently from other modules. The process involves moving the NPM from its operating bay to the refueling pool, disassembling it for inspection, maintenance, and refueling, and then reassembling and returning it to service after successful testing and startup procedures.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "38",
+      "hop": 1
+    },
+    "nuscale_ch01_0001": {
+      "node_id": "nuscale_ch01_0001",
+      "title": "CHAPTER 1 INTRODUCTION AND GENERAL DESCRIPTION OF THE PLANT",
+      "summary": "This section introduces the NuScale Final Safety Analysis Report (FSAR), which is required for standard design certification under U.S. regulations. It provides an overview of the NuScale Power Module (NPM), a scalable, modular nuclear steam supply system designed for flexible deployment, highlighting its key safety features, compact design, and advanced instrumentation. The FSAR covers both individual module and multi-module plant configurations, focusing on safety analysis and operational limits.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "8",
+      "hop": 1
+    },
+    "nuscale_ch01_0035": {
+      "node_id": "nuscale_ch01_0035",
+      "title": "Fuel Handling and Reactor Maintenance Areas",
+      "summary": "The fuel handling and reactor maintenance areas are located at the west end of the Reactor Building and include spaces for the spent fuel pool, refueling pool, and dry dock, all designed to support safe fuel handling and reactor maintenance operations. These areas facilitate the movement and storage of new and spent fuel assemblies, provide radiation protection for workers, and are equipped with cranes and access points for efficient operation during refueling and maintenance activities.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
       "page_range": "37",
       "hop": 1
     },
-    "nuscale_ch05_0018": {
-      "node_id": "nuscale_ch05_0018",
-      "title": "References",
-      "summary": "This section outlines the requirements and procedures for inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fasteners for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It specifies the use of nondestructive examinations, controlled shipping environments, and quality assurance measures to ensure the integrity and safety of the reactor vessel.",
+    "nuscale_ch01_0005": {
+      "node_id": "nuscale_ch01_0005",
+      "title": "Reactor Type",
+      "summary": "The NuScale reactor is a small modular pressurized water reactor (PWR) featuring a passive safety design. Each module integrates the reactor core, steam generators, and pressurizer within a single vessel, surrounded by a steel containment vessel designed to withstand high-pressure events. The plant can include up to 12 modules, each producing 160 MWt (about 50 MWe), for a total net output of approximately 570 MWe for a 12-module facility.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "74",
-      "hop": 1
+      "source_doc": "nuscale_ch01",
+      "page_range": "9",
+      "hop": 2
     },
-    "nuscale_ch05_0016": {
-      "node_id": "nuscale_ch05_0016",
-      "title": "Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses",
-      "summary": "This section outlines the basis for establishing operational pressure and temperature limits for the reactor coolant pressure boundary (RCPB), ensuring compliance with regulatory requirements over the plant’s 60-year lifespan. It describes the methodology used to calculate pressure-temperature limit curves, accounting for vessel embrittlement, and provides the relevant figures and tables that define acceptable operating conditions to prevent non-ductile failure of the reactor vessel.",
+    "nuscale_ch01_0015": {
+      "node_id": "nuscale_ch01_0015",
+      "title": "General Plant Description",
+      "summary": "This section provides a summary of the NuScale plant’s overall design, including its main systems such as safety features, power conversion, fuel handling, cooling, and waste management. It explains the distinction between certified and site-specific design elements, clarifies the use of representative information for context, and notes how security-related details are handled. Each COL applicant must reference the NuScale FSAR and provide site-specific information as required.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "72",
-      "hop": 1
+      "source_doc": "nuscale_ch01",
+      "page_range": "26",
+      "hop": 2
     },
-    "nuscale_ch05_0012": {
-      "node_id": "nuscale_ch05_0012",
-      "title": "Reactor Coolant Pressure Boundary Leakage Detection",
-      "summary": "The NuScale reactor coolant system (RCS) does not use traditional components with designed leakage rates, making it impractical to distinguish between identified and unidentified leakage inside containment using installed instrumentation. All leakage into containment is treated as unidentified until the source is determined, with leakage rates monitored through RCS inventory balance and containment evacuation system (CES) flow rates, and operational limits set in technical specifications. The leakage detection systems are designed to be reliable, redundant, and sensitive to support safety analyses.",
+    "nuscale_ch01_0007": {
+      "node_id": "nuscale_ch01_0007",
+      "title": "Schedule",
+      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and operates under vacuum during normal conditions. The reactor is a passive, integral small modular pressurized water reactor (SMR) with natural circulation and no need for external piping or coolant pumps. Each NuScale Power Module (NPM) produces 160 MWt (about 50 MWe), and a 12-module plant yields a net output of approximately 570 MWe; applicants referencing this design must provide their own construction and operation schedules.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "41",
-      "hop": 1
+      "source_doc": "nuscale_ch01",
+      "page_range": "9",
+      "hop": 2
     },
-    "nuscale_ch05_0017": {
-      "node_id": "nuscale_ch05_0017",
-      "title": "Reactor Vessel Integrity",
-      "summary": "This section outlines the procedures and regulatory compliance measures to ensure the integrity of the NuScale reactor vessel over its 60-year design life. It details the development of operating procedures to maintain pressure-temperature limits, evaluates the vessel's resistance to pressurized thermal shock and upper-shelf energy degradation, and confirms that predicted material properties remain within regulatory safety margins throughout the vessel's operational lifespan.",
+    "nuscale_ch01_0168": {
+      "node_id": "nuscale_ch01_0168",
+      "title": "SRP 6.5.3, Rev 3: Fission Product Control Systems and StructuresII.2 Secondary Containment",
+      "summary": "The NuScale design does not include secondary containment or fission product clean-up systems, as its passive safety features and submerged containment vessel inherently control fission products. Therefore, regulatory criteria related to secondary containment and certain fission product control systems are not applicable to the NuScale Power Module, and only specific containment parameters such as leakage rates are relevant for review.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "73",
+      "source_doc": "nuscale_ch01",
+      "page_range": "229",
+      "hop": 2
+    },
+    "nuscale_ch01_0167": {
+      "node_id": "nuscale_ch01_0167",
+      "title": "SRP 6.5.3, Rev 3: Fission Product Control Systems and StructuresII.1 Primary Containment",
+      "summary": "The NuScale design partially conforms to SRP 6.5.3 requirements for primary containment, as its passive containment vessel does not include fission product clean-up or pressure suppression systems; instead, fission product control is achieved through inherent design features. Requirements related to secondary containment and other fission product control systems are not applicable, as the NuScale design does not include these features. Only the containment vessel, isolation valves, and passive barriers are credited for fission product control in the NuScale Power Plant.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "229",
+      "hop": 2
+    },
+    "nuscale_ch01_0161": {
+      "node_id": "nuscale_ch01_0161",
+      "title": "SRP 6.4, Rev 3: Control Room Habitability SystemII.5 Relative Location of Source and Control Room",
+      "summary": "This section explains that certain regulatory criteria related to control room habitability and emergency ventilation systems do not apply to the NuScale reactor design, as it uses compressed air tanks for clean air during accidents, eliminating reliance on ventilation system inlets. Dose guidelines for new reactors are partially applicable, while toxic gas hazard requirements are the responsibility of the COL applicant. Additionally, NuScale does not use engineered safety feature (ESF) filter or ventilation systems for accident mitigation, so related guidance is not applicable.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "228",
       "hop": 3
+    },
+    "nuscale_ch01_0073": {
+      "node_id": "nuscale_ch01_0073",
+      "title": "Departures",
+      "summary": "This section outlines the interface requirements between the NuScale Power Plant’s certified design and the site-specific design provided in the combined license (COL) application. It explains the types of interface requirements (CDI and COL), lists the information items that COL applicants must address, and specifies that any departures from the certified design must be documented by the COL applicant.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "108",
+      "hop": 3
+    },
+    "nuscale_ch01_0033": {
+      "node_id": "nuscale_ch01_0033",
+      "title": "General Arrangement of Major Structures and Equipment",
+      "summary": "This section describes the general arrangement of major structures and equipment at the NuScale Power Plant, focusing on the centrally located Reactor Building (RXB). The RXB is a large, reinforced concrete structure designed for safety and radiation protection, housing the NuScale Power Modules (NPMs) in a common reactor pool with individual bays arranged in two rows. The section also references detailed figures and notes that some buildings, like the administration and warehouse, are outside the report's scope.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "36",
+      "hop": 3
+    },
+    "nuscale_ch01_0390": {
+      "node_id": "nuscale_ch01_0390",
+      "title": "SRP 9.5.1.1, Rev 0: Fire Protection ProgramII.7 Operational Program and Proposed Implementation Milestones",
+      "summary": "This section explains that the operational fire protection program and its implementation milestones are the responsibility of the Combined License (COL) applicant, not the NuScale design certification applicant. NuScale acknowledges the relevant regulatory guidance but notes that full compliance, especially regarding passive separation of redundant trains, may not always be feasible due to the modular design. Therefore, NuScale ensures that fire protection measures are in place to maintain shutdown capability, while ultimate program implementation is deferred to the COL applicant.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "256",
+      "hop": 3
+    },
+    "nuscale_ch01_0060": {
+      "node_id": "nuscale_ch01_0060",
+      "title": "NuScale Integral System Test Program",
+      "summary": "The NuScale Integral System Test Program was established to collect thermal-hydraulic data for system characterization and to validate safety analysis codes using a scaled model of the NuScale Power Module (NPM). The NIST-1 facility replicates key reactor systems and supports the development and validation of proprietary safety codes, ensuring accurate modeling of the NPM’s unique features. Testing at NIST-1 has provided essential data for NuScale’s safety analysis and design certification efforts.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "87",
+      "hop": 3
+    },
+    "nuscale_ch01_0039": {
+      "node_id": "nuscale_ch01_0039",
+      "title": "Technical Support Center",
+      "summary": "The Technical Support Center (TSC) is established in compliance with NUREG-0696 requirements to support plant operations, with further details provided in Section 13.3. The TSC, along with advanced digital control systems and specialized monitoring displays in the main control room, ensures effective supervision, diagnostics, and response for all reactor modules and plant systems.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "40",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0015",
-      "target": "nuscale_ch05_0011",
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch01_0036",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A provides the overall context and regulatory basis for the NuScale design described in detail in Section B, which includes operational procedures such as refueling that depend on the physical configuration (including the relative sizes of containment and reactor vessels) depicted in Figure 1.2-6."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch01_0035",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A provides the overall context and regulatory basis for the NuScale FSAR, while Section B gives specific details about the physical layout and components relevant to the NPM, both of which are necessary to interpret Figure 1.2-6's depiction of containment and reactor vessel sizes."
+    },
+    {
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch01_0001",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A discusses the handling and movement of the NPM during refueling, which relies on the physical configuration and relative sizes of the containment and reactor vessels described in Section B's general plant description."
+    },
+    {
+      "source": "nuscale_ch01_0036",
+      "target": "nuscale_ch01_0035",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the movement and placement of the NPM during refueling, while Section B outlines the physical areas and connections used during such operations, connecting them through the logistical and spatial requirements for handling the NPM."
+    },
+    {
+      "source": "nuscale_ch01_0001",
+      "target": "nuscale_ch01_0035",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides the overall context and purpose of the FSAR, while Section B gives specific details about the physical layout and components, both of which are necessary to interpret Figure 1.2-6's depiction of the containment and reactor vessels' relative sizes."
+    },
+    {
+      "source": "nuscale_ch01_0005",
+      "target": "nuscale_ch01_0002",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A describes the RPV as a key component of the reactor coolant system, while Section B specifies the material requirements and inspection/testing standards for RPV threaded fasteners to ensure integrity under radiation exposure, thus providing detailed implementation for the general description in Section A."
+      "description": "Section A provides specific technical details about the containment vessel's design and classification, which supports Section B's general introduction to the plant's design and safety analysis as described in the FSAR."
     },
     {
-      "source": "nuscale_ch05_0015",
-      "target": "nuscale_ch05_0018",
+      "source": "nuscale_ch01_0005",
+      "target": "nuscale_ch01_0036",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the design and structural characteristics of the containment vessel, which provides context for understanding the physical arrangement and relative sizes depicted in Figure 1.2-6, while Section B discusses operational procedures that involve moving the NPM, implicitly relying on the containment and reactor vessel configuration described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0002",
       "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A provides a general description of the reactor pressure vessel (RPV) and its role in the reactor system, while Section B specifies the inspection, shipment, and handling requirements for the RPV, referencing standards that ensure its integrity and management of radiation exposure."
+      "confidence": 0.95,
+      "description": "Section A provides a detailed general description of the plant's design elements, which are introduced at a higher level in Section B as part of the overall safety analysis report context."
     },
     {
-      "source": "nuscale_ch05_0015",
-      "target": "nuscale_ch05_0016",
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0051",
+      "relation": "SEMANTIC",
+      "confidence": 0.6,
+      "description": "Section A provides a general overview of the plant design, while Section B details specific plant features such as the Central Utility Building, with both sections contributing context for understanding Figure 1.2-6 but neither directly describing the relative sizes of the containment and reactor vessels."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0036",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A provides a general overview of the plant design, which includes the containment and reactor vessels whose relative sizes are visually depicted in Figure 1.2-6, while Section B discusses refueling operations that involve moving the NPM (which includes these vessels), thus both sections reference the same physical components but from different operational perspectives."
+    },
+    {
+      "source": "nuscale_ch01_0007",
+      "target": "nuscale_ch01_0002",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides specific details about the containment vessel's design and classification, which supports the general plant description and safety analysis context introduced in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0007",
+      "target": "nuscale_ch01_0036",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the design and structural characteristics of the containment vessel, while Section B discusses operational procedures involving the movement and placement of the NPM into the containment, connecting the vessel's design to its use during refueling."
+    },
+    {
+      "source": "nuscale_ch01_0168",
+      "target": "nuscale_ch01_0002",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A discusses regulatory conformance related to containment systems, while Section B introduces the FSAR document that includes descriptions and analyses (such as Figure 1.2-6) of the plant's structures, including the containment and reactor vessels, thus Section B provides the context and source for the specific design details referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0168",
+      "target": "nuscale_ch01_0036",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the regulatory conformance and design features of the NuScale containment vessel, while Section B describes the physical movement and handling of the NPM during refueling, with both sections connected by their references to the containment vessel's structure and function as depicted in Figure 1.2-6."
+    },
+    {
+      "source": "nuscale_ch01_0167",
+      "target": "nuscale_ch01_0002",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses specific containment system features and their regulatory conformance, while Section B provides the general context and scope of the FSAR, which includes descriptions of containment and reactor vessels—thus, Section B sets the context for the detailed information in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0167",
+      "target": "nuscale_ch01_0036",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the design features and regulatory conformance of the NuScale containment vessel, while Section B describes the physical movement and handling of the NPM during refueling, with both sections connected by their focus on the containment vessel's structure and function as it relates to reactor operations."
+    },
+    {
+      "source": "nuscale_ch01_0005",
+      "target": "nuscale_ch01_0015",
       "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the physical configuration and function of the RPV within the reactor system, while Section B details the specific code requirements and examination procedures for RPV attachments, which are part of the management of radiation exposure effects on RPV materials."
+      "confidence": 0.95,
+      "description": "Section A provides specific details about the containment vessel's design and classification, which are part of the broader general plant description summarized in Section B."
     },
     {
-      "source": "nuscale_ch05_0015",
-      "target": "nuscale_ch05_0012",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the physical structure and materials of the reactor pressure vessel (RPV), while Section B discusses the detection of leakage from the reactor coolant pressure boundary (which includes the RPV), connecting them through the need to monitor and manage potential radiation exposure from RPV material degradation or leakage."
-    },
-    {
-      "source": "nuscale_ch05_0011",
-      "target": "nuscale_ch05_0018",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the selection and compatibility of RPV threaded fastener materials with the reactor environment, while Section B outlines the inspection, shipment, and storage requirements for the RPV, both referencing ASME BPVC standards to ensure material integrity and management of radiation exposure."
-    },
-    {
-      "source": "nuscale_ch05_0011",
-      "target": "nuscale_ch05_0016",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the selection and qualification of threaded fastener materials for the RPV to ensure compatibility and integrity under radiation exposure, while Section B details inspection and examination requirements for RPV attachments and welds, both referencing ASME BPVC standards to manage and verify the integrity of RPV materials under operational conditions."
-    },
-    {
-      "source": "nuscale_ch05_0011",
-      "target": "nuscale_ch05_0012",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the selection and qualification of RPV threaded fastener materials to ensure integrity and minimize degradation (including from radiation), while Section B discusses the detection of leakage from the reactor coolant pressure boundary, which could indicate material degradation or failure, thus linking material management to operational monitoring."
-    },
-    {
-      "source": "nuscale_ch05_0018",
-      "target": "nuscale_ch05_0016",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes inspection, shipment, and storage requirements for the RPV that ensure material integrity, while Section B details how these practices relate to pressure-temperature limits and weld examinations that are critical for managing radiation-induced material degradation."
-    },
-    {
-      "source": "nuscale_ch05_0018",
-      "target": "nuscale_ch05_0012",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A outlines the handling, storage, and inspection requirements for the RPV to maintain material integrity, while Section B discusses the detection of leakage from the reactor coolant pressure boundary, both of which are connected through their roles in managing and monitoring conditions that could affect radiation exposure to RPV materials."
-    },
-    {
-      "source": "nuscale_ch05_0016",
-      "target": "nuscale_ch05_0012",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A discusses inspection and examination requirements for RPV materials and attachments per ASME code, while Section B addresses the detection of leakage from the reactor coolant pressure boundary, both of which are connected through their roles in ensuring the integrity and safe management of radiation exposure from RPV materials."
-    },
-    {
-      "source": "nuscale_ch05_0017",
-      "target": "nuscale_ch05_0015",
+      "source": "nuscale_ch01_0005",
+      "target": "nuscale_ch01_0168",
       "relation": "SATISFIES",
-      "confidence": 0.95,
-      "description": "Section A describes the development of operating procedures to ensure pressure-temperature limits are not exceeded for reactor vessel integrity, which directly manages the radiation exposure effects on the RPV materials described in Section B."
+      "confidence": 0.8,
+      "description": "Section A describes the design and structural characteristics of the NuScale containment vessel, while Section B discusses how the containment vessel aligns with specific regulatory criteria for containment systems, connecting them through the vessel's design features and regulatory conformance."
     },
     {
-      "source": "nuscale_ch05_0017",
-      "target": "nuscale_ch05_0011",
+      "source": "nuscale_ch01_0005",
+      "target": "nuscale_ch01_0167",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the design and structural characteristics of the NuScale containment vessel, while Section B discusses the regulatory conformance of the containment vessel to SRP 6.5.3 requirements, specifically noting the absence of certain systems, thus Section A provides the technical details that Section B evaluates for regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0007",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the plant and its major systems, while Section B gives specific details about the containment vessel's design and classification, with both sections contributing context for interpreting Figure 1.2-6's depiction of the relative sizes of the containment and reactor vessels."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0168",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A provides a general description of the plant and its containment and reactor vessels, while Section B discusses regulatory criteria for containment systems, connecting them through the design features and regulatory expectations for containment described in both sections."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0167",
       "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A discusses the development of operating procedures to maintain reactor vessel integrity by ensuring pressure-temperature limits are not exceeded, while Section B details the material selection and inspection requirements for RPV threaded fasteners to ensure their integrity under operational conditions; both sections are connected through their focus on maintaining the structural integrity and safe operation of the RPV as part of radiation exposure management."
+      "description": "Section A provides a general description of the plant design, including the containment and reactor vessels, while Section B discusses regulatory criteria for primary containment systems, connecting them through their focus on containment design features and compliance."
     },
     {
-      "source": "nuscale_ch05_0017",
-      "target": "nuscale_ch05_0018",
+      "source": "nuscale_ch01_0007",
+      "target": "nuscale_ch01_0168",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A discusses the development of operating procedures to ensure reactor vessel integrity by maintaining pressure-temperature limits, while Section B outlines inspection and handling requirements that support the implementation and verification of these procedures, both contributing to the management of radiation exposure for RPV materials."
+      "description": "Section A describes the design and structural characteristics of the NuScale containment vessel, while Section B discusses the regulatory conformance of the containment vessel design, specifically noting the absence of certain systems, thus Section A provides technical details that support the regulatory evaluation in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0007",
+      "target": "nuscale_ch01_0167",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the design and structural characteristics of the NuScale containment vessel, while Section B discusses how the containment vessel conforms (or partially conforms) to regulatory criteria for primary containment, connecting them through the vessel's design features and regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch01_0161",
+      "target": "nuscale_ch01_0002",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references specific regulatory guidance for control room habitability systems, while Section B provides the general introduction and scope of the safety analysis report that includes such systems, connecting them through the overall regulatory framework and documentation structure."
+    },
+    {
+      "source": "nuscale_ch01_0161",
+      "target": "nuscale_ch01_0036",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses control room habitability requirements and their applicability to the NuScale design, while Section B describes the physical movement and handling of the NPM during refueling, with both sections referencing the physical configuration and containment of the NPM as relevant to safety analysis."
+    },
+    {
+      "source": "nuscale_ch01_0073",
+      "target": "nuscale_ch01_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A specifies the interface requirements and identifies structures, systems, and components included in the certified design, which are generally described in Section B's introduction to the overall plant design and safety analysis."
+    },
+    {
+      "source": "nuscale_ch01_0073",
+      "target": "nuscale_ch01_0051",
+      "relation": "REFERENCES",
+      "confidence": 0.7,
+      "description": "Section A references Figure 1.2-1 and Figure 1.2-2 to describe facility representations and boundaries, while Section B is from the general plant description section that would include Figure 1.2-6, indicating that Section A's interface discussion structurally references the context in which Section B's plant features and figures (including cutaway views) are presented."
+    },
+    {
+      "source": "nuscale_ch01_0073",
+      "target": "nuscale_ch01_0036",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A outlines the certified design boundaries and references figures that depict the overall facility layout, while Section B describes operational procedures involving the movement and placement of the NPM, both relying on the spatial relationships and representations shown in figures like Figure 1.2-6 to understand containment and reactor vessel sizes."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides specific details about the general arrangement of major structures and equipment, which are introduced in Section B as part of the overall plant description required for regulatory purposes."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0036",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the general arrangement and layout context for major structures like the containment and reactor vessels, which is foundational for understanding the spatial relationships depicted in Figure 1.2-6 that Section B relies on when describing the movement and placement of the NPM during refueling operations."
+    },
+    {
+      "source": "nuscale_ch01_0390",
+      "target": "nuscale_ch01_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses regulatory conformance requirements for fire protection programs in the context of design certification, while Section B introduces the overall purpose and scope of the Final Safety Analysis Report, which includes describing the plant design and its safety analysis—thus, Section B provides the general context within which Section A's specific regulatory requirements are addressed."
+    },
+    {
+      "source": "nuscale_ch01_0060",
+      "target": "nuscale_ch01_0002",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the test program that generates data for validating the NPM design, while Section B introduces the FSAR document that includes general descriptions and safety analyses of the plant, with both sections connected by their focus on providing technical and descriptive information about the NuScale plant design."
+    },
+    {
+      "source": "nuscale_ch01_0060",
+      "target": "nuscale_ch01_0036",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the use of a scaled test facility to characterize the NPM design, which provides technical data that supports the general plant description and operational procedures outlined in Section B, such as those involving the movement and handling of the NPM during refueling."
+    },
+    {
+      "source": "nuscale_ch01_0161",
+      "target": "nuscale_ch01_0073",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section B identifies and references figures (including Figure 1.2-2) that visually represent the certified design boundaries, which are necessary for interpreting the cutaway view discussed in Section A regarding the relative sizes of the containment and reactor vessels."
+    },
+    {
+      "source": "nuscale_ch01_0161",
+      "target": "nuscale_ch01_0060",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the regulatory context and requirements for control room habitability systems, while Section B describes the NuScale Integral System Test Program that provides technical data and validation for the NPM design, with both sections connected by their focus on demonstrating and validating safety features of the NuScale reactor system."
+    },
+    {
+      "source": "nuscale_ch01_0073",
+      "target": "nuscale_ch01_0033",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references the figures and boundaries that are further detailed in Section B's discussion of the general arrangement of major structures and equipment, connecting the certified design interfaces to the physical layout shown in the figures."
+    },
+    {
+      "source": "nuscale_ch01_0073",
+      "target": "nuscale_ch01_0390",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A describes the interface requirements and boundaries between the certified design and site-specific design, which are relevant for understanding which parts of the NPM (including containment and reactor vessels) are depicted in Figure 1.2-6, while Section B outlines regulatory criteria for fire protection that COL applicants must implement, referencing the certified design described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0073",
+      "target": "nuscale_ch01_0060",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A identifies the certified design boundaries and references figures that depict the facility layout, while Section B describes the test program that uses a scaled representation of the NPM design, thus both sections are connected through their reliance on the same design definitions and representations (such as those in Figure 1.2-6) for analysis and validation."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0060",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides the general arrangement and layout of major structures, including the containment and reactor vessels, while Section B describes the test program that uses a scaled representation of these structures to validate their design and safety performance, thus Section B supports the accuracy and relevance of the information presented in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0390",
+      "target": "nuscale_ch01_0060",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section B describes the NuScale Integral System Test Program, which generates data and validates safety codes for the NPM design, supporting the implementation and operational milestones discussed in Section A's fire protection program requirements."
     }
   ]
 }

@@ -1,0 +1,199 @@
+{
+  "question": "Using Table 5.3-3 and Figure 5.3-1, compare the irradiation effects on different RPV regions and explain why the weld has the highest ART.",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch05_0014": {
+      "node_id": "nuscale_ch05_0014",
+      "title": "Reactor Vessel",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module (NPM), which integrates the reactor core, steam generators, and pressurizer within a single reactor pressure vessel (RPV) surrounded by a containment vessel. The RPV serves as a crucial pressure boundary, housing key reactor components and providing support for various systems, and is constructed from materials selected to ensure integrity and compliance with ASME Boiler and Pressure Vessel Code standards throughout the plant's design lifetime.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
+      "hop": 1
+    },
+    "nuscale_ch05_0015": {
+      "node_id": "nuscale_ch05_0015",
+      "title": "Reactor Vessel Materials",
+      "summary": "The NuScale Power Module’s reactor pressure vessel (RPV) is a key component of the reactor coolant system, housing the core, steam generators, and pressurizer within a single vessel and serving as a barrier to fission product release. The RPV and its appurtenances are constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure integrity and safety throughout the plant’s design lifetime.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
+      "hop": 1
+    },
+    "nuscale_ch05_0017": {
+      "node_id": "nuscale_ch05_0017",
+      "title": "Reactor Vessel Integrity",
+      "summary": "This section outlines the procedures and regulatory compliance measures to ensure the integrity of the NuScale reactor vessel over its 60-year design life. It details the development of operating procedures to maintain pressure-temperature limits, evaluates the vessel’s resistance to pressurized thermal shock and upper-shelf energy degradation, and confirms that predicted material properties remain within safety criteria throughout the vessel’s operational lifespan.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "73",
+      "hop": 1
+    },
+    "nuscale_ch05_0000": {
+      "node_id": "nuscale_ch05_0000",
+      "title": "Preface",
+      "summary": "The Preface outlines the copyright and usage restrictions for the NuScale Standard Plant Design Certification Application, specifically Chapter Five on the Reactor Coolant System and Connecting Systems. It specifies that only the U.S. Nuclear Regulatory Commission (NRC) is authorized to use, copy, or disclose the document as needed for regulatory purposes, and that all copies must retain the copyright notice.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "1",
+      "hop": 1
+    },
+    "nuscale_ch05_0016": {
+      "node_id": "nuscale_ch05_0016",
+      "title": "Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses",
+      "summary": "This section outlines the basis for establishing operational pressure and temperature limits for the reactor coolant pressure boundary (RCPB) to comply with regulatory requirements over the plant’s 60-year lifespan. It describes the use of ASME and NRC methodologies to calculate pressure-temperature limit curves, accounting for vessel embrittlement, and provides these limits for various operational conditions to ensure protection against non-ductile failure.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "72",
+      "hop": 2
+    },
+    "nuscale_ch05_0018": {
+      "node_id": "nuscale_ch05_0018",
+      "title": "References",
+      "summary": "This section outlines the requirements and procedures for inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fasteners for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It specifies the use of nondestructive examinations, controlled shipping environments, and quality assurance measures, and lists the key codes and standards used for compliance.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "74",
+      "hop": 2
+    },
+    "nuscale_ch05_0013": {
+      "node_id": "nuscale_ch05_0013",
+      "title": "References",
+      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It cites guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as relevant ASME code cases for materials, quality assurance, and inspection procedures for pressurized water reactors.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "46",
+      "hop": 4
+    },
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the NuScale pressurizer, including the RPV upper shell, baffle plate, heater bundles, and associated components. It specifies the types of alloys and stainless steels used, their compliance with relevant BPVC material specifications, and highlights corrosion protection measures such as weld cladding and material compatibility.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 4
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0017",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the physical structure and components of the reactor pressure vessel (RPV), while Section B discusses the operational procedures developed to ensure the RPV's integrity under irradiation and pressure-temperature limits, connecting the vessel's design to its regulatory operational requirements."
+    },
+    {
+      "source": "nuscale_ch05_0015",
+      "target": "nuscale_ch05_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the physical composition and materials of the reactor pressure vessel (RPV), while Section B outlines the operational procedures developed to ensure the RPV's integrity under irradiation and pressure-temperature limits, connecting the material properties to procedural safeguards."
+    },
+    {
+      "source": "nuscale_ch05_0015",
+      "target": "nuscale_ch05_0000",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A provides specific technical details about the reactor vessel materials relevant to irradiation effects, while Section B is a general preface that introduces the document and its copyright, thus Section A specifies content that is generally introduced in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides detailed requirements and analyses for welds and attachments on the reactor pressure vessel (RPV), while Section B gives a general description of the RPV's structure and function, with Section A specifying details for the general components described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses weld examination and compliance requirements for RPV welds, while Section B provides a general description of the RPV and its materials, with Section A specifying details for the welds mentioned in the broader context of Section B."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the technical requirements and examination procedures for welds on the reactor pressure vessel, while Section B addresses the development of operating procedures to ensure pressure-temperature limits are not exceeded, both of which are connected through the need to maintain RPV integrity under irradiation and thermal stress conditions."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0014",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references inspection and handling requirements for the RPV, while Section B provides a general description of the RPV's structure and function, with Section A's requirements applying to the vessel described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses inspection, shipment, and storage requirements for the RPV, while Section B provides a general description of the RPV's structure and materials; Section A's requirements are applied to the RPV as described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes inspection and handling requirements for the RPV, while Section B discusses the development of operating procedures to ensure pressure-temperature limits are not exceeded, both of which are connected by their focus on maintaining reactor vessel integrity under irradiation effects as referenced in the analysis question."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0018",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A discusses weld examination and compliance requirements, while Section B outlines broader inspection and handling requirements for the RPV, both referencing ASME BPVC standards to ensure regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0014",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides references and standards that underpin the technical and regulatory basis for the integrity and analysis of the reactor pressure vessel (RPV) discussed in Section B, which describes the RPV's structure and function."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0015",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides references that support the technical basis and standards for the material properties and integrity discussed in Section B's description of the reactor vessel materials."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides references that support the technical basis for reactor vessel integrity discussed in Section B, particularly regarding compliance with pressure-temperature limits and material reliability."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides specific details about the materials and components of the pressurizer, which is a region of the RPV described more generally in Section B, thus Section A specifies the material composition for the RPV regions introduced in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific details about the materials and components of the RPV upper shell and pressurizer, which are referenced in Section B's general description of the reactor vessel and its role in the reactor coolant system."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0017",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides material composition details for RPV regions, which are necessary to interpret the irradiation effects and ART values presented in Table 5.3-3 and Figure 5.3-1, while Section B discusses the operational procedures that ensure vessel integrity in light of these irradiation effects."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B references Section 5.2, which is the subject of Section A, to specify the materials used in the RPV regions relevant to irradiation effects and ART comparison."
+    }
+  ]
+}

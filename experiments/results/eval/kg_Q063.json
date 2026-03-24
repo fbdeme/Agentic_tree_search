@@ -1,123 +1,229 @@
 {
-  "question": "Explain the simplified diagram of the Reactor Safety Valve (RSV).",
+  "question": "What pressurizer volume does Table 1.3-1 give for NuScale vs a typical PWR, and how does Table 5.1-1 detail the NuScale pressurizer volume?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0025": {
-      "node_id": "nuscale_ch05_0025",
-      "title": "References",
-      "summary": "This section details the materials used in the construction of the pressurizer and its components within the NuScale reactor coolant system. It specifies the types of steel and alloys used for various parts, their protective cladding, and compliance with relevant BPVC material specifications to ensure corrosion resistance and compatibility with operating environments.",
+    "nuscale_ch01_0558": {
+      "node_id": "nuscale_ch01_0558",
+      "title": "DSRS 12.3-12.4, Rev 0: Radiation Protection Design FeaturesII.9 RG 8.15",
+      "summary": "This section summarizes the NuScale Final Safety Analysis Report’s conformance with various regulatory guides related to radiation protection design features, as outlined in DSRS 12.3-12.4, Rev 0. It details whether each regulatory guide is applicable, and if so, whether NuScale’s design fully or partially conforms, with references to supporting sections or tables for further information. Several guides are noted as not applicable, while others are partially or fully met.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "130",
-      "hop": 1
-    },
-    "nuscale_ch05_0003": {
-      "node_id": "nuscale_ch05_0003",
-      "title": "Design Basis",
-      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain fuel integrity, minimize solid deposits, and ensure uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "8",
-      "hop": 1
-    },
-    "nuscale_ch05_0009": {
-      "node_id": "nuscale_ch05_0009",
-      "title": "Overpressure Protection",
-      "summary": "This section outlines NuScale's compliance with NRC regulations and ASME code requirements for overpressure protection of the reactor coolant boundary. It details how the plant uses specific ASME BPVC and OM code cases for design, fabrication, inspection, and testing, ensuring all selected code cases meet the conditions established in relevant NRC regulatory guides. A consolidated list of these code cases is provided in Table 5.2-1.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "21",
+      "source_doc": "nuscale_ch01",
+      "page_range": "278",
       "hop": 1
     },
     "nuscale_ch05_0004": {
       "node_id": "nuscale_ch05_0004",
       "title": "System Description",
-      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes key components such as the reactor pressure vessel, pressurizer, and associated piping and controls. It removes heat from the reactor core to the steam generators using natural circulation, and features systems for degasification and emergency core cooling to maintain safety and integrity. The RCS interfaces with several other systems, ensuring effective heat removal and containment of radionuclides.",
+      "summary": "The section describes the Reactor Coolant System (RCS) of the NuScale Power Module, highlighting its role in removing noncondensible gases and maintaining the integrity of the reactor coolant pressure boundary. The RCS, located inside the containment vessel, uses natural circulation to transport heat from the reactor core to the steam generators, with its operation supported by various interfacing systems and components.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "9",
       "hop": 1
     },
+    "nuscale_ch01_0767": {
+      "node_id": "nuscale_ch01_0767",
+      "title": "DSRS 15.5.1-15.5.2, Rev 0: Chemical and Volume Control System Malfunction That Increases Reactor Coolant InventoryII.4.B Input Parameters and Initial Conditions - Scram Characteristics",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for chemical and volume control system malfunctions that increase reactor coolant inventory, specifically addressing input parameters and initial conditions such as scram characteristics. The NuScale design is shown to conform to the relevant DSRS sections, with clarifications that certain SRP guidance does not apply due to design differences (e.g., use of spring-loaded safety valves instead of power-operated relief valves). Overall, the section documents compliance or explains non-applicability for each regulatory requirement.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "305",
+      "hop": 1
+    },
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain proper coolant flow, water chemistry, and boron concentration to protect fuel integrity and support safe operation under normal and transient conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 1
+    },
+    "nuscale_ch05_0024": {
+      "node_id": "nuscale_ch05_0024",
+      "title": "Pressurizer",
+      "summary": "The pressurizer, integrated into the upper region of the reactor vessel and separated by a baffle plate, regulates Reactor Coolant System (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering reactor trips or safety system actuations, with instrumentation providing continuous monitoring and control.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "124",
+      "hop": 1
+    },
+    "nuscale_ch01_0052": {
+      "node_id": "nuscale_ch01_0052",
+      "title": "Comparison with Other Facilities",
+      "summary": "This section compares the NuScale Power Plant’s major design features and parameters with those of a typical pressurized water reactor (PWR). It highlights differences in size, output, and system components, showing that NuScale uses smaller, simpler, and more integrated systems compared to conventional PWRs. Tables provide side-by-side comparisons of key parameters and safety systems for both designs.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "79",
+      "hop": 1
+    },
+    "nuscale_ch05_0002": {
+      "node_id": "nuscale_ch05_0002",
+      "title": "Summary Description",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve independent modules, maintains proper coolant chemistry, and ensures uniform boron concentration to protect fuel integrity during all operating conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 2
+    },
     "nuscale_ch05_0013": {
       "node_id": "nuscale_ch05_0013",
       "title": "References",
-      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as tables summarizing relevant ASME code cases for reactor components.",
+      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as specific ASME code cases relevant to reactor component materials, inspection, and safety requirements.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "46",
-      "hop": 1
+      "hop": 2
+    },
+    "nuscale_ch01_0768": {
+      "node_id": "nuscale_ch01_0768",
+      "title": "DSRS 15.5.1-15.5.2, Rev 0: Chemical and Volume Control System Malfunction That Increases Reactor Coolant InventoryII.4.C Input Parameters and Initial Conditions - Core Burnup",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria regarding malfunctions in the Chemical and Volume Control System that could increase reactor coolant inventory, specifically focusing on input parameters and initial conditions such as core burnup. It states that NuScale’s design conforms to the relevant DSRS sections, and clarifies that certain SRP guidance related to pressurizer relief valves is not applicable because NuScale does not use power-operated relief valves, but instead uses spring-loaded safety valves. Any potential mechanical failure is addressed in a separate analysis section.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "305",
+      "hop": 2
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0025",
+      "source": "nuscale_ch01_0558",
       "target": "nuscale_ch05_0003",
       "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides detailed descriptions of specific pressurizer components and their materials, which are part of the broader reactor coolant system and pressurizer overview described in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0009",
-      "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A provides detailed descriptions of the pressurizer's components and materials, which are part of the reactor coolant system relevant to the overpressure protection requirements and code compliance discussed in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0004",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides detailed descriptions of the pressurizer's structural components and materials, which are part of the Reactor Coolant System described in Section B, thereby specifying the physical elements that enable the system functions outlined in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0013",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A references Section B by directing the reader to Section 5.2 for material descriptions of the RPV upper shell and upper head, which are detailed in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch05_0009",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.9,
-      "description": "Section A describes the general design and components of the reactor coolant system, which includes the reactor pressure vessel and integral pressurizer, while Section B outlines the regulatory codes and standards (ASME BPVC, 10 CFR 50.55a) that the design and construction of these components, including safety valves, must comply with."
-    },
-    {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch05_0004",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section B provides specific details about the reactor coolant system's degasification and venting functions, which are part of the general system described in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch05_0013",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A provides a summary description of the reactor coolant system design, while Section B lists references that support the technical and regulatory basis for the integrity and quality assurance of the reactor coolant boundary, which includes components like the Reactor Safety Valve."
-    },
-    {
-      "source": "nuscale_ch05_0009",
-      "target": "nuscale_ch05_0004",
-      "relation": "SATISFIES",
-      "confidence": 0.85,
-      "description": "Section A outlines the regulatory and code compliance requirements for overpressure protection devices like the Reactor Safety Valve, while Section B describes the system features (such as vent valves and pressure-retaining components) that implement these requirements in the reactor design."
-    },
-    {
-      "source": "nuscale_ch05_0009",
-      "target": "nuscale_ch05_0013",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A discusses compliance with ASME and NRC regulatory codes for overpressure protection, while Section B lists specific references (such as ASME and EPRI documents) that support or are cited in Section A's compliance statements."
+      "description": "Section B provides a summary description of the NuScale reactor coolant system, including the integral pressurizer, which is the component whose volume is compared in Table 1.3-1 and detailed in Table 5.1-1, thus Section B specifies the technical context for the pressurizer volume values referenced in Section A."
     },
     {
       "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0013",
-      "relation": "SUPPORTS",
+      "target": "nuscale_ch01_0767",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the physical features and functions of the NuScale pressurizer, while Section B references regulatory criteria that require input parameters—including pressurizer volume—for accident analysis, thus Section A provides the technical details needed to satisfy Section B's regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
       "confidence": 0.9,
-      "description": "Section A describes the system functions and components relevant to reactor safety valves, while Section B lists reference documents that provide standards and guidelines supporting the integrity and quality assurance of those components."
+      "description": "Section A provides specific operational details about the NuScale pressurizer volume and its degasification features, while Section B gives a general design basis overview that identifies the pressurizer as part of the reactor coolant system."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides specific design details about the NuScale pressurizer's configuration and integration within the reactor vessel, elaborating on the general system description and function outlined in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch01_0052",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Table 1.3-1 in Section B provides the nominal pressurizer volume for both NuScale and a typical PWR for comparison, while Section A (Table 5.1-1) gives detailed information specifically about the NuScale pressurizer volume."
+    },
+    {
+      "source": "nuscale_ch01_0767",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides a summary description of the NuScale reactor coolant system, including the integral pressurizer, which Section A references as part of the input parameters and initial conditions for safety analysis, thus Section B details the system whose parameters are used in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0767",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A references Table 1.3-1 to provide comparative pressurizer volumes for NuScale and a typical PWR, while Section B details the NuScale pressurizer's design and volume as described in Table 5.1-1, thus Section B specifies the technical details for the general comparison in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0767",
+      "target": "nuscale_ch01_0052",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section B's Table 1.3-1 provides the nominal pressurizer volume for both NuScale and a typical PWR for comparison, while Section A references the use of such design parameters (like pressurizer volume) as input conditions for safety analysis, thus relying on the values detailed in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the reactor coolant system, including the integral pressurizer, while Section B gives specific design details about the pressurizer's configuration and function within the system described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch01_0052",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B (Table 1.3-1) provides the nominal pressurizer volume for both NuScale and a typical PWR for comparison, while Section A (Table 5.1-1) gives detailed design information specifically about the NuScale pressurizer volume."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch01_0052",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B (Table 1.3-1) provides the nominal pressurizer volume for both NuScale and a typical PWR for comparison, while Section A (Section 5.4.5) offers a detailed description of the NuScale pressurizer's design and function, elaborating on the value listed in Table 1.3-1."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides a general overview of the NuScale reactor coolant system and mentions the inclusion of an integral pressurizer, while Section B elaborates on specific system features related to the pressurizer's function, such as degasification and pressure boundary integrity, thus providing details for Section A's general description."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch01_0767",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A provides a general description of the NuScale reactor coolant system and its integral pressurizer, which is the system whose volume is specified in Table 1.3-1 and detailed in Table 5.1-1, while Section B lists regulatory criteria and input parameters for safety analyses that require the pressurizer volume as an initial condition."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A lists references used in the NuScale FSAR, while Section B provides a system description of the NuScale reactor coolant system, with both sections connected by their focus on the integrity and operational features of the reactor coolant boundary, including the pressurizer (PZR) volume."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch01_0767",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides references cited in the NuScale FSAR, while Section B describes the conformance of the NuScale FSAR with DSRS 15.5.1-15.5.2 regulatory criteria, indicating that Section A's references support the regulatory analysis discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0768",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B provides a detailed system description of the NuScale pressurizer volume and its operational features, which supports and elaborates on the input parameters and initial conditions referenced in Section A for safety analysis."
+    },
+    {
+      "source": "nuscale_ch01_0768",
+      "target": "nuscale_ch01_0767",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A and Section B both list input parameters and initial conditions for the same DSRS analysis, with Section B focusing specifically on scram characteristics, which is a subset of the broader input parameters described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0013",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A provides a summary description of the NuScale reactor coolant system and its integral pressurizer, while Section B lists references that may be used to support technical claims or requirements in Section A, such as design standards or chemistry guidelines."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch01_0768",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides a summary description of the NuScale reactor coolant system and its integral pressurizer, which is the system whose volume is detailed in Table 5.1-1, while Section B lists regulatory conformance criteria and input parameters for accident analyses that would use the pressurizer volume as an input."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch01_0768",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A lists references used in the NuScale FSAR, while Section B describes regulatory conformance for accident analyses, with Section A providing source documents that may be cited in Section B to support compliance claims."
     }
   ]
 }

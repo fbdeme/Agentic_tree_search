@@ -1,118 +1,43 @@
 {
-  "question": "What is the thermal output of the NuScale Power Module (NPM)?",
-  "current_hop": 4,
+  "question": "What is the total net electrical output of a full 12-module NuScale plant?",
+  "current_hop": 2,
   "nodes": {
-    "nuscale_ch01_0015": {
-      "node_id": "nuscale_ch01_0015",
-      "title": "General Plant Description",
-      "summary": "This section provides an overview of the NuScale plant design, summarizing key systems such as safety features, power conversion, fuel handling, cooling water, and waste management. It explains the distinction between certified and site-specific design elements, noting that some information is representative or conceptual and marked accordingly. The section also references figures illustrating the plant layout and system boundaries, and clarifies how security-related information is handled.",
+    "nuscale_ch01_0006": {
+      "node_id": "nuscale_ch01_0006",
+      "title": "Power Output",
+      "summary": "The NuScale Power Plant consists of up to 12 NuScale Power Modules (NPMs), each with a thermal output of 160 MWt and an electrical output of approximately 50 MWe, totaling about 600 MWe for a 12-module facility. After accounting for internal power use (house loads), the net electrical output is around 570 MWe, with design power including a 2% margin for measurement uncertainty.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "26",
+      "page_range": "9",
       "hop": 1
     },
-    "nuscale_ch01_0810": {
-      "node_id": "nuscale_ch01_0810",
-      "title": "DSRS 15.9.A, Rev 0: Thermal Hydraulic Stability Review ResponsibilitiesII.4 Detect and Suppress Method: Exclusion zone and buffer region methodology",
-      "summary": "The NuScale design does not use the exclusion zone or buffer region methodology for thermal hydraulic stability, as reactor trip signals are designed to prevent conditions that could lead to flow instabilities before they develop. The existing reactor trip system (RTS) provides protection that is more limiting than required, and backup detect and suppress (D&S) options are not employed or needed. Overall, the RTS ensures compliance with safety criteria by preemptively tripping the reactor, rather than detecting and suppressing instabilities after they occur.",
+    "nuscale_ch01_0008": {
+      "node_id": "nuscale_ch01_0008",
+      "title": "Format and Content",
+      "summary": "The section describes the NuScale containment vessel as a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events, with internal vacuum pressure during normal operations. The NuScale reactor is a passive, integral small modular pressurized water reactor (SMR) that uses natural circulation and eliminates the need for external piping and coolant pumps. Each NuScale Power Module (NPM) produces 160 MWt (about 50 MWe), with a 12-module plant generating a net output of approximately 570 MWe, and applicants referencing the design must provide construction schedules.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "315",
+      "page_range": "9",
       "hop": 1
     },
-    "nuscale_ch01_0068": {
-      "node_id": "nuscale_ch01_0068",
-      "title": "Electrical and Instrumentation and Control Drawings",
-      "summary": "This section describes the use of simplified electrical, instrumentation, and control (I&C) drawings in the NuScale Final Safety Analysis Report (FSAR) to visually clarify design information alongside the written text. It references tables and figures that list and explain the symbols used in these diagrams, and notes that applicants referencing the NuScale design must provide additional site-specific diagrams and legends as needed.",
+    "nuscale_ch01_0007": {
+      "node_id": "nuscale_ch01_0007",
+      "title": "Schedule",
+      "summary": "The section describes the NuScale containment vessel as a cylindrical, ASME-certified steel structure designed to withstand high-pressure events, with internal vacuum pressure during normal operations. The NuScale reactor is a passive, integral small modular pressurized water reactor, with each module producing about 50 MWe and a 12-module plant yielding a net output of approximately 570 MWe. The schedule requirement states that applicants referencing the NuScale design must provide their own construction and implementation schedules.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "95",
+      "page_range": "9",
       "hop": 1
     },
-    "nuscale_ch01_0052": {
-      "node_id": "nuscale_ch01_0052",
-      "title": "Comparison with Other Facilities",
-      "summary": "This section compares the major design features and parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It highlights differences in size, output, system components, and safety systems, showing that NuScale uses a smaller, simpler, and more integrated design compared to conventional PWRs. The comparison is summarized in tables for easy reference.",
+    "nuscale_ch01_0004": {
+      "node_id": "nuscale_ch01_0004",
+      "title": "Containment Type",
+      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and operates under vacuum during normal conditions, eliminating the need for insulation. The NuScale reactor is a passive, small modular pressurized water reactor with integral components and natural circulation, removing the need for external piping and coolant pumps. Each module produces 160 MWt (about 50 MWe), and a plant can have up to 12 modules, yielding a total net output of approximately 570 MWe.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "79",
-      "hop": 1
-    },
-    "nuscale_ch01_0070": {
-      "node_id": "nuscale_ch01_0070",
-      "title": "Legends and Symbols",
-      "summary": "This section provides legends and symbols used in NuScale’s Final Safety Analysis Report drawings, including detailed explanations for electrical symbols found in single-line diagrams. It describes the notation for various components such as transformers, circuit breakers, batteries, switches, and monitors, ensuring clarity and consistency in interpreting technical diagrams related to radioactive effluent flow paths and electrical systems.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "98",
-      "hop": 1
-    },
-    "nuscale_ch01_0811": {
-      "node_id": "nuscale_ch01_0811",
-      "title": "DSRS 15.9.A, Rev 0: Thermal Hydraulic Stability Review ResponsibilitiesII.5 Detect and Suppress Method Trip of reactor before SAFDL violation",
-      "summary": "The NuScale design does not use the exclusion zone or detect-and-suppress methods for thermal hydraulic stability; instead, existing reactor trip signals act preemptively to prevent violation of safety limits before flow instabilities can develop. The system partially conforms to some regulatory criteria by providing more limiting protection than required, but does not employ specific detect-and-suppress options or related instrumentation, as these are deemed unnecessary for the design.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "315",
+      "page_range": "9",
       "hop": 1
     }
   },
-  "edges": [
-    {
-      "source": "nuscale_ch01_0015",
-      "target": "nuscale_ch01_0068",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A provides a general overview of the plant's systems and design, while Section B offers detailed drawings that visually clarify and supplement the descriptions found in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0015",
-      "target": "nuscale_ch01_0052",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section B provides specific nominal design values, such as the thermal output of the NuScale Power Module, which are referenced or summarized in the general descriptions found in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0015",
-      "target": "nuscale_ch01_0070",
-      "relation": "REFERENCES",
-      "confidence": 0.8,
-      "description": "Section A provides a general overview of the plant's systems and design, while Section B lists the legends, symbols, and figures used to interpret detailed system drawings referenced throughout the report."
-    },
-    {
-      "source": "nuscale_ch01_0015",
-      "target": "nuscale_ch01_0811",
-      "relation": "SATISFIES",
-      "confidence": 0.8,
-      "description": "Section A provides a general description of the plant design, which includes operating characteristics such as thermal output, while Section B discusses regulatory requirements for thermal hydraulic stability that the plant's operating characteristics (including thermal output) must satisfy."
-    },
-    {
-      "source": "nuscale_ch01_0810",
-      "target": "nuscale_ch01_0052",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section B provides the nominal design parameters, including the thermal output, of the NuScale Power Module, which is the specific information needed to answer the analysis question, while Section A discusses thermal hydraulic stability methods and does not provide the thermal output value."
-    },
-    {
-      "source": "nuscale_ch01_0810",
-      "target": "nuscale_ch01_0811",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the exclusion zone and buffer region methodology as not applicable to the NuScale design, while Section B specifies that reactor trip signals are used to prevent SAFDL violations, both addressing methods for detecting and suppressing thermal hydraulic instabilities in the context of regulatory review."
-    },
-    {
-      "source": "nuscale_ch01_0068",
-      "target": "nuscale_ch01_0070",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A references specific drawings and figures that are further detailed by the legends and symbols provided in Section B, enabling accurate interpretation of the diagrams."
-    },
-    {
-      "source": "nuscale_ch01_0052",
-      "target": "nuscale_ch01_0811",
-      "relation": "SATISFIES",
-      "confidence": 0.85,
-      "description": "Section A provides nominal design parameters, including thermal output, for the NuScale Power Module, while Section B discusses regulatory requirements for thermal hydraulic stability that the design must satisfy, thus connecting the design values in A to the regulatory criteria in B."
-    }
-  ]
+  "edges": []
 }

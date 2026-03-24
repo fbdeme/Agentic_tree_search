@@ -1,0 +1,333 @@
+{
+  "question": "Is the NuScale Rankine cycle (Ch.01) appropriately matched to the SG secondary conditions described in Ch.05?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0058": {
+      "node_id": "nuscale_ch01_0058",
+      "title": "Steam Generator Thermal-Hydraulic Performance Testing - Electrically Heated Facility",
+      "summary": "This section describes the critical heat flux (CHF) testing conducted for the NuFuel HTP2™ fuel design, which uses AREVA HMP™/HTP™ spacer grid technology. The tests, performed at the AREVA Karlstein Thermal Hydraulics facility, aimed to gather CHF data, validate and develop CHF correlations for NuScale applications, and collect thermal-hydraulic performance data under various operating conditions using an electrically heated 5x5 fuel bundle simulator.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "85",
+      "hop": 1
+    },
+    "nuscale_ch05_0019": {
+      "node_id": "nuscale_ch05_0019",
+      "title": "Reactor Coolant System Component and Subsystem Design",
+      "summary": "This section describes the design of the Reactor Coolant System (RCS) components and subsystems in the NuScale Power Module, detailing the integration of the reactor, steam generators, pressurizer, safety and ECCS valves, and associated piping within the reactor pressure vessel (RPV). It outlines the configuration and boundaries of the steam generator system, emphasizing the integral design of the steam generators within the RPV and the separation of primary and secondary sides by specific components.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
+      "hop": 1
+    },
+    "nuscale_ch01_0439": {
+      "node_id": "nuscale_ch01_0439",
+      "title": "SRP 10.4.6, Rev 3: Condensate Cleanup SystemII.2 Maintain indirect cycle PWR water quality to avoid corrosion-induced failure of the reactor coolant pressure boundary (GDC 14)",
+      "summary": "The section outlines NuScale’s conformance with regulatory criteria for maintaining indirect cycle PWR water quality to prevent corrosion-induced failure of the reactor coolant pressure boundary, as required by GDC 14. It states that the NuScale steam generator design differs from traditional designs, with primary water outside and secondary water inside the tubes, and no steam generator blowdown, resulting in different secondary chemistry requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "263",
+      "hop": 1
+    },
+    "nuscale_ch01_0438": {
+      "node_id": "nuscale_ch01_0438",
+      "title": "SRP 10.4.6, Rev 3: Condensate Cleanup SystemII.1 Maintain direct cycle BWR plant water quality to avoid corrosion-induced failure of the reactor coolant pressure boundary (GDC 14)",
+      "summary": "This section summarizes NuScale’s conformance with various regulatory criteria for systems related to condensate cleanup and associated components. It notes that certain requirements are not applicable to NuScale’s design (e.g., those specific to BWRs or Class 2/3 components), while for indirect cycle PWR water quality, NuScale’s steam generator design meets the intent of the criteria, though its secondary chemistry requirements differ due to unique design features.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "263",
+      "hop": 1
+    },
+    "nuscale_ch01_0774": {
+      "node_id": "nuscale_ch01_0774",
+      "title": "SRP 15.6.3, Rev 2: Radiological Consequences of Steam Generator Tube Failure (PWR)II (No Number) Last two sentences of the last paragraph of Section II on page 15.6.32 - Plant-Specific Technical Specifications for Primary and Secondary Coolant System Iodine Activity",
+      "summary": "The section explains that while the guidance regarding technical specifications for iodine activity in primary and secondary coolant is applicable to the NuScale design, the radiological acceptance criteria are instead governed by SRP Section 15.0.3, which supersedes the original criteria. Additionally, certain sections and criteria are noted as not applicable to the NuScale design or are only relevant to BWRs, with exemptions or alternative analyses provided where appropriate.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "307",
+      "hop": 1
+    },
+    "nuscale_ch05_0006": {
+      "node_id": "nuscale_ch05_0006",
+      "title": "System Evaluation",
+      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance across different power levels by establishing steady-state parameters for both primary and secondary systems, considering criteria such as maximizing electrical generation and maintaining safety margins. Key parameters like coolant temperatures, flow rates, and pressures are calculated using thermal hydraulic software and verified by hand, with uncertainties addressed through testing data and design requirements. The design supports natural circulation with low pressure losses, and uncertainties related to steam generator tube plugging do not affect primary coolant flow rate determination.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "12",
+      "hop": 2
+    },
+    "nuscale_ch01_0769": {
+      "node_id": "nuscale_ch01_0769",
+      "title": "SRP 15.6.1, Rev 2: Inadvertent Opening of a PWR Pressurizer Relief Valve or a BWR Pressure Relief ValveAll Various",
+      "summary": "The NuScale design partially conforms to SRP 15.6.1, as it does not use power-operated pressurizer relief valves (PORVs) that are susceptible to inadvertent opening; instead, it uses spring-loaded ASME code safety relief valves, which do not have the same vulnerability. Any mechanical failure of the reactor safety valve is considered to be bounded by the analysis of inadvertent ECCS valve actuation, as discussed in Section 15.6.6.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "305",
+      "hop": 2
+    },
+    "nuscale_ch01_0689": {
+      "node_id": "nuscale_ch01_0689",
+      "title": "SRP 15.1.5.A, Rev 2: Radiological Consequences of Main Steam Line Failures Outside Containment of a PWRAll Various",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for analyzing radiological consequences of main steam line failures outside containment in a PWR. It details how NuScale’s safety analysis aligns with or deviates from specific DSRS and SRP requirements, noting that for design certification applications, SRP Section 15.0.3 supersedes the radiological analysis criteria in SRP 15.1.5 Appendix A, while nonradiological aspects remain applicable. Operator action is not required to mitigate the consequences of a steam line break in this context.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "292",
+      "hop": 3
+    },
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes components such as the reactor pressure vessel, pressurizer, and associated piping and controls. The RCS removes heat from the reactor core by natural circulation and interfaces with several other systems for safety and operational functions, including degasification and emergency core cooling. Its pressure-retaining parts help maintain the integrity of the reactor coolant pressure boundary, serving as a barrier to radionuclide release.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
+      "hop": 3
+    },
+    "nuscale_ch01_0029": {
+      "node_id": "nuscale_ch01_0029",
+      "title": "Power Conversion System",
+      "summary": "The Power Conversion System in the NuScale plant includes a main steam system, turbine generator, condenser, cooling tower, and condensate/feedwater system, allowing flexible operation of multiple modules for grid demand and maintenance. Supporting systems include reactor component cooling, pool cooling, and circulating water systems, which manage heat removal from various plant components and ensure efficient plant operation.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "35",
+      "hop": 4
+    },
+    "nuscale_ch01_0053": {
+      "node_id": "nuscale_ch01_0053",
+      "title": "Identification of Agents and Contractors",
+      "summary": "This section outlines the responsibilities for the NuScale certified design, stating that NuScale Power, LLC holds overall design responsibility, while Fluor Corporation provided the balance of plant design. It also notes that any applicant referencing the NuScale design must identify the main agents or contractors for plant construction and operation.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "82",
+      "hop": 4
+    },
+    "nuscale_ch01_0470": {
+      "node_id": "nuscale_ch01_0470",
+      "title": "DSRS 11.2, Rev 0: Liquid Waste Management SystemII.3 Seismic Design of Structures Housing Liquid Waste Management System Components",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for the seismic design of structures housing liquid waste management system components. It states that the design conforms to the applicable requirements, with no exceptions or additional comments noted.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "267",
+      "hop": 4
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0058",
+      "target": "nuscale_ch05_0019",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides critical heat flux (CHF) test data and correlations for the NuScale fuel design, which are necessary to validate the thermal-hydraulic performance assumptions used in Section B's description of the reactor coolant system and steam generator design."
+    },
+    {
+      "source": "nuscale_ch01_0058",
+      "target": "nuscale_ch01_0439",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides test data and correlations for the NuScale fuel's critical heat flux performance, which supports Section B's demonstration of conformance with regulatory criteria for secondary system integrity and water quality by ensuring the fuel and steam generator operate within safe thermal-hydraulic limits."
+    },
+    {
+      "source": "nuscale_ch01_0058",
+      "target": "nuscale_ch01_0438",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides test data and correlations for the NuScale fuel's thermal-hydraulic performance, which supports demonstrating that the Rankine cycle's design (Ch.01) can meet the secondary system water quality and material integrity requirements outlined in Section B's referenced regulatory criteria (Ch.05)."
+    },
+    {
+      "source": "nuscale_ch01_0058",
+      "target": "nuscale_ch01_0774",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides critical heat flux testing data for the NuScale fuel design, which supports the technical basis for secondary system performance, while Section B discusses conformance with regulatory criteria for secondary coolant system iodine activity, thus Section A's test results support the safety analysis claims made in Section B regarding secondary system radiological consequences."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch01_0439",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the design and components of the NuScale reactor coolant system, including the steam generators, while Section B lists the regulatory requirements and conformance statements for secondary-side systems such as water quality and material toughness, thus connecting the design features in A to the regulatory criteria in B."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch01_0438",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the design and components of the NuScale reactor coolant system, including the steam generators that set the secondary side conditions, while Section B lists the regulatory requirements and conformance statements for secondary system components, thus connecting the design basis (A) to the regulatory criteria (B) that must be satisfied."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch01_0774",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the design and components of the NuScale reactor coolant system, including the steam generators, while Section B discusses regulatory conformance regarding technical specifications for primary and secondary coolant system iodine activity, connecting them through the operational and safety requirements imposed on the steam generator's secondary conditions."
+    },
+    {
+      "source": "nuscale_ch01_0439",
+      "target": "nuscale_ch01_0438",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A and Section B both address the requirement to maintain water quality to avoid corrosion-induced failure of the reactor coolant pressure boundary, but Section A applies this to indirect cycle PWRs (like NuScale), while Section B applies it to direct cycle BWRs, thus specifying different regulatory contexts for similar safety objectives."
+    },
+    {
+      "source": "nuscale_ch01_0439",
+      "target": "nuscale_ch01_0774",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines the regulatory requirements and conformance for maintaining water quality and preventing radioactivity release in the secondary side of the NuScale Rankine cycle, while Section B addresses the plant-specific technical specifications for iodine activity in the secondary coolant system, directly linking the secondary conditions described in Ch.05 to the radiological safety requirements that the Rankine cycle must satisfy."
+    },
+    {
+      "source": "nuscale_ch01_0438",
+      "target": "nuscale_ch01_0774",
+      "relation": "LEADS_TO",
+      "confidence": 0.85,
+      "description": "Section A outlines regulatory requirements and conformance for secondary system water quality and material integrity, which directly impact the radiological consequences and iodine activity limits in the secondary coolant system discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the establishment of steady state secondary side parameters for optimal Rankine cycle performance, while Section B provides critical heat flux testing data used to validate fuel performance under those secondary conditions, thus connecting the operational requirements of the Rankine cycle to the empirical validation of fuel behavior in those conditions."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the establishment of steady state primary and secondary side parameters for optimal plant performance, which are directly dependent on the design and configuration of the steam generators described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch01_0439",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes how the NuScale system establishes steady state secondary side parameters for optimal performance, while Section B lists regulatory requirements (such as water quality and material toughness) that these secondary conditions must satisfy, connecting the design values in A to the regulatory criteria in B."
+    },
+    {
+      "source": "nuscale_ch01_0769",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B provides thermal-hydraulic performance test data for the steam generator, which supports the validation of the secondary side conditions assumed in the Rankine cycle analysis described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0769",
+      "target": "nuscale_ch05_0019",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria and conformance related to initial conditions and system malfunctions, which are directly dependent on the reactor coolant system and steam generator design details described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0769",
+      "target": "nuscale_ch01_0439",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the initial conditions and input parameters for the NuScale Rankine cycle analysis, while Section B specifies the secondary system requirements (such as water quality and material standards) that the Rankine cycle must satisfy to ensure safe and compliant operation."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch01_0769",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes how steady state secondary side parameters for the SG are established to optimize plant performance, while Section B lists regulatory criteria and conformance for initial conditions and system malfunctions, connecting them through the need for the Rankine cycle's operating parameters to satisfy regulatory input parameter requirements."
+    },
+    {
+      "source": "nuscale_ch01_0689",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A references the use of critical heat flux (CHF) as a key assumption in safety analysis, while Section B provides the technical basis and validation data for the CHF correlations used in the NuScale design, thus Section B supports the technical credibility of the assumptions made in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0689",
+      "target": "nuscale_ch05_0019",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A references the regulatory assumptions and conformance criteria for steam system failures, which require that the design values and operating conditions of the steam generators (as described in Section B) are appropriately matched to the Rankine cycle parameters to ensure compliance."
+    },
+    {
+      "source": "nuscale_ch01_0689",
+      "target": "nuscale_ch01_0439",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A discusses the NuScale plant's conformance with regulatory assumptions and criteria for steam system failures, while Section B addresses the requirements for maintaining water quality and preventing corrosion in the secondary side, both of which are connected through the need for the Rankine cycle design (Ch.01) to satisfy the secondary system conditions (Ch.05) to ensure regulatory compliance and safe operation."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the system's operational features and integrity requirements, while Section B details the testing and validation of fuel design performance under thermal-hydraulic conditions relevant to the steam generator, connecting them through the need to ensure that system design (A) is supported by empirical performance data (B) for regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the function of the RCS degasification line and vent valves in removing noncondensible gases, while Section B lists the RCS components—including the degasification vent lines—thus Section B provides the detailed component context for the operational description in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch01_0439",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the system features (such as degasification and venting) that help maintain the integrity of the reactor coolant pressure boundary, which directly supports Section B's regulatory requirement to maintain water quality and prevent corrosion-induced failure of that boundary."
+    },
+    {
+      "source": "nuscale_ch01_0689",
+      "target": "nuscale_ch05_0004",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses the regulatory assumptions and conformance criteria for steam system failures, which depend on the secondary system conditions described in Section B's system description of the RCS and its operational features."
+    },
+    {
+      "source": "nuscale_ch01_0029",
+      "target": "nuscale_ch01_0058",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the overall power conversion system design, while Section B provides critical heat flux testing data for the fuel design that informs the steam generator's thermal-hydraulic performance, which is a prerequisite for ensuring the Rankine cycle's secondary conditions are met."
+    },
+    {
+      "source": "nuscale_ch01_0029",
+      "target": "nuscale_ch05_0019",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the overall configuration and operation of the NuScale power conversion system, which relies on steam generated under specific secondary conditions by the steam generators detailed in Section B, thus linking the Rankine cycle's implementation to the SG secondary conditions."
+    },
+    {
+      "source": "nuscale_ch01_0029",
+      "target": "nuscale_ch01_0439",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the components and operational flexibility of the NuScale power conversion system, while Section B lists the regulatory requirements and conformance statements relevant to those same systems, connecting them through the need for the design (A) to satisfy the regulatory criteria (B)."
+    },
+    {
+      "source": "nuscale_ch01_0053",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.5,
+      "description": "Section A identifies the organizations responsible for the overall plant and balance of plant design, while Section B describes testing performed to validate fuel design correlations, with both sections providing context on design responsibility and technical validation relevant to the analysis of system compatibility."
+    },
+    {
+      "source": "nuscale_ch01_0470",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B provides critical heat flux testing data for the NuScale fuel design, which supports the secondary side thermal-hydraulic performance assumptions that underpin the Rankine cycle matching discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0470",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory conformance and source term expectations for the NuScale design, while Section B provides the detailed design of the reactor coolant system and steam generators, making Section B the technical implementation that Section A's regulatory criteria are applied to."
+    },
+    {
+      "source": "nuscale_ch01_0470",
+      "target": "nuscale_ch01_0439",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the NuScale Rankine cycle's conformance with regulatory criteria for coolant source terms and effluent releases, while Section B specifies the secondary system's requirements for maintaining water quality and preventing corrosion or radioactive releases, thus Section A's design results must satisfy Section B's regulatory requirements for secondary system conditions."
+    }
+  ]
+}

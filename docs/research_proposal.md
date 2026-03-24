@@ -113,9 +113,11 @@ Pipeline:
 ### 3.1 Nuclear Regulatory Multi-hop Q&A Benchmark
 
 - **Need for a New Benchmark**: Existing nuclear benchmarks (NQuAD [14], NuclearQA [15]) and the MAM-RAG benchmark [1] are biased toward single-hop fact extraction, making them unsuitable for evaluating the multi-hop reasoning capabilities central to this research.
-- **Benchmark Design**: A "Composite Multi-hop Reasoning" benchmark is constructed based on NuScale FSAR data (100 questions), requiring cross-verification and synthesis across multiple text passages, tables, and diagrams to determine regulatory compliance.
-  - Question type distribution: text_only (30), table_only (20), image_only (20), composite (30)
-  - Source documents: NuScale FSAR Chapter 01 (Introduction), Chapter 05 (Reactor Coolant System)
+- **Benchmark Design**: A multi-evidence QA benchmark (200 questions) is constructed based on NuScale FSAR data with three orthogonal taxonomies:
+  - **Reasoning type**: factual (70), comparative (65), judgment (65) — from single fact extraction to regulatory compliance judgment
+  - **Complexity**: single_evidence (50), multi_evidence (75), cross_document (75) — from one source location to evidence spanning both chapters
+  - **Modality**: text_only (80), table_only (50), image_only (30), composite (40)
+  - Source documents: NuScale FSAR Chapter 01 (352p), Chapter 05 (160p)
 
 ### 3.2 Performance Evaluation
 
@@ -134,47 +136,59 @@ Pipeline:
 
 ### 3.3 Results
 
-Full 100-question evaluation on NuScale FSAR data with GPT-4.1 (tool-based exploration + BM25 + Vision RAG + description-first edge inference + structured table extraction):
+Full 200-question evaluation on the multi-evidence benchmark with GPT-4.1:
 
-| Metric | Overall | text_only (30) | table_only (20) | image_only (20) | composite (30) |
-|--------|---------|----------------|-----------------|-----------------|----------------|
-| Faithfulness | 0.73 | **0.87** | 0.63 | 0.66 | 0.74 |
-| Answer Relevancy | 0.74 | **0.81** | 0.67 | 0.75 | 0.72 |
-| Context Recall | 0.56 | 0.54 | 0.55 | **0.63** | 0.54 |
-| Factual Correctness | 0.24 | 0.32 | **0.41** | 0.11 | 0.14 |
-| Keyword Hit | 0.66 | 0.51 | **0.85** | 0.81 | 0.58 |
+**By Reasoning Type:**
 
-**Edge Type Distribution (1,328 total edges across 100 questions):**
+| Metric | Overall (200) | factual (70) | comparative (65) | judgment (65) |
+|--------|--------------|-------------|------------------|--------------|
+| Faithfulness | 0.56 | 0.43 | **0.86** | **0.82** |
+| Answer Relevancy | **0.81** | 0.80 | 0.77 | **0.85** |
+| Context Recall | **0.68** | 0.54 | 0.70 | **0.82** |
+| Factual Correctness | **0.38** | 0.35 | **0.46** | 0.34 |
+| Keyword Hit | 0.65 | **0.71** | 0.65 | 0.60 |
+
+**Context Recall by Reasoning × Complexity:**
+
+|  | single_evidence | multi_evidence | cross_document |
+|--|-----------------|----------------|----------------|
+| factual | 0.33 | 0.60 | 0.88 |
+| comparative | 0.64 | 0.52 | 0.91 |
+| judgment | 0.60 | 0.70 | **0.94** |
+
+**Edge Type Distribution (8,069 total edges across 200 questions):**
 
 | Edge Type | Count | % | Category |
 |-----------|-------|---|----------|
-| SPECIFIES | 525 | 39.5% | Structural |
-| SUPPORTS | 442 | 33.3% | Semantic |
-| REFERENCES | 137 | 10.3% | Structural |
-| IS_PREREQUISITE_OF | 87 | 6.6% | Semantic |
-| SATISFIES | 77 | 5.8% | Semantic |
-| SEMANTIC | 47 | 3.5% | Free-form |
-| LEADS_TO | 8 | 0.6% | Semantic |
-| CONTRADICTS | 5 | 0.4% | Semantic |
+| SUPPORTS | 2,681 | 33.2% | Semantic |
+| SPECIFIES | 2,506 | 31.1% | Structural |
+| REFERENCES | 1,108 | 13.7% | Structural |
+| IS_PREREQUISITE_OF | 825 | 10.2% | Semantic |
+| SATISFIES | 659 | 8.2% | Semantic |
+| SEMANTIC | 156 | 1.9% | Free-form |
+| LEADS_TO | 87 | 1.1% | Semantic |
+| CONTRADICTS | 45 | 0.6% | Semantic |
+| VIOLATES | 2 | 0.0% | Semantic |
+
+**SATISFIES by reasoning type:** factual 93, comparative 207, judgment **359**
 
 **KG Construction Statistics:**
 
-| Question Type | Avg Nodes | Avg Edges | Avg Hops (max 4) |
+| Reasoning Type | Avg Nodes | Avg Edges | Avg Hops (max 4) |
 |---------------|-----------|-----------|------------------|
-| text_only | 6.5 | 13.5 | 2.2 |
-| table_only | 5.5 | 6.0 | 2.1 |
-| image_only | 7.0 | 16.6 | 2.6 |
-| composite | 6.9 | 16.2 | 2.7 |
+| factual | 10.8 | 29.2 | 3.4 |
+| comparative | 12.9 | 40.5 | 3.6 |
+| judgment | 15.0 | 52.3 | 3.8 |
 
 Key findings:
 
-- **All 8 ontology edge types emerged**: The description-first inference approach resolved the edge type monotonicity problem. Under classification-first prompting, only 3/8 types appeared (REFERENCES 54%, SPECIFIES 29%, SUPPORTS 17%). After switching to description-first, all 8 types plus the SEMANTIC fallback type appeared across 100 questions.
-- **Structured table extraction improved table_only performance**: table_only Factual Correctness improved from 0.26 to **0.41** (+0.15) and Keyword Hit reached **0.85** after extracting structured table data via PyMuPDF `find_tables()` and passing it directly in the answer generation context. Tables are passed as structured text rather than VLM images, as parsed data is more reliable than OCR.
-- **Multimodal handling strategy**: Figures are passed as VLM images (visual understanding required), while tables are passed as structured text (already extracted). This split maximizes both accuracy and cost efficiency.
-- **text_only Faithfulness highest (0.87)**: Well-grounded answers with clear evidence chains.
-- **Dynamic termination is effective**: Average 2.1–2.7 hops out of maximum 4.
-- **SEMANTIC edges capture domain nuances**: 47 edges (3.5%) did not fit the fixed ontology, demonstrating that the free-form description layer captures relationships that rigid type systems would discard.
-- **Factual Correctness metric caveat**: The overall score (0.24) partially reflects a RAGAs limitation—agent answers are more detailed than expected answers, and additional correct claims are penalized as unsupported.
+- **Judgment questions achieve highest Context Recall (0.82)**: Regulatory judgment queries ("Does X satisfy requirement Y?") trigger the broadest exploration, as the agent must find both design specifications and regulatory requirements. Agent Memory prevents keyword repetition across hops, driving search diversity that covers both chapters.
+- **Cross-document CR=0.92 (counterintuitively highest)**: Questions requiring evidence from both Ch.01 and Ch.05 achieve higher recall than single-evidence questions (CR=0.45), because multi-hop exploration with diverse keywords naturally covers more document sections.
+- **SATISFIES edges validate core thesis (659 instances, 8.2%)**: Judgment questions alone produced 359 SATISFIES edges, confirming that regulatory compliance relationships emerge naturally under description-first inference. The two-stage approach (describe relationship → map to ontology label) is critical — under classification-first prompting, SATISFIES appeared 0 times across 100 questions.
+- **Comparative questions achieve highest Factual Correctness (0.46)**: Comparison answers naturally produce "A is X, B is Y" claim structures that align well with RAGAs claim-by-claim evaluation.
+- **All 9 edge types emerged**: 8 ontology types + SEMANTIC fallback. VIOLATES is rare (2 instances) due to FSAR being a certification document where designs are presented as compliant.
+- **Single-evidence paradox**: Single_evidence questions have the lowest CR (0.45) despite being "easiest" — finding one specific node requires exact BM25 keyword match, while multi-evidence questions benefit from broader exploration.
+- **Multimodal handling**: Tables passed as structured text (PyMuPDF `find_tables()`), figures as VLM images. Table_only Keyword Hit reaches 0.74 with structured extraction.
 
 ## 4. Conclusion
 

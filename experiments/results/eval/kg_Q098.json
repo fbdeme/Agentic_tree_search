@@ -1,52 +1,7 @@
 {
-  "question": "Explain the pressure control methods for the pressurizer heater and spray.",
+  "question": "Compare the RSV setpoints from Table 5.2-2 with the RPV design pressure from Table 5.3-1.",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0023": {
-      "node_id": "nuscale_ch05_0023",
-      "title": "Reactor Coolant System High-Point Vents",
-      "summary": "This section describes the testing and inspection requirements for the DHRS (Decay Heat Removal System) components and actuation valves in the NuScale reactor coolant system. It explains that these valves are exercised during cold shutdown conditions, in accordance with ASME OM Code, and outlines the procedures for position verification and functional testing, including a one-time in-situ test for the first reactor module during initial startup.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "121",
-      "hop": 1
-    },
-    "nuscale_ch05_0024": {
-      "node_id": "nuscale_ch05_0024",
-      "title": "Pressurizer",
-      "summary": "The pressurizer in the NuScale reactor is integrated into the upper region of the reactor vessel and functions to regulate reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure, and is designed to handle pressure changes during various operating conditions without triggering unnecessary reactor trips or safety system actuations.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "124",
-      "hop": 1
-    },
-    "nuscale_ch05_0004": {
-      "node_id": "nuscale_ch05_0004",
-      "title": "System Description",
-      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes key components such as the reactor pressure vessel, pressurizer, and associated piping and controls. It removes heat from the reactor core to the steam generators using natural circulation, and features systems for degasification and emergency core cooling to maintain safety and integrity. The RCS interfaces with several other systems, including chemical control, emergency cooling, and sampling systems.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "9",
-      "hop": 1
-    },
-    "nuscale_ch05_0012": {
-      "node_id": "nuscale_ch05_0012",
-      "title": "Reactor Coolant Pressure Boundary Leakage Detection",
-      "summary": "The NuScale reactor coolant pressure boundary (RCPB) leakage detection system does not use traditional components with designed leakage rates, making it impractical to distinguish between identified and unidentified leakage inside containment using installed instrumentation. Leakage is treated as unidentified until its source is confirmed, and the leakage rate is determined by RCS inventory balance; the detection systems are reliable and support leak-before-break analyses.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "41",
-      "hop": 1
-    },
-    "nuscale_ch05_0025": {
-      "node_id": "nuscale_ch05_0025",
-      "title": "References",
-      "summary": "This section details the materials used in the construction of the pressurizer and its components in the NuScale reactor, specifying alloys and standards for each part to ensure corrosion resistance and compatibility with operating environments. It references relevant sections of the BPVC (Boiler and Pressure Vessel Code) and lists the applicable material specifications for components such as the baffle plate, heater bundles, cover plate, and bolting.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "130",
-      "hop": 1
-    },
     "nuscale_ch05_0007": {
       "node_id": "nuscale_ch05_0007",
       "title": "Integrity of Reactor Coolant Boundary",
@@ -54,86 +9,309 @@
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "19",
-      "hop": 4
+      "hop": 1
+    },
+    "nuscale_ch05_0009": {
+      "node_id": "nuscale_ch05_0009",
+      "title": "Overpressure Protection",
+      "summary": "This section outlines NuScale's compliance with NRC regulations and ASME code requirements for overpressure protection of the reactor coolant boundary. It details the use of specific ASME BPVC and OM code cases for design, fabrication, construction, preservice, and inservice inspections and testing, ensuring all selected code cases meet NRC-endorsed conditions. A consolidated list of these code cases is provided in Table 5.2-1.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "21",
+      "hop": 1
+    },
+    "nuscale_ch05_0008": {
+      "node_id": "nuscale_ch05_0008",
+      "title": "Compliance with Codes and Code Cases",
+      "summary": "This section describes how the NuScale Power Module (NPM) and its reactor coolant pressure boundary (RCPB) components comply with relevant U.S. regulations, specifically 10 CFR 50.55a and associated General Design Criteria. It details that these components are designed, fabricated, and tested to ASME Boiler and Pressure Vessel Code (BPVC) Section III, 2013 Edition standards, and clarifies the classification of various piping and components according to their safety significance.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "20",
+      "hop": 1
+    },
+    "nuscale_ch05_0014": {
+      "node_id": "nuscale_ch05_0014",
+      "title": "Reactor Vessel",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module (NPM), which integrates the reactor core, steam generators, and pressurizer within a single reactor pressure vessel (RPV) surrounded by a containment vessel. The RPV serves as a key pressure-retaining component, supporting various systems and providing a barrier to fission product release, with materials and fabrication standards selected to ensure integrity throughout the plant’s design life.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
+      "hop": 1
+    },
+    "nuscale_ch05_0017": {
+      "node_id": "nuscale_ch05_0017",
+      "title": "Reactor Vessel Integrity",
+      "summary": "This section outlines the procedures and regulatory compliance measures in place to ensure the integrity of the NuScale reactor vessel over its 60-year design life. It details the development of operating procedures to maintain pressure-temperature limits, evaluates the vessel’s resistance to pressurized thermal shock and upper-shelf energy degradation, and confirms that predicted material properties remain within regulatory safety criteria throughout the vessel’s operational lifespan.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "73",
+      "hop": 1
+    },
+    "nuscale_ch05_0013": {
+      "node_id": "nuscale_ch05_0013",
+      "title": "References",
+      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It cites guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as specific code cases relevant to reactor materials, water chemistry, and inspection protocols.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "46",
+      "hop": 1
+    },
+    "nuscale_ch05_0005": {
+      "node_id": "nuscale_ch05_0005",
+      "title": "System Components",
+      "summary": "This section describes the main components of the NuScale reactor system, focusing on the Reactor Pressure Vessel (RPV), Reactor Coolant System (RCS) piping, and the Pressurizer (PZR). The RPV serves as a primary barrier to fission product release and houses key reactor internals, while the RCS piping connects various system elements, and the PZR is integrated into the RPV to help control system pressure. Each component's functions and connections are briefly outlined, with references to further detailed sections.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "10",
+      "hop": 1
+    },
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the NuScale pressurizer, including the RPV upper shell, baffle plate, heater bundles, and associated components. It specifies the types of steel and nickel-based alloys used, their protective claddings, and their compliance with relevant BPVC Section II material specifications to ensure corrosion resistance and compatibility with operating environments.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 2
+    },
+    "nuscale_ch05_0019": {
+      "node_id": "nuscale_ch05_0019",
+      "title": "Reactor Coolant System Component and Subsystem Design",
+      "summary": "This section describes the design of the Reactor Coolant System (RCS) components and subsystems in the NuScale Power Module, detailing the integration of the reactor, steam generators, pressurizer, safety and ECCS valves, and associated piping within the reactor pressure vessel (RPV). It also outlines the configuration and boundaries of the steam generator system, emphasizing the integral design of the steam generators within the RPV and the separation of primary and secondary sides.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
+      "hop": 2
+    },
+    "nuscale_ch05_0016": {
+      "node_id": "nuscale_ch05_0016",
+      "title": "Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses",
+      "summary": "This section outlines the basis for establishing operational pressure and temperature limits for the reactor coolant pressure boundary (RCPB), ensuring compliance with regulatory requirements over the plant’s 60-year lifespan. It describes the methodology used to calculate pressure-temperature limit curves, accounting for vessel embrittlement, and provides the relevant figures and tables that define acceptable operating conditions to prevent non-ductile failure of the reactor vessel.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "72",
+      "hop": 3
+    },
+    "nuscale_ch05_0000": {
+      "node_id": "nuscale_ch05_0000",
+      "title": "Preface",
+      "summary": "The Preface outlines the copyright and usage restrictions for the NuScale Standard Plant Design Certification Application, specifically Chapter Five on the Reactor Coolant System and Connecting Systems. It specifies that only the U.S. Nuclear Regulatory Commission (NRC) is authorized to use, copy, or disclose the information for regulatory purposes, and all copies must include the copyright notice.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "1",
+      "hop": 3
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0023",
-      "target": "nuscale_ch05_0004",
-      "relation": "SEMANTIC",
-      "confidence": 0.4,
-      "description": "Section B describes the degasification and venting features of the pressurizer, which are relevant to pressure control, while Section A discusses inspection requirements for high-point vents but does not address operational pressure control methods, so the sections are only loosely connected by their reference to venting components."
-    },
-    {
-      "source": "nuscale_ch05_0023",
-      "target": "nuscale_ch05_0012",
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch05_0009",
       "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A discusses inspection requirements for DHRS components and valves, while Section B addresses leakage detection for the reactor coolant pressure boundary, with both sections connected through their focus on maintaining the integrity and monitoring of reactor coolant system components."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0004",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the physical configuration and function of the pressurizer within the reactor vessel, while Section B outlines system-level features (such as degasification and venting) that interact with the pressurizer to control pressure and maintain system integrity, connecting them through their roles in pressure management."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0012",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A describes the design and function of the pressurizer, which is responsible for pressure control in the reactor coolant system, while Section B discusses leakage detection in the reactor coolant pressure boundary, which is relevant for monitoring the effectiveness and integrity of pressure control methods such as those involving the pressurizer heater and spray."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0025",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes the functional design and role of the pressurizer in pressure control, while Section B specifies the physical components (including heater bundles and spray nozzles) that enable those pressure control methods."
-    },
-    {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0012",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A describes the system features that maintain reactor coolant system (RCS) pressure, while Section B discusses the detection of leakage from the reactor coolant pressure boundary (RCPB), both of which are connected by their focus on maintaining RCS integrity and pressure control."
-    },
-    {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0025",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general system description of the reactor coolant system and its pressure control functions, while Section B specifies the detailed design and material composition of the pressurizer components (including heaters and spray nozzles) that enable those pressure control methods."
-    },
-    {
-      "source": "nuscale_ch05_0012",
-      "target": "nuscale_ch05_0025",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section B provides detailed descriptions of the pressurizer's heater bundles and spray nozzles, which are the components relevant to the pressure control methods referenced in the analysis question, while Section A discusses leakage detection but does not address pressure control methods directly."
+      "confidence": 0.8,
+      "description": "Section A describes the design intent to maintain the integrity of the reactor coolant pressure boundary, which is directly protected by the overpressure protection provisions and code compliance discussed in Section B."
     },
     {
       "source": "nuscale_ch05_0007",
-      "target": "nuscale_ch05_0023",
-      "relation": "SEMANTIC",
-      "confidence": 0.6,
-      "description": "Section A describes the integrity requirements for the reactor coolant pressure boundary, which includes components affected by pressure control methods such as the pressurizer heater and spray, while Section B discusses inspection requirements for high-point vents and related components, which are part of the same reactor coolant system but does not directly address pressure control methods."
+      "target": "nuscale_ch05_0008",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the design intent to maintain the integrity of the reactor coolant pressure boundary (RCPB), while Section B specifies that this integrity is achieved by complying with regulatory codes (10 CFR 50.55a and ASME BPVC) for design, fabrication, and inspection."
     },
     {
       "source": "nuscale_ch05_0007",
-      "target": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0014",
       "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section B describes the design and function of the pressurizer, which is a pressure-retaining component included in the reactor coolant pressure boundary as defined and discussed in Section A."
+      "confidence": 0.9,
+      "description": "Section A defines the integrity requirements and scope of the reactor coolant pressure boundary (RCPB), which includes the reactor pressure vessel (RPV) discussed in Section B as a key pressure-retaining component, establishing that the RPV's design pressure (from Table 5.3-1) must be consistent with the integrity criteria and boundaries described in Section A."
     },
     {
       "source": "nuscale_ch05_0007",
-      "target": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the design intent to maintain the integrity of the reactor coolant pressure boundary, while Section B discusses the development of operating procedures to ensure that pressure-temperature limits (such as the RPV design pressure) are not exceeded, thus both sections are connected by their focus on maintaining pressure boundary integrity through design and operational controls."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch05_0013",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the design features ensuring the integrity of the reactor coolant pressure boundary, which is the context for comparing RSV setpoints and RPV design pressure, while Section B lists references that support the technical and regulatory basis for these design features."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch05_0005",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A discusses the integrity requirements for the reactor coolant pressure boundary, which includes maintaining pressures within design limits, while Section B describes operational steps involving pressure adjustments in the reactor pressure vessel (RPV) and pressurizer (PZR), both of which must adhere to the RPV design pressure and RSV setpoints referenced in the analysis question."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0008",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the use of specific ASME BPVC code cases for overpressure protection design, while Section B establishes that the RPV and associated components comply with ASME BPVC Section III and 10 CFR 50.55a, thus Section A provides details/specifications for the general compliance statement in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses overpressure protection provisions and compliance with regulatory codes, which are directly related to Section B's description of the reactor pressure vessel (RPV) as the pressure-retaining component whose design pressure must be protected by the setpoints referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0017",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses overpressure protection provisions and code compliance relevant to the design and operation of the reactor coolant boundary, while Section B addresses the development of operating procedures to ensure that the reactor vessel's pressure-temperature limits (including the RPV design pressure) are not exceeded, thus both sections are connected through the requirement to maintain reactor vessel integrity by ensuring that setpoints (such as RSV setpoints) do not exceed the RPV design pressure."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0013",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A discusses compliance with ASME BPVC and regulatory requirements for overpressure protection, while Section B lists references that support the technical and regulatory basis for those requirements, indicating that Section A's claims are substantiated by the documents cited in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0005",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A discusses compliance with ASME and NRC requirements for overpressure protection, which is directly related to the setpoints for relief and safety valves (RSVs) that must be compared to the reactor pressure vessel (RPV) design pressure specified in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0014",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A establishes that the RPV and its components must comply with ASME BPVC requirements, while Section B describes the RPV as a pressure-retaining component whose design pressure (from Table 5.3-1) must align with those regulatory requirements, thus connecting the regulatory compliance to the specific design values to be compared."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0017",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section B describes system features (such as degasification and pressure-retaining components) that support the integrity objective outlined in Section A for the reactor coolant pressure boundary."
+      "description": "Section A establishes that the reactor pressure vessel (RPV) and related components are designed to meet ASME Code requirements, while Section B states that operating procedures will be developed to ensure that pressure-temperature limits (such as those set by the RPV design pressure) are not exceeded, thus connecting the design compliance in A with the operational controls in B."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0013",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes compliance with regulatory codes for reactor pressure boundary integrity, while Section B lists references that provide supporting standards and guidelines, indicating that A's compliance claims are supported by the documents cited in B."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0005",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A establishes that the RPV and associated components must comply with ASME BPVC design requirements, which set the regulatory basis for allowable pressures, while Section B describes operational procedures that involve manipulating RPV pressure, thus both sections are connected through the regulatory limits on RPV pressure that must not be exceeded during these operations."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes the requirement to develop operating procedures to ensure that pressure-temperature limits (such as the RPV design pressure from Section A) are not exceeded, directly connecting the design values in Section A to the operational controls in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0013",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the reactor pressure vessel (RPV) and its role as a pressure-retaining component, while Section B lists references related to the integrity and quality assurance of the reactor coolant boundary, which includes the RPV, thus Section B provides supporting standards and guidelines for the design and analysis described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0005",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A provides the design details and context for the reactor pressure vessel (RPV), while Section B describes operational procedures involving system components such as the pressurizer and valves, both of which are relevant for understanding the pressure conditions compared to the RPV design pressure."
+    },
+    {
+      "source": "nuscale_ch05_0017",
+      "target": "nuscale_ch05_0005",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "The RSV setpoints from Table 5.2-2 (Section B) must be compared to the RPV design pressure from Table 5.3-1 (Section A) to determine if the setpoints satisfy the vessel's design limits, ensuring that the relief setpoints do not exceed the maximum allowable pressure for reactor vessel integrity."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0007",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides detailed descriptions of specific pressurizer and RPV components and their materials, which are part of the broader set of pressure-retaining components whose integrity is discussed in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0009",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the physical components and materials of the pressurizer, which is part of the RPV, while Section B outlines the regulatory codes and standards (ASME BPVC, 10 CFR 50.55a) that govern the design and overpressure protection requirements for the reactor coolant boundary, thus connecting the physical design (A) to the regulatory compliance framework (B)."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0008",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the physical components and materials of the pressurizer and RPV upper shell, while Section B states that these components, including the RPV, are designed and constructed to meet ASME BPVC Class 1 requirements, thus Section B provides the regulatory framework that Section A's described components must satisfy."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0007",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A provides the RSV setpoints, which must be compared to the RPV design pressure specified in Section B to ensure that the RSV setpoints are below the RPV design pressure, thereby satisfying the regulatory requirement for reactor coolant boundary integrity."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0009",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the components of the reactor coolant system, including the RSVs, whose setpoints are to be compared with the RPV design pressure specified in Section B, which addresses overpressure protection and applicable design codes."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0008",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A provides the design details and setpoints for the reactor safety valves (RSVs), while Section B establishes the regulatory requirement that the reactor pressure vessel (RPV) and associated components, including RSVs, must comply with ASME BPVC design limits, directly connecting the RSV setpoints to the RPV design pressure limit."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed material specifications for components of the pressurizer, which is part of the RPV described in Section B's general overview of the reactor coolant system and its components."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0007",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A provides specific design and examination details for reactor vessel components, while Section B outlines the general integrity requirements for the reactor coolant pressure boundary, connecting them through the need for component compliance to maintain boundary integrity."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0009",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A provides information on the RPV design pressure, while Section B discusses overpressure protection, establishing a comparison where the RSV setpoints from Section B must be evaluated against the RPV design pressure from Section A to ensure regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0008",
+      "relation": "SATISFIES",
+      "confidence": 0.7,
+      "description": "Section A provides specific design and examination details for RPV attachments, while Section B establishes that all such components, including those in Section A, must comply with ASME BPVC and regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch05_0000",
+      "target": "nuscale_ch05_0008",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section B establishes that the RPV and associated components must comply with ASME BPVC and regulatory requirements, which provide the basis for the design values such as the RPV design pressure found in Table 5.3-1, against which the RSV setpoints from Table 5.2-2 are compared for compliance."
     }
   ]
 }

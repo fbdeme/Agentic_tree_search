@@ -1,56 +1,600 @@
 {
-  "question": "Describe the location of the surveillance capsule.",
+  "question": "Using Table 1.2-1, Table 5.1-2, and the RCS flow diagram Figure 5.1-3, describe the thermal-hydraulic operating conditions of the NuScale RCS.",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0015": {
-      "node_id": "nuscale_ch05_0015",
-      "title": "Reactor Vessel Materials",
-      "summary": "The Reactor Vessel section describes the NuScale Power Module’s reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel, serving as a key barrier to fission product release. The RPV and its components are constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure integrity and safety throughout the plant’s design lifetime.",
+    "nuscale_ch01_0072": {
+      "node_id": "nuscale_ch01_0072",
+      "title": "Combined License Information Items",
+      "summary": "This section outlines the interface requirements between the NuScale Power Plant certified design and the site-specific design provided in the combined license (COL) application. It explains the types of interface requirements (conceptual design information and COL information items), and describes how COL applicants must address site-specific information and any departures from the certified design. Tables referenced in the section summarize these interfaces and list the required COL information items.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "108",
+      "hop": 1
+    },
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes key components such as the reactor pressure vessel, pressurizer, and associated piping and controls. It removes heat from the reactor core to the steam generators using natural circulation, and features systems for removing noncondensible gases and maintaining pressure boundary integrity to prevent radionuclide release. The RCS interfaces with several other systems, including emergency core cooling and chemical control systems, to ensure safe and efficient operation.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch01_0015": {
+      "node_id": "nuscale_ch01_0015",
+      "title": "General Plant Description",
+      "summary": "This section provides a summary of the NuScale plant’s overall design, including key systems such as safety features, power conversion, fuel handling, cooling, waste management, and auxiliary systems. It explains that each Combined License (COL) applicant must reference the NuScale Final Safety Analysis Report (FSAR) and provide site-specific details where required, while distinguishing between certified design elements and conceptual design information (CDI). Security-related information is specially marked and withheld according to regulations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "26",
+      "hop": 1
+    },
+    "nuscale_ch05_0006": {
+      "node_id": "nuscale_ch05_0006",
+      "title": "System Evaluation",
+      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance across different power levels by establishing steady-state parameters such as coolant temperatures, flow rates, and pressures, using both software and hand calculations. The evaluation considers uncertainties and design requirements to ensure efficient operation, maximize electrical generation, and maintain safety margins, with a focus on supporting natural circulation and minimizing pressure losses in the reactor coolant system.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "12",
+      "hop": 1
+    },
+    "nuscale_ch01_0069": {
+      "node_id": "nuscale_ch01_0069",
+      "title": "Piping and Instrumentation Diagrams",
+      "summary": "This section describes the use of simplified electrical, instrumentation and control (I&C), and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information. It lists the relevant diagrams, figures, and legends used for both I&C and piping and instrumentation diagrams, and notes that site-specific diagrams and legends will be provided by COL applicants referencing the NuScale design certification.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
+      "hop": 1
+    },
+    "nuscale_ch01_0059": {
+      "node_id": "nuscale_ch01_0059",
+      "title": "Steam Generator Thermal-Hydraulic Performance Testing - Fluid-Heated Facility",
+      "summary": "The electrically-heated steam generator test at the SIET facility used three instrumented tubes with controlled boundary conditions to simulate different heat flux regions (subcooled, boiling, superheat) and allowed precise measurement of thermal-hydraulic performance. The data collected supported evaluation of flow-induced vibration risks, informed the design of SG inlet flow restrictors, and provided benchmarking for NuScale’s design codes, with the program inspected by the NRC for compliance.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "86",
+      "hop": 2
+    },
+    "nuscale_ch01_0290": {
+      "node_id": "nuscale_ch01_0290",
+      "title": "SRP BTP 8-9, Rev. 0: Open Phase Conditions in Electric Power SystemB.3 Criteria for evaluating open phase conditions for passive plant designs",
+      "summary": "The section outlines NuScale's conformance with regulatory criteria regarding open phase conditions in electric power systems, specifically for passive plant designs. It states that the criteria in SRP BTP 8-9, Rev. 0 for passive plant designs are only partially met, with no specific exceptions noted, and references section 8.2.3 for further details. Additionally, it clarifies that requirements for active plant designs do not apply to passive designs.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "242",
+      "hop": 2
+    },
+    "nuscale_ch01_0058": {
+      "node_id": "nuscale_ch01_0058",
+      "title": "Steam Generator Thermal-Hydraulic Performance Testing - Electrically Heated Facility",
+      "summary": "This section describes the critical heat flux (CHF) testing conducted for the NuScale NuFuel HTP2™ fuel design using an electrically heated 5x5 simulated fuel bundle with AREVA HTP™/HMP™ grid technology. The tests, performed at the AREVA Karlstein Thermal Hydraulics facility, aimed to gather CHF data, validate CHF correlations, determine mixing coefficients, and measure pressure drop characteristics under various hydraulic conditions to support the NuScale Power Module (NPM) application.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "85",
+      "hop": 2
+    },
+    "nuscale_ch05_0022": {
+      "node_id": "nuscale_ch05_0022",
+      "title": "Decay Heat Removal System",
+      "summary": "The Decay Heat Removal System (DHRS) is an engineered safety feature designed to remove residual and core decay heat from the reactor after shutdown, especially when normal cooling is unavailable, without relying on external power. It ensures the reactor coolant system (RCS) temperature drops below 420°F within 36 hours, maintaining fuel and pressure boundary safety limits, and its reliability and risk significance are evaluated through established programs. The DHRS operates independently of the Emergency Core Cooling System (ECCS), but both can function together if needed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "106",
+      "hop": 2
+    },
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the NuScale pressurizer, including the RPV upper shell, baffle plate, heater bundles, and associated components, specifying alloys and standards for corrosion resistance and compatibility. It references relevant sections of the BPVC and the Final Safety Analysis Report for further material specifications.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 2
+    },
+    "nuscale_ch01_0289": {
+      "node_id": "nuscale_ch01_0289",
+      "title": "SRP BTP 8-9, Rev. 0: Open Phase Conditions in Electric Power SystemB.2 Criteria for evaluating open phase conditions for active plant designs",
+      "summary": "The section states that the criteria for evaluating open phase conditions for active plant designs (SRP BTP 8-9, Rev. 0, Section B.2) are not applicable to passive plant designs like NuScale. Therefore, these regulatory requirements do not need to be addressed for the NuScale design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "242",
+      "hop": 2
+    },
+    "nuscale_ch01_0118": {
+      "node_id": "nuscale_ch01_0118",
+      "title": "1.8 Interfaces with Certified Design",
+      "summary": "This section explains the interface requirements between the NuScale Power Plant’s certified design and the site-specific design provided in the Combined License (COL) application. It distinguishes between conceptual design information (CDI) for non-certified plant portions and COL information items, which are site-specific responsibilities. The section also notes that COL applicants must address all COL information items and provide a list of any departures from the certified design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "108",
+      "hop": 3
+    },
+    "nuscale_ch05_0002": {
+      "node_id": "nuscale_ch05_0002",
+      "title": "Summary Description",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve independent modules, maintains proper coolant chemistry and boron concentration, and is engineered to meet safety and performance requirements during normal and off-normal conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 3
+    },
+    "nuscale_ch05_0005": {
+      "node_id": "nuscale_ch05_0005",
+      "title": "System Components",
+      "summary": "This section describes the main components of the NuScale reactor system, focusing on the Reactor Pressure Vessel (RPV), Reactor Coolant System (RCS) piping, and the Pressurizer (PZR). The RPV serves as a primary barrier to fission product release and houses key reactor internals, while the RCS piping connects various subsystems and the PZR is integrated into the RPV to help control system pressure. Each component's functions and connections are briefly outlined, with references to further detailed sections.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "10",
+      "hop": 3
+    },
+    "nuscale_ch05_0014": {
+      "node_id": "nuscale_ch05_0014",
+      "title": "Reactor Vessel",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module’s reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel surrounded by a containment vessel. The RPV serves as a key pressure boundary to prevent the release of fission products and provides structural support for various reactor components. Materials used for the RPV are selected according to ASME Boiler and Pressure Vessel Code standards to ensure integrity and safety throughout the plant’s design life.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "67",
-      "hop": 1
+      "hop": 3
     },
-    "nuscale_ch05_0018": {
-      "node_id": "nuscale_ch05_0018",
-      "title": "References",
-      "summary": "This section outlines the requirements and procedures for the inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fasteners of the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It specifies the use of nondestructive examinations, controlled shipping environments, and quality assurance measures to ensure the integrity and safety of the reactor vessel. Key standards cited include the ASME Boiler and Pressure Vessel Code and ASME NQA-1 for quality assurance.",
+    "nuscale_ch01_0116": {
+      "node_id": "nuscale_ch01_0116",
+      "title": "Figure 1.7-3e: Piping and Instrumentation Diagram Legends",
+      "summary": "This section provides a comprehensive list of legends and abbreviations used in NuScale's Piping and Instrumentation Diagrams (P&IDs), detailing the various analysis functions, measurement types, and instrumentation identifiers. These legends standardize the symbols and codes for components such as sensors, analyzers, and measurement devices, ensuring clarity and consistency in interpreting the diagrams throughout the safety analysis report.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "74",
-      "hop": 1
-    },
-    "nuscale_ch05_0017": {
-      "node_id": "nuscale_ch05_0017",
-      "title": "Reactor Vessel Integrity",
-      "summary": "This section outlines the procedures and regulatory compliance measures in place to ensure the integrity of the NuScale reactor vessel throughout its 60-year design life. It details the development of operating procedures to maintain pressure-temperature limits, evaluates the vessel’s resistance to pressurized thermal shock and upper-shelf energy degradation, and confirms that all predicted values remain within regulatory safety criteria.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "73",
-      "hop": 2
+      "source_doc": "nuscale_ch01",
+      "page_range": "106",
+      "hop": 3
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0015",
-      "target": "nuscale_ch05_0018",
+      "source": "nuscale_ch01_0072",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A identifies the boundaries and interface requirements of the certified design, which includes the RCS described in Section B, thereby specifying which parts of the RCS system and its functions (such as degasification and pressure retention) are covered by the certified design."
+    },
+    {
+      "source": "nuscale_ch01_0072",
+      "target": "nuscale_ch01_0015",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references Section B by indicating that Section 1.2 (described in Section B) identifies the structures, systems, and components included in the certified design, which is necessary for understanding the interface requirements discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0072",
+      "target": "nuscale_ch05_0006",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A identifies the structures, systems, and components included in the certified design, which provides the scope and boundaries for the system evaluation and operating conditions described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0072",
+      "target": "nuscale_ch01_0069",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A identifies the boundaries and interfaces of the certified design, which includes the RCS, while Section B provides the detailed drawings (such as P&IDs) that visually clarify the design information for those same systems."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific details about the RCS's degasification and pressure-retaining functions, which are part of the broader plant systems and operating characteristics generally described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0006",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the functional components and operational features of the RCS, such as degasification and pressure boundary integrity, which are evaluated in Section B to establish steady state thermal-hydraulic parameters and optimize system performance."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch01_0069",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A provides a narrative system description of RCS functions, while Section B offers supporting drawings and diagrams that visually clarify and detail the components and instrumentation referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch05_0006",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the plant's systems, including the RCS, while Section B specifies the evaluation of thermal-hydraulic parameters and criteria for optimal RCS performance, thus Section B provides detailed operational context for the general systems described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0069",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the plant's systems, while Section B offers detailed drawings that visually clarify and specify the systems described in Section A, such as the RCS and its instrumentation."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch01_0069",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A discusses the establishment of steady state thermal-hydraulic parameters for optimal RCS performance, while Section B explains that figures and tables (such as Table 1.2-1) provide the detailed visual and tabular design information referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0059",
+      "target": "nuscale_ch01_0072",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes specific thermal-hydraulic testing methods and results for the steam generator, which provide detailed performance data that supports the general system boundaries and component definitions outlined in Section B's interface requirements."
+    },
+    {
+      "source": "nuscale_ch01_0059",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the thermal-hydraulic testing methods and boundary conditions used to characterize steam generator performance, which provides supporting data for the system-level operational descriptions and requirements outlined in Section B regarding the RCS's pressure and degasification functions."
+    },
+    {
+      "source": "nuscale_ch01_0059",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides specific details about the steam generator thermal-hydraulic performance testing, which supports the general plant description and operating characteristics outlined in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0290",
+      "target": "nuscale_ch01_0072",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses regulatory criteria and exceptions for AC power system requirements in passive plant designs like NuScale, while Section B outlines the interface requirements and boundaries between the certified NuScale design and site-specific elements, connecting them through the delineation of which electrical system responsibilities fall under the certified design versus the COL applicant."
+    },
+    {
+      "source": "nuscale_ch01_0290",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses regulatory criteria for evaluating open phase conditions in electric power systems, specifically noting that NuScale's nonreliance on AC power alters the applicability of certain outage time restrictions, while Section B describes the RCS system design features (such as degasification and pressure boundary integrity) that are enabled by or related to this nonreliance on AC power."
+    },
+    {
+      "source": "nuscale_ch01_0290",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria for electrical system design and operating restrictions, while Section B provides a general description of the plant systems, including electrical systems, thus Section B offers the context and scope for the specific regulatory considerations discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0058",
+      "target": "nuscale_ch01_0072",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides critical heat flux testing data and correlations for the NuScale fuel design, which supports the certified design boundaries and interface requirements described in Section B by ensuring that the fuel's thermal-hydraulic performance meets the specifications referenced in the certified design documentation."
+    },
+    {
+      "source": "nuscale_ch01_0058",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A provides experimental data and validation for critical heat flux correlations specific to the NuScale fuel design, which supports the accurate characterization of thermal-hydraulic conditions described in Section B's system-level overview of the RCS."
+    },
+    {
+      "source": "nuscale_ch01_0058",
+      "target": "nuscale_ch01_0015",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A provides specific test data and correlations for the NuScale fuel design's thermal-hydraulic performance, which supports and validates the general plant operating characteristics described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch01_0072",
       "relation": "REFERENCES",
       "confidence": 0.85,
-      "description": "Section B references Section A by discussing inspection and handling requirements for the reactor vessel, which is described in detail in Section A, thereby connecting the general vessel description to its regulatory and procedural context."
+      "description": "Section A describes the design basis and function of the Decay Heat Removal System (DHRS) as part of the certified Reactor Coolant System (RCS), while Section B specifies the interface requirements and identifies which systems, including the DHRS, are part of the certified design per Table 1.2-1."
     },
     {
-      "source": "nuscale_ch05_0017",
-      "target": "nuscale_ch05_0015",
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the Decay Heat Removal System's function to cool the RCS during specific events, while Section B outlines the RCS's system features and normal operation, connecting them through the operational context in which the DHRS acts upon the RCS to maintain safety and integrity."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch01_0015",
       "relation": "SPECIFIES",
-      "confidence": 0.7,
-      "description": "Section A discusses operating procedures to ensure reactor vessel integrity under pressure-temperature limits, while Section B describes the physical configuration of the reactor vessel and its components, providing context for where surveillance capsules would be located."
+      "confidence": 0.95,
+      "description": "Section A describes the specific function and design basis of the Decay Heat Removal System (DHRS), which is one of the engineered safety features broadly listed in Section B's general plant description, thus providing detailed information for a system mentioned in Section B."
     },
     {
-      "source": "nuscale_ch05_0017",
-      "target": "nuscale_ch05_0018",
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch01_0072",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides detailed material specifications for pressurizer components that are part of the certified design boundaries and interfaces described generally in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A specifies the materials and components of the pressurizer, which is a subsystem described in Section B as part of the overall RCS design and its pressure-retaining and degasification functions."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific details about the pressurizer materials and components, which are part of the Reactor Coolant System (RCS) described in general terms in Section B's overall plant description."
+    },
+    {
+      "source": "nuscale_ch01_0289",
+      "target": "nuscale_ch01_0072",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses regulatory criteria and exceptions for AC power system reliability in the NuScale design, while Section B outlines the interface requirements and boundaries between the certified NuScale design and site-specific COL applications, connecting them through the delineation of which electrical system responsibilities and requirements are addressed in the certified design versus those left to the COL applicant."
+    },
+    {
+      "source": "nuscale_ch01_0289",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses regulatory criteria for evaluating open phase conditions in the electric power system, specifically noting that NuScale's nonreliance on AC power makes certain outage time restrictions inapplicable, while Section B describes the design features of the NuScale RCS, including degasification and pressure boundary integrity, which are enabled by the system's design and operational independence from AC power as referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0289",
+      "target": "nuscale_ch01_0015",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section B provides a general overview of the NuScale plant systems, including the RCS and its operating characteristics, which Section A references in the context of demonstrating conformance with regulatory criteria for electrical system design and safety-related functions."
+    },
+    {
+      "source": "nuscale_ch01_0059",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the methodology for steam generator thermal-hydraulic testing using fluid heating to establish boundary conditions, while Section B details critical heat flux testing for the NuScale fuel design, both providing experimental data that underpin the thermal-hydraulic operating conditions referenced in the analysis question."
+    },
+    {
+      "source": "nuscale_ch01_0059",
+      "target": "nuscale_ch05_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the thermal-hydraulic testing methods and heat flux conditions relevant to the steam generator, which provide data and operational context that support the design basis and performance claims of the Decay Heat Removal System described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0059",
+      "target": "nuscale_ch05_0025",
       "relation": "SUPPORTS",
       "confidence": 0.7,
-      "description": "Section A discusses the development of operating procedures for reactor vessel integrity, while Section B provides references to inspection and installation requirements, with both sections connected through their focus on ensuring compliance with technical and safety specifications for the reactor vessel."
+      "description": "Section A describes the testing methodology for steam generator thermal-hydraulic performance, while Section B details the materials and components of the pressurizer, with both sections referencing specific components and subsystems of the NuScale RCS that are relevant for understanding its thermal-hydraulic operating conditions."
+    },
+    {
+      "source": "nuscale_ch01_0290",
+      "target": "nuscale_ch01_0058",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B provides experimental data and validation for the critical heat flux correlations used to determine the thermal-hydraulic operating conditions of the NuScale RCS, which are described and required in Section A's regulatory context."
+    },
+    {
+      "source": "nuscale_ch01_0290",
+      "target": "nuscale_ch05_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section B describes the Decay Heat Removal System's ability to remove decay heat and transition the reactor to safe shutdown without reliance on external power, which supports Section A's assertion that AC power source outage time restrictions are not applicable due to the plant's nonreliance on AC power for safety-related functions."
+    },
+    {
+      "source": "nuscale_ch01_0290",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides detailed material specifications for the pressurizer components referenced in the general system design context of Section A, connecting the regulatory criteria for system reliability with the specific component design."
+    },
+    {
+      "source": "nuscale_ch01_0290",
+      "target": "nuscale_ch01_0289",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides criteria for evaluating open phase conditions specifically for passive plant designs, while Section B provides similar criteria but for active plant designs, thus both sections specify requirements for different plant types under the same regulatory topic."
+    },
+    {
+      "source": "nuscale_ch01_0058",
+      "target": "nuscale_ch05_0022",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A provides critical heat flux (CHF) data and correlations for the NuScale fuel design, which are necessary to establish the fuel design limits that Section B's Decay Heat Removal System (DHRS) must not exceed during post-trip cooling to ensure safe shutdown."
+    },
+    {
+      "source": "nuscale_ch01_0058",
+      "target": "nuscale_ch05_0025",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides critical heat flux testing data and correlations for the NuScale fuel design, which are necessary inputs for determining the thermal-hydraulic operating conditions of the RCS described in Section B's discussion of pressurizer materials and components."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the function and design basis of the Decay Heat Removal System (DHRS) in maintaining safe thermal-hydraulic conditions, while Section B provides material specifications for the pressurizer components that are part of the Reactor Coolant System (RCS) affected by DHRS operation."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch01_0289",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A explains that the Decay Heat Removal System (DHRS) is designed to remove decay heat from the RCS without reliance on external (AC) power, while Section B states that NuScale's safety-related functions do not rely on AC power, making certain regulatory outage time restrictions inapplicable; thus, Section A's design feature directly supports Section B's regulatory justification."
+    },
+    {
+      "source": "nuscale_ch01_0118",
+      "target": "nuscale_ch01_0072",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A introduces the interface requirements and references Section B, which lists the specific Combined License Information Items relevant to those requirements."
+    },
+    {
+      "source": "nuscale_ch01_0118",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A identifies the certified design boundaries and components, which include the RCS described in Section B, thereby establishing that the system details in Section B fall within the scope defined by Section A."
+    },
+    {
+      "source": "nuscale_ch01_0118",
+      "target": "nuscale_ch01_0015",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references Section B by indicating that Section 1.2 (Section B) identifies the structures, systems, and components included in the certified design, which is necessary for understanding the interface requirements discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch01_0072",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A provides a summary of the RCS design and its components, while Section B outlines the interface requirements and identifies which systems, including the RCS, are part of the certified design referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the RCS design and its reliance on natural circulation, while Section B specifies additional system features such as degasification and pressure boundary integrity, thereby detailing aspects introduced in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a detailed summary of the Reactor Coolant System (RCS) design, which specifies and expands upon the general plant systems overviewed in Section B, particularly regarding the RCS's reliance on natural circulation and its integral components."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch01_0072",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A describes operational procedures and component states within the NuScale RCS, while Section B outlines the interface requirements and boundaries between certified and site-specific designs, connecting them through the identification of system components relevant to both operational context and regulatory boundaries."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the operational procedure of venting nitrogen from the pressurizer (PZR) through the RPV high point degasification line, which is a system feature detailed in Section B as the RCS degasification line for removing noncondensible gases from the PZR."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific operational procedures and component behaviors within the RCS, which are detailed examples that illustrate and specify the general plant systems and operating characteristics described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch01_0072",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the reactor vessel as a component of the RCS, which is part of the certified design identified in Section B, thus providing specific details for the general description of certified design interfaces in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the physical configuration and components of the reactor vessel as part of the RCS, while Section B details the operational functions and features (such as degasification and pressure retention) of the RCS, thus Section A provides the structural context for the functional descriptions in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch01_0015",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific details about the reactor vessel as a component of the RCS, which is one of the systems generally described in Section B's overview of the plant design and systems."
+    },
+    {
+      "source": "nuscale_ch01_0116",
+      "target": "nuscale_ch01_0072",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the legend for interpreting symbols and identifiers used in piping and instrumentation diagrams, which is necessary for understanding the diagrams referenced in Section B that delineate certified design boundaries and interfaces."
+    },
+    {
+      "source": "nuscale_ch01_0116",
+      "target": "nuscale_ch05_0004",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A provides the legend for instrumentation symbols used in diagrams, which is necessary to interpret the system components and instrumentation referenced in Section B's description of RCS operational features."
+    },
+    {
+      "source": "nuscale_ch01_0116",
+      "target": "nuscale_ch01_0015",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A provides the legend for instrumentation diagram symbols, which are referenced in Section B's general plant description when discussing instrumentation and controls as part of the overall facility design."
+    },
+    {
+      "source": "nuscale_ch01_0118",
+      "target": "nuscale_ch05_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A identifies the certified design boundaries and components, which Section B then describes in detail as part of the RCS, connecting the general scope of what is included in the certified design to the specific summary of the RCS system."
+    },
+    {
+      "source": "nuscale_ch01_0118",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A identifies the boundaries and components of the certified design, which includes the RCS and its interfaces, while Section B provides operational details about specific RCS components and their functions, thus Section B specifies operational details for the general system boundaries described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0118",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A identifies the boundaries and components included in the certified design, which encompasses the reactor vessel described in Section B as a key component of the RCS."
+    },
+    {
+      "source": "nuscale_ch01_0118",
+      "target": "nuscale_ch01_0116",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A outlines the interface requirements and boundaries for the certified design, while Section B provides the legend for interpreting instrumentation diagrams, which would be necessary for understanding the figures referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the RCS and its reliance on natural circulation, while Section B specifies operational details and procedures for system components such as the pressurizer and steam generators, thereby elaborating on the summary in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the RCS, mentioning its reliance on natural circulation and listing its major components, while Section B gives specific details about the reactor vessel as a key component of the RCS described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch01_0116",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides a summary of the NuScale RCS design and its reliance on natural circulation, while Section B lists diagram legends for instrumentation and analysis functions, which are used to interpret detailed system diagrams referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes operational procedures and system component interactions (such as the pressurizer and chemical volume control system) that directly involve the reactor vessel detailed in Section B, connecting them through their roles in maintaining and preparing the RCS thermal-hydraulic conditions."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch01_0116",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes operational procedures and system states for NuScale RCS components, while Section B provides the legend for instrumentation symbols used in diagrams, enabling interpretation of referenced instrumentation in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch01_0116",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the physical components and configuration of the reactor vessel as part of the RCS, while Section B provides the legend for instrumentation diagram symbols that would be used to interpret diagrams (such as Figure 5.1-3) referenced in the analysis question."
     }
   ]
 }

@@ -1,118 +1,252 @@
 {
-  "question": "What is the definition of the abbreviation SG?",
+  "question": "From Tables 5.1-1, what are the core volume and the steam generator volume in the RCS?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0117": {
-      "node_id": "nuscale_ch01_0117",
-      "title": "Figure 1.7-3f: Piping and In strumentation Diagram Legends",
-      "summary": "This section provides the legend for symbols used in NuScale’s Piping and Instrumentation Diagrams (P&IDs), detailing the graphical representations for various instruments, sensors, and auxiliary devices. It includes symbols for sample probes, pressure and temperature measurement devices, flow meters, level indicators, and analysis instruments, ensuring standardized interpretation of P&ID drawings.",
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section describes the NuScale reactor coolant system (RCS), which uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator. The RCS is designed to ensure safe and efficient cooling, maintain water chemistry, and provide uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "107",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
       "hop": 1
     },
-    "nuscale_ch01_0058": {
-      "node_id": "nuscale_ch01_0058",
-      "title": "Steam Generator Thermal-Hydraulic Performance Testing - Electrically Heated Facility",
-      "summary": "This section describes the critical heat flux (CHF) testing conducted for the NuScale NuFuel HTP2™ fuel design using an electrically heated 5x5 simulated fuel bundle with AREVA HTP™/HMP™ spacer grid technology. The tests, performed at the AREVA Karlstein Thermal Hydraulics facility, aimed to gather CHF data, validate and develop CHF correlations, determine mixing coefficients, and measure pressure drop characteristics under various hydraulic conditions to support the NuScale Power Module (NPM) application.",
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes key components such as the reactor pressure vessel, pressurizer, and associated piping and controls. The RCS removes heat from the reactor core to the steam generators using natural circulation, and it features systems for degassing and emergency cooling to maintain safety and integrity. The system interfaces with various subsystems, including chemical control, emergency cooling, and sampling systems.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "85",
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
       "hop": 1
     },
-    "nuscale_ch01_0059": {
-      "node_id": "nuscale_ch01_0059",
-      "title": "Steam Generator Thermal-Hydraulic Performance Testing - Fluid-Heated Facility",
-      "summary": "The electrically-heated steam generator test at the SIET facility focused on secondary-side performance using three instrumented tubes with controlled boundary conditions and distinct heating zones to simulate subcooled, boiling, and superheat regions. The testing provided valuable data on pressure fluctuations, flow stability, and steam outlet conditions, supporting the design, safety analysis, and code benchmarking for the NuScale steam generator, and was inspected by the NRC according to relevant procedures.",
+    "nuscale_ch05_0024": {
+      "node_id": "nuscale_ch05_0024",
+      "title": "Pressurizer",
+      "summary": "The pressurizer is an integral part of the reactor vessel, located in its upper region and separated by a baffle plate to allow rapid pressure communication with the reactor coolant system (RCS). Its main function is to regulate RCS pressure by maintaining a saturated steam-water interface, using heaters and spray flow for pressure control, and providing instrumentation for monitoring. The pressurizer is designed to handle operating transients without triggering reactor trips or safety system actuations, ensuring stable operation under various conditions.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "86",
+      "source_doc": "nuscale_ch05",
+      "page_range": "124",
       "hop": 1
     },
-    "nuscale_ch01_0111": {
-      "node_id": "nuscale_ch01_0111",
-      "title": "Figure 1.7-2: Instrumentatio n and Controls Symbol Legend",
-      "summary": "This section provides a legend explaining the symbols used for instrumentation and controls in NuScale’s safety analysis diagrams. It describes the logic gate functions, control room indicators, switch types, and other symbols relevant to system monitoring and control, ensuring clear interpretation of the diagrams. Additionally, it includes notes on piping and instrumentation diagram conventions, such as vent and drain representations.",
+    "nuscale_ch05_0006": {
+      "node_id": "nuscale_ch05_0006",
+      "title": "System Evaluation",
+      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance across different power levels by establishing steady-state parameters for both primary and secondary systems, such as coolant temperatures, flow rates, and pressures. These parameters are calculated using thermal hydraulic software and verified by hand, with uncertainties and design margins considered to ensure efficient operation and safety. The design supports natural circulation with low pressure losses, and uncertainties like SG tube plugging do not affect primary coolant flow determination.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "101",
-      "hop": 1
-    },
-    "nuscale_ch01_0014": {
-      "node_id": "nuscale_ch01_0014",
-      "title": "Acronyms and Abbreviations",
-      "summary": "This section explains the conventions used in the NuScale Final Safety Analysis Report (FSAR) for numbering tables, figures, and pages, as well as the handling of proprietary and sensitive information. It clarifies that tables and figures are numbered according to their section, pages are sequentially numbered, and sensitive content is withheld from the public version in compliance with regulatory requirements.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "10",
+      "source_doc": "nuscale_ch05",
+      "page_range": "12",
       "hop": 2
     },
-    "nuscale_ch01_0013": {
-      "node_id": "nuscale_ch01_0013",
-      "title": "Proprietary Information",
-      "summary": "This section explains the organization and numbering of text, tables, figures, and pages within the NuScale Final Safety Analysis Report (FSAR), following specific regulatory guidance. It also clarifies that while the FSAR does not contain proprietary or safeguards information, some sensitive content is withheld from public disclosure and is clearly marked, with a separate public version provided that excludes such material.",
+    "nuscale_ch05_0000": {
+      "node_id": "nuscale_ch05_0000",
+      "title": "Preface",
+      "summary": "The Preface outlines the copyright and usage restrictions for the NuScale Standard Plant Design Certification Application, specifically Chapter Five on the Reactor Coolant System and Connecting Systems. It specifies that only the U.S. Nuclear Regulatory Commission (NRC) is authorized to use, copy, or disclose the document for regulatory purposes, and any copies must retain the copyright notice. The section also references the table of contents for Chapter Five, indicating the topics covered.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "10",
+      "source_doc": "nuscale_ch05",
+      "page_range": "1",
       "hop": 2
+    },
+    "nuscale_ch05_0014": {
+      "node_id": "nuscale_ch05_0014",
+      "title": "Reactor Vessel",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module's reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel, all surrounded by a containment vessel. The RPV serves as a critical barrier to fission product release and supports various reactor components, with its materials and fabrication adhering to stringent ASME Boiler and Pressure Vessel Code standards to ensure long-term integrity and safety.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
+      "hop": 3
+    },
+    "nuscale_ch05_0002": {
+      "node_id": "nuscale_ch05_0002",
+      "title": "Summary Description",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve independent modules, maintains proper coolant chemistry and boron concentration, and is engineered to prevent fuel design limit violations during all operating conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 3
+    },
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the construction of the NuScale pressurizer and its components, specifying alloys and standards for each part to ensure corrosion resistance and compatibility with operating environments. It references relevant sections of the BPVC (Boiler and Pressure Vessel Code) and lists the applicable material specifications for components such as the baffle plate, heater bundles, cover plate, and bolting.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 4
+    },
+    "nuscale_ch05_0013": {
+      "node_id": "nuscale_ch05_0013",
+      "title": "References",
+      "summary": "This section lists references and standards relevant to the integrity of the reactor coolant boundary in the NuScale Final Safety Analysis Report. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as specific ASME code cases related to materials, quality assurance, and inspection procedures for pressurized water reactors.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "46",
+      "hop": 4
+    },
+    "nuscale_ch05_0019": {
+      "node_id": "nuscale_ch05_0019",
+      "title": "Reactor Coolant System Component and Subsystem Design",
+      "summary": "This section describes the design of the Reactor Coolant System (RCS) components and subsystems in the NuScale Power Module, detailing the integration of the reactor, steam generators, pressurizer, safety valves, and associated piping within the reactor pressure vessel (RPV). It outlines the configuration and boundaries of the steam generator system, emphasizing the integral design of the steam generators within the RPV and the separation between primary and secondary sides.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0117",
-      "target": "nuscale_ch01_0058",
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0004",
       "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A provides diagram legends that may include abbreviations like 'SG', while Section B discusses steam generator testing, suggesting that 'SG' could stand for 'Steam Generator' as used in Section B."
+      "description": "Section A provides a general overview of the RCS components, while Section B gives additional operational details about specific RCS features, with both sections together supporting understanding of the system relevant to interpreting Table 5.1-1's volume data."
     },
     {
-      "source": "nuscale_ch01_0117",
-      "target": "nuscale_ch01_0059",
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the RCS and its components, including the pressurizer, while Section B gives specific design details about the pressurizer as part of the RCS described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0024",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A provides diagram legends that likely define abbreviations such as 'SG', while Section B discusses steam generator performance testing, indicating that 'SG' refers to 'Steam Generator' as used in Section B."
+      "description": "Section A provides a general system description of the RCS and its degasification features, while Section B specifies the design and function of the pressurizer as a component within the RCS, detailing its integration and separation from the main coolant region."
     },
     {
-      "source": "nuscale_ch01_0058",
-      "target": "nuscale_ch01_0059",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Both Section A and Section B discuss steam generator thermal-hydraulic performance testing, where 'SG' is contextually used as an abbreviation for 'Steam Generator' in the analysis question."
-    },
-    {
-      "source": "nuscale_ch01_0014",
-      "target": "nuscale_ch01_0117",
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0003",
       "relation": "SPECIFIES",
-      "confidence": 0.7,
-      "description": "Section A provides general information about acronyms and abbreviations in the FSAR, while Section B contains a figure legend that may include the abbreviation 'SG' but does not explicitly define it, so Section A is intended to specify definitions for terms like those found in Section B."
+      "confidence": 0.85,
+      "description": "Section A references Section B's general description of the RCS and steam generators by providing further details on system evaluation and performance criteria, connecting the design basis to operational parameters."
     },
     {
-      "source": "nuscale_ch01_0014",
-      "target": "nuscale_ch01_0058",
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0024",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references Section 5.4 for further description of the steam generators, which is the section where Section B is located, indicating a structural cross-reference between the two sections regarding RCS component details."
+    },
+    {
+      "source": "nuscale_ch05_0000",
+      "target": "nuscale_ch05_0003",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A provides the document context and copyright information for the NuScale Standard Plant Design Certification Application, while Section B begins the technical summary of the Reactor Coolant System, which is the subject of the analysis question regarding core and steam generator volumes."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0000",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides technical details and evaluation criteria for the Reactor Coolant System (RCS), which are elaborated in the broader context introduced in Section B's preface to Chapter Five."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0003",
       "relation": "SPECIFIES",
       "confidence": 0.9,
-      "description": "Section A provides a list of acronyms and abbreviations, which would include the definition of 'SG', while Section B uses the abbreviation 'SG' in the context of steam generator performance testing, thus Section A defines a term used in Section B."
+      "description": "Section A describes the physical components of the reactor vessel, including the core and steam generators, while Section B provides a summary of the reactor coolant system (RCS) that includes these components, establishing that the core and steam generator volumes are part of the RCS as referenced in Tables 5.1-1."
     },
     {
-      "source": "nuscale_ch01_0014",
-      "target": "nuscale_ch01_0059",
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0004",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A describes the physical components of the RCS, including the core and steam generators, while Section B provides a functional overview of the RCS but does not specify the volumes requested in the analysis question, thus both sections are related by their discussion of RCS components but do not directly provide the required data."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0024",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the overall configuration of the reactor vessel and its components, including the core and steam generators, while Section B provides specific details about the pressurizer as a part of the reactor vessel, both contributing to the understanding of RCS component volumes referenced in Tables 5.1-1."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides a general overview of the RCS and its components, while Section B elaborates on specific system functions and features within the RCS, such as degasification and pressure boundary integrity, thereby specifying details for the general description in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0024",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A provides a list of acronyms and abbreviations, which would include the definition of 'SG', while Section B uses the abbreviation 'SG' in the context of steam generator performance testing, thus Section A defines a term used in Section B."
+      "description": "Section A provides a general overview of the RCS and mentions its components, including the pressurizer, which is described in more detail in Section B, thus Section B specifies details for a component generally described in Section A."
     },
     {
-      "source": "nuscale_ch01_0013",
-      "target": "nuscale_ch01_0117",
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0002",
       "relation": "SPECIFIES",
-      "confidence": 0.7,
-      "description": "Section B contains diagram legends that may define abbreviations such as SG, which is relevant to the analysis question, while Section A provides general information about document structure but does not define abbreviations."
+      "confidence": 0.95,
+      "description": "Section A provides specific details about the components within the reactor vessel, including the core and steam generators, while Section B gives a general overview of the RCS and its major components, establishing that the reactor vessel and its contents are part of the RCS."
     },
     {
-      "source": "nuscale_ch01_0013",
-      "target": "nuscale_ch01_0059",
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed descriptions of specific RCS components (e.g., pressurizer materials and parts) that are generally introduced in Section B's summary of the RCS design and its subsystems."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides detailed material and component information about the pressurizer, which is a subsystem described in the broader system overview of Section B, connecting them through the pressurizer's role within the RCS."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A references the material composition and component descriptions of the pressurizer, while Section B provides a general overview of the pressurizer's structure and function, with Section A specifying details for the general description in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A lists the components contained within the reactor pressure vessel, including the steam generators, while Section B provides a general description of the reactor coolant system and its integral components, establishing that the RCS includes the RPV and its internals."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A lists the main components of the RCS, including the core and steam generators, while Section B provides a functional overview of the RCS but does not specify component volumes; both sections together contextualize the location and function of the core and steam generators referenced in Tables 5.1-1."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0024",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A provides a general overview of the components within the Reactor Coolant System, including the core and steam generators, while Section B gives specific details about the pressurizer, another RCS component, but neither section provides the requested volume data from Tables 5.1-1."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0013",
       "relation": "SUPPORTS",
       "confidence": 0.7,
-      "description": "Section B discusses the thermal-hydraulic performance testing of the steam generator, which is commonly abbreviated as SG, thus providing context for the definition sought in the analysis question."
+      "description": "Section A describes the materials and components of the pressurizer in the RCS, while Section B lists references related to material integrity and quality assurance, with both sections connected through their focus on material specifications and standards for RCS components."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A references specific materials and components of the pressurizer, while Section B provides a general overview of the RCS components, including the pressurizer, establishing that A provides detailed specifications for the general description in B."
+    },
+    {
+      "source": "nuscale_ch05_0013",
+      "target": "nuscale_ch05_0019",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A provides references and source documents, while Section B describes the design and components of the Reactor Coolant System, including the core and steam generator volumes referenced in the analysis question."
     }
   ]
 }

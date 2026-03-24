@@ -1,261 +1,190 @@
 {
-  "question": "How many independent steam generators (SGs) are there in NuScale?",
+  "question": "What is the hot leg volume according to Table 5.1-1?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0018": {
-      "node_id": "nuscale_ch01_0018",
-      "title": "Principal Design Criteria",
-      "summary": "The section outlines the principal design criteria for the NuScale plant, focusing on the Site Cooling Water System (SCWS) and the overall facility process. It describes the reactor core’s heat transfer process, natural coolant circulation, steam generation, and the flow of superheated steam to the turbine and condenser, emphasizing the system’s role in efficient heat removal and power generation.",
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes key components such as the reactor pressure vessel, pressurizer, and associated piping and controls. It removes heat from the reactor core to the steam generators using natural circulation, and features systems for removing noncondensible gases and maintaining pressure boundary integrity to prevent radionuclide release. The RCS interfaces with several other systems, including emergency core cooling and chemical control, to ensure safe and efficient operation.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "28",
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
       "hop": 1
     },
-    "nuscale_ch01_0052": {
-      "node_id": "nuscale_ch01_0052",
-      "title": "Comparison with Other Facilities",
-      "summary": "This section compares the major design features and parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It provides a side-by-side summary of key characteristics such as electrical output, core design, reactor coolant system, and safety systems, highlighting significant differences in size, configuration, and safety approaches between NuScale and conventional PWRs. The comparison is intended for reference and illustrates NuScale’s unique modular and simplified design.",
+    "nuscale_ch05_0006": {
+      "node_id": "nuscale_ch05_0006",
+      "title": "System Evaluation",
+      "summary": "This section describes the evaluation of the NuScale Power Plant’s system performance, focusing on optimizing steady-state parameters such as coolant temperatures, flow rates, and pressures to maximize electrical generation and maintain safety margins. Calculations using thermal hydraulic software and hand verification establish best-estimate, maximum, and minimum flow conditions, accounting for uncertainties and ensuring the natural circulation design is effective with minimal pressure losses.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "79",
+      "source_doc": "nuscale_ch05",
+      "page_range": "12",
       "hop": 1
     },
-    "nuscale_ch01_0452": {
-      "node_id": "nuscale_ch01_0452",
-      "title": "BTP 10-2, Rev 4: Design Guidelines for Avoiding Water Hammers in Steam GeneratorsOTSGD B.1 Once-Through Steam Generator Designs - Auxiliary Feedwater Supply",
-      "summary": "This section explains that the NuScale plant design does not use once-through, top-feed, or preheat steam generator designs, and therefore the specific regulatory guidelines for avoiding water hammers in such systems are not applicable. Instead, NuScale uses a passive Decay Heat Removal System (DHRS) that fulfills a similar safety function without the need for auxiliary feedwater pumps or external supply headers, inherently precluding water hammer concerns addressed by the guidelines.",
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain proper coolant flow, water chemistry, and boron concentration to protect fuel integrity and support safe operation under normal and transient conditions.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "265",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
       "hop": 1
     },
-    "nuscale_ch01_0451": {
-      "node_id": "nuscale_ch01_0451",
-      "title": "BTP 10-2, Rev 4: Design Guidelines for Avoiding Water Hammers in Steam GeneratorsPSGD B.1 thru B.4Preheat Steam Generator Designs",
-      "summary": "This section explains that the NuScale plant design does not use preheat steam generator designs, so the regulatory guidelines for avoiding water hammers in such systems are not applicable. The NuScale design differs from conventional large PWRs and does not require the specific water hammer prevention measures outlined in BTP 10-2, Rev 4 for preheat steam generators.",
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the construction of the pressurizer and its components within the NuScale reactor coolant system. It specifies the types of steel and alloys used for various parts, their protective claddings, and compliance with relevant BPVC material specifications to ensure corrosion resistance and compatibility with operating environments.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "265",
-      "hop": 1
-    },
-    "nuscale_ch01_0059": {
-      "node_id": "nuscale_ch01_0059",
-      "title": "Steam Generator Thermal-Hydraulic Performance Testing - Fluid-Heated Facility",
-      "summary": "The section describes thermal-hydraulic performance testing of the NuScale steam generator using an electrically-heated, fluid-heated facility at the SIET test site in Italy. The tests, which included various heating zones and types of testing, were designed to simulate different operational conditions, support design validation, and inform system sizing and safety evaluations, with oversight from the NRC.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "86",
-      "hop": 1
-    },
-    "nuscale_ch01_0058": {
-      "node_id": "nuscale_ch01_0058",
-      "title": "Steam Generator Thermal-Hydraulic Performance Testing - Electrically Heated Facility",
-      "summary": "This section describes the critical heat flux (CHF) testing conducted for the NuScale NuFuel HTP2™ fuel design using an electrically heated 5x5 simulated fuel bundle with AREVA HTP™/HMP™ grid technology. The tests, performed at the AREVA Karlstein Thermal Hydraulics facility, aimed to gather CHF data, validate CHF correlations, determine mixing coefficients, and measure pressure drop characteristics under various hydraulic conditions to support the NuScale reactor safety analysis.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "85",
-      "hop": 1
-    },
-    "nuscale_ch01_0748": {
-      "node_id": "nuscale_ch01_0748",
-      "title": "SRP 15.4.6, Rev 2: Inadvertent Decrease in Boron Concentration in the Reactor Coolant System (PWR)II.2 Fuel Cladding Integrity",
-      "summary": "This section summarizes NuScale’s conformance with regulatory criteria regarding inadvertent decreases in boron concentration in the reactor coolant system, specifically addressing fuel cladding integrity. It states that NuScale’s design meets the relevant requirements, noting that Critical Heat Flux (CHF) is the appropriate term for the NuScale reactor, and that operator action is not required to mitigate such events.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "302",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
       "hop": 2
     },
-    "nuscale_ch01_0747": {
-      "node_id": "nuscale_ch01_0747",
-      "title": "SRP 15.4.6, Rev 2: Inadvertent Decrease in Boron Concentration in the Reactor Coolant System (PWR)II.1 Reactor Coolant and Main Steam System Pressures",
-      "summary": "This section summarizes NuScale’s conformance with SRP 15.4.6, Rev 2, regarding inadvertent decreases in boron concentration in the reactor coolant system for PWRs. It states that NuScale’s design meets the relevant regulatory criteria for reactor coolant and main steam system pressures, fuel cladding integrity, incident frequency, and analysis methods, while noting that operator action is not required for mitigation and some guidance is not applicable due to design differences (e.g., absence of reactor coolant pumps).",
+    "nuscale_ch05_0024": {
+      "node_id": "nuscale_ch05_0024",
+      "title": "Pressurizer",
+      "summary": "The pressurizer, integrated into the upper region of the reactor vessel and separated by a baffle plate, regulates reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering reactor trips or safety system actuations, with instrumentation providing real-time pressure and level data to control systems.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "302",
-      "hop": 2
-    },
-    "nuscale_ch01_0043": {
-      "node_id": "nuscale_ch01_0043",
-      "title": "Ultimate Heat Sink",
-      "summary": "The Ultimate Heat Sink for the NuScale plant is a large, stainless steel-lined, reinforced concrete pool located below grade, comprising the reactor, refueling, and spent fuel pool areas. During normal operations, heat is removed via a cooling system and rejected to the atmosphere, while in the event of a total loss of AC power, decay heat is passively transferred to the pool, which has sufficient water inventory to ensure continued cooling through heat-up and boiling.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "41",
+      "source_doc": "nuscale_ch05",
+      "page_range": "124",
       "hop": 3
     },
-    "nuscale_ch01_0044": {
-      "node_id": "nuscale_ch01_0044",
-      "title": "Chemical and Volume Control System",
-      "summary": "The Chemical and Volume Control System section describes the NuScale reactor’s closed-loop, two-phase natural circulation cooling system, which uses two independent decay heat removal trains, each capable of fully cooling the reactor. In case of an accident or loss of power, passive systems transfer decay heat to a large, reinforced pool (the ultimate heat sink), ensuring continued cooling through natural circulation and heat rejection to the atmosphere or external sinks.",
+    "nuscale_ch05_0002": {
+      "node_id": "nuscale_ch05_0002",
+      "title": "Summary Description",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation, eliminating the need for pumps or external piping, and is integrated within each NuScale Power Module. The RCS is designed to safely transfer heat from the reactor core, maintain proper coolant chemistry and boron concentration, and ensure fuel design limits are not exceeded during all operating conditions.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "41",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
       "hop": 3
     },
-    "nuscale_ch01_0057": {
-      "node_id": "nuscale_ch01_0057",
-      "title": "Critical Heat Flux Testing - NuFuel HTP2™ Fuel Design",
-      "summary": "This section describes the critical heat flux (CHF) testing conducted for the NuFuel HTP2™ fuel design, which uses AREVA HMP™/HTP™ spacer grid technology. The testing aimed to gather CHF data to develop and validate NuScale's CHF correlations, as well as to measure bundle subchannel exit temperatures and pressure drop characteristics under various hydraulic conditions. The tests were performed using a 5x5 electrically-heated simulated fuel bundle at the AREVA Karlstein Thermal Hydraulics facility in Germany.",
+    "nuscale_ch05_0014": {
+      "node_id": "nuscale_ch05_0014",
+      "title": "Reactor Vessel",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module's reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel surrounded by a containment vessel. The RPV serves as a critical barrier to fission product release and provides structural support and attachment points for various reactor components, with materials and fabrication standards selected to ensure long-term integrity and compliance with ASME codes.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "85",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
       "hop": 3
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0018",
-      "target": "nuscale_ch01_0052",
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0006",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section B provides a table of major NuScale design features and parameters, which likely includes the number of independent steam generators, while Section A gives a general plant and process overview without specifying this detail; thus, Section B specifies details for the general description in Section A."
+      "description": "Section B discusses the establishment of steady state values for system parameters, such as hot leg volume, which are then specifically listed in Table 5.1-1 referenced by the analysis question, while Section A provides general system descriptions without specifying these values."
     },
     {
-      "source": "nuscale_ch01_0018",
-      "target": "nuscale_ch01_0059",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section B describes thermal-hydraulic performance testing of three isolated steam generator tubes, which provides evidence supporting the number and independence of steam generators implied or required in Section A's general plant description."
-    },
-    {
-      "source": "nuscale_ch01_0052",
-      "target": "nuscale_ch01_0452",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A provides nominal design parameters for the NuScale plant, which may include the number of steam generators, while Section B discusses regulatory guidelines for auxiliary feedwater systems and clarifies that NuScale's design differs from large PWRs in this respect."
-    },
-    {
-      "source": "nuscale_ch01_0052",
-      "target": "nuscale_ch01_0059",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A provides a general comparison of NuScale's major design features, including steam generators, while Section B describes testing performed on three isolated steam generator tubes, connecting the test setup to the design feature discussed in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0052",
-      "target": "nuscale_ch01_0058",
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0003",
       "relation": "SPECIFIES",
-      "confidence": 0.7,
-      "description": "Section A provides general design features and nominal parameters of the NuScale plant, which would include the number of independent steam generators, while Section B discusses thermal-hydraulic performance testing of the steam generator but does not specify the number of steam generators."
+      "confidence": 0.85,
+      "description": "Section B provides the general design basis and system boundaries for the RCS, which Section A further details by describing specific components and operational features within that system."
     },
     {
-      "source": "nuscale_ch01_0452",
-      "target": "nuscale_ch01_0451",
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A discusses the evaluation and optimization of system parameters, which are established based on the design described in Section B, where the components and configuration of the reactor coolant system (including the hot leg) are defined."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides detailed material and component descriptions of the pressurizer, which is a subsystem referenced in Section B's general system description of the Reactor Coolant System (RCS) and its functions."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0006",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A provides references to detailed component descriptions and material specifications, while Section B discusses system-level evaluations and refers to Section 5.4 for further details, indicating that Section B references Section A for more specific information."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides detailed descriptions of specific pressurizer components and their materials, which are part of the broader reactor coolant system summarized in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the physical configuration and function of the pressurizer as part of the reactor vessel, while Section B provides a general system-level description of the reactor coolant system (RCS) and its interaction with the pressurizer, connecting them through the mention of the PZR (pressurizer) volume and its operational role."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0006",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section B discusses the establishment of steady state values for system parameters such as volumes, which are detailed in Table 5.1-1, while Section A describes the pressurizer component but does not provide the hot leg volume, thus Section B is the relevant source for the analysis question."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the pressurizer as a component of the reactor vessel, while Section B provides a general overview of the reactor coolant system, including the pressurizer as one of its components, thus Section A specifies details for the general system described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the reactor coolant system's components, while Section B specifies additional functional details about the system's degasification and pressure-retaining features, both contributing to the understanding of the RCS relevant to Table 5.1-1."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0006",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the reactor coolant system's components, while Section B discusses the evaluation of system parameters (such as volumes) to optimize performance, connecting the general system description to the specific parameter values found in Table 5.1-1."
+    },
+    {
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0004",
       "relation": "REFERENCES",
       "confidence": 0.95,
-      "description": "Section A and Section B both reference the NuScale Final Safety Analysis Report's conformance with regulatory criteria regarding steam generator design guidelines, specifically noting the inapplicability of certain auxiliary feedwater system requirements to NuScale due to its unique DHRS design."
+      "description": "Section A references Section B by indicating that the Reactor Vessel (RPV) is a component of the Reactor Coolant System (RCS), which is described in more detail in Section B."
     },
     {
-      "source": "nuscale_ch01_0452",
-      "target": "nuscale_ch01_0059",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section B describes a test setup using three isolated tubes to simulate steam generator performance, which provides supporting evidence for the number of independent steam generator modules implied or required in Section A's regulatory conformance discussion."
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0006",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references Section B by noting that the reactor coolant system (RCS) is described in Section 5.1, which is where Table 5.1-1 (the source of the hot leg volume) is located and discussed in Section B."
     },
     {
-      "source": "nuscale_ch01_0452",
-      "target": "nuscale_ch01_0058",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A discusses the design guidelines and regulatory conformance for NuScale's steam generator systems, while Section B details the thermal-hydraulic performance testing of the steam generator, with both sections connected through their focus on the design and validation of NuScale's steam generator systems."
-    },
-    {
-      "source": "nuscale_ch01_0451",
-      "target": "nuscale_ch01_0059",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section B describes a test setup using three isolated tubes to simulate steam generator performance, which provides experimental evidence relevant to determining the number of independent steam generators referenced in the regulatory context of Section A."
-    },
-    {
-      "source": "nuscale_ch01_0451",
-      "target": "nuscale_ch01_0058",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A discusses design guidelines and regulatory conformance for steam generators in NuScale, while Section B details thermal-hydraulic performance testing of the steam generators, with both sections connected through their focus on the design and validation of NuScale's steam generator systems."
-    },
-    {
-      "source": "nuscale_ch01_0059",
-      "target": "nuscale_ch01_0058",
-      "relation": "SEMANTIC",
-      "confidence": 0.6,
-      "description": "Section A describes the testing setup for steam generator tubes, while Section B details critical heat flux testing for the NuScale fuel design, with both sections referencing thermal-hydraulic performance testing but focusing on different components (steam generator tubes vs. fuel rods), thus they are related by their shared context of thermal-hydraulic testing but do not directly inform the number of independent steam generators."
-    },
-    {
-      "source": "nuscale_ch01_0748",
-      "target": "nuscale_ch01_0052",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section B provides a table of major NuScale design features and nominal parameters, which likely includes the number of independent steam generators, while Section A discusses regulatory criteria and design differences but does not specify the number of SGs, making Section B the source of the relevant design value for the analysis question."
-    },
-    {
-      "source": "nuscale_ch01_0747",
-      "target": "nuscale_ch01_0018",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A discusses the applicability of regulatory guidance for reactor coolant and main steam systems in the context of NuScale's design, while Section B provides a general description of the NuScale plant layout and systems, with both sections referencing the configuration and components of the reactor coolant system."
-    },
-    {
-      "source": "nuscale_ch01_0747",
-      "target": "nuscale_ch01_0052",
+      "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0003",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section B provides a table of NuScale's major design features, including the number of steam generators, which is the specific design value needed to answer the analysis question, while Section A discusses regulatory criteria and system descriptions but does not specify the number of steam generators."
+      "description": "Section A describes the reactor vessel as a component of the reactor coolant system (RCS), while Section B provides a summary of the RCS and identifies the reactor vessel as one of its components, thus Section A provides details/specifications for the general system described in Section B."
     },
     {
-      "source": "nuscale_ch01_0747",
-      "target": "nuscale_ch01_0452",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A and Section B both discuss the inapplicability of certain PWR-specific systems (reactor coolant pumps and auxiliary feedwater systems) to the NuScale design, indicating that NuScale's reactor coolant and steam generator configuration differs from conventional PWRs, which is relevant to determining the number and independence of steam generators."
-    },
-    {
-      "source": "nuscale_ch01_0043",
-      "target": "nuscale_ch01_0018",
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0002",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A describes the decay heat removal system's connection to each SG loop, implying two independent SGs, while Section B provides general plant and system descriptions without specifying the number of SGs, so Section A provides specific details that Section B's general overview lacks."
+      "description": "Section A describes the pressurizer as a component of the reactor vessel, while Section B provides a general overview of the reactor coolant system and its components, including the pressurizer, thus Section B gives a general context that Section A specifies in detail."
     },
     {
-      "source": "nuscale_ch01_0043",
-      "target": "nuscale_ch01_0052",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the configuration of decay heat removal equipment attached to each SG loop, implying the presence of two independent steam generators, while Section B references a table comparing NuScale's design parameters (including the number of SGs) with other facilities, thus providing supporting data."
-    },
-    {
-      "source": "nuscale_ch01_0043",
-      "target": "nuscale_ch01_0452",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A describes the decay heat removal system (DHRS) configuration, indicating two trains each attached to a separate SG loop, while Section B clarifies that NuScale's DHRS replaces the traditional AFW system, implying the presence of two independent SGs as referenced in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0044",
-      "target": "nuscale_ch01_0018",
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0014",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A describes the decay heat removal system's connection to each steam generator (SG) loop, implying the presence of two independent SGs, while Section B provides general plant and system descriptions without directly addressing the number of SGs; thus, Section A provides specific design details that Section B does not."
+      "description": "Section A describes the pressurizer as an integral part of the reactor vessel, which is the main subject of Section B, thereby specifying the relationship and physical integration between the two components."
     },
     {
-      "source": "nuscale_ch01_0044",
-      "target": "nuscale_ch01_0052",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A mentions that there are two trains of decay heat removal equipment, each attached to a separate SG loop, implying two independent steam generators, while Section B provides a comparative context for plant features but does not directly specify the number of SGs; thus, Section A's information supports answering the analysis question, with Section B offering contextual background."
-    },
-    {
-      "source": "nuscale_ch01_0044",
-      "target": "nuscale_ch01_0452",
-      "relation": "SUPPORTS",
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
       "confidence": 0.9,
-      "description": "Section A describes the decay heat removal system's configuration, indicating one train per SG loop, while Section B clarifies that NuScale's DHRS replaces the traditional AFW system, implying each DHRS train is associated with an independent SG, thus connecting the number of DHRS trains to the number of independent SGs."
-    },
-    {
-      "source": "nuscale_ch01_0043",
-      "target": "nuscale_ch01_0044",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Sections A and B both describe the presence of two trains of decay heat removal equipment, each attached to a separate steam generator (SG) loop, indicating there are two independent SGs in NuScale."
+      "description": "Section B describes the reactor vessel as a component of the reactor coolant system (RCS), which is generally introduced and described in Section A, establishing that Section A's summary provides the context for the more detailed description in Section B."
     }
   ]
 }

@@ -1,310 +1,72 @@
 {
-  "question": "What is the motive force for natural circulation in NuScale?",
+  "question": "According to Table 1.2-1, what is the thermal power rating of each NuScale Power Module?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0056": {
-      "node_id": "nuscale_ch01_0056",
-      "title": "Critical Heat Flux Testing - Preliminary Fuel Design",
-      "summary": "This section outlines the verification and confirmation testing programs for unique NuScale Power Module design features, focusing on areas lacking prior data or operational experience. Specifically, it describes critical heat flux (CHF) testing for the preliminary fuel design, which differs from standard PWR fuel in assembly height and coolant flow, and provided essential data for safety analysis and the development of NuScale's CHF correlation.",
+    "nuscale_ch01_0810": {
+      "node_id": "nuscale_ch01_0810",
+      "title": "DSRS 15.9.A, Rev 0: Thermal Hydraulic Stability Review ResponsibilitiesII.4 Detect and Suppress Method: Exclusion zone and buffer region methodology",
+      "summary": "The NuScale design does not use the exclusion zone or buffer region methodology for thermal hydraulic stability, as reactor trip signals are designed to prevent conditions that could lead to unstable flow oscillations. Instead, the existing reactor trip system (RTS) provides protection by tripping the reactor before safety limits are violated, making additional detect and suppress (D&S) methods or backup options unnecessary. The RTS system partially conforms to regulatory criteria by preventing instability conditions, but it does not actively detect or suppress instabilities.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "83",
+      "page_range": "315",
       "hop": 1
     },
-    "nuscale_ch01_0018": {
-      "node_id": "nuscale_ch01_0018",
-      "title": "Principal Design Criteria",
-      "summary": "The section outlines the principal design criteria for the NuScale plant, focusing on the Site Cooling Water System (SCWS), which supplies cooling water to auxiliary systems and is tailored to specific site requirements. It also describes the reactor's heat transfer process, natural circulation flow, and the generation of electricity via a steam turbine, with provisions for heat removal through a turbine bypass and condenser system.",
+    "nuscale_ch01_0015": {
+      "node_id": "nuscale_ch01_0015",
+      "title": "General Plant Description",
+      "summary": "This section provides an overview of the NuScale plant design, summarizing its main systems such as safety features, power conversion, fuel handling, cooling, waste management, and auxiliary systems. It explains the distinction between certified and site-specific design elements, noting that some information is representative or conceptual and marked accordingly, while security-related details are withheld. The section also references figures illustrating the plant layout and system boundaries.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "28",
+      "page_range": "26",
       "hop": 1
-    },
-    "nuscale_ch01_0044": {
-      "node_id": "nuscale_ch01_0044",
-      "title": "Chemical and Volume Control System",
-      "summary": "The Chemical and Volume Control System section describes the NuScale reactor’s passive decay heat removal system, which uses two independent trains, each capable of removing 100% of the decay heat via natural circulation and passive condensers immersed in the reactor pool. In case of a steam generator tube failure or loss of AC power, the system isolates the affected components and continues cooling the reactor by transferring heat to a large, stainless steel-lined ultimate heat sink pool, ensuring safe heat removal even during accidents.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "41",
-      "hop": 1
-    },
-    "nuscale_ch01_0064": {
-      "node_id": "nuscale_ch01_0064",
-      "title": "NuScale Test and Inspection Plans",
-      "summary": "This section describes NuScale’s test and inspection plans for key reactor components, focusing on the control rod drive shafts and the Emergency Core Cooling System (ECCS) valves. It summarizes successful tests confirming operability, drop time, and impact force of control rods, as well as a dedicated test program for ECCS valves—including their unique features and performance under reactor conditions—conducted at a specialized facility to ensure safety and functionality.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "89",
-      "hop": 1
-    },
-    "nuscale_ch01_0063": {
-      "node_id": "nuscale_ch01_0063",
-      "title": "Emergency Core Cooling System Valve Design Certification Application Demonstration Test",
-      "summary": "This section describes the demonstration test program for the Emergency Core Cooling System (ECCS) valves in the NuScale reactor design. The program aimed to verify the functional performance of the ECCS valves, including their operation at reactor pressures and temperatures and in borated coolant, as well as the effectiveness of the inadvertent actuation block (IAB) feature. Testing was conducted at a specialized facility using a test article representative of the reactor recirculation valve (RRV) to ensure the valves meet safety and design requirements.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "89",
-      "hop": 1
-    },
-    "nuscale_ch01_0019": {
-      "node_id": "nuscale_ch01_0019",
-      "title": "Operating Characteristics",
-      "summary": "The NuScale Power Module (NPM) operates using natural circulation for reactor coolant flow, eliminating the need for reactor coolant pumps, and features a small, modular, integral pressurized water reactor design. It relies on passive safety systems—including dedicated emergency core cooling and decay heat removal systems—that do not require electrical power, and its components are partially immersed in a reactor pool for enhanced safety. The NPM allows for flexible power maneuvering using control rods and soluble boron, and its design minimizes external piping and penetrations below the reactor core.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "29",
-      "hop": 1
-    },
-    "nuscale_ch01_0055": {
-      "node_id": "nuscale_ch01_0055",
-      "title": "NuScale Testing Programs",
-      "summary": "This section outlines the NuScale testing programs designed to verify and confirm unique design features supporting the plant’s safety analysis, particularly where prior data or operational experience was lacking. It summarizes completed and ongoing tests for the NuScale Power Module, including those related to fuel design, steam generator, control rod assemblies, and integrated system phenomena, with specific mention of critical heat flux testing for both preliminary and final fuel designs to support licensing and safety analysis.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "83",
-      "hop": 2
-    },
-    "nuscale_ch01_0054": {
-      "node_id": "nuscale_ch01_0054",
-      "title": "Requirements for Additional Technical Information",
-      "summary": "This section outlines the verification and confirmation testing programs for unique design features of the NuScale Power Plant, which provide essential data to support the final safety analyses. It details completed and ongoing tests focused on areas lacking prior data or operational experience, including specific tests for fuel design, steam generators, control rod assemblies, and integrated system phenomena. The section also describes critical heat flux (CHF) testing conducted for both preliminary and final fuel designs to meet licensing requirements and support safety analysis.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "83",
-      "hop": 2
-    },
-    "nuscale_ch01_0059": {
-      "node_id": "nuscale_ch01_0059",
-      "title": "Steam Generator Thermal-Hydraulic Performance Testing - Fluid-Heated Facility",
-      "summary": "The section describes thermal-hydraulic performance testing of the NuScale steam generator using an electrically-heated, fluid-heated facility at SIET in Italy. The tests, which included various operational scenarios, allowed precise control and measurement of heat flux and pressure dynamics to support design validation, code benchmarking, and regulatory inspection, as well as to inform component sizing and operational stability.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "86",
-      "hop": 2
-    },
-    "nuscale_ch01_0058": {
-      "node_id": "nuscale_ch01_0058",
-      "title": "Steam Generator Thermal-Hydraulic Performance Testing - Electrically Heated Facility",
-      "summary": "This section describes the critical heat flux (CHF) testing conducted for the NuScale fuel design using an electrically heated 5x5 simulated fuel bundle with AREVA HTP/HMP spacer grid technology. The tests aimed to gather CHF data, validate and develop CHF correlations, and measure thermal-hydraulic characteristics under various operating conditions, supporting the safety analysis for the NuScale Power Module. Testing was performed at the AREVA Karlstein Thermal Hydraulics facility in Germany.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "85",
-      "hop": 2
     },
     "nuscale_ch01_0811": {
       "node_id": "nuscale_ch01_0811",
       "title": "DSRS 15.9.A, Rev 0: Thermal Hydraulic Stability Review ResponsibilitiesII.5 Detect and Suppress Method Trip of reactor before SAFDL violation",
-      "summary": "The NuScale design does not use the exclusion zone or detect-and-suppress methods for thermal hydraulic stability; instead, existing reactor trip signals act preemptively to prevent violation of safety limits before flow instabilities can develop. The system partially conforms to regulatory criteria by ensuring reactor trips occur before Safety Analysis Fuel Design Limits (SAFDL) are exceeded, but does not actively detect or suppress instabilities. Backup options and additional monitoring systems are not applicable, as the current trip system is considered sufficient.",
+      "summary": "The NuScale design does not use the exclusion zone or buffer region methodology for thermal hydraulic stability, as existing reactor trip signals already prevent violation of safety limits before unstable flow oscillations can develop. The system partially conforms to regulatory criteria by ensuring reactor trips occur before SAFDL violations, but does not employ detect and suppress methods or related instrumentation, as instabilities are not directly detected or suppressed. Backup options are not required due to the reliability of existing trip signals and technical specifications.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "315",
-      "hop": 4
+      "hop": 1
+    },
+    "nuscale_ch01_0072": {
+      "node_id": "nuscale_ch01_0072",
+      "title": "Combined License Information Items",
+      "summary": "This section explains the interface requirements between the NuScale Power Plant certified design and the site-specific design provided in the combined license (COL) application. It distinguishes between conceptual design information (CDI) for non-certified portions and COL information items, which are site-specific responsibilities of the COL applicant. The section also notes that COL applicants must address all COL information items and provide a list of any departures from the certified design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "108",
+      "hop": 1
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0056",
-      "target": "nuscale_ch01_0018",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A describes testing programs that generate data to support the safety analysis of NuScale's unique design features, while Section B provides a general description of the plant's design, including the reactor core and flow path relevant to natural circulation; thus, Section A's test data supports the claims made in Section B's design overview."
-    },
-    {
-      "source": "nuscale_ch01_0056",
-      "target": "nuscale_ch01_0044",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A discusses testing programs that generate data to support safety analyses, while Section B describes the natural circulation cooling system whose performance and safety are likely evaluated using the data from Section A."
-    },
-    {
-      "source": "nuscale_ch01_0056",
-      "target": "nuscale_ch01_0064",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A outlines the overall testing programs developed to support the safety analysis of NuScale's unique design features, while Section B provides specific results from one such test (ECCS valve demonstration), thus Section B gives detailed evidence supporting the broader testing framework described in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0056",
-      "target": "nuscale_ch01_0063",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A outlines the testing programs that generate data to support safety analyses, while Section B describes a specific ECCS valve test whose results contribute to confirming operability, thus Section B provides specific evidence that supports the general testing approach described in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0056",
-      "target": "nuscale_ch01_0019",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section B states that the NuScale Power Module operates using natural circulation for reactor coolant flow, while Section A describes testing programs that verify and confirm the design features supporting the safety analysis, which would include the natural circulation mechanism."
-    },
-    {
-      "source": "nuscale_ch01_0018",
-      "target": "nuscale_ch01_0044",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A describes the physical arrangement of the reactor core and hot leg riser, which are essential for establishing the temperature and density gradients that drive natural circulation, while Section B describes the closed-loop, two-phase natural circulation cooling system that relies on these gradients to remove heat from the reactor core."
-    },
-    {
-      "source": "nuscale_ch01_0018",
-      "target": "nuscale_ch01_0019",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section B states that the NuScale module operates using natural circulation for reactor coolant flow, while Section A describes the physical arrangement of the reactor core and hot leg riser, which are essential design features that enable natural circulation as described in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0044",
-      "target": "nuscale_ch01_0019",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section B explains that natural circulation is the means of providing reactor coolant flow in NuScale, while Section A describes the system components (such as passive condensers and decay heat removal) that utilize this natural circulation mechanism, thus Section A provides specific system details for the general operating principle described in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0064",
-      "target": "nuscale_ch01_0063",
+      "source": "nuscale_ch01_0810",
+      "target": "nuscale_ch01_0811",
       "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A references and summarizes the content of Section B, specifically the Emergency Core Cooling System Valve Design Certification Application Demonstration Test, indicating that Section A draws upon the detailed information provided in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0055",
-      "target": "nuscale_ch01_0056",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A and Section B both describe NuScale's testing programs that verify and confirm unique design features supporting the safety analysis, with Section B focusing specifically on critical heat flux testing as part of the broader testing program outlined in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0055",
-      "target": "nuscale_ch01_0018",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A describes testing programs that generate data to support the safety analysis of design features, while Section B provides a general description of the plant's design, including the reactor core and flow paths relevant to natural circulation, thus Section A's tests are intended to verify the design described in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0055",
-      "target": "nuscale_ch01_0044",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A describes testing programs that verify unique design features, while Section B details the natural circulation cooling system whose motive force is a key design feature likely verified by the tests in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0054",
-      "target": "nuscale_ch01_0056",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides an overview of the NuScale testing programs, while Section B details a specific aspect—critical heat flux testing—thus Section B specifies a particular test within the general testing framework described in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0054",
-      "target": "nuscale_ch01_0018",
-      "relation": "SPECIFIES",
-      "confidence": 0.7,
-      "description": "Section A discusses testing programs to verify unique design features that support the safety analysis, while Section B provides a general description of the plant's design, including the reactor core and hot leg riser, which are relevant to understanding the motive force for natural circulation."
-    },
-    {
-      "source": "nuscale_ch01_0054",
-      "target": "nuscale_ch01_0044",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A discusses testing programs to verify unique design features that support the safety analysis, while Section B describes the natural circulation cooling system design, which is one of the features likely subject to such testing; thus, Section A's testing programs provide evidence supporting the claims about natural circulation described in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0059",
-      "target": "nuscale_ch01_0056",
-      "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A describes thermal-hydraulic testing of the steam generator to characterize heat transfer, while Section B outlines broader verification and confirmation tests (including thermal-hydraulic aspects) that provide supporting data for the safety analysis; thus, Section A provides specific details that support the general testing program described in Section B."
+      "description": "Section A and Section B both discuss the NuScale design's approach to thermal hydraulic stability by describing the exclusion of the exclusion zone methodology and the use of reactor trip signals to prevent SAFDL and CHF violations, with Section B specifying the trip before SAFDL violation as a protective measure referenced in Section A."
     },
     {
-      "source": "nuscale_ch01_0059",
-      "target": "nuscale_ch01_0018",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A describes the method used to simulate heat transfer in the steam generator for testing, while Section B outlines the general plant design including the reactor core and hot leg riser, both of which are connected by their relevance to understanding the thermal-hydraulic processes that drive natural circulation in NuScale."
-    },
-    {
-      "source": "nuscale_ch01_0059",
-      "target": "nuscale_ch01_0044",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the heat input mechanism (Joule heating) used in steam generator testing to simulate thermal conditions, while Section B explains that the motive force for natural circulation in NuScale is the closed-loop, two-phase flow driven by heat removal via the steam generators and decay heat removal system—thus, Section A's heat flux conditions are directly related to the motive force described in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0058",
-      "target": "nuscale_ch01_0056",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides updated and specific critical heat flux (CHF) test data for the NuScale fuel design, which augments and validates the preliminary CHF data and testing described in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0058",
-      "target": "nuscale_ch01_0018",
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0811",
       "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A provides test data and correlations for the thermal-hydraulic performance of the NuScale fuel design, which underpins the understanding of heat transfer and thus supports the process overview in Section B that describes the reactor core and its configuration relevant to natural circulation."
+      "description": "Section A provides a general description of the plant design, which includes operating characteristics such as thermal power rating, while Section B discusses regulatory criteria for thermal hydraulic stability that depend on the plant's operating parameters, including thermal power."
     },
     {
-      "source": "nuscale_ch01_0058",
-      "target": "nuscale_ch01_0044",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section B describes the closed-loop, two-phase natural circulation cooling system in NuScale, which relies on the steam generator's thermal-hydraulic performance as characterized and validated by the CHF testing data discussed in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0055",
-      "target": "nuscale_ch01_0059",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides an overview of the NuScale testing programs, while Section B specifies the details of one such program—the steam generator thermal-hydraulic performance testing—thus Section B provides detailed information supporting the general description in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0055",
-      "target": "nuscale_ch01_0058",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A outlines the overall NuScale testing programs that support safety analysis, while Section B details a specific thermal-hydraulic performance test (including critical heat flux data) that is part of those programs, providing supporting data for the analyses described in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0054",
-      "target": "nuscale_ch01_0059",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A outlines the need for verification and confirmation tests to support the NuScale safety analysis, while Section B describes a specific test (steam generator thermal-hydraulic performance) conducted as part of that testing program, thus providing detailed evidence for the general requirement in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0054",
-      "target": "nuscale_ch01_0058",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A outlines the overall testing programs for NuScale's unique design features, while Section B details a specific test (Critical Heat Flux Testing) that is part of those programs, providing data to support the safety analysis mentioned in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0059",
-      "target": "nuscale_ch01_0058",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.95,
-      "description": "Section A describes the method for applying controlled heat fluxes to simulate different thermal conditions in steam generator tubes, while Section B details the use of these controlled conditions to obtain critical heat flux (CHF) data for validating fuel design correlations, thus Section A's test setup enables the data collection described in Section B."
+      "source": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0072",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A provides a general description of the plant design, including operating characteristics such as thermal power, while Section B references Section 1.2 (from Section A) as the source identifying certified design features, thus linking the general plant description to the interface requirements."
     },
     {
       "source": "nuscale_ch01_0811",
-      "target": "nuscale_ch01_0056",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section B describes testing programs that provide data supporting the safety analysis referenced in Section A, specifically regarding the prevention of CHF limit violations through reactor trip signals."
-    },
-    {
-      "source": "nuscale_ch01_0811",
-      "target": "nuscale_ch01_0018",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section B provides a general process overview of the NuScale reactor's core and coolant flow path, which is the physical basis for the motive force for natural circulation, while Section A discusses regulatory review responsibilities related to thermal hydraulic stability and reactor trip functions that depend on understanding this circulation."
-    },
-    {
-      "source": "nuscale_ch01_0811",
-      "target": "nuscale_ch01_0044",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section B describes the closed-loop, two-phase natural circulation cooling system used in NuScale, which is the physical process whose stability and safety are evaluated in Section A's discussion of thermal hydraulic stability and reactor trip criteria."
+      "target": "nuscale_ch01_0072",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section B references Section 1.2, which contains Table 1.2-1—the source for the thermal power rating asked about in the analysis question—while Section A discusses safety analysis methods but does not provide or reference the specific design value."
     }
   ]
 }

@@ -1,178 +1,171 @@
 {
-  "question": "Describe the configuration of the steam generators within the upper reactor pressure vessel (RPV).",
+  "question": "According to Table 1.3-1 and Table 5.1-2, what are the NuScale hot leg temperatures in each source?",
   "current_hop": 4,
   "nodes": {
+    "nuscale_ch01_0558": {
+      "node_id": "nuscale_ch01_0558",
+      "title": "DSRS 12.3-12.4, Rev 0: Radiation Protection Design FeaturesII.9 RG 8.15",
+      "summary": "This section summarizes the NuScale Final Safety Analysis Report’s conformance with various regulatory guides related to radiation protection design features, as outlined in DSRS 12.3-12.4, Rev 0. It details whether each regulatory guide is applicable, and if so, whether the design fully or partially conforms, with references to supporting sections or tables for further information. Several guides are noted as not applicable, while others are partially or fully met.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "278",
+      "hop": 1
+    },
+    "nuscale_ch05_0006": {
+      "node_id": "nuscale_ch05_0006",
+      "title": "System Evaluation",
+      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance across various power levels by establishing steady-state parameters for both primary and secondary systems, such as coolant temperatures and flow rates. These parameters are calculated using thermal hydraulic software and verified by hand, with uncertainties and design margins considered to ensure efficient operation and safety. The design supports natural circulation with low pressure losses, and uncertainties like SG tube plugging do not affect primary coolant flow rate determination.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "12",
+      "hop": 1
+    },
+    "nuscale_ch01_0069": {
+      "node_id": "nuscale_ch01_0069",
+      "title": "Piping and Instrumentation Diagrams",
+      "summary": "This section describes the use of simplified instrumentation, control, electrical, and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information alongside written text. It references tables and figures that list and explain the symbols used in these diagrams, and notes that site-specific diagrams and legends will be provided by COL applicants referencing the NuScale design certification.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "95",
+      "hop": 1
+    },
+    "nuscale_ch01_0052": {
+      "node_id": "nuscale_ch01_0052",
+      "title": "Comparison with Other Facilities",
+      "summary": "This section compares the major design features and key parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It highlights differences in aspects such as electrical output, core design, reactor coolant system, and safety systems, using summary tables for direct comparison. The data provided are nominal values intended for reference only.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "79",
+      "hop": 1
+    },
     "nuscale_ch05_0025": {
       "node_id": "nuscale_ch05_0025",
       "title": "References",
-      "summary": "This section details the materials used in the construction of the pressurizer and its components within the NuScale reactor coolant system. It specifies the types of steel and alloys used for various parts, their compliance with relevant BPVC material specifications, and highlights corrosion protection measures such as weld cladding with stainless steel and nickel-based alloys.",
+      "summary": "This section details the materials used in the NuScale reactor pressurizer, specifying the types of steel and alloys for each component, such as the baffle plate, heater bundles, cover plate, and bolting, all chosen for corrosion resistance and compatibility with operating environments. It also references relevant material specifications from the ASME Boiler and Pressure Vessel Code (BPVC) to ensure compliance.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "130",
       "hop": 1
     },
-    "nuscale_ch05_0014": {
-      "node_id": "nuscale_ch05_0014",
-      "title": "Reactor Vessel",
-      "summary": "The Reactor Vessel section describes the NuScale Power Module (NPM), which integrates the reactor core, steam generators, and pressurizer within a single reactor pressure vessel (RPV) surrounded by a containment vessel. The RPV serves as a key pressure-retaining component, supporting various systems and providing a barrier to fission product release, with materials and fabrication methods selected to ensure integrity throughout the plant's design life in accordance with ASME standards.",
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes components such as the reactor pressure vessel, pressurizer, and associated piping and controls. The RCS removes heat from the reactor core to the steam generators using natural circulation, and it incorporates features for removing noncondensible gases and maintaining the integrity of the pressure boundary to prevent radionuclide release. The system interfaces with several other subsystems, including emergency cooling and chemical control systems.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "67",
-      "hop": 1
+      "page_range": "9",
+      "hop": 3
     },
-    "nuscale_ch05_0018": {
-      "node_id": "nuscale_ch05_0018",
-      "title": "References",
-      "summary": "This section outlines the requirements and procedures for inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fasteners for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It specifies the use of nondestructive examinations, controlled shipping environments, and quality assurance measures, and lists the key codes and standards used for compliance.",
+    "nuscale_ch05_0024": {
+      "node_id": "nuscale_ch05_0024",
+      "title": "Pressurizer",
+      "summary": "The pressurizer in the NuScale reactor is integrated into the upper region of the reactor vessel and functions to regulate reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering reactor trips or safety system actuations, with instrumentation providing continuous monitoring and control.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "74",
-      "hop": 1
+      "page_range": "124",
+      "hop": 3
     },
-    "nuscale_ch05_0019": {
-      "node_id": "nuscale_ch05_0019",
-      "title": "Reactor Coolant System Component and Subsystem Design",
-      "summary": "This section describes the design of the NuScale Power Module’s Reactor Coolant System (RCS) components and subsystems, including the reactor pressure vessel, steam generators, safety valves, and associated piping and valves. It details how the steam generators are integrated within the reactor vessel, forming part of the primary and secondary pressure boundaries, and references other sections for further information on specific components.",
+    "nuscale_ch01_0018": {
+      "node_id": "nuscale_ch01_0018",
+      "title": "Principal Design Criteria",
+      "summary": "The section outlines the principal design criteria for the NuScale plant, focusing on the Site Cooling Water System (SCWS) and the overall facility process. It describes the reactor core’s heat transfer process, natural coolant circulation, steam generation, and the flow of superheated steam to the turbine and condenser, emphasizing the system’s role in efficient heat removal and power generation.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "91",
-      "hop": 1
-    },
-    "nuscale_ch05_0015": {
-      "node_id": "nuscale_ch05_0015",
-      "title": "Reactor Vessel Materials",
-      "summary": "The NuScale Power Module’s reactor pressure vessel (RPV) is a key component of the reactor coolant system, housing the core, steam generators, and pressurizer within a containment vessel for safety. The RPV and its associated materials are selected and fabricated according to ASME Boiler and Pressure Vessel Code standards to ensure long-term integrity and prevent the release of fission products.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "67",
-      "hop": 1
-    },
-    "nuscale_ch05_0013": {
-      "node_id": "nuscale_ch05_0013",
-      "title": "References",
-      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as tables summarizing relevant ASME code cases for reactor components.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "46",
-      "hop": 1
-    },
-    "nuscale_ch05_0020": {
-      "node_id": "nuscale_ch05_0020",
-      "title": "Steam Generators",
-      "summary": "Each NuScale Power Module (NPM) contains two steam generators (SGs) integrated within the reactor pressure vessel (RPV), which also houses other key components such as the pressurizer and safety valves. The steam generator system (SGS) includes feedwater and main steam piping, thermal relief valves, and access ports, with the RPV itself forming the shell and pressure boundary for the SGs. The design ensures separation between the primary and secondary sides, with specific components forming the reactor coolant pressure boundary.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "91",
-      "hop": 2
-    },
-    "nuscale_ch05_0021": {
-      "node_id": "nuscale_ch05_0021",
-      "title": "Reactor Coolant System Piping",
-      "summary": "The section discusses the design and degradation assessment of the NuScale reactor coolant system's steam generator (SG) tubing. It notes that the main degradation observed in similar operating reactors is wear from flow-induced vibration or foreign objects, and that NuScale's design—with its helical tubing and novel support structure—does not increase risk compared to existing designs. Prototypic testing and standard SG program guidelines are deemed sufficient, with wear identified as the most likely degradation mechanism and corrosion risks assessed as low.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "104",
-      "hop": 4
+      "source_doc": "nuscale_ch01",
+      "page_range": "28",
+      "hop": 3
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0014",
+      "source": "nuscale_ch01_0558",
+      "target": "nuscale_ch01_0069",
       "relation": "SPECIFIES",
-      "confidence": 0.8,
-      "description": "Section B states that two steam generators are contained within the reactor pressure vessel (RPV), while Section A details the configuration of the pressurizer within the RPV but does not mention the steam generators, thus Section B provides the general context that supports the analysis question, and Section A specifies details about another RPV component."
+      "confidence": 0.85,
+      "description": "Section A and Section B both reference different tables (Table 1.3-1 and Table 5.1-2) within the NuScale Final Safety Analysis Report that provide specific design values, such as hot leg temperatures, thus both sections specify sources of technical data relevant to the analysis question."
     },
     {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0018",
-      "relation": "SPECIFIES",
-      "confidence": 0.7,
-      "description": "Section A specifies the components and materials of the RPV upper shell and head, which are relevant to the configuration of the steam generators, while Section B details the inspection and handling requirements for the RPV, referencing the same components but focusing on their integrity and compliance."
-    },
-    {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0019",
-      "relation": "SPECIFIES",
-      "confidence": 0.7,
-      "description": "Section B provides a general overview of the components within the RPV, including the steam generators, while Section A specifies details about the pressurizer configuration within the upper RPV but does not address the steam generators."
-    },
-    {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0015",
-      "relation": "SPECIFIES",
-      "confidence": 0.7,
-      "description": "Section B provides a general overview stating that the steam generators are contained within the reactor pressure vessel, while Section A details the configuration of the upper RPV but does not mention the steam generators, thus Section A specifies details for the general description in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0013",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A describes the materials and components of the RPV upper shell and head, while Section B lists references and standards related to the integrity and material reliability of the reactor coolant boundary, including those materials mentioned in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0014",
-      "target": "nuscale_ch05_0019",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general overview of the reactor vessel's contents, mentioning the inclusion of two steam generators within the RPV, while Section B specifies the detailed configuration and additional components housed within the RPV, including the steam generators."
-    },
-    {
-      "source": "nuscale_ch05_0014",
-      "target": "nuscale_ch05_0015",
-      "relation": "SUPPORTS",
-      "confidence": 1.0,
-      "description": "Section A and Section B both provide identical information stating that the two steam generators are contained within a single reactor pressure vessel (RPV) as part of the NuScale Power Module configuration."
-    },
-    {
-      "source": "nuscale_ch05_0018",
-      "target": "nuscale_ch05_0019",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section B provides a detailed description of the components contained within the reactor pressure vessel, including the steam generators, which directly addresses the configuration question, while Section A only references general handling and inspection requirements for the RPV without specific information about the steam generators' configuration."
-    },
-    {
-      "source": "nuscale_ch05_0018",
-      "target": "nuscale_ch05_0015",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section B specifies that the reactor pressure vessel (RPV) contains two steam generators as part of its configuration, while Section A discusses inspection and handling requirements for the RPV but does not address the steam generator configuration directly; thus, Section B provides the specific configuration details relevant to the analysis question."
-    },
-    {
-      "source": "nuscale_ch05_0018",
-      "target": "nuscale_ch05_0013",
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch01_0069",
       "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A references the ASME NQA-1-2008/1a-2009 Addenda quality assurance standard, which is also cited in Section B, indicating both sections rely on the same regulatory framework for quality assurance in handling and integrity of reactor components."
+      "confidence": 0.85,
+      "description": "Section A discusses the establishment of steady state parameters for the NuScale Power Plant, which includes hot leg temperatures, while Section B references drawings and tables (such as Table 1.3-1) that provide the specific design values for these parameters."
     },
     {
-      "source": "nuscale_ch05_0019",
-      "target": "nuscale_ch05_0015",
-      "relation": "SUPPORTS",
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch01_0052",
+      "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A and Section B both state that the reactor pressure vessel (RPV) contains two steam generators (SGs), providing consistent information about the configuration of the steam generators within the upper RPV."
+      "description": "Section A (Table 5.1-2) provides steady state hot leg temperature values for the NuScale design under various power levels, while Section B (Table 1.3-1) lists the nominal hot leg temperature for NuScale and compares it to a typical PWR, connecting them through the specific design parameter of hot leg temperature."
     },
     {
-      "source": "nuscale_ch05_0020",
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0052",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B (Table 1.3-1) provides nominal NuScale hot leg temperature values for comparison with other facilities, while Section A references detailed drawings and figures (including Table 5.1-2) that specify the actual design values for the NuScale hot leg temperature, thus Section A provides the specific design details that correspond to or elaborate on the nominal values in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0069",
       "target": "nuscale_ch05_0025",
       "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A lists the steam generators as components located within the reactor pressure vessel, while Section B describes the configuration and materials of the pressurizer, which is also located in the upper RPV, thus both sections provide complementary details about the internal configuration of the RPV relevant to the analysis question."
+      "description": "Section A (Piping and Instrumentation Diagrams) provides visual and tabular design information, such as hot leg temperatures in Table 1.3-1, while Section B (Reactor Coolant System Component and Subsystem Design) contains detailed component descriptions and references Table 5.1-2 for hot leg temperatures, so both sections present or reference the same design parameter from different perspectives."
     },
     {
-      "source": "nuscale_ch05_0020",
-      "target": "nuscale_ch05_0014",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A specifies the internal components of the reactor pressure vessel, including the steam generators, while Section B provides a general overview of the reactor vessel and confirms that the steam generators are contained within it."
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch05_0025",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A (Table 1.3-1) and Section B (Table 5.1-2) both provide nominal NuScale hot leg temperatures, allowing for a direct comparison of this design parameter between the two sources."
     },
     {
-      "source": "nuscale_ch05_0021",
-      "target": "nuscale_ch05_0014",
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0006",
       "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section B specifies that the steam generators are contained within the upper reactor pressure vessel, providing the configuration context that Section A's discussion of steam generator tubing design presumes."
+      "confidence": 0.85,
+      "description": "Section B evaluates and establishes steady state values for primary system parameters, such as hot leg temperature, which are then reported as design values in Table 5.1-2, while Section A provides a general system description without specifying these values."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch01_0069",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A (Table 5.1-2) and Section B (Table 1.3-1) both provide hot leg temperature values for the NuScale reactor, allowing for a direct comparison of design parameters across different documentation sources."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0006",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Both Section A and Section B reference figures and tables (such as Table 1.3-1 and Table 5.1-2) that provide or summarize design values like the NuScale hot leg temperatures, connecting them through the presentation of system parameters."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch01_0069",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A and Section B both reference tables (Table 1.3-1 and Table 5.1-2) that provide specific design values for the NuScale hot leg temperatures, allowing for a direct comparison of these values between the two sources."
+    },
+    {
+      "source": "nuscale_ch01_0018",
+      "target": "nuscale_ch05_0006",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A provides a general description of the reactor's hot leg riser location, while Section B discusses the establishment of steady-state parameters (including hot leg temperature) for system evaluation, connecting them through the physical system (hot leg) whose temperature is the subject of the analysis question."
+    },
+    {
+      "source": "nuscale_ch01_0018",
+      "target": "nuscale_ch01_0069",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A provides a general description of the hot leg riser as part of the reactor core assembly, while Section B references drawings and tables (such as Table 1) that may contain specific design values like hot leg temperatures, thus Section B can provide the detailed data referenced in Section A's overview."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch01_0018",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A (Table 5.1-2) and Section B (Table 1.3-1) both provide information on NuScale hot leg temperatures, with each table presenting the design values from different parts of the FSAR for cross-verification."
     }
   ]
 }

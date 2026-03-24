@@ -1,56 +1,357 @@
 {
-  "question": "What is the design configuration of NuScale's steam generator?",
+  "question": "What is the fuel type used in the NuScale reactor?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0025": {
-      "node_id": "nuscale_ch05_0025",
-      "title": "References",
-      "summary": "This section details the materials used in the construction of the NuScale pressurizer and its components, specifying alloys and standards for each part to ensure corrosion resistance and compatibility with operating environments. It references relevant sections of the BPVC (Boiler and Pressure Vessel Code) and lists the applicable material specifications for components such as the baffle plate, heater bundles, cover plate, and bolting.",
+    "nuscale_ch01_0645": {
+      "node_id": "nuscale_ch01_0645",
+      "title": "DSRS 15.0, Rev 0: Introduction - Transient and Accident AnalysesI.3 Categorization According to Type",
+      "summary": "This section summarizes NuScale's conformance with regulatory criteria for transient and accident analyses, specifically regarding categorization by type. It states that the NuScale Final Safety Analysis Report fully conforms to the requirements for categorization according to type, with no exceptions noted.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "130",
+      "source_doc": "nuscale_ch01",
+      "page_range": "286",
       "hop": 1
     },
-    "nuscale_ch05_0019": {
-      "node_id": "nuscale_ch05_0019",
-      "title": "Reactor Coolant System Component and Subsystem Design",
-      "summary": "This section describes the design of the NuScale Power Module’s Reactor Coolant System (RCS) components and subsystems, detailing the integration of the reactor, steam generators, pressurizer, safety and ECCS valves, and associated piping within the reactor pressure vessel (RPV). It also outlines the configuration and boundaries of the steam generator system, emphasizing the integral design of the steam generators within the RPV and their role in forming the reactor coolant pressure boundary.",
+    "nuscale_ch01_0056": {
+      "node_id": "nuscale_ch01_0056",
+      "title": "Critical Heat Flux Testing - Preliminary Fuel Design",
+      "summary": "This section outlines the verification and confirmation testing programs for unique NuScale Power Module design features, focusing on areas lacking prior data or operational experience. Specifically, it describes the preliminary critical heat flux (CHF) testing conducted on the NuScale fuel design, which differs from standard PWR fuel in assembly height and coolant flow, to support safety analysis and develop the NSP2 CHF correlation for the final fuel design.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "91",
+      "source_doc": "nuscale_ch01",
+      "page_range": "83",
       "hop": 1
     },
-    "nuscale_ch05_0020": {
-      "node_id": "nuscale_ch05_0020",
-      "title": "Steam Generators",
-      "summary": "The steam generators (SGs) in the NuScale Power Module are integrated within the reactor pressure vessel (RPV), which also houses other key components such as the pressurizer and safety valves. The SG system includes feedwater and main steam piping, plenum access ports, and thermal relief valves, with the RPV forming the outer pressure boundary and the SG tubes and welds contributing to the reactor coolant pressure boundary.",
+    "nuscale_ch01_0102": {
+      "node_id": "nuscale_ch01_0102",
+      "title": "8.30 Health Physics Surveys in Uranium Recovery Facilities",
+      "summary": "Section 8.30, \"Health Physics Surveys in Uranium Recovery Facilities,\" is marked as not applicable because its guidance pertains only to uranium recovery facilities, which are not relevant to the NuScale application. The responsibility for such activities lies with licensees operating uranium recovery facilities, not with NuScale.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "91",
+      "source_doc": "nuscale_ch01",
+      "page_range": "172",
       "hop": 1
+    },
+    "nuscale_ch01_0094": {
+      "node_id": "nuscale_ch01_0094",
+      "title": "8.22 Bioassay at Uranium Mills",
+      "summary": "Section 8.22, \"Bioassay at Uranium Mills,\" is marked as not applicable in the NuScale Final Safety Analysis Report because the guidance pertains only to uranium mills, which are not relevant to the NuScale facility. Therefore, no conformance or further analysis is required for this section.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "171",
+      "hop": 1
+    },
+    "nuscale_ch01_0052": {
+      "node_id": "nuscale_ch01_0052",
+      "title": "Comparison with Other Facilities",
+      "summary": "This section compares the major design features and parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It highlights differences in core size, output, safety systems, and key components, showing that NuScale uses smaller, simpler, and more integrated systems compared to conventional PWRs. The comparison is summarized in tables for clarity.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "79",
+      "hop": 1
+    },
+    "nuscale_ch01_0055": {
+      "node_id": "nuscale_ch01_0055",
+      "title": "NuScale Testing Programs",
+      "summary": "This section outlines the NuScale testing programs designed to verify and confirm unique design features that support the plant’s safety analysis, focusing on areas where prior data or operational experience was lacking. It details completed and ongoing tests for the NuScale Power Module, including specific programs for fuel design, steam generator, control rod assemblies, and integrated system phenomena, with particular emphasis on critical heat flux testing for both preliminary and final fuel designs. These tests provide essential data for safety analysis and licensing requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "83",
+      "hop": 1
+    },
+    "nuscale_ch01_0733": {
+      "node_id": "nuscale_ch01_0733",
+      "title": "SRP 15.4.1, Rev 3: Uncontrolled Control Rod Assembly Withdrawal From a Subcritical or Low Power Startup ConditionII.1.B Fuel Centerline Temperatures",
+      "summary": "This section confirms that for SRP 15.4.1, Rev 3, regarding uncontrolled control rod assembly withdrawal from a subcritical or low power startup condition, NuScale ensures fuel centerline temperatures remain within safe limits by applying a heat generation rate limit during slower reactivity insertions. This approach ensures compliance with regulatory criteria and prevents fuel centerline melting.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "298",
+      "hop": 2
+    },
+    "nuscale_ch01_0123": {
+      "node_id": "nuscale_ch01_0123",
+      "title": "Table 1.9-2: Conformance with Regulatory Guides (Continued)",
+      "summary": "This section of the NuScale Final Safety Analysis Report summarizes the reactor's conformance with various NRC Regulatory Guides, indicating whether each guide is fully, partially, or not applicable to the NuScale design. It provides specific comments and references to relevant FSAR sections, explaining the basis for each conformance status, such as the use of updated standards or differences in seismic classification.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "136",
+      "hop": 2
+    },
+    "nuscale_ch01_0019": {
+      "node_id": "nuscale_ch01_0019",
+      "title": "Operating Characteristics",
+      "summary": "The NuScale Power Module (NPM) operates at full power using natural circulation for reactor coolant flow, eliminating the need for pumps. Its small, modular, integral pressurized water reactor design features passive safety systems, dedicated emergency cooling, and decay heat removal, with the reactor and containment partially immersed in water for effective heat removal and enhanced safety. Power adjustments are managed via turbine bypass, control rods, and soluble boron, allowing for flexible and safe operation.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "29",
+      "hop": 2
+    },
+    "nuscale_ch01_0768": {
+      "node_id": "nuscale_ch01_0768",
+      "title": "DSRS 15.5.1-15.5.2, Rev 0: Chemical and Volume Control System Malfunction That Increases Reactor Coolant InventoryII.4.C Input Parameters and Initial Conditions - Core Burnup",
+      "summary": "This section confirms that the NuScale design conforms to DSRS 15.5.1-15.5.2 requirements regarding input parameters and initial conditions, including core burnup, for chemical and volume control system malfunctions that increase reactor coolant inventory. It also notes that certain SRP guidance related to pressurizer relief valves is only partially applicable, as NuScale uses spring-loaded safety valves rather than power-operated relief valves, and any related mechanical failure is addressed elsewhere in the analysis.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "305",
+      "hop": 3
+    },
+    "nuscale_ch01_0685": {
+      "node_id": "nuscale_ch01_0685",
+      "title": "DSRS 15.1.5, Rev 0: Steam System Piping Failures Inside and Outside of ContainmentII.7 AssumptionsInitial Core Flow",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for steam system piping failures inside and outside containment, specifically addressing key assumptions such as initial core flow, rod position, and core burnup. It notes that NuScale uses critical heat flux as a more accurate descriptor of plant phenomena than departure from nucleate boiling, and clarifies that operator action is not required to mitigate steam line break consequences. Additionally, it highlights that radiological consequence analyses are governed by SRP Section 15.0.3, while nonradiological aspects remain under the reviewed DSRS section.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "292",
+      "hop": 3
+    },
+    "nuscale_ch01_0737": {
+      "node_id": "nuscale_ch01_0737",
+      "title": "SRP 15.4.2, Rev 3: Uncontrolled Control Rod Assembly Withdrawal at PowerII.1.C Uniform Cladding Strain",
+      "summary": "The section summarizes NuScale’s conformance with regulatory criteria for various accident scenarios involving control rod assembly withdrawal and misoperation. It notes that certain criteria, such as uniform cladding strain, are not applicable to NuScale due to differences from BWR and PWR designs, while other criteria are met through specific safety approaches like heat generation rate limits and the 95/95 MCHFR method. Additionally, some guidance is deemed not applicable because NuScale’s design does not include reactor coolant pumps or forced coolant flow.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "299",
+      "hop": 3
+    },
+    "nuscale_ch01_0740": {
+      "node_id": "nuscale_ch01_0740",
+      "title": "SRP 15.4.3, Rev 3: Control Rod Misoperation (System Malfunction or Operator Error)II.3 Uniform Cladding Strain",
+      "summary": "The section summarizes NuScale’s conformance with regulatory criteria for control rod misoperation events, specifically regarding uniform cladding strain. It states that NuScale meets the requirements of SRP 15.4.3, Rev 3, for uniform cladding strain, with no additional comments or exceptions noted. The section also clarifies that certain criteria are not applicable to NuScale due to differences in reactor design compared to traditional BWRs and PWRs.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "299",
+      "hop": 3
+    },
+    "nuscale_ch01_0373": {
+      "node_id": "nuscale_ch01_0373",
+      "title": "SRP 9.4.1, Rev 3: Control Room Area Ventilation SystemII.5 Control of Releases of Radioactive Material to the Environment",
+      "summary": "This section summarizes NuScale’s conformance with SRP 9.4.1, Rev 3 requirements for the Control Room Area Ventilation System, specifically regarding the control of radioactive material releases to the environment. It states that NuScale meets the acceptance criteria, except for aspects related to engineered safety feature (ESF) atmosphere cleanup systems, as the control room habitability system uses compressed air tanks for clean air instead of emergency filtration during accident conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "252",
+      "hop": 4
+    },
+    "nuscale_ch01_0743": {
+      "node_id": "nuscale_ch01_0743",
+      "title": "SRP 15.4.4-15.4.5, Rev 2: Startup of an Inactive Loop or Recirculation Loop at an Incorrect Temperature, and Flow Controller Malfunction Causing an Increase in BWR Core Flow RateII.C Events of Moderate Frequency",
+      "summary": "This section explains that the regulatory guidance in SRP 15.4.4-15.4.5, which addresses startup of an inactive loop at incorrect temperature and flow controller malfunctions in PWR and BWR designs, is not applicable to the NuScale reactor. This is because NuScale does not use reactor coolant pumps or forced coolant flow, and relevant accident scenarios are instead addressed under DSRS 15.4.6 for inadvertent decreases in boron concentration.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "300",
+      "hop": 4
+    },
+    "nuscale_ch01_0066": {
+      "node_id": "nuscale_ch01_0066",
+      "title": "Material Referenced",
+      "summary": "This section lists the topical and technical reports referenced in the NuScale Power Plant Design Certification Application, as detailed in Tables 1.6-1 and 1.6-2. These reports cover various aspects such as quality assurance, risk significance, safety classification, accident analysis, and methodology qualifications, and are incorporated by reference into the Final Safety Analysis Report (FSAR).",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "91",
+      "hop": 4
+    },
+    "nuscale_ch01_0018": {
+      "node_id": "nuscale_ch01_0018",
+      "title": "Principal Design Criteria",
+      "summary": "The section outlines the principal design criteria for the NuScale plant, focusing on the Site Cooling Water System (SCWS) and the overall facility process. It describes the reactor core's heat transfer process, natural coolant circulation, steam generation, and the flow of superheated steam to the turbine and condenser, emphasizing the plant's cooling and power generation mechanisms.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "28",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0019",
+      "source": "nuscale_ch01_0645",
+      "target": "nuscale_ch01_0056",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A provides detailed material and component information about the pressurizer, which is one of the components listed in Section B's general description of the reactor coolant system design that also includes the steam generators."
+      "description": "Section B discusses the testing and verification of the NuScale reactor's unique fuel design features, which are referenced in Section A's overview of safety analysis conformance, connecting the general regulatory context (A) to specific fuel-related technical details (B)."
     },
     {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0020",
+      "source": "nuscale_ch01_0645",
+      "target": "nuscale_ch01_0094",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section B discusses bioassay requirements at uranium mills, which implies the handling of uranium, while Section A addresses transient and accident analyses for the NuScale reactor without specifying fuel type; thus, Section B indirectly supports the inference that uranium is the fuel type relevant to the NuScale reactor."
+    },
+    {
+      "source": "nuscale_ch01_0645",
+      "target": "nuscale_ch01_0052",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section B provides nominal design parameters for the NuScale reactor, which would include the fuel type, while Section A outlines the regulatory framework for analyzing such design features, thus Section A establishes the context in which the information in Section B is evaluated."
+    },
+    {
+      "source": "nuscale_ch01_0645",
+      "target": "nuscale_ch01_0055",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes testing programs that provide data to support the safety analyses referenced in Section A, connecting the verification of design features to the regulatory conformance discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0056",
+      "target": "nuscale_ch01_0094",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses testing of unique fuel design features for the NuScale reactor, while Section B references regulatory criteria related to uranium, implying that uranium is relevant to the reactor's fuel type."
+    },
+    {
+      "source": "nuscale_ch01_0056",
+      "target": "nuscale_ch01_0052",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses testing programs for unique fuel design features, while Section B provides a comparison of NuScale's design parameters (potentially including fuel type) with typical PWRs, connecting them through the context of fuel design characteristics."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0055",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A provides nominal design parameters, which may include fuel type, while Section B describes testing programs that verify the performance of those design features, potentially including fuel-related aspects."
+    },
+    {
+      "source": "nuscale_ch01_0733",
+      "target": "nuscale_ch01_0056",
       "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A describes the pressurizer components and materials within the reactor pressure vessel, while Section B provides an overview of all major components inside the NuScale reactor pressure vessel, including the steam generators, thus connecting the pressurizer (A) and steam generator (B) as co-located subsystems within the same vessel."
+      "description": "Section B describes testing programs for unique fuel design features in the NuScale reactor, which provide supporting evidence for the safety analysis requirements referenced in Section A."
     },
     {
-      "source": "nuscale_ch05_0019",
-      "target": "nuscale_ch05_0020",
+      "source": "nuscale_ch01_0123",
+      "target": "nuscale_ch01_0056",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B discusses testing programs for the preliminary fuel design of the NuScale reactor, providing technical evidence that supports the safety analysis requirements referenced in Section A's conformance table."
+    },
+    {
+      "source": "nuscale_ch01_0019",
+      "target": "nuscale_ch01_0056",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section B discusses testing programs for the NuScale fuel design, which provides supporting evidence for the operating characteristics described in Section A, specifically regarding the reactor's use of unique fuel features."
+    },
+    {
+      "source": "nuscale_ch01_0768",
+      "target": "nuscale_ch01_0645",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A provides a general overview of the reactor coolant system components, including the steam generators, while Section B focuses specifically on the steam generators as part of that system, thus Section A gives context for the more detailed information in Section B."
+      "description": "Section A provides specific input parameters and initial conditions for accident analyses, which are categorized and introduced in general terms in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0768",
+      "target": "nuscale_ch01_0056",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B discusses critical heat flux testing and preliminary fuel design for the NuScale reactor, which provides technical evidence supporting the safety analysis parameters referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0685",
+      "target": "nuscale_ch01_0645",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides specific assumptions and conformance details for steam system piping failure analyses in the NuScale reactor, while Section B outlines the general categorization and regulatory framework for transient and accident analyses, with Section A's detailed assumptions being applied within the broader context established by Section B."
+    },
+    {
+      "source": "nuscale_ch01_0685",
+      "target": "nuscale_ch01_0056",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes critical heat flux testing of the preliminary fuel design, which provides supporting evidence for the assumptions about core behavior (such as initial core flow and burnup) referenced in Section A's safety analysis."
+    },
+    {
+      "source": "nuscale_ch01_0737",
+      "target": "nuscale_ch01_0056",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses regulatory criteria and safety analysis methods related to fuel performance in the NuScale reactor, while Section B outlines the testing programs, including critical heat flux testing, that provide data supporting the safety analysis of the fuel design; thus, Section B provides supporting evidence for the claims made in Section A regarding fuel safety."
+    },
+    {
+      "source": "nuscale_ch01_0740",
+      "target": "nuscale_ch01_0645",
+      "relation": "REFERENCES",
+      "confidence": 0.7,
+      "description": "Section A discusses NuScale's approach to fuel performance criteria (such as fuel centerline temperature and cladding strain) in the context of regulatory conformance, while Section B outlines the categorization of transient and accident analyses, both referencing the NuScale Final Safety Analysis Report and its regulatory alignment."
+    },
+    {
+      "source": "nuscale_ch01_0740",
+      "target": "nuscale_ch01_0056",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes testing programs for unique fuel design features that support the safety analysis referenced in Section A, which discusses how NuScale ensures fuel performance criteria are met."
+    },
+    {
+      "source": "nuscale_ch01_0768",
+      "target": "nuscale_ch01_0737",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A and Section B both reference the NuScale Final Safety Analysis Report and discuss input parameters and safety criteria related to fuel performance, but neither explicitly states the fuel type used in the NuScale reactor."
+    },
+    {
+      "source": "nuscale_ch01_0768",
+      "target": "nuscale_ch01_0740",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A and Section B both reference the NuScale Final Safety Analysis Report and discuss conformance with regulatory criteria related to fuel performance and safety analysis, but neither explicitly states the fuel type used in the NuScale reactor."
+    },
+    {
+      "source": "nuscale_ch01_0685",
+      "target": "nuscale_ch01_0737",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A and Section B both reference the NuScale Final Safety Analysis Report and discuss conformance with regulatory criteria related to core and fuel performance, but neither section explicitly states the fuel type used in the NuScale reactor."
+    },
+    {
+      "source": "nuscale_ch01_0737",
+      "target": "nuscale_ch01_0740",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A and Section B both discuss NuScale's conformance with regulatory criteria regarding fuel centerline temperatures and cladding strain, referencing the same SRP sections and noting that certain criteria are not applicable due to reactor type."
+    },
+    {
+      "source": "nuscale_ch01_0743",
+      "target": "nuscale_ch01_0056",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A explains that certain BWR fuel thermal limits are not applicable to the NuScale design due to its PWR characteristics, while Section B discusses critical heat flux testing relevant to the NuScale fuel design, connecting both sections through the context of fuel type and its associated safety analysis."
+    },
+    {
+      "source": "nuscale_ch01_0066",
+      "target": "nuscale_ch01_0645",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A lists topical and technical reports referenced in the NuScale FSAR, while Section B discusses the NuScale FSAR's conformance with DSRS 15.0 regulatory criteria, connecting them through the FSAR as the common document that both reference or evaluate."
+    },
+    {
+      "source": "nuscale_ch01_0066",
+      "target": "nuscale_ch01_0056",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A lists referenced topical reports and supporting documents for the NuScale reactor design, while Section B describes testing programs (including fuel design tests) that provide data supporting the safety analysis referenced in those reports, thus Section B provides evidence supporting the claims or requirements referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0018",
+      "target": "nuscale_ch01_0056",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B discusses testing programs for the NuScale reactor's fuel design, which provides supporting evidence for the general plant and core description in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0373",
+      "target": "nuscale_ch01_0743",
+      "relation": "SEMANTIC",
+      "confidence": 0.8,
+      "description": "Section B clarifies that certain BWR-specific guidance is not applicable to the NuScale reactor because it does not use BWR fuel or reactor coolant pumps, indirectly indicating the fuel type is not BWR, while Section A does not address fuel type at all."
+    },
+    {
+      "source": "nuscale_ch01_0743",
+      "target": "nuscale_ch01_0066",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A discusses the inapplicability of certain BWR fuel thermal limits to the NuScale PWR design, while Section B lists referenced materials (including topical reports) that may contain detailed information about the NuScale reactor's fuel type, connecting them through the need to consult referenced documents for specific fuel information."
+    },
+    {
+      "source": "nuscale_ch01_0743",
+      "target": "nuscale_ch01_0018",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the inapplicability of certain BWR fuel thermal limits to the NuScale PWR design, while Section B provides a general description of the NuScale reactor core and its configuration, both indicating that the NuScale reactor is not a BWR and thus does not use BWR-type fuel."
     }
   ]
 }

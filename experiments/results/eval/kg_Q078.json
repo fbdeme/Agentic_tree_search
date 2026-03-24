@@ -1,227 +1,94 @@
 {
-  "question": "Analyze the thermal-hydraulic characteristics of the RCS (Reactor Coolant System).",
+  "question": "According to Table 1.3-1, how does NuScale's thermal power compare to a typical PWR?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0003": {
-      "node_id": "nuscale_ch05_0003",
-      "title": "Design Basis",
-      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain fuel integrity, minimize solid deposits, and ensure uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
+    "nuscale_ch01_0052": {
+      "node_id": "nuscale_ch01_0052",
+      "title": "Comparison with Other Facilities",
+      "summary": "This section compares the NuScale Power Plant’s major design features and parameters with those of a typical pressurized water reactor (PWR). It highlights differences in size, output, core design, and safety systems, showing that NuScale uses a smaller, simpler, and more integrated design with fewer components and lower power output per module compared to conventional PWRs. The comparison is summarized in tables for clarity.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "8",
+      "source_doc": "nuscale_ch01",
+      "page_range": "79",
       "hop": 1
     },
-    "nuscale_ch05_0004": {
-      "node_id": "nuscale_ch05_0004",
-      "title": "System Description",
-      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes components such as the reactor pressure vessel, pressurizer, and associated piping and controls. The RCS removes heat from the reactor core using natural circulation and interfaces with several other systems for safety and operational functions, including degasification and emergency core cooling. Its pressure-retaining parts help maintain the integrity of the reactor coolant pressure boundary, preventing the release of radionuclides.",
+    "nuscale_ch01_0811": {
+      "node_id": "nuscale_ch01_0811",
+      "title": "DSRS 15.9.A, Rev 0: Thermal Hydraulic Stability Review ResponsibilitiesII.5 Detect and Suppress Method Trip of reactor before SAFDL violation",
+      "summary": "The NuScale design does not use exclusion zone or buffer region methodologies for thermal hydraulic stability, relying instead on existing reactor trip signals to prevent violation of safety limits before unstable flow oscillations can develop. The system partially conforms to regulatory criteria by ensuring reactor trips occur before Safety Analysis Fuel Design Limits (SAFDL) are violated, but does not employ detect and suppress (D&S) methods or related backup options, as instabilities are not directly detected or suppressed. Compliance is achieved through protective trip actions rather than active monitoring or suppression of instabilities.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
+      "source_doc": "nuscale_ch01",
+      "page_range": "315",
+      "hop": 1
+    },
+    "nuscale_ch01_0810": {
+      "node_id": "nuscale_ch01_0810",
+      "title": "DSRS 15.9.A, Rev 0: Thermal Hydraulic Stability Review ResponsibilitiesII.4 Detect and Suppress Method: Exclusion zone and buffer region methodology",
+      "summary": "The NuScale design does not use the exclusion zone or buffer region methodology for thermal hydraulic stability, as reactor trip signals are designed to prevent conditions that could lead to unstable flow oscillations. Instead, the existing reactor trip system (RTS) provides protection by tripping the reactor before safety limits are violated, making additional detect and suppress methods or backup options unnecessary. The RTS partially conforms to regulatory criteria by preventing instability conditions, but does not actively detect or suppress flow instabilities.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "315",
+      "hop": 1
+    },
+    "nuscale_ch01_0558": {
+      "node_id": "nuscale_ch01_0558",
+      "title": "DSRS 12.3-12.4, Rev 0: Radiation Protection Design FeaturesII.9 RG 8.15",
+      "summary": "This section summarizes NuScale’s conformance with various regulatory guides related to radiation protection design features, as outlined in DSRS 12.3-12.4. It details whether each guide is applicable, not applicable, conforms, or partially conforms, with references to supporting sections or tables for further information. Specifically, RG 8.15 is noted as not applicable to the NuScale design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "278",
+      "hop": 1
+    },
+    "nuscale_ch01_0006": {
+      "node_id": "nuscale_ch01_0006",
+      "title": "Power Output",
+      "summary": "The NuScale Power Plant consists of up to 12 NuScale Power Modules (NPMs), each rated at 160 MWt and producing approximately 50 MWe, for a total net output of about 570 MWe when accounting for house loads. The actual electrical output may vary depending on environmental conditions, and the design includes a 2% margin for measurement uncertainty.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
       "page_range": "9",
-      "hop": 1
-    },
-    "nuscale_ch05_0019": {
-      "node_id": "nuscale_ch05_0019",
-      "title": "Reactor Coolant System Component and Subsystem Design",
-      "summary": "This section describes the design of the NuScale Power Module’s Reactor Coolant System (RCS) components and subsystems, including the reactor pressure vessel, steam generators, safety and emergency valves, and associated piping. It outlines the integration of these components within the reactor vessel and specifies the boundaries between the primary and secondary sides of the steam generator system, emphasizing the RCS’s pressure boundary features.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "91",
-      "hop": 1
-    },
-    "nuscale_ch05_0006": {
-      "node_id": "nuscale_ch05_0006",
-      "title": "System Evaluation",
-      "summary": "This section describes the evaluation of the NuScale Power Plant’s system performance, focusing on optimizing steady-state parameters such as coolant temperatures, flow rates, and pressure to maximize electrical generation and maintain safety margins. Calculations using NRELAP5 software, supported by hand calculations, determine best-estimate, maximum, and minimum flow conditions while accounting for uncertainties and design requirements. The system’s low pressure losses support natural circulation, and uncertainties related to steam generator tube plugging do not affect primary coolant flow rate determination.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "12",
-      "hop": 1
-    },
-    "nuscale_ch05_0022": {
-      "node_id": "nuscale_ch05_0022",
-      "title": "Decay Heat Removal System",
-      "summary": "The Decay Heat Removal System (DHRS) is an engineered safety feature designed to remove residual and decay heat from the reactor core during non-LOCA events when normal cooling is unavailable, ensuring safe shutdown without external power. It maintains the reactor coolant system (RCS) temperature below 420°F within 36 hours after an event, preventing fuel or pressure boundary limits from being exceeded. The DHRS's reliability and risk significance are evaluated through established programs, and it operates independently of the Emergency Core Cooling System (ECCS), with both systems able to function together if needed.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "106",
       "hop": 2
     },
-    "nuscale_ch05_0005": {
-      "node_id": "nuscale_ch05_0005",
-      "title": "System Components",
-      "summary": "This section describes key components of the NuScale reactor system, including the Reactor Pressure Vessel (RPV), Reactor Coolant System (RCS) piping, and the Pressurizer (PZR). The RPV serves as a primary barrier to fission product release and supports major reactor internals, while the RCS piping connects essential systems and the PZR is integrated into the RPV. Each component’s functions and connections are briefly outlined, with references to further details in subsequent sections.",
+    "nuscale_ch01_0005": {
+      "node_id": "nuscale_ch01_0005",
+      "title": "Reactor Type",
+      "summary": "The NuScale reactor is a small modular pressurized water reactor (PWR) featuring a passive safety design. Each NuScale Power Module (NPM) integrates the reactor core, steam generators, and pressurizer within a single vessel, surrounded by a steel containment vessel designed to withstand high-pressure events. A NuScale plant can include up to 12 modules, each producing 160 MWt (about 50 MWe), for a total net output of approximately 570 MWe.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "10",
+      "source_doc": "nuscale_ch01",
+      "page_range": "9",
       "hop": 2
     },
-    "nuscale_ch05_0025": {
-      "node_id": "nuscale_ch05_0025",
-      "title": "References",
-      "summary": "This section details the materials used in the construction of the NuScale pressurizer and its components, specifying alloys and standards for each part to ensure corrosion resistance and compatibility with operating environments. It references relevant sections of the BPVC (Boiler and Pressure Vessel Code) for material specifications and compliance.",
+    "nuscale_ch01_0110": {
+      "node_id": "nuscale_ch01_0110",
+      "title": "Figure 1.7-1b: Electrical Symbols",
+      "summary": "This section provides a comprehensive legend of electrical symbols and abbreviations used in NuScale’s Final Safety Analysis Report drawings, including representations for switches, relays, transformers, and logic gates. It also explains the meaning of indicator light colors, logic gate functions, and common abbreviations relevant to electrical and control systems.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "130",
+      "source_doc": "nuscale_ch01",
+      "page_range": "100",
       "hop": 2
     },
-    "nuscale_ch05_0002": {
-      "node_id": "nuscale_ch05_0002",
-      "title": "Summary Description",
-      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve independent modules, maintains proper coolant chemistry and boron concentration, and is engineered to prevent fuel design limit violations during normal and off-normal conditions.",
+    "nuscale_ch01_0018": {
+      "node_id": "nuscale_ch01_0018",
+      "title": "Principal Design Criteria",
+      "summary": "The section outlines the principal design criteria for the NuScale plant, focusing on the Site Cooling Water System (SCWS) and the overall facility process. It describes the reactor core's heat transfer process, natural coolant circulation, steam generation, and the flow of superheated steam to the turbine and condenser, emphasizing the system's integration for efficient power generation and heat removal.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "8",
-      "hop": 4
+      "source_doc": "nuscale_ch01",
+      "page_range": "28",
+      "hop": 2
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch05_0004",
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0811",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A provides a general overview of the RCS design and its reliance on natural circulation, while Section B specifies detailed features and operational functions of the RCS, such as degasification and pressure boundary integrity, thereby elaborating on the general description in Section A."
+      "description": "Section A provides a direct comparison of NuScale's thermal power values to those of a typical PWR in Table 1.3-1, which is the specific information needed to answer the analysis question."
     },
     {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch05_0019",
-      "relation": "SPECIFIES",
+      "source": "nuscale_ch01_0811",
+      "target": "nuscale_ch01_0810",
+      "relation": "REFERENCES",
       "confidence": 0.95,
-      "description": "Section A provides a general overview of the RCS design and its reliance on natural circulation, while Section B specifies the detailed components and subsystems that implement the design described in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch05_0006",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.95,
-      "description": "Section A describes the design basis and configuration of the RCS, which provides the foundational system characteristics that Section B evaluates for thermal-hydraulic performance across power levels."
-    },
-    {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0019",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general overview of the RCS's functions, such as degasification and pressure boundary integrity, while Section B specifies the detailed components and subsystems (e.g., vent lines, ECCS valves) that enable those functions, directly connecting the system-level description to its physical implementation."
-    },
-    {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0006",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A describes the RCS system components and their functions, while Section B evaluates the system's thermal-hydraulic performance by referencing steady state parameters and criteria that depend on the system described in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0019",
-      "target": "nuscale_ch05_0006",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A details the physical design and components of the RCS, while Section B evaluates the system's thermal-hydraulic performance based on those design parameters, connecting the component specifications to operational criteria."
-    },
-    {
-      "source": "nuscale_ch05_0022",
-      "target": "nuscale_ch05_0003",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes the Decay Heat Removal System's function to remove heat from the RCS under specific conditions, while Section B provides the general design and operational basis of the RCS, establishing the system context within which the DHRS operates."
-    },
-    {
-      "source": "nuscale_ch05_0022",
-      "target": "nuscale_ch05_0004",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the Decay Heat Removal System's function to remove residual and decay heat from the RCS, while Section B outlines the RCS's design features that enable safe operation and pressure boundary integrity, connecting them through the RCS as the system being cooled and protected by the DHRS."
-    },
-    {
-      "source": "nuscale_ch05_0022",
-      "target": "nuscale_ch05_0019",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes the function and design basis of the Decay Heat Removal System (DHRS), which is a subsystem explicitly listed as part of the overall Reactor Coolant System (RCS) and its components in Section B, thereby specifying how the DHRS contributes to the RCS's thermal-hydraulic performance."
-    },
-    {
-      "source": "nuscale_ch05_0005",
-      "target": "nuscale_ch05_0003",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes specific operational procedures and component manipulations (e.g., PZR water level reduction, nitrogen venting) that are implemented within the broader design framework and functional description of the RCS provided in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0005",
-      "target": "nuscale_ch05_0004",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes the operational procedure of venting nitrogen from the PZR through the RPV high point degasification line, which is a specific application of the degasification capability described in Section B as a system feature for removing noncondensible gases from the PZR."
-    },
-    {
-      "source": "nuscale_ch05_0005",
-      "target": "nuscale_ch05_0019",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes operational procedures and component interactions (e.g., PZR water level adjustment, venting) that rely on the physical configuration and design features of the RCS components detailed in Section B, such as the presence of the pressurizer, steam generators, and degasification lines."
-    },
-    {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0003",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides detailed component and material specifications for the pressurizer, which is one of the subsystems generally described as part of the RCS in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0004",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A specifies the materials and components of the pressurizer, which is a subsystem described in Section B as part of the overall RCS that provides degasification and pressure boundary functions."
-    },
-    {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0019",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides detailed material specifications for pressurizer components that are generally described as part of the RCS in Section B, thereby elaborating on the construction details of components listed in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0022",
-      "target": "nuscale_ch05_0005",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A describes the design basis and function of the Decay Heat Removal System (DHRS) in removing heat from the Reactor Coolant System (RCS), while Section B details the operational steps and system components (such as the steam generators, pressurizer, and valves) that enable or support the DHRS's function, thus providing specific component-level context for the system-level description in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0022",
-      "target": "nuscale_ch05_0025",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A discusses the decay heat removal system's role in cooling the RCS to maintain fuel design limits, while Section B details the materials and components of the pressurizer, which is a part of the RCS affected by thermal-hydraulic conditions managed by the DHRS."
-    },
-    {
-      "source": "nuscale_ch05_0005",
-      "target": "nuscale_ch05_0025",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes operational procedures involving the pressurizer and its integration with the RCS, while Section B provides detailed material specifications for the pressurizer components referenced in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch05_0003",
-      "relation": "SUPPORTS",
-      "confidence": 1.0,
-      "description": "Section A and Section B are identical text excerpts, both providing a summary description of the RCS design basis, thus they reinforce each other by presenting the same foundational information for thermal-hydraulic analysis."
-    },
-    {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch05_0004",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general overview of the RCS's function and main components, while Section B specifies detailed features and operational mechanisms (such as degasification and pressure boundary integrity) that elaborate on the summary in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch05_0019",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general overview of the RCS and its reliance on natural circulation, while Section B specifies the detailed components and subsystems that make up the RCS as summarized in Section A."
+      "description": "Section A references and partially repeats the content of Section B, specifically regarding the exclusion zone and buffer region methodology being not applicable to the NuScale design and the use of reactor trip signals to prevent CHF violations."
     }
   ]
 }

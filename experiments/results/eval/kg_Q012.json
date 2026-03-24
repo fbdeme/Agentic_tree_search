@@ -1,116 +1,451 @@
 {
-  "question": "What are the main components included in the Reactor Coolant System (RCS)?",
-  "current_hop": 3,
+  "question": "What is the containment vessel design for NuScale?",
+  "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0005": {
-      "node_id": "nuscale_ch05_0005",
-      "title": "System Components",
-      "summary": "This section describes the main components of the NuScale reactor system, focusing on the Reactor Pressure Vessel (RPV), Reactor Coolant System (RCS) piping, and the Pressurizer (PZR). The RPV serves as a primary barrier to fission product release and supports key reactor internals, while the RCS piping connects various subsystems, and the PZR is integrated into the RPV to help control system pressure. Each component’s functions and connections are briefly outlined, with references to further detailed sections.",
+    "nuscale_ch01_0019": {
+      "node_id": "nuscale_ch01_0019",
+      "title": "Operating Characteristics",
+      "summary": "The NuScale Power Module (NPM) operates at full power using natural circulation for reactor coolant flow, eliminating the need for pumps. Its small, modular design integrates the core, steam generators, and pressurizer within the reactor pressure vessel, features passive safety systems not reliant on electrical power, and allows for flexible power maneuvering through control rods and boron concentration adjustments.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "10",
+      "source_doc": "nuscale_ch01",
+      "page_range": "29",
       "hop": 1
     },
-    "nuscale_ch05_0003": {
-      "node_id": "nuscale_ch05_0003",
-      "title": "Design Basis",
-      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain fuel integrity, minimize solid deposits, and ensure uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
+    "nuscale_ch01_0023": {
+      "node_id": "nuscale_ch01_0023",
+      "title": "Containment Systems",
+      "summary": "The NuScale containment vessel (CNV) is maintained under vacuum during normal operation, which reduces moisture and corrosion, aids in leak detection, and limits oxygen for safety. In the event of an emergency, passive cooling rapidly reduces pressure and temperature, and the design’s reliance on passive safety systems and small fuel inventory results in improved safety and a lower core damage frequency compared to conventional reactors.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "8",
+      "source_doc": "nuscale_ch01",
+      "page_range": "32",
       "hop": 1
     },
-    "nuscale_ch05_0002": {
-      "node_id": "nuscale_ch05_0002",
-      "title": "Summary Description",
-      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation, eliminating the need for pumps or external piping, and is integrated within each NuScale Power Module. The RCS is designed to safely transfer heat from the reactor core, maintain proper coolant chemistry, and ensure uniform boron concentration, supporting both normal and transient plant operations. These features collectively enhance safety and operational reliability for each module in the NuScale Power Plant.",
+    "nuscale_ch01_0168": {
+      "node_id": "nuscale_ch01_0168",
+      "title": "SRP 6.5.3, Rev 3: Fission Product Control Systems and StructuresII.2 Secondary Containment",
+      "summary": "The NuScale design does not include secondary containment or fission product clean-up systems, as its passive safety features and submerged containment vessel inherently control fission products. Therefore, regulatory criteria related to secondary containment and certain fission product control systems are not applicable to NuScale, and only specific containment parameters such as leakage rates are relevant for review.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "8",
+      "source_doc": "nuscale_ch01",
+      "page_range": "229",
       "hop": 1
     },
-    "nuscale_ch05_0004": {
-      "node_id": "nuscale_ch05_0004",
-      "title": "System Description",
-      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located within the containment vessel and includes key components such as the reactor pressure vessel, pressurizer, and associated piping and controls. It removes heat from the reactor core to the steam generators using natural circulation, and features systems for degasification and emergency core cooling to maintain safety and integrity during both normal and emergency operations.",
+    "nuscale_ch01_0167": {
+      "node_id": "nuscale_ch01_0167",
+      "title": "SRP 6.5.3, Rev 3: Fission Product Control Systems and StructuresII.1 Primary Containment",
+      "summary": "The NuScale design partially conforms to SRP 6.5.3 requirements for primary containment, as its passive containment vessel does not include active fission product clean-up or pressure suppression systems; instead, fission product control is achieved through inherent design features. Criteria related to secondary containment and other fission product control systems are not applicable, since NuScale lacks these features and relies solely on its primary containment vessel and associated isolation systems.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "9",
+      "source_doc": "nuscale_ch01",
+      "page_range": "229",
       "hop": 1
     },
-    "nuscale_ch05_0019": {
-      "node_id": "nuscale_ch05_0019",
-      "title": "Reactor Coolant System Component and Subsystem Design",
-      "summary": "This section describes the design of the Reactor Coolant System (RCS) components and subsystems in the NuScale Power Module, detailing the integration of the reactor, steam generators, pressurizer, safety and ECCS valves, and associated piping within the reactor pressure vessel (RPV). It also outlines the configuration and boundaries of the steam generator system, emphasizing the integral design of the steam generators within the RPV and the separation of primary and secondary sides.",
+    "nuscale_ch01_0048": {
+      "node_id": "nuscale_ch01_0048",
+      "title": "Security Buildings",
+      "summary": "The Security Buildings (SCBs) at a NuScale Power Plant are nonsafety-related structures that include the primary access control building. These buildings support plant security functions but are not classified as safety-related structures within the facility.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
+      "source_doc": "nuscale_ch01",
+      "page_range": "42",
+      "hop": 2
+    },
+    "nuscale_ch01_0062": {
+      "node_id": "nuscale_ch01_0062",
+      "title": "Control Rod Assembly Drop and Control Rod Drive Shaft Alignment Test",
+      "summary": "This section describes the testing and validation of the NuScale control rod assembly (CRA) drop and drive shaft alignment, focusing on performance, reliability, and repeatability. Tests conducted at Curtiss Wright facilities demonstrated that the remote disconnect mechanism reliably engages and disengages the CRA, and the results have informed improvements in drive rod position detection circuitry, though they do not form the final design basis. The NPM design features longer, remotely disconnectable drive shafts with multiple alignment supports to ensure proper operation.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "88",
+      "hop": 2
+    },
+    "nuscale_ch01_0356": {
+      "node_id": "nuscale_ch01_0356",
+      "title": "SRP 9.3.3, Rev 3: Equipment and Floor Drainage SystemII.3 Control of Releases of Radioactive Material to the Environment",
+      "summary": "The section confirms that the NuScale equipment and floor drainage system meets regulatory requirements for controlling releases of radioactive material to the environment, with no parts of the drain system penetrating the containment barrier. This demonstrates conformance with SRP 9.3.3, Rev 3, ensuring environmental protection from radioactive releases.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "250",
+      "hop": 2
+    },
+    "nuscale_ch01_0064": {
+      "node_id": "nuscale_ch01_0064",
+      "title": "NuScale Test and Inspection Plans",
+      "summary": "This section describes NuScale’s test and inspection plans for key reactor components, including control rod drive shafts and Emergency Core Cooling System (ECCS) valves. It details how testing confirmed operability and performance under various conditions, and outlines a dedicated test program—conducted at a specialized facility—to demonstrate ECCS valve functionality at reactor operating pressures, temperatures, and in borated coolant, including unique design features like the inadvertent actuation block (IAB).",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "89",
+      "hop": 2
+    },
+    "nuscale_ch01_0050": {
+      "node_id": "nuscale_ch01_0050",
+      "title": "Diesel Generator Buildings",
+      "summary": "The Diesel Generator Buildings (DGBs) in the NuScale Power Plant each house a single backup diesel generator and their auxiliary equipment, but do not contain any safety-related systems or support engineered safety functions (ESFs). Their primary purpose is to provide support and housing for the generators, associated equipment, HVAC systems, and maintenance areas.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "43",
+      "hop": 2
+    },
+    "nuscale_ch01_0066": {
+      "node_id": "nuscale_ch01_0066",
+      "title": "Material Referenced",
+      "summary": "This section lists the topical and technical reports referenced in the NuScale Power Plant Design Certification Application, as detailed in Tables 1.6-1 and 1.6-2. These reports cover various aspects such as quality assurance, risk significance, safety classification, accident analysis, and methodology qualifications, and are incorporated by reference into the Final Safety Analysis Report (FSAR).",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
       "page_range": "91",
       "hop": 2
+    },
+    "nuscale_ch01_0003": {
+      "node_id": "nuscale_ch01_0003",
+      "title": "Plant Location",
+      "summary": "This section introduces the NuScale Final Safety Analysis Report (FSAR), which is required for standard design certification under 10 CFR 52. It provides an overview of the NuScale Power Module (NPM), a scalable, modular nuclear steam supply system, and summarizes key safety and design features, including passive safety systems, compact containment, and advanced digital controls. The FSAR covers both individual module and multi-module plant configurations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "8",
+      "hop": 3
+    },
+    "nuscale_ch01_0033": {
+      "node_id": "nuscale_ch01_0033",
+      "title": "General Arrangement of Major Structures and Equipment",
+      "summary": "This section describes the general arrangement of major structures and equipment at the NuScale Power Plant, focusing on the central Reactor Building (RXB). The RXB is a large, reinforced concrete structure designed for safety and radiation protection, housing the NuScale Power Modules (NPMs) in a common reactor pool with individual bays arranged in two rows. The section also references detailed figures and notes that some buildings, like the administration and training building, are outside the scope of the report.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "36",
+      "hop": 3
+    },
+    "nuscale_ch01_0002": {
+      "node_id": "nuscale_ch01_0002",
+      "title": "Introduction",
+      "summary": "This section introduces the NuScale Final Safety Analysis Report (FSAR), which is submitted as part of the application for standard design certification under U.S. regulations. It outlines the scope of the report, describing the modular NuScale Power Module (NPM) design, its safety features, scalability from one to twelve modules, and key design characteristics such as passive safety systems, compact containment, and advanced digital controls.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "8",
+      "hop": 3
+    },
+    "nuscale_ch01_0366": {
+      "node_id": "nuscale_ch01_0366",
+      "title": "DSRS 9.3.6, Rev 0: Containment Evacuation and Flooding SystemsII.1 GDC 2",
+      "summary": "The section summarizes NuScale's conformance with regulatory criteria for containment evacuation and flooding systems, specifically noting compliance with GDC 2 requirements as outlined in DSRS 9.3.6, Rev 0. It states that the NuScale design meets these criteria with no exceptions or additional comments.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "251",
+      "hop": 4
+    },
+    "nuscale_ch01_0363": {
+      "node_id": "nuscale_ch01_0363",
+      "title": "DSRS 9.3.4, Rev 0: Chemical and Volume Control System (PWR) (Including Boron Recovery System)II.7 Prevention of CVCS Holdup Tank Wall Buckling/Failure; CVCS Venting and Draining",
+      "summary": "The NuScale Final Safety Analysis Report states that the Chemical and Volume Control System (CVCS) generally conforms to regulatory criteria, but only partially meets the requirements for prevention of holdup tank wall buckling/failure because the NuScale design does not include holdup tanks subject to vacuum conditions referenced in the criteria. However, the NuScale CVCS does provide appropriate venting and draining capabilities as required.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "251",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0005",
-      "target": "nuscale_ch05_0003",
+      "source": "nuscale_ch01_0019",
+      "target": "nuscale_ch01_0023",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A lists specific components and operational details (e.g., PZR, CNV, RVVs, RRVs) that are part of or interact with the RCS, while Section B provides a general design basis description and explicitly names the main RCS components (RPV, PZR, RVI), thus Section A provides details that specify Section B's general description."
+      "description": "Section A describes the modular design and operating characteristics of the NuScale Power Module, including containment modularization, while Section B provides specific details about the containment vessel's vacuum maintenance and its benefits, thus Section B specifies technical features that implement the general containment design described in Section A."
     },
     {
-      "source": "nuscale_ch05_0005",
-      "target": "nuscale_ch05_0002",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section B provides a general description of the main components included in the Reactor Coolant System (RCS), while Section A specifies details about some of these components (such as the pressurizer and chemical volume control system), thereby elaborating on the general list in Section B."
+      "source": "nuscale_ch01_0019",
+      "target": "nuscale_ch01_0168",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the physical and operational design features of the NuScale containment vessel, while Section B evaluates the vessel's conformance with regulatory requirements for containment systems, specifically noting the absence of certain systems in the NuScale design."
     },
     {
-      "source": "nuscale_ch05_0005",
-      "target": "nuscale_ch05_0004",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes specific components and operational steps (e.g., PZR, chemical volume control system, degasification line, RVVs) that are part of the RCS, while Section B provides a general description of the RCS and its main components, with both sections mentioning the degasification line and RVVs as key elements."
-    },
-    {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch05_0002",
-      "relation": "SEMANTIC",
-      "confidence": 1.0,
-      "description": "Section A and Section B are identical excerpts that both enumerate the main components of the Reactor Coolant System (RCS), providing the same information in response to the analysis question."
-    },
-    {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch05_0004",
+      "source": "nuscale_ch01_0019",
+      "target": "nuscale_ch01_0167",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A provides a general overview of the main RCS components, while Section B specifies additional system features and functions related to those components, such as degasification lines and pressure boundary integrity."
+      "description": "Section A describes the physical and operational design features of the NuScale containment vessel, while Section B evaluates how this design conforms to regulatory requirements for primary containment, specifically noting the absence of certain systems in NuScale's design."
     },
     {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch05_0004",
-      "relation": "SPECIFIES",
+      "source": "nuscale_ch01_0023",
+      "target": "nuscale_ch01_0168",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the design features of the NuScale containment vessel, while Section B discusses how the NuScale containment vessel conforms (or partially conforms) to regulatory requirements for containment systems, specifically noting the absence of certain systems like fission product clean-up, thus connecting the design details in A to the regulatory evaluation in B."
+    },
+    {
+      "source": "nuscale_ch01_0023",
+      "target": "nuscale_ch01_0167",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the design features of the NuScale containment vessel, while Section B evaluates how this design conforms to the regulatory requirements for primary containment as specified in SRP 6.5.3, explicitly noting partial conformance due to design differences."
+    },
+    {
+      "source": "nuscale_ch01_0168",
+      "target": "nuscale_ch01_0167",
+      "relation": "REFERENCES",
       "confidence": 0.95,
-      "description": "Section A provides a general overview and lists main components of the RCS, while Section B elaborates on specific features and functions of those components, such as degasification and pressure boundary integrity, thereby specifying details for Section A's general description."
+      "description": "Section A references Section B by discussing the NuScale containment vessel's partial conformance with the primary containment requirements outlined in SRP 6.5.3, specifically noting the absence of fission product clean-up and pressure suppression systems."
     },
     {
-      "source": "nuscale_ch05_0019",
-      "target": "nuscale_ch05_0005",
+      "source": "nuscale_ch01_0048",
+      "target": "nuscale_ch01_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A describes operational processes and systems (such as the CVCS and boron control) that are implemented within the containment vessel, while Section B outlines key design features of the containment vessel itself (such as absence of penetrations below the core and modularization), thus Section A provides operational context for the design features specified in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0048",
+      "target": "nuscale_ch01_0168",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section B discusses regulatory criteria and conformance for the NuScale containment vessel, specifying that it lacks certain systems, while Section A describes related plant systems but does not directly address the containment vessel design, thus Section B provides regulatory context relevant to the containment vessel design sought in the analysis question."
+    },
+    {
+      "source": "nuscale_ch01_0062",
+      "target": "nuscale_ch01_0019",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.7,
+      "description": "Section B describes general design features of the NuScale containment vessel, such as modularization and absence of penetrations below the core, while Section A discusses testing of control rod assemblies, which are internal components whose performance must align with the containment vessel's design constraints."
+    },
+    {
+      "source": "nuscale_ch01_0356",
+      "target": "nuscale_ch01_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides specific design features of the NuScale containment vessel, such as the absence of penetrations below the core and modular construction, which are referenced in Section A as part of the NuScale Final Safety Analysis Report's conformance with regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0356",
+      "target": "nuscale_ch01_0023",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides a detailed description of the NuScale containment vessel design, which is the specific design information relevant to answering the analysis question, while Section A discusses regulatory criteria and conformance related to systems that interact with or are affected by the containment vessel design."
+    },
+    {
+      "source": "nuscale_ch01_0356",
+      "target": "nuscale_ch01_0168",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A references the NuScale Final Safety Analysis Report's conformance with regulatory criteria for drainage and sampling systems, while Section B addresses the conformance of the NuScale containment vessel design with fission product control system requirements, both connecting through their evaluation of how the NuScale design aligns with specific SRP (Standard Review Plan) sections and regulatory expectations."
+    },
+    {
+      "source": "nuscale_ch01_0064",
+      "target": "nuscale_ch01_0019",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B provides a general description of the NuScale containment vessel's design features, while Section A references specific test and inspection plans that confirm the operability and safety of components within that containment, thus Section A supports the claims made in Section B about the containment vessel's design."
+    },
+    {
+      "source": "nuscale_ch01_0064",
+      "target": "nuscale_ch01_0023",
+      "relation": "SPECIFIES",
+      "confidence": 0.7,
+      "description": "Section A discusses test and inspection plans for specific reactor components (e.g., ECCS valves), while Section B describes the general design features and operational conditions of the containment vessel (CNV), with both sections providing complementary technical details about different aspects of the NuScale containment system."
+    },
+    {
+      "source": "nuscale_ch01_0064",
+      "target": "nuscale_ch01_0168",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses test and inspection plans for specific NuScale reactor components, while Section B outlines the regulatory conformance of the NuScale containment vessel design, specifically noting the absence of certain fission product control systems; thus, Section A provides supporting technical evidence relevant to the containment vessel's design features described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0066",
+      "target": "nuscale_ch01_0019",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A lists topical and technical reports incorporated by reference in the NuScale FSAR, while Section B provides a general description of the NuScale plant's operating characteristics, with Section A serving as a source for more detailed information referenced in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0066",
+      "target": "nuscale_ch01_0023",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A lists referenced topical reports, including those that provide detailed information supporting the containment vessel design described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0066",
+      "target": "nuscale_ch01_0168",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A lists the referenced topical reports and technical documents that provide detailed design information for the NuScale containment vessel, while Section B discusses how the NuScale containment vessel design conforms (or partially conforms) to the regulatory requirements of SRP 6.5.3, thus connecting the design documentation to regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch01_0048",
+      "target": "nuscale_ch01_0356",
+      "relation": "REFERENCES",
+      "confidence": 0.7,
+      "description": "Section A describes operational processes and safety-related protections within the reactor coolant system, while Section B discusses regulatory conformance for systems related to radioactive material control and sampling, with both sections referencing aspects of the NuScale Final Safety Analysis Report and its alignment with regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0048",
+      "target": "nuscale_ch01_0064",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes operational processes and systems (such as the CVCS and RCS) that are part of the NuScale module's general plant description, while Section B provides test and inspection results for specific components (like ECCS valves) that are part of the NuScale design, with both sections contributing technical details relevant to understanding the overall containment vessel design."
+    },
+    {
+      "source": "nuscale_ch01_0048",
+      "target": "nuscale_ch01_0066",
+      "relation": "REFERENCES",
+      "confidence": 0.7,
+      "description": "Section A describes operational processes and safety features of the NuScale plant, while Section B lists referenced materials and topical reports that may provide further technical details, indicating that Section A's information may be supported or elaborated by documents cited in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0062",
+      "target": "nuscale_ch01_0064",
       "relation": "SUPPORTS",
       "confidence": 0.95,
-      "description": "Section A lists and describes the main components of the Reactor Coolant System (RCS), while Section B references specific RCS components (e.g., DHRS heat exchangers, SGs, PZR, degasification line) in the context of system operation, thus providing operational context for the components identified in Section A."
+      "description": "Section A describes the setup and purpose of control rod assembly alignment tests, while Section B presents the results of those tests, confirming operability and performance, thus Section B provides evidence supporting the claims made in Section A."
     },
     {
-      "source": "nuscale_ch05_0019",
-      "target": "nuscale_ch05_0003",
+      "source": "nuscale_ch01_0062",
+      "target": "nuscale_ch01_0066",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A describes testing and validation activities for control rod assemblies as required by the NuScale FSAR, while Section B lists the referenced materials and topical reports, including those that may provide supporting technical basis for the design and testing described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0356",
+      "target": "nuscale_ch01_0064",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B provides test results and technical information about the operability and design of key NuScale reactor components, which supports the conformance claims and regulatory criteria referenced in Section A regarding the containment and safety systems."
+    },
+    {
+      "source": "nuscale_ch01_0356",
+      "target": "nuscale_ch01_0066",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A discusses the NuScale FSAR's conformance with regulatory criteria and references specific SRP sections, while Section B lists the topical and technical reports (including those on quality assurance) that are incorporated by reference in the FSAR, indicating that the detailed design information in Section B supports or is referenced by the regulatory conformance discussion in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0064",
+      "target": "nuscale_ch01_0066",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A discusses specific test and inspection plans for NuScale components, while Section B lists the referenced materials and topical reports, indicating that Section A's requirements and results may be based on or supported by the documents cited in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0003",
+      "target": "nuscale_ch01_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the NuScale plant design, while Section B specifies operating characteristics and containment features that detail aspects of the containment vessel design referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0003",
+      "target": "nuscale_ch01_0023",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A provides a detailed list of the main components included in the Reactor Coolant System, while Section B gives a general summary of the RCS and mentions some of the same components, with Section A specifying details for Section B's general description."
+      "description": "Section A provides a general description of the NuScale plant and references the safety analysis report, while Section B specifies detailed design features of the containment vessel (CNV), such as its vacuum maintenance and associated benefits, thereby elaborating on the containment vessel design mentioned in Section A."
     },
     {
-      "source": "nuscale_ch05_0019",
-      "target": "nuscale_ch05_0002",
+      "source": "nuscale_ch01_0003",
+      "target": "nuscale_ch01_0168",
       "relation": "SPECIFIES",
-      "confidence": 0.98,
-      "description": "Section A provides a detailed list of the main components included in the Reactor Coolant System, while Section B gives a general summary of the RCS and mentions some of the same components, with Section A specifying details for Section B's general description."
+      "confidence": 0.9,
+      "description": "Section A provides a general description of the NuScale plant design, while Section B specifies how the containment vessel design conforms (or does not conform) to specific regulatory criteria regarding fission product control systems."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section B describes specific design features of the NuScale containment vessel, such as modularization and absence of penetrations below the core, which are part of the general arrangement overview referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0023",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides specific design details about the containment vessel (CNV), such as its vacuum maintenance and associated benefits, which are part of the general arrangement of major structures and equipment described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0168",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the general arrangement of major structures, including the containment vessel, while Section B evaluates the NuScale containment vessel's conformance with regulatory criteria for fission product control systems, specifically noting design differences such as the absence of fission product clean-up systems."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch01_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides a general introduction and regulatory context for the NuScale design, while Section B specifies operating characteristics and design features (such as containment modularization and absence of penetrations) that detail aspects of the containment vessel referenced in the introduction."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch01_0023",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the NuScale plant design and references the safety analysis report, while Section B specifies detailed design features of the containment vessel (CNV), such as its vacuum maintenance and associated benefits, thus Section B provides specific details for the general description in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch01_0168",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the NuScale FSAR and its purpose, while Section B details how the NuScale containment vessel design conforms (or does not conform) to specific regulatory criteria regarding fission product control systems, connecting them through the regulatory context and design features described in the FSAR."
+    },
+    {
+      "source": "nuscale_ch01_0003",
+      "target": "nuscale_ch01_0033",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general introduction and regulatory context for the NuScale design, while Section B begins to describe the physical arrangement of major plant structures, including the containment vessel, thus Section B specifies details that elaborate on the general description in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides specific details about the general arrangement and layout of major structures and equipment, which are broadly introduced in Section B as part of the overall plant design described in the Final Safety Analysis Report."
+    },
+    {
+      "source": "nuscale_ch01_0366",
+      "target": "nuscale_ch01_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B describes key design features of the NuScale containment vessel, such as modularization and absence of penetrations below the core, which are the specific design details that Section A's regulatory conformance statements would apply to."
+    },
+    {
+      "source": "nuscale_ch01_0366",
+      "target": "nuscale_ch01_0023",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides specific design features of the NuScale containment vessel (CNV), such as vacuum maintenance and its benefits, which are referenced in Section A as part of the regulatory conformance discussion for containment systems."
+    },
+    {
+      "source": "nuscale_ch01_0366",
+      "target": "nuscale_ch01_0168",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the regulatory conformance of various NuScale systems including containment evacuation, while Section B specifies that the NuScale containment vessel lacks fission product clean-up and pressure suppression systems, thus Section B provides specific design details that clarify the general containment system context referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0363",
+      "target": "nuscale_ch01_0019",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section B describes the general plant design features of the NuScale containment vessel, while Section A discusses the conformance of related systems (such as the Chemical and Volume Control System) with regulatory criteria, indirectly supporting the containment vessel's design compliance."
+    },
+    {
+      "source": "nuscale_ch01_0363",
+      "target": "nuscale_ch01_0023",
+      "relation": "SPECIFIES",
+      "confidence": 0.7,
+      "description": "Section A discusses the design and regulatory conformance of the Chemical and Volume Control System (CVCS), which is located outside the reactor coolant pressure boundary, while Section B describes the containment vessel (CNV) design features such as maintaining a vacuum, indicating that the CVCS design and location are specified in relation to the containment vessel's configuration."
+    },
+    {
+      "source": "nuscale_ch01_0363",
+      "target": "nuscale_ch01_0168",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A discusses the design and regulatory conformance of the Chemical and Volume Control System (CVCS), which is located outside the Reactor Coolant Pressure Boundary (RCPB), while Section B addresses the containment vessel's features and its partial conformance with fission product control requirements, indicating that the CVCS design (A) is external and thus structurally separate from the containment vessel design considerations (B)."
+    },
+    {
+      "source": "nuscale_ch01_0366",
+      "target": "nuscale_ch01_0363",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A references the general design and regulatory conformance of the Chemical and Volume Control System (CVCS), while Section B provides specific details on the prevention of CVCS holdup tank wall buckling/failure and venting/draining, thus Section B specifies technical details for the broader descriptions in Section A."
     }
   ]
 }

@@ -1,167 +1,213 @@
 {
-  "question": "Explain the main components of NPM.",
-  "current_hop": 2,
+  "question": "What are the RCS volume components from Table 5.1-1, and how does the simplified diagram in Figure 5.1-2 show these regions?",
+  "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0006": {
-      "node_id": "nuscale_ch05_0006",
-      "title": "System Evaluation",
-      "summary": "This section describes the evaluation of the NuScale Power Plant’s system performance, focusing on optimizing steady-state parameters such as coolant temperatures, flow rates, and pressure to maximize electrical generation and maintain safety margins. Calculations, verified by hand and using NRELAP5 software, account for uncertainties and ensure low pressure losses to support the plant’s natural circulation design. The analysis also confirms that certain uncertainties, like SG tube plugging, do not affect primary coolant flow rate determination.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "12",
-      "hop": 1
-    },
-    "nuscale_ch05_0002": {
-      "node_id": "nuscale_ch05_0002",
-      "title": "Summary Description",
-      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve independent modules, maintains water chemistry, and ensures uniform boron concentration to protect fuel integrity during all operating conditions.",
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain proper coolant flow, water chemistry, and boron concentration to protect fuel integrity and support safe operation under normal and transient conditions.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "8",
       "hop": 1
     },
-    "nuscale_ch05_0008": {
-      "node_id": "nuscale_ch05_0008",
-      "title": "Compliance with Codes and Code Cases",
-      "summary": "This section describes how the NuScale Power Module (NPM) and its reactor coolant pressure boundary (RCPB) components comply with relevant U.S. regulations, specifically 10 CFR 50.55a and associated General Design Criteria. It details that these components are designed, fabricated, and tested to ASME Boiler and Pressure Vessel Code (BPVC) Section III, 2013 Edition standards, and clarifies the classification and quality assurance requirements for various piping and systems connected to the reactor coolant system.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "20",
-      "hop": 1
-    },
-    "nuscale_ch05_0005": {
-      "node_id": "nuscale_ch05_0005",
-      "title": "System Components",
-      "summary": "This section describes the main components of the NuScale reactor system, focusing on the Reactor Pressure Vessel (RPV), Reactor Coolant System (RCS) piping, and the Pressurizer (PZR). The RPV serves as a primary barrier to fission product release and houses key reactor internals, while the RCS piping connects various system elements and the PZR is integrated within the RPV to help control system pressure. Each component's functions and connections are briefly outlined, with references to more detailed sections.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "10",
-      "hop": 1
-    },
     "nuscale_ch05_0004": {
       "node_id": "nuscale_ch05_0004",
       "title": "System Description",
-      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes components such as the reactor pressure vessel, pressurizer, and associated piping and controls. It removes heat from the reactor core to the steam generators using natural circulation, and features systems for removing noncondensible gases and maintaining pressure boundary integrity to prevent radionuclide release. The RCS interfaces with several other systems, including emergency core cooling and chemical control systems.",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and is responsible for transferring heat from the reactor core to the steam generators using natural circulation. It includes key components such as the reactor pressure vessel, pressurizer, and associated valves, and features systems for removing noncondensible gases and maintaining the integrity of the reactor coolant pressure boundary. The RCS interfaces with several other systems, including emergency core cooling and chemical control, to ensure safe and efficient operation.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "9",
       "hop": 1
     },
-    "nuscale_ch05_0021": {
-      "node_id": "nuscale_ch05_0021",
-      "title": "Reactor Coolant System Piping",
-      "summary": "The section discusses the design and degradation assessment of the NuScale reactor coolant system's steam generator (SG) tubing. It notes that the main degradation observed in similar operating reactors is wear from flow-induced vibration or foreign objects, and that NuScale's design—with its helical tubing and novel support structure—does not increase risk compared to existing designs. Prototypic testing validates the new support design, and typical SG program guidelines remain appropriate, with wear identified as the most likely degradation mechanism and corrosion risks assessed as low.",
+    "nuscale_ch05_0024": {
+      "node_id": "nuscale_ch05_0024",
+      "title": "Pressurizer",
+      "summary": "The pressurizer in the NuScale reactor is integrated into the upper region of the reactor vessel and functions to regulate reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering reactor trips or safety system actuations, while providing continuous monitoring and control through instrumentation.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "104",
-      "hop": 1
+      "page_range": "124",
+      "hop": 2
+    },
+    "nuscale_ch05_0012": {
+      "node_id": "nuscale_ch05_0012",
+      "title": "Reactor Coolant Pressure Boundary Leakage Detection",
+      "summary": "The NuScale reactor coolant pressure boundary (RCPB) leakage detection system does not use traditional components with designed leakage rates, making it impractical to distinguish between identified and unidentified leakage inside containment using installed instrumentation. All leakage into containment is treated as unidentified until the source is determined by other means, with the leakage rate assessed through RCS inventory balance and comparison to the containment evacuation system (CES) flow rate; the detection systems are designed to be reliable, redundant, and sensitive to support safety analyses.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "41",
+      "hop": 3
+    },
+    "nuscale_ch05_0006": {
+      "node_id": "nuscale_ch05_0006",
+      "title": "System Evaluation",
+      "summary": "This section describes the evaluation of the NuScale Power Plant’s systems to optimize performance across various power levels. Key operational parameters—such as coolant temperatures, flow rates, and pressures—are established and verified through both software and manual calculations, accounting for uncertainties and design requirements. The system’s natural circulation design minimizes pressure losses, and uncertainties related to steam generator tube plugging do not affect primary coolant flow rate determination.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "12",
+      "hop": 3
+    },
+    "nuscale_ch05_0000": {
+      "node_id": "nuscale_ch05_0000",
+      "title": "Preface",
+      "summary": "The Preface outlines the copyright and usage restrictions for the NuScale Standard Plant Design Certification Application, specifically Chapter Five on the Reactor Coolant System and Connecting Systems. It specifies that only the U.S. Nuclear Regulatory Commission (NRC) is authorized to use, copy, or disclose the document for regulatory purposes, and any copies must retain the copyright notice. The section also references the table of contents for Chapter Five, which covers the summary description and design basis of the reactor coolant system.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "1",
+      "hop": 3
+    },
+    "nuscale_ch05_0009": {
+      "node_id": "nuscale_ch05_0009",
+      "title": "Overpressure Protection",
+      "summary": "This section outlines NuScale's compliance with NRC regulations and ASME Boiler and Pressure Vessel Code (BPVC) requirements for overpressure protection of the reactor coolant boundary. It details how code cases for design, fabrication, construction, preservice, and inservice inspections and testing are selected and applied, ensuring they meet the conditions specified in relevant NRC regulatory guides and federal regulations. A consolidated list of the specific ASME code cases used is provided in Table 5.2-1.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "21",
+      "hop": 3
+    },
+    "nuscale_ch05_0019": {
+      "node_id": "nuscale_ch05_0019",
+      "title": "Reactor Coolant System Component and Subsystem Design",
+      "summary": "This section describes the design of the NuScale Power Module’s Reactor Coolant System (RCS) components and subsystems, including the reactor pressure vessel, steam generators, safety and emergency cooling valves, and associated piping. It outlines the integration of these components within the RPV, highlights the boundaries between primary and secondary systems, and references other sections for detailed design bases of specific components.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "91",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0006",
-      "target": "nuscale_ch05_0002",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section B provides a general summary of the main components of the NPM, while Section A references and builds upon this by evaluating system performance and referring to further component descriptions in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0006",
-      "target": "nuscale_ch05_0008",
-      "relation": "SATISFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the system evaluation and operational criteria for the NPM's main components, while Section B specifies that these components must comply with regulatory codes and standards, connecting the design and performance details in A to the regulatory requirements in B."
-    },
-    {
-      "source": "nuscale_ch05_0006",
-      "target": "nuscale_ch05_0005",
-      "relation": "REFERENCES",
-      "confidence": 0.85,
-      "description": "Section B lists specific system components and operational steps that are referenced and evaluated in Section A's discussion of system performance and optimization criteria."
-    },
-    {
-      "source": "nuscale_ch05_0006",
+      "source": "nuscale_ch05_0003",
       "target": "nuscale_ch05_0004",
       "relation": "SPECIFIES",
       "confidence": 0.9,
-      "description": "Section A evaluates the performance criteria and operational parameters of the NuScale Power Module (NPM) systems, while Section B provides a detailed description of the main components and functions of those systems, connecting the evaluation in A to the specific system features in B."
+      "description": "Section A provides a general overview of the RCS components, while Section B specifies additional functional details and operational features of those same components, such as degasification and pressure boundary integrity."
     },
     {
-      "source": "nuscale_ch05_0006",
-      "target": "nuscale_ch05_0021",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A references Section B by directing the reader to Section 5.4 for further description of the steam generators (SGs), which are a main component of the NPM, thereby connecting the general system evaluation to the detailed component and subsystem design."
-    },
-    {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch05_0008",
-      "relation": "SATISFIES",
-      "confidence": 0.95,
-      "description": "Section A identifies the main components of the NPM, including the reactor pressure vessel and integral pressurizer, while Section B specifies that these components comply with regulatory codes and standards, connecting the described components to their required regulatory integrity."
-    },
-    {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch05_0005",
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0003",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A provides a general overview of the NPM's main components, while Section B details specific operational procedures and components (such as the PZR, SGs, and control systems) that are part of the NPM, thereby specifying the general description in Section A."
+      "description": "Section A describes the pressurizer as an integral component of the reactor vessel, while Section B lists the pressurizer as one of the main components included in the RCS, connecting the specific design detail in A to the general system overview in B."
     },
     {
-      "source": "nuscale_ch05_0002",
+      "source": "nuscale_ch05_0024",
       "target": "nuscale_ch05_0004",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general overview of the Reactor Coolant System (RCS) as a main component of the NPM, while Section B specifies detailed features and functions of the RCS mentioned in Section A, such as degasification and pressure boundary integrity."
-    },
-    {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch05_0021",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general overview of the main components of the NPM, specifically mentioning the reactor coolant system (RCS), while Section B gives detailed information about a specific component (SG tubing) within the RCS, thus Section B specifies details for the general description in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0008",
-      "target": "nuscale_ch05_0005",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A establishes that each NPM complies with regulatory codes for design and construction, while Section B describes the specific system components and operational steps of the NPM, thus Section B provides details/specifications for the general compliance described in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0008",
-      "target": "nuscale_ch05_0004",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A states that each NPM complies with specific regulatory codes for design and construction, while Section B describes the physical system components and their functions, showing that the described components are those that must comply with the codes referenced in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0008",
-      "target": "nuscale_ch05_0021",
       "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A establishes that the NPMs comply with regulatory codes for reactor coolant boundary integrity, while Section B discusses specific design features and operational experience of the NPM's reactor coolant system piping, providing supporting evidence that the NPM's design aligns with established safety practices."
+      "confidence": 0.95,
+      "description": "Section A describes the physical configuration and function of the pressurizer as a component of the RCS, while Section B references the PZR (pressurizer) volume as part of the RCS and its role in system operations, thus both sections identify the pressurizer as a specific RCS volume component relevant to Table 5.1-1 and its depiction in Figure 5.1-2."
     },
     {
-      "source": "nuscale_ch05_0005",
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section B provides a general description of the RCS components (such as the RPV and PZR), which are the same components referenced in Section A when discussing leakage detection and the absence of traditional components like pumps and valve seals."
+    },
+    {
+      "source": "nuscale_ch05_0012",
       "target": "nuscale_ch05_0004",
       "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B describes the physical components and functions of the RCS, which are the same components whose leakage detection and boundary integrity are discussed in Section A, thus connecting the system's design (B) to its operational monitoring and safety requirements (A)."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B describes the pressurizer as a specific component and region within the RCS, which is one of the RCS volume components referenced in Table 5.1-1 and depicted in the simplified diagram mentioned in the analysis question, thus providing details for Section A's general discussion of RCS components."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
       "confidence": 0.9,
-      "description": "Section A describes operational steps involving the PZR water level and degasification, while Section B provides the system-level function of the degasification line and RVVs, thus Section A specifies operational details for the general system description in Section B."
+      "description": "Section B provides the general description and components of the RCS, which Section A then evaluates in terms of system performance and operational criteria, thus Section A's analysis is based on the components outlined in Section B."
     },
     {
-      "source": "nuscale_ch05_0005",
-      "target": "nuscale_ch05_0021",
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0004",
       "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A outlines the operational procedures and components involved in the NPM system, while Section B provides specific design details and considerations for one of those components—the steam generators (SGs)—thus Section B specifies details for a component generally described in Section A."
+      "confidence": 0.85,
+      "description": "Section A discusses the evaluation of system performance parameters, which depend on the RCS volume components listed in Table 5.1-1, while Section B describes the physical components and functions of the RCS that are depicted in Figure 5.1-2, thus connecting the evaluation criteria to the actual system elements and their representation."
     },
     {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0021",
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section B describes the pressurizer as a specific RCS volume component, which is one of the regions that would be itemized in Table 5.1-1 and depicted in the simplified diagram referenced in Section A, thus providing a detailed example of the components discussed more generally in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0000",
+      "target": "nuscale_ch05_0003",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A is the preface and copyright notice for the NuScale Design Certification Application, while Section B provides the design basis and summary description of the Reactor Coolant System (RCS), making Section A a prerequisite for understanding the context and authority of Section B's technical content."
+    },
+    {
+      "source": "nuscale_ch05_0000",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A provides the context and scope of the document, while Section B describes specific RCS components and functions that are detailed in Table 5.1-1 and visually represented in Figure 5.1-2, thus Section B specifies the technical content that Section A introduces."
+    },
+    {
+      "source": "nuscale_ch05_0000",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B provides a detailed description of the pressurizer, which is one of the RCS volume components listed in Table 5.1-1 referenced in the analysis question, thereby specifying the details for a general component mentioned in Section A's context."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses regulatory compliance and testing requirements for the reactor coolant boundary, while Section B describes the physical components and functions of the RCS, connecting them through the shared focus on the integrity and configuration of RCS volume components relevant to Table 5.1-1 and Figure 5.1-2."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0006",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B discusses the establishment of steady state values for primary system parameters, which would include RCS volume components as listed in Table 5.1-1, while Section A addresses the detection of leakage from these RCS components, thus both sections are connected through their focus on the RCS and its defined components."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0009",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the inability to distinguish RCS leakage sources due to instrumentation limitations, while Section B outlines compliance with ASME and NRC requirements for RCS boundary integrity, connecting them through the shared focus on RCS boundary design and regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0009",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the evaluation and optimization of primary system parameters, which include RCS volume components listed in Table 5.1-1, while Section B addresses the integrity and code compliance of the reactor coolant boundary that encompasses these same RCS volume components."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0003",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A provides a general system-level description of the Reactor Coolant System (RCS) and its functions, while Section B specifies detailed design considerations and operational experience for a key RCS component (the steam generator tubing), thus Section B provides specific details that elaborate on the general description in Section A."
+      "description": "Section A lists and describes the specific components contained within the RCS, while Section B provides a general summary of the RCS and identifies its major regions, with both sections connecting through their identification of RCS volume components."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A lists the physical components contained within the RCS, while Section B describes the functional roles and boundaries of these components, connecting the physical elements to their operational regions as depicted in diagrams like Figure 5.1-2."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A lists the major RCS volume components, including the pressurizer, while Section B provides detailed information about the pressurizer as one of those components, connecting the general system overview to a specific subsystem."
     }
   ]
 }

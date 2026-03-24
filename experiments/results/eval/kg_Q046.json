@@ -1,33 +1,102 @@
 {
-  "question": "What is the definition of the acronym RVV?",
+  "question": "What are the Charpy upper shelf energy values for NuScale RPV materials from Tables 5.3-9 and 5.3-10?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0013": {
-      "node_id": "nuscale_ch01_0013",
-      "title": "Proprietary Information",
-      "summary": "This section explains the organization and identification of text, tables, figures, and page numbering within the NuScale Final Safety Analysis Report (FSAR). It also clarifies that while the FSAR does not contain proprietary or safeguards information, some sensitive content is withheld from public disclosure in accordance with regulations, and a separate public version is provided with such material removed.",
+    "nuscale_ch05_0018": {
+      "node_id": "nuscale_ch05_0018",
+      "title": "References",
+      "summary": "This section outlines the inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fastener requirements for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It specifies procedures for maintaining vessel integrity during transport and operation, and lists the key codes and standards used for compliance.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "10",
+      "source_doc": "nuscale_ch05",
+      "page_range": "74",
       "hop": 1
     },
-    "nuscale_ch01_0014": {
-      "node_id": "nuscale_ch01_0014",
-      "title": "Acronyms and Abbreviations",
-      "summary": "This section explains the conventions used for identifying and numbering tables, figures, and pages within the NuScale Final Safety Analysis Report (FSAR), as well as the handling of proprietary and sensitive information. It clarifies that sensitive material is withheld from public disclosure and is clearly marked, with a separate public version of the FSAR provided.",
+    "nuscale_ch05_0016": {
+      "node_id": "nuscale_ch05_0016",
+      "title": "Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses",
+      "summary": "This section outlines the basis for establishing operational pressure and temperature limits for the reactor coolant pressure boundary (RCPB) to comply with regulatory requirements over the plant’s 60-year lifespan. It describes the use of ASME and NRC methodologies to calculate pressure-temperature limit curves, accounting for vessel embrittlement, and provides figures and tables with the applicable limits to ensure protection against non-ductile failure.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "10",
+      "source_doc": "nuscale_ch05",
+      "page_range": "72",
       "hop": 1
+    },
+    "nuscale_ch05_0017": {
+      "node_id": "nuscale_ch05_0017",
+      "title": "Reactor Vessel Integrity",
+      "summary": "This section outlines the procedures and regulatory compliance measures to ensure the integrity of the NuScale reactor vessel over its 60-year design life. It details the development of operating procedures to prevent exceeding pressure-temperature limits, evaluates the vessel’s resistance to pressurized thermal shock and upper-shelf energy degradation, and confirms that all criteria remain within regulatory limits throughout the vessel’s operational lifespan.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "73",
+      "hop": 1
+    },
+    "nuscale_ch05_0008": {
+      "node_id": "nuscale_ch05_0008",
+      "title": "Compliance with Codes and Code Cases",
+      "summary": "This section describes how the NuScale Power Module (NPM) and its reactor coolant pressure boundary (RCPB) components comply with relevant U.S. regulations, specifically 10 CFR 50.55a and associated General Design Criteria. It details the use of ASME Boiler and Pressure Vessel Code (BPVC) 2013 Edition for design, fabrication, and testing, and outlines the classification of various piping and components according to their safety significance.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "20",
+      "hop": 2
+    },
+    "nuscale_ch05_0000": {
+      "node_id": "nuscale_ch05_0000",
+      "title": "Preface",
+      "summary": "The Preface outlines the copyright and usage restrictions for the NuScale Standard Plant Design Certification Application, specifically Chapter Five on the Reactor Coolant System and Connecting Systems. It specifies that only the U.S. Nuclear Regulatory Commission (NRC) is authorized to use, copy, or disclose the information for regulatory purposes, and all copies must retain the copyright notice.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "1",
+      "hop": 2
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0013",
-      "target": "nuscale_ch01_0014",
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0016",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A discusses inspection, shipment, and storage requirements for the RPV, while Section B addresses material properties and testing (including Charpy upper-shelf energy), with both sections referencing ASME BPVC standards as the connecting regulatory framework."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0017",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides technical details and code compliance information relevant to the Charpy upper shelf energy data, which are a prerequisite for the operating procedures discussed in Section B that ensure reactor vessel integrity under specified conditions."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0018",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A states that the RPV is designed and constructed in compliance with ASME BPVC Section III, while Section B specifies that shipment, handling, and storage of the RPV also adhere to ASME BPVC Section III and related standards, thus both sections are connected by their reference to compliance with the same code requirements for different lifecycle phases."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0016",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A states that the RPV materials comply with ASME BPVC requirements, while Section B discusses specific ASME BPVC provisions and examinations related to RPV components, thus Section B provides details/specifications for the general compliance described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A states that the RPV is designed and constructed to meet ASME BPVC and regulatory requirements, while Section B discusses the development of operating procedures to ensure compliance with technical specifications and safe operation of the RPV, both connecting through the overarching requirement to maintain reactor vessel integrity."
+    },
+    {
+      "source": "nuscale_ch05_0000",
+      "target": "nuscale_ch05_0018",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides the general context and copyright notice for the NuScale Design Certification Application, while Section B references specific sections and requirements within the same document, indicating that Section B is a detailed part of the broader document introduced in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0000",
+      "target": "nuscale_ch05_0016",
       "relation": "SPECIFIES",
       "confidence": 0.8,
-      "description": "Section B is expected to contain the list or definitions of acronyms such as RVV, which is the information sought in the analysis question, while Section A provides general introductory and formatting information without defining acronyms."
+      "description": "Section A provides the general context and copyright information for the NuScale Design Certification Application, while Section B contains technical details and analyses—including Charpy upper shelf energy data—relevant to the analysis question, thus Section A frames the document that Section B is a part of."
     }
   ]
 }

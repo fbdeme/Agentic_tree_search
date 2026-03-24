@@ -1,0 +1,192 @@
+{
+  "question": "Based on Tables 5.3-9/10, does the minimum Charpy upper shelf energy after irradiation satisfy 10 CFR 50 Appendix G?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch05_0018": {
+      "node_id": "nuscale_ch05_0018",
+      "title": "References",
+      "summary": "This section outlines the inspection, shipment, installation, and surveillance requirements for the NuScale reactor vessel, referencing relevant ASME and ASTM standards for quality assurance and material integrity. It specifies procedures for maintaining a dry, controlled environment during shipment and details where further information on inspections, operating conditions, and fasteners can be found in the report. Key reference documents are listed, including ASME codes and ASTM standards.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "74",
+      "hop": 1
+    },
+    "nuscale_ch05_0009": {
+      "node_id": "nuscale_ch05_0009",
+      "title": "Overpressure Protection",
+      "summary": "This section outlines NuScale's compliance with overpressure protection requirements by referencing applicable ASME Boiler and Pressure Vessel Code (BPVC) and Operations and Maintenance (OM) code cases, as mandated by various sections of 10 CFR 50.55a and related Regulatory Guides (RGs). It details how code cases for design, fabrication, construction, preservice, and inservice inspections and testing are selected and verified to meet NRC requirements, with a consolidated list provided in Table 5.2-1.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "21",
+      "hop": 1
+    },
+    "nuscale_ch05_0008": {
+      "node_id": "nuscale_ch05_0008",
+      "title": "Compliance with Codes and Code Cases",
+      "summary": "This section describes how the NuScale Power Module (NPM) and its reactor coolant pressure boundary (RCPB) components comply with relevant U.S. regulations, specifically 10 CFR 50.55a and associated General Design Criteria. It confirms that these components are designed, fabricated, and tested to ASME Boiler and Pressure Vessel Code (BPVC) Section III, 2013 Edition standards, with appropriate quality classifications and adherence to NRC regulatory guides.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "20",
+      "hop": 1
+    },
+    "nuscale_ch05_0016": {
+      "node_id": "nuscale_ch05_0016",
+      "title": "Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses",
+      "summary": "This section outlines the basis for establishing operational pressure and temperature limits for the reactor coolant pressure boundary (RCPB) to comply with regulatory requirements over the plant’s 60-year lifespan. It describes the methodology used to calculate pressure-temperature limit curves, accounting for vessel embrittlement, and provides references to figures and tables containing these limits to ensure protection against non-ductile failure.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "72",
+      "hop": 1
+    },
+    "nuscale_ch05_0017": {
+      "node_id": "nuscale_ch05_0017",
+      "title": "Reactor Vessel Integrity",
+      "summary": "This section outlines the procedures and regulatory compliance measures to ensure the integrity of the NuScale reactor vessel over its 60-year design life. It details the development of operating procedures to maintain pressure-temperature limits, evaluates the vessel’s resistance to pressurized thermal shock and upper-shelf energy degradation, and confirms that predicted material properties remain within regulatory criteria throughout the vessel’s operational lifespan.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "73",
+      "hop": 1
+    },
+    "nuscale_ch05_0014": {
+      "node_id": "nuscale_ch05_0014",
+      "title": "Reactor Vessel",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module’s reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel surrounded by a containment vessel. The RPV is a critical pressure-retaining component that forms part of the reactor coolant pressure boundary, supporting various internal systems and ensuring the containment of fission products. Materials used for the RPV are selected according to ASME Boiler and Pressure Vessel Code standards to ensure integrity and safety throughout the plant’s design lifetime.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
+      "hop": 1
+    },
+    "nuscale_ch05_0000": {
+      "node_id": "nuscale_ch05_0000",
+      "title": "Preface",
+      "summary": "The Preface outlines the copyright and usage restrictions for the NuScale Standard Plant Design Certification Application, specifically Chapter Five on the Reactor Coolant System and Connecting Systems. It specifies that only the U.S. Nuclear Regulatory Commission (NRC) is authorized to use, copy, or disclose the document for regulatory purposes, and any copies must include the copyright notice. The section also references the table of contents for Chapter Five, detailing its structure and topics.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "1",
+      "hop": 2
+    },
+    "nuscale_ch05_0015": {
+      "node_id": "nuscale_ch05_0015",
+      "title": "Reactor Vessel Materials",
+      "summary": "The NuScale Power Module’s reactor pressure vessel (RPV) is a key component of the reactor coolant system, housing the core, steam generators, and pressurizer within a single vessel surrounded by a containment vessel. The RPV and its appurtenances are constructed from materials specified in the ASME Boiler and Pressure Vessel Code to ensure integrity and safety throughout the plant’s design lifetime.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "67",
+      "hop": 4
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0009",
+      "relation": "REFERENCES",
+      "confidence": 0.7,
+      "description": "Section A discusses inspection, shipment, and storage requirements for the reactor pressure vessel per ASME and NQA-1 standards, while Section B addresses compliance with ASME BPVC and 10 CFR 50.55a for overpressure protection, both referencing ASME BPVC standards as a common regulatory framework."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0008",
+      "relation": "SATISFIES",
+      "confidence": 0.7,
+      "description": "Section A describes inspection, shipment, and storage requirements for the reactor pressure vessel, while Section B asserts compliance of the reactor coolant pressure boundary with 10 CFR 50.55a and ASME BPVC, indicating that the practices in A are implemented to satisfy the regulatory requirements in B."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0017",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A describes compliance with ASME and NQA-1 requirements for shipment and installation of the reactor pressure vessel, while Section B discusses the development of operating procedures to ensure pressure-temperature limits are not exceeded, both of which are prerequisites for demonstrating compliance with 10 CFR 50 Appendix G regarding vessel integrity."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A references the inspection, shipment, and storage requirements for the reactor pressure vessel, while Section B provides a general description of the reactor vessel and its role in the reactor coolant system; thus, Section A provides specific procedural details that relate to the general component described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0008",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides specific provisions and references to ASME and NRC requirements for overpressure protection, while Section B establishes the general compliance of the reactor pressure vessel and components with 10 CFR 50.55a and ASME BPVC, thus Section A specifies details for the general compliance statement in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0016",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses compliance with ASME and NRC regulatory requirements for reactor coolant boundary integrity, while Section B provides specific data and analyses (including Charpy upper-shelf energy) that are used to demonstrate compliance with those requirements, thus Section B provides evidence that supports the regulatory compliance framework described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses compliance with ASME and NRC regulatory requirements for reactor coolant boundary integrity, while Section B addresses the development of operating procedures to ensure reactor vessel pressure-temperature limits are not exceeded, both referencing regulatory compliance as a connecting point."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A discusses compliance with ASME and NRC regulatory requirements for overpressure protection, while Section B describes the reactor vessel as the pressure-retaining component subject to those requirements, connecting them through the application of regulatory codes to the vessel's design and operation."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0016",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A asserts compliance with 10 CFR 50.55a and ASME BPVC requirements for reactor pressure boundary integrity, while Section B provides specific details on weld examinations and code compliance for reactor vessel components, thereby supporting the claim in Section A with evidence of adherence to code requirements."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0017",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A states that the reactor pressure vessel meets the regulatory requirements of 10 CFR 50.55a, while Section B describes the development of operating procedures to ensure compliance with technical specifications, both of which are necessary to demonstrate compliance with 10 CFR 50 Appendix G regarding vessel integrity."
+    },
+    {
+      "source": "nuscale_ch05_0008",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A states that the reactor pressure vessel (RPV) complies with 10 CFR 50.55a and ASME BPVC requirements, while Section B describes the RPV as a pressure-retaining component of the reactor coolant system, thus Section B provides the system context for the compliance claims made in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0016",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides detailed Charpy upper-shelf energy data and analyses for the reactor vessel, which are the specific results needed to determine if the general regulatory requirements for the reactor vessel described in Section B are satisfied."
+    },
+    {
+      "source": "nuscale_ch05_0017",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the development of operating procedures to ensure compliance with technical specifications for reactor vessel integrity, while Section B provides a general description of the reactor vessel's structure and function, with Section A's procedural requirements applying specifically to the vessel described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0015",
+      "target": "nuscale_ch05_0018",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general description of the reactor vessel and its role, while Section B references specific inspection, shipment, and installation requirements for the reactor vessel, connecting by specifying procedural and regulatory details for the vessel described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0015",
+      "target": "nuscale_ch05_0009",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the reactor vessel materials and their role in the reactor coolant system, while Section B outlines the regulatory codes and standards (including 10 CFR 50) that the reactor vessel must comply with, connecting the vessel's material properties to regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch05_0015",
+      "target": "nuscale_ch05_0008",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the reactor vessel materials and their role in the reactor coolant system, while Section B states that the reactor pressure vessel (RPV) complies with regulatory requirements including 10 CFR 50.55a, thus Section B asserts that the design and materials described in Section A meet specific regulatory codes."
+    }
+  ]
+}

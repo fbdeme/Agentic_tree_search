@@ -1,278 +1,579 @@
 {
-  "question": "Explain the operational limitations of the P-T limit curve during normal operation.",
+  "question": "Compare the primary-to-secondary pressure relationship in NuScale vs conventional PWRs and its safety implications.",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0010": {
-      "node_id": "nuscale_ch05_0010",
-      "title": "Reactor Coolant Pressure Boundary Materials",
-      "summary": "The Reactor Coolant Pressure Boundary (RCPB) materials, including welds, are selected and fabricated in accordance with ASME BPVC standards and meet the regulatory requirements of 10 CFR 50, including General Design Criteria (GDC) for quality, environmental compatibility, and fracture prevention. The materials used for Class 1 components, such as the reactor pressure vessel (RPV) and steam generators (SGs), are specified in Table 5.2-4 and are subject to strict quality assurance and fracture toughness criteria.",
+    "nuscale_ch05_0020": {
+      "node_id": "nuscale_ch05_0020",
+      "title": "Steam Generators",
+      "summary": "Each NuScale Power Module (NPM) contains two integral steam generators (SGs) within the reactor pressure vessel (RPV), which also houses other key components such as the pressurizer and safety valves. The steam generator system (SGS) includes feedwater and main steam piping, thermal relief valves, and access ports, with the RPV itself forming the SG shell and pressure boundary. The SG tubes and associated welds are part of the reactor coolant pressure boundary, ensuring separation between the primary and secondary sides.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "29",
+      "page_range": "91",
       "hop": 1
     },
-    "nuscale_ch05_0008": {
-      "node_id": "nuscale_ch05_0008",
-      "title": "Compliance with Codes and Code Cases",
-      "summary": "This section describes how the NuScale Power Modules (NPMs) comply with relevant regulatory requirements, specifically 10 CFR 50.55a and associated General Design Criteria, by designing, fabricating, and testing reactor coolant pressure boundary (RCPB) components to ASME Boiler and Pressure Vessel Code (BPVC) Class 1 standards. It also details the classification of connected piping and confirms that the 2013 Edition of the ASME BPVC is used as the code of record, in accordance with NRC regulations and guidance.",
+    "nuscale_ch05_0006": {
+      "node_id": "nuscale_ch05_0006",
+      "title": "System Evaluation",
+      "summary": "This section describes the evaluation of the NuScale Power Plant’s systems to optimize performance across different power levels. Key operational parameters—such as coolant temperatures, flow rates, and pressures—are established and verified through both software and manual calculations, accounting for uncertainties and ensuring efficient, safe operation. The design supports natural circulation with minimal pressure losses, and uncertainties are bounded using test data and design requirements.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "20",
+      "page_range": "12",
       "hop": 1
     },
-    "nuscale_ch05_0016": {
-      "node_id": "nuscale_ch05_0016",
-      "title": "Pressure-Temperature Limits, Pressurized Thermal Shock, and Charpy Upper-Shelf Energy Data and Analyses",
-      "summary": "This section outlines the basis for establishing operational pressure and temperature limits for the reactor coolant pressure boundary (RCPB) to comply with regulatory requirements over the plant’s 60-year lifespan. It describes the use of ASME and NRC methodologies to calculate pressure-temperature limit curves, accounting for vessel embrittlement, and provides the relevant figures and tables that define safe operating conditions to prevent non-ductile failure of the reactor vessel.",
+    "nuscale_ch05_0019": {
+      "node_id": "nuscale_ch05_0019",
+      "title": "Reactor Coolant System Component and Subsystem Design",
+      "summary": "This section describes the design of the Reactor Coolant System (RCS) components and subsystems in the NuScale Power Module, detailing the integration of the reactor, steam generators, pressurizer, safety and ECCS valves, and associated piping within the reactor pressure vessel (RPV). It outlines the configuration and boundaries of the steam generator system, emphasizing that the steam generators are integral to the RPV and form part of the reactor coolant pressure boundary.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "72",
-      "hop": 1
-    },
-    "nuscale_ch05_0015": {
-      "node_id": "nuscale_ch05_0015",
-      "title": "Reactor Vessel Materials",
-      "summary": "The Reactor Vessel section describes the NuScale Power Module’s reactor pressure vessel (RPV), which houses the core, steam generators, and pressurizer, serving as a key barrier to fission product release and supporting various reactor components. The RPV and its materials are selected and fabricated according to ASME Boiler and Pressure Vessel Code standards to ensure integrity and safety throughout the plant’s design lifetime.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "67",
+      "page_range": "91",
       "hop": 1
     },
     "nuscale_ch05_0012": {
       "node_id": "nuscale_ch05_0012",
       "title": "Reactor Coolant Pressure Boundary Leakage Detection",
-      "summary": "The NuScale reactor coolant system (RCS) does not use traditional components with designed leakage, making it impractical to distinguish between identified and unidentified leakage inside containment using current instrumentation. All leakage into containment is treated as unidentified until the source is found, with leakage rates determined by RCS inventory balance and compared to containment evacuation system (CES) flow rates; the detection systems are reliable and support leak-before-break analyses.",
+      "summary": "The NuScale reactor coolant system (RCS) does not use traditional components with designed leakage rates, making it impractical to distinguish between identified and unidentified leakage inside containment using current instrumentation. All leakage into containment is treated as unidentified until the source is located, with the leakage rate determined by RCS inventory balance; the detection systems are reliable and support leak-before-break analyses. The containment evacuation system (CES) maintains a partial vacuum to prevent condensation, aiding in leakage monitoring.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "41",
+      "hop": 1
+    },
+    "nuscale_ch05_0002": {
+      "node_id": "nuscale_ch05_0002",
+      "title": "Summary Description",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation, eliminating the need for pumps or external piping, and is integrated within each NuScale Power Module. The RCS is designed to safely transfer heat from the reactor core, maintain proper coolant chemistry, and ensure uniform boron concentration, supporting both normal and transient plant operations.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 1
+    },
+    "nuscale_ch05_0009": {
+      "node_id": "nuscale_ch05_0009",
+      "title": "Overpressure Protection",
+      "summary": "This section outlines NuScale's compliance with NRC regulations and ASME Boiler and Pressure Vessel Code (BPVC) requirements for overpressure protection of the reactor coolant boundary. It details the use of specific ASME code cases for design, fabrication, inspection, and testing, ensuring all selected code cases meet NRC-endorsed conditions as specified in relevant regulatory guides and federal regulations. Table 5.2-1 consolidates the specific code cases applied.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "21",
+      "hop": 1
+    },
+    "nuscale_ch05_0021": {
+      "node_id": "nuscale_ch05_0021",
+      "title": "Reactor Coolant System Piping",
+      "summary": "The section discusses the design and degradation assessment of the NuScale reactor coolant system piping, specifically focusing on steam generator (SG) tubing. It notes that the main degradation observed in similar operating reactors is wear from flow-induced vibration or foreign objects, and that the NuScale design—with its helical tubing and novel support structure—does not introduce additional risk compared to existing designs. Prototypic testing and standard SG program guidelines are deemed sufficient, with wear remaining the primary concern and secondary corrosion mechanisms considered low risk due to slow defect growth rates.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "104",
+      "hop": 1
+    },
+    "nuscale_ch05_0005": {
+      "node_id": "nuscale_ch05_0005",
+      "title": "System Components",
+      "summary": "This section describes key components of the NuScale reactor system. It details the Reactor Pressure Vessel (RPV), which houses the reactor core and supports major systems, and outlines the main Reactor Coolant System (RCS) piping and its connections. The section also briefly introduces the pressurizer (PZR), which is integral to the RPV.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "10",
+      "hop": 1
+    },
+    "nuscale_ch05_0013": {
+      "node_id": "nuscale_ch05_0013",
+      "title": "References",
+      "summary": "This section lists references and standards related to the integrity of the reactor coolant boundary in the NuScale Final Safety Analysis Report. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as specific ASME code cases relevant to reactor component materials and safety requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "46",
+      "hop": 1
+    },
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the construction of the pressurizer and its components in the NuScale reactor, specifying alloys and standards for each part to ensure corrosion resistance and compatibility with operating environments. It references relevant sections of the BPVC (Boiler and Pressure Vessel Code) and lists the applicable material specifications for components such as the baffle plate, heater bundles, cover plate, and bolting.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
       "hop": 2
     },
     "nuscale_ch05_0024": {
       "node_id": "nuscale_ch05_0024",
       "title": "Pressurizer",
-      "summary": "The pressurizer in the NuScale reactor is integrated into the upper region of the reactor vessel and functions to regulate reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure, and is designed to handle operating transients without triggering reactor trips or safety system actuations, while providing continuous monitoring and control through instrumentation.",
+      "summary": "The pressurizer, integrated into the upper region of the reactor vessel and separated by a baffle plate, regulates Reactor Coolant System (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering reactor trips or safety system actuations, with instrumentation providing real-time monitoring and control.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "124",
-      "hop": 3
+      "hop": 2
     },
-    "nuscale_ch05_0002": {
-      "node_id": "nuscale_ch05_0002",
-      "title": "Summary Description",
-      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve independent modules, maintains proper coolant chemistry and boron concentration, and is engineered to prevent fuel design limit violations during normal and off-normal conditions.",
+    "nuscale_ch05_0000": {
+      "node_id": "nuscale_ch05_0000",
+      "title": "Preface",
+      "summary": "The Preface outlines the copyright and usage restrictions for the NuScale Standard Plant Design Certification Application, specifically Chapter Five on the Reactor Coolant System and Connecting Systems. It specifies that only the U.S. Nuclear Regulatory Commission (NRC) is authorized to use, copy, or disclose the document for regulatory purposes, and any copies must retain the copyright notice. The section also references the table of contents for Chapter Five, which covers the summary description and design basis of the system.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "8",
-      "hop": 3
+      "page_range": "1",
+      "hop": 2
     },
     "nuscale_ch05_0007": {
       "node_id": "nuscale_ch05_0007",
       "title": "Integrity of Reactor Coolant Boundary",
-      "summary": "This section describes the design features of each NuScale Power Module (NPM) that ensure the integrity of the reactor coolant pressure boundary (RCPB) throughout the plant’s design life. It details the components and systems included in the RCPB, such as the reactor pressure vessel, containment isolation valves, safety valves, and associated piping, all designed to meet regulatory definitions and maintain pressure containment. The section also references related components and further sections for detailed descriptions and evaluations.",
+      "summary": "This section describes the design features of each NuScale Power Module (NPM) that ensure the integrity of the reactor coolant pressure boundary (RCPB) throughout the plant’s design life, in accordance with regulatory definitions. It details the components and systems included in the RCPB, such as the reactor pressure vessel, containment isolation valves, safety valves, and associated piping, emphasizing their roles in maintaining pressure containment and system safety.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "19",
       "hop": 3
     },
-    "nuscale_ch05_0017": {
-      "node_id": "nuscale_ch05_0017",
-      "title": "Reactor Vessel Integrity",
-      "summary": "This section outlines the procedures and regulatory compliance measures to ensure the integrity of the NuScale reactor vessel over its 60-year design life. It details the development of operating procedures to prevent exceeding pressure-temperature limits, evaluates the vessel’s resistance to pressurized thermal shock and upper-shelf energy degradation, and confirms that all predicted values remain within regulatory safety criteria.",
+    "nuscale_ch05_0011": {
+      "node_id": "nuscale_ch05_0011",
+      "title": "Reactor Coolant Pressure Boundary Inservice Inspection and Testing",
+      "summary": "This section describes the materials and standards used for threaded fasteners in key reactor coolant system components, emphasizing the use of Alloy 718 for its compatibility and stress corrosion cracking resistance. It also outlines that preservice and inservice inspections and testing of pressure-retaining components are conducted according to the latest applicable ASME Boiler and Pressure Vessel Code (BPVC) requirements, as mandated by federal regulations, with inspection intervals and code editions specified in the inspection program.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "73",
+      "page_range": "37",
       "hop": 3
+    },
+    "nuscale_ch05_0022": {
+      "node_id": "nuscale_ch05_0022",
+      "title": "Decay Heat Removal System",
+      "summary": "The Decay Heat Removal System (DHRS) is an engineered safety feature designed to remove residual and core decay heat from the reactor after shutdown, especially when normal cooling is unavailable, without relying on external power. It ensures the reactor coolant system temperature drops below 420°F within 36 hours, maintaining fuel and pressure boundary safety limits, and its reliability and risk significance are rigorously evaluated. The DHRS operates independently of the Emergency Core Cooling System (ECCS), but both can function together if needed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "106",
+      "hop": 4
+    },
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section describes the NuScale reactor coolant system (RCS), which uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator. The RCS is designed to ensure safe and efficient cooling, maintain proper water chemistry, and provide uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 4
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0010",
-      "target": "nuscale_ch05_0008",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes the material requirements for the Reactor Coolant Pressure Boundary (RCPB) and references compliance with ASME BPVC and 10 CFR regulations, while Section B specifies that the RCPB components are designed, fabricated, and inspected in accordance with those same ASME BPVC and regulatory requirements, thus Section B provides the general compliance framework that Section A details for materials."
-    },
-    {
-      "source": "nuscale_ch05_0010",
-      "target": "nuscale_ch05_0016",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.95,
-      "description": "Section A establishes that the reactor coolant pressure boundary materials comply with ASME BPVC and regulatory requirements, which is a prerequisite for the validity and applicability of the P-T limit curve discussed in Section B, as the curve's operational limitations depend on the material properties and their code compliance."
-    },
-    {
-      "source": "nuscale_ch05_0010",
-      "target": "nuscale_ch05_0015",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A specifies the regulatory and material standards that the reactor coolant pressure boundary (RCPB) materials must meet, while Section B describes the reactor vessel as a component constructed from those materials, thus Section A provides the detailed requirements that Section B's general description relies on."
-    },
-    {
-      "source": "nuscale_ch05_0008",
-      "target": "nuscale_ch05_0016",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A establishes that the reactor pressure vessel and its components comply with ASME BPVC requirements, which are the regulatory basis for the pressure-temperature (P-T) limits discussed in Section B, thereby linking the operational limitations of the P-T curve to code compliance."
-    },
-    {
-      "source": "nuscale_ch05_0008",
-      "target": "nuscale_ch05_0015",
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0006",
       "relation": "SPECIFIES",
       "confidence": 0.9,
-      "description": "Section A establishes that the reactor pressure vessel (RPV) and its components comply with regulatory codes (such as ASME BPVC), while Section B describes the physical configuration and function of the RPV as a pressure-retaining component, thus Section B provides the general context for which Section A specifies compliance details."
+      "description": "Section B establishes steady state primary and secondary side parameters as a function of reactor power, which are implemented and detailed in the steam generator design described in Section A, directly connecting the pressure relationship to both system evaluation and component design."
     },
     {
-      "source": "nuscale_ch05_0016",
-      "target": "nuscale_ch05_0015",
-      "relation": "SPECIFIES",
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0012",
+      "relation": "LEADS_TO",
       "confidence": 0.85,
-      "description": "Section A specifies the examination and welding requirements for certain reactor vessel attachments, which are constructed from the materials and components described in Section B, thereby linking operational limitations of the P-T limit curve to the physical characteristics and construction of the reactor vessel."
+      "description": "Section A describes the integrated design of the NuScale module, including the steam generators and their pressure relationships, while Section B discusses the detection of reactor coolant pressure boundary leakage, which is directly affected by the pressure differential between the primary and secondary sides as established in Section A."
     },
     {
-      "source": "nuscale_ch05_0012",
-      "target": "nuscale_ch05_0010",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section B establishes that the reactor coolant pressure boundary (RCPB) materials comply with regulatory and ASME code requirements, which is a prerequisite for the operational limitations discussed in Section A regarding leakage detection, as the integrity and properties of these materials directly affect leakage behavior and detection capability."
-    },
-    {
-      "source": "nuscale_ch05_0012",
-      "target": "nuscale_ch05_0008",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses the practical limitations in detecting reactor coolant pressure boundary leakage, which impacts the ability to ensure operational compliance with the pressure-temperature (P-T) limit curve requirements specified in Section B's referenced codes and regulations."
-    },
-    {
-      "source": "nuscale_ch05_0012",
-      "target": "nuscale_ch05_0016",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section A discusses the inability to distinguish specific sources of reactor coolant pressure boundary leakage with current instrumentation, which impacts the application and enforcement of the operational limitations defined by the P-T limit curve in Section B, as accurate leakage detection is necessary to ensure compliance with those limits during normal operation."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0010",
-      "relation": "SATISFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the pressurizer's design and function, which directly affects the pressure and temperature conditions that must be maintained within the operational limits defined by the P-T (pressure-temperature) limit curve, while Section B specifies the material requirements and regulatory standards that these operational limits are intended to protect, thus linking the pressurizer's operation to the integrity constraints of the reactor coolant pressure boundary materials."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0008",
-      "relation": "SATISFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the design and function of the pressurizer, which is a pressure-retaining component whose operational limitations (such as those imposed by the P-T limit curve) must comply with the regulatory requirements and codes specified in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0016",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the pressurizer's role in maintaining reactor coolant system pressure, which directly affects the operational envelope defined by the pressure-temperature (P-T) limit curves discussed in Section B, as these curves set regulatory boundaries for safe operation based on pressure and temperature conditions."
-    },
-    {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch05_0010",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.95,
-      "description": "Section A describes the components and configuration of the reactor coolant system, which establishes the operational context for the pressure-temperature (P-T) limits, while Section B specifies the material standards and regulatory requirements for the reactor coolant pressure boundary that directly influence the derivation and application of the P-T limit curve during normal operation."
-    },
-    {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch05_0008",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.9,
-      "description": "Section A describes the components and design approach of the reactor coolant system, which are subject to the regulatory requirements and codes for integrity and safety compliance detailed in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch05_0016",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section A describes the overall design and components of the reactor coolant system, which establishes the operational context in which the pressure-temperature (P-T) limit curve (addressed in Section B) must be applied and adhered to during normal operation."
-    },
-    {
-      "source": "nuscale_ch05_0007",
-      "target": "nuscale_ch05_0010",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section B specifies the material standards and regulatory compliance that Section A relies on to ensure the integrity of the reactor coolant pressure boundary, which is foundational for establishing operational limitations such as the P-T limit curve during normal operation."
-    },
-    {
-      "source": "nuscale_ch05_0007",
-      "target": "nuscale_ch05_0008",
-      "relation": "SATISFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the design features that ensure the integrity of the reactor coolant pressure boundary, while Section B specifies that these features comply with regulatory codes and standards, thereby connecting the design's operational limitations (such as P-T limit curves) to regulatory compliance."
-    },
-    {
-      "source": "nuscale_ch05_0007",
-      "target": "nuscale_ch05_0016",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section B provides specific pressure-temperature (P-T) limit analyses and requirements that are necessary to ensure the integrity of the reactor coolant pressure boundary described in Section A during normal operation."
-    },
-    {
-      "source": "nuscale_ch05_0017",
-      "target": "nuscale_ch05_0010",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.95,
-      "description": "Section A describes the development of operating procedures to ensure that pressure-temperature (P-T) limits are not exceeded during normal operation, which is necessary because Section B establishes that the reactor coolant pressure boundary (RCPB) materials must comply with ASME and regulatory requirements that underpin those P-T limits."
-    },
-    {
-      "source": "nuscale_ch05_0017",
-      "target": "nuscale_ch05_0008",
-      "relation": "SATISFIES",
-      "confidence": 0.95,
-      "description": "Section A describes the development of operating procedures to ensure that pressure-temperature (P-T) limits are not exceeded during normal operation, which is necessary to comply with the design and fabrication requirements for reactor pressure vessels specified in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0017",
-      "target": "nuscale_ch05_0016",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.9,
-      "description": "Section A discusses the development of operating procedures to ensure that pressure-temperature (P-T) limits are not exceeded during normal operation, which directly relies on the P-T limits and analyses described in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0024",
+      "source": "nuscale_ch05_0020",
       "target": "nuscale_ch05_0002",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A provides specific design details of the pressurizer, which is identified in Section B as a component of the reactor coolant system (RCS) relevant to the operational limitations of the P-T limit curve."
+      "description": "Section A details the specific components of the NuScale reactor coolant system, including the integral steam generators and pressurizer, while Section B provides a general overview of the NuScale RCS design, highlighting its reliance on natural circulation and integral configuration—thus, Section A specifies the technical details that underpin the general system description in Section B."
     },
     {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0007",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the pressurizer's role in maintaining reactor coolant system pressure, which directly supports the operational integrity of the reactor coolant pressure boundary discussed in Section B, as required for safe operation within P-T limit curves."
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0009",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the design and components of the NuScale reactor coolant system, including steam generators and pressure boundaries, while Section B outlines the regulatory codes and standards (ASME BPVC, 10 CFR 50.55a) that these components must comply with for overpressure protection, connecting them through the requirement that the design in A must satisfy the regulatory criteria in B."
     },
     {
-      "source": "nuscale_ch05_0024",
-      "target": "nuscale_ch05_0017",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section B establishes the requirement to develop operating procedures that ensure pressure-temperature (P-T) limits are not exceeded during normal operation, while Section A describes the pressurizer's role in maintaining reactor coolant system pressure, which directly affects adherence to those P-T limits."
-    },
-    {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch05_0007",
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0021",
       "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A describes the components and configuration of the reactor coolant system (RCS), which Section B identifies as forming the reactor coolant pressure boundary (RCPB) whose integrity is protected by operational limitations such as the P-T limit curve."
+      "confidence": 0.85,
+      "description": "Section A describes the integrated design of NuScale's reactor pressure vessel and steam generators, while Section B compares the steam generator tube design and degradation risks in NuScale to those in conventional PWRs, connecting them through the design and operational differences that affect the primary-to-secondary pressure relationship and its safety implications."
     },
     {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch05_0017",
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the integrated design of NuScale's reactor coolant system, including the steam generators and pressurizer, while Section B details operational procedures that specifically address how the pressurizer pressure is reduced to match containment pressure, directly impacting the primary-to-secondary pressure relationship discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0020",
+      "target": "nuscale_ch05_0013",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the design and components of the NuScale reactor coolant system, including steam generators, while Section B lists references that provide supporting technical standards and guidelines relevant to the integrity and safety of the reactor coolant boundary, thus Section B supports the technical claims and design descriptions made in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the establishment of steady state primary and secondary side parameters for optimal performance, while Section B details the physical components (including steam generators and decay heat removal system) that enable control of these parameters, thus Section B specifies the hardware that supports the operational relationships described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0012",
+      "relation": "LEADS_TO",
+      "confidence": 0.85,
+      "description": "Section A discusses the establishment of steady state primary and secondary pressure parameters for optimal performance in NuScale, while Section B addresses the detection of leakage from the reactor coolant pressure boundary, which is directly influenced by the pressure relationship between the primary and secondary systems."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0002",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A discusses how steady state values for primary and secondary side parameters are established for optimal performance, while Section B describes the design features of the reactor coolant system that determine those parameters, thus Section B provides the system context necessary for understanding the pressure relationships analyzed in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0009",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the establishment of primary and secondary side pressure parameters for optimal performance, while Section B outlines compliance with ASME and NRC overpressure protection requirements that these parameters must satisfy."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0021",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses how steady state primary and secondary side parameters are established for optimal performance in NuScale, while Section B compares NuScale's steam generator (SG) tube design and operational risks to those in conventional PWRs, connecting both sections through their focus on SG design and operational parameters relevant to primary-to-secondary pressure relationships."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0005",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses how steady state primary and secondary side pressure values are established for optimal performance, while Section B describes operational steps (including pressure equalization) during shutdown, both addressing how primary-to-secondary pressure relationships are managed in NuScale for safety and operational control."
+    },
+    {
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0013",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A discusses the establishment of steady state primary and secondary side parameters in NuScale, while Section B lists references (such as EPRI guidelines) that provide standards and background for evaluating the integrity of the reactor coolant boundary, which is directly affected by the primary-to-secondary pressure relationship."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0012",
+      "relation": "LEADS_TO",
+      "confidence": 0.9,
+      "description": "Section A describes the integrated design of the NuScale reactor coolant system, including the placement of the pressurizer and steam generators within the reactor pressure vessel, which directly affects the primary-to-secondary pressure relationship, while Section B discusses the implications of this design on leakage detection capabilities, highlighting how the unique configuration impacts safety monitoring compared to conventional PWRs."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0002",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section B specifies that operating procedures are developed to ensure the pressure-temperature (P-T) limits are not exceeded during normal operation, which is a constraint on the RCS described in Section A."
+      "description": "Section A details the specific components and design features of the NuScale reactor coolant system, while Section B provides a general summary of the same system, with both sections connecting through their descriptions of the RCS's integral design and reliance on natural circulation, which is central to the primary-to-secondary pressure relationship and its safety implications."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0009",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the design features of the NuScale reactor coolant system, including integrated pressurizer and steam generators, which directly influence the primary-to-secondary pressure relationship, while Section B outlines the regulatory and code compliance requirements for overpressure protection that these design features must satisfy."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0021",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the integrated design of the NuScale reactor coolant system, including the placement of the pressurizer and steam generators within the reactor pressure vessel, while Section B compares the steam generator tube design and associated risks in NuScale modules to those in conventional PWRs, thereby connecting the physical configuration (A) to the operational and safety implications (B) of the primary-to-secondary pressure relationship."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the integrated design of the NuScale reactor coolant system, including the pressurizer and steam generators, while Section B details operational procedures that specifically manage the pressure relationship between the primary (pressurizer) and secondary (steam generator) systems, directly connecting design features to their safety-related operational use."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0013",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the design and components of the NuScale reactor coolant system, while Section B lists references that provide supporting standards and guidelines relevant to the integrity and safety of the reactor coolant boundary, thus Section B supports the claims and design details presented in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0002",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section B explains that the NuScale RCS lacks pumps and external piping, which Section A references as the reason traditional leakage detection methods (used in conventional PWRs) are not applicable, directly connecting system design to leakage detection capability."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0009",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the detection of reactor coolant pressure boundary leakage, which is directly related to Section B's focus on overpressure protection and compliance with ASME and NRC requirements, as effective leakage detection is necessary to ensure the integrity and safety of the pressure boundary under regulatory overpressure limits."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0021",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the inability to distinguish certain types of leakage in the NuScale RCS due to design and instrumentation, while Section B compares NuScale's steam generator tube design and degradation risks to those in conventional PWRs, both sections connecting through their implications for primary-to-secondary leakage detection and safety management."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0005",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the challenges in detecting reactor coolant pressure boundary leakage in NuScale due to design differences from conventional PWRs, while Section B describes the process by which NuScale equalizes pressurizer (PZR) pressure with containment pressure, both of which are connected through their implications for primary-to-secondary pressure relationships and associated safety monitoring."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0013",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the challenges of detecting reactor coolant pressure boundary leakage in NuScale's design, while Section B lists references that provide supporting standards and guidelines relevant to the integrity and monitoring of the reactor coolant boundary, thus Section B supports the claims and context provided in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0009",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the design features of the NuScale reactor coolant system, which directly influence the primary-to-secondary pressure relationship, while Section B outlines the regulatory and code compliance requirements (such as ASME BPVC and 10 CFR 50.55a) that the design must satisfy for overpressure protection, connecting the system's physical characteristics to its safety and regulatory implications."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0021",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the NuScale reactor coolant system's reliance on natural circulation and lack of external piping, while Section B discusses steam generator tube wear in conventional PWRs and notes that NuScale's design does not increase risk compared to existing designs, thus connecting the primary-to-secondary pressure relationship and its safety implications by comparing design features and associated risks."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the NuScale reactor coolant system's reliance on natural circulation and integral components, while Section B specifies operational steps and component interactions (such as pressurizer pressure matching containment pressure) that detail how the primary-to-secondary pressure relationship is managed in practice."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0013",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides a general description of the NuScale reactor coolant system design, while Section B lists references that support the technical and regulatory basis for the integrity and safety of the reactor coolant boundary, which is directly related to the pressure relationships discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0021",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A outlines the regulatory codes and standards for overpressure protection and integrity of the reactor coolant boundary, which are directly relevant to Section B's discussion of steam generator (SG) tube design and degradation mechanisms, as both sections address the safety and integrity of the primary-to-secondary pressure boundary in NuScale compared to conventional PWRs."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0005",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section B describes operational steps (e.g., venting nitrogen from the pressurizer until its pressure matches containment pressure) that directly affect the primary-to-secondary pressure relationship, while Section A outlines the regulatory and code compliance requirements (e.g., ASME BPVC, 10 CFR 50.55a) that these operational steps must satisfy for overpressure protection."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0013",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A discusses compliance with ASME and NRC regulatory requirements for overpressure protection, while Section B lists references, including EPRI guidelines and ASME standards, that provide the technical basis for those requirements."
+    },
+    {
+      "source": "nuscale_ch05_0021",
+      "target": "nuscale_ch05_0005",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the design and operational differences in steam generator (SG) tubing between NuScale and conventional PWRs, while Section B describes operational procedures that include matching pressurizer (PZR) pressure to containment pressure, both of which relate to how primary-to-secondary pressure relationships are managed for safety in NuScale compared to conventional PWRs."
+    },
+    {
+      "source": "nuscale_ch05_0021",
+      "target": "nuscale_ch05_0013",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A discusses specific design and degradation considerations for NuScale's steam generator tubes, while Section B lists reference documents, including industry guidelines and materials reliability programs, that underpin the technical and safety basis for these design choices."
+    },
+    {
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch05_0013",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes operational steps for matching pressurizer (PZR) pressure to containment pressure in NuScale, while Section B lists references including water chemistry and material reliability guidelines that underpin the safety and integrity of the reactor coolant boundary, thus Section A's described process is supported by the standards and guidelines referenced in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A details the pressurizer's materials and integration within the RPV, while Section B describes the overall RPV configuration including the steam generators, showing how the pressurizer and steam generators are co-located and interact within the NuScale module to define the primary-to-secondary pressure relationship."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0006",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides detailed descriptions of the pressurizer components and their materials, which are referenced in Section B's broader system evaluation that considers steady-state primary and secondary side parameters, thus Section A specifies technical details that support the system-level analysis in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed material specifications for the pressurizer components that are generally described as part of the integrated reactor pressure vessel and subsystem design in Section B, connecting the specific pressurizer design to the overall reactor coolant system configuration relevant to the primary-to-secondary pressure relationship."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the pressurizer's role in maintaining and communicating pressure within the reactor coolant system, while Section B identifies the steam generators as integral components within the same pressure boundary, thus both sections are connected through their roles in establishing and controlling the primary-to-secondary pressure relationship in the NuScale design."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0006",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the pressurizer's role in rapidly communicating pressure changes within the NuScale reactor vessel, while Section B discusses how steady-state primary and secondary side parameters, including pressure, are established for optimal system performance—thus, Section A's design feature directly supports Section B's evaluation of pressure relationships and their safety implications."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the pressurizer's integration and pressure communication within the NuScale reactor vessel, while Section B outlines the overall reactor coolant system design, explicitly listing the pressurizer as a component, thus connecting the specific function (A) to the broader system context (B) relevant to pressure relationships."
+    },
+    {
+      "source": "nuscale_ch05_0000",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides the general context and scope of the NuScale reactor coolant system documentation, while Section B details the specific design features of the NuScale reactor coolant system, including the integrated steam generators that directly affect the primary-to-secondary pressure relationship relevant to the analysis question."
+    },
+    {
+      "source": "nuscale_ch05_0000",
+      "target": "nuscale_ch05_0006",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides the document context and scope, while Section B details the evaluation of primary and secondary side parameters in the NuScale design, directly addressing the analysis question about pressure relationships and their safety implications."
+    },
+    {
+      "source": "nuscale_ch05_0000",
+      "target": "nuscale_ch05_0019",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A is a preface providing publication and copyright information for the NuScale Design Certification Application, while Section B presents the technical design details of the NuScale reactor coolant system, with Section A serving as the source context for the detailed content in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed material specifications for the pressurizer components that are generally described in Section B's overview of the pressurizer's design and function, specifically referencing the baffle plate and its role in pressure communication."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0000",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A references specific sections of the broader document introduced in Section B to provide detailed information about the pressurizer materials relevant to the reactor coolant system design."
+    },
+    {
+      "source": "nuscale_ch05_0024",
+      "target": "nuscale_ch05_0000",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific technical details about the pressurizer design in the NuScale reactor, which is a component discussed in the broader context of the Reactor Coolant System introduced in Section B's preface."
     },
     {
       "source": "nuscale_ch05_0007",
-      "target": "nuscale_ch05_0017",
-      "relation": "SUPPORTS",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section B describes the development of operating procedures to ensure that pressure-temperature (P-T) limits are not exceeded during normal operation, which directly supports the integrity of the reactor coolant boundary as required in Section A."
+      "description": "Section B specifies the components, including steam generators, that are part of the reactor coolant pressure boundary whose integrity is discussed in Section A, thereby providing the detailed subsystem context for the boundary described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch05_0006",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section B establishes steady state primary and secondary pressure parameters for optimal performance, which directly inform the design features in Section A that maintain the integrity of the reactor coolant pressure boundary."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B details the specific components and subsystems (including steam generators and pressurizer) that are referenced in Section A as part of the reactor coolant pressure boundary whose integrity must be maintained, thus providing the technical basis for the boundary described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A specifies the material and inspection requirements for pressure boundary components, which are critical to maintaining the integrity of the primary-to-secondary pressure relationship described in Section B's overview of the integrated reactor coolant system and steam generators."
+    },
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0006",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section B discusses how steady-state primary and secondary side pressure parameters are established for optimal performance in NuScale, while Section A addresses the integrity and inspection of the reactor coolant pressure boundary, which must withstand these defined pressures, thus linking the operational pressure relationship to the safety and inspection requirements."
+    },
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A specifies the material and inspection requirements for threaded fasteners in the reactor coolant pressure boundary, which are components described in Section B as part of the overall reactor coolant system design, thus providing detailed implementation for the general system described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0007",
+      "target": "nuscale_ch05_0011",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A defines the scope and regulatory basis for the reactor coolant pressure boundary (RCPB), while Section B specifies the material and inspection requirements for threaded fasteners that are part of the RCPB, thus providing detailed implementation for the general boundary described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the function and design basis of the Decay Heat Removal System (DHRS), which relies on the steam generators described in Section B as part of the integrated reactor coolant system to remove decay heat and maintain safe pressure relationships between the primary and secondary sides."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch05_0006",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the DHRS's design basis for removing decay heat from the primary side when secondary cooling is unavailable, while Section B explains how the DHRS connects the primary and secondary systems via the steam generators and how steady-state pressure relationships are established for optimal performance, thus linking the design function (A) to the operational parameter evaluation (B)."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the function and safety role of the Decay Heat Removal System (DHRS) in maintaining safe pressure and temperature conditions when secondary-side cooling is unavailable, while Section B lists the DHRS as an integral component of the NuScale reactor coolant system, establishing its structural inclusion and context."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0020",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general overview of the NuScale reactor coolant system's reliance on natural circulation, while Section B specifies the inclusion and configuration of steam generators within the same system, detailing components that directly affect the primary-to-secondary pressure relationship."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0006",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section B evaluates the steady-state primary and secondary side pressure parameters established in the NuScale design described in Section A, directly connecting the design basis to its operational evaluation."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0019",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section B provides detailed component-level descriptions (e.g., inclusion of steam generators and pressurizer within the RPV) that specify the general system-level design basis outlined in Section A, particularly regarding the integral nature of the NuScale RCS and its implications for primary-to-secondary pressure relationships."
+    },
+    {
+      "source": "nuscale_ch05_0022",
+      "target": "nuscale_ch05_0003",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A describes the Decay Heat Removal System's function to cool the reactor by transferring heat from the primary to the secondary side during certain events, while Section B outlines the design of the Reactor Coolant System, which establishes the primary system's configuration and its reliance on natural circulation—information necessary to understand how the DHRS operates and interfaces with the secondary side."
     }
   ]
 }

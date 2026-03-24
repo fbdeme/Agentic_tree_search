@@ -1,0 +1,65 @@
+{
+  "timestamp": "2026-03-20T09:22:50.605483",
+  "evaluation_framework": "RAGAs v0.4",
+  "config": {
+    "model": "gpt-4.1",
+    "evaluator_model": "gpt-4.1",
+    "embedding_model": "text-embedding-3-small",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 1,
+    "errors": 0
+  },
+  "metrics_description": {
+    "faithfulness": "Fraction of claims in the answer that are supported by the retrieved context (0-1)",
+    "answer_relevancy": "How relevant the answer is to the question, measured by reverse question generation (0-1)",
+    "context_recall": "Fraction of expected answer sentences supported by retrieved context (0-1)",
+    "factual_correctness": "Factual overlap between agent answer and expected answer (0-1)",
+    "keyword_hit": "Fraction of expected keywords present in the agent answer (0-1)"
+  },
+  "summary": {
+    "faithfulness": 0.0,
+    "answer_relevancy": 0.7664,
+    "context_recall": 0.0,
+    "factual_correctness": 0.4,
+    "keyword_hit": 1.0
+  },
+  "by_type": {
+    "table_only": {
+      "count": 1,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.7664,
+      "context_recall": 0.0,
+      "factual_correctness": 0.4,
+      "keyword_hit": 1.0
+    }
+  },
+  "results": [
+    {
+      "id": "Q035",
+      "type": "table_only",
+      "question": "What is the total volume of the PZR region?",
+      "expected_answer": "The volume of the PZR region (main steam plenums, PZR, RPV top head) is 578 ft³.",
+      "agent_answer": "**Core Conclusion:**  \nThe total volume of the PZR (pressurizer) region in the NuScale reactor is **578 ft³**.\n\n**Supporting Evidence:**  \n- Table 5.1-1 (\"Reactor Coolant System Volumes\") explicitly lists the \"PZR Region (main steam plenums, PZR, RPV top head)\" with a nominal volume of **578 ft³** (node: Table 5.1-1, referenced in the knowledge graph).\n- The same table also provides a breakdown for the \"PZR Region, cylindrical (main steam plenums and PZR)\" as **487 ft³**, but the total PZR region, as asked, is the larger value (578 ft³).\n\n**Clarification of Boundaries:**  \n- The PZR region includes the main steam plenums, the pressurizer itself, and the reactor pressure vessel (RPV) top head, as described in node [nuscale_ch05_0024] and illustrated in Figure 5.4-17 and Figure 5.1-1.\n- This definition is consistent with the physical configuration described in the knowledge graph and the referenced figures.\n\n**Uncertainties:**  \n- There is no uncertainty in the total volume value as it is directly specified in the referenced table.\n- If a more specific sub-region (e.g., only the cylindrical portion) is required, that value is 487 ft³, but the total as defined above is 578 ft³.\n\n**References:**  \n- Table 5.1-1 (RCS Volumes), node [nuscale_ch05_0024], Figures 5.1-1 and 5.4-17.\n\n**Summary:**  \nThe total volume of the PZR region is **578 ft³** (node: Table 5.1-1; [nuscale_ch05_0024]).",
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.7664,
+      "context_recall": 0.0,
+      "factual_correctness": 0.4,
+      "keyword_hit": 1.0,
+      "kg_nodes": 8,
+      "kg_edges": 9,
+      "hops_used": 4,
+      "retrieved_contexts_count": 1,
+      "agent_sec": 73.9,
+      "eval_sec": 40.6,
+      "total_sec": 114.5,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0024] Pressurizer | node: [nuscale_ch05_0023] Reactor Coolant System High-Point Vents | node: [nuscale_ch05_0005] System Components | node: [nuscale_ch05_0004] System Description | edge: IS_PREREQUISITE_OF | edge: REFERENCES | edge: SUPPORTS",
+        "Hop 2: node: [nuscale_ch05_0002] Summary Description | edge: SPECIFIES | edge: REFERENCES",
+        "Hop 3: node: [nuscale_ch05_0003] Design Basis | edge: SPECIFIES | edge: SUPPORTS",
+        "Hop 4: node: [nuscale_ch05_0021] Reactor Coolant System Piping | node: [nuscale_ch05_0006] System Evaluation | edge: IS_PREREQUISITE_OF | edge: IS_PREREQUISITE_OF"
+      ]
+    }
+  ]
+}

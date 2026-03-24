@@ -1,0 +1,393 @@
+{
+  "question": "Based on Table 1.3-1 operating parameters and Table 5.1-1 RCS volumes, is the NuScale coolant inventory adequate for the module's operating conditions?",
+  "current_hop": 4,
+  "nodes": {
+    "nuscale_ch01_0558": {
+      "node_id": "nuscale_ch01_0558",
+      "title": "DSRS 12.3-12.4, Rev 0: Radiation Protection Design FeaturesII.9 RG 8.15",
+      "summary": "This section summarizes NuScale’s conformance with various regulatory guides related to radiation protection design features, as outlined in DSRS 12.3-12.4. It details whether each guide is applicable, not applicable, conforms, or partially conforms, with references to supporting sections or tables for further information. Specifically, RG 8.15 is noted as not applicable to the NuScale design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "278",
+      "hop": 1
+    },
+    "nuscale_ch01_0052": {
+      "node_id": "nuscale_ch01_0052",
+      "title": "Comparison with Other Facilities",
+      "summary": "This section compares the major design features and parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It highlights differences in size, output, core design, and safety systems, showing that NuScale uses significantly smaller modules, simplified systems, and different safety approaches compared to conventional PWRs. The comparison is summarized in tables for easy reference.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "79",
+      "hop": 1
+    },
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes key components such as the reactor pressure vessel, pressurizer, and associated piping and controls. It removes heat from the reactor core to the steam generators using natural circulation, and features systems for removing noncondensible gases and maintaining pressure boundary integrity to prevent radionuclide release. The RCS interfaces with several other systems, including emergency core cooling and chemical control, to ensure safe and efficient operation.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
+      "hop": 1
+    },
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "summary": "This section details the materials used in the construction of the pressurizer and its components in the NuScale reactor, specifying types of steel and nickel-based alloys, as well as relevant material standards from the BPVC. It also references where further descriptions of specific components can be found in other sections of the report.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "130",
+      "hop": 1
+    },
+    "nuscale_ch01_0043": {
+      "node_id": "nuscale_ch01_0043",
+      "title": "Ultimate Heat Sink",
+      "summary": "The Ultimate Heat Sink for the NuScale plant is a large, stainless steel-lined, reinforced concrete pool located below grade, comprising the reactor, refueling, and spent fuel pool areas. During normal operations, heat is removed via a cooling system and external heat sink, while in the event of a total loss of AC power, decay heat is passively transferred to the pool, which has sufficient water inventory to ensure continued cooling through heat-up and boiling.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "41",
+      "hop": 1
+    },
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "summary": "The Design Basis section describes the NuScale reactor coolant system (RCS), which uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator. The RCS is designed to ensure safe and efficient cooling, maintain water chemistry, and provide uniform boron concentration under all operating conditions, supporting both performance and safety requirements for each NuScale Power Module.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 1
+    },
+    "nuscale_ch01_0053": {
+      "node_id": "nuscale_ch01_0053",
+      "title": "Identification of Agents and Contractors",
+      "summary": "This section outlines the division of responsibility for the NuScale Power Plant design, stating that NuScale Power, LLC holds overall design responsibility, while Fluor Corporation provided the balance of plant design. It also notes that applicants referencing the NuScale design must identify their primary agents or contractors for plant construction and operation.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "82",
+      "hop": 2
+    },
+    "nuscale_ch01_0767": {
+      "node_id": "nuscale_ch01_0767",
+      "title": "DSRS 15.5.1-15.5.2, Rev 0: Chemical and Volume Control System Malfunction That Increases Reactor Coolant InventoryII.4.B Input Parameters and Initial Conditions - Scram Characteristics",
+      "summary": "This section confirms that the NuScale design meets the regulatory criteria for DSRS 15.5.1-15.5.2 regarding chemical and volume control system malfunctions that increase reactor coolant inventory, with no exceptions noted for scram characteristics, initial power level, or core burnup. It also clarifies that certain SRP guidance related to pressurizer relief valves is not applicable to NuScale, as the design uses spring-loaded safety valves instead of power-operated relief valves, thus avoiding vulnerabilities to inadvertent operation.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "305",
+      "hop": 2
+    },
+    "nuscale_ch01_0362": {
+      "node_id": "nuscale_ch01_0362",
+      "title": "DSRS 9.3.4, Rev 0: Chemical and Volume Control System (PWR) (Including Boron Recovery System)II.6 Detection of Reactor Coolant Leakage Outside Containment",
+      "summary": "This section confirms that the NuScale Chemical and Volume Control System (CVCS), including the Boron Recovery System, meets the regulatory criteria for detection of reactor coolant leakage outside containment. The design conforms to the relevant requirements, with no exceptions noted for leakage detection, and clarifies partial applicability for certain criteria due to differences in the NuScale design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "251",
+      "hop": 2
+    },
+    "nuscale_ch05_0012": {
+      "node_id": "nuscale_ch05_0012",
+      "title": "Reactor Coolant Pressure Boundary Leakage Detection",
+      "summary": "The NuScale reactor coolant system (RCS) does not use traditional components with designed leakage rates, making it impractical to distinguish between identified and unidentified leakage inside containment using installed instrumentation. All leakage into containment is treated as unidentified until the source is determined, with leakage rates monitored through RCS inventory balance and containment evacuation system (CES) flow rates, and operational limits set in technical specifications. The leakage detection systems are designed to be reliable, redundant, and sensitive to support safety analyses.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "41",
+      "hop": 2
+    },
+    "nuscale_ch01_0044": {
+      "node_id": "nuscale_ch01_0044",
+      "title": "Chemical and Volume Control System",
+      "summary": "The Chemical and Volume Control System section describes the NuScale reactor’s passive decay heat removal system, which uses two independent trains, each capable of removing 100% of the decay heat via natural circulation and passive condensers in the reactor pool. In case of a steam generator tube failure or loss of AC power, the system isolates the affected components and relies on heat transfer to a large, stainless steel-lined ultimate heat sink pool to ensure continued cooling and safety.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "41",
+      "hop": 3
+    },
+    "nuscale_ch01_0042": {
+      "node_id": "nuscale_ch01_0042",
+      "title": "Decay Heat Removal System",
+      "summary": "The Decay Heat Removal System section describes the digital control systems in the NuScale plant, emphasizing the independence between safety-related and nonsafety-related systems. Reactor operators use advanced, human-factored displays in the main control room to monitor and control each reactor module, with alarm management and supervisory functions enhancing operational oversight. Additionally, the section mentions the Technical Support Center and the Radioactive Waste Building, which handles the processing and shipment of radioactive waste.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "40",
+      "hop": 3
+    },
+    "nuscale_ch05_0002": {
+      "node_id": "nuscale_ch05_0002",
+      "title": "Summary Description",
+      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve independent modules, maintains proper coolant chemistry and boron concentration, and is engineered to meet safety and performance requirements during normal and off-normal conditions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 4
+    },
+    "nuscale_ch05_0009": {
+      "node_id": "nuscale_ch05_0009",
+      "title": "Overpressure Protection",
+      "summary": "This section outlines NuScale's compliance with overpressure protection requirements, referencing relevant ASME Boiler and Pressure Vessel Code (BPVC) and Operations and Maintenance (OM) Code cases as mandated by 10 CFR 50.55a and associated Regulatory Guides. It details how code cases for design, fabrication, construction, preservice, and inservice inspections and testing are selected and verified to meet NRC-endorsed standards, with a consolidated list provided in Table 5.2-1.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "21",
+      "hop": 4
+    }
+  },
+  "edges": [
+    {
+      "source": "nuscale_ch01_0558",
+      "target": "nuscale_ch01_0052",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section B provides the nominal operating parameters (Table 1.3-1) necessary to assess coolant inventory needs, while Section A documents regulatory conformance and references to design features that must be satisfied by the adequacy of the coolant inventory."
+    },
+    {
+      "source": "nuscale_ch01_0558",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section B describes the Reactor Coolant System (RCS) features and functions, such as degasification and pressure boundary integrity, which are the operational and design details that must be evaluated against the regulatory criteria and conformance statements outlined in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0558",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A lists regulatory guidance and conformance statements for radiation protection design features, while Section B provides detailed descriptions of reactor coolant system (RCS) component materials, with both sections referencing the NuScale Final Safety Analysis Report but focusing on different aspects (regulatory compliance vs. technical design details) that must be integrated to assess coolant inventory adequacy."
+    },
+    {
+      "source": "nuscale_ch01_0558",
+      "target": "nuscale_ch01_0043",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section B describes the ultimate heat sink and decay heat removal system that relies on the reactor coolant system (RCS) volumes from Table 5.1-1, which must be adequate to support the operating parameters listed in Table 1.3-1, thus Section B's system function depends on the adequacy of the coolant inventory specified in Section A's referenced tables."
+    },
+    {
+      "source": "nuscale_ch01_0558",
+      "target": "nuscale_ch05_0003",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section B describes the design and function of the reactor coolant system (RCS), which is the system whose coolant inventory adequacy is being evaluated using the operating parameters from Table 1.3-1, while Section A lists regulatory guidance and conformance statements that set the requirements or criteria the RCS design (including coolant inventory) must satisfy."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch05_0004",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A provides the nominal operating parameters (such as pressure, temperature, and flow rates) from Table 1.3-1, which must be supported by the reactor coolant system (RCS) volumes detailed in Table 5.1-1 referenced in Section B to determine if the coolant inventory is adequate for the module's operating conditions."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch05_0025",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides nominal operating parameters (such as pressures and temperatures) from Table 1.3-1, which are necessary to assess the adequacy of the RCS volumes listed in Table 5.1-1 (referenced in the analysis question), while Section B describes the physical components and materials of the pressurizer, which is part of the RCS volume, thus connecting the operating conditions to the physical design."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0043",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the nominal operating parameters (such as temperatures, pressures, and flow rates) from Table 1.3-1, which are necessary to assess whether the RCS volumes from Table 5.1-1 (not shown here) in Section B are sufficient to support the module's cooling and heat removal functions under normal and postulated conditions."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch05_0003",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A provides the nominal operating parameters (such as temperatures and pressures) from Table 1.3-1, which must be compared with the RCS volumes detailed in Section B's Table 5.1-1 to assess whether the coolant inventory is sufficient for the module's specified operating conditions."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general system description of the RCS and its degasification function, while Section B specifies the detailed design and material composition of the pressurizer components referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch01_0043",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the reactor coolant system's (RCS) capability to maintain coolant inventory and integrity, while Section B outlines the ultimate heat sink's role in removing decay heat from the RCS, both of which are necessary to ensure the coolant inventory is adequate for safe module operation under the specified operating parameters."
+    },
+    {
+      "source": "nuscale_ch05_0004",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes specific operational features of the RCS, such as degasification and pressure boundary integrity, which are design details that specify and support the general design basis and functional description of the RCS provided in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch01_0043",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A details the pressurizer's materials and components within the RCS, while Section B describes the decay heat removal system's capability to cool the RCS under operating and accident conditions, both providing technical context necessary to assess whether the RCS coolant inventory (from Table 5.1-1) is sufficient for the operating parameters (from Table 1.3-1)."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed component and material information for the pressurizer, which is a specific part of the broader RCS described in Section B, thereby specifying details for Section B's general system description."
+    },
+    {
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch05_0003",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section B describes the design and components of the reactor coolant system (RCS), which establishes the system whose coolant inventory adequacy is being evaluated using the operating parameters from Table 1.3-1 and the RCS volumes from Table 5.1-1, while Section A describes the ultimate heat sink and decay heat removal systems that depend on the RCS's coolant inventory to function as intended under operating and accident conditions."
+    },
+    {
+      "source": "nuscale_ch01_0767",
+      "target": "nuscale_ch01_0052",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section B provides the nominal operating parameters for the NuScale module (Table 1.3-1), which are used as input parameters in Section A's safety analysis (DSRS 15.5.1-15.5.2) to evaluate whether the coolant inventory is adequate under specified operating conditions."
+    },
+    {
+      "source": "nuscale_ch01_0767",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A references the need for input parameters and initial conditions (such as operating parameters) for accident analysis, while Section B provides a system description that includes relevant RCS features and functions, thus Section B supports the context and technical basis for the adequacy assessment required in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0362",
+      "target": "nuscale_ch01_0052",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A outlines the regulatory conformance and design criteria for the Chemical and Volume Control System (CVCS), which is responsible for maintaining adequate reactor coolant inventory, while Section B provides the nominal operating parameters (from Table 1.3-1) necessary to assess whether the RCS volumes (from Table 5.1-1) are sufficient for safe operation, thus connecting the regulatory requirements to the actual design values."
+    },
+    {
+      "source": "nuscale_ch01_0362",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A outlines the regulatory requirements and conformance for the Chemical and Volume Control System (CVCS), which is responsible for maintaining reactor coolant inventory, while Section B describes the physical features and functions of the Reactor Coolant System (RCS), including its volume and mechanisms for maintaining coolant integrity; thus, Section B provides the design details necessary to assess whether the CVCS (Section A) can ensure adequate coolant inventory under operating conditions."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch01_0558",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the limitations of leakage detection in the NuScale reactor coolant system, while Section B lists the degree of conformance with regulatory guidance on radiation protection design features, including those related to leakage monitoring, thus Section A provides specific implementation details that relate to the general regulatory expectations outlined in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch01_0052",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section B provides the nominal operating parameters (such as pressures, temperatures, and flow rates) for the NuScale module, which are necessary inputs for evaluating the adequacy of the coolant inventory described in Section A, where the focus is on leakage detection and the integrity of the reactor coolant pressure boundary."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the challenges in detecting RCS leakage due to the absence of traditional leakage paths, while Section B describes system features (like degasification and pressure-retaining components) that are relevant to maintaining coolant inventory and RCPB integrity, thus both sections provide supporting information for evaluating whether the coolant inventory is adequate under operating conditions."
+    },
+    {
+      "source": "nuscale_ch01_0767",
+      "target": "nuscale_ch01_0362",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A discusses the initial conditions and input parameters for evaluating reactor coolant inventory changes due to chemical and volume control system malfunctions, while Section B specifies the design and arrangement of the Chemical and Volume Control System that determines the actual coolant inventory and its control, thus Section B provides the system design basis that Section A uses as input for its safety analysis."
+    },
+    {
+      "source": "nuscale_ch01_0767",
+      "target": "nuscale_ch05_0012",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the input parameters and initial conditions for evaluating reactor coolant inventory changes due to system malfunctions, while Section B describes the detection capabilities and limitations for reactor coolant pressure boundary leakage, both of which are connected through their focus on maintaining and monitoring adequate reactor coolant inventory under operating conditions."
+    },
+    {
+      "source": "nuscale_ch01_0362",
+      "target": "nuscale_ch05_0012",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A outlines the design and regulatory conformance of the Chemical and Volume Control System (CVCS), which is responsible for maintaining coolant inventory, while Section B discusses the detection of reactor coolant pressure boundary leakage, both of which are connected by their roles in ensuring the adequacy and integrity of the reactor coolant system (RCS) inventory under operating conditions."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0052",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section B provides the nominal operating parameters (from Table 1.3-1) that must be supported by the coolant inventory, while Section A describes the system features (including coolant control and heat removal) that are designed to maintain adequate coolant inventory under those operating conditions."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the Chemical and Volume Control System's role in maintaining coolant inventory and system cooling under various conditions, while Section B details the RCS's features for degasification and pressure boundary integrity, both of which are necessary to ensure that the coolant inventory (from Table 5.1-1) is adequate to support the operating parameters (from Table 1.3-1)."
+    },
+    {
+      "source": "nuscale_ch01_0042",
+      "target": "nuscale_ch01_0558",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the implementation of digital control systems for monitoring and trending plant parameters, which supports the ability to ensure compliance with the radiation protection design features and regulatory criteria referenced in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0042",
+      "target": "nuscale_ch01_0052",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section B provides the nominal operating parameters in Table 1.3-1, which are necessary for evaluating whether the coolant inventory (referenced in Table 5.1-1) is adequate for the NuScale module's operating conditions as required by the analysis question."
+    },
+    {
+      "source": "nuscale_ch01_0042",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the monitoring and control systems for reactor operations, while Section B details the physical features of the Reactor Coolant System (RCS), with both sections providing complementary information necessary to assess whether the coolant inventory (from Table 5.1-1) is sufficient for the operating parameters (from Table 1.3-1) under the control and monitoring described."
+    },
+    {
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0042",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the Chemical and Volume Control System's role in maintaining coolant inventory and supporting decay heat removal, while Section B outlines the monitoring and control of the Decay Heat Removal System, both of which are connected through their functions in ensuring adequate coolant inventory and safe operating conditions as required by the operating parameters and RCS volumes."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch01_0558",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the reactor coolant system's design and function, which must be evaluated against the regulatory requirements and conformance criteria referenced in Section B to determine if the coolant inventory is adequate for safe operation."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch01_0052",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A describes the components and function of the NuScale reactor coolant system (RCS), while Section B provides the nominal operating parameters (such as pressures, temperatures, and flow rates) that the RCS must support, connecting the system's physical design to its required operational performance."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the RCS design and its reliance on natural circulation, while Section B specifies operational features such as degasification and pressure boundary integrity that support the adequacy of coolant inventory under operating conditions."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch01_0052",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section B provides the nominal operating parameters (from Table 1.3-1) that are necessary to evaluate whether the overpressure protection provisions and code compliance described in Section A are adequate for the NuScale module's operating conditions."
+    },
+    {
+      "source": "nuscale_ch05_0009",
+      "target": "nuscale_ch05_0004",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines the regulatory and code compliance requirements for the integrity and overpressure protection of the reactor coolant boundary, while Section B describes the system features (such as degasification and pressure retention) that are implemented to satisfy those integrity and protection requirements."
+    },
+    {
+      "source": "nuscale_ch05_0002",
+      "target": "nuscale_ch05_0009",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A describes the design and function of the reactor coolant system, whose adequacy (including coolant inventory) must comply with the regulatory codes and requirements referenced in Section B."
+    }
+  ]
+}

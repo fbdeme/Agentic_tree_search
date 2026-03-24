@@ -1,25 +1,214 @@
 {
-  "question": "Explain the location and function of the pressurizer.",
-  "current_hop": 2,
+  "question": "Using Table 1.3-1, compare the number of fuel assemblies and active fuel length between NuScale and a typical PWR.",
+  "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0023": {
-      "node_id": "nuscale_ch05_0023",
-      "title": "Reactor Coolant System High-Point Vents",
-      "summary": "This section outlines the testing and inspection requirements for the DHRS (Decay Heat Removal System) components in the NuScale reactor, ensuring compliance with ASME codes for Class 2 components. It specifies that DHRS actuation valves are exercised during cold shutdown conditions, and that comprehensive functional and position verification tests are performed according to technical specifications, including a one-time in-situ heat removal test for the first reactor module.",
+    "nuscale_ch01_0054": {
+      "node_id": "nuscale_ch01_0054",
+      "title": "Requirements for Additional Technical Information",
+      "summary": "This section outlines the verification and confirmation testing programs for unique design features of the NuScale Power Plant, which provide essential data to support the final safety analysis. It details completed and ongoing tests focused on areas lacking prior data or operational experience, including specific tests for fuel design, steam generator, control rod assemblies, and integrated system phenomena. The section also describes critical heat flux (CHF) testing for the preliminary fuel design, which informed code development and safety analysis for the final design.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "121",
+      "source_doc": "nuscale_ch01",
+      "page_range": "83",
       "hop": 1
     },
-    "nuscale_ch05_0024": {
-      "node_id": "nuscale_ch05_0024",
-      "title": "Pressurizer",
-      "summary": "The pressurizer in the NuScale reactor is integrated into the upper region of the reactor vessel and functions to regulate reactor coolant system (RCS) pressure by maintaining a saturated steam-water interface. It uses heaters and spray flow to control pressure and is designed to handle operating transients without triggering reactor trips or safety system actuations, with instrumentation providing real-time pressure and level data to control systems.",
+    "nuscale_ch01_0052": {
+      "node_id": "nuscale_ch01_0052",
+      "title": "Comparison with Other Facilities",
+      "summary": "This section compares the major design features and parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It highlights differences in size, output, core design, and safety systems, showing that NuScale uses smaller, simpler, and more integrated components compared to conventional PWRs. The comparison is summarized in tables for easy reference.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "124",
+      "source_doc": "nuscale_ch01",
+      "page_range": "79",
       "hop": 1
+    },
+    "nuscale_ch01_0034": {
+      "node_id": "nuscale_ch01_0034",
+      "title": "Reactor Building",
+      "summary": "The Reactor Building (RXB) is centrally located on the NuScale Power Plant site and houses the NuScale Power Modules (NPMs) along with essential systems for plant operation and shutdown. It is a reinforced concrete, Seismic Category I structure designed for safety against various hazards, and provides radiation protection for personnel. The RXB features a rectangular layout, with NPMs situated in individual bays within a common reactor pool arranged in two rows.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "36",
+      "hop": 1
+    },
+    "nuscale_ch01_0055": {
+      "node_id": "nuscale_ch01_0055",
+      "title": "NuScale Testing Programs",
+      "summary": "This section outlines the NuScale testing programs designed to verify and confirm unique design features supporting the plant’s safety analysis, particularly where prior data or operational experience was lacking. It summarizes completed and ongoing tests for the NuScale Power Module, including those for fuel design, steam generator, control rod assemblies, and integrated system phenomena, with specific mention of critical heat flux (CHF) testing for both preliminary and final fuel designs to support licensing and safety analysis.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "83",
+      "hop": 1
+    },
+    "nuscale_ch01_0035": {
+      "node_id": "nuscale_ch01_0035",
+      "title": "Fuel Handling and Reactor Maintenance Areas",
+      "summary": "The fuel handling and reactor maintenance areas are located at the west end of the Reactor Building and include spaces for the spent fuel pool, refueling pool, and dry dock, with facilities designed for safe fuel handling and maintenance operations. These areas provide radiation protection for personnel and include equipment and access for receiving, inspecting, storing, and transporting both new and spent fuel assemblies.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "37",
+      "hop": 1
+    },
+    "nuscale_ch01_0558": {
+      "node_id": "nuscale_ch01_0558",
+      "title": "DSRS 12.3-12.4, Rev 0: Radiation Protection Design FeaturesII.9 RG 8.15",
+      "summary": "This section summarizes NuScale’s conformance with various regulatory guides related to radiation protection design features, as outlined in DSRS 12.3-12.4. It details whether each regulatory guide is applicable, not applicable, conforms, or partially conforms, with references to supporting sections or tables for further information. Specifically, RG 8.15 is noted as not applicable to the NuScale design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "278",
+      "hop": 1
+    },
+    "nuscale_ch01_0018": {
+      "node_id": "nuscale_ch01_0018",
+      "title": "Principal Design Criteria",
+      "summary": "The section describes the principal design criteria for the NuScale plant, focusing on the Site Cooling Water System (SCWS) and the overall facility process. It outlines the reactor core’s heat transfer process, the natural circulation of coolant, and the generation of superheated steam to drive a turbine and produce electricity, with heat ultimately removed via a shared circulating water loop and condenser.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "28",
+      "hop": 3
+    },
+    "nuscale_ch01_0714": {
+      "node_id": "nuscale_ch01_0714",
+      "title": "DSRS 15.2.1-15.2.5, Rev 0: Loss of External Load; Turbine Trip; Loss of Condenser Vacuum; Closure of Main Steam Isolation Valve; and Steam Pressure Regulator Failure (Closed)II.3.C Values of Parameters Used in Analytical Model - Core Burnup",
+      "summary": "This section confirms that the analytical models used for evaluating events such as loss of external load, turbine trip, loss of condenser vacuum, main steam isolation valve closure, and steam pressure regulator failure (closed) conform to the regulatory criteria specified in DSRS 15.2.1-15.2.5. Specifically, it states that the values of parameters used in the analytical model—including core burnup—are in compliance, with no exceptions noted. The referenced table further clarifies conformance with relevant regulatory standards.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "296",
+      "hop": 3
+    },
+    "nuscale_ch01_0743": {
+      "node_id": "nuscale_ch01_0743",
+      "title": "SRP 15.4.4-15.4.5, Rev 2: Startup of an Inactive Loop or Recirculation Loop at an Incorrect Temperature, and Flow Controller Malfunction Causing an Increase in BWR Core Flow RateII.C Events of Moderate Frequency",
+      "summary": "This section explains that the regulatory guidance in SRP 15.4.4-15.4.5, which addresses startup of inactive or recirculation loops at incorrect temperatures and flow controller malfunctions in PWR and BWR designs, does not apply to the NuScale reactor because it does not use reactor coolant pumps or forced coolant flow. Instead, any relevant postulated startup reactivity accidents for NuScale are addressed under DSRS 15.4.6, which covers inadvertent decreases in boron concentration.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "300",
+      "hop": 3
+    },
+    "nuscale_ch01_0768": {
+      "node_id": "nuscale_ch01_0768",
+      "title": "DSRS 15.5.1-15.5.2, Rev 0: Chemical and Volume Control System Malfunction That Increases Reactor Coolant InventoryII.4.C Input Parameters and Initial Conditions - Core Burnup",
+      "summary": "This section reviews NuScale’s conformance with regulatory criteria for chemical and volume control system malfunctions that increase reactor coolant inventory, specifically focusing on input parameters and initial conditions such as core burnup. It concludes that NuScale’s design conforms to the relevant DSRS sections, noting that certain SRP guidance related to pressurizer relief valves is not applicable due to design differences. The section also references a conformance table summarizing compliance with NUREG-0800 standards.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "305",
+      "hop": 3
+    },
+    "nuscale_ch01_0685": {
+      "node_id": "nuscale_ch01_0685",
+      "title": "DSRS 15.1.5, Rev 0: Steam System Piping Failures Inside and Outside of ContainmentII.7 AssumptionsInitial Core Flow",
+      "summary": "This section outlines NuScale’s conformance with regulatory criteria for steam system piping failures inside and outside containment, specifically addressing assumptions such as initial core flow, core burnup, and postulated failures of main steam lines. It notes that NuScale uses critical heat flux as a more accurate descriptor of plant phenomena than departure from nucleate boiling, and that operator action is not required to mitigate steam line break consequences. Additionally, it clarifies that for radiological consequences, SRP Section 15.0.3 supersedes the methodologies in SRP 15.1.5, while nonradiological analysis provisions remain applicable.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "292",
+      "hop": 4
+    },
+    "nuscale_ch01_0829": {
+      "node_id": "nuscale_ch01_0829",
+      "title": "SRP 17.5, Rev 1: Quality Assurance Program Description - Design Certification, Early Site Permit and New COL applicantsII.D Procurement Document Control",
+      "summary": "This section summarizes NuScale’s conformance with SRP 17.5, Rev 1 requirements for quality assurance in design certification, early site permits, and new COL applicants, specifically regarding procurement document control and related criteria. Most criteria are fully met, but some—such as document control, inspection, and activities like identification and control of materials—are either partially met or deemed the responsibility of the COL applicant referencing the certified design. The table clarifies which requirements are addressed by NuScale and which are deferred to future applicants.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "319",
+      "hop": 4
     }
   },
-  "edges": []
+  "edges": [
+    {
+      "source": "nuscale_ch01_0054",
+      "target": "nuscale_ch01_0035",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A outlines the testing programs for verifying NuScale's unique design features, which provide supporting data for safety analyses that would include parameters such as the number of fuel assemblies and active fuel length, while Section B describes the physical layout and handling of fuel assemblies, both of which are connected through their reference to fuel assembly characteristics relevant to Table 1.3-1."
+    },
+    {
+      "source": "nuscale_ch01_0034",
+      "target": "nuscale_ch01_0055",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A provides general plant layout and references where detailed design data (such as fuel assemblies and active fuel length) can be found, while Section B describes testing programs that generate data to support the safety analysis, which may include verification of such design parameters."
+    },
+    {
+      "source": "nuscale_ch01_0034",
+      "target": "nuscale_ch01_0035",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the general arrangement of major plant structures, while Section B specifies the location and function of the fuel handling and reactor maintenance areas within that arrangement."
+    },
+    {
+      "source": "nuscale_ch01_0018",
+      "target": "nuscale_ch01_0052",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section B provides a tabular comparison (Table 1.3-1) of design parameters, including the number of fuel assemblies and active fuel length, between NuScale and a typical PWR, which directly addresses the analysis question, while Section A only gives a general description of the NuScale facility without these specific comparative details."
+    },
+    {
+      "source": "nuscale_ch01_0714",
+      "target": "nuscale_ch01_0054",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides analytical model parameter values, such as core burnup, that are used in safety analyses, while Section B outlines the testing programs that generate data to support and verify these analytical models and their parameters."
+    },
+    {
+      "source": "nuscale_ch01_0743",
+      "target": "nuscale_ch01_0054",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A explains why certain PWR-specific regulatory guidance is not applicable to NuScale due to design differences, while Section B outlines the need for technical information and testing to support NuScale's unique design features, both connected by the need to address how NuScale's design (including fuel assemblies and active fuel length) differs from a typical PWR."
+    },
+    {
+      "source": "nuscale_ch01_0743",
+      "target": "nuscale_ch01_0052",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B provides the specific comparative data (number of fuel assemblies and active fuel length) for NuScale and a typical PWR as required by the analysis question, while Section A explains that certain regulatory guidance is not applicable to NuScale due to design differences, thus contextualizing why such a comparison is relevant."
+    },
+    {
+      "source": "nuscale_ch01_0768",
+      "target": "nuscale_ch01_0054",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides input parameters and initial conditions relevant to safety analysis, while Section B outlines the requirements for technical information and testing programs that generate data to support such analyses, thus Section B's testing results are used to validate or inform the parameters described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0018",
+      "target": "nuscale_ch01_0714",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A provides a general description of the NuScale reactor core's physical configuration, while Section B outlines the analytical parameters (such as core burnup and initial power) used in safety analyses, both of which require specific core design data like the number of fuel assemblies and active fuel length for accurate modeling and comparison."
+    },
+    {
+      "source": "nuscale_ch01_0018",
+      "target": "nuscale_ch01_0743",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A provides a general description of the NuScale reactor core and its support assembly, while Section B discusses the inapplicability of certain PWR-specific regulatory guidance to NuScale due to differences in reactor design, both highlighting design distinctions relevant to comparing core parameters such as fuel assemblies and active fuel length."
+    },
+    {
+      "source": "nuscale_ch01_0714",
+      "target": "nuscale_ch01_0743",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section B explains that certain SRP guidance and associated fuel thermal limits are not applicable to NuScale due to differences in reactor design (e.g., absence of reactor coolant pumps and loops), which is contextually relevant to Section A's discussion of analytical model parameters for NuScale, including core characteristics like fuel assemblies and active fuel length."
+    },
+    {
+      "source": "nuscale_ch01_0714",
+      "target": "nuscale_ch01_0768",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Both Section A and Section B reference the use of core burnup values as input parameters in their respective analytical models, indicating that they rely on similar core design data (such as number of fuel assemblies and active fuel length from Table 1.3-1) for their safety analyses."
+    },
+    {
+      "source": "nuscale_ch01_0685",
+      "target": "nuscale_ch01_0054",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides specific design assumptions and conformance statements related to core parameters, while Section B outlines the need for verification and confirmation tests to support the safety analysis of those design features, indicating that the assumptions in Section A are subject to validation through the testing programs described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0829",
+      "target": "nuscale_ch01_0054",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A outlines the quality assurance and document control procedures for design certification, while Section B describes the technical testing programs that generate data to support the safety analysis, with both sections connected through their roles in ensuring the reliability and regulatory compliance of design information such as that found in Table 1.3-1."
+    }
+  ]
 }
