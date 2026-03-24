@@ -51,15 +51,20 @@ def init_ragas_metrics():
 
 
 def rebuild_contexts_from_kg(kg_path: str) -> list[str]:
-    """Rebuild full KG context string from saved KG JSON — same as agent saw."""
+    """
+    Rebuild contexts from saved KG JSON. Includes:
+    1. Full KG context string (summaries + edges) — for Faithfulness
+    2. Each node's full content from the saved KG — for Context Recall
+    """
     with open(kg_path) as f:
         kg_data = json.load(f)
 
-    # Rebuild to_context_string() equivalent
-    lines = [f"=== Knowledge Graph ===\n"]
-    lines.append(f"[Query] {kg_data.get('question', '')}\n")
     nodes = kg_data.get("nodes", {})
     edges = kg_data.get("edges", [])
+
+    # 1. KG context string (summaries + edges)
+    lines = [f"=== Knowledge Graph ===\n"]
+    lines.append(f"[Query] {kg_data.get('question', '')}\n")
     lines.append(f"[Nodes] {len(nodes)}  [Edges] {len(edges)}\n")
 
     lines.append("\n--- Node List ---")
@@ -81,7 +86,16 @@ def rebuild_contexts_from_kg(kg_path: str) -> list[str]:
             + (f"\n    {desc}" if desc else "")
         )
 
-    return ["\n".join(lines)]
+    contexts = ["\n".join(lines)]
+
+    # 2. Individual node content (for Context Recall — specific values)
+    # Available when KG was saved with to_dict() that includes content field
+    for nid, node in nodes.items():
+        content = node.get("content", "")
+        if content and content != node.get("summary", ""):
+            contexts.append(f"[{node.get('title', '')}] {content}")
+
+    return contexts
 
 
 async def evaluate_single(qid, question, expected_answer, agent_answer,

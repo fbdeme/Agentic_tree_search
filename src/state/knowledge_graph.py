@@ -41,11 +41,13 @@ class KGNode:
         return {
             "node_id": self.node_id,
             "title": self.title,
+            "content": self.content,
             "summary": self.summary,
             "modality": self.modality,
             "source_doc": self.source_doc,
             "page_range": self.page_range,
             "hop": self.hop,
+            "references": self.references,
         }
 
 

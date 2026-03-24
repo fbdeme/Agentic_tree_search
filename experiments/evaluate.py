@@ -230,10 +230,20 @@ def map_doc_ids(evidence_list: list[dict], env: PageIndexEnvironment) -> list[st
 
 def extract_contexts_from_kg(kg) -> list[str]:
     """
-    Extract the full KG context string — same context the agent used for answer generation.
-    Ensures evaluation measures exactly what the agent saw.
+    Extract contexts for RAGAs evaluation. Includes:
+    1. Full KG context string (summaries + edges) — for Faithfulness
+    2. Each node's full content — for Context Recall (specific values)
+
+    This satisfies both metrics:
+    - Faithfulness: checks answer claims against KG structure + summaries
+    - Context Recall: checks expected answer against full node content
+      (e.g., "0.25 inches" exists in content but not in summary)
     """
-    return [kg.to_context_string()]
+    contexts = [kg.to_context_string()]
+    for nid, node in kg.nodes.items():
+        if node.content and node.content != node.summary:
+            contexts.append(f"[{node.title}] {node.content}")
+    return contexts
 
 
 async def run_evaluation_async(args):
