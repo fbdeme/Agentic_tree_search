@@ -534,6 +534,34 @@ FC ~0.42 is structural: agent uses different evidence nodes than expected answer
 
 ---
 
+---
+
+## v0.4.6 — Pseudo-Relevance Feedback (PRF/RM3) (`TBD`)
+
+**Date**: 2026-03-25
+
+### Change
+Added PRF (RM3) to BM25 search: initial search → extract top terms from top-3 results → expand query → re-score. Zero LLM cost, pure lexical operation. α=0.4, 5 expansion terms.
+
+### Pilot Results (3 questions that previously failed)
+
+| Question | CR Before | CR After | FC Before | FC After |
+|----------|----------|----------|----------|----------|
+| Q051 (composite) | 0.50 | **1.00** | 0.17 | **0.67** |
+| Q095 (comparative) | 0.33 | **1.00** | 0.20 | 0.20 |
+| Q136 (judgment) | 0.67 | **1.00** | 0.29 | **0.50** |
+
+PRF helped all 3 reach CR=1.0 by expanding queries with related terms from top initial results. Expected overall impact: +0.02~0.03 CR on full 200q (already at 0.93).
+
+### Search Enhancement Evaluation (from meeting feedback)
+
+Three traditional IR methods were evaluated:
+- **BM25F**: Theoretically correct field weighting, but CR=0.93 makes practical impact minimal. High implementation cost.
+- **SDM**: Phrase recognition. Not our failure mode — failures are vocabulary mismatch, not word order.
+- **PRF (RM3)**: Directly addresses vocabulary mismatch. Implemented. Low cost, proven effective on failure cases.
+
+---
+
 ## Known Issues (Unresolved)
 
 1. **FC structural ceiling ~0.5**: Agent uses different evidence nodes → different wording. Benchmark improvement needed (see benchmark_feedback.md).

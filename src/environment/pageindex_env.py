@@ -213,15 +213,13 @@ class PageIndexEnvironment:
         self._bm25_index = BM25Okapi(self._bm25_corpus)
 
     def search(self, keyword: str, doc_ids: Optional[list[str]] = None,
-               max_results: int = 5) -> list[dict]:
+               max_results: int = 5, prf: bool = True) -> list[dict]:
         """
-        BM25-ranked search across all node titles, summaries, and text.
+        BM25-ranked search with Pseudo-Relevance Feedback (RM3).
 
-        BM25 naturally handles:
-        - Term frequency: nodes mentioning the keyword more often score higher
-        - Document length normalization: shorter, focused nodes score higher
-          than long parent nodes with the same keyword count
-        - IDF: rare terms across the corpus get higher weight
+        1. Initial BM25 search with original query
+        2. PRF: Extract top terms from top-K results, expand query
+        3. Re-score with expanded query
 
         Returns:
             [{"doc_id", "node_id", "title", "page_index", "score", "snippet"}, ...]
@@ -231,6 +229,32 @@ class PageIndexEnvironment:
 
         query_tokens = keyword.lower().split()
         scores = self._bm25_index.get_scores(query_tokens)
+
+        # PRF: Pseudo-Relevance Feedback (RM3)
+        if prf:
+            # Get top-3 documents from initial search
+            top_k_prf = 3
+            alpha = 0.4  # weight of feedback terms
+            n_expand = 5  # number of expansion terms
+
+            initial_top = sorted(enumerate(scores), key=lambda x: -x[1])[:top_k_prf]
+            if initial_top and initial_top[0][1] > 0:
+                # Collect term frequencies from top docs
+                term_freq = {}
+                for idx, _ in initial_top:
+                    for token in self._bm25_corpus[idx]:
+                        if len(token) > 2 and token not in query_tokens:
+                            term_freq[token] = term_freq.get(token, 0) + 1
+
+                # Select top expansion terms (most frequent in top docs)
+                expansion = sorted(term_freq.items(), key=lambda x: -x[1])[:n_expand]
+                expand_tokens = [t for t, _ in expansion]
+
+                if expand_tokens:
+                    # Re-score: combine original + expansion scores
+                    expand_scores = self._bm25_index.get_scores(expand_tokens)
+                    scores = [(1 - alpha) * s + alpha * e
+                              for s, e in zip(scores, expand_scores)]
 
         # Pair scores with cache keys and sort descending
         scored = sorted(zip(scores, self._bm25_keys), reverse=True)

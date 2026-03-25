@@ -20,7 +20,7 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 - [x] ~~BM25 search ranking~~ → Replaces naive keyword match, specific nodes rank higher (v0.3.1)
 - [x] ~~Action history / search memory~~ → Agent Memory implemented (v0.4.2). Search log prevents keyword repetition.
 - [x] ~~Browse-first pattern~~ → Document structure auto-injected in Hop 1, browse(depth) added (v0.4.5)
-- [ ] **Query expansion**: Auto-generate keyword variants (PZR↔pressurizer). Zero LLM cost.
+- [x] ~~Query expansion~~ → PRF (RM3) implemented. Auto-expands queries from top-3 results. Q051 CR 0.50→1.00 (v0.4.6)
 - [ ] **Follow-reference tool**: When node mentions "see Table 5.1-1", follow that reference directly.
 - [ ] Store `end_index` in tree nodes (not just `page_index`) for accurate page range
 
@@ -116,6 +116,7 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 - [x] Concise answers (2213→324 chars): Faith 0.71→0.95, FC 0.39→0.58 (v0.4.4)
 - [x] Browse-first + concise answers (200q): Faith 0.93, CR 0.93, FC 0.42 (v0.4.5)
 - [x] Benchmark feedback document: FC ceiling analysis + 5 improvement proposals (v0.4.5)
+- [x] PRF (RM3) query expansion: zero LLM cost, fixes vocabulary mismatch (v0.4.6)
 - [x] Relevance-based image selection: question keywords vs caption overlap (v0.3.2)
 - [x] BM25 caption indexing: reference captions now searchable (v0.3.2)
 - [x] Root cause analysis: Faithfulness N/A = answer length + KG size, not images (v0.3.2)
