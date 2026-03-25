@@ -461,9 +461,43 @@ Key insight: Previous Faithfulness 0.56 was selection bias — only 39 "easy" qu
 
 ---
 
+---
+
+## v0.4.4 — Concise Answer Generation (`TBD`)
+
+**Date**: 2026-03-25
+
+### Meeting Feedback Addressed
+- 답변 출력이 너무 길다 → 2,213 chars → **324 chars** (-85%)
+- 사실 기반 노드 정확도 낮다 → FC 0.39 → **0.58** (+0.19)
+
+### Changes
+- `generate_answer()` prompt: "300 words" → **"1-2 sentences ONLY"**
+- max_tokens: 800 → **300**
+- Removed: "No uncertainty" boilerplate, background explanations, methodology
+- Kept: source citations (node IDs) — removing them didn't improve FC
+
+### Results (9q pilot: factual Q1-3, comparative Q71-73, judgment Q136-138)
+
+| Metric | v0.4.2 (200q) | v0.4.4 (9q pilot) |
+|--------|--------------|-------------------|
+| Answer length | 2,213 chars | **324 chars** |
+| Faithfulness | 0.71 | **0.95** |
+| Answer Relevancy | 0.81 | **0.97** |
+| Context Recall | 0.69 | **0.94** |
+| Factual Correctness | 0.39 | **0.58** |
+
+### FC Analysis
+FC upper bound is ~0.6 due to structural limitation:
+- **CITATION_EXTRA**: Agent cites node IDs not in expected answer → extra claim penalty. But removing citations didn't help (FC dropped).
+- **WORDING_MISMATCH**: Agent finds different evidence nodes → uses different values/expressions than expected answer. Same conclusion, different supporting data. Cannot fix with prompting.
+- **KW_MISSING**: Shorter answers omit secondary keywords from expected answer.
+
+---
+
 ## Known Issues (Unresolved)
 
 1. **single_evidence CR=0.45**: BM25 precision too low for finding one specific node. Browse-first pattern needed.
-2. **judgment FC=0.36**: Agent adds reasoning claims beyond expected answer → RAGAs penalizes.
+2. **FC structural ceiling ~0.6**: Agent uses different evidence nodes than expected answer → different wording. RAGAs claim-level comparison penalizes.
 3. **browse tool under-utilized**: Agent defaults to search-heavy strategy.
 4. **VIOLATES rare (2/8069)**: Structural — FSAR describes compliant designs only.

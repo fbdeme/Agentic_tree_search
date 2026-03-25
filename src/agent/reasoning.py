@@ -190,13 +190,11 @@ class ReasoningModule:
                 "Use these visual materials to provide a more accurate and complete answer.\n"
             )
         system += (
-            "Your answer must:\n"
-            "1. State the core conclusion directly\n"
-            "2. Quote or paraphrase the specific evidence from the knowledge graph that supports your conclusion "
-            "(include the exact values, terms, and node IDs)\n"
-            "3. Mention any uncertainties explicitly\n"
-            "Ground every claim in the provided context. Do not add information not found in the knowledge graph.\n"
-            "Be concise. Answer in English. Keep your answer under 300 words."
+            "Answer in 1-2 sentences ONLY.\n"
+            "State the direct answer with specific values, then cite the source.\n"
+            "Do NOT add uncertainty statements, background, or methodology.\n"
+            "Do NOT add information not found in the knowledge graph.\n"
+            "Answer in English."
         )
 
         user_text = (
@@ -219,12 +217,12 @@ class ReasoningModule:
                     {"role": "system", "content": system},
                     {"role": "user", "content": content},
                 ],
-                max_tokens=800,
+                max_tokens=300,
                 temperature=0.1,
             )
             return response.choices[0].message.content.strip()
         else:
-            return self._call(system, user_text, max_tokens=800)
+            return self._call(system, user_text, max_tokens=300)
 
     # -----------------------------------------------------------
     # 4. Generate node summary

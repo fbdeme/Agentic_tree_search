@@ -11,8 +11,8 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 - [x] ~~Analyze results by question type~~ → See history.md v0.3.1 for full breakdown
 - [x] ~~Run multihop benchmark (200q)~~ → 200/200 success, judgment CR=0.82, SATISFIES 659 instances
 - [x] ~~Fix Faithfulness measurement rate~~ → Root cause: RAGAs default max_tokens=1024. Fixed to 4096. Now 200/200 (100%) measured. (v0.4.3)
-- [ ] Improve single_evidence CR (0.45) — BM25 precision for finding one specific node. Browse-first likely solution.
-- [ ] Address judgment FC=0.34 — agent's reasoning claims beyond expected answer get penalized by RAGAs
+- [ ] **Improve single_evidence CR (0.45)** — BM25 precision for finding one specific node. Browse-first likely solution. NEXT PRIORITY.
+- [x] ~~Address FC~~ → Reduced answer length (2213→324 chars), FC improved 0.39→0.58. Remaining gap is structural (different evidence nodes → different wording). (v0.4.4)
 
 ### Search (Action) Enhancement
 - [x] ~~Fix tree summary truncation~~ → Replaced with tool-based exploration (v0.3.0)
@@ -106,6 +106,7 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 - [x] Agent Memory: search history prevents keyword repetition (v0.4.2)
 - [x] Multihop benchmark (200q): 100 min (8x parallel), 200/200 success, SATISFIES 659 instances (v0.4.2)
 - [x] Faithfulness 100% measurement: RAGAs max_tokens 1024→4096 (v0.4.3)
+- [x] Concise answers (2213→324 chars): Faith 0.71→0.95, FC 0.39→0.58 (v0.4.4)
 - [x] Relevance-based image selection: question keywords vs caption overlap (v0.3.2)
 - [x] BM25 caption indexing: reference captions now searchable (v0.3.2)
 - [x] Root cause analysis: Faithfulness N/A = answer length + KG size, not images (v0.3.2)
