@@ -1,0 +1,112 @@
+{
+  "timestamp": "2026-03-25T10:50:22.452851",
+  "evaluation_framework": "RAGAs v0.4",
+  "config": {
+    "model": "gpt-4.1",
+    "evaluator_model": "gpt-4.1",
+    "embedding_model": "text-embedding-3-small",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 3,
+    "errors": 0
+  },
+  "metrics_description": {
+    "faithfulness": "Fraction of claims in the answer that are supported by the retrieved context (0-1)",
+    "answer_relevancy": "How relevant the answer is to the question, measured by reverse question generation (0-1)",
+    "context_recall": "Fraction of expected answer sentences supported by retrieved context (0-1)",
+    "factual_correctness": "Factual overlap between agent answer and expected answer (0-1)",
+    "keyword_hit": "Fraction of expected keywords present in the agent answer (0-1)"
+  },
+  "summary": {
+    "faithfulness": 1.0,
+    "answer_relevancy": 1.0,
+    "context_recall": 1.0,
+    "factual_correctness": 0.6667,
+    "keyword_hit": 0.75
+  },
+  "by_type": {
+    "text_only": {
+      "count": 3,
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "context_recall": 1.0,
+      "factual_correctness": 0.6667,
+      "keyword_hit": 0.75
+    }
+  },
+  "results": [
+    {
+      "id": "Q001",
+      "type": "text_only",
+      "question": "What is the total net electrical output of a full 12-module NuScale plant?",
+      "expected_answer": "The total net electrical output of a full NuScale plant with 12 modules is approximately 570 MWe.",
+      "agent_answer": "The total net electrical output of a full 12-module NuScale plant is approximately 570 MWe.",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "context_recall": 1.0,
+      "factual_correctness": 1.0,
+      "keyword_hit": 0.75,
+      "kg_nodes": 5,
+      "kg_edges": 2,
+      "hops_used": 1,
+      "retrieved_contexts_count": 6,
+      "agent_sec": 25.8,
+      "eval_sec": 17.8,
+      "total_sec": 43.6,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0007] Schedule | node: [nuscale_ch01_0003] Plant Location | node: [nuscale_ch01_0282] SRP BTP 8-3, Rev 3: Stability of Offsite | node: [nuscale_ch01_0006] Power Output | node: [nuscale_ch01_0004] Containment Type | edge: IS_PREREQUISITE_OF | edge: SPECIFIES",
+        "Hop 2: Early stop — evidence sufficient"
+      ]
+    },
+    {
+      "id": "Q002",
+      "type": "text_only",
+      "question": "What is the operating pressure of the NuScale Reactor Coolant System?",
+      "expected_answer": "The NuScale RCS operates at 1850 psia.",
+      "agent_answer": "The operating pressure of the NuScale Reactor Coolant System is 1,850 psia.",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "context_recall": 1.0,
+      "factual_correctness": 1.0,
+      "keyword_hit": 0.5,
+      "kg_nodes": 15,
+      "kg_edges": 43,
+      "hops_used": 4,
+      "retrieved_contexts_count": 16,
+      "agent_sec": 125.7,
+      "eval_sec": 20.3,
+      "total_sec": 146.1,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0160] DSRS 3.11, Rev. 0: Environmental Qualifi | node: [nuscale_ch01_0705] DSRS 15.2.1-15.2.5, Rev 0: Loss of Exter | node: [nuscale_ch01_0019] Operating Characteristics | node: [nuscale_ch01_0052] Comparison with Other Facilities | edge: IS_PREREQUISITE_OF | edge: REFERENCES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES",
+        "Hop 2: node: [nuscale_ch01_0722] DSRS 15.2.7, Rev 0: Loss of Normal Feedw | node: [nuscale_ch01_0706] DSRS 15.2.1-15.2.5, Rev 0: Loss of Exter | node: [nuscale_ch01_0769] SRP 15.6.1, Rev 2: Inadvertent Opening o | node: [nuscale_ch01_0709] DSRS 15.2.1-15.2.5, Rev 0: Loss of Exter | node: [nuscale_ch01_0715] DSRS 15.2.1-15.2.5, Rev 0: Loss of Exter | edge: IS_PREREQUISITE_OF | edge: SUPPORTS | edge: SATISFIES | edge: REFERENCES | edge: IS_PREREQUISITE_OF | edge: IS_PREREQUISITE_OF | edge: REFERENCES | edge: SPECIFIES | edge: IS_PREREQUISITE_OF | edge: REFERENCES | edge: SPECIFIES | edge: REFERENCES | edge: SPECIFIES | edge: REFERENCES | edge: SUPPORTS | edge: SEMANTIC | edge: SUPPORTS | edge: SPECIFIES | edge: SEMANTIC | edge: REFERENCES | edge: SPECIFIES | edge: REFERENCES | edge: SPECIFIES",
+        "Hop 3: node: [nuscale_ch01_0701] DSRS 15.1.6, Rev 0: Loss of Containment  | node: [nuscale_ch01_0786] DSRS 15.6.6, Rev 0: Inadvertent Operatio | node: [nuscale_ch01_0774] SRP 15.6.3, Rev 2: Radiological Conseque | edge: IS_PREREQUISITE_OF | edge: SPECIFIES | edge: IS_PREREQUISITE_OF | edge: SPECIFIES | edge: IS_PREREQUISITE_OF | edge: SPECIFIES | edge: SPECIFIES | edge: IS_PREREQUISITE_OF | edge: SUPPORTS | edge: SEMANTIC",
+        "Hop 4: node: [nuscale_ch01_0113] Figure 1.7-3b: Piping and In strumentati | node: [nuscale_ch01_0056] Critical Heat Flux Testing - Preliminary | node: [nuscale_ch01_0051] Plant Features of Special Interest | edge: SEMANTIC | edge: IS_PREREQUISITE_OF | edge: SUPPORTS | edge: SUPPORTS"
+      ]
+    },
+    {
+      "id": "Q003",
+      "type": "text_only",
+      "question": "What type of steam generator does NuScale use?",
+      "expected_answer": "NuScale uses helical coil steam generators integrated within the reactor pressure vessel.",
+      "agent_answer": "NuScale uses a vertical helical coil steam generator, also referred to as a helical tube steam generator.",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "context_recall": 1.0,
+      "factual_correctness": 0.0,
+      "keyword_hit": 1.0,
+      "kg_nodes": 10,
+      "kg_edges": 26,
+      "hops_used": 2,
+      "retrieved_contexts_count": 11,
+      "agent_sec": 71.3,
+      "eval_sec": 37.6,
+      "total_sec": 108.9,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0452] BTP 10-2, Rev 4: Design Guidelines for A | node: [nuscale_ch01_0003] Plant Location | node: [nuscale_ch01_0000] Preface | node: [nuscale_ch01_0451] BTP 10-2, Rev 4: Design Guidelines for A | node: [nuscale_ch01_0052] Comparison with Other Facilities | node: [nuscale_ch01_0113] Figure 1.7-3b: Piping and In strumentati | edge: SPECIFIES | edge: REFERENCES | edge: CONTRADICTS | edge: SUPPORTS | edge: SPECIFIES | edge: REFERENCES | edge: SUPPORTS | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: IS_PREREQUISITE_OF | edge: SUPPORTS | edge: REFERENCES",
+        "Hop 2: node: [nuscale_ch01_0018] Principal Design Criteria | node: [nuscale_ch01_0059] Steam Generator Thermal-Hydraulic Perfor | node: [nuscale_ch01_0114] Figure 1.7-3c: Piping and In strumentati | node: [nuscale_ch01_0058] Steam Generator Thermal-Hydraulic Perfor | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SATISFIES | edge: SPECIFIES | edge: SUPPORTS | edge: IS_PREREQUISITE_OF | edge: REFERENCES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS",
+        "Hop 3: Early stop — evidence sufficient"
+      ]
+    }
+  ]
+}

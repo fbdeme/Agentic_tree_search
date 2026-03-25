@@ -2,234 +2,392 @@
   "question": "What is the refueling interval for the NuScale reactor?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0036": {
-      "node_id": "nuscale_ch01_0036",
-      "title": "Refueling Operations",
-      "summary": "Refueling operations for a NuScale Power Module (NPM) are conducted independently from other modules. The process involves moving the NPM from its operating bay to the refueling pool, disassembling it for inspection, maintenance, and refueling, and then reassembling and returning it to service after successful testing and startup procedures.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "38",
-      "hop": 1
-    },
     "nuscale_ch01_0438": {
       "node_id": "nuscale_ch01_0438",
       "title": "SRP 10.4.6, Rev 3: Condensate Cleanup SystemII.1 Maintain direct cycle BWR plant water quality to avoid corrosion-induced failure of the reactor coolant pressure boundary (GDC 14)",
-      "summary": "This section summarizes NuScale’s conformance with various regulatory criteria for systems related to condensate cleanup and associated components. It notes that certain requirements are not applicable to NuScale’s design (such as those specific to BWRs), while for PWR water quality, the design conforms but with differences in secondary chemistry requirements due to the unique configuration of the NuScale steam generator. Overall, the document details compliance or justified departures from standard criteria for each system.",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-135 Revision 5\nSRP 10.3.6, Rev 3: Steam and \nFeedwater System MaterialsII.2 Fracture Toughness of Class 2 and 3 \nComponentsNot Applicable The NuScale design contains no Class 2 or 3 \ncomponents.Not Applicable\nSRP 10.4.1, Rev 3: Main \nCondensersII.1 Prevent excessive releases of \nradioactivity to the environment \n(GDC 60)Conforms None. 10.4.1\nSRP 10.4.2, Rev 3: Main \nCondenser Evacuation SystemII.1\nPrevent excessive releases of \nradioactivity to the environment (GDC 60)Conforms None. 10.4.2\nSRP 10.4.3, Rev 3: Turbine \nGland SealII.1 Prevent excessive releases of \nradioactivity to the environment \n(GDC 60)Conforms None. 10.4.3\nSRP 10.4.4, Rev 3: Turbine \nBypass SystemII.1 Piping Failures (GDC 4) Conforms None. 10.4.4\nSRP 10.4.4, Rev 3: Turbine \nBypass SystemII.2 Residual Heat Removal (GDC 34) Departure T he NuScale design supports an exemption \nfrom the power provisions of GDC 34. As \ndescribed in Section 3.1.4, the design complies with a NuScale-specific principal \ndesign criterion in lieu of this GDC.10.4.4\nSRP 10.4.4, Rev 3: Turbine \nBypass SystemII.3 MSIV Alternate Leakage Path Not Applicable BWR only. Not Applicable \nSRP 10.4.5, Rev 3: Circulating \nWater SystemII.1 Flooding of SSC important to safety \n(GDC 4)Conforms None. 10.4.5\nSRP 10.4.6, Rev 3: Condensate \nCleanup SystemII.1 Maintain direct cycle BWR plant water \nquality to avoid corrosion-induced \nfailure of the reactor coolant pressure boundary (GDC 14)Not Applicable\nBWR only. Not Applicable \nSRP 10.4.6, Rev 3: Condensate \nCleanup SystemII.2 Maintain indirect cycle PWR water \nquality to avoid corrosion-induced \nfailure of the reactor coolant pressure boundary (GDC 14)Conforms In the NuScale SG design, the primary water \nis outside the steam generator tubes, the \nsecondary water is inside the tubes, and there is no SG blowdown so the secondary \nchemistry requirements for the NuScale \ndesign differ from those outlined in the referenced EPRI report.10.4.6\nDSRS 10.4.7, Rev 0: \nCondensate and Feedwater \nSystemII.1\nSeismic Events (GDC 2) Conforms None. 10.4.7Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section summarizes NuScale’s conformance with various regulatory criteria related to water quality and system safety in nuclear plant design. For SRP 10.4.6, Rev 3, maintaining BWR plant water quality is not applicable since NuScale is not a BWR, but for PWR water quality, NuScale’s steam generator design conforms to requirements, with specific differences in secondary chemistry due to its unique configuration.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "263",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
     "nuscale_ch01_0309": {
       "node_id": "nuscale_ch01_0309",
       "title": "SRP 9.1.4, Rev 4: Light Load Handling System and Refueling Cavity DesignII.3 Specific Criteria to Meet GDC 61",
-      "summary": "The section documents NuScale’s conformance with regulatory criteria for the Light Load Handling System and Refueling Cavity Design, specifically addressing compliance with General Design Criterion (GDC) 61 as outlined in SRP 9.1.4, Rev 4. It confirms that the design meets the required criteria, with no exceptions or additional comments noted.",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-116 Revision 5\nDSRS 9.1.3, Rev 0: Spent Fuel \nPool Cooling and Cleanup SystemII.7\nITAAC for Design Certification \nApplicationsConforms None. 14.3\nDSRS 9.1.3, Rev 0: Spent Fuel \nPool Cooling and Cleanup \nSystemII.8 ITAAC for Combined License \nApplicationsNot Applicable This acceptance criterion is applicable only \nto COL applicants.Not Applicable\nSRP 9.1.4, Rev 4: Light Load \nHandling System and \nRefueling Cavity DesignII.1 Specific Criteria to Meet GDC 2 Conforms None. 9.1.4\nSRP 9.1.4, Rev 4: Light Load \nHandling System and Refueling Cavity DesignII.2\nSpecific Criteria to Meet GDC 5 Conforms None. 9.1.4\nSRP 9.1.4, Rev 4: Light Load \nHandling System and \nRefueling Cavity DesignII.3 Specific Criteria to Meet GDC 61 Conforms None. 9.1.4\nSRP 9.1.4, Rev 4: Light Load \nHandling System and \nRefueling Cavity DesignII.4 Specific Criteria to Meet GDC 62 Conforms None. 9.1.4\nSRP 9.1.5, Rev 1: Overhead \nHeavy Load Handling SystemsII.1\nSpecific Criteria to Meet GDC 1 Conforms None. 9.1.5\nSRP 9.1.5, Rev 1: Overhead \nHeavy Load Handling \nSystemsII.2 Specific Criteria to Meet GDC 2 Conforms None. 9.1.5\nSRP 9.1.5, Rev 1: Overhead \nHeavy Load Handling \nSystemsII.3 Specific Criteria to Meet GDC 4 Conforms None. 9.1.5\nSRP 9.1.5, Rev 1: Overhead \nHeavy Load Handling SystemsII.4\nSpecific Criteria to Meet GDC 5 Conforms None. 9.1.5Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "The section documents NuScale’s conformance with regulatory criteria for the Light Load Handling System and Refueling Cavity Design, specifically addressing compliance with General Design Criterion (GDC) 61 as outlined in SRP 9.1.4, Rev 4. It confirms that the design meets the required criteria, with no exceptions or additional comments noted. The table also clarifies which criteria are applicable to design certification versus combined license applicants.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "244",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
     "nuscale_ch01_0018": {
       "node_id": "nuscale_ch01_0018",
       "title": "Principal Design Criteria",
-      "summary": "The section outlines the principal design criteria for the NuScale plant, describing the Site Cooling Water System (SCWS) and the overall facility process. It explains the reactor core's heat transfer process, the natural circulation of coolant, and the generation of superheated steam to drive a turbine and produce electricity, with heat ultimately removed via a shared circulating water loop and condenser.",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-3 Revision 56) Site Cooling Water System (SCWS): provides cooling water to plant auxiliary systems. \nDetails associated with location and orientation of the cooling towers as well as \nequipment design and operation are site spec ific. Additional details of the SCWS are \nprovided in Section 1.2.1.6.\n1.2.1.1 Facility Description\nProcess Overview\nThe reactor core is located in a core suppor t assembly, which is seated in the lower RPV \nassembly. A central hot leg riser is connecte d to the top of the co re support assembly. \nThe reactor core transfers heat into the reactor coolant and the heated reactor coolant \nflows upward through the core and lower and upper riser asse mblies. The heated \ncoolant exits the upper riser assembly and is  redirected downwards into the SG region \nbetween the vessel wall and the upper riser assembly. As the reactor coolant transfers \nheat to the SGs, it cools and becomes denser, which drives the natural circulation flow. The coolant returns to the bottom of the ve ssel through the downcomer and back into \nthe reactor core, where the cycle begins again (Figure 1.2-7).\nOn the secondary side, preheated feedwater is pumped into the tube side of the SGs \nwhere it boils. As the steam flows upward in the tubes, it  is continually heated to \nproduce superheated steam before  exiting the top of the SGs.\nThe superheated steam is directed to a dedica ted steam turbine. A generator, driven by \nthe turbine, creates electric power that is de livered to the utility grid through a step-up \ntransformer. A turbine bypass line provides  up to 100 percent of the rated main steam \nflow directly from the associated steam generators to the main condenser in a \ncontrolled manner to remove heat from the re actor following a load reduction or loss \nof electrical load.\nSteam that exits or bypasses the turbine is directed to the condenser. A shared   \ncirculating water loop removes heat and co ndenses the steam for up to 6 condensers. \nThe condensate is pumped through condensate polishing equipment to the inlet of \nthe variable speed feedwater pumps. A sm all amount of steam is extracted from \nturbine stages to preheat the feedwater and increase plant efficiency. Feedwater \nregulating valves control feed flow into the SGs.\n[[Heat from the circulating water loop from  up to 6 condensers is rejected to \natmosphere by a set of evaporative mechan ical-draft cooling towers. Two sets of \ncooling towers are provided for 12 NPMs.]]\n1.2.1.1.1 Principal Design Criteria\nThe design provides a simple, safe reactor and provides the following:\n• reliable, passive safety systems that are simple in design and operation, and are \nnot reliant on electrical power to fulfill their safety functions\n• safety features that assu re a core damage frequenc y significantly lower than \nthe current light water reactor fleetNuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-4 Revision 5• the absence of RPV or containment penetrations below the top of the reactor \ncore\n• modularization to enable in-shop fa brication of reactor and containment \ncomponents\n1.2.1.1.2 Operating Characteristics\nThe NPM is designed to operate up to  full power condit ions using natural \ncirculation as the means of providing reac tor coolant flow, elim inating the need for \nreactor coolant pumps.\nThe NPMs are partially immers ed in a reactor pool and protected by passive safety \nsystems. Each NPM has a dedicated emer gency core cooling system (ECCS) and \ndecay heat removal system (DHRS).\nImportant features of the NPM include the following:\n• a small, modular design\n• an integral pressurized water reactor (PWR) NSSS that combines the reactor \ncore, SGs, and pressurizer within the RP V, eliminating the need for external \npiping to connect the SGs and pressurizer to the RPV\n• natural circulation provides the driv ing force for reac tor coolant flow, \neliminating the need fo r reactor coolant pumps\n• an RPV housed in a steel co ntainment partially immersed  in water, providing an \neffective passive heat sink fo r long-term decay heat removal\n• a steel containment operated at a vacuum , eliminating the need for insulation \non the RPV\n• passive safety systems that are not reliant on electrical power\nTable 1.2-1 presents the overall charac teristics of the NuScale Power Plant.\nThe NPM is designed to perform normal power maneuvers. Electric power can be \nadjusted with turbine bypass to the condenser. In addition, core power \nmaneuvering can be accomplished with co ntrol rods, soluble boron concentration \nchanges, or a combination of control ro ds and soluble boron as described in \nSections 4.2 and 4.3.\nNuclear Steam Supply System\nThe NSSS consists of a reactor core, tw o helical-coil SGs, and a pressurizer \nintegrated within the RPV. The RPV is encl osed in an approxim ately cylindrical CNV \nthat sits in the reactor pool. The reactor core is located below the helical-coil SGs \ninside the RPV. Using natural circulation, the primary reactor coolant flow path is \nupward through the central hot leg riser,  and then downward around the outside \nof the SG tubes with return flow to the bottom of the core via an annular downcomer. As the reactor coolant flows acro ss the SG tubes, heat is transferred to \nthe secondary side fluid inside the SG tu bes. Concurrently, as the secondary side \n\n--- Referenced Tables (structured) ---\n[Table 1.2-1: Overall Characteristics of a NuScale Power Plant]\nOverall Plant\nNominal net output | 570 | MWe | *\nNumber of power modules | 12\nPower Module\nNumber of reactors | One\nThermal power rating | 160 MWth\nNominal gross electrical output | 50 | MWe\nRCS normal operating pressure | 1,850 psia\nSteam generator number | Two\nSteam generator type | Vertical helical tube\nSteam cycle | Rankine-subcritical regenerative with superheat\nTurbine type | 3,600 rpm, condensing, with extraction\nReactor Core\nFuel | UO (<4.95% enrichment)\n2\nRefueling intervals | 24 months\n* Nominal net output is total gross electrical output minus house loads.",
+      "summary": "The Principal Design Criteria section describes the NuScale plant’s cooling and power generation systems. It outlines how the reactor core heats coolant, which circulates naturally to transfer heat to steam generators, producing superheated steam that drives a turbine and generates electricity. The section also notes that site-specific details affect the cooling water system and equipment layout.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "28",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 1.2-7",
+          "page": 52,
+          "caption": "Steam Generator and Reactor Flow"
+        },
+        {
+          "type": "table",
+          "id": "Table 1.2-1",
+          "page": 44,
+          "caption": "Overall Characteristics of a NuScale Power Plant",
+          "structured_text": "Overall Plant\nNominal net output | 570 | MWe | *\nNumber of power modules | 12\nPower Module\nNumber of reactors | One\nThermal power rating | 160 MWth\nNominal gross electrical output | 50 | MWe\nRCS normal operating pressure | 1,850 psia\nSteam generator number | Two\nSteam generator type | Vertical helical tube\nSteam cycle | Rankine-subcritical regenerative with superheat\nTurbine type | 3,600 rpm, condensing, with extraction\nReactor Core\nFuel | UO (<4.95% enrichment)\n2\nRefueling intervals | 24 months\n* Nominal net output is total gross electrical output minus house loads."
+        }
+      ]
+    },
+    "nuscale_ch01_0024": {
+      "node_id": "nuscale_ch01_0024",
+      "title": "Emergency Core Cooling System",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-8 Revision 51.2.1.2.3 Emergency Core Cooling System\nThe ECCS provides a passive means of deca y heat removal in the event of a LOCA. \nThe ECCS consists of thre e independent reactor vent valves and two independent \nreactor recirculation valves (Figure 1.2-9). A ll five valves are closed during normal \noperation.\nDuring ECCS operation, the reactor vent valves vent steam from the RPV into the \nCNV where the steam condenses and collect s in the bottom of the containment. \nThe reactor recirculation valves allow wate r to reenter the RPV and be circulated \nthrough the core. When reactor coolant temperature is reduced to below the \nboiling point, core cooling continues via conduction dire ctly into the reactor pool. \nThe cooling function of the ECCS is enti rely passive, with heat being conducted \nthrough the CNV wall to the reactor pool. Section 6.3 provides design and \noperational information for the ECCS.\n1.2.1.2.4 Control Room Habitability System\nThe control room habitability system (CRHS) ensures that plant operators are \nadequately protected against the effects of accidental releases of toxic or \nradioactive gases. The CRHS is a passive system that provides clean, compressed, \nbreathable air to the MCR in the event of a radioactive re lease or when AC power is \nnot available. Areas served by the CRHS are maintained at positive pressure relative \nto adjacent areas. Compressed breathable air storage capacity can provide clean air \nto the MCR spaces for at least 72 hours fo llowing an initiating event. Section 6.4 \nprovides design and operatio nal information for the CRHS.\n1.2.1.2.5 Fission Product Removal and Control Systems\nThe only fission product removal and contro l system credited in  the design is the \nCNV in conjunction with th e containment isolation system. Fission product control \nis inherent in the design of the NPM, wherein the CNV atmosphere is depleted \nthrough the passive process of aerosol deposition. Section 6.5 provides \ninformation for this ESF.\n1.2.1.2.6 Inservice Inspection of Class 2 and 3 Components\nThe inservice inspection program includes  the pre-service examinations and the \nperiodic inservice inspections and tests nece ssary to ensure that safety-related and \nrisk-significant systems, structures, and co mponents are capable of fulfilling their \nintended safety functions. Section 6.6 provides detailed information for the \ninservice inspection program.\n1.2.1.3 Instrumentation, Cont rols, and Electrical Systems\nThe I&C architectural design philosophy inco rporates clear interc onnection interfaces, \nseparation between safety and nonsafety systems, and simplification of system functions. The I&C architecture primarily co nsists of the following  systems, which are \ndescribed in Section 7.0:",
+      "summary": "The Emergency Core Cooling System (ECCS) in the NuScale design is a fully passive system that removes decay heat during a loss-of-coolant accident (LOCA) using three independent reactor vent valves and two recirculation valves, all of which are closed during normal operation. During an emergency, the system vents steam into containment, condenses it, and recirculates water to cool the core, with heat ultimately transferred passively to the reactor pool.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "33",
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 1.2-9",
+          "page": 54,
+          "caption": "Emergency Core Cooling System"
+        }
+      ]
     },
     "nuscale_ch01_0439": {
       "node_id": "nuscale_ch01_0439",
       "title": "SRP 10.4.6, Rev 3: Condensate Cleanup SystemII.2 Maintain indirect cycle PWR water quality to avoid corrosion-induced failure of the reactor coolant pressure boundary (GDC 14)",
-      "summary": "The section outlines NuScale’s conformance with regulatory criteria for maintaining indirect cycle PWR water quality to prevent corrosion-induced failure of the reactor coolant pressure boundary, as required by GDC 14. It notes that in the NuScale design, primary water is outside the steam generator tubes and secondary water is inside, with no steam generator blowdown, resulting in secondary chemistry requirements that differ from standard guidance.",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-135 Revision 5\nSRP 10.3.6, Rev 3: Steam and \nFeedwater System MaterialsII.2 Fracture Toughness of Class 2 and 3 \nComponentsNot Applicable The NuScale design contains no Class 2 or 3 \ncomponents.Not Applicable\nSRP 10.4.1, Rev 3: Main \nCondensersII.1 Prevent excessive releases of \nradioactivity to the environment \n(GDC 60)Conforms None. 10.4.1\nSRP 10.4.2, Rev 3: Main \nCondenser Evacuation SystemII.1\nPrevent excessive releases of \nradioactivity to the environment (GDC 60)Conforms None. 10.4.2\nSRP 10.4.3, Rev 3: Turbine \nGland SealII.1 Prevent excessive releases of \nradioactivity to the environment \n(GDC 60)Conforms None. 10.4.3\nSRP 10.4.4, Rev 3: Turbine \nBypass SystemII.1 Piping Failures (GDC 4) Conforms None. 10.4.4\nSRP 10.4.4, Rev 3: Turbine \nBypass SystemII.2 Residual Heat Removal (GDC 34) Departure T he NuScale design supports an exemption \nfrom the power provisions of GDC 34. As \ndescribed in Section 3.1.4, the design complies with a NuScale-specific principal \ndesign criterion in lieu of this GDC.10.4.4\nSRP 10.4.4, Rev 3: Turbine \nBypass SystemII.3 MSIV Alternate Leakage Path Not Applicable BWR only. Not Applicable \nSRP 10.4.5, Rev 3: Circulating \nWater SystemII.1 Flooding of SSC important to safety \n(GDC 4)Conforms None. 10.4.5\nSRP 10.4.6, Rev 3: Condensate \nCleanup SystemII.1 Maintain direct cycle BWR plant water \nquality to avoid corrosion-induced \nfailure of the reactor coolant pressure boundary (GDC 14)Not Applicable\nBWR only. Not Applicable \nSRP 10.4.6, Rev 3: Condensate \nCleanup SystemII.2 Maintain indirect cycle PWR water \nquality to avoid corrosion-induced \nfailure of the reactor coolant pressure boundary (GDC 14)Conforms In the NuScale SG design, the primary water \nis outside the steam generator tubes, the \nsecondary water is inside the tubes, and there is no SG blowdown so the secondary \nchemistry requirements for the NuScale \ndesign differ from those outlined in the referenced EPRI report.10.4.6\nDSRS 10.4.7, Rev 0: \nCondensate and Feedwater \nSystemII.1\nSeismic Events (GDC 2) Conforms None. 10.4.7Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "The section outlines NuScale’s conformance with regulatory criteria for maintaining indirect cycle PWR water quality to prevent corrosion-induced failure of the reactor coolant pressure boundary, as required by GDC 14. It notes that the NuScale steam generator design differs from traditional designs, with primary water outside and secondary water inside the tubes, and no steam generator blowdown, resulting in different secondary chemistry requirements.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "263",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
-    "nuscale_ch01_0051": {
-      "node_id": "nuscale_ch01_0051",
-      "title": "Plant Features of Special Interest",
-      "summary": "This section describes key plant features of special interest in the NuScale Power Plant, including the Central Utility Building (CUB) and Diesel Generator Buildings (DGBs), which house essential but nonsafety-related systems and backup power equipment. It also highlights human factors considerations, emphasizing fail-safe design, automation, digital controls, and workload management to minimize human error and meet regulatory requirements.",
+    "nuscale_ch01_0036": {
+      "node_id": "nuscale_ch01_0036",
+      "title": "Refueling Operations",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-13 Revision 51.2.2.1.2 Refueling Operations\nRefueling operations for an individual NP M is independent of the operating status \nof the remaining NPMs.\nDuring refueling, an NPM is moved from it s operating bay in the reactor pool to the \nrefueling pool using the RBC. The RBC lifts the NPM off its supports within the reactor bay and moves it to the open channel in the center of the reactor pool, \nwhich serves as a pathway to transp ort the NPM to the refueling area.\nIn the refueling area, the NP M is set into the containm ent flange tool where the \nCNV flange is unbolted. The crane lifts the NPM, separating the lower CNV from the \nupper CNV with RPV still attached and in tact. Next, the crane moves the upper CNV \nand RPV to the reactor vessel  flange tool where the RP V flange is unbolted. The \ncrane again lifts the NPM, this time separa ting the upper and lower RPV, leaving the \nlower RPV including the reactor core, in the reactor vessel flange tool. Finally, the \ncrane transports the upper NPM (now consisting of just the upper CNV with \nattached upper RPV) to the module inspec tion rack in the dry dock. Inspection, \ntesting, and maintenance are performed wh ile the core is being refueled using a \ndedicated fuel handling machine.\nAfter inspection, maintenance, and testing are complete and the reactor core has \nbeen refueled, the upper portion of the NPM is moved from the dry dock to the \nrefueling pool where the NP M is reassembled in reverse order using the dedicated \nflange tools. Following reassembly, the NPM is moved into the reactor pool and \nreturned to its operating bay by the RBC.  In the operating bay, startup tests are \nperformed and the reactor is prepared for restart. After the NPM has passed \nnecessary tests and inspection s, and the reactor coolant is at startup conditions, \nthe NPM is brought online, and st eam and power production begins.\n1.2.2.2 Control Building\nThe CRB is located approximately 30 ft ea st of the RXB. See Figure 1.2-21 through \nFigure 1.2-27 for CRB drawings. The overall CR B footprint is rectan gular, approximately \n120 ft long by 80 ft wide  at the 100'-0\" elevation.\nThe following portions of the CRB are nonsafety-related and Seismic Category II: \n• above the 120'-0\" elevation\n• inside the elevator shaf t (full building height)\n• inside the two stairwells  (full building height)\n• the fire protection vestibule located on the East side of the CRB\nStructural steel and metal siding are used above the 120'-0\" elevation. The remaining \nportion of the CRB, below the 120'-0\" elevation,  is a safety-r elated, Seismic Category I, \nconcrete structure.\nThe lowest elevation of the CRB primarily houses electrical equipment and CRHS air \nbottles. There is a tunnel that connects th e RXB to the CRB. The tunnel has two levels; ",
+      "summary": "Refueling operations for a NuScale Power Module (NPM) are conducted independently from other modules. The process involves moving the NPM from its operating bay to the refueling pool, disassembling it for inspection, maintenance, and refueling, and then reassembling and returning it to service after successful testing and inspection.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "43",
-      "hop": 1
-    },
-    "nuscale_ch01_0054": {
-      "node_id": "nuscale_ch01_0054",
-      "title": "Requirements for Additional Technical Information",
-      "summary": "This section outlines the verification and confirmation testing programs for unique design features of the NuScale Power Plant, which provide essential data to support the final safety analyses. It details completed and ongoing tests for the NuScale Power Module, focusing on areas where prior data or operational experience was lacking, including specific tests for fuel design, steam generator, control rod assemblies, and integrated system phenomena. The section also describes critical heat flux testing for both preliminary and final fuel designs to meet licensing requirements and support safety analysis.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "83",
-      "hop": 2
-    },
-    "nuscale_ch01_0056": {
-      "node_id": "nuscale_ch01_0056",
-      "title": "Critical Heat Flux Testing - Preliminary Fuel Design",
-      "summary": "This section outlines the verification and confirmation tests conducted to support the safety analysis of the NuScale Power Plant, focusing on unique design features lacking prior data or operational experience. Specifically, it describes two critical heat flux (CHF) test programs for the NuScale fuel design—one for the preliminary design, which aided code development and safety analysis, and another for the final design. The preliminary CHF testing provided essential data for developing the NSP2 CHF correlation used in the final fuel design.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "83",
-      "hop": 2
-    },
-    "nuscale_ch01_0055": {
-      "node_id": "nuscale_ch01_0055",
-      "title": "NuScale Testing Programs",
-      "summary": "This section outlines the NuScale testing programs designed to verify and confirm unique design features supporting the plant’s safety analysis, particularly where prior data or operational experience was lacking. It summarizes completed and ongoing tests for the NuScale Power Module, including those for fuel design, steam generator, control rod assemblies, and integrated system phenomena, with specific mention of critical heat flux testing for both preliminary and final fuel designs to support licensing and safety analysis.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "83",
-      "hop": 2
-    },
-    "nuscale_ch01_0121": {
-      "node_id": "nuscale_ch01_0121",
-      "title": "1.9 Conformance with Regulatory Criteria",
-      "summary": "This section outlines how the NuScale Final Safety Analysis Report demonstrates compliance with applicable regulatory criteria, using a series of tables to assess conformance with various NRC regulations and guidance documents effective six months prior to the anticipated docket date. It details the evaluation process, including identification of deviations and justifications for alternative approaches, and specifies that future applicants must similarly address regulatory conformance for site-specific and operational aspects.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "129",
-      "hop": 3
-    },
-    "nuscale_ch01_0684": {
-      "node_id": "nuscale_ch01_0684",
-      "title": "DSRS 15.1.5, Rev 0: Steam System Piping Failures Inside and Outside of ContainmentII.6 AssumptionsCore Burnup",
-      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for steam system piping failures inside and outside containment, specifically addressing assumptions such as core burnup, rod withdrawal, core flow, and postulated failures of main steam lines. It notes that NuScale’s analysis generally conforms to DSRS 15.1.5 requirements, with some exceptions and clarifications, such as using critical heat flux for plant phenomena and referencing SRP Section 15.0.3 for radiological analyses. Operator action is not required for mitigation, and nonradiological analysis provisions remain applicable.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "292",
-      "hop": 3
-    },
-    "nuscale_ch01_0074": {
-      "node_id": "nuscale_ch01_0074",
-      "title": "Conformance with Regulatory Criteria",
-      "summary": "This section outlines how the NuScale Final Safety Analysis Report demonstrates compliance with relevant regulatory criteria, using a series of tables to assess conformance with various NRC regulations and guidance documents effective six months prior to the anticipated docket date. It details the evaluation process, including identification of deviations and justifications for alternative approaches, and specifies that future applicants referencing the NuScale design must similarly address regulatory conformance for site-specific and operational aspects.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "129",
-      "hop": 3
-    },
-    "nuscale_ch01_0466": {
-      "node_id": "nuscale_ch01_0466",
-      "title": "DSRS 11.1, Rev 0: Coolant Source TermsII.13 The design basis coolant source term is based on a combination of assumptions of failed fuel fractions",
-      "summary": "The design basis coolant source term for the NuScale reactor is partially based on a failed fuel fraction significantly less than 0.25%, as detailed in NuScale’s technical report. While the NuScale design uses an alternate methodology for effluent release calculations due to differences from large PWRs, it generally conforms to regulatory criteria, with some partial conformance noted where site-specific analyses are required.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "267",
-      "hop": 3
-    },
-    "nuscale_ch01_0287": {
-      "node_id": "nuscale_ch01_0287",
-      "title": "SRP BTP 8-8, (Feb 2012): Onsite (Emergency Diesel Generators) and Offsite Power Sources Allowed Outage Time ExtensionsAll Various",
-      "summary": "The section explains that NuScale’s design does not rely on AC power for safety-related functions, making certain regulatory outage time requirements for emergency diesel generators and offsite power sources inapplicable. It also summarizes the plant’s conformance with various regulatory criteria for electrical systems and fuel storage, noting areas of full or partial compliance and referencing relevant sections for details.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "242",
-      "hop": 3
-    },
-    "nuscale_ch01_0470": {
-      "node_id": "nuscale_ch01_0470",
-      "title": "DSRS 11.2, Rev 0: Liquid Waste Management SystemII.3 Seismic Design of Structures Housing Liquid Waste Management System Components",
-      "summary": "This section outlines the NuScale design’s conformance with regulatory criteria for the seismic design of structures housing liquid waste management system components. It states that the design conforms to the relevant requirements, with no exceptions or additional notes provided.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "267",
-      "hop": 3
-    },
-    "nuscale_ch01_0294": {
-      "node_id": "nuscale_ch01_0294",
-      "title": "DSRS 9.1.2, Rev 0: New and Spent Fuel StorageII.3 Specific Criteria to Meet GDC 5",
-      "summary": "The section summarizes NuScale’s conformance with regulatory criteria for new and spent fuel storage, specifically addressing the requirements of DSRS 9.1.2, Rev 0, Section II.3, which pertains to meeting General Design Criterion (GDC) 5. It states that NuScale fully conforms to the specific criteria for GDC 5, with no exceptions or additional requirements noted, and references supporting sections 9.1.2.1 and 9.1.2.3 for further details.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "242",
-      "hop": 3
+      "page_range": "38",
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 1.2-21",
+          "page": 66,
+          "caption": "Control Building 50'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-27",
+          "page": 72,
+          "caption": "Control Building West Section View"
+        }
+      ]
     },
     "nuscale_ch01_0700": {
       "node_id": "nuscale_ch01_0700",
       "title": "DSRS 15.1.6, Rev 0: Loss of Containment VacuumII.3 Analytical ParametersCore Burnup",
-      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for DSRS 15.1.6, specifically regarding analytical parameters such as core burnup, initial power level, and conservative scram, all of which are confirmed to conform with requirements. It also notes that for related events in DSRS 15.2.1-15.2.5, most criteria are met except for the steam pressure regulator, which is not present in the NuScale design.",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-166 Revision 5\nDSRS 15.1.6, Rev 0: Loss of \nContainment VacuumII.1 Analytical \nParametersInitial Power Level is 102% Conforms None. 15.1.6\nDSRS 15.1.6, Rev 0: Loss of \nContainment VacuumII.2 Analytical \nParametersConservative Scram Used Conforms None. 15.1.6\nDSRS 15.1.6, Rev 0: Loss of \nContainment VacuumII.3 Analytical \nParametersCore Burnup Conforms None. 15.1.6\nDSRS 15.1.6, Rev 0: Loss of \nContainment VacuumII.4 Analytical \nParametersMaximize Heat Transfer from RCS to \nContainment and Reactor PoolConforms None. 15.1.6\nDSRS 15.1.6, Rev 0: Loss of \nContainment VacuumII.5 Analytical \nParametersSetpoint Inaccuracies use Guidance in \nRG 1.105Conforms None. 15.1.6\nDSRS 15.2.1-15.2.5, Rev 0: \nLoss of External  Load; Turbine \nTrip; Loss of Condenser Vacuum; Closure of Main \nSteam Isolation Valve; and \nSteam Pressure Regulator Failure (Closed)II.1 Basic Objectives - Initiating  Events Conforms None. 15.2.1-15.2.5\nDSRS 15.2.1-15.2.5, Rev 0: \nLoss of External  Load; Turbine \nTrip; Loss of Condenser Vacuum; Closure of Main \nSteam Isolation Valve; and \nSteam Pressure Regulator Failure (Closed)II.2 Specific Criteria for Events of \nModerate FrequencyPartially Conforms\nThe NuScale design does not have a steam \npressure regulator.15.2.1-15.2.5\nDSRS 15.2.1-15.2.5, Rev 0: \nLoss of External  Load; Turbine \nTrip; Loss of Condenser Vacuum; Closure of Main \nSteam Isolation Valve; and \nSteam Pressure Regulator Failure (Closed)II.2.A Reactor Coolant System and Main \nSteam System PressuresConforms None. 15.2.1-15.2.5Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for DSRS 15.1.6, specifically regarding analytical parameters such as core burnup, initial power level, and conservative scram, all of which are confirmed to conform with requirements. It also notes partial conformance for certain criteria in DSRS 15.2.1-15.2.5 due to design differences, such as the absence of a steam pressure regulator in the NuScale design.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "294",
-      "hop": 3
+      "hop": 2,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
-    "nuscale_ch01_0052": {
-      "node_id": "nuscale_ch01_0052",
-      "title": "Comparison with Other Facilities",
-      "summary": "This section compares the major design features and parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It provides a side-by-side summary of key characteristics such as electrical output, core design, reactor coolant system, and safety components, highlighting significant differences in size, complexity, and safety system requirements between NuScale and conventional PWRs.",
+    "nuscale_ch01_0055": {
+      "node_id": "nuscale_ch01_0055",
+      "title": "NuScale Testing Programs",
+      "content": "NuScale Final Safety Analysis Report Requirements for Additional Technical Information\nTier 2 1.5-1 Revision 51.5 Requirements for Additional Technical Information\nThis section describes the verification and conf irmation tests of unique  design features that \nsupport the safety analysis for the NuScale Power Plant. The test ing program described in this \nsection was developed to provide data to support the final safety analyses.\n1.5.1 NuScale Testing Programs\nThe following testing programs have been comp leted or are currently in progress. The tests \nfocus on design features of th e NuScale Power Module (NPM) fo r which applicable data or \noperational experience did not previously exist.  Tests specific to th e NuScale fuel design \nare summarized in Section 1.5.1.1 and Section 1 .5.1.2; tests specific to the steam generator \n(SG) are summarized in Section 1.5.1.3 and Sect ion 1.5.1.4; tests specific  to the control rod \nassemblies are summarized in Section 1.5. 1.6 and Section 1.5.1.7; and tests involving \nintegrated system phenomena ar e summarized in Section 1.5.1.5.\n1.5.1.1 Critical Heat Flux Te sting - Preliminary Fuel Design\nThe NPM employs a fuel design for heat generation that is similar to a standard \npressurized water reactor (PWR), with the ex ception of the fuel assembly height and \nthe reactor coolant driving force. The NuScale fuel is approximately half the height of \nstandard PWR fuel and feature s low-flow natural circulatio n of primary coolant rather \nthan pump-driven primary coolant flow. In or der to meet fuel licensing requirements, \ntwo critical heat flux (CHF) test programs were conducted: (1) a test program described \nin this section for the prelim inary fuel design, and (2) a second test program described \nin Section 1.5.1.2 for the final fuel design. The preliminary fuel design test program \nsupported code development and safety an alysis efforts, and provided data for \ndevelopment of NuScale's NSP2 CHF co rrelation for the final fuel design.\nThe NPM reactor core design employs 37 nucl ear fuel assemblies. Each assembly is \ncomposed of a 17x17 square lattice of fu el rods assembled according to a given \nrod-to-rod pitch. Each fuel rod is approximately 2 meters in length. Fuel rods are assembled using spacer grids placed at specified locations along the length of the fuel \nrods such that fuel rods are evenly spaced  and adequately supported. Primary coolant \nenters the NPM reactor core from the bottom  through the core inlet plenum and heat \ntransfer to the coolant occurs as coolant travels upward along the length of the fuel \nassemblies.\nIn off-normal conditions, su ch as anticipated operationa l occurrences and postulated \naccidents, it must be known how close the heat transfer mode is to transitioning to a \nstate where a continuous steam layer covers th e fuel rods or portio ns of the fuel rods. \nThe point at which this transition occurs is  referred to as the CHF point. In order to \ndetermine the CHF point for the reduced- length fuel under appropriate flow \nconditions, a CHF testing program was cond ucted over a wide range of operating \nconditions. In these tests, instrumentation was used to measure key test parameters, \nincluding: resistance temperature dete ctors (RTD), thermocouples, pressure \ntransducers, mass flow rate  instruments, and electrical voltage and current meters. \nThese sensors were used to measure heater ro d temperatures and fluid flow conditions \nat various points of the fluid loop, and the electrical power supplied to heater rods \nwhen CHF occurred. The tests allowed NuScale to obtain fuel bundle subchannel exit ",
+      "summary": "This section outlines the NuScale testing programs designed to verify and confirm unique design features supporting the plant’s safety analysis, particularly where prior data or operational experience was lacking. It summarizes completed and ongoing tests for the NuScale Power Module, including those for fuel design, steam generator, control rod assemblies, and integrated system phenomena, with specific mention of critical heat flux testing for both preliminary and final fuel designs to support licensing and safety analysis.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "79",
-      "hop": 4
+      "page_range": "83",
+      "hop": 2,
+      "references": []
     },
-    "nuscale_ch01_0050": {
-      "node_id": "nuscale_ch01_0050",
-      "title": "Diesel Generator Buildings",
-      "summary": "The Diesel Generator Buildings (DGBs) in the NuScale Power Plant each house a single backup diesel generator and their auxiliary equipment, serving as support structures without any safety-related systems or functions supporting engineered safety features (ESFs). The DGBs contain diesel engines, generators, HVAC systems, and maintenance areas, and are not required for plant safety operations.",
+    "nuscale_ch01_0684": {
+      "node_id": "nuscale_ch01_0684",
+      "title": "DSRS 15.1.5, Rev 0: Steam System Piping Failures Inside and Outside of ContainmentII.6 AssumptionsCore Burnup",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-164 Revision 5\nDSRS 15.1.5, Rev 0: Steam \nSystem Piping Failures Inside and Outside of ContainmentII.5\nAssumptionsMaximum-Worth Rod Fully \nWithdrawnConforms None. 15.1.5\nDSRS 15.1.5, Rev 0: Steam \nSystem Piping Failures Inside \nand Outside of ContainmentII.6\nAssumptionsCore Burnup Conforms None. 15.1.5\nDSRS 15.1.5, Rev 0: Steam \nSystem Piping Failures Inside \nand Outside of ContainmentII.7\nAssumptionsInitial Core Flow Conforms NuScale ha s determined that critical heat \nflux more accurate ly describes plant \nphenomena than departure from nucleate \nboiling.15.1.5\nDSRS 15.1.5, Rev 0: Steam \nSystem Piping Failures Inside \nand Outside of ContainmentII.8\nAssumptionsPostulated Failure of Non-Seismic \nMain Steam LineConforms None. 15.1.5\nDSRS 15.1.5, Rev 0: Steam \nSystem Piping Failures Inside and Outside of ContainmentII.9\nAssumptionsPostulated Failure of Seismic Main \nSteam LineConforms None. 15.1.5\nDSRS 15.1.5, Rev 0: Steam \nSystem Piping Failures Inside \nand Outside of ContainmentII.10\nAssumptionsLimiting Consequence Assessment \nWhen Operator Action is CreditedNot Applicable\nOperator Action is not required to mitigate \nthe consequences of a steam line break.Not Applicable\nSRP 15.1.5.A, Rev 2: \nRadiological Consequences \nof Main Steam Line Failures \nOutside Containment of a PWRAll Various Partially Conforms\nPer SRP Section 15.0.3, Section I, Areas of \nReview, Item 10 under subheading Review \nInterfaces, for the review of design \ncertification applicatio ns, SRP Section 15.0.3 \nsupersedes the radiological analyses, \nassumptions, acceptance criteria, and \nmethodologies identified in this SRP Section 15.1.5, Appendix A. Provisions \nrelated to the nonradiological analyses \naspects of this SRP Section 15.1.5, Appendix A, remain applicable to the DCA.15.0.3Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for steam system piping failures inside and outside containment, specifically addressing various assumptions such as core burnup, rod withdrawal, and main steam line failures. It notes that NuScale generally conforms to the requirements, with some exceptions and clarifications, such as using critical heat flux for plant phenomena and referencing SRP Section 15.0.3 for radiological analyses. Operator action is not required for mitigation, and nonradiological analysis provisions remain applicable.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "43",
-      "hop": 4
+      "page_range": "292",
+      "hop": 2,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
+    },
+    "nuscale_ch01_0054": {
+      "node_id": "nuscale_ch01_0054",
+      "title": "Requirements for Additional Technical Information",
+      "content": "NuScale Final Safety Analysis Report Requirements for Additional Technical Information\nTier 2 1.5-1 Revision 51.5 Requirements for Additional Technical Information\nThis section describes the verification and conf irmation tests of unique  design features that \nsupport the safety analysis for the NuScale Power Plant. The test ing program described in this \nsection was developed to provide data to support the final safety analyses.\n1.5.1 NuScale Testing Programs\nThe following testing programs have been comp leted or are currently in progress. The tests \nfocus on design features of th e NuScale Power Module (NPM) fo r which applicable data or \noperational experience did not previously exist.  Tests specific to th e NuScale fuel design \nare summarized in Section 1.5.1.1 and Section 1 .5.1.2; tests specific to the steam generator \n(SG) are summarized in Section 1.5.1.3 and Sect ion 1.5.1.4; tests specific  to the control rod \nassemblies are summarized in Section 1.5. 1.6 and Section 1.5.1.7; and tests involving \nintegrated system phenomena ar e summarized in Section 1.5.1.5.\n1.5.1.1 Critical Heat Flux Te sting - Preliminary Fuel Design\nThe NPM employs a fuel design for heat generation that is similar to a standard \npressurized water reactor (PWR), with the ex ception of the fuel assembly height and \nthe reactor coolant driving force. The NuScale fuel is approximately half the height of \nstandard PWR fuel and feature s low-flow natural circulatio n of primary coolant rather \nthan pump-driven primary coolant flow. In or der to meet fuel licensing requirements, \ntwo critical heat flux (CHF) test programs were conducted: (1) a test program described \nin this section for the prelim inary fuel design, and (2) a second test program described \nin Section 1.5.1.2 for the final fuel design. The preliminary fuel design test program \nsupported code development and safety an alysis efforts, and provided data for \ndevelopment of NuScale's NSP2 CHF co rrelation for the final fuel design.\nThe NPM reactor core design employs 37 nucl ear fuel assemblies. Each assembly is \ncomposed of a 17x17 square lattice of fu el rods assembled according to a given \nrod-to-rod pitch. Each fuel rod is approximately 2 meters in length. Fuel rods are assembled using spacer grids placed at specified locations along the length of the fuel \nrods such that fuel rods are evenly spaced  and adequately supported. Primary coolant \nenters the NPM reactor core from the bottom  through the core inlet plenum and heat \ntransfer to the coolant occurs as coolant travels upward along the length of the fuel \nassemblies.\nIn off-normal conditions, su ch as anticipated operationa l occurrences and postulated \naccidents, it must be known how close the heat transfer mode is to transitioning to a \nstate where a continuous steam layer covers th e fuel rods or portio ns of the fuel rods. \nThe point at which this transition occurs is  referred to as the CHF point. In order to \ndetermine the CHF point for the reduced- length fuel under appropriate flow \nconditions, a CHF testing program was cond ucted over a wide range of operating \nconditions. In these tests, instrumentation was used to measure key test parameters, \nincluding: resistance temperature dete ctors (RTD), thermocouples, pressure \ntransducers, mass flow rate  instruments, and electrical voltage and current meters. \nThese sensors were used to measure heater ro d temperatures and fluid flow conditions \nat various points of the fluid loop, and the electrical power supplied to heater rods \nwhen CHF occurred. The tests allowed NuScale to obtain fuel bundle subchannel exit ",
+      "summary": "This section outlines the verification and confirmation testing programs for unique design features of the NuScale Power Plant, which provide essential data to support the final safety analyses. It details completed and ongoing tests focused on areas lacking prior data or operational experience, including specific tests for fuel design, steam generator, control rod assemblies, and integrated system phenomena. The section also describes critical heat flux (CHF) testing for both preliminary and final fuel designs to meet licensing requirements and support safety analysis.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "83",
+      "hop": 2,
+      "references": []
+    },
+    "nuscale_ch01_0651": {
+      "node_id": "nuscale_ch01_0651",
+      "title": "DSRS 15.0, Rev 0: Introduction - Transient and Accident AnalysesI.8.A Identification of Causes and Frequency Classification",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-158 Revision 5\nDSRS 15.0, Rev 0: Introduction \n- Transient and Accident AnalysesI.2 Categorization According to \nFrequency of OccurrencePartially Conforms Events that ha ve been historically classified \nas AOOs are not analyzed for frequency of occurrence. Some events that have an IE \nfrequency are also deterministically \nclassified as AOOs.15.0\nDSRS 15.0, Rev 0: Introduction \n- Transient and Accident \nAnalysesI.3 Categorization According to Type Conforms None. 15.0\nDSRS 15.0, Rev 0: Introduction \n- Transient and Accident AnalysesI.4.A\nAnalysis Acceptance Criteria  for AOOs Conforms None. 15.0.0\nDSRS 15.0, Rev 0: Introduction \n- Transient and Accident \nAnalysesI.4.B Analysis Acceptance Criteria for IEs \nand Postulated AccidentsPartially Conforms The guidance is  applicable except for 4.B.ii \nand 4.B.iv. CHF, not DNBR, is used to \ndetermine the thermal margin for the fuel cladding. LOCA acceptance criteria uses an \nacceptance criterion that is more restrictive \nthan the temperature limit of 2,200 degrees F.15.0.0\nDSRS 15.0, Rev 0: Introduction \n- Transient and Accident \nAnalysesI.5 Plant Characteristics Considered in \nthe Safety EvaluationConforms None. 15.0\nDSRS 15.0, Rev 0: Introduction \n- Transient and Accident \nAnalysesI.6 Assumed Protection and Safety \nSystems ActionsConforms None. 15.0\nDSRS 15.0, Rev 0: Introduction \n- Transient and Accident AnalysesI.7 Evaluation of Individual Initiating \nEventsConforms None. 15.0\nDSRS 15.0, Rev 0: Introduction \n- Transient and Accident \nAnalysesI.8.A Identification of Causes and \nFrequency ClassificationConforms None. 15.0\nDSRS 15.0, Rev 0: Introduction \n- Transient and Accident \nAnalysesI.8.B Sequence of Events and Systems \nOperationPartially Conforms\nThis acceptance criterion is applicable \nexcept for Item B.vi, which is applicable to \nCOL applicants.15.0Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for transient and accident analyses, noting areas of full and partial compliance with DSRS 15.0 requirements. It highlights that while most criteria are met, some aspects—such as frequency analysis for AOOs and specific acceptance criteria—only partially conform due to methodological differences or applicability to COL applicants. Overall, the identification of causes and frequency classification is in full conformance.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "286",
+      "hop": 3,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
+    },
+    "nuscale_ch01_0287": {
+      "node_id": "nuscale_ch01_0287",
+      "title": "SRP BTP 8-8, (Feb 2012): Onsite (Emergency Diesel Generators) and Offsite Power Sources Allowed Outage Time ExtensionsAll Various",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-114 Revision 5\nSRP BTP 8-8, (Feb 2012): \nOnsite (Emergency Diesel Generators) and Offsite \nPower Sources Allowed \nOutage Time ExtensionsAll Various Not Applicable\nWith the nonreliance on AC power for \nsafety-related functions, the operating restrictions (i.e., Technical Specifications \nAllowed Outage Times) for inoperable AC \npower sources specified in this guidance are not appropriate to apply.Not Applicable\nSRP BTP 8-9, Rev. 0:  Open \nPhase Conditions in Electric \nPower SystemB.1 Electrical system design to address \nopen phase conditionPartially Conforms None. 8.2.3\nSRP BTP 8-9, Rev. 0:  Open \nPhase Conditions in Electric \nPower SystemB.2 Criteria for evaluating open phase \nconditions for active plant designsNot Applicable Not applicable to passive plant designs. Not Applicable\nSRP BTP 8-9, Rev. 0:  Open \nPhase Conditions in Electric Power SystemB.3 Criteria for evaluating open phase \nconditions for passive plant designsPartially Conforms None. 8.2.3\nSRP 9.1.1, Rev 3: Criticality \nSafety of Fresh and Spent \nFuel Storage and HandlingII.1 Specific Criteria to Meet  GDC 62 Conforms None. 9.1.1.3\n9.1.1.1\nDSRS 9.1.2, Rev 0: New and \nSpent Fuel StorageII.1 Specific Criteria to Meet GDC 2 Conforms None. 9.1.2.1\n9.1.2.3\nDSRS 9.1.2, Rev 0: New and \nSpent Fuel StorageII.2 Specific Criteria to Meet GDC 4 Conforms None. 9.1.2.1\n9.1.2.3\nDSRS 9.1.2, Rev 0: New and \nSpent Fuel StorageII.3 Specific Criteria to Meet GDC 5 Conforms None. 9.1.2.1\n9.1.2.3\nDSRS 9.1.2, Rev 0: New and \nSpent Fuel StorageII.4 Specific Criteria to Meet GDC 61 Conforms An ESF ventilation syst em is not required \n(see RG 1.52).9.1.2.1\n9.1.2.3\nDSRS 9.1.2, Rev 0: New and \nSpent Fuel StorageII.5 Specific Criteria to Meet  GDC 63 Conforms None. 9.1.2.1\n9.1.2.3\n9.1.2.5\nDSRS 9.1.2, Rev 0: New and \nSpent Fuel StorageII.6 Specific Criteria to Meet \n10 CFR 20.1101(b)Conforms None. 9.1.2.1\n9.1.2.2\n9.1.2.3\nDSRS 9.1.2, Rev 0: New and \nSpent Fuel StorageII.7 Criticality Monitors and Subcriticality \nMarginConforms None. 9.1.1Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "The section explains that NuScale’s design does not rely on AC power for safety-related functions, making certain regulatory outage time requirements for emergency diesel generators and offsite power sources inapplicable. It also details the plant’s conformance or partial conformance with various regulatory criteria for electrical systems and fuel storage, noting where requirements are met or not applicable due to the passive design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "242",
+      "hop": 3,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
+    },
+    "nuscale_ch01_0644": {
+      "node_id": "nuscale_ch01_0644",
+      "title": "DSRS 15.0, Rev 0: Introduction - Transient and Accident AnalysesI.2 Categorization According to Frequency of Occurrence",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-158 Revision 5\nDSRS 15.0, Rev 0: Introduction \n- Transient and Accident AnalysesI.2 Categorization According to \nFrequency of OccurrencePartially Conforms Events that ha ve been historically classified \nas AOOs are not analyzed for frequency of occurrence. Some events that have an IE \nfrequency are also deterministically \nclassified as AOOs.15.0\nDSRS 15.0, Rev 0: Introduction \n- Transient and Accident \nAnalysesI.3 Categorization According to Type Conforms None. 15.0\nDSRS 15.0, Rev 0: Introduction \n- Transient and Accident AnalysesI.4.A\nAnalysis Acceptance Criteria  for AOOs Conforms None. 15.0.0\nDSRS 15.0, Rev 0: Introduction \n- Transient and Accident \nAnalysesI.4.B Analysis Acceptance Criteria for IEs \nand Postulated AccidentsPartially Conforms The guidance is  applicable except for 4.B.ii \nand 4.B.iv. CHF, not DNBR, is used to \ndetermine the thermal margin for the fuel cladding. LOCA acceptance criteria uses an \nacceptance criterion that is more restrictive \nthan the temperature limit of 2,200 degrees F.15.0.0\nDSRS 15.0, Rev 0: Introduction \n- Transient and Accident \nAnalysesI.5 Plant Characteristics Considered in \nthe Safety EvaluationConforms None. 15.0\nDSRS 15.0, Rev 0: Introduction \n- Transient and Accident \nAnalysesI.6 Assumed Protection and Safety \nSystems ActionsConforms None. 15.0\nDSRS 15.0, Rev 0: Introduction \n- Transient and Accident AnalysesI.7 Evaluation of Individual Initiating \nEventsConforms None. 15.0\nDSRS 15.0, Rev 0: Introduction \n- Transient and Accident \nAnalysesI.8.A Identification of Causes and \nFrequency ClassificationConforms None. 15.0\nDSRS 15.0, Rev 0: Introduction \n- Transient and Accident \nAnalysesI.8.B Sequence of Events and Systems \nOperationPartially Conforms\nThis acceptance criterion is applicable \nexcept for Item B.vi, which is applicable to \nCOL applicants.15.0Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for transient and accident analyses, noting areas of full and partial compliance with DSRS 15.0 requirements. While most criteria are met, partial conformance is noted for the categorization of events by frequency and certain analysis acceptance criteria, primarily due to differences in classification methods and specific technical approaches (e.g., use of CHF instead of DNBR). The document also highlights that some criteria are only applicable to COL applicants.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "286",
+      "hop": 3,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
+    },
+    "nuscale_ch01_0294": {
+      "node_id": "nuscale_ch01_0294",
+      "title": "DSRS 9.1.2, Rev 0: New and Spent Fuel StorageII.3 Specific Criteria to Meet GDC 5",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-114 Revision 5\nSRP BTP 8-8, (Feb 2012): \nOnsite (Emergency Diesel Generators) and Offsite \nPower Sources Allowed \nOutage Time ExtensionsAll Various Not Applicable\nWith the nonreliance on AC power for \nsafety-related functions, the operating restrictions (i.e., Technical Specifications \nAllowed Outage Times) for inoperable AC \npower sources specified in this guidance are not appropriate to apply.Not Applicable\nSRP BTP 8-9, Rev. 0:  Open \nPhase Conditions in Electric \nPower SystemB.1 Electrical system design to address \nopen phase conditionPartially Conforms None. 8.2.3\nSRP BTP 8-9, Rev. 0:  Open \nPhase Conditions in Electric \nPower SystemB.2 Criteria for evaluating open phase \nconditions for active plant designsNot Applicable Not applicable to passive plant designs. Not Applicable\nSRP BTP 8-9, Rev. 0:  Open \nPhase Conditions in Electric Power SystemB.3 Criteria for evaluating open phase \nconditions for passive plant designsPartially Conforms None. 8.2.3\nSRP 9.1.1, Rev 3: Criticality \nSafety of Fresh and Spent \nFuel Storage and HandlingII.1 Specific Criteria to Meet  GDC 62 Conforms None. 9.1.1.3\n9.1.1.1\nDSRS 9.1.2, Rev 0: New and \nSpent Fuel StorageII.1 Specific Criteria to Meet GDC 2 Conforms None. 9.1.2.1\n9.1.2.3\nDSRS 9.1.2, Rev 0: New and \nSpent Fuel StorageII.2 Specific Criteria to Meet GDC 4 Conforms None. 9.1.2.1\n9.1.2.3\nDSRS 9.1.2, Rev 0: New and \nSpent Fuel StorageII.3 Specific Criteria to Meet GDC 5 Conforms None. 9.1.2.1\n9.1.2.3\nDSRS 9.1.2, Rev 0: New and \nSpent Fuel StorageII.4 Specific Criteria to Meet GDC 61 Conforms An ESF ventilation syst em is not required \n(see RG 1.52).9.1.2.1\n9.1.2.3\nDSRS 9.1.2, Rev 0: New and \nSpent Fuel StorageII.5 Specific Criteria to Meet  GDC 63 Conforms None. 9.1.2.1\n9.1.2.3\n9.1.2.5\nDSRS 9.1.2, Rev 0: New and \nSpent Fuel StorageII.6 Specific Criteria to Meet \n10 CFR 20.1101(b)Conforms None. 9.1.2.1\n9.1.2.2\n9.1.2.3\nDSRS 9.1.2, Rev 0: New and \nSpent Fuel StorageII.7 Criticality Monitors and Subcriticality \nMarginConforms None. 9.1.1Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "The section confirms that the NuScale design fully meets the specific criteria of DSRS 9.1.2, Rev 0, Section II.3, which addresses compliance with General Design Criterion (GDC) 5 for new and spent fuel storage. No exceptions or additional requirements are noted, and relevant details are referenced in sections 9.1.2.1 and 9.1.2.3 of the report.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "242",
+      "hop": 3,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
+    },
+    "nuscale_ch01_0013": {
+      "node_id": "nuscale_ch01_0013",
+      "title": "Proprietary Information",
+      "content": "NuScale Final Safety Analysis Report Introduction\nTier 2 1.1-3 Revision 5Reports for Nuclear Power Plants: LWR Edition”  (SRP). Accordingly, the preparation of \nthis FSAR used the technical guidance provid ed in the DSRS and SRP as the basis for the \nNuScale design. A detailed evaluation of conformance with the NuScale DSRS and the \nSRP is provided in Section 1.9.\n1.1.6.3 Text, Tables, and Figures\nTables and figures are typically identified by  the \"X.Y\" section in which they appear and \nare numbered sequentially. For example, Tabl e 1.1-1 and Figure 1.1-1 would be the first \ntable and figure appearing in Section 1.1. Fi gures consist of diagrams, plots, pictures, \ngraphs, or other illustrations. Tables and fig ures are located at the end of the applicable \n\"X.Y\" section immediately following the text. The exception to this is for large \"X.Y.Z\" \nsections, in which the tables and figures are numbered sequentially in that section. For \nexample, Table 3.9.3-1 and Figure 3.9.3-1 woul d be the first table and figure appearing \nin Section 3.9.3. Again, the tables and figure s are located at the en d of the applicable \nsection intermediately following the text.\n1.1.6.4 Page Numbering\nSection pages are numbered sequentially an d are typically identified by the \"X.Y\" \nsection followed by a sequential number. The exception to this convention is for \nchapter appendices, which are numbered by the chapter number and appendix letter \nfollowed by a sequential number. For example, 3A-1 is the first page of Appendix A to \nChapter 3.\n1.1.6.5 Proprietary Information\nThis FSAR does not contain proprietary or safeguards information. Some portions of \nthis FSAR are classified as sensitive and wi thheld from public di sclosure pursuant to \n10 CFR 2.390 and Regulatory Issue Summary (RIS) 2005-26. Such material is clearly \nmarked and provided with the non-public version of the FSAR. A separate public \nversion of the FSAR is provided that remo ves the withheld material. Proprietary or \nsafeguards information that is necessary for the complete review of the design \ncertification is provided to the NRC separa tely in the form of topical or technical \nreports. Topical and technical reports that ar e incorporated by reference are listed in \nTables 1.6-1 and 1.6-2, respectively.\n1.1.6.6 Acronyms and Abbreviations\nA list of acronyms and abbreviations used in this FSAR is provided in Table 1.1-1, \nAcronyms and Abbreviations.\n\n--- Referenced Tables (structured) ---\n[Table 1.1-1: Acronyms and Abbreviations (Continued)]\nAcronym or\nAbbreviation | Description\nWSW | wet solid waste\nWTB | Waste Treatment Building\nZOI | Zone of Influence\nZPA | zero period acceleration",
+      "summary": "This section explains the organization and identification of text, tables, figures, and page numbering within the NuScale Final Safety Analysis Report (FSAR). It also clarifies that while the FSAR does not contain proprietary or safeguards information, some sensitive content is withheld from public disclosure in accordance with regulations, and a separate public version is provided with such material removed.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "10",
+      "hop": 4,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.1-1",
+          "page": 25,
+          "caption": "Acronyms and Abbreviations (Continued)",
+          "structured_text": "Acronym or\nAbbreviation | Description\nWSW | wet solid waste\nWTB | Waste Treatment Building\nZOI | Zone of Influence\nZPA | zero period acceleration"
+        }
+      ]
+    },
+    "nuscale_ch01_0470": {
+      "node_id": "nuscale_ch01_0470",
+      "title": "DSRS 11.2, Rev 0: Liquid Waste Management SystemII.3 Seismic Design of Structures Housing Liquid Waste Management System Components",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-139 Revision 5\nDSRS 11.1, Rev 0: Coolant \nSource TermsII.11 If neutron activation products are \nexpected in reactor pool water and secondary coolantConforms None. 11.1\nDSRS 11.1, Rev 0: Coolant \nSource TermsII.12\n10 CFR 50.34(b)(3), 10 CFR 50.34a, \nand 10 CFR 52.79(a)(3).Partially Conforms The NuScale design is similar to large PWRs \nin the existing fleet for effluent release \ncalculations. However, an alternate methodology is used because the existing \nPWRGALE code was developed in the 1980s \nfor evaluation of the large PWR reactors of that time and does not address the NuScale \nplant design.11.1\nDSRS 11.1, Rev 0: Coolant \nSource TermsII.13 The design basis coolant source term \nis based on a combination of assumptions of failed fuel fractionsPartially Conforms\nThe design basis coolant source term for \nNuScale is partially based on a failed fuel fraction much less than 0.25 percent, which \nis described in NuScale’s Technical Report, \nEffluent Release (GALE Replacement) Methodology and Results, Revision 0 \n(TR-1116-52065).11.1\nDSRS 11.1, Rev 0: Coolant \nSource TermsII.14\ncalculational technique or any source \nterm parameterConforms None. 11.1\nDSRS 11.2, Rev 0: Liquid \nWaste Management SystemII.1 Capability to Meet Dose Design \nObjectivesPartially Conforms This acceptance criterion is applicable \nexcept for aspects that are related to \nperformance of a site-specific cost-benefit \nanalysis, which is the responsibility of the COL applicant.11.2.3\nDSRS 11.2, Rev 0: Liquid \nWaste Management SystemII.2 Design for Anticipated Processing \nRequirementsConforms None. 11.2.2\nDSRS 11.2, Rev 0: Liquid \nWaste Management SystemII.3 Seismic Design of Structures Housing \nLiquid Waste Management System ComponentsConforms None. 11.2.2\nDSRS 11.2, Rev 0: Liquid \nWaste Management SystemII.4 Provisions to Control Leakage and \nFacilitate Operation and MaintenanceConforms None. 11.2.2\nDSRS 11.2, Rev 0: Liquid \nWaste Management SystemII.5 Automatic control features Conforms None. 11.2\n11.511.6Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for the seismic design of structures housing Liquid Waste Management System components. It states that the NuScale design conforms to the requirements for seismic design, with no exceptions noted. The relevant details are referenced in section 11.2.2 of the report.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "267",
+      "hop": 4,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
+    },
+    "nuscale_ch01_0012": {
+      "node_id": "nuscale_ch01_0012",
+      "title": "Page Numbering",
+      "content": "NuScale Final Safety Analysis Report Introduction\nTier 2 1.1-3 Revision 5Reports for Nuclear Power Plants: LWR Edition”  (SRP). Accordingly, the preparation of \nthis FSAR used the technical guidance provid ed in the DSRS and SRP as the basis for the \nNuScale design. A detailed evaluation of conformance with the NuScale DSRS and the \nSRP is provided in Section 1.9.\n1.1.6.3 Text, Tables, and Figures\nTables and figures are typically identified by  the \"X.Y\" section in which they appear and \nare numbered sequentially. For example, Tabl e 1.1-1 and Figure 1.1-1 would be the first \ntable and figure appearing in Section 1.1. Fi gures consist of diagrams, plots, pictures, \ngraphs, or other illustrations. Tables and fig ures are located at the end of the applicable \n\"X.Y\" section immediately following the text. The exception to this is for large \"X.Y.Z\" \nsections, in which the tables and figures are numbered sequentially in that section. For \nexample, Table 3.9.3-1 and Figure 3.9.3-1 woul d be the first table and figure appearing \nin Section 3.9.3. Again, the tables and figure s are located at the en d of the applicable \nsection intermediately following the text.\n1.1.6.4 Page Numbering\nSection pages are numbered sequentially an d are typically identified by the \"X.Y\" \nsection followed by a sequential number. The exception to this convention is for \nchapter appendices, which are numbered by the chapter number and appendix letter \nfollowed by a sequential number. For example, 3A-1 is the first page of Appendix A to \nChapter 3.\n1.1.6.5 Proprietary Information\nThis FSAR does not contain proprietary or safeguards information. Some portions of \nthis FSAR are classified as sensitive and wi thheld from public di sclosure pursuant to \n10 CFR 2.390 and Regulatory Issue Summary (RIS) 2005-26. Such material is clearly \nmarked and provided with the non-public version of the FSAR. A separate public \nversion of the FSAR is provided that remo ves the withheld material. Proprietary or \nsafeguards information that is necessary for the complete review of the design \ncertification is provided to the NRC separa tely in the form of topical or technical \nreports. Topical and technical reports that ar e incorporated by reference are listed in \nTables 1.6-1 and 1.6-2, respectively.\n1.1.6.6 Acronyms and Abbreviations\nA list of acronyms and abbreviations used in this FSAR is provided in Table 1.1-1, \nAcronyms and Abbreviations.\n\n--- Referenced Tables (structured) ---\n[Table 1.1-1: Acronyms and Abbreviations (Continued)]\nAcronym or\nAbbreviation | Description\nWSW | wet solid waste\nWTB | Waste Treatment Building\nZOI | Zone of Influence\nZPA | zero period acceleration",
+      "summary": "Tables and figures in the FSAR are numbered sequentially within each section and placed at the end of their respective sections. Pages are also numbered sequentially by section, with appendices using a chapter and appendix letter format (e.g., 3A-1 for Appendix A of Chapter 3).",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "10",
+      "hop": 4,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.1-1",
+          "page": 25,
+          "caption": "Acronyms and Abbreviations (Continued)",
+          "structured_text": "Acronym or\nAbbreviation | Description\nWSW | wet solid waste\nWTB | Waste Treatment Building\nZOI | Zone of Influence\nZPA | zero period acceleration"
+        }
+      ]
+    },
+    "nuscale_ch01_0466": {
+      "node_id": "nuscale_ch01_0466",
+      "title": "DSRS 11.1, Rev 0: Coolant Source TermsII.13 The design basis coolant source term is based on a combination of assumptions of failed fuel fractions",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-139 Revision 5\nDSRS 11.1, Rev 0: Coolant \nSource TermsII.11 If neutron activation products are \nexpected in reactor pool water and secondary coolantConforms None. 11.1\nDSRS 11.1, Rev 0: Coolant \nSource TermsII.12\n10 CFR 50.34(b)(3), 10 CFR 50.34a, \nand 10 CFR 52.79(a)(3).Partially Conforms The NuScale design is similar to large PWRs \nin the existing fleet for effluent release \ncalculations. However, an alternate methodology is used because the existing \nPWRGALE code was developed in the 1980s \nfor evaluation of the large PWR reactors of that time and does not address the NuScale \nplant design.11.1\nDSRS 11.1, Rev 0: Coolant \nSource TermsII.13 The design basis coolant source term \nis based on a combination of assumptions of failed fuel fractionsPartially Conforms\nThe design basis coolant source term for \nNuScale is partially based on a failed fuel fraction much less than 0.25 percent, which \nis described in NuScale’s Technical Report, \nEffluent Release (GALE Replacement) Methodology and Results, Revision 0 \n(TR-1116-52065).11.1\nDSRS 11.1, Rev 0: Coolant \nSource TermsII.14\ncalculational technique or any source \nterm parameterConforms None. 11.1\nDSRS 11.2, Rev 0: Liquid \nWaste Management SystemII.1 Capability to Meet Dose Design \nObjectivesPartially Conforms This acceptance criterion is applicable \nexcept for aspects that are related to \nperformance of a site-specific cost-benefit \nanalysis, which is the responsibility of the COL applicant.11.2.3\nDSRS 11.2, Rev 0: Liquid \nWaste Management SystemII.2 Design for Anticipated Processing \nRequirementsConforms None. 11.2.2\nDSRS 11.2, Rev 0: Liquid \nWaste Management SystemII.3 Seismic Design of Structures Housing \nLiquid Waste Management System ComponentsConforms None. 11.2.2\nDSRS 11.2, Rev 0: Liquid \nWaste Management SystemII.4 Provisions to Control Leakage and \nFacilitate Operation and MaintenanceConforms None. 11.2.2\nDSRS 11.2, Rev 0: Liquid \nWaste Management SystemII.5 Automatic control features Conforms None. 11.2\n11.511.6Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "The design basis coolant source term for NuScale is partially based on a failed fuel fraction significantly less than 0.25 percent, as detailed in their technical report on effluent release methodology. This approach differs from traditional large PWRs, using an alternate methodology since existing codes do not address the NuScale plant design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "267",
+      "hop": 4,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0036",
+      "source": "nuscale_ch01_0438",
       "target": "nuscale_ch01_0309",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A describes the operational process of refueling a NuScale reactor module, while Section B lists regulatory criteria and conformance statements related to refueling systems but does not specify the refueling interval, so Section A provides operational details that Section B's regulatory context governs."
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section B addresses the design and regulatory criteria for the refueling cavity and handling systems, which are prerequisites for determining the operational refueling interval discussed in the analysis question, while Section A does not provide information relevant to refueling intervals."
     },
     {
       "source": "nuscale_ch01_0438",
       "target": "nuscale_ch01_0439",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A addresses maintaining water quality in direct cycle BWRs to prevent corrosion, while Section B addresses the same objective for indirect cycle PWRs, both referencing GDC 14 and the NuScale FSAR's conformance with regulatory criteria."
-    },
-    {
-      "source": "nuscale_ch01_0438",
-      "target": "nuscale_ch01_0051",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A discusses regulatory criteria and conformance related to systems affecting reactor operation and maintenance, while Section B describes the physical plant features (such as the Central Utility Building) that support those systems, connecting them through the provision and maintenance of utility services necessary for refueling operations."
+      "description": "Section A addresses maintaining water quality in direct cycle BWRs to prevent corrosion, while Section B addresses the same objective for indirect cycle PWRs, both referencing GDC 14 and the NuScale FSAR's conformance with regulatory criteria, thus specifying different technical details for similar regulatory requirements."
     },
     {
       "source": "nuscale_ch01_0309",
       "target": "nuscale_ch01_0018",
-      "relation": "SUPPORTS",
+      "relation": "SEMANTIC",
       "confidence": 0.7,
-      "description": "Section A outlines regulatory criteria and conformance for refueling and handling systems, while Section B provides a general plant and system description, with both sections connected through their reference to the design and operational features relevant to refueling operations."
+      "description": "Section A discusses regulatory criteria and conformance related to refueling systems, while Section B provides a general plant description including the reactor core layout, with both sections connected by their relevance to understanding the refueling process but without directly specifying the refueling interval."
     },
     {
-      "source": "nuscale_ch01_0439",
-      "target": "nuscale_ch01_0051",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A discusses regulatory criteria and conformance related to water quality and system materials, while Section B describes the Central Utility Building's features, including chemical treatment equipment for demineralized water, which supports maintaining water quality as required in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0054",
+      "source": "nuscale_ch01_0309",
       "target": "nuscale_ch01_0036",
-      "relation": "SUPPORTS",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines regulatory criteria and conformance requirements for refueling systems, while Section B describes the actual refueling operations process for the NuScale reactor, with Section B providing the operational details that Section A's criteria are intended to govern."
+    },
+    {
+      "source": "nuscale_ch01_0018",
+      "target": "nuscale_ch01_0024",
+      "relation": "SEMANTIC",
       "confidence": 0.7,
-      "description": "Section A describes testing programs that support the safety analysis of unique design features, while Section B details the operational procedures for refueling, with both sections connected by the need for verified design features (from Section A) to ensure safe and effective refueling operations (in Section B)."
+      "description": "Section A describes the general plant and core design, while Section B details the emergency core cooling system, both providing context for reactor operation but neither directly addresses the refueling interval; their relationship is that both describe different subsystems of the NuScale reactor relevant to overall plant safety and operation."
     },
     {
-      "source": "nuscale_ch01_0054",
-      "target": "nuscale_ch01_0309",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.8,
-      "description": "Section A outlines testing programs for unique design features supporting the safety analysis, while Section B lists regulatory criteria and conformance statements for systems including the refueling cavity, connecting them through the need for technical verification to meet regulatory requirements."
-    },
-    {
-      "source": "nuscale_ch01_0055",
+      "source": "nuscale_ch01_0018",
       "target": "nuscale_ch01_0036",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A describes testing programs that support the safety analysis of the NuScale Power Plant, while Section B details the operational procedures for refueling, with both sections connected through the verification of design features that enable safe refueling operations."
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides a general description of the plant and its systems, while Section B details the specific procedures for refueling operations, with Section B elaborating on operational aspects that are only broadly referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0700",
+      "target": "nuscale_ch01_0018",
+      "relation": "SEMANTIC",
+      "confidence": 0.6,
+      "description": "Section A discusses analytical parameters such as core burnup relevant to safety analysis, while Section B provides a general plant and system description, with both sections referencing aspects of the reactor core but not directly addressing or specifying the refueling interval."
     },
     {
       "source": "nuscale_ch01_0055",
@@ -242,274 +400,148 @@
       "source": "nuscale_ch01_0055",
       "target": "nuscale_ch01_0309",
       "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A describes testing programs that support the safety analysis of the NuScale reactor, while Section B lists regulatory criteria and conformance statements related to refueling systems, connecting them through the verification of compliance with refueling-related requirements."
-    },
-    {
-      "source": "nuscale_ch01_0054",
-      "target": "nuscale_ch01_0056",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section B provides specific details about the critical heat flux testing program, which is one of the verification and confirmation tests generally described in Section A as supporting the safety analysis for the NuScale Power Plant."
-    },
-    {
-      "source": "nuscale_ch01_0054",
-      "target": "nuscale_ch01_0055",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A introduces the requirements for additional technical information and references the NuScale testing programs, which are then detailed in Section B as part of the same document and context."
-    },
-    {
-      "source": "nuscale_ch01_0121",
-      "target": "nuscale_ch01_0036",
-      "relation": "SPECIFIES",
       "confidence": 0.8,
-      "description": "Section A provides a general overview of regulatory conformance, while Section B describes the specific refueling operations for the NuScale reactor, with Section B offering operational details that could be referenced or assessed for regulatory compliance as outlined in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0121",
-      "target": "nuscale_ch01_0438",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides an overview and guide to the conformance tables, while Section B contains specific entries from those tables showing how the NuScale design conforms to particular SRP requirements."
-    },
-    {
-      "source": "nuscale_ch01_0121",
-      "target": "nuscale_ch01_0309",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A references Section B by listing SRP 9.1.4 as one of the regulatory criteria for which conformance is assessed in the NuScale FSAR."
-    },
-    {
-      "source": "nuscale_ch01_0684",
-      "target": "nuscale_ch01_0036",
-      "relation": "LEADS_TO",
-      "confidence": 0.85,
-      "description": "Section A discusses core burnup assumptions relevant to safety analysis, which are directly influenced by the refueling interval described in Section B, as the frequency of refueling determines the achievable core burnup."
-    },
-    {
-      "source": "nuscale_ch01_0684",
-      "target": "nuscale_ch01_0438",
-      "relation": "SEMANTIC",
-      "confidence": 0.6,
-      "description": "Section A discusses core burnup assumptions relevant to accident analysis, while Section B outlines regulatory requirements for system materials and water quality, both of which are indirectly related through their influence on operational parameters such as refueling interval, but neither section directly specifies the refueling interval for the NuScale reactor."
+      "description": "Section A describes testing programs that generate data to support the safety analysis, while Section B lists regulatory criteria and conformance statements that the NuScale FSAR must meet, indicating that the testing results from A are intended to demonstrate compliance with the requirements in B."
     },
     {
       "source": "nuscale_ch01_0684",
       "target": "nuscale_ch01_0309",
       "relation": "SUPPORTS",
       "confidence": 0.7,
-      "description": "Section A discusses core burnup assumptions relevant to accident analysis, while Section B outlines criteria for refueling cavity design, both of which are connected through the operational cycle length that determines refueling interval and affects both burnup and refueling system requirements."
+      "description": "Section A discusses core burnup assumptions relevant to accident analysis, while Section B outlines criteria for refueling cavity design, both of which are connected through the operational cycle length that determines refueling interval and thus affects both burnup and refueling system requirements."
     },
     {
-      "source": "nuscale_ch01_0074",
-      "target": "nuscale_ch01_0438",
-      "relation": "SPECIFIES",
+      "source": "nuscale_ch01_0700",
+      "target": "nuscale_ch01_0055",
+      "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A describes the overall process and tables for assessing conformance with regulatory criteria, while Section B provides specific conformance statements for individual SRP sections, with both sections connected by the use of conformance tables to regulatory requirements."
+      "description": "Section A lists analytical parameters, including core burnup, used in safety analysis, while Section B describes testing programs that provide data to support these safety analyses, indicating that the tests in B generate evidence for the parameters in A."
     },
     {
-      "source": "nuscale_ch01_0074",
+      "source": "nuscale_ch01_0700",
+      "target": "nuscale_ch01_0684",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Both Section A and Section B reference 'Core Burnup' as an analytical parameter or assumption in their respective accident analyses, indicating that the same core burnup value or methodology is used across different safety evaluations."
+    },
+    {
+      "source": "nuscale_ch01_0700",
+      "target": "nuscale_ch01_0054",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides analytical parameters, including core burnup, used in safety analysis, while Section B outlines the need for verification and confirmation tests to support such safety analyses, indicating that the analytical parameters in A are supported by the testing requirements in B."
+    },
+    {
+      "source": "nuscale_ch01_0055",
+      "target": "nuscale_ch01_0684",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes testing programs that provide data to support the safety analysis, while Section B lists regulatory assumptions (such as core burnup) that the safety analysis must conform to, indicating that the testing in A supports demonstrating conformance with the requirements in B."
+    },
+    {
+      "source": "nuscale_ch01_0684",
+      "target": "nuscale_ch01_0054",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A provides specific safety analysis assumptions (such as core burnup) that are supported by the verification and confirmation testing programs described in Section B, which are intended to provide data for the final safety analyses."
+    },
+    {
+      "source": "nuscale_ch01_0651",
+      "target": "nuscale_ch01_0644",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references Section B's content on categorization according to frequency of occurrence when discussing NuScale's conformance with regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0287",
+      "target": "nuscale_ch01_0294",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A and Section B both reference the inapplicability of SRP BTP 8-8 guidance on AC power source outage times to the NuScale design, due to its nonreliance on AC power for safety-related functions."
+    },
+    {
+      "source": "nuscale_ch01_0013",
+      "target": "nuscale_ch01_0438",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A explains that the FSAR uses the SRP and DSRS as technical guidance for the NuScale design, while Section B provides specific instances of how the NuScale FSAR demonstrates conformance with particular SRP sections."
+    },
+    {
+      "source": "nuscale_ch01_0013",
       "target": "nuscale_ch01_0309",
       "relation": "REFERENCES",
       "confidence": 0.95,
-      "description": "Section A references Section B by listing SRP 9.1.4 as one of the regulatory guides with which conformance is assessed in the NuScale FSAR, connecting the general process of regulatory conformance (A) to the specific criteria and requirements in SRP 9.1.4 (B)."
+      "description": "Section A explains that the FSAR uses the SRP (including SRP 9.1.4, referenced in Section B) as technical guidance for the NuScale design, and Section B lists specific SRP sections and their conformance status in the FSAR."
+    },
+    {
+      "source": "nuscale_ch01_0012",
+      "target": "nuscale_ch01_0438",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A describes the general structure and referencing system of the FSAR, while Section B provides specific conformance statements to SRP sections, with both sections connected by the FSAR's use of SRP guidance as referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0012",
+      "target": "nuscale_ch01_0309",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section A describes the general structure and referencing system of the FSAR, while Section B lists specific regulatory criteria (such as SRP 9.1.4) and their conformance status within the FSAR, showing how the FSAR references and addresses these criteria."
+    },
+    {
+      "source": "nuscale_ch01_0466",
+      "target": "nuscale_ch01_0438",
+      "relation": "SEMANTIC",
+      "confidence": 0.4,
+      "description": "Section A discusses coolant source term assumptions and regulatory conformance for the NuScale reactor, while Section B addresses water quality and material requirements for reactor systems, both referencing regulatory criteria but neither directly providing nor specifying the refueling interval; thus, they are related only by their general regulatory context."
     },
     {
       "source": "nuscale_ch01_0466",
       "target": "nuscale_ch01_0309",
       "relation": "SUPPORTS",
       "confidence": 0.7,
-      "description": "Section A discusses coolant source terms and regulatory conformance related to reactor operation, while Section B addresses refueling systems and criteria for safe fuel handling, both of which are connected through their relevance to the operational cycle and safety requirements that influence the determination of the refueling interval."
+      "description": "Section A discusses coolant source terms and regulatory conformance related to reactor operation, while Section B addresses refueling cavity design and criteria for safe fuel handling, both of which are operationally connected since the refueling interval depends on fuel management and handling system capabilities described in Section B and the operational assumptions in Section A."
     },
     {
-      "source": "nuscale_ch01_0287",
-      "target": "nuscale_ch01_0036",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section B describes the refueling operations for the NuScale reactor, while Section A discusses the inapplicability of certain AC power source outage time restrictions during such operations, connecting them through the operational context of refueling and associated regulatory requirements."
+      "source": "nuscale_ch01_0466",
+      "target": "nuscale_ch01_0018",
+      "relation": "SEMANTIC",
+      "confidence": 0.6,
+      "description": "Section A discusses regulatory criteria and methodologies for coolant source terms, while Section B provides a general plant and system description, with both sections connected by their focus on reactor design features relevant to operational parameters such as refueling interval."
+    },
+    {
+      "source": "nuscale_ch01_0013",
+      "target": "nuscale_ch01_0470",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A explains that the NuScale FSAR uses the DSRS and SRP as technical guidance for its design, while Section B provides specific examples of how the FSAR demonstrates conformance with DSRS requirements, thus Section A establishes the general approach that is exemplified in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0013",
+      "target": "nuscale_ch01_0466",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A explains that the FSAR uses the DSRS and SRP as the technical basis for the NuScale design, while Section B provides specific DSRS regulatory criteria and the FSAR's conformance statements, showing that Section A's general approach is detailed and applied in Section B."
     },
     {
       "source": "nuscale_ch01_0470",
-      "target": "nuscale_ch01_0036",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A discusses regulatory conformance and methodologies for effluent release calculations, which are influenced by operational parameters such as refueling intervals described in Section B, where the refueling process for NuScale modules is outlined."
+      "target": "nuscale_ch01_0012",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references Section B by indicating that detailed evaluations of conformance with DSRS and SRP, which are discussed in Section 1.9 (mentioned in Section B), are used as the basis for the NuScale design."
     },
     {
-      "source": "nuscale_ch01_0294",
-      "target": "nuscale_ch01_0309",
-      "relation": "SEMANTIC",
-      "confidence": 0.6,
-      "description": "Section A and Section B both reference NuScale's conformance with regulatory criteria for fuel storage and handling systems, but neither provides information about the refueling interval, so they are related only by their general subject matter."
-    },
-    {
-      "source": "nuscale_ch01_0700",
-      "target": "nuscale_ch01_0036",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A provides analytical parameters such as core burnup relevant to safety analysis, while Section B describes the physical process and logistics of refueling operations, with core burnup from Section A influencing the timing and necessity of the refueling interval discussed in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0700",
-      "target": "nuscale_ch01_0438",
-      "relation": "SEMANTIC",
-      "confidence": 0.5,
-      "description": "Section A discusses analytical parameters such as core burnup relevant to accident analysis, while Section B addresses water quality and material requirements for system integrity, both of which are indirectly related to refueling interval through their impact on fuel cycle and operational safety, but neither section directly specifies the refueling interval."
-    },
-    {
-      "source": "nuscale_ch01_0700",
-      "target": "nuscale_ch01_0309",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.8,
-      "description": "Section B (SRP 9.1.4) establishes criteria for the refueling cavity design, which is a prerequisite for determining operational parameters such as the refueling interval discussed in Section A's analytical parameters."
-    },
-    {
-      "source": "nuscale_ch01_0121",
-      "target": "nuscale_ch01_0684",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A provides a general framework and tables for assessing conformance with regulatory criteria, while Section B presents specific conformance statements for DSRS 15.1.5 assumptions (including core burnup), referencing the structure established in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0121",
+      "source": "nuscale_ch01_0470",
       "target": "nuscale_ch01_0466",
       "relation": "REFERENCES",
       "confidence": 0.85,
-      "description": "Section A provides a summary table indicating the NuScale FSAR's conformance with regulatory criteria, including DSRS 11.1 referenced in Section B, which specifies requirements for coolant source term assumptions relevant to operational parameters such as refueling interval."
+      "description": "Section A references regulatory conformance statements and methodologies for effluent release calculations that are further detailed and specified in Section B's discussion of coolant source term assumptions and regulatory criteria."
     },
     {
-      "source": "nuscale_ch01_0121",
-      "target": "nuscale_ch01_0287",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A provides a general framework for assessing conformance with regulatory criteria, while Section B gives a specific example of how a particular regulatory guide (SRP BTP 8-8) is addressed in the NuScale FSAR, indicating its applicability and rationale."
-    },
-    {
-      "source": "nuscale_ch01_0121",
-      "target": "nuscale_ch01_0470",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A provides a general framework and tables for assessing conformance with regulatory criteria, while Section B contains specific conformance statements for particular regulatory requirements, with both sections connected through the use of conformance tables referenced in Section A and exemplified in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0121",
-      "target": "nuscale_ch01_0294",
-      "relation": "REFERENCES",
-      "confidence": 0.85,
-      "description": "Section A provides a general guide to regulatory conformance and references specific tables where conformance to criteria like those in Section B (e.g., DSRS 9.1.2) is assessed, indicating that Section A structurally references or organizes the detailed criteria found in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0121",
-      "target": "nuscale_ch01_0700",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides the overall framework and tables for assessing conformance with regulatory criteria, while Section B presents specific conformance details for analytical parameters (including core burnup) as referenced in those tables."
-    },
-    {
-      "source": "nuscale_ch01_0684",
-      "target": "nuscale_ch01_0074",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A provides specific assumptions (such as core burnup) used in accident analyses, while Section B outlines the general framework and tables for demonstrating conformance with regulatory criteria, indicating that the assumptions in Section A are detailed elements supporting the broader conformance claims in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0684",
+      "source": "nuscale_ch01_0012",
       "target": "nuscale_ch01_0466",
-      "relation": "LEADS_TO",
-      "confidence": 0.85,
-      "description": "Section A discusses core burnup assumptions, which directly influence the failed fuel fractions and activation product assumptions used in Section B to determine the design basis coolant source term."
-    },
-    {
-      "source": "nuscale_ch01_0684",
-      "target": "nuscale_ch01_0294",
-      "relation": "SEMANTIC",
-      "confidence": 0.7,
-      "description": "Section A discusses core burnup assumptions relevant to accident analysis, while Section B outlines criteria for new and spent fuel storage, both of which are indirectly connected through the operational cycle length that determines refueling interval and affects both core burnup and fuel storage needs."
-    },
-    {
-      "source": "nuscale_ch01_0684",
-      "target": "nuscale_ch01_0700",
-      "relation": "SEMANTIC",
-      "confidence": 0.7,
-      "description": "Both Section A and Section B reference core burnup assumptions as analytical parameters in their respective accident analyses, indicating they use similar core operating characteristics but do not directly address or specify the refueling interval."
-    },
-    {
-      "source": "nuscale_ch01_0074",
-      "target": "nuscale_ch01_0466",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A provides a general overview and guide to regulatory conformance tables, while Section B presents specific conformance details for DSRS 11.1, with both sections connected through the use of conformance status tables referenced in Section A and exemplified in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0074",
-      "target": "nuscale_ch01_0287",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A provides a general framework for assessing conformance with regulatory criteria, while Section B gives a specific example of how a particular regulatory guide (SRP BTP 8-8) is addressed in the NuScale FSAR, indicating its applicability status."
-    },
-    {
-      "source": "nuscale_ch01_0074",
-      "target": "nuscale_ch01_0470",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general guide to regulatory conformance tables, while Section B presents specific conformance details for DSRS 11.2 and related criteria, with Section B serving as an example of the detailed content referenced by Section A."
-    },
-    {
-      "source": "nuscale_ch01_0074",
-      "target": "nuscale_ch01_0294",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A provides a general guide to regulatory conformance and references specific tables where detailed criteria, such as those in Section B, are addressed, while Section B contains the specific regulatory criteria (e.g., DSRS 9.1.2) that Section A claims conformance with."
-    },
-    {
-      "source": "nuscale_ch01_0074",
-      "target": "nuscale_ch01_0700",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides the general framework and tables for assessing conformance with regulatory criteria, while Section B presents specific analytical parameters (including core burnup) and their conformance status as detailed in those tables."
-    },
-    {
-      "source": "nuscale_ch01_0466",
-      "target": "nuscale_ch01_0470",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A and Section B both reference the same regulatory criteria (DSRS 11.1, Rev 0: Coolant Source TermsII.11 and II.12) and discuss conformance with these requirements in the context of the NuScale reactor's design, specifically regarding effluent release calculations and the presence of neutron activation products."
-    },
-    {
-      "source": "nuscale_ch01_0466",
-      "target": "nuscale_ch01_0700",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section B provides analytical parameters such as core burnup, which are necessary inputs for the source term calculations described in Section A, thereby linking operational assumptions to radiological analysis."
-    },
-    {
-      "source": "nuscale_ch01_0287",
-      "target": "nuscale_ch01_0294",
-      "relation": "REFERENCES",
-      "confidence": 0.9,
-      "description": "Section A and Section B both reference the inapplicability of SRP BTP 8-8 guidance on AC power source outage times to the NuScale design due to its nonreliance on AC power for safety-related functions, but neither provides information about the refueling interval."
-    },
-    {
-      "source": "nuscale_ch01_0294",
-      "target": "nuscale_ch01_0700",
-      "relation": "SPECIFIES",
-      "confidence": 0.7,
-      "description": "Section A discusses fuel storage and regulatory criteria, while Section B provides analytical parameters such as core burnup, which is a key factor in determining the refueling interval, thus Section B provides specific technical details relevant to the general topic in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0052",
-      "target": "nuscale_ch01_0036",
-      "relation": "SPECIFIES",
-      "confidence": 0.7,
-      "description": "Section A provides a comparative overview of design features and parameters, which may include the refueling interval, while Section B describes the specific refueling operations for the NuScale reactor, thus Section A's nominal values could be contextualized or specified by the operational details in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0052",
-      "target": "nuscale_ch01_0309",
-      "relation": "SEMANTIC",
-      "confidence": 0.8,
-      "description": "Section A provides nominal design values for the NuScale reactor, which may include the refueling interval, while Section B lists regulatory criteria and conformance statements but does not specify the refueling interval itself; thus, Section A contains the relevant information that Section B does not address directly."
+      "description": "Section A describes the general structure and referencing system of the NuScale FSAR, while Section B provides specific content from the FSAR that demonstrates conformance with DSRS 11.1 regulatory criteria, showing that Section A's referencing system is used to organize and locate the detailed regulatory conformance information found in Section B."
     }
   ]
 }

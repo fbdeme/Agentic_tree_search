@@ -2,91 +2,841 @@
   "question": "Compare the NuScale RPV dimensions from Table 5.3-1 with the visual representation in Figure 5.3-1.",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0017": {
-      "node_id": "nuscale_ch05_0017",
-      "title": "Reactor Vessel Integrity",
-      "summary": "This section outlines the procedures and regulatory compliance measures in place to ensure the integrity of the NuScale reactor vessel throughout its 60-year design life. It details the development of operating procedures to prevent exceeding pressure-temperature limits, evaluates the vessel’s resistance to pressurized thermal shock and upper-shelf energy degradation, and confirms that all criteria remain within regulatory limits under anticipated operating conditions.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "73",
-      "hop": 1
-    },
     "nuscale_ch05_0014": {
       "node_id": "nuscale_ch05_0014",
       "title": "Reactor Vessel",
+      "content": "NuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-1 Revision 55.3 Reactor Vessel\nA NuScale Power Module (NPM) consists of a re actor core, two steam generators (SGs), and a \npressurizer all contained within a single reacto r pressure vessel (RPV ), with a containment \nvessel (CNV) that surrounds th e RPV. Each NPM includes the piping located between the RPV \nand the CNV. \nThe RPV is a pressure retaining vessel component of the reactor coolant system (RCS). The RCS \nis described in Section 5.1 and Section 5.2. The RP V metal vessel that form s part of the reactor \ncoolant pressure boundary (RCPB) is a barrier  to the release of fission products. The RPV \ncontains the reactor core, reacto r vessel internals, steam genera tors (SGs), pressurizer, and \nreactor coolant volume. The SGs are part of the RPV component. The RPV is supported laterally \nand vertically by the CNV. The RPV provides su pport and attachment locations for the control \nrod drive mechanisms (CRDMs), the CRDM se ismic support structure, pressurizer heater \nbundles, in-core instrumentation, steam generato r system piping, RCS piping, reactor safety \nvalves (RSVs), reactor vent valves, and reactor re circulation valves. The RPV, which includes the \nSGs, is certified and stamped in accordance wi th Article NCA-8000 of AS ME BPVC, Section III. \nThe reactor vessel is shown in Figure 5.3-1 and design parameters are presented in Table 5.3-1.\n5.3.1 Reactor Vessel Materials\n5.3.1.1 Material Specifications \nThe materials and applicable specifications  used in the RPV and appurtenances are \nshown in Table 5.2-4. \nThe RPV materials are selected and fabricated  to maintain RCPB integrity for the plant \ndesign lifetime. Bolting materials, pressure  retaining base materials, and weld filler \nmaterials are selected from the ASME Boiler and Pressure Vessel Code (BPVC), Section II \nand comply with Article NB-2000 of ASME BPVC, Section III (Reference 5.3-1). In \naddition, the fracture toughness properties  of the ferritic RCPB pressure-retaining \nmaterials comply with the requir ements of 10 CFR 50, Appendix G.\nThe RCPB materials comply with the re levant requirements of the following \nregulations:\n• 10 CFR 50, Appendix A\n− GDC 1 and 30 - The RPV is designed, fabr icated, and tested as ASME BPVC Class \n1 to the highest quality standards in  accordance with Quality Assurance \nProgram described in Chapter 17.\n− GDC 4 - The RPV is designed and fabricated to be compatible with \nenvironmental conditions of the reacto r coolant and containment atmosphere.\n− GDC 14 and 31 - The RPV is designed and fabricated with sufficient margin to \nassure the RCPB behaves in a non-brittle manner and to minimize the \nprobability of rapidly pr opagating fracture and gr oss rupture of the RCPB. \n• Appendix G to 10 CFR 50 - The RPV materi als are tested and meet applicable \nfracture toughness acceptance criteria.\n\n--- Referenced Tables (structured) ---\n[Table 5.2-4: Reactor Coolant Pressure Boundary Component and Support Materials]\nCRDM | Pressure Retaining Components\nLatch housing\nRod travel housing\nRod travel housing Plug | SA-965 | Grade F304LN\n[Table 5.3-1: Reactor Vessel Parameters]\nDesign Parameter | Value\nDesign pressure (psia) | 2100\nDesign temperature (degrees F) | 650\nOverall height, bottom of alignment feature to top of CRDM latch housing section (inches) | 778\nInside diameter of lower RPV section, cylindrical region, without clad (inches) | 96.5\nOutside diameter of lower RPV section, cylindrical region, without clad (inches) | 105\nInside diameter of upper RPV section, cylindrical region, without clad (inches) | 104.5\nOutside diameter of upper RPV section, cylindrical region, without clad (inches) | 112.5\nInside diameter of pressurizer, cylindrical region, without clad (inches) | 106.5\nOutside diameter of pressurizer, cylindrical region, without clad (inches) | 115.5\nInside diameter of upper head without clad (inches) | 104.5\nOutside diameter of upper head without clad (inches) | 112.5\nInner clad thickness (inches) | 0.25\nOuter clad thickness (inches) | 0.125",
       "summary": "The Reactor Vessel section describes the NuScale Power Module's reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel surrounded by a containment vessel. The RPV is a key component of the reactor coolant system, serving as a barrier to fission product release and providing structural support for various reactor systems. Materials used for the RPV are selected according to ASME Boiler and Pressure Vessel Code standards to ensure integrity and safety throughout the plant's design lifetime.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "67",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 5.3-1",
+          "page": 86,
+          "caption": "Reactor Vessel"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.2-4",
+          "page": 52,
+          "caption": "Reactor Coolant Pressure Boundary Component and Support Materials",
+          "structured_text": "CRDM | Pressure Retaining Components\nLatch housing\nRod travel housing\nRod travel housing Plug | SA-965 | Grade F304LN"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-1",
+          "page": 76,
+          "caption": "Reactor Vessel Parameters",
+          "structured_text": "Design Parameter | Value\nDesign pressure (psia) | 2100\nDesign temperature (degrees F) | 650\nOverall height, bottom of alignment feature to top of CRDM latch housing section (inches) | 778\nInside diameter of lower RPV section, cylindrical region, without clad (inches) | 96.5\nOutside diameter of lower RPV section, cylindrical region, without clad (inches) | 105\nInside diameter of upper RPV section, cylindrical region, without clad (inches) | 104.5\nOutside diameter of upper RPV section, cylindrical region, without clad (inches) | 112.5\nInside diameter of pressurizer, cylindrical region, without clad (inches) | 106.5\nOutside diameter of pressurizer, cylindrical region, without clad (inches) | 115.5\nInside diameter of upper head without clad (inches) | 104.5\nOutside diameter of upper head without clad (inches) | 112.5\nInner clad thickness (inches) | 0.25\nOuter clad thickness (inches) | 0.125"
+        }
+      ]
     },
     "nuscale_ch05_0000": {
       "node_id": "nuscale_ch05_0000",
       "title": "Preface",
-      "summary": "The Preface outlines the copyright and usage restrictions for the NuScale Standard Plant Design Certification Application, specifically Chapter Five on the Reactor Coolant System and Connecting Systems. It specifies that only the U.S. Nuclear Regulatory Commission (NRC) is authorized to use, copy, or disclose the information for regulatory purposes, and any copies must include the appropriate copyright and proprietary notices.",
+      "content": "NuScale Standard Plant\nDesign Certification Application\nChapter Five\nReactor Coolant System \nand Connecting Systems\nPART 2 - TIER 2\nRevision 5\nJuly 2020\n©2020, NuScale Power LLC. All Rights ReservedCOPYRIGHT NOTICE\nThis document bears a NuScale Power, LLC, copyright no tice. No right to disclose, use, or copy any of \nthe information in this document, other than by th e U.S. Nuclear Regulatory Commission (NRC), is \nauthorized without the express, written permission of NuScale Power, LLC.\nThe NRC is permitted to make the number of copi es of the information contained in these reports \nneeded for its internal use in conn ection with generic and plant-specif ic reviews and approvals, as well \nas the issuance, denial, amendment, transfer, re newal, modification, suspension, revocation, or \nviolation of a license, permit, order, or regulation  subject to the requirements of 10 CFR 2.390 regarding \nrestrictions on public disclosure to the extent such  information has been iden tified as proprietary by \nNuScale Power, LLC, copyright protection notwithsta nding. Regarding nonpro prietary versions of \nthese reports, the NRC is permitte d to make the number of additional copies necessary to provide \ncopies for public viewing in approp riate docket files in public docu ment rooms in Washington, DC, and \nelsewhere as may be required by NRC regulations. Co pies made by the NRC must include this copyright \nnotice in all instances and the proprietary notice  if the original was identified as proprietary.TABLE OF CONTENTSNuScale Final Safety Analysis Report Table of Contents\nTier 2 i Revision 5CHAPTER 5 REACTOR COOLANT SYSTEM AND CONNECT ING SYSTEMS . . . . . . . . . . . . .5.1-1\n5.1 Summary Description . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . 5.1-1\n5.1.1 Design Basis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.1-1\n5.1.2 System Description . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . 5.1-2\n5.1.3 System Components. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . 5.1-3\n5.1.4 System Evaluation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.1-5\n5.2 Integrity of Reactor Coolant Boundary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.2-1\n5.2.1 Compliance with Codes and Code Cases. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.2-25.2.2 Overpressure Protection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.2-3\n5.2.3 Reactor Coolant Pressure Boundary Materials . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.2-11\n5.2.4 Reactor Coolant Pressure Boundary Inservic e Inspection and Testing . . . . . . . . 5.2-19\n5.2.5 Reactor Coolant Pressure Bounda ry Leakage Detection . . . . . . . . . . . . . . . . . . . . . 5.2-23\n5.2.6 References  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . 5.2-27\n5.3 Reactor Vessel. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.3-1\n5.3.1 Reactor Vessel Materials  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . 5.3-1\n5.3.2 Pressure-Temperature Limits, Pres surized Thermal Shock, and Charpy \nUpper-Shelf Energy Data and Analyses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.3-6\n5.3.3 Reactor Vessel Integrity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . 5.3-7\n5.3.4 References  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . 5.3-8\n5.4 Reactor Coolant System Component and Subsystem Design. . . . . . . . . . . . . . . . . . . 5.4-1\n5.4.1 Steam Generators  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . 5.4-1\n5.4.2 Reactor Coolant System Piping . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.4 -14\n5.4.3 Decay Heat Removal System . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5. 4-16\n5.4.4 Reactor Coolant System High-Point Vents  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.4-315.4.5 Pressurizer. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . 5.4-34\n5.4.6 References  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . 5.4-40LIST OF TABLESNuScale Final Safety Analysis Report List of Tables\nTier 2 ii Revision 5Table 5.1-1: Reactor Coolant System Volumes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.1-7\nTable 5.1-2: Primary System Temperatures and Flow Rates  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.1-8\nTable 5.2-1: American Society of Mechanic al Engineers Code Cases . . . . . . . . . . . . . . . . . . . . . . . . 5.2-29\nTable 5.2-2: Reactor Safety Valves - Design Parameters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.2-30\nTable 5.2-3: Not Used  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . . . . . . . 5.2-31\nTable 5.2-4: Reactor Coolant Pressure Boun dary Component and Support Materials \nIncluding Reactor Vessel, Attachme nts, and Appurtenances . . . . . . . . . . . . . . . . . . . 5.2-32\nTable 5.2-5: Reactor Coolant Water Chemistry Controls . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5. 2-35\nTable 5.2-6: Reactor Pressure Vessel Inspec tion Elements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.2 -36\nTable 5.2-7: Reactor Vessel Internals Inspec tion Elements. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5. 2-39\nTable 5.2-8: American Society of Mechanical  Engineers Class 1 Piping Inspection \nElements  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.2-42\nTable 5.2-9: American Society of Mechanical  Engineers Class 1 Support Inspection \nElements  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.2-43\nTable 5.2-10: LTOP Pressure Setpoint as Function of Cold Temperature  . . . . . . . . . . . . . . . . . . . . . 5.2-44\nTable 5.3-1: Reactor Vessel Parameters. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . 5.3-10\nTable 5.3-2: Chemical Composition of Reactor Pressure Vessel Beltline Materials  . . . . . . . . . . . 5.3-11\nTable 5.3-3: 1/4-T Adjusted Re ference Temperature Result at 57 Effective Full-Power \nYears Fluence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.3-12\nTable 5.3-4: Material Specimen Program Matrix per ASTM E 185-82. . . . . . . . . . . . . . . . . . . . . . . . . 5.3-13\nTable 5.3-5: Surveillance Capsule Withdrawal Schedule. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5. 3-14\nTable 5.3-6: Pressure-Temperature Limi ts for Normal Heatup and Cooldown . . . . . . . . . . . . . . . 5.3-15\nTable 5.3-7: Pressure-Temperature Limi ts for Inservice Leak and Hydrostatic Test. . . . . . . . . . . 5.3-16\nTable 5.3-8: Pressurized Thermal Shock Screening Result . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.3 -17\nTable 5.3-9: 1/4-T Charpy Upper Shelf Energy per RG 1.99, Rev.  2  . . . . . . . . . . . . . . . . . . . . . . . . . . 5.3-18\nTable 5.3-10: 1/4-T Charpy Upper Shelf Ener gy after Adjusting for NuScale Reactor \nPressure Vessel Irradiation Temperature  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.3-19\nTable 5.4-1: Steam Generator Full-Load Therma l-Hydraulic Operating Conditions (Best \nEstimate)  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . 5.4-42\nTable 5.4-2: Steam Generator Design Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.4-43\nTable 5.4-3: Steam Generator System Compon ent Materials . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.4-44\nTable 5.4-4: Not Used  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . . . . . . . 5.4-45\nTable 5.4-5: Decay Heat Removal System Design Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.4 -46\nTable 5.4-6: Pressurizer Design Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.4-47LIST OF TABLESNuScale Final Safety Analysis Report List of Tables\nTier 2 iii Revision 5Table 5.4-7: Pressurizer Heater Pa rameters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . 5.4-48\nTable 5.4-8: Failure Modes and Effects Analysis - Decay Heat Removal System . . . . . . . . . . . . . . 5.4-49LIST OF FIGURESNuScale Final Safety Analysis Report List of Figures\nTier 2 iv Revision 5Figure 5.1-1: NuScale Power Module Major Components . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.1- 9\nFigure 5.1-2: Reactor Coolant System Simp lified Diagram  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.1 -10\nFigure 5.1-3: Reactor Coolant System Sc hematic Flow Diagram . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.1-11\nFigure 5.2-1: Reactor Safety Valve Simplified Diagram . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.2-45\nFigure 5.2-2: Reactor Safety Valve Pilot Valve Assembly Simplified Diagram . . . . . . . . . . . . . . . . . 5.2-46\nFigure 5.2-3: Containment Leak age Detection Acceptability . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.2-47\nFigure 5.2-4: Variable LTOP Setpoint . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . 5.2-48\nFigure 5.3-1: Reactor Vessel  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.3-20\nFigure 5.3-2: Location of Surveillance Capsules. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.3-21\nFigure 5.3-3: Pressure-Temperature Limits for Normal  Heatup and Criticality Limit  . . . . . . . . . . 5.3-22\nFigure 5.3-4: Pressure-Temperature Limits  for Normal Cooldown with Decay Heat \nRemoval and Containment Vessel Flooding . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.3-23\nFigure 5.3-5: Pressure-Temperature Limits for Inservice Leak and Hydrostatic Tests. . . . . . . . . . 5.3-24\nFigure 5.4-1: Steam Generator Helical Tube Bundle. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.4-54\nFigure 5.4-2: Configuration of Steam Gene rators in Upper Reac tor Pressure Vessel \nSection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . . 5.4-55\nFigure 5.4-3: Main Steam and Feedwater Pl ena  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.4-56\nFigure 5.4-4: Integral Steam Plenum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.4-57\nFigure 5.4-5: Feedwater Plenum Access Port . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.4-58\nFigure 5.4-6: Steam Generator Tube Supports and Stea m Generator Supports  . . . . . . . . . . . . . . 5.4-59\nFigure 5.4-7: Steam Generator Tube Support Tabs  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . 5.4-60\nFigure 5.4-8: Steam Generator Flow Restri ctor Assembly  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5. 4-61\nFigure 5.4-9: Steam Generator Si mplified Diagram . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.4-62\nFigure 5.4-10: Decay Heat Removal System Simplified Diagram . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.4-63\nFigure 5.4-11: Primary Coolant Temperature  with Decay Heat Removal System Two \nTrain Operation - 4 Hours. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.4-64\nFigure 5.4-12: Primary Coolant Temperat ure Cooldown with Decay Heat Removal \nSystem One Train Operation: Low System Inventor y - 4 Hours  . . . . . . . . . . . . . . . . . 5.4-65\nFigure 5.4-13: Primary Coolant Temperat ure Cooldown with Decay Heat Removal \nSystem One Train Operation: Low System Inventor y - 36 Hours . . . . . . . . . . . . . . . . 5.4-66\nFigure 5.4-14: Primary Coolant Temperat ure Cooldown with Decay Heat Removal \nSystem One Train Operation: High  System Inventory - 4 Hours. . . . . . . . . . . . . . . . . 5.4-67\nFigure 5.4-15: Primary Coolant Temperat ure Cooldown with Decay Heat Removal \nSystem One Train Operation: High  System Inventory - 36 Hours  . . . . . . . . . . . . . . . 5.4-68LIST OF FIGURESNuScale Final Safety Analysis Report List of Figures\nTier 2 v Revision 5Figure 5.4-16: Primary Coolant Temperat ure Cooldown with Decay Heat Removal \nSystem One Train Operation: Hi gh System Inventory, 140 Degree \nFahrenheit Initial Pool Temperature - 36 Hours . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.4-69\nFigure 5.4-17: Pressurizer Region of Reactor Vessel . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . 5.4-70\n\n--- Referenced Tables (structured) ---\n[Table 5.1-1: Reactor Coolant System Volumes]\nRCS Region | Nominal\nVolume (ft3)*\nHot Leg (lower riser, riser transition, upper riser, riser supports) | 635\nCold Leg [feedwater plenums, downcomer transition, downcomer (lower riser), core barrel, RPV bottom\nhead, flow diverter] | 578\nCore Region (fuel assembly region and reflector cooling channels) | 89\nSG Region | 621\nPZR Region (main steam plenums, PZR, RPV top head) | 578\nPZR Region, cylindrical (main steam plenums and PZR) | 487\n[Table 5.1-2: Primary System Temperatures and Flow Rates]\n% | MWt | % | (Kg/s) | Core dT | T (°F)\nCold | T (°F)\navg | T (°F)\nHot\nBest-Estimate Flow\n0 | 0 | 0-12 | 0-68.5Note(1) | 0 | Note(1) | 425.5 | Note(1)\n15 | 24 | 47.7 | 280.2 | 31.7 | 528.5 | 543.3 | 558.2\n50 | 80 | 75.6 | 443.7 | 66.5 | 512.2 | 543.3 | 574.4\n75 | 120 | 88.9 | 521.6 | 84.6 | 503.8 | 543.3 | 582.9\n100 | 160 | 100 | 587.0 | 99.8 | 496.6 | 543.3 | 590.1\nMinimum Design Flow\n100 | 160 | 91.7 | 538.5 | 107.60 | 487.4 | 538.7 | 590.1\nMaximum Design Flow\n100 | 160 | 112.5 | 660.5 | 89.65 | 507.8 | 548.9 | 590.0\n[Table 5.2-1: American Society of Mechanical Engineers Code Cases]\nN-759-2 | Alternative Rules for Determining Allowable External Pressure and Compressive\nStresses for Cylinders, Cones, Spheres, and Formed Heads, Class 1, 2, and 3,\nSection III, Division 1 | January 2008\nN-62-7 | Internal and External Valve Items, Section III, Division 1,\nClasses 1, 2, and 3 | February 2003\nN-60-5 | Material for Core Support Structures, Section III, Division 1 | February 1994\n[Table 5.2-10: LTOP Pressure Setpoint as Function of Cold Temperature]\n<193.0 | 380.0\n193.0 | 380.0\n240.0 | 615.5\n277.0 | 850.0\n318.0 | 850.0\n>318.0 | LTOP not enabled\n[Table 5.2-2: Reactor Safety Valves - Design Parameters]\nValve size | Inlet | 3 inch\nOutlet | 4 inch\nDesign pressure | Internal | 2100 psia\nExternal | 1000 psia\nDesign temperature | 650°F\nMinimum design capacity @ 3%\noverpressure | 63,360 lbm/hr saturated steam\nNominal RSV setpoint | Nominal setpoint\nFirst valve\nSecond valve | 2075 psia ±1%\n2100 psia ±1%\nBlowdown from set pressure | 10% ±2%\n[Table 5.2-4: Reactor Coolant Pressure Boundary Component and Support Materials]\nCRDM | Pressure Retaining Components\nLatch housing\nRod travel housing\nRod travel housing Plug | SA-965 | Grade F304LN\n[Table 5.2-5: Reactor Coolant Water Chemistry Controls]\nChloride (ppm) | ≤ 0.05 | 0.15\nFluoride (ppm) | ≤ 0.05 | 0.15\nDissolved oxygen (ppm) | ≤ 0.005 | 0.10\nSulfate (ppm) | ≤ 0.05 | -\nHydrogen (cc | / | kg) | 25 - 50 | -\nBoron (ppm) | 0 - 2000 | -\n[Table 5.2-6: Reactor Pressure Vessel Inspection Elements (Continued)]\nBolting\nRPV main flange bolts | B-G-1 | See note | Per Note 1 of B-G-1, surface\nexamination is permitted when\nbolts are removed.\nRVV and RRV flange threaded fasteners | B-G-2, augmented | Volumetric | Augmented inspection to follow\nthe guidance of B-G-1. No\nsampling permitted. All threaded\nfasteners are subject to volumetric\nexamination during the inspection\ninterval.\nRPV bolting two inches or less in diameter | B-G-2 | VT-1 | Examined if removed.\nAssembled RPV\nRPV- assembled after refueling outage | B-P | VT-2 | Per Section XI IWA-5241(c),\nleakage is continuously monitored\nin the CNV and constitutes a VT-2\nexamination.\n[Table 5.2-7: Reactor Vessel Internals Inspection Elements (Continued)]\nUpper Riser to Bellows | Upper Riser\nAssembly | N/A | VT-3\nBellows to Upper Riser Transition | Upper Riser\nAssembly | N/A | VT-3\nPipe to Bellows | Upper Riser\nAssembly | N/A | VT-3\nElbow to Flexible Pipe | Upper Riser\nAssembly | N/A | VT-3\nFlexible Pipe to Rigid Pipe | Upper Riser\nAssembly | N/A | VT-3\nBrace to Pipe | Upper Riser\nAssembly | N/A | VT-3\nPipe to Cap | Upper Riser\nAssembly | N/A | VT-3\nICI Centering Plate 1-12 | Upper Riser\nAssembly | N/A | VT-3\nICIGT Link to Upper Riser Hanger Ring | Upper Riser\nAssembly | N/A | VT-3\nInjection to RPV11 | Upper Riser | N/A | VT-3\nICIGT to Integrated Steam Plenum | PZR | N/A | VT-3\nPressurizer Spray Nozzle | PZR Spray Nozzle to\nSafe End (RPV14-\nRPV15) | N/A | VT-3\nSurveillance Capsule | Core Support\nAssembly | N/A | VT-3\n[Table 5.2-8: American Society of Mechanical Engineers Class 1 Piping Inspection Elements]\nDual valve, single body isolation valve to safe-\nend | B-J | Surface and\nVolumetric | Refer to Section 5.2.4.1 for\ndiscussion on welds between the\ncontainment and the dual valve,\nsingle body CIVs.\nCRDM | B-J | Surface or\nVolumetric\nB-J | Surface\nB-J | Surface\nRRV and RVV trip-reset actuators piping and\nfitting welds | B-J | None | Exempted by ASME BPVC Section\nXI, Paragraph IWB-1220 due to\nsmall size of piping and fittings.\n[Table 5.2-9: American Society of Mechanical Engineers Class 1 Support Inspection Elements]\nCVCS | F-A | VT-3\nB-N-1 | VT-3\nRCCW to containment head\nCRDM lower legs to RPV head\nDHRS piping to containment\nNPM platform\nNPM top supports to containment\nDHRS heat exchanger supports to containment | B-K | Surface\nDHRS\n[Table 5.3-1: Reactor Vessel Parameters]\nDesign Parameter | Value\nDesign pressure (psia) | 2100\nDesign temperature (degrees F) | 650\nOverall height, bottom of alignment feature to top of CRDM latch housing section (inches) | 778\nInside diameter of lower RPV section, cylindrical region, without clad (inches) | 96.5\nOutside diameter of lower RPV section, cylindrical region, without clad (inches) | 105\nInside diameter of upper RPV section, cylindrical region, without clad (inches) | 104.5\nOutside diameter of upper RPV section, cylindrical region, without clad (inches) | 112.5\nInside diameter of pressurizer, cylindrical region, without clad (inches) | 106.5\nOutside diameter of pressurizer, cylindrical region, without clad (inches) | 115.5\nInside diameter of upper head without clad (inches) | 104.5\nOutside diameter of upper head without clad (inches) | 112.5\nInner clad thickness (inches) | 0.25\nOuter clad thickness (inches) | 0.125\n[Table 5.3-10: 1/4-T Charpy Upper Shelf Energy after Adjusting for NuScale Reactor]\nLower | RPV | shell, beltline | 59.6 ft-lb min | -1.2 ft-lb | 58.4 ft-lb min\nLower | RPV | weld | 63.5 ft-lb min | -1.2 ft-lb | 62.3 ft-lb min\nRPV | bottom head | 64.1 ft-lb min | -1.2 ft-lb | 62.9 ft-lb min\n[Table 5.3-2: Chemical Composition of Reactor Pressure Vessel Beltline Materials]\nRPV beltline forging material | Sulfur | 0.010\nPhosphorus | 0.010\nCopper | 0.06\nCobalt | 0.05\nNickel | 0.85\nAs-deposited weld metal used in the RPV\nbeltline | Sulfur | .015\nPhosphorus | .012\nCopper | .06\nCobalt | .05\nManganese | 1.80\nNickel | 0.85\n[Table 5.3-3: 1/4-T Adjusted Reference Temperature Result at 57 Effective Full-Power]\nLower | RPV | shell, beltline | 1.37E+19 | -10 | 68.2 | 34.0 | 92.2\nLower | RPV | weld | 3.21E+18 | -20 | 84.4 | 56.0 | 120.4\nRPV | bottom head | 3.21E+18 | -10 | 53.4 | 34.0 | 77.4\n[Table 5.3-4: Material Specimen Program Matrix per ASTM E185-82]\nE185-82 | NuScale | E185-82 | NuScale\nUnirradiated Specimen Matrix, Baseline\nLimiting forging | 18 min | 18 | 3 min | 3\nLimiting weld | 18 min | 18 | 3 min | 3\nLimiting heat-affected zone | 18 min | 18 | N | / | A | N | / | A\nIrradiated Specimen Matrix, per capsule\nLimiting forging | 12 min | 15 | 3 min | 3\nLimiting weld | 12 min | 15 | 3 min | 3\nLimiting heat-affected zone | 12 min | 15 | N | / | A | N | / | A\n[Table 5.3-5: Surveillance Capsule Withdrawal Schedule]\n1st | Whichever comes first\n• 6-EFPY\n• Capsule fluence > 5E+18 n/cm2, E > 1 MeV\n• Highest predicted ΔRT > ~50°F of all\nNDT\nencapsulated materials | First refuel outage (~2 EFPY) when highest predicted\nΔRT > ~50°F(b)\nNDT\n2nd | Whichever comes first\n• 15 EFPY\n• Capsule fluence > peak 32-EFPY RPV inside\nsurface fluence | ~13 EFPY for capsule fluence to reach peak 32-EFPY RPV\ninside surface fluence\n• 32 EFPY/2.5 = ~13 EFPY\n3rd | Capsule fluence is between 1 and 2 times of\npeak 32-EFPY inside surface fluence | Between ~13 EFPY and ~26 EFPY\n• 32 EFPY/2.5 = ~13 EFPY\n• 64 EFPY/2.5 = ~26 EFPY\n4th | Not required by ASTM E185-82 | Withdrawal of the 4th capsule will be determined by\napplicable regulation at the time of license extension\napplication.\n[Table 5.3-6: Pressure-Temperature Limits for Normal Heatup and Cooldown]\n(Minimum core critical\ntemperature determined\nfrom the transient ISLH\ncurve) | (Minimum core critical\ntemperature determined\nfrom the Steady-State ISLH\ncurve)\nFluid\nTemp. (°F) | Press.\n(psig) | Fluid\nTemp. (°F) | Press.\n(psig) | Fluid Temp.\n(°F) | Press.\n(psig) | Fluid\nTemp. (°F) | Press.\n(psig)\n40 | 515 | (Reactor is not permitted to be\ncritical below 287°F if ISLH\ntesting is performed at Heat\nup/Cooldown transient\nconditions) | (Reactor is not permitted to be\ncritical below 185°F if ISLH\ntesting is performed at steady-\nstate conditions.) | 309 | 2759\n52 | 516 | 300 | 2187\n62 | 518 | 292 | 1697\n78 | 523 | 285 | 1439\n94 | 525 | 276 | 1280\n104 | 525 | 268 | 1168\n114 | 525 | 185 | 0 | 260 | 1071\n125 | 525 | 185 | 150 | 252 | 1011\n135 | 525 | 185 | 300 | 243 | 966\n146 | 525 | 185 | 400 | 239 | 932\n166 | 525 | 185 | 525 | 235 | 906\n175 | 525 | 223 | 705 | 232 | 884\n176 | 525 | 241 | 796 | 229 | 865\n176 | 676 | 287 | 0 | 258 | 927 | 226 | 848\n183 | 705 | 287 | 500 | 276 | 1115 | 223 | 833\n201 | 796 | 287 | 750 | 295 | 1414 | 213 | 795\n218 | 927 | 287 | 1000 | 314 | 1864 | 187 | 743\n236 | 1115 | 287 | 1293 | 334 | 2518 | 176 | 720\n255 | 1414 | 295 | 1414 | 354 | 2752 | 176 | 525\n274 | 1864 | 314 | 1864 | 374 | 2750 | 162 | 525\n294 | 2518 | 334 | 2518 | 393 | 2749 | 156 | 525\n314 | 2752 | 354 | 2752 | 413 | 2747 | 156 | 525\n334 | 2750 | 374 | 2750 | 426 | 2745 | 121 | 525\n353 | 2749 | 393 | 2749 | 440 | 2742 | 118 | 525\n373 | 2747 | 413 | 2747 | 454 | 2740 | 91 | 525\n386 | 2745 | 426 | 2745 | 462 | 2735 | 79 | 525\n400 | 2742 | 440 | 2742 | 469 | 2732 | 73 | 525\n414 | 2740 | 454 | 2740 | 470 | 2729 | 73 | 525\n[Table 5.3-7: Pressure-Temperature Limits for Inservice Leak and Hydrostatic Test]\nFluid\nTemp. (°F) | Press.\n(psig) | Fluid\nTemp. (°F) | Press.\n(psig) | Fluid Temp.\n(°F) | Press.\n(psig) | Fluid\nTemp. (°F) | Press.\n(psig)\n79 | 525 | 300 | 2916 | 79 | 525 | 40 | 525\n91 | 525 | 292 | 2262 | 91 | 525 | 52 | 525\n118 | 525 | 285 | 1918 | 118 | 525 | 62 | 525\n121 | 525 | 276 | 1707 | 121 | 525 | 78 | 525\n146 | 525 | 268 | 1557 | 146 | 525 | 94 | 525\n146 | 790 | 260 | 1429 | 146 | 790 | 104 | 525\n156 | 823 | 252 | 1348 | 156 | 823 | 114 | 525\n156 | 823 | 243 | 1288 | 156 | 823 | 125 | 525\n162 | 843 | 239 | 1243 | 162 | 843 | 135 | 525\n187 | 968 | 235 | 1207 | 187 | 968 | 146 | 525\n213 | 1185 | 232 | 1178 | 213 | 1060 | 146 | 525\n223 | 1298 | 229 | 1153 | 223 | 1111 | 146 | 1247\n226 | 1343 | 226 | 1130 | 226 | 1130 | 166 | 1556\n229 | 1389 | 223 | 1111 | 229 | 1153 | 175 | 1737\n232 | 1434 | 213 | 1060 | 232 | 1178 | 183 | 1952\n235 | 1479 | 187 | 991 | 235 | 1207 | 201 | 2514\n239 | 1552 | 162 | 922 | 239 | 1243 | 218 | 3312\n243 | 1640 | 156 | 886 | 243 | 1288\n252 | 1814 | 156 | 849 | 252 | 1348\n260 | 2042 | 146 | 837 | 260 | 1429\n268 | 2293 | 146 | 525 | 268 | 1557\n276 | 2576 | 121 | 525 | 276 | 1707\n285 | 2960 | 118 | 525 | 285 | 1918\n292 | 3296 | 91 | 525 | 292 | 2262\n300 | 3459 | 79 | 525 | 300 | 2916\n[Table 5.3-8: Pressurized Thermal Shock Screening Result]\n(32- | EFPY | Fluence)\nLower | RPV | shell, beltline | 9.94E+18 | -10 | 64.9 | 34.0 | 88.9 | 270 max\nLower | RPV | weld | 2.32E+18 | -20 | 77.6 | 56.0 | 113.6 | 300 max\nRPV | bottom head | 2.32E+18 | -10 | 50.4 | 34.0 | 74.4 | 270 max\n(57- | EFPY | Fluence)\nLower | RPV | shell, beltline | 1.77E+19 | -10 | 70.8 | 34.0 | 94.8 | 270 max\nLower | RPV | weld | 4.14E+18 | -20 | 89.9 | 56.0 | 125.9 | 300 max\nRPV | bottom head | 4.14E+18 | -10 | 55.9 | 34.0 | 79.9 | 270 max\n[Table 5.3-9: 1/4-T Charpy Upper Shelf Energy per RG 1.99, Rev. 2]\nLower | RPV | shell, beltline | 0.10 (a) | 1.37E+19 | 20.5% | 75 ft-lb | 59.6 ft-lb\nLower | RPV | weld | 0.06 | 3.21E+18 | 15.3% | 75 ft-lb | 63.5 ft-lb\nRPV | bottom head | 0.10 (a) | 3.21E+18 | 14.5% | 75 ft-lb | 64.1 ft-lb\n[Table 5.4-1: Steam Generator Full-Load Thermal-Hydraulic Operating Conditions (Best Estimate)]\n(1)Total heat transfer ( | MW\nt | ) | 159.13\nSG | outlet pressure (psia) | 500.1\nSG | outlet temperature (°F) | 584.4\nSG | inlet temperature (°F) | 299.7\nSG | flow (lbm | / | hr) | 532298\n[Table 5.4-2: Steam Generator Design Data]\nParameter | Value\nType | Helical, once-through\nTotal number of helical tubes per | NPM | 1380\nNumber of helical tube columns per | NPM | 21\nInternal pressure - secondary (psia) | 2100\nExternal pressure - primary (psia) | 2100\nExternal pressure - | SG | piping in containment (psia) | 1000\nInternal temperature - secondary (°F) | 650\nExternal temperature - primary (°F) | 650\nExternal temperature - | SG | piping in containment (°F) | 550\nTube wall outer diameter (inches) | 0.625\nTube wall thickness (inches) | 0.050\nSteam tubesheet thickness, without clad (inches) | 4.0\nFeed tubesheet thickness, without clad (inches) | 6.0\nSteam and feed tubesheet clad thickness - secondary (inches) | 0.250\nSteam and feed tubesheet clad thickness - primary (inches) | 0.375\nSteam tubesheet thickness, with clad (inches) | 4.625\nFeed tubesheet thickness, with clad (inches) | 6.625\nTotal heat transfer area (ft2) | 17928\nFouling factor (hr-ft2-°F/BTU) | 0.0001\nMinimum SG tube transition bend radius (inches) | ≥ 6.250\n[Table 5.4-3: Steam Generator System Component Materials]\nSG | Class 2 piping | SA-312 | Type 304 | / | 304L\nSG | piping reducers and elbows | SA-182 | Grade F304 | / | F304L\nSG | piping supports | SA-479 | Type 304 | / | 304L\nSG tubes | See Section 5.4.1.5\nFlow restrictors and flow restrictor bolts | SA-479 | Type 304\nFlow restrictor mounting plates | SA-240 | Type 304\nFlow restrictor mounting plate spacer | SB-166 | Alloy 690 (UNS N06690)\nFlow restrictor stud bolts, nuts, and washers\nStuds, nuts, and washers for the steam and feed\nplenum access port covers | SB-637 | Alloy 718 (UNS N07718)\nThreaded inserts for steam and feed plenum\naccess ports | SA-479 | Type 304/304L\nSteam plenum access ports | SA-508 | Grade 3, Class 2\nSteam and feed plenum access port covers | SA-240 | Type 304 | / | 304L\nLow alloy steel weld filler material | SFA | 5.5\n5.23\n-5.28\n-5.29 | Weld filler metal classifications compatible with low\nalloy steel base metal\nSFA\nSFA\nSFA\nStainless steel weld filler material\n(includes filler material for cladding) | SFA 5.4\nSFA 5.9\nSFA-5.22 | SFA | E308, E308L, E309, E309L, E316, E316L\nER308, ER308L, ER309, ER309L ER316, ER316L,\nEQ308L, EQ309L\nE308, E308L, E309, E309L, E316, E316L\nSFA\nSFA\nNickel-based alloy weld filler material | SFA | -5.11\n-5.14 | ENiCrFe-7\nERNiCrFe-7, ERNiCrFe-7A, EQNiCrFe-7, EQNiCrFe-7A\nSFA\nIntegral steam plenum\nIntegral steam plenum cap\nFeed plenum access port | See Table 5.2-4\n[Table 5.4-5: Decay Heat Removal System Design Data]\nInternal pressure (psia) | 2100\nActuation valve external pressure (psia) | 60\nPassive condenser external pressure (psia) | 27\nTemperature (°F) | 650\nNumber of condensers | 2\nTotal number of tubes per condenser | 80\nTube wall outer diameter (inches) | 1.315\nTube wall thickness (inches) | 0.109\nTube external surface area per condenser (ft2) | 258.2\nFouling factor (hr-ft2-F/BTU) | 0.0005\n[Table 5.4-6: Pressurizer Design Data]\nParameter | Value\nInternal pressure (psia) | 2100\nExternal pressure (psia) | 1000\nTemperature (°F) | 650\nPressurizer heater sheath temperature (°F) | 800\nSpray nozzles | 2\nNominal spray nozzle diameter (in.) | 1\n[Table 5.4-7: Pressurizer Heater Parameters]\nParameter | Value\nVoltage (Vac) | 480\nFrequency (Hz) | 60\nHeater bundles per pressurizer | 2\nHeater groups per bundle (kW) | 3\nNominal total capacity per heater bundle (kW) | 400\n[Table 5.4-8: Failure Modes and Effects Analysis - Decay Heat Removal System (Continued)]\nSGS Thermal Relief Valve\nSG-RV-0102\nSG-RV-0202 | 1) Provide pressure\nboundary | A) Spurious opening\nof relief valve with\nfailure to close\n(passive failure) | Mechanical | A spurious opening of the thermal relief valve with a\nfailure to close will cause the affected DHRS train to\nlose inventory and become inoperable. Safe shutdown\nwithout emergency core cooling system (ECCS)\nactuation is achieved with the remaining DHRS train. | • Steam pressure\n• DHRS level\ninstrument switches\n• Containment leakage\nmonitoring\ninstrumentation\n(containment\nevacuation system)\n2) Provide\noverpressure\nprotection when\nSGS is water solid. | A) Failure of valve to\nlift at setpoint | Mechanical | A failure of the valve to lift during a water solid over\npressure scenario could cause deformation or rupture\nof pressure boundary components. A rupture would\ncause the affected DHRS train to be inoperable. The\nmodule is in safe shutdown prior to this event and\ncooling will resume with the unaffected DHRS train or\nthrough flooding the CNV with the containment\nflooding and drain system. | • Steam pressure\n• DHRS level\ninstrument switches\nDHRS Loop Pressure\nBoundary\n(Includes piping inside CNV,\nsteam generator tubes)(1) | 1) Provide a pressure\nboundary for the\nSGS and DHRS | A) Pipe rupture and\nloss of DHRS loop\ninventory (passive\nfailure) | Mechanical | A pipe rupture of any pressure boundary piping which\nis part of the DHRS loop (SGS and DHRS piping within\ncontainment isolation valves) will cause the affected\nDHRS train to lose inventory and become inoperable.\nSafe shutdown without ECCS actuation is achieved\nwith the remaining DHRS train. | • Steam pressure\n• DHRS level\ninstrument switches\n• Containment leakage\nmonitoring\ninstrumentation\n(containment\nevacuation system)",
+      "summary": "The Preface outlines the copyright and usage restrictions for the NuScale Standard Plant Design Certification Application, specifically Chapter Five on the Reactor Coolant System and Connecting Systems. It details the permissions granted to the U.S. Nuclear Regulatory Commission (NRC) for internal use, copying, and public disclosure, emphasizing the protection of proprietary information.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "1",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 5.1-1",
+          "page": 16,
+          "caption": "NuScale Power Module Major Components"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.1-2",
+          "page": 17,
+          "caption": "Reactor Coolant System Simplified Diagram"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.1-3",
+          "page": 18,
+          "caption": "Reactor Coolant System Schematic Flow Diagram"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.2-1",
+          "page": 63,
+          "caption": "Reactor Safety Valve Simplified Diagram"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.2-2",
+          "page": 64,
+          "caption": "Reactor Safety Valve Pilot Valve Assembly Simplified Diagram"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.2-3",
+          "page": 65,
+          "caption": "Containment Leakage Detection Acceptability"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.2-4",
+          "page": 66,
+          "caption": "Variable LTOP Setpoint"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.3-1",
+          "page": 86,
+          "caption": "Reactor Vessel"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.3-2",
+          "page": 87,
+          "caption": "Location of Surveillance Capsules"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.3-3",
+          "page": 88,
+          "caption": "Pressure-Temperature Limits for Normal Heatup and Criticality Limit"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.3-4",
+          "page": 89,
+          "caption": "Pressure-Temperature Limits for Normal Cooldown with Decay Heat Removal and Containment"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.3-5",
+          "page": 90,
+          "caption": "Pressure-Temperature Limits for Inservice Leak and Hydrostatic Tests"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-1",
+          "page": 144,
+          "caption": "Steam Generator Helical Tube Bundle"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-10",
+          "page": 153,
+          "caption": "Decay Heat Removal System Simplified Diagram"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-11",
+          "page": 154,
+          "caption": "Primary Coolant Temperature with Decay Heat Removal System Two Train Operation - 4 Hours"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-12",
+          "page": 155,
+          "caption": "Primary Coolant Temperature Cooldown with Decay Heat Removal System One Train Operation:"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-13",
+          "page": 156,
+          "caption": "Primary Coolant Temperature Cooldown with Decay Heat Removal System One Train Operation:"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-14",
+          "page": 157,
+          "caption": "Primary Coolant Temperature Cooldown with Decay Heat Removal System One Train Operation:"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-15",
+          "page": 158,
+          "caption": "Primary Coolant Temperature Cooldown with Decay Heat Removal System One Train Operation:"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-16",
+          "page": 159,
+          "caption": "Primary Coolant Temperature Cooldown with Decay Heat Removal System One Train Operation:"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-17",
+          "page": 160,
+          "caption": "Pressurizer Region of Reactor Vessel"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-2",
+          "page": 145,
+          "caption": "Configuration of Steam Generators in Upper Reactor Pressure Vessel Section"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-3",
+          "page": 146,
+          "caption": "Main Steam and Feedwater Plena"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-4",
+          "page": 147,
+          "caption": "Integral Steam Plenum"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-5",
+          "page": 148,
+          "caption": "Feedwater Plenum Access Port"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-6",
+          "page": 149,
+          "caption": "Steam Generator Tube Supports and Steam Generator Supports"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-7",
+          "page": 150,
+          "caption": "Steam Generator Tube Support Tabs"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-8",
+          "page": 151,
+          "caption": "Steam Generator Flow Restrictor Assembly"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-9",
+          "page": 152,
+          "caption": "Steam Generator Simplified Diagram"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.1-1",
+          "page": 14,
+          "caption": "Reactor Coolant System Volumes",
+          "structured_text": "RCS Region | Nominal\nVolume (ft3)*\nHot Leg (lower riser, riser transition, upper riser, riser supports) | 635\nCold Leg [feedwater plenums, downcomer transition, downcomer (lower riser), core barrel, RPV bottom\nhead, flow diverter] | 578\nCore Region (fuel assembly region and reflector cooling channels) | 89\nSG Region | 621\nPZR Region (main steam plenums, PZR, RPV top head) | 578\nPZR Region, cylindrical (main steam plenums and PZR) | 487"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.1-2",
+          "page": 15,
+          "caption": "Primary System Temperatures and Flow Rates",
+          "structured_text": "% | MWt | % | (Kg/s) | Core dT | T (°F)\nCold | T (°F)\navg | T (°F)\nHot\nBest-Estimate Flow\n0 | 0 | 0-12 | 0-68.5Note(1) | 0 | Note(1) | 425.5 | Note(1)\n15 | 24 | 47.7 | 280.2 | 31.7 | 528.5 | 543.3 | 558.2\n50 | 80 | 75.6 | 443.7 | 66.5 | 512.2 | 543.3 | 574.4\n75 | 120 | 88.9 | 521.6 | 84.6 | 503.8 | 543.3 | 582.9\n100 | 160 | 100 | 587.0 | 99.8 | 496.6 | 543.3 | 590.1\nMinimum Design Flow\n100 | 160 | 91.7 | 538.5 | 107.60 | 487.4 | 538.7 | 590.1\nMaximum Design Flow\n100 | 160 | 112.5 | 660.5 | 89.65 | 507.8 | 548.9 | 590.0"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.2-1",
+          "page": 47,
+          "caption": "American Society of Mechanical Engineers Code Cases",
+          "structured_text": "N-759-2 | Alternative Rules for Determining Allowable External Pressure and Compressive\nStresses for Cylinders, Cones, Spheres, and Formed Heads, Class 1, 2, and 3,\nSection III, Division 1 | January 2008\nN-62-7 | Internal and External Valve Items, Section III, Division 1,\nClasses 1, 2, and 3 | February 2003\nN-60-5 | Material for Core Support Structures, Section III, Division 1 | February 1994"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.2-10",
+          "page": 62,
+          "caption": "LTOP Pressure Setpoint as Function of Cold Temperature",
+          "structured_text": "<193.0 | 380.0\n193.0 | 380.0\n240.0 | 615.5\n277.0 | 850.0\n318.0 | 850.0\n>318.0 | LTOP not enabled"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.2-2",
+          "page": 48,
+          "caption": "Reactor Safety Valves - Design Parameters",
+          "structured_text": "Valve size | Inlet | 3 inch\nOutlet | 4 inch\nDesign pressure | Internal | 2100 psia\nExternal | 1000 psia\nDesign temperature | 650°F\nMinimum design capacity @ 3%\noverpressure | 63,360 lbm/hr saturated steam\nNominal RSV setpoint | Nominal setpoint\nFirst valve\nSecond valve | 2075 psia ±1%\n2100 psia ±1%\nBlowdown from set pressure | 10% ±2%"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.2-3",
+          "page": 49,
+          "caption": "Not Used"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.2-4",
+          "page": 52,
+          "caption": "Reactor Coolant Pressure Boundary Component and Support Materials",
+          "structured_text": "CRDM | Pressure Retaining Components\nLatch housing\nRod travel housing\nRod travel housing Plug | SA-965 | Grade F304LN"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.2-5",
+          "page": 53,
+          "caption": "Reactor Coolant Water Chemistry Controls",
+          "structured_text": "Chloride (ppm) | ≤ 0.05 | 0.15\nFluoride (ppm) | ≤ 0.05 | 0.15\nDissolved oxygen (ppm) | ≤ 0.005 | 0.10\nSulfate (ppm) | ≤ 0.05 | -\nHydrogen (cc | / | kg) | 25 - 50 | -\nBoron (ppm) | 0 - 2000 | -"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.2-6",
+          "page": 56,
+          "caption": "Reactor Pressure Vessel Inspection Elements (Continued)",
+          "structured_text": "Bolting\nRPV main flange bolts | B-G-1 | See note | Per Note 1 of B-G-1, surface\nexamination is permitted when\nbolts are removed.\nRVV and RRV flange threaded fasteners | B-G-2, augmented | Volumetric | Augmented inspection to follow\nthe guidance of B-G-1. No\nsampling permitted. All threaded\nfasteners are subject to volumetric\nexamination during the inspection\ninterval.\nRPV bolting two inches or less in diameter | B-G-2 | VT-1 | Examined if removed.\nAssembled RPV\nRPV- assembled after refueling outage | B-P | VT-2 | Per Section XI IWA-5241(c),\nleakage is continuously monitored\nin the CNV and constitutes a VT-2\nexamination."
+        },
+        {
+          "type": "table",
+          "id": "Table 5.2-7",
+          "page": 59,
+          "caption": "Reactor Vessel Internals Inspection Elements (Continued)",
+          "structured_text": "Upper Riser to Bellows | Upper Riser\nAssembly | N/A | VT-3\nBellows to Upper Riser Transition | Upper Riser\nAssembly | N/A | VT-3\nPipe to Bellows | Upper Riser\nAssembly | N/A | VT-3\nElbow to Flexible Pipe | Upper Riser\nAssembly | N/A | VT-3\nFlexible Pipe to Rigid Pipe | Upper Riser\nAssembly | N/A | VT-3\nBrace to Pipe | Upper Riser\nAssembly | N/A | VT-3\nPipe to Cap | Upper Riser\nAssembly | N/A | VT-3\nICI Centering Plate 1-12 | Upper Riser\nAssembly | N/A | VT-3\nICIGT Link to Upper Riser Hanger Ring | Upper Riser\nAssembly | N/A | VT-3\nInjection to RPV11 | Upper Riser | N/A | VT-3\nICIGT to Integrated Steam Plenum | PZR | N/A | VT-3\nPressurizer Spray Nozzle | PZR Spray Nozzle to\nSafe End (RPV14-\nRPV15) | N/A | VT-3\nSurveillance Capsule | Core Support\nAssembly | N/A | VT-3"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.2-8",
+          "page": 60,
+          "caption": "American Society of Mechanical Engineers Class 1 Piping Inspection Elements",
+          "structured_text": "Dual valve, single body isolation valve to safe-\nend | B-J | Surface and\nVolumetric | Refer to Section 5.2.4.1 for\ndiscussion on welds between the\ncontainment and the dual valve,\nsingle body CIVs.\nCRDM | B-J | Surface or\nVolumetric\nB-J | Surface\nB-J | Surface\nRRV and RVV trip-reset actuators piping and\nfitting welds | B-J | None | Exempted by ASME BPVC Section\nXI, Paragraph IWB-1220 due to\nsmall size of piping and fittings."
+        },
+        {
+          "type": "table",
+          "id": "Table 5.2-9",
+          "page": 61,
+          "caption": "American Society of Mechanical Engineers Class 1 Support Inspection Elements",
+          "structured_text": "CVCS | F-A | VT-3\nB-N-1 | VT-3\nRCCW to containment head\nCRDM lower legs to RPV head\nDHRS piping to containment\nNPM platform\nNPM top supports to containment\nDHRS heat exchanger supports to containment | B-K | Surface\nDHRS"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-1",
+          "page": 76,
+          "caption": "Reactor Vessel Parameters",
+          "structured_text": "Design Parameter | Value\nDesign pressure (psia) | 2100\nDesign temperature (degrees F) | 650\nOverall height, bottom of alignment feature to top of CRDM latch housing section (inches) | 778\nInside diameter of lower RPV section, cylindrical region, without clad (inches) | 96.5\nOutside diameter of lower RPV section, cylindrical region, without clad (inches) | 105\nInside diameter of upper RPV section, cylindrical region, without clad (inches) | 104.5\nOutside diameter of upper RPV section, cylindrical region, without clad (inches) | 112.5\nInside diameter of pressurizer, cylindrical region, without clad (inches) | 106.5\nOutside diameter of pressurizer, cylindrical region, without clad (inches) | 115.5\nInside diameter of upper head without clad (inches) | 104.5\nOutside diameter of upper head without clad (inches) | 112.5\nInner clad thickness (inches) | 0.25\nOuter clad thickness (inches) | 0.125"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-10",
+          "page": 85,
+          "caption": "1/4-T Charpy Upper Shelf Energy after Adjusting for NuScale Reactor",
+          "structured_text": "Lower | RPV | shell, beltline | 59.6 ft-lb min | -1.2 ft-lb | 58.4 ft-lb min\nLower | RPV | weld | 63.5 ft-lb min | -1.2 ft-lb | 62.3 ft-lb min\nRPV | bottom head | 64.1 ft-lb min | -1.2 ft-lb | 62.9 ft-lb min"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-2",
+          "page": 77,
+          "caption": "Chemical Composition of Reactor Pressure Vessel Beltline Materials",
+          "structured_text": "RPV beltline forging material | Sulfur | 0.010\nPhosphorus | 0.010\nCopper | 0.06\nCobalt | 0.05\nNickel | 0.85\nAs-deposited weld metal used in the RPV\nbeltline | Sulfur | .015\nPhosphorus | .012\nCopper | .06\nCobalt | .05\nManganese | 1.80\nNickel | 0.85"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-3",
+          "page": 78,
+          "caption": "1/4-T Adjusted Reference Temperature Result at 57 Effective Full-Power",
+          "structured_text": "Lower | RPV | shell, beltline | 1.37E+19 | -10 | 68.2 | 34.0 | 92.2\nLower | RPV | weld | 3.21E+18 | -20 | 84.4 | 56.0 | 120.4\nRPV | bottom head | 3.21E+18 | -10 | 53.4 | 34.0 | 77.4"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-4",
+          "page": 79,
+          "caption": "Material Specimen Program Matrix per ASTM E185-82",
+          "structured_text": "E185-82 | NuScale | E185-82 | NuScale\nUnirradiated Specimen Matrix, Baseline\nLimiting forging | 18 min | 18 | 3 min | 3\nLimiting weld | 18 min | 18 | 3 min | 3\nLimiting heat-affected zone | 18 min | 18 | N | / | A | N | / | A\nIrradiated Specimen Matrix, per capsule\nLimiting forging | 12 min | 15 | 3 min | 3\nLimiting weld | 12 min | 15 | 3 min | 3\nLimiting heat-affected zone | 12 min | 15 | N | / | A | N | / | A"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-5",
+          "page": 80,
+          "caption": "Surveillance Capsule Withdrawal Schedule",
+          "structured_text": "1st | Whichever comes first\n• 6-EFPY\n• Capsule fluence > 5E+18 n/cm2, E > 1 MeV\n• Highest predicted ΔRT > ~50°F of all\nNDT\nencapsulated materials | First refuel outage (~2 EFPY) when highest predicted\nΔRT > ~50°F(b)\nNDT\n2nd | Whichever comes first\n• 15 EFPY\n• Capsule fluence > peak 32-EFPY RPV inside\nsurface fluence | ~13 EFPY for capsule fluence to reach peak 32-EFPY RPV\ninside surface fluence\n• 32 EFPY/2.5 = ~13 EFPY\n3rd | Capsule fluence is between 1 and 2 times of\npeak 32-EFPY inside surface fluence | Between ~13 EFPY and ~26 EFPY\n• 32 EFPY/2.5 = ~13 EFPY\n• 64 EFPY/2.5 = ~26 EFPY\n4th | Not required by ASTM E185-82 | Withdrawal of the 4th capsule will be determined by\napplicable regulation at the time of license extension\napplication."
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-6",
+          "page": 81,
+          "caption": "Pressure-Temperature Limits for Normal Heatup and Cooldown",
+          "structured_text": "(Minimum core critical\ntemperature determined\nfrom the transient ISLH\ncurve) | (Minimum core critical\ntemperature determined\nfrom the Steady-State ISLH\ncurve)\nFluid\nTemp. (°F) | Press.\n(psig) | Fluid\nTemp. (°F) | Press.\n(psig) | Fluid Temp.\n(°F) | Press.\n(psig) | Fluid\nTemp. (°F) | Press.\n(psig)\n40 | 515 | (Reactor is not permitted to be\ncritical below 287°F if ISLH\ntesting is performed at Heat\nup/Cooldown transient\nconditions) | (Reactor is not permitted to be\ncritical below 185°F if ISLH\ntesting is performed at steady-\nstate conditions.) | 309 | 2759\n52 | 516 | 300 | 2187\n62 | 518 | 292 | 1697\n78 | 523 | 285 | 1439\n94 | 525 | 276 | 1280\n104 | 525 | 268 | 1168\n114 | 525 | 185 | 0 | 260 | 1071\n125 | 525 | 185 | 150 | 252 | 1011\n135 | 525 | 185 | 300 | 243 | 966\n146 | 525 | 185 | 400 | 239 | 932\n166 | 525 | 185 | 525 | 235 | 906\n175 | 525 | 223 | 705 | 232 | 884\n176 | 525 | 241 | 796 | 229 | 865\n176 | 676 | 287 | 0 | 258 | 927 | 226 | 848\n183 | 705 | 287 | 500 | 276 | 1115 | 223 | 833\n201 | 796 | 287 | 750 | 295 | 1414 | 213 | 795\n218 | 927 | 287 | 1000 | 314 | 1864 | 187 | 743\n236 | 1115 | 287 | 1293 | 334 | 2518 | 176 | 720\n255 | 1414 | 295 | 1414 | 354 | 2752 | 176 | 525\n274 | 1864 | 314 | 1864 | 374 | 2750 | 162 | 525\n294 | 2518 | 334 | 2518 | 393 | 2749 | 156 | 525\n314 | 2752 | 354 | 2752 | 413 | 2747 | 156 | 525\n334 | 2750 | 374 | 2750 | 426 | 2745 | 121 | 525\n353 | 2749 | 393 | 2749 | 440 | 2742 | 118 | 525\n373 | 2747 | 413 | 2747 | 454 | 2740 | 91 | 525\n386 | 2745 | 426 | 2745 | 462 | 2735 | 79 | 525\n400 | 2742 | 440 | 2742 | 469 | 2732 | 73 | 525\n414 | 2740 | 454 | 2740 | 470 | 2729 | 73 | 525"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-7",
+          "page": 82,
+          "caption": "Pressure-Temperature Limits for Inservice Leak and Hydrostatic Test",
+          "structured_text": "Fluid\nTemp. (°F) | Press.\n(psig) | Fluid\nTemp. (°F) | Press.\n(psig) | Fluid Temp.\n(°F) | Press.\n(psig) | Fluid\nTemp. (°F) | Press.\n(psig)\n79 | 525 | 300 | 2916 | 79 | 525 | 40 | 525\n91 | 525 | 292 | 2262 | 91 | 525 | 52 | 525\n118 | 525 | 285 | 1918 | 118 | 525 | 62 | 525\n121 | 525 | 276 | 1707 | 121 | 525 | 78 | 525\n146 | 525 | 268 | 1557 | 146 | 525 | 94 | 525\n146 | 790 | 260 | 1429 | 146 | 790 | 104 | 525\n156 | 823 | 252 | 1348 | 156 | 823 | 114 | 525\n156 | 823 | 243 | 1288 | 156 | 823 | 125 | 525\n162 | 843 | 239 | 1243 | 162 | 843 | 135 | 525\n187 | 968 | 235 | 1207 | 187 | 968 | 146 | 525\n213 | 1185 | 232 | 1178 | 213 | 1060 | 146 | 525\n223 | 1298 | 229 | 1153 | 223 | 1111 | 146 | 1247\n226 | 1343 | 226 | 1130 | 226 | 1130 | 166 | 1556\n229 | 1389 | 223 | 1111 | 229 | 1153 | 175 | 1737\n232 | 1434 | 213 | 1060 | 232 | 1178 | 183 | 1952\n235 | 1479 | 187 | 991 | 235 | 1207 | 201 | 2514\n239 | 1552 | 162 | 922 | 239 | 1243 | 218 | 3312\n243 | 1640 | 156 | 886 | 243 | 1288\n252 | 1814 | 156 | 849 | 252 | 1348\n260 | 2042 | 146 | 837 | 260 | 1429\n268 | 2293 | 146 | 525 | 268 | 1557\n276 | 2576 | 121 | 525 | 276 | 1707\n285 | 2960 | 118 | 525 | 285 | 1918\n292 | 3296 | 91 | 525 | 292 | 2262\n300 | 3459 | 79 | 525 | 300 | 2916"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-8",
+          "page": 83,
+          "caption": "Pressurized Thermal Shock Screening Result",
+          "structured_text": "(32- | EFPY | Fluence)\nLower | RPV | shell, beltline | 9.94E+18 | -10 | 64.9 | 34.0 | 88.9 | 270 max\nLower | RPV | weld | 2.32E+18 | -20 | 77.6 | 56.0 | 113.6 | 300 max\nRPV | bottom head | 2.32E+18 | -10 | 50.4 | 34.0 | 74.4 | 270 max\n(57- | EFPY | Fluence)\nLower | RPV | shell, beltline | 1.77E+19 | -10 | 70.8 | 34.0 | 94.8 | 270 max\nLower | RPV | weld | 4.14E+18 | -20 | 89.9 | 56.0 | 125.9 | 300 max\nRPV | bottom head | 4.14E+18 | -10 | 55.9 | 34.0 | 79.9 | 270 max"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-9",
+          "page": 84,
+          "caption": "1/4-T Charpy Upper Shelf Energy per RG 1.99, Rev. 2",
+          "structured_text": "Lower | RPV | shell, beltline | 0.10 (a) | 1.37E+19 | 20.5% | 75 ft-lb | 59.6 ft-lb\nLower | RPV | weld | 0.06 | 3.21E+18 | 15.3% | 75 ft-lb | 63.5 ft-lb\nRPV | bottom head | 0.10 (a) | 3.21E+18 | 14.5% | 75 ft-lb | 64.1 ft-lb"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-1",
+          "page": 132,
+          "caption": "Steam Generator Full-Load Thermal-Hydraulic Operating Conditions (Best Estimate)",
+          "structured_text": "(1)Total heat transfer ( | MW\nt | ) | 159.13\nSG | outlet pressure (psia) | 500.1\nSG | outlet temperature (°F) | 584.4\nSG | inlet temperature (°F) | 299.7\nSG | flow (lbm | / | hr) | 532298"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-2",
+          "page": 133,
+          "caption": "Steam Generator Design Data",
+          "structured_text": "Parameter | Value\nType | Helical, once-through\nTotal number of helical tubes per | NPM | 1380\nNumber of helical tube columns per | NPM | 21\nInternal pressure - secondary (psia) | 2100\nExternal pressure - primary (psia) | 2100\nExternal pressure - | SG | piping in containment (psia) | 1000\nInternal temperature - secondary (°F) | 650\nExternal temperature - primary (°F) | 650\nExternal temperature - | SG | piping in containment (°F) | 550\nTube wall outer diameter (inches) | 0.625\nTube wall thickness (inches) | 0.050\nSteam tubesheet thickness, without clad (inches) | 4.0\nFeed tubesheet thickness, without clad (inches) | 6.0\nSteam and feed tubesheet clad thickness - secondary (inches) | 0.250\nSteam and feed tubesheet clad thickness - primary (inches) | 0.375\nSteam tubesheet thickness, with clad (inches) | 4.625\nFeed tubesheet thickness, with clad (inches) | 6.625\nTotal heat transfer area (ft2) | 17928\nFouling factor (hr-ft2-°F/BTU) | 0.0001\nMinimum SG tube transition bend radius (inches) | ≥ 6.250"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-3",
+          "page": 134,
+          "caption": "Steam Generator System Component Materials",
+          "structured_text": "SG | Class 2 piping | SA-312 | Type 304 | / | 304L\nSG | piping reducers and elbows | SA-182 | Grade F304 | / | F304L\nSG | piping supports | SA-479 | Type 304 | / | 304L\nSG tubes | See Section 5.4.1.5\nFlow restrictors and flow restrictor bolts | SA-479 | Type 304\nFlow restrictor mounting plates | SA-240 | Type 304\nFlow restrictor mounting plate spacer | SB-166 | Alloy 690 (UNS N06690)\nFlow restrictor stud bolts, nuts, and washers\nStuds, nuts, and washers for the steam and feed\nplenum access port covers | SB-637 | Alloy 718 (UNS N07718)\nThreaded inserts for steam and feed plenum\naccess ports | SA-479 | Type 304/304L\nSteam plenum access ports | SA-508 | Grade 3, Class 2\nSteam and feed plenum access port covers | SA-240 | Type 304 | / | 304L\nLow alloy steel weld filler material | SFA | 5.5\n5.23\n-5.28\n-5.29 | Weld filler metal classifications compatible with low\nalloy steel base metal\nSFA\nSFA\nSFA\nStainless steel weld filler material\n(includes filler material for cladding) | SFA 5.4\nSFA 5.9\nSFA-5.22 | SFA | E308, E308L, E309, E309L, E316, E316L\nER308, ER308L, ER309, ER309L ER316, ER316L,\nEQ308L, EQ309L\nE308, E308L, E309, E309L, E316, E316L\nSFA\nSFA\nNickel-based alloy weld filler material | SFA | -5.11\n-5.14 | ENiCrFe-7\nERNiCrFe-7, ERNiCrFe-7A, EQNiCrFe-7, EQNiCrFe-7A\nSFA\nIntegral steam plenum\nIntegral steam plenum cap\nFeed plenum access port | See Table 5.2-4"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-4",
+          "page": 135,
+          "caption": "Not Used"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-5",
+          "page": 136,
+          "caption": "Decay Heat Removal System Design Data",
+          "structured_text": "Internal pressure (psia) | 2100\nActuation valve external pressure (psia) | 60\nPassive condenser external pressure (psia) | 27\nTemperature (°F) | 650\nNumber of condensers | 2\nTotal number of tubes per condenser | 80\nTube wall outer diameter (inches) | 1.315\nTube wall thickness (inches) | 0.109\nTube external surface area per condenser (ft2) | 258.2\nFouling factor (hr-ft2-F/BTU) | 0.0005"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-6",
+          "page": 137,
+          "caption": "Pressurizer Design Data",
+          "structured_text": "Parameter | Value\nInternal pressure (psia) | 2100\nExternal pressure (psia) | 1000\nTemperature (°F) | 650\nPressurizer heater sheath temperature (°F) | 800\nSpray nozzles | 2\nNominal spray nozzle diameter (in.) | 1"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-7",
+          "page": 138,
+          "caption": "Pressurizer Heater Parameters",
+          "structured_text": "Parameter | Value\nVoltage (Vac) | 480\nFrequency (Hz) | 60\nHeater bundles per pressurizer | 2\nHeater groups per bundle (kW) | 3\nNominal total capacity per heater bundle (kW) | 400"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-8",
+          "page": 143,
+          "caption": "Failure Modes and Effects Analysis - Decay Heat Removal System (Continued)",
+          "structured_text": "SGS Thermal Relief Valve\nSG-RV-0102\nSG-RV-0202 | 1) Provide pressure\nboundary | A) Spurious opening\nof relief valve with\nfailure to close\n(passive failure) | Mechanical | A spurious opening of the thermal relief valve with a\nfailure to close will cause the affected DHRS train to\nlose inventory and become inoperable. Safe shutdown\nwithout emergency core cooling system (ECCS)\nactuation is achieved with the remaining DHRS train. | • Steam pressure\n• DHRS level\ninstrument switches\n• Containment leakage\nmonitoring\ninstrumentation\n(containment\nevacuation system)\n2) Provide\noverpressure\nprotection when\nSGS is water solid. | A) Failure of valve to\nlift at setpoint | Mechanical | A failure of the valve to lift during a water solid over\npressure scenario could cause deformation or rupture\nof pressure boundary components. A rupture would\ncause the affected DHRS train to be inoperable. The\nmodule is in safe shutdown prior to this event and\ncooling will resume with the unaffected DHRS train or\nthrough flooding the CNV with the containment\nflooding and drain system. | • Steam pressure\n• DHRS level\ninstrument switches\nDHRS Loop Pressure\nBoundary\n(Includes piping inside CNV,\nsteam generator tubes)(1) | 1) Provide a pressure\nboundary for the\nSGS and DHRS | A) Pipe rupture and\nloss of DHRS loop\ninventory (passive\nfailure) | Mechanical | A pipe rupture of any pressure boundary piping which\nis part of the DHRS loop (SGS and DHRS piping within\ncontainment isolation valves) will cause the affected\nDHRS train to lose inventory and become inoperable.\nSafe shutdown without ECCS actuation is achieved\nwith the remaining DHRS train. | • Steam pressure\n• DHRS level\ninstrument switches\n• Containment leakage\nmonitoring\ninstrumentation\n(containment\nevacuation system)"
+        }
+      ]
+    },
+    "nuscale_ch05_0017": {
+      "node_id": "nuscale_ch05_0017",
+      "title": "Reactor Vessel Integrity",
+      "content": "NuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-7 Revision 55.3.2.2 Operating Procedures \nDevelopment of plant operating procedures to  ensure that the pressure-temperature \nlimits are not exceeded is addressed in Section 13.5. These procedures will ensure \ncompliance with th e technical specifications d uring normal power operating \nconditions and anticipated transients.\nCOL Item 5.3-2: A COL applicant that references th e NuScale Power Plant design certification will \ndevelop operating procedures to ensure that transients will not be more severe \nthan those for which the reactor design adequacy had been demonstrated. These \nprocedures will be based on material properties of the as-built reactor vessels.\n5.3.2.3 Pressurized Thermal Shock\nThe pressurized thermal shoc k (PTS) screening uses the methodology in 10 CFR 50.61. \nThe attenuated fluence below the inside  diameter cladding surface and the \ntemperature factor for RTNDT shift (including the nominal irradiation temperature \ncorrection factor) are calculated using the RG  1.99 equations. As shown in Table 5.3-8, \nthe predicted RTPTS remains below the 10 CFR 50.61 PTS screening criteria at 32-EFPY \nfluence and at 57-EFPY fluence, which bounds the NuScale 60-year design life. \n5.3.2.4 Upper-Shelf Energy\nReactor vessel beltline materials are evalua ted to ensure a minimum end-of-life Charpy \nV-notch upper shelf energy valu e of 50 ft-lb, as required by 10 CFR 50, Appendix G, at \n57-EFPY fluence, which bounds the NuScale 60-year design life. The initial Charpy \nV-notch upper shelf energy value is 75 ft-lb . The predicted 1/4-T Charpy upper shelf \nenergy decrease per RG 1.99 is summarized in Table 5.3-9. The predicted 1/4-T Charpy \nupper shelf energy after ad justing for NuScale RPV irradiation temperature is \nsummarized in Table 5.3-10. Only the 57-EFPY flue nce is calculated as  it represents the \nmost limiting case.\n5.3.3 Reactor Vessel Integrity\n5.3.3.1 Design\nCompatibility of the RPV design with established standards is described in \nSection 5.3.1. The basic design of the RPV establishes compatibility with required \ninspections as described in Section 5.2.4 and Section 5.3.1. \n5.3.3.2 Materials of Construction\nThe reactor vessel materials of construc tion are described in Section 5.2.3 and \nSection 5.3.1.\n5.3.3.3 Fabrication Methods\nThe fabrication methods used in the constructi on of the reactor vessel are described in \nSection 5.2.3 and Section 5.3.1.NuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-8 Revision 55.3.3.4 Inspection Requirements\nThe nondestructive examin ations performed are described in Section 5.3.1.\n5.3.3.5 Shipment and Installation\nPackaging, shipment, handling, and storage of the RPV is in accordance with ASME \nBPVC, Section III, 2013 edition, subsection  NCA-4134.13 and meet the requirements for \nLevel C items in accordance with ASME NQA-1-2008/1a-2009 Addenda \n(Reference 5.3-2), subpart 2.2.\nA dry environment is maintained for all RPV surfaces, both primary and secondary \nsides, by an installed non-chloride, non-corrosive desiccant. The RPV is shipped with humidity indicators covering a suitable rang e of moisture content. The RPV is shipped \nwith both the primary and secondary sides under positi ve pressure. The internal \natmosphere on both sides of the SG tubes ar e evacuated to eliminate residual moisture \nand filled with nitrogen having a dew point less than -20 degrees F.\nAppropriate foreign material exclusion meas ures are taken in preparation for shipping \nthe RPV.\n5.3.3.6 Operating Conditions\nOperating conditions as they relate to the integrity of the reactor vessel are presented \nin Section 5.2.2 and Section 5.3.2 and the plant technical specifications.\n5.3.3.7 Inservice Surveillance\nInservice surveillance of th e RPV is described in Section 5.2.4 and Section 5.3.1.\n5.3.3.8 Threaded Fasteners\nThreaded fasteners are discussed in Section 3.13 and Section 5.3.1.\n5.3.4 References\n5.3-1 American Society of Mechanical Engin eers, Boiler and Pressure Vessel Code, \n2013 Edition, Section III, \"Rules for Construction of Nuclear Facility \nComponents,\" New York, NY.\n5.3-2 American Society of Mechanical Engineers, Quality Assurance Requirements for \nNuclear Facility Applications , ASME NQA-1-2008/1a-2009 Addenda, New York, \nNY.\n5.3-3 ASTM International, \"Standard Prac tices for Detecting Susceptibility to \nlntergranular Attack in Austenitic Stainless Steels,\" ASTM A262-15, West \nConshohocken, PA.\n5.3-4 Not Used\n\n--- Referenced Tables (structured) ---\n[Table 5.3-10: 1/4-T Charpy Upper Shelf Energy after Adjusting for NuScale Reactor]\nLower | RPV | shell, beltline | 59.6 ft-lb min | -1.2 ft-lb | 58.4 ft-lb min\nLower | RPV | weld | 63.5 ft-lb min | -1.2 ft-lb | 62.3 ft-lb min\nRPV | bottom head | 64.1 ft-lb min | -1.2 ft-lb | 62.9 ft-lb min\n[Table 5.3-8: Pressurized Thermal Shock Screening Result]\n(32- | EFPY | Fluence)\nLower | RPV | shell, beltline | 9.94E+18 | -10 | 64.9 | 34.0 | 88.9 | 270 max\nLower | RPV | weld | 2.32E+18 | -20 | 77.6 | 56.0 | 113.6 | 300 max\nRPV | bottom head | 2.32E+18 | -10 | 50.4 | 34.0 | 74.4 | 270 max\n(57- | EFPY | Fluence)\nLower | RPV | shell, beltline | 1.77E+19 | -10 | 70.8 | 34.0 | 94.8 | 270 max\nLower | RPV | weld | 4.14E+18 | -20 | 89.9 | 56.0 | 125.9 | 300 max\nRPV | bottom head | 4.14E+18 | -10 | 55.9 | 34.0 | 79.9 | 270 max\n[Table 5.3-9: 1/4-T Charpy Upper Shelf Energy per RG 1.99, Rev. 2]\nLower | RPV | shell, beltline | 0.10 (a) | 1.37E+19 | 20.5% | 75 ft-lb | 59.6 ft-lb\nLower | RPV | weld | 0.06 | 3.21E+18 | 15.3% | 75 ft-lb | 63.5 ft-lb\nRPV | bottom head | 0.10 (a) | 3.21E+18 | 14.5% | 75 ft-lb | 64.1 ft-lb",
+      "summary": "This section outlines the procedures and regulatory compliance measures to ensure the integrity of the NuScale reactor vessel throughout its 60-year design life. It details the development of operating procedures to maintain pressure-temperature limits, evaluates the vessel's resistance to pressurized thermal shock and upper-shelf energy degradation, and confirms that all predicted values remain within regulatory safety criteria.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "73",
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 5.3-10",
+          "page": 85,
+          "caption": "1/4-T Charpy Upper Shelf Energy after Adjusting for NuScale Reactor",
+          "structured_text": "Lower | RPV | shell, beltline | 59.6 ft-lb min | -1.2 ft-lb | 58.4 ft-lb min\nLower | RPV | weld | 63.5 ft-lb min | -1.2 ft-lb | 62.3 ft-lb min\nRPV | bottom head | 64.1 ft-lb min | -1.2 ft-lb | 62.9 ft-lb min"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-8",
+          "page": 83,
+          "caption": "Pressurized Thermal Shock Screening Result",
+          "structured_text": "(32- | EFPY | Fluence)\nLower | RPV | shell, beltline | 9.94E+18 | -10 | 64.9 | 34.0 | 88.9 | 270 max\nLower | RPV | weld | 2.32E+18 | -20 | 77.6 | 56.0 | 113.6 | 300 max\nRPV | bottom head | 2.32E+18 | -10 | 50.4 | 34.0 | 74.4 | 270 max\n(57- | EFPY | Fluence)\nLower | RPV | shell, beltline | 1.77E+19 | -10 | 70.8 | 34.0 | 94.8 | 270 max\nLower | RPV | weld | 4.14E+18 | -20 | 89.9 | 56.0 | 125.9 | 300 max\nRPV | bottom head | 4.14E+18 | -10 | 55.9 | 34.0 | 79.9 | 270 max"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-9",
+          "page": 84,
+          "caption": "1/4-T Charpy Upper Shelf Energy per RG 1.99, Rev. 2",
+          "structured_text": "Lower | RPV | shell, beltline | 0.10 (a) | 1.37E+19 | 20.5% | 75 ft-lb | 59.6 ft-lb\nLower | RPV | weld | 0.06 | 3.21E+18 | 15.3% | 75 ft-lb | 63.5 ft-lb\nRPV | bottom head | 0.10 (a) | 3.21E+18 | 14.5% | 75 ft-lb | 64.1 ft-lb"
+        }
+      ]
     },
     "nuscale_ch05_0018": {
       "node_id": "nuscale_ch05_0018",
       "title": "References",
-      "summary": "This section outlines the inspection, shipment, installation, operating conditions, inservice surveillance, and threaded fastener requirements for the NuScale reactor vessel, referencing relevant ASME and ASTM standards. It specifies procedures for maintaining a dry, controlled environment during shipment and lists the key codes and standards used for quality assurance and construction.",
+      "content": "NuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-8 Revision 55.3.3.4 Inspection Requirements\nThe nondestructive examin ations performed are described in Section 5.3.1.\n5.3.3.5 Shipment and Installation\nPackaging, shipment, handling, and storage of the RPV is in accordance with ASME \nBPVC, Section III, 2013 edition, subsection  NCA-4134.13 and meet the requirements for \nLevel C items in accordance with ASME NQA-1-2008/1a-2009 Addenda \n(Reference 5.3-2), subpart 2.2.\nA dry environment is maintained for all RPV surfaces, both primary and secondary \nsides, by an installed non-chloride, non-corrosive desiccant. The RPV is shipped with humidity indicators covering a suitable rang e of moisture content. The RPV is shipped \nwith both the primary and secondary sides under positi ve pressure. The internal \natmosphere on both sides of the SG tubes ar e evacuated to eliminate residual moisture \nand filled with nitrogen having a dew point less than -20 degrees F.\nAppropriate foreign material exclusion meas ures are taken in preparation for shipping \nthe RPV.\n5.3.3.6 Operating Conditions\nOperating conditions as they relate to the integrity of the reactor vessel are presented \nin Section 5.2.2 and Section 5.3.2 and the plant technical specifications.\n5.3.3.7 Inservice Surveillance\nInservice surveillance of th e RPV is described in Section 5.2.4 and Section 5.3.1.\n5.3.3.8 Threaded Fasteners\nThreaded fasteners are discussed in Section 3.13 and Section 5.3.1.\n5.3.4 References\n5.3-1 American Society of Mechanical Engin eers, Boiler and Pressure Vessel Code, \n2013 Edition, Section III, \"Rules for Construction of Nuclear Facility \nComponents,\" New York, NY.\n5.3-2 American Society of Mechanical Engineers, Quality Assurance Requirements for \nNuclear Facility Applications , ASME NQA-1-2008/1a-2009 Addenda, New York, \nNY.\n5.3-3 ASTM International, \"Standard Prac tices for Detecting Susceptibility to \nlntergranular Attack in Austenitic Stainless Steels,\" ASTM A262-15, West \nConshohocken, PA.\n5.3-4 Not UsedNuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-9 Revision 55.3-5 American Society of Mechanical Engin eers, Boiler and Pressure Vessel Code, \n2013 Edition, Section XI, “Rules for lnserv ice Inspection of Nuclear Power Plant \nComponents,\" New York, NY.\n5.3-6 ASTM International, \"Standard Practice  for Conducting Surveillance Tests for \nLight-Water Cooled Nuclear Power Re actor Vessels,\" ASTM E185-82, West \nConshohocken, PA.\n5.3-7 NuScale Power, LLC, \"Fluence Ca lculational Methodology and Results,\" \nTR-0116-20781-P, Revision 1.\n5.3-8 NuScale Power, LLC, \"Pressure an d Temperature Limits Methodology,\" \nTR-1015-18177-P, Revision 2.NuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-10 Revision 5Table 5.3-1: Reactor Vessel Parameters\nDesign Parameter Value\nDesign pressure (psia) 2100\nDesign temperature (degrees F) 650\nOverall height, bottom of alignment feature to top of CRDM latch housing section (inches) 778\nInside diameter of lower RPV section, cylindrical region, without clad (inches) 96.5Outside diameter of lower RPV section, cylindrical region, without clad (inches) 105Inside diameter of upper RPV section, cyli ndrical region, without clad (inches) 104.5\nOutside diameter of upper RPV section, cyli ndrical region, without clad (inches) 112.5\nInside diameter of pressurizer, cylindri cal region, without clad (inches) 106.5\nOutside diameter of pressurizer, cylindrical region, without clad (inches) 115.5\nInside diameter of upper head without clad (inches) 104.5\nOutside diameter of upper head  without clad (inches) 112.5\nInner clad thickness (inches) 0.25\nOuter clad thickness (inches) 0.125NuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-11 Revision 5Table 5.3-2: Chemical Compos ition of Reactor Pressure Vessel Beltline Materials\nMaterial Element Maximum concentration (wt%)\nRPV beltline forging material Sulfur 0.010\nPhosphorus 0.010\nCopper 0.06\nCobalt 0.05Nickel 0.85\nAs-deposited weld me tal used in the RPV \nbeltlineSulfur .015\nPhosphorus .012\nCopper .06Cobalt .05\nManganese 1.80\nNickel 0.85NuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-12 Revision 5Table 5.3-3: 1/4-T Adjusted Reference Temp erature Result at 57 Effective Full-Power \nYears Fluence\nLocationPeak 1/4-T Fluence, \nn/cm2, E >1 MeVMaximum \nInitial RTNDT  \n(°F)ΔRTNDT (°F) Margin (°F)Adjusted \nReference \nTemperature \n(°F)\nLower RPV shell, beltline 1.37E+19 -10 68.2 34.0 92.2\nLower RPV weld 3.21E+18 -20 84.4 56.0 120.4\nRPV bottom head 3.21E+18 -10 53.4 34.0 77.4NuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-13 Revision 5Table 5.3-4: Material Specimen Program Matrix per ASTM E185-82\nMaterialCharpy Tension\nE185-82 NuScale E185-82 NuScale\nUnirradiated Specimen Matrix, Baseline\nLimiting forging 18 min 18 3 min 3Limiting weld 18 min 18 3 min 3Limiting heat-affected zone 18 min 18\nN/A N/A\nIrradiated Specimen Matrix, per capsule\nLimiting forging 12 min 15 3 min 3Limiting weld 12 min 15 3 min 3Limiting heat-affected zone 12 min 15\nN/A N/ANuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-14 Revision 5Table 5.3-5: Surveillance Capsule Withdrawal Schedule\nSequence ASTM E185-82 Withdrawal Requirement (a) Estimated Withdrawal \n1st Whichever comes first\n• 6-EFPY\n• Capsule fluence > 5E+18 n/cm2, E > 1 MeV \n• Highest predicted ΔRTNDT > ~50°F of all \nencapsulated materialsFirst refuel outage (~2 EFPY) when highest predicted \nΔRTNDT > ~50°F(b)\n2nd Whichever comes first\n•1 5  E F P Y• Capsule fluence > peak 32-EFPY RPV inside \nsurface fluence~13 EFPY for capsule fluence to reach peak 32-EFPY RPV \ninside surface fluence• 32 EFPY/2.5 = ~13 EFPY\n3rd\nCapsule fluence is between 1 and 2 times of \npeak 32-EFPY inside surface fluenceBetween ~13 EFPY and ~26 EFPY\n• 32 EFPY/2.5 = ~13 EFPY• 64 EFPY/2.5 = ~26 EFPY\n4th Not required by ASTM E185-82 Withdrawal of the 4th capsule will be determined by \napplicable regulation at the time of license extension \napplication.\nNotes:a. The withdrawal schedule for the first th ree capsules is in accordance with AS TM E185-82 for the initial 40-year operating \nlicense period. The 4th capsule is not requir ed by ASTM E185-82 for the 40-year license.\nb. The highest predicted ΔRT\nNDT material to reach 50°F is the limiting weld metal at 4.27+17 n/cm2, E > 1 MeV (or 0.55 EFPY). \nHowever, 28°F of the 50°F shift is due to a \"1°F/1°F below 525°F irradiation temperature\" adjust ment. The 28°F adjustment is \nfixed irrespective of changes in fluence, therefore, overcompensa tes at low fluence levels. It is  considered unlikely that weld  \nmetal specimens will reach 50°F shift at 0.55  EFPY. Therefore, the first capsule can be  withdrawn at the end of the first fuel \ncycle (2 EFPY or 1.55E+18 n/cm2, E > 1 MeV), instead of mid-fuel-cycle.NuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-15 Revision 5Table 5.3-6: Pressure-Temperature Li mits for Normal Heatup and Cooldown\nNormal Heat up\n(Core Not Critical)Normal Heat up\n(Core Critical)\nNormal Cooldown(Minimum core critical \ntemperature determined \nfrom the transient ISLH \ncurve)(Minimum core critical \ntemperature determined \nfrom the Steady-State ISLH \ncurve)\nFluid\nTemp. (°F)Press.\n(psig)Fluid\nTemp. (°F)Press.\n(psig)Fluid Temp. \n(°F)Press.\n(psig)Fluid\nTemp. (°F)Press.\n(psig)\n40 515\n(Reactor is not permitted to be \ncritical below 287°F if ISLH \ntesting is performed at Heat \nup/Cooldown transient \nconditions)(Reactor is not permitted to be \ncritical below 185°F if ISLH \ntesting is performed at steady-\nstate conditions.)309 2759\n52 516 300 218762 518 292 1697\n78 523 285 1439\n94 525 276 1280\n104 525 268 1168\n114 525 185 0 260 1071\n125 525 185 150 252 1011135 525 185 300 243 966\n146 525 185 400 239 932\n166 525 185 525 235 906175 525 223 705 232 884\n176 525 241 796 229 865\n176 676 287 0 258 927 226 848183 705 287 500 276 1115 223 833\n201 796 287 750 295 1414 213 795\n218 927 287 1000 314 1864 187 743236 1115 287 1293 334 2518 176 720\n255 1414 295 1414 354 2752 176 525\n274 1864 314 1864 374 2750 162 525294 2518 334 2518 393 2749 156 525\n314 2752 354 2752 413 2747 156 525\n334 2750 374 2750 426 2745 121 525353 2749 393 2749 440 2742 118 525\n373 2747 413 2747 454 2740 91 525\n386 2745 426 2745 462 2735 79 525400 2742 440 2742 469 2732 73 525\n414 2740 454 2740 470 2729 73 525NuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-16 Revision 5Table 5.3-7: Pressure-Temperature Limits  for Inservice Leak and Hydrostatic Test\nISLH for Heat up\n TransientISLH for Cooldown\n TransientTransient ISLH (Bounding of \nHeat up/Cooldown)Steady-State ISLH\nFluid\nTemp. (°F)Press.\n(psig)Fluid\nTemp. (°F)Press.\n(psig)Fluid Temp. \n(°F)Press.\n(psig)Fluid\nTemp. (°F)Press.\n(psig)\n79 525 300 2916 79 525 40 525\n91 525 292 2262 91 525 52 525\n118 525 285 1918 118 525 62 525121 525 276 1707 121 525 78 525\n146 525 268 1557 146 525 94 525\n146 790 260 1429 146 790 104 525156 823 252 1348 156 823 114 525\n156 823 243 1288 156 823 125 525\n162 843 239 1243 162 843 135 525187 968 235 1207 187 968 146 525\n213 1185 232 1178 213 1060 146 525\n223 1298 229 1153 223 1111 146 1247226 1343 226 1130 226 1130 166 1556\n229 1389 223 1111 229 1153 175 1737\n232 1434 213 1060 232 1178 183 1952235 1479 187 991 235 1207 201 2514\n239 1552 162 922 239 1243 218 3312\n243 1640 156 886 243 1288252 1814 156 849 252 1348\n260 2042 146 837 260 1429\n268 2293 146 525 268 1557276 2576 121 525 276 1707\n285 2960 118 525 285 1918\n292 3296 91 525 292 2262300 3459 79 525 300 2916NuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-17 Revision 5Table 5.3-8: Pressurized Thermal Shock Screening Result\n0-T Fluence \nn/cm2, E > 1 MeVMax Initial RTNDT (°F) ΔRTNDT  (°F) Margin (°F) RTPTS (°F)Screening \nCriterion \n(°F)\n(32-EFPY Fluence)\nLower RPV shell, beltline 9.94E+18 -10 64.9 34.0 88.9 270 max\nLower RPV weld 2.32E+18 -20 77.6 56.0 113.6 300 max\nRPV bottom head 2.32E+18 -10 50.4 34.0 74.4 270 max\n(57-EFPY Fluence)\nLower RPV shell, beltline 1.77E+19 -10 70.8 34.0 94.8 270 max\nLower RPV weld 4.14E+18 -20 89.9 56.0 125.9 300 max\nRPV bottom head 4.14E+18 -10 55.9 34.0 79.9 270 maxNuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-18 Revision 5Table 5.3-9: 1/4-T Charpy Upper Shelf Energy per RG 1.99, Rev. 2\nCu, wt%¼-T, 57-EFPY Fluence\nn/cm2, E > 1 MeVCharpy Upper \nShelf Energy\nDecreaseInitial Charpy \nUpper Shelf \nEnergy, minCharpy Upper \nShelf Energy per \nRG 1.99 Rev 2, \nmin\nLower RPV shell, beltline 0.10 (a) 1.37E+19 20.5% 75 ft-lb 59.6 ft-lb\nLower RPV weld 0.06 3.21E+18 15.3% 75 ft-lb 63.5 ft-lb\nRPV bottom head 0.10 (a) 3.21E+18 14.5% 75 ft-lb 64.1 ft-lb\nNote: \n(a) For base metal, the 0.10 wt% Cu line is the minimum line in Figure 2 of Regulatory Guide 1. 99, Rev. 2. For conservatism, \n0.10% Cu is used instead of the maximu m 0.06 wt% Cu for the NuScale design.NuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-19 Revision 5Table 5.3-10: 1/4-T Charpy Upper Shelf En ergy after Adjusting for NuScale Reactor \nPressure Vessel Irradiation Temperature\nFinal Charpy Upper Shelf \nEnergy per RG 1.99 Rev 2Irradiation Temperature \nAdjustmentFinal Charpy Upper Shelf \nEnergy \nLower RPV shell, beltline 59.6 ft-lb min -1.2 ft-lb 58.4 ft-lb min\nLower RPV weld 63.5 ft-lb min -1.2 ft-lb 62.3 ft-lb min\nRPV bottom head 64.1 ft-lb min -1.2 ft-lb 62.9 ft-lb minNuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-20 Revision 5Figure 5.3-1: Reactor Vessel\nLOWER RPV\nSECTIONUPPER RPV\nSECTIONRPV HEAD\nSECTIONCRDM LATCH\nHOUSING\nSECTION16X LATCH HOUSINGS\nRPV TOP HEAD\nPZR SHELL\nINTEGRAL STEAM PLENUM\n4X STEAM PLENUM ACCESS PORT\nUPPER RPV SG SHELL\nLOWER RPV SG SHELL\n4X FEED PLENUM ACCESS PORT\nLOWER RPV SECTION FLANGE SHELL\nRPV BOTTOM HEADUPPER RPV FLANGED\nTRANSITION SHELL(CRDM SEISMIC SUPPORT\nSTRUCTURE SHOWN)\n4X INSTRUMENT SEAL ASSEMBLYNuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-21 Revision 5\nFigure 5.3-2: Location of Surveillance Capsules NuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-22 Revision 5\nFigure 5.3-3: Pressure-Temperature Limits  for Normal Heatup and Criticality Limit\nNuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-23 Revision 5\nFigure 5.3-4: Pressure-Temperature Limits for Normal  Cooldown with Decay Heat  Removal and Containment \nVessel Flooding\nNuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-24 Revision 5\nFigure 5.3-5: Pressure-Temperature Limits for Inservice Leak and Hydrostatic Tests\n\n\n--- Referenced Tables (structured) ---\n[Table 5.3-1: Reactor Vessel Parameters]\nDesign Parameter | Value\nDesign pressure (psia) | 2100\nDesign temperature (degrees F) | 650\nOverall height, bottom of alignment feature to top of CRDM latch housing section (inches) | 778\nInside diameter of lower RPV section, cylindrical region, without clad (inches) | 96.5\nOutside diameter of lower RPV section, cylindrical region, without clad (inches) | 105\nInside diameter of upper RPV section, cylindrical region, without clad (inches) | 104.5\nOutside diameter of upper RPV section, cylindrical region, without clad (inches) | 112.5\nInside diameter of pressurizer, cylindrical region, without clad (inches) | 106.5\nOutside diameter of pressurizer, cylindrical region, without clad (inches) | 115.5\nInside diameter of upper head without clad (inches) | 104.5\nOutside diameter of upper head without clad (inches) | 112.5\nInner clad thickness (inches) | 0.25\nOuter clad thickness (inches) | 0.125\n[Table 5.3-10: 1/4-T Charpy Upper Shelf Energy after Adjusting for NuScale Reactor]\nLower | RPV | shell, beltline | 59.6 ft-lb min | -1.2 ft-lb | 58.4 ft-lb min\nLower | RPV | weld | 63.5 ft-lb min | -1.2 ft-lb | 62.3 ft-lb min\nRPV | bottom head | 64.1 ft-lb min | -1.2 ft-lb | 62.9 ft-lb min\n[Table 5.3-2: Chemical Composition of Reactor Pressure Vessel Beltline Materials]\nRPV beltline forging material | Sulfur | 0.010\nPhosphorus | 0.010\nCopper | 0.06\nCobalt | 0.05\nNickel | 0.85\nAs-deposited weld metal used in the RPV\nbeltline | Sulfur | .015\nPhosphorus | .012\nCopper | .06\nCobalt | .05\nManganese | 1.80\nNickel | 0.85\n[Table 5.3-3: 1/4-T Adjusted Reference Temperature Result at 57 Effective Full-Power]\nLower | RPV | shell, beltline | 1.37E+19 | -10 | 68.2 | 34.0 | 92.2\nLower | RPV | weld | 3.21E+18 | -20 | 84.4 | 56.0 | 120.4\nRPV | bottom head | 3.21E+18 | -10 | 53.4 | 34.0 | 77.4\n[Table 5.3-4: Material Specimen Program Matrix per ASTM E185-82]\nE185-82 | NuScale | E185-82 | NuScale\nUnirradiated Specimen Matrix, Baseline\nLimiting forging | 18 min | 18 | 3 min | 3\nLimiting weld | 18 min | 18 | 3 min | 3\nLimiting heat-affected zone | 18 min | 18 | N | / | A | N | / | A\nIrradiated Specimen Matrix, per capsule\nLimiting forging | 12 min | 15 | 3 min | 3\nLimiting weld | 12 min | 15 | 3 min | 3\nLimiting heat-affected zone | 12 min | 15 | N | / | A | N | / | A\n[Table 5.3-5: Surveillance Capsule Withdrawal Schedule]\n1st | Whichever comes first\n• 6-EFPY\n• Capsule fluence > 5E+18 n/cm2, E > 1 MeV\n• Highest predicted ΔRT > ~50°F of all\nNDT\nencapsulated materials | First refuel outage (~2 EFPY) when highest predicted\nΔRT > ~50°F(b)\nNDT\n2nd | Whichever comes first\n• 15 EFPY\n• Capsule fluence > peak 32-EFPY RPV inside\nsurface fluence | ~13 EFPY for capsule fluence to reach peak 32-EFPY RPV\ninside surface fluence\n• 32 EFPY/2.5 = ~13 EFPY\n3rd | Capsule fluence is between 1 and 2 times of\npeak 32-EFPY inside surface fluence | Between ~13 EFPY and ~26 EFPY\n• 32 EFPY/2.5 = ~13 EFPY\n• 64 EFPY/2.5 = ~26 EFPY\n4th | Not required by ASTM E185-82 | Withdrawal of the 4th capsule will be determined by\napplicable regulation at the time of license extension\napplication.\n[Table 5.3-6: Pressure-Temperature Limits for Normal Heatup and Cooldown]\n(Minimum core critical\ntemperature determined\nfrom the transient ISLH\ncurve) | (Minimum core critical\ntemperature determined\nfrom the Steady-State ISLH\ncurve)\nFluid\nTemp. (°F) | Press.\n(psig) | Fluid\nTemp. (°F) | Press.\n(psig) | Fluid Temp.\n(°F) | Press.\n(psig) | Fluid\nTemp. (°F) | Press.\n(psig)\n40 | 515 | (Reactor is not permitted to be\ncritical below 287°F if ISLH\ntesting is performed at Heat\nup/Cooldown transient\nconditions) | (Reactor is not permitted to be\ncritical below 185°F if ISLH\ntesting is performed at steady-\nstate conditions.) | 309 | 2759\n52 | 516 | 300 | 2187\n62 | 518 | 292 | 1697\n78 | 523 | 285 | 1439\n94 | 525 | 276 | 1280\n104 | 525 | 268 | 1168\n114 | 525 | 185 | 0 | 260 | 1071\n125 | 525 | 185 | 150 | 252 | 1011\n135 | 525 | 185 | 300 | 243 | 966\n146 | 525 | 185 | 400 | 239 | 932\n166 | 525 | 185 | 525 | 235 | 906\n175 | 525 | 223 | 705 | 232 | 884\n176 | 525 | 241 | 796 | 229 | 865\n176 | 676 | 287 | 0 | 258 | 927 | 226 | 848\n183 | 705 | 287 | 500 | 276 | 1115 | 223 | 833\n201 | 796 | 287 | 750 | 295 | 1414 | 213 | 795\n218 | 927 | 287 | 1000 | 314 | 1864 | 187 | 743\n236 | 1115 | 287 | 1293 | 334 | 2518 | 176 | 720\n255 | 1414 | 295 | 1414 | 354 | 2752 | 176 | 525\n274 | 1864 | 314 | 1864 | 374 | 2750 | 162 | 525\n294 | 2518 | 334 | 2518 | 393 | 2749 | 156 | 525\n314 | 2752 | 354 | 2752 | 413 | 2747 | 156 | 525\n334 | 2750 | 374 | 2750 | 426 | 2745 | 121 | 525\n353 | 2749 | 393 | 2749 | 440 | 2742 | 118 | 525\n373 | 2747 | 413 | 2747 | 454 | 2740 | 91 | 525\n386 | 2745 | 426 | 2745 | 462 | 2735 | 79 | 525\n400 | 2742 | 440 | 2742 | 469 | 2732 | 73 | 525\n414 | 2740 | 454 | 2740 | 470 | 2729 | 73 | 525\n[Table 5.3-7: Pressure-Temperature Limits for Inservice Leak and Hydrostatic Test]\nFluid\nTemp. (°F) | Press.\n(psig) | Fluid\nTemp. (°F) | Press.\n(psig) | Fluid Temp.\n(°F) | Press.\n(psig) | Fluid\nTemp. (°F) | Press.\n(psig)\n79 | 525 | 300 | 2916 | 79 | 525 | 40 | 525\n91 | 525 | 292 | 2262 | 91 | 525 | 52 | 525\n118 | 525 | 285 | 1918 | 118 | 525 | 62 | 525\n121 | 525 | 276 | 1707 | 121 | 525 | 78 | 525\n146 | 525 | 268 | 1557 | 146 | 525 | 94 | 525\n146 | 790 | 260 | 1429 | 146 | 790 | 104 | 525\n156 | 823 | 252 | 1348 | 156 | 823 | 114 | 525\n156 | 823 | 243 | 1288 | 156 | 823 | 125 | 525\n162 | 843 | 239 | 1243 | 162 | 843 | 135 | 525\n187 | 968 | 235 | 1207 | 187 | 968 | 146 | 525\n213 | 1185 | 232 | 1178 | 213 | 1060 | 146 | 525\n223 | 1298 | 229 | 1153 | 223 | 1111 | 146 | 1247\n226 | 1343 | 226 | 1130 | 226 | 1130 | 166 | 1556\n229 | 1389 | 223 | 1111 | 229 | 1153 | 175 | 1737\n232 | 1434 | 213 | 1060 | 232 | 1178 | 183 | 1952\n235 | 1479 | 187 | 991 | 235 | 1207 | 201 | 2514\n239 | 1552 | 162 | 922 | 239 | 1243 | 218 | 3312\n243 | 1640 | 156 | 886 | 243 | 1288\n252 | 1814 | 156 | 849 | 252 | 1348\n260 | 2042 | 146 | 837 | 260 | 1429\n268 | 2293 | 146 | 525 | 268 | 1557\n276 | 2576 | 121 | 525 | 276 | 1707\n285 | 2960 | 118 | 525 | 285 | 1918\n292 | 3296 | 91 | 525 | 292 | 2262\n300 | 3459 | 79 | 525 | 300 | 2916\n[Table 5.3-8: Pressurized Thermal Shock Screening Result]\n(32- | EFPY | Fluence)\nLower | RPV | shell, beltline | 9.94E+18 | -10 | 64.9 | 34.0 | 88.9 | 270 max\nLower | RPV | weld | 2.32E+18 | -20 | 77.6 | 56.0 | 113.6 | 300 max\nRPV | bottom head | 2.32E+18 | -10 | 50.4 | 34.0 | 74.4 | 270 max\n(57- | EFPY | Fluence)\nLower | RPV | shell, beltline | 1.77E+19 | -10 | 70.8 | 34.0 | 94.8 | 270 max\nLower | RPV | weld | 4.14E+18 | -20 | 89.9 | 56.0 | 125.9 | 300 max\nRPV | bottom head | 4.14E+18 | -10 | 55.9 | 34.0 | 79.9 | 270 max\n[Table 5.3-9: 1/4-T Charpy Upper Shelf Energy per RG 1.99, Rev. 2]\nLower | RPV | shell, beltline | 0.10 (a) | 1.37E+19 | 20.5% | 75 ft-lb | 59.6 ft-lb\nLower | RPV | weld | 0.06 | 3.21E+18 | 15.3% | 75 ft-lb | 63.5 ft-lb\nRPV | bottom head | 0.10 (a) | 3.21E+18 | 14.5% | 75 ft-lb | 64.1 ft-lb",
+      "summary": "This section outlines the inspection, shipment, installation, and surveillance requirements for the NuScale reactor vessel, referencing relevant ASME and ASTM standards for quality assurance and material testing. It specifies procedures for maintaining a dry, controlled environment during shipment and details where further information on inspections, operating conditions, and fasteners can be found. Key standards cited include the ASME Boiler and Pressure Vessel Code and ASME NQA-1 for quality assurance.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "74",
-      "hop": 2
+      "hop": 2,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 5.3-1",
+          "page": 86,
+          "caption": "Reactor Vessel"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.3-2",
+          "page": 87,
+          "caption": "Location of Surveillance Capsules"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.3-3",
+          "page": 88,
+          "caption": "Pressure-Temperature Limits for Normal Heatup and Criticality Limit"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.3-4",
+          "page": 89,
+          "caption": "Pressure-Temperature Limits for Normal Cooldown with Decay Heat Removal and Containment"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.3-5",
+          "page": 90,
+          "caption": "Pressure-Temperature Limits for Inservice Leak and Hydrostatic Tests"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-1",
+          "page": 76,
+          "caption": "Reactor Vessel Parameters",
+          "structured_text": "Design Parameter | Value\nDesign pressure (psia) | 2100\nDesign temperature (degrees F) | 650\nOverall height, bottom of alignment feature to top of CRDM latch housing section (inches) | 778\nInside diameter of lower RPV section, cylindrical region, without clad (inches) | 96.5\nOutside diameter of lower RPV section, cylindrical region, without clad (inches) | 105\nInside diameter of upper RPV section, cylindrical region, without clad (inches) | 104.5\nOutside diameter of upper RPV section, cylindrical region, without clad (inches) | 112.5\nInside diameter of pressurizer, cylindrical region, without clad (inches) | 106.5\nOutside diameter of pressurizer, cylindrical region, without clad (inches) | 115.5\nInside diameter of upper head without clad (inches) | 104.5\nOutside diameter of upper head without clad (inches) | 112.5\nInner clad thickness (inches) | 0.25\nOuter clad thickness (inches) | 0.125"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-10",
+          "page": 85,
+          "caption": "1/4-T Charpy Upper Shelf Energy after Adjusting for NuScale Reactor",
+          "structured_text": "Lower | RPV | shell, beltline | 59.6 ft-lb min | -1.2 ft-lb | 58.4 ft-lb min\nLower | RPV | weld | 63.5 ft-lb min | -1.2 ft-lb | 62.3 ft-lb min\nRPV | bottom head | 64.1 ft-lb min | -1.2 ft-lb | 62.9 ft-lb min"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-2",
+          "page": 77,
+          "caption": "Chemical Composition of Reactor Pressure Vessel Beltline Materials",
+          "structured_text": "RPV beltline forging material | Sulfur | 0.010\nPhosphorus | 0.010\nCopper | 0.06\nCobalt | 0.05\nNickel | 0.85\nAs-deposited weld metal used in the RPV\nbeltline | Sulfur | .015\nPhosphorus | .012\nCopper | .06\nCobalt | .05\nManganese | 1.80\nNickel | 0.85"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-3",
+          "page": 78,
+          "caption": "1/4-T Adjusted Reference Temperature Result at 57 Effective Full-Power",
+          "structured_text": "Lower | RPV | shell, beltline | 1.37E+19 | -10 | 68.2 | 34.0 | 92.2\nLower | RPV | weld | 3.21E+18 | -20 | 84.4 | 56.0 | 120.4\nRPV | bottom head | 3.21E+18 | -10 | 53.4 | 34.0 | 77.4"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-4",
+          "page": 79,
+          "caption": "Material Specimen Program Matrix per ASTM E185-82",
+          "structured_text": "E185-82 | NuScale | E185-82 | NuScale\nUnirradiated Specimen Matrix, Baseline\nLimiting forging | 18 min | 18 | 3 min | 3\nLimiting weld | 18 min | 18 | 3 min | 3\nLimiting heat-affected zone | 18 min | 18 | N | / | A | N | / | A\nIrradiated Specimen Matrix, per capsule\nLimiting forging | 12 min | 15 | 3 min | 3\nLimiting weld | 12 min | 15 | 3 min | 3\nLimiting heat-affected zone | 12 min | 15 | N | / | A | N | / | A"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-5",
+          "page": 80,
+          "caption": "Surveillance Capsule Withdrawal Schedule",
+          "structured_text": "1st | Whichever comes first\n• 6-EFPY\n• Capsule fluence > 5E+18 n/cm2, E > 1 MeV\n• Highest predicted ΔRT > ~50°F of all\nNDT\nencapsulated materials | First refuel outage (~2 EFPY) when highest predicted\nΔRT > ~50°F(b)\nNDT\n2nd | Whichever comes first\n• 15 EFPY\n• Capsule fluence > peak 32-EFPY RPV inside\nsurface fluence | ~13 EFPY for capsule fluence to reach peak 32-EFPY RPV\ninside surface fluence\n• 32 EFPY/2.5 = ~13 EFPY\n3rd | Capsule fluence is between 1 and 2 times of\npeak 32-EFPY inside surface fluence | Between ~13 EFPY and ~26 EFPY\n• 32 EFPY/2.5 = ~13 EFPY\n• 64 EFPY/2.5 = ~26 EFPY\n4th | Not required by ASTM E185-82 | Withdrawal of the 4th capsule will be determined by\napplicable regulation at the time of license extension\napplication."
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-6",
+          "page": 81,
+          "caption": "Pressure-Temperature Limits for Normal Heatup and Cooldown",
+          "structured_text": "(Minimum core critical\ntemperature determined\nfrom the transient ISLH\ncurve) | (Minimum core critical\ntemperature determined\nfrom the Steady-State ISLH\ncurve)\nFluid\nTemp. (°F) | Press.\n(psig) | Fluid\nTemp. (°F) | Press.\n(psig) | Fluid Temp.\n(°F) | Press.\n(psig) | Fluid\nTemp. (°F) | Press.\n(psig)\n40 | 515 | (Reactor is not permitted to be\ncritical below 287°F if ISLH\ntesting is performed at Heat\nup/Cooldown transient\nconditions) | (Reactor is not permitted to be\ncritical below 185°F if ISLH\ntesting is performed at steady-\nstate conditions.) | 309 | 2759\n52 | 516 | 300 | 2187\n62 | 518 | 292 | 1697\n78 | 523 | 285 | 1439\n94 | 525 | 276 | 1280\n104 | 525 | 268 | 1168\n114 | 525 | 185 | 0 | 260 | 1071\n125 | 525 | 185 | 150 | 252 | 1011\n135 | 525 | 185 | 300 | 243 | 966\n146 | 525 | 185 | 400 | 239 | 932\n166 | 525 | 185 | 525 | 235 | 906\n175 | 525 | 223 | 705 | 232 | 884\n176 | 525 | 241 | 796 | 229 | 865\n176 | 676 | 287 | 0 | 258 | 927 | 226 | 848\n183 | 705 | 287 | 500 | 276 | 1115 | 223 | 833\n201 | 796 | 287 | 750 | 295 | 1414 | 213 | 795\n218 | 927 | 287 | 1000 | 314 | 1864 | 187 | 743\n236 | 1115 | 287 | 1293 | 334 | 2518 | 176 | 720\n255 | 1414 | 295 | 1414 | 354 | 2752 | 176 | 525\n274 | 1864 | 314 | 1864 | 374 | 2750 | 162 | 525\n294 | 2518 | 334 | 2518 | 393 | 2749 | 156 | 525\n314 | 2752 | 354 | 2752 | 413 | 2747 | 156 | 525\n334 | 2750 | 374 | 2750 | 426 | 2745 | 121 | 525\n353 | 2749 | 393 | 2749 | 440 | 2742 | 118 | 525\n373 | 2747 | 413 | 2747 | 454 | 2740 | 91 | 525\n386 | 2745 | 426 | 2745 | 462 | 2735 | 79 | 525\n400 | 2742 | 440 | 2742 | 469 | 2732 | 73 | 525\n414 | 2740 | 454 | 2740 | 470 | 2729 | 73 | 525"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-7",
+          "page": 82,
+          "caption": "Pressure-Temperature Limits for Inservice Leak and Hydrostatic Test",
+          "structured_text": "Fluid\nTemp. (°F) | Press.\n(psig) | Fluid\nTemp. (°F) | Press.\n(psig) | Fluid Temp.\n(°F) | Press.\n(psig) | Fluid\nTemp. (°F) | Press.\n(psig)\n79 | 525 | 300 | 2916 | 79 | 525 | 40 | 525\n91 | 525 | 292 | 2262 | 91 | 525 | 52 | 525\n118 | 525 | 285 | 1918 | 118 | 525 | 62 | 525\n121 | 525 | 276 | 1707 | 121 | 525 | 78 | 525\n146 | 525 | 268 | 1557 | 146 | 525 | 94 | 525\n146 | 790 | 260 | 1429 | 146 | 790 | 104 | 525\n156 | 823 | 252 | 1348 | 156 | 823 | 114 | 525\n156 | 823 | 243 | 1288 | 156 | 823 | 125 | 525\n162 | 843 | 239 | 1243 | 162 | 843 | 135 | 525\n187 | 968 | 235 | 1207 | 187 | 968 | 146 | 525\n213 | 1185 | 232 | 1178 | 213 | 1060 | 146 | 525\n223 | 1298 | 229 | 1153 | 223 | 1111 | 146 | 1247\n226 | 1343 | 226 | 1130 | 226 | 1130 | 166 | 1556\n229 | 1389 | 223 | 1111 | 229 | 1153 | 175 | 1737\n232 | 1434 | 213 | 1060 | 232 | 1178 | 183 | 1952\n235 | 1479 | 187 | 991 | 235 | 1207 | 201 | 2514\n239 | 1552 | 162 | 922 | 239 | 1243 | 218 | 3312\n243 | 1640 | 156 | 886 | 243 | 1288\n252 | 1814 | 156 | 849 | 252 | 1348\n260 | 2042 | 146 | 837 | 260 | 1429\n268 | 2293 | 146 | 525 | 268 | 1557\n276 | 2576 | 121 | 525 | 276 | 1707\n285 | 2960 | 118 | 525 | 285 | 1918\n292 | 3296 | 91 | 525 | 292 | 2262\n300 | 3459 | 79 | 525 | 300 | 2916"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-8",
+          "page": 83,
+          "caption": "Pressurized Thermal Shock Screening Result",
+          "structured_text": "(32- | EFPY | Fluence)\nLower | RPV | shell, beltline | 9.94E+18 | -10 | 64.9 | 34.0 | 88.9 | 270 max\nLower | RPV | weld | 2.32E+18 | -20 | 77.6 | 56.0 | 113.6 | 300 max\nRPV | bottom head | 2.32E+18 | -10 | 50.4 | 34.0 | 74.4 | 270 max\n(57- | EFPY | Fluence)\nLower | RPV | shell, beltline | 1.77E+19 | -10 | 70.8 | 34.0 | 94.8 | 270 max\nLower | RPV | weld | 4.14E+18 | -20 | 89.9 | 56.0 | 125.9 | 300 max\nRPV | bottom head | 4.14E+18 | -10 | 55.9 | 34.0 | 79.9 | 270 max"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-9",
+          "page": 84,
+          "caption": "1/4-T Charpy Upper Shelf Energy per RG 1.99, Rev. 2",
+          "structured_text": "Lower | RPV | shell, beltline | 0.10 (a) | 1.37E+19 | 20.5% | 75 ft-lb | 59.6 ft-lb\nLower | RPV | weld | 0.06 | 3.21E+18 | 15.3% | 75 ft-lb | 63.5 ft-lb\nRPV | bottom head | 0.10 (a) | 3.21E+18 | 14.5% | 75 ft-lb | 64.1 ft-lb"
+        }
+      ]
     },
-    "nuscale_ch05_0015": {
-      "node_id": "nuscale_ch05_0015",
-      "title": "Reactor Vessel Materials",
-      "summary": "The Reactor Vessel Materials section describes the NuScale Power Module’s reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a single vessel, providing a crucial barrier to fission product release. The RPV and its components are constructed from materials specified by the ASME Boiler and Pressure Vessel Code to ensure integrity and safety throughout the plant’s design lifetime.",
+    "nuscale_ch05_0025": {
+      "node_id": "nuscale_ch05_0025",
+      "title": "References",
+      "content": "NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-40 Revision 55.4.5.5 Pressurizer Materials\nThe pressurizer includes the top portion of  the RPV upper shell, the RPV upper head, \nthe pressurizer baffle plate, heater bundles, and spray nozzles. The material of the RPV upper shell and upper head is described in  Section 5.2. The pressurizer spray nozzles \nand pressurizer spray nozzle safe ends are described in Section 4.5 and Section 5.2, \nrespectively. \nThe pressurizer baffle plate is an integral part of one of the RP V upper shell forgings \nand is thus constructed of a Grade 3, Class 2, low alloy steel in acco rdance with material \nspecification SA-508 of BPVC, Section II. The upper and lower  surfaces of the baffle \nplate are weld clad with two layers of st ainless steel for corrosion protection in \naccordance with material specification SFA- 5.9 of BPVC, Section II; the first layer being \nAlloy Type ER309L and the second layer being Alloy Type ER308L. Additionally, the \nupper surface of the baffle plate in the regi ons of the SG integral steam plenums is clad \nwith nickel-based Alloy 52/152 for compatibility.\nThe specific materials for the heater bundle assemblies are austenitic stainless steel or \nNi-Cr-Fe Alloy. Materials for the cover plate, bolting, and heater sheaths are corrosion \nresistant materials that are compatible with  their respective operating environments. \nMaterials for the cover plate include austenit ic stainless steel Type 304, Grade F304 and \nnickel-based Alloy 690 (UNS N06690). These ma terials comply with BPVC, Section II, \nSpecifications SA-182 and SB-168, respectively . Materials for the heater sheaths include \naustenitic stainless steel Type 304L and Ty pe 316. These materials comply with BPVC, \nSection II, Specification SA-213. The bolt ing material is nickel-based Alloy 750 \n(UNS N07718) and complies with BPVC , Section II, Specification SB-637.\n5.4.6 References\n5.4-1 Nuclear Energy Institut e, \"Steam Generator Program Guidelines,\" NEI 97-06, \nRevision 3, Washington, DC, January 2011.\n5.4-2 Electric Power Research Institute, \"Steam Generator Management Program: \nPressurized Water Reactor Steam Genera tor Examination Gu idelines,\" EPRI \n#1013706, EPRI, Palo Alto, CA, 2007.\n5.4-3 Electric Power Research Institute, \"Advanced Nuclear Technology: Advanced \nLight Water Reactors Utility Requ irements Document,\" EPRI #3002003129, \nRevision 13, EPRI, Palo Alto, CA, December 05, 2014.\n5.4-4 Institute of Electrical and Electronics Engineers, \"Recommended Practice for \nSeismic Qualification of Class 1E Equ ipment for Nuclear Power Generating \nStations,\" IEEE Standard 344-2004, Piscataway, NJ.\n5.4-5 Institute of Electrical an d Electronics Engineers, \"Sta ndard Criteria for Accident \nMonitoring Instrumentati on for Nuclear Power Ge nerating Stations,\" \nIEEE Standard 497-2002, Piscataway, NJ.\n5.4-6 NuScale Power, LLC, \"Long-Term Cooling Methodology,\" TR-0916-51299-P, \nRevision 3.NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-41 Revision 55.4-7 Chen, S.S., J.A. Jendrzejczyk, and M.W. Wambsganss, \"Tube Vibration in a \nHalf-Scale Sector Model of a Helical Tu be Steam Generator,\" Journal of Sound \nand Vibration (1983): 91:4:539-569.\n5.4-8 American Society of Mechanical Engin eers, Boiler and Pressure Vessel Code, \n\"Forged Fittings, Socket-Welding and Threaded,\" ASME B16.11-2009, New York, \nNY.\n5.4-9 NuScale Power, LLC, “Evaluation Meth odology for Stability Analysis of the \nNuScale Power Module,” TR-0516-49417-P-A Revision 1.NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-42 Revision 5Table 5.4-1: Steam Generator Full-Load Thermal- Hydraulic Operating Cond itions (Best Estimate)\nParameter Value\n(1)Total heat transfer (MWt) 159.13\nSG outlet pressure (psia) 500.1\nSG outlet temperature (°F) 584.4\nSG inlet temperature (°F) 299.7\nSG flow (lbm/hr) 532298\n(1) Based on operation of both SGs, each SG is capable of providing half of the total heat transfer required.NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-43 Revision 5Table 5.4-2: Steam Generator Design Data\nParameter Value\nType Helical, once-through\nTotal number of helical tubes per NPM 1380\nNumber of helical tube columns per NPM 21\nInternal pressure - secondary (psia) 2100\nExternal pressure - primary (psia) 2100\nExternal pressure - SG pipi ng in containment (psia) 1000\nInternal temperature - secondary (°F) 650\nExternal temperature - primary (°F) 650\nExternal temperature - SG piping in containment (°F) 550\nTube wall outer diameter (inches) 0.625\nTube wall thickness (inches) 0.050\nSteam tubesheet thickness, without clad (inches) 4.0\nFeed tubesheet thickness, without clad (inches) 6.0\nSteam and feed tubesheet clad thickness - secondary (inches) 0.250\nSteam and feed tubesheet clad thickness - primary (inches) 0.375\nSteam tubesheet thickness, with clad (inches) 4.625\nFeed tubesheet thickness, with clad (inches) 6.625\nTotal heat transfer area (ft2) 17928\nFouling factor (hr-ft2-°F/BTU) 0.0001\nMinimum SG tube transition bend radius (inches) ≥ 6.250NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-44 Revision 5Table 5.4-3: Steam Generator System Component Materials\nComponent Specification Alloy Designation1\n(Grade, Class, or Type)\nSG Class 2 piping SA-312 Type 304/304L\nSG piping reducers and elbows SA-182 Grade F304/F304L\nSG piping supports SA-479 Type 304/304L\nSG tubes See Section 5.4.1.5Flow restrictors and flow restrictor bolts SA-479 Type 304Flow restrictor mounting plates SA-240 Type 304Flow restrictor mounting plate spacer SB-166 Alloy 690 (UNS N06690)\nFlow restrictor stud bo lts, nuts, and washers\nStuds, nuts, and washers for the steam and feed plenum access port coversSB-637 Alloy 718 (UNS N07718)\nThreaded inserts for steam and feed plenum \naccess portsSA-479 Type 304/304L\nSteam plenum access ports SA-508 Grade 3, Class 2\nSteam and feed plenum access port covers SA-240\nType 304/304L\nLow alloy steel weld filler material SFA 5.5\nSFA 5.23\nSFA-5.28\nSFA-5.29Weld filler metal classifications compatible with low \nalloy steel base metal\nStainless steel weld filler material\n(includes filler material for cladding)SFA 5.4SFA 5.9\nSFA-5.22E308, E308L, E309, E309L, E316, E316L\nER308, ER308L, ER309, ER309L ER316, ER316L, EQ308L, EQ309L\nE308, E308L, E309, E309L, E316, E316L\nNickel-based alloy weld filler material\nSFA-5.11\nSFA-5.14ENiCrFe-7\nERNiCrFe-7, ERNiCrFe-7A, EQNiCrFe-7, EQNiCrFe-7A\nIntegral steam plenum\nIntegral steam plenum cap\nFeed plenum access portSee Table 5.2-4\nNotes:\n1 - When the material is designated as Type or Grade 304/3 04L, this refers to dual cert ified stainless steel material.NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-45 Revision 5Table 5.4-4: Not UsedNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-46 Revision 5Table 5.4-5: Decay Heat Re moval System Design Data\nParameter Value\nInternal pressure (psia) 2100\nActuation valve external pressure (psia) 60\nPassive condenser external pressure (psia) 27\nTemperature (°F) 650\nNumber of condensers 2\nTotal number of tubes per condenser 80\nTube wall outer diameter (inches) 1.315\nTube wall thickness (inches) 0.109\nTube external surface area per condenser (ft2) 258.2\nFouling factor (hr-ft2-F/BTU) 0.0005NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-47 Revision 5Table 5.4-6: Pressurizer Design Data\nParameter Value\nInternal pressure (psia) 2100\nExternal pressure (psia) 1000\nTemperature (°F) 650\nPressurizer heater sheath temperature (°F) 800\nSpray nozzles 2\nNominal spray nozzle diameter (in.) 1NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-48 Revision 5Table 5.4-7: Pressurizer Heater Parameters\nParameter Value\nVoltage (Vac) 480\nFrequency (Hz) 60\nHeater bundles per pressurizer 2\nHeater groups per bundle (kW) 3\nNominal total capacity per heater bundle (kW) 400NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-49 Revision 5\nTable 5.4-8: Failure Modes and Effects Analysis - Decay Heat Removal System\nComponent Identification Function Failure Mode Failure \nMechanismEffect on System Method of Failure \nDetection\nDHRS actuation valve\nDHR-HOV-0101ADHR-HOV-0101B\nDHR-HOV-0201A\nDHR-HOV-0201B\n(normally closed, fail open)1) Maintain DHRS in \nstandbyA) Spurious opening Mechanical\nElectrical/I&CAffected DHRS condenser has open flow path to SG. \nTurbine must be isolated to prevent damage. Normal cooling is available thro ugh feedwater. Unaffected \nDHRS train remains available.• Valve position \nindication\n•S t e a m  p r e s s u r e\n• Steam temperature\n• Passive condenser \ntemperature\nB) Spurious DHRS \nactuationElectrical/I&C\nOperator errorBoth DHRS trains initiate operation and the MSIVs and \nFWIVs will close. The engi neered safety features \nactuation system will generate a reactor trip signal regardless of if the DHRS actuation signal was \nerroneous or not.• Pressurizer pressure•S t e a m  p r e s s u r e\n• Valve position \nindication\n• Pressurizer level\n• Passive condenser \ntemperature\n• Passive condenser \nlevel\n•R e a c t o r  t r i p  \nC) Leakage (passive \nfailure)Mechanical Minor leakage will not impact DHRS operation. DHRS \ninventory is maintained by the continuous makeup of \nfeedwater to the steam generator. Major valve seat leakage will cause both DHRS trains to actuate.• Minor seat leakage:\n-n o n e\n• Major seat leakage:\n- Passive condenser \ntemperature\n-S t e a m  p r e s s u r e- Steam temperature\n• Minor valve bonnet \nleakage:- periodic inspections\n• Major valve bonnet \nleakage:- passive condenser \ntemperatureNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-50 Revision 5\n2) Initiate DHRS \ncoolingA) Fail to open Mechanical\nElectrical/I&CSufficient flow required for cooling of affected DHRS \ntrain is maintained by redundant DHRS actuation valve. \nOther train operates normally.• Valve position \nindication\nB) Partial opening MechanicalC) Slow opening \n(extended stroke \ntime or delayed actuation)Mechanical \nElectrical/I&C\nD) Spurious closure Electrical/I&C\nOperator error\nE) Leakage (passive \nfailure)Mechanical Leakage out of the system results in a reduction in \ncooling inventory for the affected DHRS train. DHRS operation is maintained by the unaffected train. Major \nsystem leakage is addressed under DHRS Loop \nPressure Bounda ry failures.• Minor valve bonnet \nleakage:- periodic inspection\n• Major valve bonnet \nleakage:-S t e a m  p r e s s u r e  \n(valve bonnet \nfailure)\n- Passive condenser \ntemperature\n- RCS temperatures\nF) Flow blockage \n(passive failure)Mechanical Reduced or nonexisten t flow through affected valve \nbut adequate DHRS flow is  maintained by redundant \nactuation valve. The other train operates normally,NoneTable 5.4-8: Failure Modes and Effects Analysis - Decay Heat Removal System (Continued)\nComponent Identification Function Failure Mode Failure \nMechanismEffect on System Method of Failure \nDetectionNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-51 Revision 5\nMain steam isolation valve\nMS-HOV-0101\nMS-HOV-0201\n(normally open, fail closed)1) Isolate main steam \nline to establish \nclosed DHRS \ncooling loopA) Fail to close Mechanical\nElectrical/I&CDHRS inventory in the train associated with the failed \nMSIV will be maintained by the downstream secondary \nMSIV.• Valve position \nindication\n•S t e a m  p r e s s u r e\n• Passive condenser \ntemperature\n• RCS temperaturesB) Partial closure Mechanical\nC) Slow closure \n(extended stroke time or delayed \nactuation)Mechanical\nElectrical/I&CThe affected train function s normally. Secondary MSIV \nclosure mitigates loss of  inventory. System can \nfunction properly with a range of initial inventories so a \nloss of cooling capability in the affected train is not \ncredible.• Valve position \nindication\n•S t e a m  p r e s s u r e\n• Passive condenser \ntemperature \nD) Spurious opening Electrical/I&C\nOperator error DHRS inventory in the train associated with failed MSIV \nwill be maintained by the downstream secondary \nMSIV.• Valve position \nindication\n•S t e a m  p r e s s u r e\n• Passive condenser \ntemperature \n• RCS temperatures\nE) Leakage through \nseat or seal (passive failure)Mechanical The affected train func tions normally. Secondary MSIV \nclosure mitigates loss of  inventory. System can \nfunction properly with a range of initial inventories so a \nloss of cooling capability in the affected train is not \ncredible.• Periodic testing & \ninspection\n•S t e a m  p r e s s u r e  \n• Passive condenser \ntemperature\n• RCS temperatures\nMain steam isolation valve \nBypass Valve\nMS-HOV-0103MS-HOV-0203\n(normally closed, fail closed)1) Maintain DHRS \npressure \nboundary during DHRS operationA) Spurious opening \nduring DHRS \noperationOperator error DHRS inventory in the tr ain associated with failed MSIV \nbypass valve will be maintained by the downstream \nsecondary MSIV. • Valve position \nindication\n•S t e a m  p r e s s u r e• Passive condenser \ntemperature\n• RCS temperatures\nB) Leakage through \nseat or seal \n(passive failure)Mechanical See MSIV failure mode 1E.Table 5.4-8: Failure Modes and Effects Analysis - Decay Heat Removal System (Continued)\nComponent Identification Function Failure Mode Failure \nMechanismEffect on System Method of Failure \nDetectionNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-52 Revision 5\nFeedwater isolation valve\nFW-HOV-0137\nFW-HOV-0237\n(normally open, fail closed)1) Isolate feedwater \nline to establish \nclosed DHRS \ncooling loopA) Fail to close Mechanical\nElectrical/I&CAdditional DHRS inventory may be added to the train \nassociated with the failed FWIV until feedwater stops \nflowing into the SG. The FW RV closes simultaneously, \nproviding redundant isolation. The system can function properly with a range of initial inventories so a \nloss of cooling capability due to overfill is not credible. • Valve position \nindication\n• Passive condenser \ntemperature\n•S t e a m  p r e s s u r e  B) Partial closure Mechanical \nC) Slow closure \n(extended stroke time or delayed \nactuation)Mechanical\nElectrical/I&CIn the affected train, more DHRS inventory than \nanticipated may be added while the FWIV and FWRV close but the system can function properly with a \nrange of initial inventories so a loss of cooling \ncapability is not credible. • Valve position \nindication\n• Passive condenser \ntemperature\n•S t e a m  p r e s s u r e\nD) Spurious opening Electrical/I&C\nOperator error DHRS inventory in the train associated with failed FWIV \nwill be maintained by the feedwater check valves \nupstream of the FWIV and the closed FWRV.• Valve position \nindication\n•S t e a m  p r e s s u r e\nE) Leakage through \nseat or seal (passive failure)Mechanical The affected train functions normally. Feedwater \nregulating valve closure mitigates loss of inventory. System can function properly with a range of initial \ninventories so a loss of cooling capability in the \naffected train is not credible.\n• Periodic testing & \ninspection\n•S t e a m  p r e s s u r e\n• Passive condenser \ntemperature\n• RCS temperatures\nSafety-related feedwater \ncheck valve\nFW-CKV-0136FW-CKV-02361) Prevent backflow \nthrough FWIVsA) Fail to close Mechanical The nonsafet y-related check valve upstream of the \nsafety-related check valve is credited to close during a \nFWLB. Thus, sufficient inventory is available for the affected train.• Passive condenser \ntemperature\n•S t e a m  p r e s s u r e• RCS temperaturesB) Partial closure\nC) Slow closureTable 5.4-8: Failure Modes and Effects Analysis - Decay Heat Removal System (Continued)\nComponent Identification Function Failure Mode Failure \nMechanismEffect on System Method of Failure \nDetectionNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-53 Revision 5\nSGS Thermal Relief Valve\nSG-RV-0102\nSG-RV-02021) Provide pressure \nboundaryA) Spurious opening \nof relief valve with \nfailure to close \n(passive failure)Mechanical A spurious opening of the thermal relief valve with a \nfailure to close will cause the affected DHRS train to \nlose inventory and become inoperable. Safe shutdown \nwithout emergency core cooling system (ECCS) actuation is achieved with the remaining DHRS train.•S t e a m  p r e s s u r e\n• DHRS level \ninstrument switches\n• Containment leakage \nmonitoring \ninstrumentation \n(containment evacuation system)\n2) Provide \noverpressure \nprotection when SGS is water solid.A) Failure of valve to \nlift at setpointMechanical A failure of the valve to  lift during a water solid over \npressure scenario could cause deformation or rupture \nof pressure boundary components. A rupture would cause the affected DHRS train to be inoperable. The \nmodule is in safe shutdown prior to this event and \ncooling will resume with the unaffected DHRS train or through flooding the CNV with the containment \nflooding and drain system.•S t e a m  p r e s s u r e\n• DHRS level \ninstrument switches\nDHRS Loop Pressure \nBoundary(Includes piping inside CNV, \nsteam generator tubes)\n(1)1) Provide a pressure \nboundary for the SGS and DHRSA) Pipe rupture and \nloss of DHRS loop inventory (passive \nfailure)Mechanical A pipe rupture of any pressure boundary piping which \nis part of the DHRS loop (SGS and DHRS piping within containment isolation valves ) will cause the affected \nDHRS train to lose inventory and become inoperable. \nSafe shutdown without ECCS actuation is achieved with the remaining DHRS train.•S t e a m  p r e s s u r e\n• DHRS level \ninstrument switches\n• Containment leakage \nmonitoring instrumentation \n(containment \nevacuation system)\nNotes:\n(1) Pipe ruptures outside of the CNV are no t postulated as the DHRS piping is specifie d to meet additional stress criteria spec ified in Branch Technical Position 3-4.\nContainment leakage monitoring instrumentation  only identifi es pressure boundary failures  within the containment vessel.Table 5.4-8: Failure Modes and Effects Analysis - Decay Heat Removal System (Continued)\nComponent Identification Function Failure Mode Failure \nMechanismEffect on System Method of Failure \nDetectionNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-54 Revision 5\nFigure 5.4-1: Steam Generator Helical Tube Bundle \nTRANSITION REGION START AND STOP\nSTEAM TRANSITION \u0003\nREGION\nHELIX\nHELIX HEIGHT \nTOTAL HEIGHT \nTRANSITION REGION\nSTART AND STOPFEED TRANSITION\nREGION\nFEED TRANSITION REGION\nSTART AND STOP\nQUARTER OF COLUMN 1 COLUMN 1FULL TUBE BUNDLE0°\n90°\n180°270°0°\n90°\n180°270°0°\n90°\n180°270°0°\n90°\n180°270°\nSTEAM TRANSITION REGION\nSTART AND STOP\nRADIUS\nTYPICAL TUBE ARRANGEMENT\n(TUBE 01 OF COLUMN 01 SHOWN)RADIUS IS TAKEN AT\nCENTERLINE OF TUBENuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-55 Revision 5Figure 5.4-2: Configuration of Steam Generato rs in Upper Reactor Pressure Vessel SectionNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-56 Revision 5Figure 5.4-3: Main Steam and Feedwater Plena\nSTEAM 4 STEAM 1\nSTEAM 3 STEAM 20°\n90° 270°\n180°\nSTEAM PLENUMS IN RPVREACTOR\nPRESSURE\nVESSEL\n0°\n270° 90°\n180°FEED 4FEED 1\nFEED 2 FEED 3\nFEED PLENUMS IN RPVREACTOR\nPRESSURE\nVESSELNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-57 Revision 5\nFigure 5.4-4: Integral Steam Plenum\n0°\n90° 270°\n180°\nINTEGRAL STEAM PLENUM ASSEMBLY TOP VIEW\n(OVERHEAD VIEW)INTEGRAL STEAM PLENUM\n(SIDE VIEW - CUTAWAY)HEATER\nBUNDLEREMOVABLE\nACCESS COVER\nSTEAM ACCESSPORT\nACCESS PORTMAIN STEAM\nSUPPLY NOZZLECAPNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-58 Revision 5Figure 5.4-5: Feedwater Plenum Access Port\n)(('\u00033/(180\u0003$&&(66\u00033257\u0003&87$:$<5HPRYDEOH\u0003$FFHVV\u0003&RYHU7XEHVKHHW\u0003\u000b7XEHV\u0003QRW\u0003VKRZQ\f\n)ORZ\u00035HVWULFWRU\u00030RXQWLQJ\u00033ODWH\n\u000b)ORZ\u00035HVWULFWRUV\u0003QRW\u0003VKRZQ\f)HHGZDWHU\u00036XSSO\\\u00031R]]OH\n)ORZ\u00035HVWULFWRU\n6WXG\u0003%ROWV0RXQWLQJ\u00033ODWH\u00036SDFHU\n)ORZ\u00035HVWULFWRU\u0003\n0RXQWLQJ\u00033ODWHNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-59 Revision 5\nFigure 5.4-6: Steam Generator Tube Supports and Steam Generator Supports\n78%(\u00036833257\u0003\n723\u00036(&7,21\n78%(\u00036833257\u0003\n0,''/(\u00036(&7,21\n78%(\u00036833257\u0003\n%27720\u00036(&7,21287(5\u000363$&(5\n287(5\u000363$&(50,''/(\u000363$&(5833(5\u00036*\u00036833257\n/2:(5\u00036*\u000368332576833257\u0003$66(0%/<833(5\u00036*\u00036833257\n/2:(5\u00036*\u00036833257NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-60 Revision 5Figure 5.4-7: Steam Generator Tube Support Tabs\n&217$&7\u0003%(7:((1\u00037$%\u0003\n$1'\u0003$'-$&(17\u00036833257723\u00039,(:\u00032)\u00036,1*/(\u000378%(\u0003\n6833257\u0003$1'\u00036*\u0003&2/801\n7$%\n78%(NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-61 Revision 5Figure 5.4-8: Steam Generator Flow Restrictor Assembly\n)ORZ\u00035HVWULFWRU)ORZ\u00035HVWULFWRU\u0003%ROW\n&ODGGLQJ\n)HHG\u00033OHQXP\u00037XEHVKHHW\n)ORZ\u00035HVWULFWRU\u00030RXQWLQJ)ORZ\u00035HVWULFWRU\u0003\n0RXQWLQJ\u00033ODWHNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-62 Revision 5\nFigure 5.4-9: Steam Generator Simplified Diagram\nRPV01-SG-SG-0201\nSTEAM GENERATOR 2FROM FWTO MS TO MS\nCNV01-SG-SG-0101\nSTEAM GENERATOR 1CNTSG\nCNTSG\nCNTSG\nCNTSG\n   DHRSSG DHRS SGFROM FW\nFROM DHRS\nFROM CNT\nFROM DHRSTO CNTTO CNTFROM CNT\nRV-0102 RV-0202NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-63 Revision 5\nFigure 5.4-10: Decay Heat Remo val System Simplified Diagram\n01-DHR\nDHR PASSIVE CONDENSERIN REACTOR POOL\nIN CONTAINMENT VESSEL\n01-DHR\nDHR PASSIVE CONDENSER01-DHR-HOV\nFO\n01-DHR-HOV01-DHR-FOFO\n01-DHR-FO\nFO\n01-DHR-HOV\nFO\n01-DHR-HOV\nCNV23CNV22FROM CNTCNT DHR\nCNT DHR\nFROM CNTPT PTZSC ZSO\nPT PTZSC ZSOLT LT\nLT LT\nPT PT CNT DHRZSC ZSO\nFROM CNT\nFROM CNTCNT DHR PT PTZSC ZSOLT LT INSULATED NON-INSULATED\nINSULATED NON-INSULATED LT LTINSULATED NON-INSULATEDINSULATED NON-INSULATED\nTT TT PT PT PTTO SGDHR SGDHR SG\nTO SG\nTT TT PT PT PTH\nH\nH\nHNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-64 Revision 5\nFigure 5.4-11: Primary Coolant Temp erature with Decay Heat Removal System Two Train Operation - 4 Hours\n250300350400450500550600\n0 2000 4000 6000 8000 10000 12000 14000Primary Temperatures (°F)\nTime (sec)\nHot Leg\nCold LegAverageNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-65 Revision 5\nFigure 5.4-12: Primary Coolant Temper ature Cooldown with De cay Heat Removal System  One Train Operation: \nLow System Inventory - 4 Hours\n440460480500520540560580600\n0 2000 4000 6000 8000 10000 12000 14000Primary Temperatures (°F)\nTime (sec)\nHot Leg\nCold LegAverageNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-66 Revision 5\nFigure 5.4-13: Primary Coolant Temper ature Cooldown with De cay Heat Removal System  One Train Operation: \nLow System Inventory - 36 Hours\n300350400450500550600\n0 20000 40000 60000 80000 100000 120000Primary Temperatures (°F)\nTime (sec)\nHot Leg\nCold LegAverageNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-67 Revision 5\nFigure 5.4-14: Primary Coolant Temper ature Cooldown with De cay Heat Removal System  One Train Operation: \nHigh System Inventory - 4 Hours\n490500510520530540550560570580590\n0 2000 4000 6000 8000 10000 12000 14000Primary Temperatures (°F)\nTime (sec)\nHot Leg\nCold LegAverageNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-68 Revision 5\nFigure 5.4-15: Primary Coolant Temper ature Cooldown with De cay Heat Removal System  One Train Operation: \nHigh System Inventory - 36 Hours\n350400450500550600\n0 20000 40000 60000 80000 100000 120000Primary Temperatures (°F)\nTime (sec)\nHot Leg\nCold LegAverageNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-69 Revision 5\nFigure 5.4-16: Primary Coolant Temper ature Cooldown with De cay Heat Removal System  One Train Operation: \nHigh System Inventory, 140 Degree Fahre nheit Initial Pool Temperature - 36 Hours\n380400420440460480500520540560580600\n0 20000 40000 60000 80000 100000 120000Primary Temperatures (°F)\nTime (sec)\nHot Leg\nCold LegAverageNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-70 Revision 5\nFigure 5.4-17: Pressurizer Region of Reactor Vessel \n\n\n--- Referenced Tables (structured) ---\n[Table 5.2-4: Reactor Coolant Pressure Boundary Component and Support Materials]\nCRDM | Pressure Retaining Components\nLatch housing\nRod travel housing\nRod travel housing Plug | SA-965 | Grade F304LN\n[Table 5.4-1: Steam Generator Full-Load Thermal-Hydraulic Operating Conditions (Best Estimate)]\n(1)Total heat transfer ( | MW\nt | ) | 159.13\nSG | outlet pressure (psia) | 500.1\nSG | outlet temperature (°F) | 584.4\nSG | inlet temperature (°F) | 299.7\nSG | flow (lbm | / | hr) | 532298\n[Table 5.4-2: Steam Generator Design Data]\nParameter | Value\nType | Helical, once-through\nTotal number of helical tubes per | NPM | 1380\nNumber of helical tube columns per | NPM | 21\nInternal pressure - secondary (psia) | 2100\nExternal pressure - primary (psia) | 2100\nExternal pressure - | SG | piping in containment (psia) | 1000\nInternal temperature - secondary (°F) | 650\nExternal temperature - primary (°F) | 650\nExternal temperature - | SG | piping in containment (°F) | 550\nTube wall outer diameter (inches) | 0.625\nTube wall thickness (inches) | 0.050\nSteam tubesheet thickness, without clad (inches) | 4.0\nFeed tubesheet thickness, without clad (inches) | 6.0\nSteam and feed tubesheet clad thickness - secondary (inches) | 0.250\nSteam and feed tubesheet clad thickness - primary (inches) | 0.375\nSteam tubesheet thickness, with clad (inches) | 4.625\nFeed tubesheet thickness, with clad (inches) | 6.625\nTotal heat transfer area (ft2) | 17928\nFouling factor (hr-ft2-°F/BTU) | 0.0001\nMinimum SG tube transition bend radius (inches) | ≥ 6.250\n[Table 5.4-3: Steam Generator System Component Materials]\nSG | Class 2 piping | SA-312 | Type 304 | / | 304L\nSG | piping reducers and elbows | SA-182 | Grade F304 | / | F304L\nSG | piping supports | SA-479 | Type 304 | / | 304L\nSG tubes | See Section 5.4.1.5\nFlow restrictors and flow restrictor bolts | SA-479 | Type 304\nFlow restrictor mounting plates | SA-240 | Type 304\nFlow restrictor mounting plate spacer | SB-166 | Alloy 690 (UNS N06690)\nFlow restrictor stud bolts, nuts, and washers\nStuds, nuts, and washers for the steam and feed\nplenum access port covers | SB-637 | Alloy 718 (UNS N07718)\nThreaded inserts for steam and feed plenum\naccess ports | SA-479 | Type 304/304L\nSteam plenum access ports | SA-508 | Grade 3, Class 2\nSteam and feed plenum access port covers | SA-240 | Type 304 | / | 304L\nLow alloy steel weld filler material | SFA | 5.5\n5.23\n-5.28\n-5.29 | Weld filler metal classifications compatible with low\nalloy steel base metal\nSFA\nSFA\nSFA\nStainless steel weld filler material\n(includes filler material for cladding) | SFA 5.4\nSFA 5.9\nSFA-5.22 | SFA | E308, E308L, E309, E309L, E316, E316L\nER308, ER308L, ER309, ER309L ER316, ER316L,\nEQ308L, EQ309L\nE308, E308L, E309, E309L, E316, E316L\nSFA\nSFA\nNickel-based alloy weld filler material | SFA | -5.11\n-5.14 | ENiCrFe-7\nERNiCrFe-7, ERNiCrFe-7A, EQNiCrFe-7, EQNiCrFe-7A\nSFA\nIntegral steam plenum\nIntegral steam plenum cap\nFeed plenum access port | See Table 5.2-4\n[Table 5.4-5: Decay Heat Removal System Design Data]\nInternal pressure (psia) | 2100\nActuation valve external pressure (psia) | 60\nPassive condenser external pressure (psia) | 27\nTemperature (°F) | 650\nNumber of condensers | 2\nTotal number of tubes per condenser | 80\nTube wall outer diameter (inches) | 1.315\nTube wall thickness (inches) | 0.109\nTube external surface area per condenser (ft2) | 258.2\nFouling factor (hr-ft2-F/BTU) | 0.0005\n[Table 5.4-6: Pressurizer Design Data]\nParameter | Value\nInternal pressure (psia) | 2100\nExternal pressure (psia) | 1000\nTemperature (°F) | 650\nPressurizer heater sheath temperature (°F) | 800\nSpray nozzles | 2\nNominal spray nozzle diameter (in.) | 1\n[Table 5.4-7: Pressurizer Heater Parameters]\nParameter | Value\nVoltage (Vac) | 480\nFrequency (Hz) | 60\nHeater bundles per pressurizer | 2\nHeater groups per bundle (kW) | 3\nNominal total capacity per heater bundle (kW) | 400\n[Table 5.4-8: Failure Modes and Effects Analysis - Decay Heat Removal System (Continued)]\nSGS Thermal Relief Valve\nSG-RV-0102\nSG-RV-0202 | 1) Provide pressure\nboundary | A) Spurious opening\nof relief valve with\nfailure to close\n(passive failure) | Mechanical | A spurious opening of the thermal relief valve with a\nfailure to close will cause the affected DHRS train to\nlose inventory and become inoperable. Safe shutdown\nwithout emergency core cooling system (ECCS)\nactuation is achieved with the remaining DHRS train. | • Steam pressure\n• DHRS level\ninstrument switches\n• Containment leakage\nmonitoring\ninstrumentation\n(containment\nevacuation system)\n2) Provide\noverpressure\nprotection when\nSGS is water solid. | A) Failure of valve to\nlift at setpoint | Mechanical | A failure of the valve to lift during a water solid over\npressure scenario could cause deformation or rupture\nof pressure boundary components. A rupture would\ncause the affected DHRS train to be inoperable. The\nmodule is in safe shutdown prior to this event and\ncooling will resume with the unaffected DHRS train or\nthrough flooding the CNV with the containment\nflooding and drain system. | • Steam pressure\n• DHRS level\ninstrument switches\nDHRS Loop Pressure\nBoundary\n(Includes piping inside CNV,\nsteam generator tubes)(1) | 1) Provide a pressure\nboundary for the\nSGS and DHRS | A) Pipe rupture and\nloss of DHRS loop\ninventory (passive\nfailure) | Mechanical | A pipe rupture of any pressure boundary piping which\nis part of the DHRS loop (SGS and DHRS piping within\ncontainment isolation valves) will cause the affected\nDHRS train to lose inventory and become inoperable.\nSafe shutdown without ECCS actuation is achieved\nwith the remaining DHRS train. | • Steam pressure\n• DHRS level\ninstrument switches\n• Containment leakage\nmonitoring\ninstrumentation\n(containment\nevacuation system)",
+      "summary": "This section details the materials used in the construction of the pressurizer and its components within the NuScale reactor coolant system. It specifies the types of steel and alloys used for various parts, their compliance with relevant BPVC material specifications, and highlights corrosion protection measures such as weld cladding with stainless steel and nickel-based alloys.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "67",
-      "hop": 2
+      "page_range": "130",
+      "hop": 4,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 5.4-1",
+          "page": 144,
+          "caption": "Steam Generator Helical Tube Bundle"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-10",
+          "page": 153,
+          "caption": "Decay Heat Removal System Simplified Diagram"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-11",
+          "page": 154,
+          "caption": "Primary Coolant Temperature with Decay Heat Removal System Two Train Operation - 4 Hours"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-12",
+          "page": 155,
+          "caption": "Primary Coolant Temperature Cooldown with Decay Heat Removal System One Train Operation:"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-13",
+          "page": 156,
+          "caption": "Primary Coolant Temperature Cooldown with Decay Heat Removal System One Train Operation:"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-14",
+          "page": 157,
+          "caption": "Primary Coolant Temperature Cooldown with Decay Heat Removal System One Train Operation:"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-15",
+          "page": 158,
+          "caption": "Primary Coolant Temperature Cooldown with Decay Heat Removal System One Train Operation:"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-16",
+          "page": 159,
+          "caption": "Primary Coolant Temperature Cooldown with Decay Heat Removal System One Train Operation:"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-17",
+          "page": 160,
+          "caption": "Pressurizer Region of Reactor Vessel"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-2",
+          "page": 145,
+          "caption": "Configuration of Steam Generators in Upper Reactor Pressure Vessel Section"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-3",
+          "page": 146,
+          "caption": "Main Steam and Feedwater Plena"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-4",
+          "page": 147,
+          "caption": "Integral Steam Plenum"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-5",
+          "page": 148,
+          "caption": "Feedwater Plenum Access Port"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-6",
+          "page": 149,
+          "caption": "Steam Generator Tube Supports and Steam Generator Supports"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-7",
+          "page": 150,
+          "caption": "Steam Generator Tube Support Tabs"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-8",
+          "page": 151,
+          "caption": "Steam Generator Flow Restrictor Assembly"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-9",
+          "page": 152,
+          "caption": "Steam Generator Simplified Diagram"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.2-4",
+          "page": 52,
+          "caption": "Reactor Coolant Pressure Boundary Component and Support Materials",
+          "structured_text": "CRDM | Pressure Retaining Components\nLatch housing\nRod travel housing\nRod travel housing Plug | SA-965 | Grade F304LN"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-1",
+          "page": 132,
+          "caption": "Steam Generator Full-Load Thermal-Hydraulic Operating Conditions (Best Estimate)",
+          "structured_text": "(1)Total heat transfer ( | MW\nt | ) | 159.13\nSG | outlet pressure (psia) | 500.1\nSG | outlet temperature (°F) | 584.4\nSG | inlet temperature (°F) | 299.7\nSG | flow (lbm | / | hr) | 532298"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-2",
+          "page": 133,
+          "caption": "Steam Generator Design Data",
+          "structured_text": "Parameter | Value\nType | Helical, once-through\nTotal number of helical tubes per | NPM | 1380\nNumber of helical tube columns per | NPM | 21\nInternal pressure - secondary (psia) | 2100\nExternal pressure - primary (psia) | 2100\nExternal pressure - | SG | piping in containment (psia) | 1000\nInternal temperature - secondary (°F) | 650\nExternal temperature - primary (°F) | 650\nExternal temperature - | SG | piping in containment (°F) | 550\nTube wall outer diameter (inches) | 0.625\nTube wall thickness (inches) | 0.050\nSteam tubesheet thickness, without clad (inches) | 4.0\nFeed tubesheet thickness, without clad (inches) | 6.0\nSteam and feed tubesheet clad thickness - secondary (inches) | 0.250\nSteam and feed tubesheet clad thickness - primary (inches) | 0.375\nSteam tubesheet thickness, with clad (inches) | 4.625\nFeed tubesheet thickness, with clad (inches) | 6.625\nTotal heat transfer area (ft2) | 17928\nFouling factor (hr-ft2-°F/BTU) | 0.0001\nMinimum SG tube transition bend radius (inches) | ≥ 6.250"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-3",
+          "page": 134,
+          "caption": "Steam Generator System Component Materials",
+          "structured_text": "SG | Class 2 piping | SA-312 | Type 304 | / | 304L\nSG | piping reducers and elbows | SA-182 | Grade F304 | / | F304L\nSG | piping supports | SA-479 | Type 304 | / | 304L\nSG tubes | See Section 5.4.1.5\nFlow restrictors and flow restrictor bolts | SA-479 | Type 304\nFlow restrictor mounting plates | SA-240 | Type 304\nFlow restrictor mounting plate spacer | SB-166 | Alloy 690 (UNS N06690)\nFlow restrictor stud bolts, nuts, and washers\nStuds, nuts, and washers for the steam and feed\nplenum access port covers | SB-637 | Alloy 718 (UNS N07718)\nThreaded inserts for steam and feed plenum\naccess ports | SA-479 | Type 304/304L\nSteam plenum access ports | SA-508 | Grade 3, Class 2\nSteam and feed plenum access port covers | SA-240 | Type 304 | / | 304L\nLow alloy steel weld filler material | SFA | 5.5\n5.23\n-5.28\n-5.29 | Weld filler metal classifications compatible with low\nalloy steel base metal\nSFA\nSFA\nSFA\nStainless steel weld filler material\n(includes filler material for cladding) | SFA 5.4\nSFA 5.9\nSFA-5.22 | SFA | E308, E308L, E309, E309L, E316, E316L\nER308, ER308L, ER309, ER309L ER316, ER316L,\nEQ308L, EQ309L\nE308, E308L, E309, E309L, E316, E316L\nSFA\nSFA\nNickel-based alloy weld filler material | SFA | -5.11\n-5.14 | ENiCrFe-7\nERNiCrFe-7, ERNiCrFe-7A, EQNiCrFe-7, EQNiCrFe-7A\nSFA\nIntegral steam plenum\nIntegral steam plenum cap\nFeed plenum access port | See Table 5.2-4"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-4",
+          "page": 135,
+          "caption": "Not Used"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-5",
+          "page": 136,
+          "caption": "Decay Heat Removal System Design Data",
+          "structured_text": "Internal pressure (psia) | 2100\nActuation valve external pressure (psia) | 60\nPassive condenser external pressure (psia) | 27\nTemperature (°F) | 650\nNumber of condensers | 2\nTotal number of tubes per condenser | 80\nTube wall outer diameter (inches) | 1.315\nTube wall thickness (inches) | 0.109\nTube external surface area per condenser (ft2) | 258.2\nFouling factor (hr-ft2-F/BTU) | 0.0005"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-6",
+          "page": 137,
+          "caption": "Pressurizer Design Data",
+          "structured_text": "Parameter | Value\nInternal pressure (psia) | 2100\nExternal pressure (psia) | 1000\nTemperature (°F) | 650\nPressurizer heater sheath temperature (°F) | 800\nSpray nozzles | 2\nNominal spray nozzle diameter (in.) | 1"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-7",
+          "page": 138,
+          "caption": "Pressurizer Heater Parameters",
+          "structured_text": "Parameter | Value\nVoltage (Vac) | 480\nFrequency (Hz) | 60\nHeater bundles per pressurizer | 2\nHeater groups per bundle (kW) | 3\nNominal total capacity per heater bundle (kW) | 400"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-8",
+          "page": 143,
+          "caption": "Failure Modes and Effects Analysis - Decay Heat Removal System (Continued)",
+          "structured_text": "SGS Thermal Relief Valve\nSG-RV-0102\nSG-RV-0202 | 1) Provide pressure\nboundary | A) Spurious opening\nof relief valve with\nfailure to close\n(passive failure) | Mechanical | A spurious opening of the thermal relief valve with a\nfailure to close will cause the affected DHRS train to\nlose inventory and become inoperable. Safe shutdown\nwithout emergency core cooling system (ECCS)\nactuation is achieved with the remaining DHRS train. | • Steam pressure\n• DHRS level\ninstrument switches\n• Containment leakage\nmonitoring\ninstrumentation\n(containment\nevacuation system)\n2) Provide\noverpressure\nprotection when\nSGS is water solid. | A) Failure of valve to\nlift at setpoint | Mechanical | A failure of the valve to lift during a water solid over\npressure scenario could cause deformation or rupture\nof pressure boundary components. A rupture would\ncause the affected DHRS train to be inoperable. The\nmodule is in safe shutdown prior to this event and\ncooling will resume with the unaffected DHRS train or\nthrough flooding the CNV with the containment\nflooding and drain system. | • Steam pressure\n• DHRS level\ninstrument switches\nDHRS Loop Pressure\nBoundary\n(Includes piping inside CNV,\nsteam generator tubes)(1) | 1) Provide a pressure\nboundary for the\nSGS and DHRS | A) Pipe rupture and\nloss of DHRS loop\ninventory (passive\nfailure) | Mechanical | A pipe rupture of any pressure boundary piping which\nis part of the DHRS loop (SGS and DHRS piping within\ncontainment isolation valves) will cause the affected\nDHRS train to lose inventory and become inoperable.\nSafe shutdown without ECCS actuation is achieved\nwith the remaining DHRS train. | • Steam pressure\n• DHRS level\ninstrument switches\n• Containment leakage\nmonitoring\ninstrumentation\n(containment\nevacuation system)"
+        }
+      ]
     },
-    "nuscale_ch05_0006": {
-      "node_id": "nuscale_ch05_0006",
-      "title": "System Evaluation",
-      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance across various power levels by establishing steady-state parameters such as coolant temperatures, flow rates, and pressures, using both software and manual calculations. It accounts for uncertainties in flow resistance and thermal head, ensuring efficient operation, safety margins, and reliable natural circulation with minimal pressure losses in the reactor coolant system.",
+    "nuscale_ch05_0011": {
+      "node_id": "nuscale_ch05_0011",
+      "title": "Reactor Coolant Pressure Boundary Inservice Inspection and Testing",
+      "content": "NuScale Final Safety Analysis Report Integrity of Reactor Coolant Boundary\nTier 2 5.2-19 Revision 55.2.3.6 Threaded Fasteners\nThreaded fasteners used in the RPV main closure  flange, PZR heater bundle closures, \nRCS piping flanges, and RSV flanges are nickel-based Alloy 718. Threaded fastener \nmaterials conform to the applicable requiremen ts of ASME BPVC, Sect ions II and III and \nare selected for their compatibility with th e borated water environment in the RCS and \nreactor pool water. \nSection 3.13 provides further description of the design of threaded fasteners for the \nRPV and pressure retaining components incl uding design requirem ents for the use of \nAlloy 718 for the mitigation of SCC.\n5.2.4 Reactor Coolant Pressure Bounda ry Inservice Inspection and Testing\nPreservice and inservice inspection and testing of ASME BPVC Class 1 pressure-retaining \ncomponents (including vessels, pumps, valves , bolting, and supports) within the RCPB are \nperformed in accordance with ASME BPVC , Section XI pursuant to 10 CFR 50.55a(g), \nincluding ASME BPVC Sectio n XI mandatory appendices.\nThe initial ISI Program incorporates the late st edition and addenda of the ASME BPVC \napproved in 10 CFR 50.55a(b) prior to initial fu el load as specified in 10 CFR 50.55a, subject \nto the conditions listed in 10 CFR 50.55a(b).  Inservice examination of components and \nsystem pressure tests conduc ted during successive 120-month inspection intervals must \ncomply with the requirements of the latest edition and addenda of the Code incorporated \nby reference in 10 CFR 50.55a(b), subject to the conditions listed in 10 CFR 50.55a(b). \nThe specific edition and addenda of the Code used to determine the requirements for the \ninspection and testing plan fo r the initial and subsequent inspection intervals is to be \ndelineated in the inspection program. The Code  includes requirements for system pressure \ntests and functional tests for active components. The requirements for system pressure \ntests are defined in ASME BPVC, Section XI , Articles IWA-5000 and IWB-5000. These tests \nverify the pressure boundary in tegrity in conjunction with ISI.  Section 6.6 discusses Class 2 \nand 3 component examinations.\n5.2.4.1 Inservice Inspecti on and Testing Program\nThis section describes the process for asse ssing inspection and testing of the ASME \nBPVC Class 1components except for SG tubes. Section 5.4.1 describes the process for ISI \nrequirements for the SG tubes.\nThe RCPB components are designed and prov ided with access to permit periodic \ninspection and testing of important areas and features to assess their structural and \nleak-tight integrity pursuant GDC 32. The design allows inspection, testing, and \nmaintenance of the RSV, PZR heaters, SG primary and secondary sides, instruments, electrical connections, and other components located inside of the RCPB of the NPMs. \nEquipment that may require inspection or repair  is placed in an accessible position to \nminimize time and radiation exposure d uring refueling and maintenance outages. \nPlant technicians a ccess components without being placed  at risk for excessive dose or \nsituations where excessive plates, shields, co vers, or piping must be moved or removed \nin order to access components.NuScale Final Safety Analysis Report Integrity of Reactor Coolant Boundary\nTier 2 5.2-20 Revision 5The inspection requirements an d conditions of 10 CFR 50.55a, as detailed in  Section XI \nof the ASME BPVC, are met for Class 1 pr essure-containing components and their \nsupports. The RCPB components subject to inspection as Class 1 components are \nclassified as Quality Group A as described in Section 3.2.2.1 and co mply with the ASME \nBPVC as described in Section 5.2.1. Figure 6.6- 1 shows the ASME BPVC Section III, Class \n1 boundary for the RCS piping and SG system . Additionally, the ECCS valve actuators \nand actuator pressure sensing lines form a po rtion of the ASME BPVC  Section III Class 1 \nboundary and are subject to  ASME Section XI testing.\nThe inspection and testing program addres ses the unique inspection and testing \nrequirements for each NPM to ensure plant safety is maintained for the operating life.\nThe NPM inspection, testing, and mainte nance strategy is: (1) design the NPM \ncomponents to anticipate required inspections and (2) develop an ISI program to \nidentify aspects such as interval and inspection frequencies, selection of components \nand welds for inspection, and expansion criteria.\nDevelopment of the NuScale inspection  program consists of the following:\n• identification of the appropriate ISI or te sting requirements for the NuScale design \n(code version, overall inspections and tests required)\n• identification of the structures, system s, and components (SSC), the subset \ninspections or test elements associated with SSC and those SSC which are subject \nto inspection and testing\n• identification of appropriate ISI and te sting requirements for each structure, \nsystem, and component\n• assessment of each inspection and test element\n• development of a comprehensive ISI and testing plan\nThe ISI schedule and requirements for Class 1 systems and components are in \naccordance with ASME BPVC, Section XI.\nThe following tables provide the applicable  ISI examination cate gories and methods:\n• Table 5.2-6 - Reactor Pressure  Vessel Inspection Elements\n• Table 5.2-7 - Reactor Vessel Internals Inspection Elements\n• Table 5.2-8 - ASME Class 1 Piping Inspection Elements\n• Table 5.2-9 - ASME Class 1 Support Inspection Elements\nPrior to NPM startup following each refu eling outage, a system leakage test is \nperformed followed by a VT-2 examinatio n for the RPV Class 1 pressure retaining \nboundary in accordance with the requirem ents specified in ASME BPVC, Section XI, \nTable IWB-2500-1 (B-P) and Articles IWA- 5000 and IWB-5000. In the NuScale design, \nleakage is continuously monitored in the CNV or from the RPV to the CNV. This \nconstitutes a VT-2 exam accord ing to Section XI IWA-5241 (c). During normal operation, \nthe CNV is in a vacuum, so leakage is from th e pool to the inside of the CNV. The CNV NuScale Final Safety Analysis Report Integrity of Reactor Coolant Boundary\nTier 2 5.2-21 Revision 5leak detection system is ab le to detect leakage from both the RPV and CNV during \nnormal operation.\nThe body-to-bonnet seals on the ECCS trip /reset actuator valve form the reactor \ncoolant pressure boundary and require test ing to RCS operating pressure prior to \ngoing into operation. Since this valve is lo cated in the reactor po ol during start-up \nthere is no means to perform the requir ed Section XI, Table IWB-2500-1 (B-P) VT-2 \nexamination during the system pressure test . To confirm the seal integrity prior to \nstart-up a seal verification test will be performed. The seal verification test will use the \ntest port to pressurize th e space between the inner and outer O-ring to RCS design \npressure using a gas while the NPM is locate d in the dry dock. The seal test will be \nperformed to the requirements of Section XI, Table IWB-2500-1 (B-P).\nA surface and a volumetric examination is performed for ASME Class 1 pipe welds \ngreater than or equal to four nominal pipe size (NPS).  Only a surface examination is \nperformed for pipe welds associated with ASME Class 1 piping less than four NPS, \nTable IWB-2500-1 Category B-J. \nThe ASME Class 1 boundary valves (i.e., CIVs) are located outside of the NPM. The \nreduced inspection requirements for the sm all primary system pipe welds associated \nwith less than four NPS piping are not appl ied to the welds between the containment \nand the CIVs because a break at one of these weld locations would result in a RCPB leak \noutside the containment. Therefore, ASME Class 1 welds between the containment and \nthe CIVs are inspected with a volumetric and surface examinatio n each interval in \naccordance with the requirements of AS ME BPVC, Section XI, Subarticle IWB-2500.\nFlanges on the RPV have dual O-rings with a leak port tube between the O-rings to \nallow for leakage testing. Le akage testing is pe rformed following installation of the \nO-rings each time they are re moved to ensure a good seal. \nThe RPV and containment main flange bolt s are inspected in accordance with the \nrequirements specified in ASME BPVC , Section XI, Table IWB-2500-1 (B-G-1).\nPressure retaining bolting th at two inches or less in diameter is inspected in \naccordance with the requirements spec ified in ASME BPVC, Section XI, Table \nIWB-2500-1 (B-G-2). These bolting assemblies require a VT-1 visual examination each \ninterval if removed.\nNuScale reactor vessel internals inspection  requirements are developed consistent \nwith the approach in the Ma terials Reliability Program (MRP) 227 (Reference 5.2-9) to \naugment the inspection requir ements of ASME BPVC, Sect ion XI. No exceptions are \nidentified in determining internal inspection criter ia using the MRP approach. \nTable 5.2-7 includes the ISI ex amination categories and meth ods for the reactor vessel \ninternals. Included in the list are core support components, internal structures, and \nsteam generator supports.\nBased on the high pressure and the safety function of the containment, enhanced \ninspection requirements are provided for th e containment in excess of the Class MC \nrequirements of ASME BPVC, Section XI, Subsection IWE. The containment is inspected NuScale Final Safety Analysis Report Integrity of Reactor Coolant Boundary\nTier 2 5.2-22 Revision 5to selected Class 1 requirements of ASME BP VC, Section XI, Subsecti on IWB as specified \nin Table 6.2-8. All ASME BPVC, Section XI, Subs ection IWE required inspections are met. \n5.2.4.2 Preservice Inspection and Testing Program\nPreservice examinations required by th e design specification and preservice \ndocumentation are in accordance with AS ME BPVC, Section III, Paragraph NB-5281. \nVolumetric and surface examinations are performed as specified in ASME BPVC, \nSection III, Paragraph NB-5282. Components described in ASME BPVC, Section III, \nParagraph NB-5283 are exempt from preservice examination.\nSurfaces of the RPV are designed to be su itable for examinations  and conform to the \napplicable requirements of ASME BPVC Se ctions III and XI. Fo r welds requiring an \nultrasonic preservice examinat ion, the surface finish meets the requirements of ASME \nBPVC Section III, Subsubparagraph NB-4424.2(a ) except that the surface finish for \nClass 1 piping welds are 125 in Ra or better  and the surface flatness is less than \n0.03125 inches for a minimum distance of two times the thickness of the part from the \nweld centerline.\nThe containment is a Class MC containment in  accordance with ASME  BPVC, Section III, \nSubsection NE; however, it is designed, fabr icated, and stamped as a Class 1 pressure \nvessel in accordance  with BPVC, Section III, Subsection NB, with overpressure \nprotection in accordance with ASME BPVC, Se ction III, Article NE- 7000. Refer to Sections \n3.8.2 and 6.2 for additional description of the containment compliance with the ASME \nBPVC, including preservice inspection and ISI and testing.\nPreservice examinations for ASME Code Cl ass 1 pressure boundary and attachment \nwelds conform with ASME BPVC, Sectio n III, Paragraph NB-5280 and ASME BPVC, \nSection XI, Subarticle IWB-2200. Examinatio n methods are in accordance with ASME \nBPVC Section V except as modified by ASME BPVC, Section III, Paragraph NB-5111. \nThese preservice examinations include 100 percent of the pressure boundary welds.\nPreservice eddy current examinations for th e SG tubing are in accordance with the \napplicable requirements of the EPRI  Steam Generator Management Program \nguidelines (Reference 5.2-8) and ASME BPVC Section XI.\nCOL Item 5.2-6: A COL applicant that references th e NuScale Power Plant design certification will \ndevelop site-specific preservice examinat ion, inservice inspection, and inservice \ntesting program plans in accordance with Section XI of the American Society of \nMechanical Engineers Boiler and Press ure Vessel Code and will establish \nimplementation milestones. If applicable , a COL applicant that references the \nNuScale Power Plant design certificat ion will identify the implementation \nmilestone for the augmented inservice inspection progra m. The COL applicant will \nidentify the applicable edition of the Am erican Society of Mechanical Engineers \nCode utilized in the program plans co nsistent with the requirements of \n10 CFR 50.55a.\n\n--- Referenced Tables (structured) ---\n[Table 5.2-6: Reactor Pressure Vessel Inspection Elements (Continued)]\nBolting\nRPV main flange bolts | B-G-1 | See note | Per Note 1 of B-G-1, surface\nexamination is permitted when\nbolts are removed.\nRVV and RRV flange threaded fasteners | B-G-2, augmented | Volumetric | Augmented inspection to follow\nthe guidance of B-G-1. No\nsampling permitted. All threaded\nfasteners are subject to volumetric\nexamination during the inspection\ninterval.\nRPV bolting two inches or less in diameter | B-G-2 | VT-1 | Examined if removed.\nAssembled RPV\nRPV- assembled after refueling outage | B-P | VT-2 | Per Section XI IWA-5241(c),\nleakage is continuously monitored\nin the CNV and constitutes a VT-2\nexamination.\n[Table 5.2-7: Reactor Vessel Internals Inspection Elements (Continued)]\nUpper Riser to Bellows | Upper Riser\nAssembly | N/A | VT-3\nBellows to Upper Riser Transition | Upper Riser\nAssembly | N/A | VT-3\nPipe to Bellows | Upper Riser\nAssembly | N/A | VT-3\nElbow to Flexible Pipe | Upper Riser\nAssembly | N/A | VT-3\nFlexible Pipe to Rigid Pipe | Upper Riser\nAssembly | N/A | VT-3\nBrace to Pipe | Upper Riser\nAssembly | N/A | VT-3\nPipe to Cap | Upper Riser\nAssembly | N/A | VT-3\nICI Centering Plate 1-12 | Upper Riser\nAssembly | N/A | VT-3\nICIGT Link to Upper Riser Hanger Ring | Upper Riser\nAssembly | N/A | VT-3\nInjection to RPV11 | Upper Riser | N/A | VT-3\nICIGT to Integrated Steam Plenum | PZR | N/A | VT-3\nPressurizer Spray Nozzle | PZR Spray Nozzle to\nSafe End (RPV14-\nRPV15) | N/A | VT-3\nSurveillance Capsule | Core Support\nAssembly | N/A | VT-3\n[Table 5.2-8: American Society of Mechanical Engineers Class 1 Piping Inspection Elements]\nDual valve, single body isolation valve to safe-\nend | B-J | Surface and\nVolumetric | Refer to Section 5.2.4.1 for\ndiscussion on welds between the\ncontainment and the dual valve,\nsingle body CIVs.\nCRDM | B-J | Surface or\nVolumetric\nB-J | Surface\nB-J | Surface\nRRV and RVV trip-reset actuators piping and\nfitting welds | B-J | None | Exempted by ASME BPVC Section\nXI, Paragraph IWB-1220 due to\nsmall size of piping and fittings.\n[Table 5.2-9: American Society of Mechanical Engineers Class 1 Support Inspection Elements]\nCVCS | F-A | VT-3\nB-N-1 | VT-3\nRCCW to containment head\nCRDM lower legs to RPV head\nDHRS piping to containment\nNPM platform\nNPM top supports to containment\nDHRS heat exchanger supports to containment | B-K | Surface\nDHRS",
+      "summary": "Threaded fasteners in key reactor coolant system components use Alloy 718, meeting ASME BPVC standards and chosen for compatibility with borated water and resistance to stress corrosion cracking. Preservice and inservice inspection and testing of Class 1 pressure-retaining components follow ASME BPVC Section XI and relevant regulatory requirements, with inspection programs updated to the latest approved code editions for each inspection interval.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "12",
-      "hop": 4
+      "page_range": "37",
+      "hop": 4,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 5.2-6",
+          "page": 56,
+          "caption": "Reactor Pressure Vessel Inspection Elements (Continued)",
+          "structured_text": "Bolting\nRPV main flange bolts | B-G-1 | See note | Per Note 1 of B-G-1, surface\nexamination is permitted when\nbolts are removed.\nRVV and RRV flange threaded fasteners | B-G-2, augmented | Volumetric | Augmented inspection to follow\nthe guidance of B-G-1. No\nsampling permitted. All threaded\nfasteners are subject to volumetric\nexamination during the inspection\ninterval.\nRPV bolting two inches or less in diameter | B-G-2 | VT-1 | Examined if removed.\nAssembled RPV\nRPV- assembled after refueling outage | B-P | VT-2 | Per Section XI IWA-5241(c),\nleakage is continuously monitored\nin the CNV and constitutes a VT-2\nexamination."
+        },
+        {
+          "type": "table",
+          "id": "Table 5.2-7",
+          "page": 59,
+          "caption": "Reactor Vessel Internals Inspection Elements (Continued)",
+          "structured_text": "Upper Riser to Bellows | Upper Riser\nAssembly | N/A | VT-3\nBellows to Upper Riser Transition | Upper Riser\nAssembly | N/A | VT-3\nPipe to Bellows | Upper Riser\nAssembly | N/A | VT-3\nElbow to Flexible Pipe | Upper Riser\nAssembly | N/A | VT-3\nFlexible Pipe to Rigid Pipe | Upper Riser\nAssembly | N/A | VT-3\nBrace to Pipe | Upper Riser\nAssembly | N/A | VT-3\nPipe to Cap | Upper Riser\nAssembly | N/A | VT-3\nICI Centering Plate 1-12 | Upper Riser\nAssembly | N/A | VT-3\nICIGT Link to Upper Riser Hanger Ring | Upper Riser\nAssembly | N/A | VT-3\nInjection to RPV11 | Upper Riser | N/A | VT-3\nICIGT to Integrated Steam Plenum | PZR | N/A | VT-3\nPressurizer Spray Nozzle | PZR Spray Nozzle to\nSafe End (RPV14-\nRPV15) | N/A | VT-3\nSurveillance Capsule | Core Support\nAssembly | N/A | VT-3"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.2-8",
+          "page": 60,
+          "caption": "American Society of Mechanical Engineers Class 1 Piping Inspection Elements",
+          "structured_text": "Dual valve, single body isolation valve to safe-\nend | B-J | Surface and\nVolumetric | Refer to Section 5.2.4.1 for\ndiscussion on welds between the\ncontainment and the dual valve,\nsingle body CIVs.\nCRDM | B-J | Surface or\nVolumetric\nB-J | Surface\nB-J | Surface\nRRV and RVV trip-reset actuators piping and\nfitting welds | B-J | None | Exempted by ASME BPVC Section\nXI, Paragraph IWB-1220 due to\nsmall size of piping and fittings."
+        },
+        {
+          "type": "table",
+          "id": "Table 5.2-9",
+          "page": 61,
+          "caption": "American Society of Mechanical Engineers Class 1 Support Inspection Elements",
+          "structured_text": "CVCS | F-A | VT-3\nB-N-1 | VT-3\nRCCW to containment head\nCRDM lower legs to RPV head\nDHRS piping to containment\nNPM platform\nNPM top supports to containment\nDHRS heat exchanger supports to containment | B-K | Surface\nDHRS"
+        }
+      ]
     },
-    "nuscale_ch05_0003": {
-      "node_id": "nuscale_ch05_0003",
-      "title": "Design Basis",
-      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain fuel integrity, minimize solid deposits, and ensure uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
+    "nuscale_ch05_0008": {
+      "node_id": "nuscale_ch05_0008",
+      "title": "Compliance with Codes and Code Cases",
+      "content": "NuScale Final Safety Analysis Report Integrity of Reactor Coolant Boundary\nTier 2 5.2-2 Revision 55.2.1 Compliance with Codes and Code Cases\n5.2.1.1 Compliance with 10 CFR 50.55a\nEach of the NPMs meet the relevant re quirements of the following regulations:\n• 10 CFR 50.55a - The RPV and pressure retain ing components associated with the \nRCPB are designed, fabricated, constructe d, tested, and inspected as Class 1 in \naccordance with Section III, of the Am erican Society of Mechanical Engineers \n(ASME) Boiler and Pressure Vessel Code (BPVC) and meet  the applicable conditions \npromulgated in 10 CFR 50.55a(b).\n• 10 CFR 50, Appendix A, GDC 1 and 30 - The RPV and pressure re taining components \nassociated with the RCPB are designed, fa bricated, and tested as Class 1 to the \nhighest quality standards in accordance with Quality Assurance Program described \nin Chapter 17.\nThe RCS injection and discharge piping that connects to the CVCS up to and including \nthe associated isolation valves  is designed as Class 1 in  accordance with the ASME \nBPVC, Section III. The RCS piping interfacing with the CVCS from the outermost CIVs to \nthe NPM flange connections is not part of the RCPB and is designed as Class 3 in accordance with ASME BPVC, Section III. Also, systems other than the CVCS that \nconnect to the RCS have required isolation an d are not classified as RCPB. A listing of \nthe RCPB pressure retaining components  and the Nuclear Regulatory Commission \n(NRC) quality group classification  is provided in Table 3.2-1.\nThe ASME BPVC of record for the NuScale design certificatio n of the NPMs is the ASME \nBPVC, 2013 Edition with no Addenda. The 2013 Edition of the ASME BPVC, 2013 Edition, \nas endorsed by the ASME and promulga ted in the 2015 rulemaking proposing to \namend 10 CFR 50.55a (80 FR 56820), meets the requirements of AS ME BPVC editions \nspecified in 10 CFR 50.55a(a)(1) and Regulato ry Guides (RGs) 1.84, Revision 36, and \n1.147, Revision 17.\nThe application of the ASME BP VC Section XI inservice inspec tion (ISI) requirements for \nQuality Group A systems and components (ASME BPVC Class 1) are described in \nSection 5.2.4. The RCPB does not include Qu ality Group B or C components. The ASME \nBPVC Section XI ISI requirements for Qual ity Groups B and C systems and components \n(ASME BPVC Class 2 and 3) are described in Section 6.6.\nOperational and maintenance in service testing codes, standards, and guides for the \nNPMs design are in accordance with th e ASME Operational and Maintenance (OM) \nCode OM-2012, \"Operation and Maintenance of  Nuclear Power Plants,\" as allowed by \n10 CFR 50.55a(a)(1). ASME OM-2012, as endo rsed by the ASME and promulgated in the \n2015 rulemaking proposing to amend 10  CFR 50.55a (80 FR 56820), meets the \nrequirements of ASME OM Code editions  specified in 10 CFR 50.55a(a)(1) and RG 1.192, \nRevision 1. Use of ASME OM Code editio ns and addenda issued subsequent to the \ndesign certification is permitted or requir ed based on the provisions in the design \ncertification. If an ASME OM Code editio n or addenda dated later than ASME OM-2012 \nedition is used, these later ASME OM Code editions and addenda and associated code \ncases must be approved for incorporatio n by reference per 10 CFR 50.55a(a)(1) or \nauthorized by the NRC pursuant to 10 CF R 50.55a(a)(3) and subject to applicable NuScale Final Safety Analysis Report Integrity of Reactor Coolant Boundary\nTier 2 5.2-3 Revision 5provisions of 10 CFR 50.55a(b). An ASME OM Code edition or adde nda not endorsed by \nthe NRC may be used pursuant to the requirements of 10 CFR 50.55a(z). \nSection 3.9.6 describes the Inservice Test Program and compliance with \n10 CFR 50.55a(f)(3)(iii)(B) and 10 CFR 50.55a(f)(3)(iv)(B).\n5.2.1.2 Compliance with Applicable Code Cases\nThe ASME BPVC, Section III code cases used for design, fabrication, and construction \nare determined by those listed in the ap plicable ASME BPVC Edition specified in \n10 CFR 50.55a(a)(1)(i) or Tables 1 and 2 of RG  1.84 pursuant to 10 CFR 50.55a(a)(3)(i) and \nsubject to the applicable provisions of 10 CFR 50.55a(b). Code cases that are used and \nlisted in Table 2 of RG 1.84 also meet  the conditions esta blished in the RG. \nSection 5.2.4 and Section 6.6 pr ovide a summary discussion of preservice and ISI \nexaminations and procedures. The applicable  ASME BPVC Section XI code cases used \nfor preservice inspection and ISI are identified by the pl ant owner and determined by \nthose listed in the applicable ASME BPVC Edition specified in 10 CFR 50.55a(a)(1)(ii) or \nTables 1 and 2 of RG 1.147 pursuant to 10 CFR 50.55a(a)(3)(ii) and subject to the \napplicable provisions of 10 CFR 50.55a(b). Code  cases that are used and listed in Table 2 \nof RG 1.147 also meet the condit ions established in the RG. \nThe ASME OM code cases us ed for preservice testing and inservice testing are \nidentified by the plant owner and determined  by those listed in the applicable ASME \nOM Code Edition specified in 10 CFR 50.55a (a)(1)(iv) or Tables 1 and 2 of RG 1.192 \npursuant to 10 CFR 50.55a(a)(3)(iii) and subj ect to the applicable provisions of \n10 CFR 50.55a(b). Code cases that are used an d listed in Table 2 of RG 1.192 also meet \nthe conditions established in the RG.\nTable 5.2-1, \"ASME Code Cases,\" provides a consolidated list of the specific code cases \nused in the NPM RCPB design that are not addressed in ASME BPVC 2013 Edition. \nConditionally acceptable ASME code cases listed in Table 5.2-1 are subject to the \napplicable conditions specified in Ta ble 2 of RG 1.84. Other acceptable and \nconditionally acceptable ASME code cases listed in RGs 1. 84, 1.147, and 1.192 in effect \nat the time of the Design Cert ification and listed in RG re visions issued subsequent to \nthe Design Certification may be used for RCPB components. ASME code cases listed in \nRG 1.193, Revision 4, are not used unless authorized by the NRC pursuant to the \nrequirements of 10 CFR 50.55a(z).\nCOL Item 5.2-1: Not used.\n5.2.2 Overpressure Protection\nEach NPM is provided with overpressure prot ection features to protect the RCPB, including \nthe primary side of auxiliary systems connecte d to the RCS, and the secondary side of the \nSGs from overpressurization. \nIntegrated overpressure protection is provided  for the RCPB by two ASME BPVC Section III \nsafety valves during normal operations an d anticipated operational occurrences (AOOs). \nIntegrated overpressure protection is provid ed for the secondary side components with \n\n--- Referenced Tables (structured) ---\n[Table 5.2-1: American Society of Mechanical Engineers Code Cases]\nN-759-2 | Alternative Rules for Determining Allowable External Pressure and Compressive\nStresses for Cylinders, Cones, Spheres, and Formed Heads, Class 1, 2, and 3,\nSection III, Division 1 | January 2008\nN-62-7 | Internal and External Valve Items, Section III, Division 1,\nClasses 1, 2, and 3 | February 2003\nN-60-5 | Material for Core Support Structures, Section III, Division 1 | February 1994",
+      "summary": "This section describes how the NuScale Power Module (NPM) and its reactor coolant pressure boundary (RCPB) components comply with relevant U.S. regulations, specifically 10 CFR 50.55a and associated General Design Criteria. It details that these components are designed, fabricated, and tested to ASME Boiler and Pressure Vessel Code (BPVC) Section III standards, with specific classifications for different piping systems, and references the use of the 2013 Edition of the ASME BPVC as the code of record.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "8",
-      "hop": 4
+      "page_range": "20",
+      "hop": 4,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 5.2-1",
+          "page": 47,
+          "caption": "American Society of Mechanical Engineers Code Cases",
+          "structured_text": "N-759-2 | Alternative Rules for Determining Allowable External Pressure and Compressive\nStresses for Cylinders, Cones, Spheres, and Formed Heads, Class 1, 2, and 3,\nSection III, Division 1 | January 2008\nN-62-7 | Internal and External Valve Items, Section III, Division 1,\nClasses 1, 2, and 3 | February 2003\nN-60-5 | Material for Core Support Structures, Section III, Division 1 | February 1994"
+        }
+      ]
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0017",
-      "target": "nuscale_ch05_0014",
-      "relation": "SPECIFIES",
-      "confidence": 0.7,
-      "description": "Section B provides the general description and context for the NuScale reactor pressure vessel (RPV), while Section A discusses the operational procedures and requirements to ensure the RPV's integrity, with both sections connected by their focus on the RPV's function and regulatory compliance."
-    },
-    {
-      "source": "nuscale_ch05_0017",
-      "target": "nuscale_ch05_0000",
-      "relation": "REFERENCES",
-      "confidence": 0.7,
-      "description": "Section B provides the copyright and usage preface for the NuScale Design Certification Application, which includes the technical content such as the RPV dimensions referenced in Section A's discussion of operating procedures."
-    },
-    {
       "source": "nuscale_ch05_0014",
+      "target": "nuscale_ch05_0017",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A describes the physical configuration and components of the NuScale reactor pressure vessel (RPV), while Section B discusses the development of operating procedures to ensure that the RPV's pressure-temperature limits, which are determined by its design and dimensions, are not exceeded."
+    },
+    {
+      "source": "nuscale_ch05_0000",
+      "target": "nuscale_ch05_0017",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.7,
+      "description": "Section A provides the context and copyright information for the NuScale Design Certification Application, while Section B discusses the development of operating procedures to ensure reactor vessel integrity, both of which are prerequisites for understanding and comparing the technical content (such as RPV dimensions and figures) referenced in the analysis question."
+    },
+    {
+      "source": "nuscale_ch05_0018",
+      "target": "nuscale_ch05_0014",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references inspection, shipment, and installation requirements for the RPV, while Section B provides a general description of the RPV and its role in the reactor system, with Section A's requirements applying specifically to the RPV described in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0018",
       "target": "nuscale_ch05_0000",
       "relation": "SPECIFIES",
-      "confidence": 0.8,
-      "description": "Section A provides specific technical details about the NuScale Reactor Pressure Vessel (RPV), which are elaborated upon and visually represented in the figures and tables referenced in the broader context introduced by Section B's preface."
+      "confidence": 0.85,
+      "description": "Section A provides specific inspection, shipment, and handling requirements for the NuScale RPV, while Section B is a general preface to the chapter containing the RPV dimensions and figures, thus Section A specifies details for the broader context introduced in Section B."
     },
     {
       "source": "nuscale_ch05_0018",
@@ -96,60 +846,67 @@
       "description": "Section A discusses the shipment, handling, and storage requirements for the RPV, while Section B addresses the development of operating procedures to ensure pressure-temperature limits are not exceeded; both sections are related through their focus on maintaining the integrity and safety of the reactor vessel under different conditions."
     },
     {
-      "source": "nuscale_ch05_0018",
+      "source": "nuscale_ch05_0025",
       "target": "nuscale_ch05_0014",
-      "relation": "REFERENCES",
-      "confidence": 0.85,
-      "description": "Section A discusses inspection, shipment, and storage requirements for the RPV, while Section B provides a general description of the RPV's function and configuration, with Section A referencing the component described in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0018",
-      "target": "nuscale_ch05_0000",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A provides specific inspection, shipment, and handling requirements for the NuScale RPV, while Section B is a general preface to the chapter containing the RPV dimensions and figures, thus Section A specifies details for the general context introduced in Section B."
+      "description": "Section A provides detailed descriptions of the RPV's pressurizer components and their materials, while Section B gives a general overview of the RPV's function and integration within the NuScale Power Module, with both sections connecting through their discussion of the RPV's structure and role."
     },
     {
-      "source": "nuscale_ch05_0015",
+      "source": "nuscale_ch05_0025",
       "target": "nuscale_ch05_0017",
-      "relation": "LEADS_TO",
-      "confidence": 0.9,
-      "description": "Section A provides the physical and structural description of the NuScale RPV, while Section B discusses the operational procedures developed to ensure the RPV's pressure-temperature limits (which are determined by its dimensions and materials) are not exceeded, thus connecting the vessel's design characteristics to its safe operation."
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A provides detailed descriptions of the RPV's structural components and their materials, which are necessary to interpret and verify the visual and dimensional information presented in Section B's discussion of reactor vessel integrity and operating procedures."
     },
     {
-      "source": "nuscale_ch05_0006",
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A references the design of threaded fasteners used in the RPV main closure flange, while Section B provides a general description of the RPV as a component of the reactor coolant system, connecting them through the physical structure and function of the RPV."
+    },
+    {
+      "source": "nuscale_ch05_0011",
       "target": "nuscale_ch05_0017",
       "relation": "SUPPORTS",
       "confidence": 0.7,
-      "description": "Section A discusses the system evaluation and performance criteria for the NuScale Power Plant, while Section B addresses the development of operating procedures to ensure reactor vessel integrity, both of which rely on accurate knowledge of RPV dimensions as provided in Table 5.3-1 and depicted in Figure 5.3-1."
+      "description": "Section A provides material and design details for RPV threaded fasteners, while Section B discusses the development of operating procedures to ensure vessel integrity under specified pressure-temperature limits, connecting them through the shared focus on maintaining RPV integrity under operational conditions."
     },
     {
-      "source": "nuscale_ch05_0006",
+      "source": "nuscale_ch05_0008",
       "target": "nuscale_ch05_0014",
-      "relation": "REFERENCES",
-      "confidence": 0.8,
-      "description": "Section A references the system evaluation and performance criteria, while Section B provides the specific description and context for the reactor pressure vessel (RPV) whose dimensions are compared in Table 5.3-1 and visually represented in Figure 5.3-1."
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A establishes that the RPV must comply with ASME BPVC requirements, while Section B describes the physical configuration and components of the RPV, providing context for how those requirements apply to the vessel's design."
     },
     {
-      "source": "nuscale_ch05_0003",
+      "source": "nuscale_ch05_0008",
       "target": "nuscale_ch05_0017",
       "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A provides a general description of the reactor pressure vessel (RPV) as part of the reactor coolant system, while Section B discusses the need for operating procedures to ensure the RPV's pressure-temperature limits are not exceeded, connecting the design basis to operational compliance."
-    },
-    {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch05_0014",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section B provides a detailed description of the reactor pressure vessel (RPV), which is a component introduced in the general system overview in Section A, thereby specifying the details of a subsystem mentioned in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0006",
-      "target": "nuscale_ch05_0003",
-      "relation": "SPECIFIES",
       "confidence": 0.8,
-      "description": "Section A discusses the evaluation of system performance parameters, which depend on the RPV dimensions specified in Section B's design basis, connecting the two through the use of RPV design values."
+      "description": "Section A establishes that the RPV is designed and constructed according to ASME Code requirements, while Section B discusses the development of operating procedures to ensure the RPV operates within pressure-temperature limits, both connecting through the regulatory compliance and operational integrity of the RPV."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0011",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the components and materials of the RPV upper shell and pressurizer, while Section B details the materials and standards for threaded fasteners used in RPV closures, connecting them through their focus on RPV component materials and compliance with ASME standards."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0008",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes specific RPV components and their materials, which are required by Section B to comply with ASME BPVC Class 1 standards as mandated by 10 CFR 50.55a."
+    },
+    {
+      "source": "nuscale_ch05_0011",
+      "target": "nuscale_ch05_0008",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the use of ASME BPVC-compliant materials and design for RPV threaded fasteners, while Section B states that the RPV and associated components comply with ASME BPVC Section III as required by 10 CFR 50.55a, thus Section A provides specific implementation details that support the general compliance claim in Section B."
     }
   ]
 }

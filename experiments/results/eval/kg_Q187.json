@@ -2,392 +2,826 @@
   "question": "Based on Table 1.3-1 operating parameters and Table 5.1-1 RCS volumes, is the NuScale coolant inventory adequate for the module's operating conditions?",
   "current_hop": 4,
   "nodes": {
+    "nuscale_ch01_0043": {
+      "node_id": "nuscale_ch01_0043",
+      "title": "Ultimate Heat Sink",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-16 Revision 5closed-loop, two-phase natural circulation cooling system. Two trains of decay heat \nremoval equipment are provided, one attached to each SG loop. Each train is \ncapable of removing 100 percent of the deca y heat load and cooling the RCS. Each \ntrain has a passive condenser immersed in  the reactor pool. In the event of a SG \ntube failure, the affected SG is isolated and the DHRS provides cooling through the \nintact SG.\nOn receipt of an actuation signal, feedwa ter and main steam isolation valves are \nclosed and the DHRS valves open. Reacto r coolant continues to circulate through \nthe RPV collecting decay heat from the core. As water from the DHRS condenser \ntravels through the SG tubes it is conver ted to steam absorbing decay heat from \nthe reactor coolant. The steam then flow s back to the DHRS condenser where it \ngives up excess heat to the reactor pool water and is condensed, and the cycle is \nrepeated. This transfer of heat promotes natural circulation in both the RCS and the \nDHRS.\nSection 5.4.2 provides desi gn and operational info rmation for the DHRS.\n1.2.2.4.2 Ultimate Heat Sink\nThe ultimate heat sink is a large, stainl ess steel-lined, reinforced concrete pool \nlocated in the RXB below plant grade level. The ultimate heat sink consists of the \nreactor pool area, the refueling pool area , and the spent fuel pool area. The pool \nareas are shown in Figure 1.2- 16. During normal plant op erations, heat is removed \nfrom the pool through the reactor pool cooling system and rejected into the \natmosphere through a cooling tower or other external heat sink. The spent fuel pool has an independent spent fuel pool cooling system.\nIn a design basis accident involving a sustai ned loss of all AC po wer, decay heat is \nremoved from the NPMs throug h passive heat transfer to the pool resulting in pool \nheat up and boiling. Water inventory in th e reactor pool is adequate to cool the \nNPMs for at least 72 hours without adding water. \nThe reactor pool provides an additional means of fission product retention beyond \nthat of the fuel, fuel cladding, RPV, and the containment for certain events.\nSection 9.2.5 provides design and operational informatio n for the ultimate heat \nsink.\n1.2.2.4.3 Chemical and Volume Control System\nThe CVCS is simple in design and its oper ation is not credited during or after an \naccident. During normal operation, the CV CS recirculates a po rtion of the reactor \ncoolant through demineralizers  and filters to maintain reactor coolant cleanliness \nand chemistry. A portion of the recirculat ed coolant is used to supply pressurizer \nspray for controlling reacto r pressure. Reactor coolant inventory is controlled by \ninjection of additional water when reacto r coolant levels are low or letdown of \nreactor coolant to the liquid radioactive waste system when coolant inventory is \nhigh.",
+      "summary": "The Ultimate Heat Sink section describes a large, stainless steel-lined, reinforced concrete pool located below plant grade level, which serves as the final heat removal system for the NuScale reactor. In normal operations, heat is removed via a cooling system and external heat sink, while in the event of a total loss of AC power, decay heat is passively transferred to the pool, which has sufficient water inventory to ensure continued cooling through heat up and boiling.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "41",
+      "hop": 1,
+      "references": []
+    },
     "nuscale_ch01_0558": {
       "node_id": "nuscale_ch01_0558",
       "title": "DSRS 12.3-12.4, Rev 0: Radiation Protection Design FeaturesII.9 RG 8.15",
-      "summary": "This section summarizes NuScale’s conformance with various regulatory guides related to radiation protection design features, as outlined in DSRS 12.3-12.4. It details whether each guide is applicable, not applicable, conforms, or partially conforms, with references to supporting sections or tables for further information. Specifically, RG 8.15 is noted as not applicable to the NuScale design.",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-150 Revision 5\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design FeaturesII.2\nRG 1.52 Not Applicable See RG 1.52 in Table 1.9-2. Not Applicable\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.3 RG 1.69 Partially Conforms See RG 1.69 in Table 1.9-2. 12.3.2\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.4 RG 1.97 Partially Conforms See RG 1.97 in Table 1.9-2. 7.2.13\n12.3.4\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design FeaturesII.5\nRG 1.183 Partially Conforms See RG 1.183 in Table 1.9-2. 12.2\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.6 RG 8.2 Not Applicable See RG 8.2 in Table 1.9-2. Not Applicable\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.7 RG 8.8 Partially Conforms See RG 8.8 in Table 1.9-2. 12.3.1\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design FeaturesII.8\nRG 8.10 Not Applicable See RG 8.10 in Table 1.9-2. Not Applicable\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.9 RG 8.15 Not Applicable See RG 8.15 in Table 1.9-2. Not Applicable\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.10 RG 8.19 Conforms None. 12.4\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design FeaturesII.11\nRG 8.25 Not Applicable See RG 8.25 in Table 1.9-2. Not Applicable\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.12 RG 8.38 Partially Conforms See RG 8.38 in Table 1.9-2. 12.3.1\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.13 ANSI/ANS/HPSSC-6.8.1-1981 Conforms None. 12.3.4Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-2: Conformance with Regulatory Guides (Continued)]\n8.39 | Release of Patients Administered\nRadioactive Materials | - | Not Applicable | This guidance governs activities applicable only to\nfacilities that administer radio-pharmaceuticals. | Not Applicable\n8.40 | Methods for Measuring Effective\nDose Equivalent from External\nExposure | - | Not Applicable | This guidance governs dosimetry methods for deter-\nmining effective dose equivalent for external radia-\ntion exposures. These methods are the responsibility\nof the COL applicant or licensee. | Not Applicable\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section summarizes NuScale’s conformance with various regulatory guides related to radiation protection design features, as outlined in DSRS 12.3-12.4. It details whether each guide is applicable, and if so, whether the NuScale design conforms, partially conforms, or does not conform, with references to supporting sections for further information. Several guides are noted as not applicable, while others are partially or fully met by the design.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "278",
-      "hop": 1
-    },
-    "nuscale_ch01_0052": {
-      "node_id": "nuscale_ch01_0052",
-      "title": "Comparison with Other Facilities",
-      "summary": "This section compares the major design features and parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It highlights differences in size, output, core design, and safety systems, showing that NuScale uses significantly smaller modules, simplified systems, and different safety approaches compared to conventional PWRs. The comparison is summarized in tables for easy reference.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "79",
-      "hop": 1
-    },
-    "nuscale_ch05_0004": {
-      "node_id": "nuscale_ch05_0004",
-      "title": "System Description",
-      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes key components such as the reactor pressure vessel, pressurizer, and associated piping and controls. It removes heat from the reactor core to the steam generators using natural circulation, and features systems for removing noncondensible gases and maintaining pressure boundary integrity to prevent radionuclide release. The RCS interfaces with several other systems, including emergency core cooling and chemical control, to ensure safe and efficient operation.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "9",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-2",
+          "page": 173,
+          "caption": "Conformance with Regulatory Guides (Continued)",
+          "structured_text": "8.39 | Release of Patients Administered\nRadioactive Materials | - | Not Applicable | This guidance governs activities applicable only to\nfacilities that administer radio-pharmaceuticals. | Not Applicable\n8.40 | Methods for Measuring Effective\nDose Equivalent from External\nExposure | - | Not Applicable | This guidance governs dosimetry methods for deter-\nmining effective dose equivalent for external radia-\ntion exposures. These methods are the responsibility\nof the COL applicant or licensee. | Not Applicable"
+        },
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
     "nuscale_ch05_0025": {
       "node_id": "nuscale_ch05_0025",
       "title": "References",
-      "summary": "This section details the materials used in the construction of the pressurizer and its components in the NuScale reactor, specifying types of steel and nickel-based alloys, as well as relevant material standards from the BPVC. It also references where further descriptions of specific components can be found in other sections of the report.",
+      "content": "NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-40 Revision 55.4.5.5 Pressurizer Materials\nThe pressurizer includes the top portion of  the RPV upper shell, the RPV upper head, \nthe pressurizer baffle plate, heater bundles, and spray nozzles. The material of the RPV upper shell and upper head is described in  Section 5.2. The pressurizer spray nozzles \nand pressurizer spray nozzle safe ends are described in Section 4.5 and Section 5.2, \nrespectively. \nThe pressurizer baffle plate is an integral part of one of the RP V upper shell forgings \nand is thus constructed of a Grade 3, Class 2, low alloy steel in acco rdance with material \nspecification SA-508 of BPVC, Section II. The upper and lower  surfaces of the baffle \nplate are weld clad with two layers of st ainless steel for corrosion protection in \naccordance with material specification SFA- 5.9 of BPVC, Section II; the first layer being \nAlloy Type ER309L and the second layer being Alloy Type ER308L. Additionally, the \nupper surface of the baffle plate in the regi ons of the SG integral steam plenums is clad \nwith nickel-based Alloy 52/152 for compatibility.\nThe specific materials for the heater bundle assemblies are austenitic stainless steel or \nNi-Cr-Fe Alloy. Materials for the cover plate, bolting, and heater sheaths are corrosion \nresistant materials that are compatible with  their respective operating environments. \nMaterials for the cover plate include austenit ic stainless steel Type 304, Grade F304 and \nnickel-based Alloy 690 (UNS N06690). These ma terials comply with BPVC, Section II, \nSpecifications SA-182 and SB-168, respectively . Materials for the heater sheaths include \naustenitic stainless steel Type 304L and Ty pe 316. These materials comply with BPVC, \nSection II, Specification SA-213. The bolt ing material is nickel-based Alloy 750 \n(UNS N07718) and complies with BPVC , Section II, Specification SB-637.\n5.4.6 References\n5.4-1 Nuclear Energy Institut e, \"Steam Generator Program Guidelines,\" NEI 97-06, \nRevision 3, Washington, DC, January 2011.\n5.4-2 Electric Power Research Institute, \"Steam Generator Management Program: \nPressurized Water Reactor Steam Genera tor Examination Gu idelines,\" EPRI \n#1013706, EPRI, Palo Alto, CA, 2007.\n5.4-3 Electric Power Research Institute, \"Advanced Nuclear Technology: Advanced \nLight Water Reactors Utility Requ irements Document,\" EPRI #3002003129, \nRevision 13, EPRI, Palo Alto, CA, December 05, 2014.\n5.4-4 Institute of Electrical and Electronics Engineers, \"Recommended Practice for \nSeismic Qualification of Class 1E Equ ipment for Nuclear Power Generating \nStations,\" IEEE Standard 344-2004, Piscataway, NJ.\n5.4-5 Institute of Electrical an d Electronics Engineers, \"Sta ndard Criteria for Accident \nMonitoring Instrumentati on for Nuclear Power Ge nerating Stations,\" \nIEEE Standard 497-2002, Piscataway, NJ.\n5.4-6 NuScale Power, LLC, \"Long-Term Cooling Methodology,\" TR-0916-51299-P, \nRevision 3.NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-41 Revision 55.4-7 Chen, S.S., J.A. Jendrzejczyk, and M.W. Wambsganss, \"Tube Vibration in a \nHalf-Scale Sector Model of a Helical Tu be Steam Generator,\" Journal of Sound \nand Vibration (1983): 91:4:539-569.\n5.4-8 American Society of Mechanical Engin eers, Boiler and Pressure Vessel Code, \n\"Forged Fittings, Socket-Welding and Threaded,\" ASME B16.11-2009, New York, \nNY.\n5.4-9 NuScale Power, LLC, “Evaluation Meth odology for Stability Analysis of the \nNuScale Power Module,” TR-0516-49417-P-A Revision 1.NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-42 Revision 5Table 5.4-1: Steam Generator Full-Load Thermal- Hydraulic Operating Cond itions (Best Estimate)\nParameter Value\n(1)Total heat transfer (MWt) 159.13\nSG outlet pressure (psia) 500.1\nSG outlet temperature (°F) 584.4\nSG inlet temperature (°F) 299.7\nSG flow (lbm/hr) 532298\n(1) Based on operation of both SGs, each SG is capable of providing half of the total heat transfer required.NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-43 Revision 5Table 5.4-2: Steam Generator Design Data\nParameter Value\nType Helical, once-through\nTotal number of helical tubes per NPM 1380\nNumber of helical tube columns per NPM 21\nInternal pressure - secondary (psia) 2100\nExternal pressure - primary (psia) 2100\nExternal pressure - SG pipi ng in containment (psia) 1000\nInternal temperature - secondary (°F) 650\nExternal temperature - primary (°F) 650\nExternal temperature - SG piping in containment (°F) 550\nTube wall outer diameter (inches) 0.625\nTube wall thickness (inches) 0.050\nSteam tubesheet thickness, without clad (inches) 4.0\nFeed tubesheet thickness, without clad (inches) 6.0\nSteam and feed tubesheet clad thickness - secondary (inches) 0.250\nSteam and feed tubesheet clad thickness - primary (inches) 0.375\nSteam tubesheet thickness, with clad (inches) 4.625\nFeed tubesheet thickness, with clad (inches) 6.625\nTotal heat transfer area (ft2) 17928\nFouling factor (hr-ft2-°F/BTU) 0.0001\nMinimum SG tube transition bend radius (inches) ≥ 6.250NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-44 Revision 5Table 5.4-3: Steam Generator System Component Materials\nComponent Specification Alloy Designation1\n(Grade, Class, or Type)\nSG Class 2 piping SA-312 Type 304/304L\nSG piping reducers and elbows SA-182 Grade F304/F304L\nSG piping supports SA-479 Type 304/304L\nSG tubes See Section 5.4.1.5Flow restrictors and flow restrictor bolts SA-479 Type 304Flow restrictor mounting plates SA-240 Type 304Flow restrictor mounting plate spacer SB-166 Alloy 690 (UNS N06690)\nFlow restrictor stud bo lts, nuts, and washers\nStuds, nuts, and washers for the steam and feed plenum access port coversSB-637 Alloy 718 (UNS N07718)\nThreaded inserts for steam and feed plenum \naccess portsSA-479 Type 304/304L\nSteam plenum access ports SA-508 Grade 3, Class 2\nSteam and feed plenum access port covers SA-240\nType 304/304L\nLow alloy steel weld filler material SFA 5.5\nSFA 5.23\nSFA-5.28\nSFA-5.29Weld filler metal classifications compatible with low \nalloy steel base metal\nStainless steel weld filler material\n(includes filler material for cladding)SFA 5.4SFA 5.9\nSFA-5.22E308, E308L, E309, E309L, E316, E316L\nER308, ER308L, ER309, ER309L ER316, ER316L, EQ308L, EQ309L\nE308, E308L, E309, E309L, E316, E316L\nNickel-based alloy weld filler material\nSFA-5.11\nSFA-5.14ENiCrFe-7\nERNiCrFe-7, ERNiCrFe-7A, EQNiCrFe-7, EQNiCrFe-7A\nIntegral steam plenum\nIntegral steam plenum cap\nFeed plenum access portSee Table 5.2-4\nNotes:\n1 - When the material is designated as Type or Grade 304/3 04L, this refers to dual cert ified stainless steel material.NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-45 Revision 5Table 5.4-4: Not UsedNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-46 Revision 5Table 5.4-5: Decay Heat Re moval System Design Data\nParameter Value\nInternal pressure (psia) 2100\nActuation valve external pressure (psia) 60\nPassive condenser external pressure (psia) 27\nTemperature (°F) 650\nNumber of condensers 2\nTotal number of tubes per condenser 80\nTube wall outer diameter (inches) 1.315\nTube wall thickness (inches) 0.109\nTube external surface area per condenser (ft2) 258.2\nFouling factor (hr-ft2-F/BTU) 0.0005NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-47 Revision 5Table 5.4-6: Pressurizer Design Data\nParameter Value\nInternal pressure (psia) 2100\nExternal pressure (psia) 1000\nTemperature (°F) 650\nPressurizer heater sheath temperature (°F) 800\nSpray nozzles 2\nNominal spray nozzle diameter (in.) 1NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-48 Revision 5Table 5.4-7: Pressurizer Heater Parameters\nParameter Value\nVoltage (Vac) 480\nFrequency (Hz) 60\nHeater bundles per pressurizer 2\nHeater groups per bundle (kW) 3\nNominal total capacity per heater bundle (kW) 400NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-49 Revision 5\nTable 5.4-8: Failure Modes and Effects Analysis - Decay Heat Removal System\nComponent Identification Function Failure Mode Failure \nMechanismEffect on System Method of Failure \nDetection\nDHRS actuation valve\nDHR-HOV-0101ADHR-HOV-0101B\nDHR-HOV-0201A\nDHR-HOV-0201B\n(normally closed, fail open)1) Maintain DHRS in \nstandbyA) Spurious opening Mechanical\nElectrical/I&CAffected DHRS condenser has open flow path to SG. \nTurbine must be isolated to prevent damage. Normal cooling is available thro ugh feedwater. Unaffected \nDHRS train remains available.• Valve position \nindication\n•S t e a m  p r e s s u r e\n• Steam temperature\n• Passive condenser \ntemperature\nB) Spurious DHRS \nactuationElectrical/I&C\nOperator errorBoth DHRS trains initiate operation and the MSIVs and \nFWIVs will close. The engi neered safety features \nactuation system will generate a reactor trip signal regardless of if the DHRS actuation signal was \nerroneous or not.• Pressurizer pressure•S t e a m  p r e s s u r e\n• Valve position \nindication\n• Pressurizer level\n• Passive condenser \ntemperature\n• Passive condenser \nlevel\n•R e a c t o r  t r i p  \nC) Leakage (passive \nfailure)Mechanical Minor leakage will not impact DHRS operation. DHRS \ninventory is maintained by the continuous makeup of \nfeedwater to the steam generator. Major valve seat leakage will cause both DHRS trains to actuate.• Minor seat leakage:\n-n o n e\n• Major seat leakage:\n- Passive condenser \ntemperature\n-S t e a m  p r e s s u r e- Steam temperature\n• Minor valve bonnet \nleakage:- periodic inspections\n• Major valve bonnet \nleakage:- passive condenser \ntemperatureNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-50 Revision 5\n2) Initiate DHRS \ncoolingA) Fail to open Mechanical\nElectrical/I&CSufficient flow required for cooling of affected DHRS \ntrain is maintained by redundant DHRS actuation valve. \nOther train operates normally.• Valve position \nindication\nB) Partial opening MechanicalC) Slow opening \n(extended stroke \ntime or delayed actuation)Mechanical \nElectrical/I&C\nD) Spurious closure Electrical/I&C\nOperator error\nE) Leakage (passive \nfailure)Mechanical Leakage out of the system results in a reduction in \ncooling inventory for the affected DHRS train. DHRS operation is maintained by the unaffected train. Major \nsystem leakage is addressed under DHRS Loop \nPressure Bounda ry failures.• Minor valve bonnet \nleakage:- periodic inspection\n• Major valve bonnet \nleakage:-S t e a m  p r e s s u r e  \n(valve bonnet \nfailure)\n- Passive condenser \ntemperature\n- RCS temperatures\nF) Flow blockage \n(passive failure)Mechanical Reduced or nonexisten t flow through affected valve \nbut adequate DHRS flow is  maintained by redundant \nactuation valve. The other train operates normally,NoneTable 5.4-8: Failure Modes and Effects Analysis - Decay Heat Removal System (Continued)\nComponent Identification Function Failure Mode Failure \nMechanismEffect on System Method of Failure \nDetectionNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-51 Revision 5\nMain steam isolation valve\nMS-HOV-0101\nMS-HOV-0201\n(normally open, fail closed)1) Isolate main steam \nline to establish \nclosed DHRS \ncooling loopA) Fail to close Mechanical\nElectrical/I&CDHRS inventory in the train associated with the failed \nMSIV will be maintained by the downstream secondary \nMSIV.• Valve position \nindication\n•S t e a m  p r e s s u r e\n• Passive condenser \ntemperature\n• RCS temperaturesB) Partial closure Mechanical\nC) Slow closure \n(extended stroke time or delayed \nactuation)Mechanical\nElectrical/I&CThe affected train function s normally. Secondary MSIV \nclosure mitigates loss of  inventory. System can \nfunction properly with a range of initial inventories so a \nloss of cooling capability in the affected train is not \ncredible.• Valve position \nindication\n•S t e a m  p r e s s u r e\n• Passive condenser \ntemperature \nD) Spurious opening Electrical/I&C\nOperator error DHRS inventory in the train associated with failed MSIV \nwill be maintained by the downstream secondary \nMSIV.• Valve position \nindication\n•S t e a m  p r e s s u r e\n• Passive condenser \ntemperature \n• RCS temperatures\nE) Leakage through \nseat or seal (passive failure)Mechanical The affected train func tions normally. Secondary MSIV \nclosure mitigates loss of  inventory. System can \nfunction properly with a range of initial inventories so a \nloss of cooling capability in the affected train is not \ncredible.• Periodic testing & \ninspection\n•S t e a m  p r e s s u r e  \n• Passive condenser \ntemperature\n• RCS temperatures\nMain steam isolation valve \nBypass Valve\nMS-HOV-0103MS-HOV-0203\n(normally closed, fail closed)1) Maintain DHRS \npressure \nboundary during DHRS operationA) Spurious opening \nduring DHRS \noperationOperator error DHRS inventory in the tr ain associated with failed MSIV \nbypass valve will be maintained by the downstream \nsecondary MSIV. • Valve position \nindication\n•S t e a m  p r e s s u r e• Passive condenser \ntemperature\n• RCS temperatures\nB) Leakage through \nseat or seal \n(passive failure)Mechanical See MSIV failure mode 1E.Table 5.4-8: Failure Modes and Effects Analysis - Decay Heat Removal System (Continued)\nComponent Identification Function Failure Mode Failure \nMechanismEffect on System Method of Failure \nDetectionNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-52 Revision 5\nFeedwater isolation valve\nFW-HOV-0137\nFW-HOV-0237\n(normally open, fail closed)1) Isolate feedwater \nline to establish \nclosed DHRS \ncooling loopA) Fail to close Mechanical\nElectrical/I&CAdditional DHRS inventory may be added to the train \nassociated with the failed FWIV until feedwater stops \nflowing into the SG. The FW RV closes simultaneously, \nproviding redundant isolation. The system can function properly with a range of initial inventories so a \nloss of cooling capability due to overfill is not credible. • Valve position \nindication\n• Passive condenser \ntemperature\n•S t e a m  p r e s s u r e  B) Partial closure Mechanical \nC) Slow closure \n(extended stroke time or delayed \nactuation)Mechanical\nElectrical/I&CIn the affected train, more DHRS inventory than \nanticipated may be added while the FWIV and FWRV close but the system can function properly with a \nrange of initial inventories so a loss of cooling \ncapability is not credible. • Valve position \nindication\n• Passive condenser \ntemperature\n•S t e a m  p r e s s u r e\nD) Spurious opening Electrical/I&C\nOperator error DHRS inventory in the train associated with failed FWIV \nwill be maintained by the feedwater check valves \nupstream of the FWIV and the closed FWRV.• Valve position \nindication\n•S t e a m  p r e s s u r e\nE) Leakage through \nseat or seal (passive failure)Mechanical The affected train functions normally. Feedwater \nregulating valve closure mitigates loss of inventory. System can function properly with a range of initial \ninventories so a loss of cooling capability in the \naffected train is not credible.\n• Periodic testing & \ninspection\n•S t e a m  p r e s s u r e\n• Passive condenser \ntemperature\n• RCS temperatures\nSafety-related feedwater \ncheck valve\nFW-CKV-0136FW-CKV-02361) Prevent backflow \nthrough FWIVsA) Fail to close Mechanical The nonsafet y-related check valve upstream of the \nsafety-related check valve is credited to close during a \nFWLB. Thus, sufficient inventory is available for the affected train.• Passive condenser \ntemperature\n•S t e a m  p r e s s u r e• RCS temperaturesB) Partial closure\nC) Slow closureTable 5.4-8: Failure Modes and Effects Analysis - Decay Heat Removal System (Continued)\nComponent Identification Function Failure Mode Failure \nMechanismEffect on System Method of Failure \nDetectionNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-53 Revision 5\nSGS Thermal Relief Valve\nSG-RV-0102\nSG-RV-02021) Provide pressure \nboundaryA) Spurious opening \nof relief valve with \nfailure to close \n(passive failure)Mechanical A spurious opening of the thermal relief valve with a \nfailure to close will cause the affected DHRS train to \nlose inventory and become inoperable. Safe shutdown \nwithout emergency core cooling system (ECCS) actuation is achieved with the remaining DHRS train.•S t e a m  p r e s s u r e\n• DHRS level \ninstrument switches\n• Containment leakage \nmonitoring \ninstrumentation \n(containment evacuation system)\n2) Provide \noverpressure \nprotection when SGS is water solid.A) Failure of valve to \nlift at setpointMechanical A failure of the valve to  lift during a water solid over \npressure scenario could cause deformation or rupture \nof pressure boundary components. A rupture would cause the affected DHRS train to be inoperable. The \nmodule is in safe shutdown prior to this event and \ncooling will resume with the unaffected DHRS train or through flooding the CNV with the containment \nflooding and drain system.•S t e a m  p r e s s u r e\n• DHRS level \ninstrument switches\nDHRS Loop Pressure \nBoundary(Includes piping inside CNV, \nsteam generator tubes)\n(1)1) Provide a pressure \nboundary for the SGS and DHRSA) Pipe rupture and \nloss of DHRS loop inventory (passive \nfailure)Mechanical A pipe rupture of any pressure boundary piping which \nis part of the DHRS loop (SGS and DHRS piping within containment isolation valves ) will cause the affected \nDHRS train to lose inventory and become inoperable. \nSafe shutdown without ECCS actuation is achieved with the remaining DHRS train.•S t e a m  p r e s s u r e\n• DHRS level \ninstrument switches\n• Containment leakage \nmonitoring instrumentation \n(containment \nevacuation system)\nNotes:\n(1) Pipe ruptures outside of the CNV are no t postulated as the DHRS piping is specifie d to meet additional stress criteria spec ified in Branch Technical Position 3-4.\nContainment leakage monitoring instrumentation  only identifi es pressure boundary failures  within the containment vessel.Table 5.4-8: Failure Modes and Effects Analysis - Decay Heat Removal System (Continued)\nComponent Identification Function Failure Mode Failure \nMechanismEffect on System Method of Failure \nDetectionNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-54 Revision 5\nFigure 5.4-1: Steam Generator Helical Tube Bundle \nTRANSITION REGION START AND STOP\nSTEAM TRANSITION \u0003\nREGION\nHELIX\nHELIX HEIGHT \nTOTAL HEIGHT \nTRANSITION REGION\nSTART AND STOPFEED TRANSITION\nREGION\nFEED TRANSITION REGION\nSTART AND STOP\nQUARTER OF COLUMN 1 COLUMN 1FULL TUBE BUNDLE0°\n90°\n180°270°0°\n90°\n180°270°0°\n90°\n180°270°0°\n90°\n180°270°\nSTEAM TRANSITION REGION\nSTART AND STOP\nRADIUS\nTYPICAL TUBE ARRANGEMENT\n(TUBE 01 OF COLUMN 01 SHOWN)RADIUS IS TAKEN AT\nCENTERLINE OF TUBENuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-55 Revision 5Figure 5.4-2: Configuration of Steam Generato rs in Upper Reactor Pressure Vessel SectionNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-56 Revision 5Figure 5.4-3: Main Steam and Feedwater Plena\nSTEAM 4 STEAM 1\nSTEAM 3 STEAM 20°\n90° 270°\n180°\nSTEAM PLENUMS IN RPVREACTOR\nPRESSURE\nVESSEL\n0°\n270° 90°\n180°FEED 4FEED 1\nFEED 2 FEED 3\nFEED PLENUMS IN RPVREACTOR\nPRESSURE\nVESSELNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-57 Revision 5\nFigure 5.4-4: Integral Steam Plenum\n0°\n90° 270°\n180°\nINTEGRAL STEAM PLENUM ASSEMBLY TOP VIEW\n(OVERHEAD VIEW)INTEGRAL STEAM PLENUM\n(SIDE VIEW - CUTAWAY)HEATER\nBUNDLEREMOVABLE\nACCESS COVER\nSTEAM ACCESSPORT\nACCESS PORTMAIN STEAM\nSUPPLY NOZZLECAPNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-58 Revision 5Figure 5.4-5: Feedwater Plenum Access Port\n)(('\u00033/(180\u0003$&&(66\u00033257\u0003&87$:$<5HPRYDEOH\u0003$FFHVV\u0003&RYHU7XEHVKHHW\u0003\u000b7XEHV\u0003QRW\u0003VKRZQ\f\n)ORZ\u00035HVWULFWRU\u00030RXQWLQJ\u00033ODWH\n\u000b)ORZ\u00035HVWULFWRUV\u0003QRW\u0003VKRZQ\f)HHGZDWHU\u00036XSSO\\\u00031R]]OH\n)ORZ\u00035HVWULFWRU\n6WXG\u0003%ROWV0RXQWLQJ\u00033ODWH\u00036SDFHU\n)ORZ\u00035HVWULFWRU\u0003\n0RXQWLQJ\u00033ODWHNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-59 Revision 5\nFigure 5.4-6: Steam Generator Tube Supports and Steam Generator Supports\n78%(\u00036833257\u0003\n723\u00036(&7,21\n78%(\u00036833257\u0003\n0,''/(\u00036(&7,21\n78%(\u00036833257\u0003\n%27720\u00036(&7,21287(5\u000363$&(5\n287(5\u000363$&(50,''/(\u000363$&(5833(5\u00036*\u00036833257\n/2:(5\u00036*\u000368332576833257\u0003$66(0%/<833(5\u00036*\u00036833257\n/2:(5\u00036*\u00036833257NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-60 Revision 5Figure 5.4-7: Steam Generator Tube Support Tabs\n&217$&7\u0003%(7:((1\u00037$%\u0003\n$1'\u0003$'-$&(17\u00036833257723\u00039,(:\u00032)\u00036,1*/(\u000378%(\u0003\n6833257\u0003$1'\u00036*\u0003&2/801\n7$%\n78%(NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-61 Revision 5Figure 5.4-8: Steam Generator Flow Restrictor Assembly\n)ORZ\u00035HVWULFWRU)ORZ\u00035HVWULFWRU\u0003%ROW\n&ODGGLQJ\n)HHG\u00033OHQXP\u00037XEHVKHHW\n)ORZ\u00035HVWULFWRU\u00030RXQWLQJ)ORZ\u00035HVWULFWRU\u0003\n0RXQWLQJ\u00033ODWHNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-62 Revision 5\nFigure 5.4-9: Steam Generator Simplified Diagram\nRPV01-SG-SG-0201\nSTEAM GENERATOR 2FROM FWTO MS TO MS\nCNV01-SG-SG-0101\nSTEAM GENERATOR 1CNTSG\nCNTSG\nCNTSG\nCNTSG\n   DHRSSG DHRS SGFROM FW\nFROM DHRS\nFROM CNT\nFROM DHRSTO CNTTO CNTFROM CNT\nRV-0102 RV-0202NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-63 Revision 5\nFigure 5.4-10: Decay Heat Remo val System Simplified Diagram\n01-DHR\nDHR PASSIVE CONDENSERIN REACTOR POOL\nIN CONTAINMENT VESSEL\n01-DHR\nDHR PASSIVE CONDENSER01-DHR-HOV\nFO\n01-DHR-HOV01-DHR-FOFO\n01-DHR-FO\nFO\n01-DHR-HOV\nFO\n01-DHR-HOV\nCNV23CNV22FROM CNTCNT DHR\nCNT DHR\nFROM CNTPT PTZSC ZSO\nPT PTZSC ZSOLT LT\nLT LT\nPT PT CNT DHRZSC ZSO\nFROM CNT\nFROM CNTCNT DHR PT PTZSC ZSOLT LT INSULATED NON-INSULATED\nINSULATED NON-INSULATED LT LTINSULATED NON-INSULATEDINSULATED NON-INSULATED\nTT TT PT PT PTTO SGDHR SGDHR SG\nTO SG\nTT TT PT PT PTH\nH\nH\nHNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-64 Revision 5\nFigure 5.4-11: Primary Coolant Temp erature with Decay Heat Removal System Two Train Operation - 4 Hours\n250300350400450500550600\n0 2000 4000 6000 8000 10000 12000 14000Primary Temperatures (°F)\nTime (sec)\nHot Leg\nCold LegAverageNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-65 Revision 5\nFigure 5.4-12: Primary Coolant Temper ature Cooldown with De cay Heat Removal System  One Train Operation: \nLow System Inventory - 4 Hours\n440460480500520540560580600\n0 2000 4000 6000 8000 10000 12000 14000Primary Temperatures (°F)\nTime (sec)\nHot Leg\nCold LegAverageNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-66 Revision 5\nFigure 5.4-13: Primary Coolant Temper ature Cooldown with De cay Heat Removal System  One Train Operation: \nLow System Inventory - 36 Hours\n300350400450500550600\n0 20000 40000 60000 80000 100000 120000Primary Temperatures (°F)\nTime (sec)\nHot Leg\nCold LegAverageNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-67 Revision 5\nFigure 5.4-14: Primary Coolant Temper ature Cooldown with De cay Heat Removal System  One Train Operation: \nHigh System Inventory - 4 Hours\n490500510520530540550560570580590\n0 2000 4000 6000 8000 10000 12000 14000Primary Temperatures (°F)\nTime (sec)\nHot Leg\nCold LegAverageNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-68 Revision 5\nFigure 5.4-15: Primary Coolant Temper ature Cooldown with De cay Heat Removal System  One Train Operation: \nHigh System Inventory - 36 Hours\n350400450500550600\n0 20000 40000 60000 80000 100000 120000Primary Temperatures (°F)\nTime (sec)\nHot Leg\nCold LegAverageNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-69 Revision 5\nFigure 5.4-16: Primary Coolant Temper ature Cooldown with De cay Heat Removal System  One Train Operation: \nHigh System Inventory, 140 Degree Fahre nheit Initial Pool Temperature - 36 Hours\n380400420440460480500520540560580600\n0 20000 40000 60000 80000 100000 120000Primary Temperatures (°F)\nTime (sec)\nHot Leg\nCold LegAverageNuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-70 Revision 5\nFigure 5.4-17: Pressurizer Region of Reactor Vessel \n\n\n--- Referenced Tables (structured) ---\n[Table 5.2-4: Reactor Coolant Pressure Boundary Component and Support Materials]\nCRDM | Pressure Retaining Components\nLatch housing\nRod travel housing\nRod travel housing Plug | SA-965 | Grade F304LN\n[Table 5.4-1: Steam Generator Full-Load Thermal-Hydraulic Operating Conditions (Best Estimate)]\n(1)Total heat transfer ( | MW\nt | ) | 159.13\nSG | outlet pressure (psia) | 500.1\nSG | outlet temperature (°F) | 584.4\nSG | inlet temperature (°F) | 299.7\nSG | flow (lbm | / | hr) | 532298\n[Table 5.4-2: Steam Generator Design Data]\nParameter | Value\nType | Helical, once-through\nTotal number of helical tubes per | NPM | 1380\nNumber of helical tube columns per | NPM | 21\nInternal pressure - secondary (psia) | 2100\nExternal pressure - primary (psia) | 2100\nExternal pressure - | SG | piping in containment (psia) | 1000\nInternal temperature - secondary (°F) | 650\nExternal temperature - primary (°F) | 650\nExternal temperature - | SG | piping in containment (°F) | 550\nTube wall outer diameter (inches) | 0.625\nTube wall thickness (inches) | 0.050\nSteam tubesheet thickness, without clad (inches) | 4.0\nFeed tubesheet thickness, without clad (inches) | 6.0\nSteam and feed tubesheet clad thickness - secondary (inches) | 0.250\nSteam and feed tubesheet clad thickness - primary (inches) | 0.375\nSteam tubesheet thickness, with clad (inches) | 4.625\nFeed tubesheet thickness, with clad (inches) | 6.625\nTotal heat transfer area (ft2) | 17928\nFouling factor (hr-ft2-°F/BTU) | 0.0001\nMinimum SG tube transition bend radius (inches) | ≥ 6.250\n[Table 5.4-3: Steam Generator System Component Materials]\nSG | Class 2 piping | SA-312 | Type 304 | / | 304L\nSG | piping reducers and elbows | SA-182 | Grade F304 | / | F304L\nSG | piping supports | SA-479 | Type 304 | / | 304L\nSG tubes | See Section 5.4.1.5\nFlow restrictors and flow restrictor bolts | SA-479 | Type 304\nFlow restrictor mounting plates | SA-240 | Type 304\nFlow restrictor mounting plate spacer | SB-166 | Alloy 690 (UNS N06690)\nFlow restrictor stud bolts, nuts, and washers\nStuds, nuts, and washers for the steam and feed\nplenum access port covers | SB-637 | Alloy 718 (UNS N07718)\nThreaded inserts for steam and feed plenum\naccess ports | SA-479 | Type 304/304L\nSteam plenum access ports | SA-508 | Grade 3, Class 2\nSteam and feed plenum access port covers | SA-240 | Type 304 | / | 304L\nLow alloy steel weld filler material | SFA | 5.5\n5.23\n-5.28\n-5.29 | Weld filler metal classifications compatible with low\nalloy steel base metal\nSFA\nSFA\nSFA\nStainless steel weld filler material\n(includes filler material for cladding) | SFA 5.4\nSFA 5.9\nSFA-5.22 | SFA | E308, E308L, E309, E309L, E316, E316L\nER308, ER308L, ER309, ER309L ER316, ER316L,\nEQ308L, EQ309L\nE308, E308L, E309, E309L, E316, E316L\nSFA\nSFA\nNickel-based alloy weld filler material | SFA | -5.11\n-5.14 | ENiCrFe-7\nERNiCrFe-7, ERNiCrFe-7A, EQNiCrFe-7, EQNiCrFe-7A\nSFA\nIntegral steam plenum\nIntegral steam plenum cap\nFeed plenum access port | See Table 5.2-4\n[Table 5.4-5: Decay Heat Removal System Design Data]\nInternal pressure (psia) | 2100\nActuation valve external pressure (psia) | 60\nPassive condenser external pressure (psia) | 27\nTemperature (°F) | 650\nNumber of condensers | 2\nTotal number of tubes per condenser | 80\nTube wall outer diameter (inches) | 1.315\nTube wall thickness (inches) | 0.109\nTube external surface area per condenser (ft2) | 258.2\nFouling factor (hr-ft2-F/BTU) | 0.0005\n[Table 5.4-6: Pressurizer Design Data]\nParameter | Value\nInternal pressure (psia) | 2100\nExternal pressure (psia) | 1000\nTemperature (°F) | 650\nPressurizer heater sheath temperature (°F) | 800\nSpray nozzles | 2\nNominal spray nozzle diameter (in.) | 1\n[Table 5.4-7: Pressurizer Heater Parameters]\nParameter | Value\nVoltage (Vac) | 480\nFrequency (Hz) | 60\nHeater bundles per pressurizer | 2\nHeater groups per bundle (kW) | 3\nNominal total capacity per heater bundle (kW) | 400\n[Table 5.4-8: Failure Modes and Effects Analysis - Decay Heat Removal System (Continued)]\nSGS Thermal Relief Valve\nSG-RV-0102\nSG-RV-0202 | 1) Provide pressure\nboundary | A) Spurious opening\nof relief valve with\nfailure to close\n(passive failure) | Mechanical | A spurious opening of the thermal relief valve with a\nfailure to close will cause the affected DHRS train to\nlose inventory and become inoperable. Safe shutdown\nwithout emergency core cooling system (ECCS)\nactuation is achieved with the remaining DHRS train. | • Steam pressure\n• DHRS level\ninstrument switches\n• Containment leakage\nmonitoring\ninstrumentation\n(containment\nevacuation system)\n2) Provide\noverpressure\nprotection when\nSGS is water solid. | A) Failure of valve to\nlift at setpoint | Mechanical | A failure of the valve to lift during a water solid over\npressure scenario could cause deformation or rupture\nof pressure boundary components. A rupture would\ncause the affected DHRS train to be inoperable. The\nmodule is in safe shutdown prior to this event and\ncooling will resume with the unaffected DHRS train or\nthrough flooding the CNV with the containment\nflooding and drain system. | • Steam pressure\n• DHRS level\ninstrument switches\nDHRS Loop Pressure\nBoundary\n(Includes piping inside CNV,\nsteam generator tubes)(1) | 1) Provide a pressure\nboundary for the\nSGS and DHRS | A) Pipe rupture and\nloss of DHRS loop\ninventory (passive\nfailure) | Mechanical | A pipe rupture of any pressure boundary piping which\nis part of the DHRS loop (SGS and DHRS piping within\ncontainment isolation valves) will cause the affected\nDHRS train to lose inventory and become inoperable.\nSafe shutdown without ECCS actuation is achieved\nwith the remaining DHRS train. | • Steam pressure\n• DHRS level\ninstrument switches\n• Containment leakage\nmonitoring\ninstrumentation\n(containment\nevacuation system)",
+      "summary": "This section details the materials used in the NuScale pressurizer, including low alloy steel for the baffle plate, stainless steel and nickel-based alloys for cladding and components, all in accordance with relevant BPVC specifications. It also references where further material descriptions can be found in other report sections and lists the applicable standards for each material used.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "130",
-      "hop": 1
-    },
-    "nuscale_ch01_0043": {
-      "node_id": "nuscale_ch01_0043",
-      "title": "Ultimate Heat Sink",
-      "summary": "The Ultimate Heat Sink for the NuScale plant is a large, stainless steel-lined, reinforced concrete pool located below grade, comprising the reactor, refueling, and spent fuel pool areas. During normal operations, heat is removed via a cooling system and external heat sink, while in the event of a total loss of AC power, decay heat is passively transferred to the pool, which has sufficient water inventory to ensure continued cooling through heat-up and boiling.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "41",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 5.4-1",
+          "page": 144,
+          "caption": "Steam Generator Helical Tube Bundle"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-10",
+          "page": 153,
+          "caption": "Decay Heat Removal System Simplified Diagram"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-11",
+          "page": 154,
+          "caption": "Primary Coolant Temperature with Decay Heat Removal System Two Train Operation - 4 Hours"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-12",
+          "page": 155,
+          "caption": "Primary Coolant Temperature Cooldown with Decay Heat Removal System One Train Operation:"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-13",
+          "page": 156,
+          "caption": "Primary Coolant Temperature Cooldown with Decay Heat Removal System One Train Operation:"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-14",
+          "page": 157,
+          "caption": "Primary Coolant Temperature Cooldown with Decay Heat Removal System One Train Operation:"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-15",
+          "page": 158,
+          "caption": "Primary Coolant Temperature Cooldown with Decay Heat Removal System One Train Operation:"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-16",
+          "page": 159,
+          "caption": "Primary Coolant Temperature Cooldown with Decay Heat Removal System One Train Operation:"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-17",
+          "page": 160,
+          "caption": "Pressurizer Region of Reactor Vessel"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-2",
+          "page": 145,
+          "caption": "Configuration of Steam Generators in Upper Reactor Pressure Vessel Section"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-3",
+          "page": 146,
+          "caption": "Main Steam and Feedwater Plena"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-4",
+          "page": 147,
+          "caption": "Integral Steam Plenum"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-5",
+          "page": 148,
+          "caption": "Feedwater Plenum Access Port"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-6",
+          "page": 149,
+          "caption": "Steam Generator Tube Supports and Steam Generator Supports"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-7",
+          "page": 150,
+          "caption": "Steam Generator Tube Support Tabs"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-8",
+          "page": 151,
+          "caption": "Steam Generator Flow Restrictor Assembly"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.4-9",
+          "page": 152,
+          "caption": "Steam Generator Simplified Diagram"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.2-4",
+          "page": 52,
+          "caption": "Reactor Coolant Pressure Boundary Component and Support Materials",
+          "structured_text": "CRDM | Pressure Retaining Components\nLatch housing\nRod travel housing\nRod travel housing Plug | SA-965 | Grade F304LN"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-1",
+          "page": 132,
+          "caption": "Steam Generator Full-Load Thermal-Hydraulic Operating Conditions (Best Estimate)",
+          "structured_text": "(1)Total heat transfer ( | MW\nt | ) | 159.13\nSG | outlet pressure (psia) | 500.1\nSG | outlet temperature (°F) | 584.4\nSG | inlet temperature (°F) | 299.7\nSG | flow (lbm | / | hr) | 532298"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-2",
+          "page": 133,
+          "caption": "Steam Generator Design Data",
+          "structured_text": "Parameter | Value\nType | Helical, once-through\nTotal number of helical tubes per | NPM | 1380\nNumber of helical tube columns per | NPM | 21\nInternal pressure - secondary (psia) | 2100\nExternal pressure - primary (psia) | 2100\nExternal pressure - | SG | piping in containment (psia) | 1000\nInternal temperature - secondary (°F) | 650\nExternal temperature - primary (°F) | 650\nExternal temperature - | SG | piping in containment (°F) | 550\nTube wall outer diameter (inches) | 0.625\nTube wall thickness (inches) | 0.050\nSteam tubesheet thickness, without clad (inches) | 4.0\nFeed tubesheet thickness, without clad (inches) | 6.0\nSteam and feed tubesheet clad thickness - secondary (inches) | 0.250\nSteam and feed tubesheet clad thickness - primary (inches) | 0.375\nSteam tubesheet thickness, with clad (inches) | 4.625\nFeed tubesheet thickness, with clad (inches) | 6.625\nTotal heat transfer area (ft2) | 17928\nFouling factor (hr-ft2-°F/BTU) | 0.0001\nMinimum SG tube transition bend radius (inches) | ≥ 6.250"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-3",
+          "page": 134,
+          "caption": "Steam Generator System Component Materials",
+          "structured_text": "SG | Class 2 piping | SA-312 | Type 304 | / | 304L\nSG | piping reducers and elbows | SA-182 | Grade F304 | / | F304L\nSG | piping supports | SA-479 | Type 304 | / | 304L\nSG tubes | See Section 5.4.1.5\nFlow restrictors and flow restrictor bolts | SA-479 | Type 304\nFlow restrictor mounting plates | SA-240 | Type 304\nFlow restrictor mounting plate spacer | SB-166 | Alloy 690 (UNS N06690)\nFlow restrictor stud bolts, nuts, and washers\nStuds, nuts, and washers for the steam and feed\nplenum access port covers | SB-637 | Alloy 718 (UNS N07718)\nThreaded inserts for steam and feed plenum\naccess ports | SA-479 | Type 304/304L\nSteam plenum access ports | SA-508 | Grade 3, Class 2\nSteam and feed plenum access port covers | SA-240 | Type 304 | / | 304L\nLow alloy steel weld filler material | SFA | 5.5\n5.23\n-5.28\n-5.29 | Weld filler metal classifications compatible with low\nalloy steel base metal\nSFA\nSFA\nSFA\nStainless steel weld filler material\n(includes filler material for cladding) | SFA 5.4\nSFA 5.9\nSFA-5.22 | SFA | E308, E308L, E309, E309L, E316, E316L\nER308, ER308L, ER309, ER309L ER316, ER316L,\nEQ308L, EQ309L\nE308, E308L, E309, E309L, E316, E316L\nSFA\nSFA\nNickel-based alloy weld filler material | SFA | -5.11\n-5.14 | ENiCrFe-7\nERNiCrFe-7, ERNiCrFe-7A, EQNiCrFe-7, EQNiCrFe-7A\nSFA\nIntegral steam plenum\nIntegral steam plenum cap\nFeed plenum access port | See Table 5.2-4"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-4",
+          "page": 135,
+          "caption": "Not Used"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-5",
+          "page": 136,
+          "caption": "Decay Heat Removal System Design Data",
+          "structured_text": "Internal pressure (psia) | 2100\nActuation valve external pressure (psia) | 60\nPassive condenser external pressure (psia) | 27\nTemperature (°F) | 650\nNumber of condensers | 2\nTotal number of tubes per condenser | 80\nTube wall outer diameter (inches) | 1.315\nTube wall thickness (inches) | 0.109\nTube external surface area per condenser (ft2) | 258.2\nFouling factor (hr-ft2-F/BTU) | 0.0005"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-6",
+          "page": 137,
+          "caption": "Pressurizer Design Data",
+          "structured_text": "Parameter | Value\nInternal pressure (psia) | 2100\nExternal pressure (psia) | 1000\nTemperature (°F) | 650\nPressurizer heater sheath temperature (°F) | 800\nSpray nozzles | 2\nNominal spray nozzle diameter (in.) | 1"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-7",
+          "page": 138,
+          "caption": "Pressurizer Heater Parameters",
+          "structured_text": "Parameter | Value\nVoltage (Vac) | 480\nFrequency (Hz) | 60\nHeater bundles per pressurizer | 2\nHeater groups per bundle (kW) | 3\nNominal total capacity per heater bundle (kW) | 400"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.4-8",
+          "page": 143,
+          "caption": "Failure Modes and Effects Analysis - Decay Heat Removal System (Continued)",
+          "structured_text": "SGS Thermal Relief Valve\nSG-RV-0102\nSG-RV-0202 | 1) Provide pressure\nboundary | A) Spurious opening\nof relief valve with\nfailure to close\n(passive failure) | Mechanical | A spurious opening of the thermal relief valve with a\nfailure to close will cause the affected DHRS train to\nlose inventory and become inoperable. Safe shutdown\nwithout emergency core cooling system (ECCS)\nactuation is achieved with the remaining DHRS train. | • Steam pressure\n• DHRS level\ninstrument switches\n• Containment leakage\nmonitoring\ninstrumentation\n(containment\nevacuation system)\n2) Provide\noverpressure\nprotection when\nSGS is water solid. | A) Failure of valve to\nlift at setpoint | Mechanical | A failure of the valve to lift during a water solid over\npressure scenario could cause deformation or rupture\nof pressure boundary components. A rupture would\ncause the affected DHRS train to be inoperable. The\nmodule is in safe shutdown prior to this event and\ncooling will resume with the unaffected DHRS train or\nthrough flooding the CNV with the containment\nflooding and drain system. | • Steam pressure\n• DHRS level\ninstrument switches\nDHRS Loop Pressure\nBoundary\n(Includes piping inside CNV,\nsteam generator tubes)(1) | 1) Provide a pressure\nboundary for the\nSGS and DHRS | A) Pipe rupture and\nloss of DHRS loop\ninventory (passive\nfailure) | Mechanical | A pipe rupture of any pressure boundary piping which\nis part of the DHRS loop (SGS and DHRS piping within\ncontainment isolation valves) will cause the affected\nDHRS train to lose inventory and become inoperable.\nSafe shutdown without ECCS actuation is achieved\nwith the remaining DHRS train. | • Steam pressure\n• DHRS level\ninstrument switches\n• Containment leakage\nmonitoring\ninstrumentation\n(containment\nevacuation system)"
+        }
+      ]
     },
     "nuscale_ch05_0003": {
       "node_id": "nuscale_ch05_0003",
       "title": "Design Basis",
-      "summary": "The Design Basis section describes the NuScale reactor coolant system (RCS), which uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator. The RCS is designed to ensure safe and efficient cooling, maintain water chemistry, and provide uniform boron concentration under all operating conditions, supporting both performance and safety requirements for each NuScale Power Module.",
+      "content": "NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-1 Revision 5CHAPTER 5 REACTOR COOLANT SY STEM AND CONNECTING SYSTEMS\n5.1 Summary Description\nThe reactor coolant system (RCS) provides for the circulation of the primary coolant. The \nNuScale Power, LLC (NuScale) design relies on na tural circulation flow for the reactor coolant \nand does not include reactor coolant pumps or an external piping system. The RCS is a subsystem of the NuScale Power Module (NPM). The RCS includes the reactor pressure vessel \n(RPV) and integral pressurizer (PZR), the reactor ve ssel internals (RVI), the reactor safety valves \n(RSVs), RCS piping inside the containment vessel (CNV) (RCS injection, RC S discharge, PZR spray \nsupply, and RPV high-point degasification lines), the PZR control cabinet and the RCS \ninstruments and cables.\nChapter 1 provides an overview of the NuScale Po wer Plant design that includes up to twelve \nindividual NPMs. The description in this chapter applies to ea ch of the NPMs individually, \nunless otherwise stated.\n5.1.1 Design Basis\nThe performance and safety design bases of the RCS and its major components are \ninterrelated. These design ba ses are listed as follows:\n• The RCS promotes natural circulation to tr ansfer approximately 160 MW thermal power \nfrom the reactor core to the steam generato r system (SGS) during power operation and \nthe heat produced when the reactor is subcri tical, including the initial phase of plant \ncooldown. \n• The RCS provides coolant to the reactor core such that specified acceptable fuel design \nlimits are not violated during normal oper ation including the ef fects of anticipated \noperational occurrences. \n• The RCS water chemistry is maintained so that solid deposits on the reactor core and \nthe steam generators (SGs) are minimized. \n• The RCS maintains a uniform concentration of soluble boron concentration during \nnormal, transient, and accident conditions, and adequate chemical and thermal mixing to maintain reactivity.\n• Steady-state temperatures are maintained th roughout the reactor coolant to maintain \nthe temperature of the RVI and RPV below de sign limits during normal and accident \nconditions. \n• The PZR has sufficient capacity  to control reactor coolant pressure within the permitted \noperating range for normal operating transients without actuating the RSVs.\n• The RCS removes decay heat from the reac tor core during shutdown and refueling \noperations by a combination of heat tr ansfer to the DHRS through the SGS and \nconvection from the RPV to the reactor pool.\n• The RCS provides the water used as the co re neutron moderator and reflector blocks \nthat reflect a portion of the neutrons that esca pe the fuel region, improving neutron \neconomy in the core. NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-2 Revision 5• The RCS provides a degasification line to remove noncondensible gases from the PZR \nvolume at the top of the RPV during normal  operation. Reactor vent valves (RVVs), \nwhich are opened to discharge the PZR steam space directly to  the CNV as part of ECCS \noperation, also allow noncondensible ga ses to be removed from the PZR during \nemergency core cooling operation.\n• The pressure-retaining portions of the RCS assist in maintaining the integrity of the \nreactor coolant pressure boun dary (RCPB) that provides a barrier to the release of \nradionuclides. \n5.1.2 System Description\nThe RCS is a subsystem of the NPM and is locate d inside the CNV. The RCS includes the RPV, \nthe integral PZR, the RVI, the RSVs, reactor coolant piping inside the CNV and the RCS instruments and controls.\nThe RCS interfacing systems include the chem ical and volume control system via the \ncontainment system, the emergency core coolin g system (ECCS) valves consisting of RVVs \nand reactor recirculation valves (RRVs), the CNV, control rod drive system, SGS, and the \nprimary sampling system (through the chemical and volume control system). \nA diagram of an individual NPM is provided in Figure 5.1-1 showing the RPV within the CNV \nand denoting major RCS components. A simplifi ed RCS diagram is provided in Figure 5.1-2.\nDuring normal operation, the RCS transports heat from the reactor core to the SGs by \nnatural circulation. The motive force for the reactor coolant flow is natural convection, \ndriven by differences in coolant density betw een the hot coolant leaving the reactor core \nand the colder coolant leaving the SGs, an d by the elevation difference between the \nreactor core (heat source) and th e SGs (heat sink). The reactor coolant is heated in the core, \ntravels upward through the lower and upper ri ser assemblies, and at the top of the upper \nriser assembly is turned downward by the PZR baffle plate. The heat ed coolant then flows \ninto the annular space between the upper riser assembly and the vertical shell of the RPV. \nThis annular space contains the SG helical tube bundles. As the reactor coolant flows \ndownward across the outside of the SG tubes, it transfers heat to the secondary coolant \ninside the tubes. Heat transfer to the SG  tubes lowers the temperature of the reactor \ncoolant, increasing its density and causing the cooler, dense coolant to sink into the annular downcomer space between the lower ri ser assembly and core  barrel and continue \ninto the lower plenum near the bottom of th e RPV where the reactor coolant returns to the \nreactor core. \nA schematic flow diagram of the RCS is provided in Figure 5.1-3, denoting major \ncomponents, and major RCS loop flow stages  during normal steady-state, full-power \noperating conditions. In addition, Ta ble 5.1-1 identifies the RCS volumes. \nThe SGS (in conjunction with the main steam and main feedwater systems) are used to \nremove decay heat from the RCS during the initial phase of module cooldown. When decay \nheat is sufficiently low and the RCS temperature  is low enough to support filling the CNV, \nthe CNV is filled to the PZR baffle plate by the containment flooding system. RCS cooldown \ncontinues passively as decay heat is tr ansferred through the RPV to the flooded \ncontainment and through the CNV to the reactor pool. The DHRS actuation valves are ",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain proper coolant flow, water chemistry, and boron concentration to protect fuel integrity and support safe operation under normal and transient conditions.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "8",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 5.1-1",
+          "page": 16,
+          "caption": "NuScale Power Module Major Components"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.1-2",
+          "page": 17,
+          "caption": "Reactor Coolant System Simplified Diagram"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.1-3",
+          "page": 18,
+          "caption": "Reactor Coolant System Schematic Flow Diagram"
+        }
+      ]
     },
-    "nuscale_ch01_0053": {
-      "node_id": "nuscale_ch01_0053",
-      "title": "Identification of Agents and Contractors",
-      "summary": "This section outlines the division of responsibility for the NuScale Power Plant design, stating that NuScale Power, LLC holds overall design responsibility, while Fluor Corporation provided the balance of plant design. It also notes that applicants referencing the NuScale design must identify their primary agents or contractors for plant construction and operation.",
+    "nuscale_ch01_0052": {
+      "node_id": "nuscale_ch01_0052",
+      "title": "Comparison with Other Facilities",
+      "content": "NuScale Final Safety Analysis Report Comparison with Other Facilities\nTier 2 1.3-1 Revision 51.3 Comparison with Other Facilities\nThe major NuScale Power Plant design feature s and nominal parameters are provided in \nTable 1.3-1 and discussed further in the associated final safety anal ysis report (FSAR) section(s). \nThese NuScale features and values  are shown in comparison with a typical pressurized water \nreactor (PWR) plant design. All values are no minal and provided for comparison only. The \ntypical PWR values presented are representative of the Standardized Nu clear Unit Power Plant \nSystem design.\nTable 1.3-2 provides a comparison of safety sy stems and components re quired to protect the \nreactor core for the NuScale Power Plant versus a typical PWR plant.NuScale Final Safety Analysis Report Comparison with Other Facilities\nTier 2 1.3-2 Revision 5Table 1.3-1: NuScale Plant Comp arison with Other Facilities\nNuScale Plant Parameter or Feature (per NPM) Typical PWR NuScale\nNominal gross electrical output (MWe) 1,186 50Core thermal output (MWt) 3,411 160Number of fuel assemblies 193 37Fuel assembly lattice -17x17 17x17Effective fuel length (ft) 12 6.56Fuel rods per fuel assembly 264 264Average linear heat rate (kW/ft) 5.4 2.5Number of Control Rod Assemblies 53 16Design life (years) 40 60Reactor Coolant SystemNumber of heat transfer loops 4 No External LoopsReactor Coolant Pipes (in.) 27.5-31 NoneOperating pressure (psia) 2,250 1,850Hot leg temperature (°F) 618 590Reactor VesselVessel inner diameter (in.) 173 107.5Thermal shielding- and reflector design Neutro n pad design Stacked stainless steel reflector \nblocks\nIn-core instrumentation Bot tom mounted Top mounted\nSteam GeneratorNumber 4 2Type Vertical U-tube Helical coilHeat transfer area (ft2) 55,000 Approximately 18,000Number of tubes 5,626 1,380Reactor Coolant Pumps 4 0PressurizerInternal volume (ft3) 1,800 568Surge nozzle nominal diameter (in.) 14 NoneResidual Heat Removal Pumps 2 NoneContainmentType PCCV Steel Pressure VesselInner diameter (ft-in.) 140-0 14-2Height (ft-in.) 205-0 (inner) 75-8.5 (outer)Containment Spray Pumps 2 NoneHigh Pressure Safety Injection Pumps 2 NoneCharging / Safety Injection Pumps 2 NoneLow Pressure Safety Injection Pumps 2 NoneAccumulators 4 NoneI&C System type Analog DigitalEmergency Diesel Generators 2 NoneTurbine Type 1800 rpm, Tandem Compound Six \nFlow3,600 rpm, 10 stage with Superheat\nEmergency Feedwater Pumps 3 None\nCharging Pumps (CVCS pumps) 2 2Used for Safety Injection Yes NoVolume Control Tank 1 0Reactor Component Cooling Wa ter Pumps 4 6 total for 12 NPMsNuScale Final Safety Analysis Report Comparison with Other Facilities\nTier 2 1.3-3 Revision 5Table 1.3-2: Safety Systems and Components  Required to Protec t the Reactor Core - \nNuScale Comparison with Other Facilities\nSafety System or Comp onent Typical PWR NuScale\nReactor Pressure Vessel X XContainment Vessel X X\nReactor Coolant System X X\nDecay Heat Removal System X XEmergency Core Cooling System X XControl Rod Drive System X XContainment Isolation System X XUltimate Heat Sink X XResidual Heat Removal System XSafety Injection System XRefueling Water Storage Tank XCondensate Storage Tank XAuxiliary Feedwater System XEmergency Service Water System XHydrogen Recombiner or Ignition System XContainment Spray System XReactor Coolant Pumps XSafety-Related Electrical Distribution System XAlternative Off-Site Power XEmergency Diesel Generators XSafety-Related Class 1E Battery System XAnticipated Transient Without Scram (ATWS) System X\n\n--- Referenced Tables (structured) ---\n[Table 1.3-1: NuScale Plant Comparison with Other Facilities]\nNominal gross electrical output (MWe) | 1,186 | 50\nCore thermal output (MWt) | 3,411 | 160\nNumber of fuel assemblies | 193 | 37\nFuel assembly lattice | -17x17 | 17x17\nEffective fuel length (ft) | 12 | 6.56\nFuel rods per fuel assembly | 264 | 264\nAverage linear heat rate (kW/ft) | 5.4 | 2.5\nNumber of Control Rod Assemblies | 53 | 16\nDesign life (years) | 40 | 60\nReactor Coolant System\nNumber of heat transfer loops | 4 | No External Loops\nReactor Coolant Pipes (in.) | 27.5-31 | None\nOperating pressure (psia) | 2,250 | 1,850\nHot leg temperature (°F) | 618 | 590\nReactor Vessel\nVessel inner diameter (in.) | 173 | 107.5\nThermal shielding- and reflector design | Neutron pad design | Stacked stainless steel reflector\nblocks\nIn-core instrumentation | Bottom mounted | Top mounted\nSteam Generator\nNumber | 4 | 2\nType | Vertical U-tube | Helical coil\nHeat transfer area (ft2) | 55,000 | Approximately 18,000\nNumber of tubes | 5,626 | 1,380\nReactor Coolant Pumps | 4 | 0\nPressurizer\nInternal volume (ft3) | 1,800 | 568\nSurge nozzle nominal diameter (in.) | 14 | None\nResidual Heat Removal Pumps | 2 | None\nContainment\nType | PCCV | Steel Pressure Vessel\nInner diameter (ft-in.) | 140-0 | 14-2\nHeight (ft-in.) | 205-0 (inner) | 75-8.5 (outer)\nContainment Spray Pumps | 2 | None\nHigh Pressure Safety Injection Pumps | 2 | None\nCharging / Safety Injection Pumps | 2 | None\nLow Pressure Safety Injection Pumps | 2 | None\nAccumulators | 4 | None\nI&C System type | Analog | Digital\nEmergency Diesel Generators | 2 | None\nTurbine Type | 1800 rpm, Tandem Compound Six\nFlow | 3,600 rpm, 10 stage with Superheat\nEmergency Feedwater Pumps | 3 | None\nCharging Pumps (CVCS pumps) | 2 | 2\nUsed for Safety Injection | Yes | No\nVolume Control Tank | 1 | 0\nReactor Component Cooling Water Pumps | 4 | 6 total for 12 NPMs\n[Table 1.3-2: Safety Systems and Components Required to Protect the Reactor Core -]\nReactor Pressure Vessel | X | X\nContainment Vessel | X | X\nReactor Coolant System | X | X\nDecay Heat Removal System | X | X\nEmergency Core Cooling System | X | X\nControl Rod Drive System | X | X\nContainment Isolation System | X | X\nUltimate Heat Sink | X | X\nResidual Heat Removal System | X\nSafety Injection System | X\nRefueling Water Storage Tank | X\nCondensate Storage Tank | X\nAuxiliary Feedwater System | X\nEmergency Service Water System | X\nHydrogen Recombiner or Ignition System | X\nContainment Spray System | X\nReactor Coolant Pumps | X\nSafety-Related Electrical Distribution System | X\nAlternative Off-Site Power | X\nEmergency Diesel Generators | X\nSafety-Related Class 1E Battery System | X\nAnticipated Transient Without Scram (ATWS) System | X",
+      "summary": "This section compares the major design features and parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It highlights differences in size, output, system components, and safety systems, showing that NuScale uses smaller, simpler, and more integrated designs compared to conventional PWRs. The comparison is summarized in tables for easy reference.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "82",
-      "hop": 2
+      "page_range": "79",
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.3-1",
+          "page": 80,
+          "caption": "NuScale Plant Comparison with Other Facilities",
+          "structured_text": "Nominal gross electrical output (MWe) | 1,186 | 50\nCore thermal output (MWt) | 3,411 | 160\nNumber of fuel assemblies | 193 | 37\nFuel assembly lattice | -17x17 | 17x17\nEffective fuel length (ft) | 12 | 6.56\nFuel rods per fuel assembly | 264 | 264\nAverage linear heat rate (kW/ft) | 5.4 | 2.5\nNumber of Control Rod Assemblies | 53 | 16\nDesign life (years) | 40 | 60\nReactor Coolant System\nNumber of heat transfer loops | 4 | No External Loops\nReactor Coolant Pipes (in.) | 27.5-31 | None\nOperating pressure (psia) | 2,250 | 1,850\nHot leg temperature (°F) | 618 | 590\nReactor Vessel\nVessel inner diameter (in.) | 173 | 107.5\nThermal shielding- and reflector design | Neutron pad design | Stacked stainless steel reflector\nblocks\nIn-core instrumentation | Bottom mounted | Top mounted\nSteam Generator\nNumber | 4 | 2\nType | Vertical U-tube | Helical coil\nHeat transfer area (ft2) | 55,000 | Approximately 18,000\nNumber of tubes | 5,626 | 1,380\nReactor Coolant Pumps | 4 | 0\nPressurizer\nInternal volume (ft3) | 1,800 | 568\nSurge nozzle nominal diameter (in.) | 14 | None\nResidual Heat Removal Pumps | 2 | None\nContainment\nType | PCCV | Steel Pressure Vessel\nInner diameter (ft-in.) | 140-0 | 14-2\nHeight (ft-in.) | 205-0 (inner) | 75-8.5 (outer)\nContainment Spray Pumps | 2 | None\nHigh Pressure Safety Injection Pumps | 2 | None\nCharging / Safety Injection Pumps | 2 | None\nLow Pressure Safety Injection Pumps | 2 | None\nAccumulators | 4 | None\nI&C System type | Analog | Digital\nEmergency Diesel Generators | 2 | None\nTurbine Type | 1800 rpm, Tandem Compound Six\nFlow | 3,600 rpm, 10 stage with Superheat\nEmergency Feedwater Pumps | 3 | None\nCharging Pumps (CVCS pumps) | 2 | 2\nUsed for Safety Injection | Yes | No\nVolume Control Tank | 1 | 0\nReactor Component Cooling Water Pumps | 4 | 6 total for 12 NPMs"
+        },
+        {
+          "type": "table",
+          "id": "Table 1.3-2",
+          "page": 81,
+          "caption": "Safety Systems and Components Required to Protect the Reactor Core -",
+          "structured_text": "Reactor Pressure Vessel | X | X\nContainment Vessel | X | X\nReactor Coolant System | X | X\nDecay Heat Removal System | X | X\nEmergency Core Cooling System | X | X\nControl Rod Drive System | X | X\nContainment Isolation System | X | X\nUltimate Heat Sink | X | X\nResidual Heat Removal System | X\nSafety Injection System | X\nRefueling Water Storage Tank | X\nCondensate Storage Tank | X\nAuxiliary Feedwater System | X\nEmergency Service Water System | X\nHydrogen Recombiner or Ignition System | X\nContainment Spray System | X\nReactor Coolant Pumps | X\nSafety-Related Electrical Distribution System | X\nAlternative Off-Site Power | X\nEmergency Diesel Generators | X\nSafety-Related Class 1E Battery System | X\nAnticipated Transient Without Scram (ATWS) System | X"
+        }
+      ]
     },
-    "nuscale_ch01_0767": {
-      "node_id": "nuscale_ch01_0767",
-      "title": "DSRS 15.5.1-15.5.2, Rev 0: Chemical and Volume Control System Malfunction That Increases Reactor Coolant InventoryII.4.B Input Parameters and Initial Conditions - Scram Characteristics",
-      "summary": "This section confirms that the NuScale design meets the regulatory criteria for DSRS 15.5.1-15.5.2 regarding chemical and volume control system malfunctions that increase reactor coolant inventory, with no exceptions noted for scram characteristics, initial power level, or core burnup. It also clarifies that certain SRP guidance related to pressurizer relief valves is not applicable to NuScale, as the design uses spring-loaded safety valves instead of power-operated relief valves, thus avoiding vulnerabilities to inadvertent operation.",
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "content": "NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-2 Revision 5• The RCS provides a degasification line to remove noncondensible gases from the PZR \nvolume at the top of the RPV during normal  operation. Reactor vent valves (RVVs), \nwhich are opened to discharge the PZR steam space directly to  the CNV as part of ECCS \noperation, also allow noncondensible ga ses to be removed from the PZR during \nemergency core cooling operation.\n• The pressure-retaining portions of the RCS assist in maintaining the integrity of the \nreactor coolant pressure boun dary (RCPB) that provides a barrier to the release of \nradionuclides. \n5.1.2 System Description\nThe RCS is a subsystem of the NPM and is locate d inside the CNV. The RCS includes the RPV, \nthe integral PZR, the RVI, the RSVs, reactor coolant piping inside the CNV and the RCS instruments and controls.\nThe RCS interfacing systems include the chem ical and volume control system via the \ncontainment system, the emergency core coolin g system (ECCS) valves consisting of RVVs \nand reactor recirculation valves (RRVs), the CNV, control rod drive system, SGS, and the \nprimary sampling system (through the chemical and volume control system). \nA diagram of an individual NPM is provided in Figure 5.1-1 showing the RPV within the CNV \nand denoting major RCS components. A simplifi ed RCS diagram is provided in Figure 5.1-2.\nDuring normal operation, the RCS transports heat from the reactor core to the SGs by \nnatural circulation. The motive force for the reactor coolant flow is natural convection, \ndriven by differences in coolant density betw een the hot coolant leaving the reactor core \nand the colder coolant leaving the SGs, an d by the elevation difference between the \nreactor core (heat source) and th e SGs (heat sink). The reactor coolant is heated in the core, \ntravels upward through the lower and upper ri ser assemblies, and at the top of the upper \nriser assembly is turned downward by the PZR baffle plate. The heat ed coolant then flows \ninto the annular space between the upper riser assembly and the vertical shell of the RPV. \nThis annular space contains the SG helical tube bundles. As the reactor coolant flows \ndownward across the outside of the SG tubes, it transfers heat to the secondary coolant \ninside the tubes. Heat transfer to the SG  tubes lowers the temperature of the reactor \ncoolant, increasing its density and causing the cooler, dense coolant to sink into the annular downcomer space between the lower ri ser assembly and core  barrel and continue \ninto the lower plenum near the bottom of th e RPV where the reactor coolant returns to the \nreactor core. \nA schematic flow diagram of the RCS is provided in Figure 5.1-3, denoting major \ncomponents, and major RCS loop flow stages  during normal steady-state, full-power \noperating conditions. In addition, Ta ble 5.1-1 identifies the RCS volumes. \nThe SGS (in conjunction with the main steam and main feedwater systems) are used to \nremove decay heat from the RCS during the initial phase of module cooldown. When decay \nheat is sufficiently low and the RCS temperature  is low enough to support filling the CNV, \nthe CNV is filled to the PZR baffle plate by the containment flooding system. RCS cooldown \ncontinues passively as decay heat is tr ansferred through the RPV to the flooded \ncontainment and through the CNV to the reactor pool. The DHRS actuation valves are NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-3 Revision 5opened to allow feedwater to recirculate through the DHRS heat exchangers and \nsecondary water chemistry conditions for we t layup are established. The SGs are then \nisolated from the main steam and feedwater systems. PZR wate r level is reduced using the \nchemical volume control system to match th e water level in the CNV in preparation for \nopening the RVVs and RRVs. Nitrogen is vent ed from the PZR through the RPV high point \ndegasification line until PZR pressure matc hes containment pressu re. When the PZR and \ncontainment pressure and water level are matched, the RVVs and RRVs are opened.\n5.1.3 System Components\n5.1.3.1 Reactor Pressure Vessel\nThe RPV is a metal vessel that forms part of the RCPB and is  a barrier to the release of \nfission products. Most of the reactor coolant is contained in the RPV. The RPV is \nsupported laterally and vertically by th e CNV. The RPV contains and supports the \nreactor core, RVI, steam generators, and PZR.  The RPV provides pe netrations, support, \nand alignment for the control rod drive syst em. The RPV also provides penetrations and \nattachment locations for the RCS instruments, the ECCS valves (RVVs and RRVs), and \nRCS piping (RCS injection, RCS discharg e, PZR spray supply, and RPV high point \ndegasification lines). In addition, the RPV also provides steam and feedwater plenums \nfor the steam generators and RSV penetrations.\nThe RPV and appurtenances are fu rther described in Section 5.3. \n5.1.3.2 Reactor Cool ant System Piping\nThe RCS piping external to the RPV consists of the following lines: \n• two PZR spray line branches from a common spray header \n• RPV high point degasification line \n• RCS injection line \n• RCS discharge line \nThe RCS injection line has branch lines that connect to each of the ECCS valve reset \nvalves.\nThe RCS piping is further described in Section 5.4.\n5.1.3.3 Pressurizer \nThe PZR, which is integral to  the RPV, occupies the volume inside the RPV above the \nPZR baffle plate. The RCS co mponents in the PZR volume  are the PZR spray nozzles \n(which are part of the RVI) and the PZR heat er assemblies. The PZR provides a point in \nthe RCS where liquid and vapor are main tained in equilibrium under saturated \nconditions at a temperature greater than THOT for pressure contro l of the RCS during \nsteady-state operations and transients. Maintaining the saturated conditions higher \nthan THOT ensures the reactor cool ant remains subcooled duri ng normal operations. \nThe PZR also serves as a surge volume.",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes key components such as the reactor pressure vessel, pressurizer, and associated piping and controls. The RCS removes heat from the reactor core to the steam generators using natural circulation, and it incorporates systems for degasification and emergency core cooling to maintain safety and integrity during both normal and emergency operations.",
       "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "305",
-      "hop": 2
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 5.1-1",
+          "page": 16,
+          "caption": "NuScale Power Module Major Components"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.1-2",
+          "page": 17,
+          "caption": "Reactor Coolant System Simplified Diagram"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.1-3",
+          "page": 18,
+          "caption": "Reactor Coolant System Schematic Flow Diagram"
+        }
+      ]
     },
     "nuscale_ch01_0362": {
       "node_id": "nuscale_ch01_0362",
       "title": "DSRS 9.3.4, Rev 0: Chemical and Volume Control System (PWR) (Including Boron Recovery System)II.6 Detection of Reactor Coolant Leakage Outside Containment",
-      "summary": "This section confirms that the NuScale Chemical and Volume Control System (CVCS), including the Boron Recovery System, meets the regulatory criteria for detection of reactor coolant leakage outside containment. The design conforms to the relevant requirements, with no exceptions noted for leakage detection, and clarifies partial applicability for certain criteria due to differences in the NuScale design.",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-123 Revision 5\nDSRS 9.3.4, Rev 0: Chemical \nand Volume Control System (PWR) (Including Boron \nRecovery System)II.4\nComponents of the RCPB, quality \nclassification and seismic design classificationConforms The CVCS is located outside the RCPB. 9.3.4\nDSRS 9.3.4, Rev 0: Chemical \nand Volume Control System (PWR) (Including Boron \nRecovery System)II.5 Chemical and Volume Control System \nDesign and Arrangement Conforms None. 9.3.4\nDSRS 9.3.4, Rev 0: Chemical \nand Volume Control System (PWR) (Including Boron \nRecovery System)II.6 Detection of Reactor Coolant Leakage \nOutside ContainmentConforms None. 9.3.4\nDSRS 9.3.4, Rev 0: Chemical \nand Volume Control System (PWR) (Including Boron \nRecovery System)II.7\nPrevention of CVCS Holdup Tank Wall \nBuckling/Failure; CVCS Venting and DrainingPartially Conforms\nA portion of this acceptance criterion is \napplicable but the specific language refers to CVCS designs that are not relevant to the \nNuScale design. The NuScale CVCS design \ndoes not have holdup tanks that are subject to the vacuum conditions  in subtier Bulletin \n80-05. The last sentence of this acceptance \ncriterion is applicable to the NuScale CVCS design, which will include appropriate \nventing and draining capability.9.3.4\nDSRS 9.3.4, Rev 0: Chemical \nand Volume Control System (PWR) (Including Boron \nRecovery System)II.8\nITAAC Conforms None. 9.3.4\n14.3\nSRP 9.3.5, Rev 3: Standby Liquid Control System (BWR)All Various Not Applicable\nThis SRP section and its acceptance criteria \nare applicable only to BWRs.Not Applicable\nDSRS 9.3.6, Rev 0: \nContainment Evacuation and \nFlooding SystemsII.1 GDC 2 Conforms None. 9.3.6\nDSRS 9.3.6, Rev 0: \nContainment Evacuation and Flooding SystemsII.2\nGDC 60 Conforms None. 9.3.6Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section confirms that the NuScale Chemical and Volume Control System (CVCS), including the boron recovery system, meets the regulatory criteria for detection of reactor coolant leakage outside containment. The design conforms to the relevant requirements, with no exceptions noted for leakage detection, and only partial exceptions for criteria not applicable to the NuScale design.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "251",
-      "hop": 2
+      "hop": 2,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
+    },
+    "nuscale_ch01_0857": {
+      "node_id": "nuscale_ch01_0857",
+      "title": "SRP 19.1, Rev 3: Determining The Technical Adequacy of Probabilistic Risk Assessment For Risk-Informed License Amendment Requests After Initial Fuel LoadAll Various",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-194 Revision 5\nSRP 18.0, Rev 2: Human \nFactors EngineeringII.C Review of the HFE Aspects of \nModifications Affecting Risk Important Human ActionsNot Applicable\nThis acceptance criter ion is applicable to \nexisting reactor licensees that request NRC approval of plant changes that affect \nimportant human actions.Not Applicable\nSRP Appendix 18-A, Rev 0: \nCrediting Manual Operator Actions in Diversity and \nDefense-in-Depth (D3) \nAnalysesC.1.B Review Criteria for Phase 1 (Analysis) Conf orms This appendix supersedes DI&C ISG-05, \nSection 3, \"Crediting Manual Operator Actions in Diversity and Defense-in-Depth \n(D3) Analyses”.7.1.5\n18.418.6\nSRP Appendix 18-A, Rev 0: Crediting Manual Operator \nActions in Diversity and \nDefense-in-Depth (D3) AnalysesC.2.B Review Criteria for Phase 2 \n(Preliminary Validation)Conforms This appendix supersedes DI&C ISG-05, \nSection 3, \"Crediting Manual Operator \nActions in Diversity and Defense-in-Depth \n(D3) Analyses”.7.1.5\n18.4\n18.6\nSRP Appendix 18-A, Rev 0: Crediting Manual Operator \nActions in Diversity and Defense-in-Depth (D3) \nAnalysesC.3.B Review Criteria for Phase 3 \n(Integrated System Validation)Conforms This appendix supersedes DI&C ISG-05, \nSection 3, \"Crediting Manual Operator \nActions in Diversity and Defense-in-Depth (D3) Analyses”.7.1.5\n18.4\n18.6\nSRP Appendix 18-A, Rev 0: Crediting Manual Operator Actions in Diversity and \nDefense-in-Depth (D3) \nAnalysesC.4.B Review Criteria for Phase 3 \n(Maintaining Long-Term Integrity of Credited Manual Actions in the D3 \nAnalysis)Conforms This appendix supersedes DI&C ISG-05, \nSection 3, \"Crediting Manual Operator Actions in Diversity and Defense-in-Depth \n(D3) Analyses”.7.1.5\n18.418.6\nSRP 19.0, Rev 3: Probabilistic Risk Assessment and Severe \nAccident Evaluation for New \nReactorsAll Various Partially Conforms\nEvaluation of site-specific hazards and PRA \nupdate are COL applicant responsibility.19.0\n19.1\n19.2\nSRP 19.1, Rev 3: Determining \nThe Technical Adequacy of \nProbabilistic Risk Assessment \nFor Risk-Informed License Amendment Requests After \nInitial Fuel LoadAll Various Not Applicable\nApplicable to PRAs used by a licensee to \nsupport license amendments for an \noperating reactor.Not ApplicableTable 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments SectionNuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-195 Revision 5\nSRP 19.2, Initial Issuance: \nReview of Risk Information Used to Support Permanent \nPlantSpecific Changes to the \nLicensing Basis: General GuidanceAll Various Not Applicable Applicable to licensees, plant-specific \nproposals for changes to the licensing basis.Not Applicable\nSRP 19.3, Rev 0: Regulatory \nTreatment of Non-Safety \nSystems for Passive Advanced Light Water ReactorsAll Various Conforms None. 19.3\nSRP 19.4, Rev 0: Strategies \nand Guidance to Address \nLoss-of-Large Areas of the Plant Due to Explosions and \nFiresAll Various Partially Conforms\nApplicable with the exception of \nacceptance criterion II.17 Boiling Water \nReactor: Containment Venting and Vessel Flooding (Item B.2.e) which is a BWR specific \ncriterion and acceptance criterion II.20 SFP \nMitigative Measures. The SFP mitigating measure is not requir ed by NEI 06-12 and \nincludes a statement that this mitigation \nstrategy is not required if the SFP is below grade and cannot be drained. The NuScale \nSFP is below grade and cannot be drained.19.4\n20\nSRP 19.5, Rev 0: Adequacy of \nDesign features and functional capabilities \nidentified and described for \nwithstanding Aircraft ImpactsAll Various Conforms None. 19.5Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section summarizes NuScale’s conformance with various NRC regulatory criteria related to human factors engineering and probabilistic risk assessment (PRA). It notes that NuScale’s Final Safety Analysis Report aligns with requirements for crediting manual operator actions in diversity and defense-in-depth analyses, while partial conformance is indicated for PRA and severe accident evaluation, with some responsibilities deferred to COL applicants for site-specific hazards and PRA updates.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "322",
+      "hop": 2,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
+    },
+    "nuscale_ch01_0767": {
+      "node_id": "nuscale_ch01_0767",
+      "title": "DSRS 15.5.1-15.5.2, Rev 0: Chemical and Volume Control System Malfunction That Increases Reactor Coolant InventoryII.4.B Input Parameters and Initial Conditions - Scram Characteristics",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-177 Revision 5\nDSRS 15.5.1-15.5.2, Rev 0: \nChemical and Volume Control System Malfunction \nThat Increases Reactor \nCoolant InventoryII.4.A Input Parameters and Initial \nConditions - Initial Power LevelConforms None. 15.5.1-15.5.2\nDSRS 15.5.1-15.5.2, Rev 0: \nChemical and Volume \nControl System Malfunction \nThat Increases Reactor Coolant InventoryII.4.B Input Parameters and Initial \nConditions - Scram CharacteristicsConforms None. 15.5.1-15.5.2\nDSRS 15.5.1-15.5.2, Rev 0: \nChemical and Volume \nControl System Malfunction That Increases Reactor \nCoolant InventoryII.4.C Input Parameters and Initial \nConditions - Core BurnupConforms None. 15.5.1-15.5.2\nSRP 15.6.1, Rev 2: Inadvertent \nOpening of a PWR Pressurizer Relief Valve or a BWR Pressure \nRelief ValveAll Various Partially Conforms\nThis guidance is only applicable to LWRs \nthat are designed with power-operated pressurizer relief valves. The NuScale design \ndoes not use power-operated relief valves \n(PORVs), which have the potential to open inadvertently. Rather, the NuScale design \nuses springloaded ASME code safety relief \nvalves, which do not have the PORVs vulnerability to inadvertent operation. \nHowever, a mechanical failure of the reactor \nsafety valve (RSV) is bounded by an inadvertent ECCS valve actuation, analyzed \nin Section 15.6.6.15.6.1\n15.6.6Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section confirms that the NuScale design conforms to DSRS 15.5.1-15.5.2 requirements regarding chemical and volume control system malfunctions that increase reactor coolant inventory, specifically for scram characteristics and related initial conditions. It also notes that certain SRP guidance on pressurizer relief valves is not applicable to NuScale, as the design uses spring-loaded safety valves instead of power-operated relief valves, thus avoiding vulnerabilities associated with inadvertent operation.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "305",
+      "hop": 2,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
     "nuscale_ch05_0012": {
       "node_id": "nuscale_ch05_0012",
       "title": "Reactor Coolant Pressure Boundary Leakage Detection",
-      "summary": "The NuScale reactor coolant system (RCS) does not use traditional components with designed leakage rates, making it impractical to distinguish between identified and unidentified leakage inside containment using installed instrumentation. All leakage into containment is treated as unidentified until the source is determined, with leakage rates monitored through RCS inventory balance and containment evacuation system (CES) flow rates, and operational limits set in technical specifications. The leakage detection systems are designed to be reliable, redundant, and sensitive to support safety analyses.",
+      "content": "NuScale Final Safety Analysis Report Integrity of Reactor Coolant Boundary\nTier 2 5.2-23 Revision 55.2.5 Reactor Coolant Pressure  Boundary Leakage Detection\nThe RCS of each NPM does not employ tradit ional light water reac tor components with \ndesigned leakage rates, such as thro ugh pump seals or valve stem shafts.\nFor each NPM, distinguishing between RCS iden tified and unidentified leakage inside the \ncontainment is not practicable with the installed instrumentation. Leakage into \ncontainment may originate from sources othe r than from the RCPB (e.g., leakage from \nreactor component cooling water). Leakage is  expected from the RCS to containment \nthrough mechanical boundaries such as th e RRVs, RVVs, and RSVs. A partial vacuum \ncondition is established in the CNV during NPM startup and maintained during reactor \noperation. As a result, reactor coolant leakag e, whether from a know n or unknown source, \ninto containment quickly vaporizes and disp erses within the cont ainment atmosphere. \nUpon vaporization, there is no feasible mean s to monitor separately the flow rates of \nidentified and unidentified leakage from insi de the containment. Therefore, containment \nleakage is treated as unidentified until the so urce location is known and leakage quantified \nby other means. The RCS leakage rate into the containment is determined by performing \nan RCS inventory balance and comparing it to  the total flow rate into the CES. The \noperational unidentified leak age limit is provided in pl ant technical specifications.\nThe RCPB leakage detection systems are sufficie ntly reliable, redundant, and sensitive to \nsupport the application of leak-before-brea k analyses addressed in Section 3.6.3. \n5.2.5.1 Leakage Detection and Monitoring\nThe containment evacuation system (CES) maintains the containment below saturation \npressure, which prevents water vapor from leaks or other sources from condensing into \na liquid state and collecting at the bottom of the CNV; as such, monitoring containment \nwater level for RCS leakage is not a reasonab le option. Two primary methods of leakage \nmonitoring are provided to de tect leakage into containmen t; a change in containment \npressure and condensate collected from  the CES. The RCS leakage detection \ninstrumentation requirements are specif ied in plant technical specifications.\nLeakage Monitoring - CES Collected Condensate\nWater vapor and noncondensable gas are remo ved by the CES, and the water vapor is \ncondensed. The condensed wa ter collects into the CES sample vessel where it is \nmonitored using pressure, temperature and radioactiv ity instrumentation. The \nradioactivity instrumentation aids in determ ining the source of containment leakage; \nhigher radioactivity may indicate RCS leakag e. The CES sample vessel also includes \nlevel instrumentation that is used to quantify and trend leak rates into the containment. Additionally, CES gaseous disc harge radioactivity monitoring may detect \na fuel leak or excessive RCS leakage. \nThe CES is a nonsafety-rela ted system, and the CES components are NuScale Power \nModule-specific. The primary function of the CES is to decrease and maintain the \ninternal containment pressure below the sa turation pressure co rresponding to the \nlowest surface temperature inside the CNV. As a result of maintaining the entrained \nwater in a gaseous state, the CES va cuum pumps remove  water vapor and \nnoncondensable gas within the CNV. NuScale Final Safety Analysis Report Integrity of Reactor Coolant Boundary\nTier 2 5.2-24 Revision 5The CES condensate monitoring  system provides indicati on and alarm in the main \ncontrol room to monitor and trend liquid leakage into the containment atmosphere. \nThe CES condensate monitoring system can detect an RCS leak  rate of less than 1 gpm \nwithin one hour and has a minimum detectable leak rate of less than 0.05 gpm. A CES alarm is provided to the main control room (MCR) based on reaching 75 percent of the \nmaximum allowable pressure-temperature fo r a given reactor pool temperature to \nsignal to the operator the approaching op erability limit. Refer to Section 9.3.6 for a \ndescription of the design and functions of the CES and associated sampling system. \nThe condensate measurement method is used to get a true leakage rate. Vapor pulled \nfrom the containment and condensed after leaving the vacuum pump is represented \nby measurement of the collect ed condensate. A correction fa ctor is applied to ensure \nconservatism in the indicated leak rate. The correction factor is ba sed on the calculated \ncarryover rate past the CES condenser. Cond ensation of vapor wi thin the containment \nmust be avoided in order for the CES to properly account for leakage into containment. \nThis method requires containment press ure to be stabilized below containment \nsaturation pressure to ensure that the rate at which the water vapor is being drawn \nfrom containment is equivalent to the rate at which water mass is leaking into \ncontainment.\nLeakage Monitoring - Containment Pressure\nThe CES inlet pressure instrumenation, whic h monitors containmen t pressure, is also \nused as an indicator to detect leakage. The CES inlet pressure instrumentation is \ndesigned to Seismic Category I, and prov ides indication in the MCR. The minimum \npressure accuracy of the CES inlet press ure instrumentation allows for accurate \ntrending of leakage data and can detect an RCS leak rate of less than 1 gpm in one hour \nwith a minimum detectable leak rate of less than 0.05 gpm. Leak rate is calculated by \nusing the time for pressure to  change, gas load in containm ent, and the net mass flow \nrate inside containment. \nFor detecting leaks using the containment pressure instrumentation, the leak must be \nsignificant enough to change the pressure inside of the CNV by the minimum accuracy \nof the instrument. Therefore,  systems operating at a higher temperature and pressure \nare easier to detect. The containment press ure monitoring instrum entation is capable \nof detecting a minimum leak rate from th e RCS of 0.007 gpm and containment pressure \nwill increase 0.1 psi in le ss than one minute with a 1 gpm leak from the RCS.\nOnce the operators observe a pressure change in containment, a leak rate procedure is \ninitiated to determine the source of the containment leak and quantify the total leak \nrate. The change in containment pressure combined with other plant indications can help determine the leak source.\nMaintaining acceptable containment leakage detection performance using the \ncontainment pressure monitoring and CES condensate monitoring systems is \ndependent on maintaining co ntainment pressure below th e vapor pressure for the \nlowest internal containment wall temperature. For conservatism, the minimum containment wall temperature is assumed to  be equal to the reactor pool bulk \ntemperature. Figure 5.2-3 provides a cont ainment pressure saturation curve as a \nfunction of reactor pool bulk temperat ure with an adjustment to account for NuScale Final Safety Analysis Report Integrity of Reactor Coolant Boundary\nTier 2 5.2-25 Revision 5containment pressure instrume ntation uncertainty. When co ntainment pressure is in \nthe Not Acceptable region of Figure 5.2-3, condensation may exist inside the \ncontainment thus impacting the accuracy of  the containment pressure monitoring and \nCES condensate monitoring systems.\nThe piping between the containment and th e CES up to the first seismic restraint \noutside of the CNV and the CE S inlet pressure instrumentation is designed to Seismic \nCategory I and ensures that these componen ts maintain capability to perform their \nsafety function during and after a safe  shutdown earthquake . The remaining CES \nequipment is designed to Seismic Category  II or III. Because the CES equipment is \nrequired to maintain  containment vacuum, loss of this equipment or a containment \nisolation during a seismic event will result  in a loss of cont ainment vacuum and a \nsubsequent NPM trip.\nDuring a seismic event with the CES equipmen t still available to maintain containment \nvacuum, the CES sampling system continues to collect and measure condensate from \nthe containment, including leakage from th e RCPB, until failure of the non-seismic \nportion of the CES, at which point containm ent pressure would increase and isolate the \ncontainment. \nThe CES inlet pressure instrumentation is de signed to Seismic Category I and ensures \nthat these components maintain the capability to perform their safety leak monitoring \nfunction during and after a safe shutdo wn earthquake. Therefore, the CES inlet \npressure instrumentation is also capable of detecting changes in the containment \natmospheric conditions , including leakage from the RCPB , during a seismic event that \ndoes not result in an NPM shutdown.\nRadioactivity Monitoring  & Chemistry Analysis\nThe CES has the ability to monitor both gaseous and liquid effluent removed from \ncontainment for radioactivity using remo te radioactivity instrumentation (See \nFigure 9.3.6-1).\nGaseous discharge of the CES is directed to  the process sampling system sample panel \nfor continuous analysis or collection of grab  samples if needed. A grab sample location \nis also provided on the CES sample vessel , allowing for samples to be collected and \nanalyzed in the laboratory. \nUsing the different radioisotope characteristic s of systems (including the use of tracer \ngases), the source of a leak could be determined. FSAR Se ction 11.5 provides discussion \non the use of radioisotopes to aid in determining the source of leakage.\nRCS Inventory Mass Balance\nThe licensee will regularly perform a reactor coolant system inventory balance to \ndetermine RCS leakage quantity as part of technical specific ation surveillance \nrequirement 3.4.5.1.\nUsing the inventory mass balance will augm ent radiation instrumentation, chemistry \nanalysis, and CES leak detection methods to  determine the source of a leak inside NuScale Final Safety Analysis Report Integrity of Reactor Coolant Boundary\nTier 2 5.2-26 Revision 5containment. To the extent practical, th e use of these diverse methods provides \nidentification of the location of th e source of reactor coolant leakage.\n5.2.5.2 Leak-Before-Break\nLeakage into the containment from feedwa ter or steam piping is not considered \nplausible because there are no  mechanical fittings or va lves within the containment \nassociated with these lines. However, calc ulations were performed as an input to the \nleak-before-break evaluations to determine the adequacy of the leakage monitoring \ninstrumentation. To ensure adequate margin exis ts for leak detection, the \nleak-before-break evaluations considered a through wall flaw leak rate of 10 times \nlarger than the minimum RCS leak detection ca pability with an additional safety factor \nof two between the critical break flaw size and leakage flaw size. For further \ninformation regarding leak-before-break, refer to Section 3.6.3.\n5.2.5.3 Reactor Pressure Vessel Flange Leak-Off Monitoring\nBolted flanges and covers in the RCS are se aled by double concentric O-rings. These \nflanges and covers include a leak-off port located between the two concentric O-ring \ngrooves providing the capability to press urize the space between the O-rings thereby \nconfirming that the O-ring seals are leak tight prior to operation. The maximum \ndiameter of the leak-off connecti on is restricted by an orific e to a size such that a break \nis less than the normal makeup capacity of CVCS. Additional RPV flange leak-off monitoring is not provided.\n5.2.5.4 Reactor Safety Valve and Emerge ncy Core Cooling System Valve Leakage \nMonitoring\nLeakage from the RSVs, ECCS valves, and actuators is exhausted directly to the \ncontainment atmosphere and is included in the total unidentified leakage into the \ncontainment. Specific leakage monitoring of  the RSVs, ECCS valves, and pilot actuators \nis not provided. \n5.2.5.5 Chemical and Volume Control System Intersystem Leakage Monitoring\nLeakage from the CVCS outside the RCPB is cl assified as identified leakage. The design \nprovides closed piping to collect potential CVCS leakage. The CVCS leakage from \npumps, valves or flanges that contain pote ntially radioactive liquid effluents from \nsystem vents, drains and relief valves is collected and drained to the reactor building \nequipment drain sump and pumped to the low conductivity waste collection tanks. \nThe liquid radioactive waste system provides the capability to monitor the level of the \nlow conductivity waste collection tanks. An annunciation system alarms when a pre-set \nhigh leakage level in the tank is reached. \nThe CVCS is connected to the RCPB via normally open CIVs. Intersystem leakage from \nthe CVCS to connecting systems is considered for:\n• boron addition system and demineralized water system. \n• reactor component coolin g water system (RCCWS).NuScale Final Safety Analysis Report Integrity of Reactor Coolant Boundary\nTier 2 5.2-27 Revision 5• process sampling system.\n• module heatup system heat exchangers.\n• letdown to the liquid radioactive waste system. \nIntersystem leakage is identified by:\n• increasing level, temperature, flow or pressure.\n• relief valve actuation.\n• increasing radioactivity.\nRefer to Sections 9.3.3, 9.3.4, and 11.5 for further discussion related to the CVCS \nintersystem leakage detection and monitoring capabilities.\n5.2.5.6 Reactor Compon ent Cooling Water System Leakage Monitoring\nLeakage detection for the RCCWS is provided by monitoring expansion tank level and \nan alarm is provided in the control room. In  the event radioactivity is introduced into \nthe RCCWS piping, radiation elements an d transmitters loca ted downstream of \nnon-regenerative heat exchan ger, the process sampling system cooler lines, and the \nCES condenser for each NPM detect the radi ation and alarm in the control room. For \nadditional information on  RCCW, see Section 9.2.2.\n5.2.5.7 Primary to Secondary Leakage Monitoring\nRadiation monitoring of the gaseous effluent from the condenser air removal system is \nprovided to detect primary to secondary leakage. Radiation monitoring is also \nprovided on the main steam lines condenser air removal system, and turbine sealing \nsteam system. The capability to attain grab  samples of steam and feedwater to analyze \nfor indications of primary to secondary leakag e is also provided. Additional detail of \ngaseous and liquid effluent radioactivity monitoring is provided in Section 11.5.\nCOL Item 5.2-7: A COL applicant that references th e NuScale Power Plant design certification will \nestablish plant-specific procedures that sp ecify operator actions for identifying, \nmonitoring, and trending reactor coolant sy stem leakage in resp onse to prolonged \nlow leakage conditions that exist abov e normal leakage rates and below the \ntechnical specification limits. The objective of the methods of detecting and trending the reactor coolant pressure boundary leak will be to provide the operator \nsufficient time to take actions before th e plant technical specification limits are \nreached.\n5.2.6 References\n5.2-1 NuScale Power, LLC, \"Non-Loss-of-Coo lant Accident Analysis Methodology,\" \nTR-0516-49416-P-A, Revision 3.\n5.2-2 NuScale Power, LLC, \"Loss-of-Coo lant Accident Evaluation Model,\" \nTR-0516-49422-P-A, Revision 2.NuScale Final Safety Analysis Report Integrity of Reactor Coolant Boundary\nTier 2 5.2-28 Revision 55.2-3 Electric Power Research Institute, \"Pressurized Water Reactor Primary Water \nChemistry Guidelines,\" EPRI #3002000505, EPRI, Palo Alto, CA, 2014.\n5.2-4 Not Used.5.2-5 American Society of Mechanical Engineers, \" Quality Assurance Requirements for \nNuclear Facility Applications ,\" ASME NQA-1-2008/1a-2009 Addenda, New York, \nNY.\n5.2-6 Electric Power Research Institute, \"Mat erials Reliability Program: Resistance to \nPrimary Water Stress Corrosion Crac king of Alloys 690, 52, and 152 in \nPressurized Water Reactors (MRP-111) ,\" EPRI #1009801, Palo Alto, CA, 2004.\n5.2-7 Electric Power Research Institute, \"Mat erials Reliability Program: Resistance to \nPrimary Water Stress Corrosion Cracking  of Alloy 690 in Pressurized Water \nReactors (MRP-258),\" EPRI #1019086, Palo Alto, CA, 2009.\n5.2-8 Electric Power Research Institute, \"Steam Generator Management Program: \nPressurized Water Reactor Steam Genera tor Examination Gu idelines,\" EPRI \n#1013706, Rev. 7, Palo Alto, CA, 2007. \n5.2-9 Electric Power Research Institute, “M aterials Reliability Program: Pressurized \nWater Reactor Internals Inspection and Evaluation Guidelines (MRP-227-A),” \nEPRI #1022863, Palo Alto, CA, 2011.",
+      "summary": "The NuScale reactor coolant system (RCS) does not use traditional components with designed leakage rates, making it impractical to distinguish between identified and unidentified leakage inside containment using current instrumentation. All leakage into containment is treated as unidentified until its source is confirmed, with leakage rates determined by RCS inventory balance; the detection systems are reliable and support leak-before-break analyses. The containment evacuation system (CES) maintains sub-saturation pressure to prevent condensation of leaked water vapor.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "41",
-      "hop": 2
+      "hop": 2,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 5.2-3",
+          "page": 65,
+          "caption": "Containment Leakage Detection Acceptability"
+        }
+      ]
     },
-    "nuscale_ch01_0044": {
-      "node_id": "nuscale_ch01_0044",
-      "title": "Chemical and Volume Control System",
-      "summary": "The Chemical and Volume Control System section describes the NuScale reactor’s passive decay heat removal system, which uses two independent trains, each capable of removing 100% of the decay heat via natural circulation and passive condensers in the reactor pool. In case of a steam generator tube failure or loss of AC power, the system isolates the affected components and relies on heat transfer to a large, stainless steel-lined ultimate heat sink pool to ensure continued cooling and safety.",
+    "nuscale_ch01_0017": {
+      "node_id": "nuscale_ch01_0017",
+      "title": "Facility Description",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-3 Revision 56) Site Cooling Water System (SCWS): provides cooling water to plant auxiliary systems. \nDetails associated with location and orientation of the cooling towers as well as \nequipment design and operation are site spec ific. Additional details of the SCWS are \nprovided in Section 1.2.1.6.\n1.2.1.1 Facility Description\nProcess Overview\nThe reactor core is located in a core suppor t assembly, which is seated in the lower RPV \nassembly. A central hot leg riser is connecte d to the top of the co re support assembly. \nThe reactor core transfers heat into the reactor coolant and the heated reactor coolant \nflows upward through the core and lower and upper riser asse mblies. The heated \ncoolant exits the upper riser assembly and is  redirected downwards into the SG region \nbetween the vessel wall and the upper riser assembly. As the reactor coolant transfers \nheat to the SGs, it cools and becomes denser, which drives the natural circulation flow. The coolant returns to the bottom of the ve ssel through the downcomer and back into \nthe reactor core, where the cycle begins again (Figure 1.2-7).\nOn the secondary side, preheated feedwater is pumped into the tube side of the SGs \nwhere it boils. As the steam flows upward in the tubes, it  is continually heated to \nproduce superheated steam before  exiting the top of the SGs.\nThe superheated steam is directed to a dedica ted steam turbine. A generator, driven by \nthe turbine, creates electric power that is de livered to the utility grid through a step-up \ntransformer. A turbine bypass line provides  up to 100 percent of the rated main steam \nflow directly from the associated steam generators to the main condenser in a \ncontrolled manner to remove heat from the re actor following a load reduction or loss \nof electrical load.\nSteam that exits or bypasses the turbine is directed to the condenser. A shared   \ncirculating water loop removes heat and co ndenses the steam for up to 6 condensers. \nThe condensate is pumped through condensate polishing equipment to the inlet of \nthe variable speed feedwater pumps. A sm all amount of steam is extracted from \nturbine stages to preheat the feedwater and increase plant efficiency. Feedwater \nregulating valves control feed flow into the SGs.\n[[Heat from the circulating water loop from  up to 6 condensers is rejected to \natmosphere by a set of evaporative mechan ical-draft cooling towers. Two sets of \ncooling towers are provided for 12 NPMs.]]\n1.2.1.1.1 Principal Design Criteria\nThe design provides a simple, safe reactor and provides the following:\n• reliable, passive safety systems that are simple in design and operation, and are \nnot reliant on electrical power to fulfill their safety functions\n• safety features that assu re a core damage frequenc y significantly lower than \nthe current light water reactor fleet",
+      "summary": "The Facility Description section outlines the NuScale plant’s cooling and power generation processes. It explains that the reactor core heats coolant, which circulates naturally to transfer heat to steam generators, producing superheated steam that drives a turbine and generates electricity. The section also notes that site-specific details exist for cooling tower design and operation, and that a dedicated cooling water system supports auxiliary plant systems.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "41",
-      "hop": 3
+      "page_range": "28",
+      "hop": 3,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 1.2-7",
+          "page": 52,
+          "caption": "Steam Generator and Reactor Flow"
+        }
+      ]
     },
-    "nuscale_ch01_0042": {
-      "node_id": "nuscale_ch01_0042",
-      "title": "Decay Heat Removal System",
-      "summary": "The Decay Heat Removal System section describes the digital control systems in the NuScale plant, emphasizing the independence between safety-related and nonsafety-related systems. Reactor operators use advanced, human-factored displays in the main control room to monitor and control each reactor module, with alarm management and supervisory functions enhancing operational oversight. Additionally, the section mentions the Technical Support Center and the Radioactive Waste Building, which handles the processing and shipment of radioactive waste.",
+    "nuscale_ch01_0024": {
+      "node_id": "nuscale_ch01_0024",
+      "title": "Emergency Core Cooling System",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-8 Revision 51.2.1.2.3 Emergency Core Cooling System\nThe ECCS provides a passive means of deca y heat removal in the event of a LOCA. \nThe ECCS consists of thre e independent reactor vent valves and two independent \nreactor recirculation valves (Figure 1.2-9). A ll five valves are closed during normal \noperation.\nDuring ECCS operation, the reactor vent valves vent steam from the RPV into the \nCNV where the steam condenses and collect s in the bottom of the containment. \nThe reactor recirculation valves allow wate r to reenter the RPV and be circulated \nthrough the core. When reactor coolant temperature is reduced to below the \nboiling point, core cooling continues via conduction dire ctly into the reactor pool. \nThe cooling function of the ECCS is enti rely passive, with heat being conducted \nthrough the CNV wall to the reactor pool. Section 6.3 provides design and \noperational information for the ECCS.\n1.2.1.2.4 Control Room Habitability System\nThe control room habitability system (CRHS) ensures that plant operators are \nadequately protected against the effects of accidental releases of toxic or \nradioactive gases. The CRHS is a passive system that provides clean, compressed, \nbreathable air to the MCR in the event of a radioactive re lease or when AC power is \nnot available. Areas served by the CRHS are maintained at positive pressure relative \nto adjacent areas. Compressed breathable air storage capacity can provide clean air \nto the MCR spaces for at least 72 hours fo llowing an initiating event. Section 6.4 \nprovides design and operatio nal information for the CRHS.\n1.2.1.2.5 Fission Product Removal and Control Systems\nThe only fission product removal and contro l system credited in  the design is the \nCNV in conjunction with th e containment isolation system. Fission product control \nis inherent in the design of the NPM, wherein the CNV atmosphere is depleted \nthrough the passive process of aerosol deposition. Section 6.5 provides \ninformation for this ESF.\n1.2.1.2.6 Inservice Inspection of Class 2 and 3 Components\nThe inservice inspection program includes  the pre-service examinations and the \nperiodic inservice inspections and tests nece ssary to ensure that safety-related and \nrisk-significant systems, structures, and co mponents are capable of fulfilling their \nintended safety functions. Section 6.6 provides detailed information for the \ninservice inspection program.\n1.2.1.3 Instrumentation, Cont rols, and Electrical Systems\nThe I&C architectural design philosophy inco rporates clear interc onnection interfaces, \nseparation between safety and nonsafety systems, and simplification of system functions. The I&C architecture primarily co nsists of the following  systems, which are \ndescribed in Section 7.0:",
+      "summary": "The Emergency Core Cooling System (ECCS) in the NuScale design is a fully passive system that removes decay heat during a loss-of-coolant accident (LOCA) using three independent reactor vent valves and two recirculation valves, all of which are closed during normal operation. During an emergency, the system vents steam into containment for condensation and recirculates water to cool the core, with heat ultimately conducted passively to the reactor pool.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "40",
-      "hop": 3
+      "page_range": "33",
+      "hop": 3,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 1.2-9",
+          "page": 54,
+          "caption": "Emergency Core Cooling System"
+        }
+      ]
     },
-    "nuscale_ch05_0002": {
-      "node_id": "nuscale_ch05_0002",
-      "title": "Summary Description",
-      "summary": "The NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator, ensuring safe and efficient operation. The RCS design supports up to twelve independent modules, maintains proper coolant chemistry and boron concentration, and is engineered to meet safety and performance requirements during normal and off-normal conditions.",
+    "nuscale_ch01_0053": {
+      "node_id": "nuscale_ch01_0053",
+      "title": "Identification of Agents and Contractors",
+      "content": "NuScale Final Safety Analysis Report Identification of Agents and Contractors\nTier 2 1.4-1 Revision 51.4 Identification of Agents and Contractors\n1.4.1 Not Used\n1.4.2 Division of Responsibility\nNuScale Power, LLC (NuScale) has the overall desi gn responsibility for the NuScale certified \ndesign.\n1.4.3 Principal Consultant s and Other Participants\nFluor Corporation (Fluor) provid ed the balance of plant design described in the Design \nCertification Application.\nCOL Item 1.4-1: A COL applicant that references th e NuScale Power Plant design certification will \nidentify the prime agents or  contractors for the construction and operation of the \nnuclear power plant.",
+      "summary": "This section outlines the division of responsibility for the NuScale certified design, stating that NuScale Power, LLC holds overall design responsibility, while Fluor Corporation provided the balance of plant design. It also notes that applicants referencing the NuScale design must identify their primary agents or contractors for plant construction and operation.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "8",
-      "hop": 4
+      "source_doc": "nuscale_ch01",
+      "page_range": "82",
+      "hop": 3,
+      "references": []
     },
-    "nuscale_ch05_0009": {
-      "node_id": "nuscale_ch05_0009",
-      "title": "Overpressure Protection",
-      "summary": "This section outlines NuScale's compliance with overpressure protection requirements, referencing relevant ASME Boiler and Pressure Vessel Code (BPVC) and Operations and Maintenance (OM) Code cases as mandated by 10 CFR 50.55a and associated Regulatory Guides. It details how code cases for design, fabrication, construction, preservice, and inservice inspections and testing are selected and verified to meet NRC-endorsed standards, with a consolidated list provided in Table 5.2-1.",
+    "nuscale_ch01_0368": {
+      "node_id": "nuscale_ch01_0368",
+      "title": "DSRS 9.3.6, Rev 0: Containment Evacuation and Flooding SystemsII.3 TMI 10 CFR 50.34(f)",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-124 Revision 5\nDSRS 9.3.6, Rev 0: \nContainment Evacuation and Flooding SystemsII.3\nTMI 10 CFR 50.34(f) Conforms None. 9.3.6\nSRP 9.4.1, Rev 3: Control \nRoom Area Ventilation \nSystemII.1 Protection Against Natural \nPhenomenaConforms None. 9.4.1\nSRP 9.4.1, Rev 3: Control \nRoom Area Ventilation \nSystemII.2 Environmental and Dynamic Effects Conforms None. 9.4.1\nSRP 9.4.1, Rev 3: Control \nRoom Area Ventilation SystemII.3 Sharing of Structures, Systems, and \nComponentsConforms Operation of the CRVS is part of normal \nplant operations. Up to 12 Modules modules share the same control room.9.4.1\nSRP 9.4.1, Rev 3: Control \nRoom Area Ventilation \nSystemII.4 Control Room Conforms None. 9.4.1\nSRP 9.4.1, Rev 3: Control \nRoom Area Ventilation \nSystemII.5 Control of Releases of Radioactive \nMaterial to the EnvironmentConforms This acceptance criterion is applicable \nexcept for aspects related to ESF \natmosphere cleanup systems. The NuScale \ncontrol room habitability system neither relies on nor uses emergency filtration to \nprotect operators during accident \nconditions. Rather, clean air is provided using compressed air tanks.9.4.1Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for containment evacuation, flooding systems, and control room ventilation, as outlined in DSRS 9.3.6 and SRP 9.4.1. The NuScale design meets all relevant requirements, including protection against natural phenomena and control of radioactive releases, with the control room habitability system using compressed air tanks instead of emergency filtration during accidents. The referenced table confirms compliance with applicable NUREG-0800 standards, noting any exceptions or clarifications.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "21",
-      "hop": 4
+      "source_doc": "nuscale_ch01",
+      "page_range": "252",
+      "hop": 4,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
+    },
+    "nuscale_ch01_0732": {
+      "node_id": "nuscale_ch01_0732",
+      "title": "SRP 15.4.1, Rev 3: Uncontrolled Control Rod Assembly Withdrawal From a Subcritical or Low Power Startup ConditionII.1.A Thermal Margin Limits",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-170 Revision 5\nDSRS 15.2.8, Rev 0: Feedwater \nSystem Pipe Break Inside and Outside Containment (PWR)II.4\nDHRS must be safety grade and \nautomatically initiated when required.Conforms None. 15.2.8\nDSRS 15.2.8, Rev 0: Feedwater \nSystem Pipe Break Inside and \nOutside Containment (PWR)II.5 Assumptions fo r Initial Plant \nConditions and Po stulated FailuresConforms None. 15.2.8\nSRP 15.3.1-15.3.2, Rev 2: Loss \nof Forced Reactor Coolant \nFlow Including Trip of Pump \nMotor and Flow Controller MalfunctionsAll Various Not Applicable\nApplicable only to LWR designs that rely on \nforced reactor coolant fl ow for core cooling. \nThe NuScale design uses passive natural \ncirculation of the primary coolant, eliminating the need for reactor coolant \npumps.Not Applicable\nSRP 15.3.3-15.3.4, Rev 2: \nReactor Coolant Pump Rotor Seizure and Reactor Coolant \nPump Shaft BreakAll Various Not Applicable\nSection 15.3.3 - 15.3.4 ar e applicable only to \nLWR designs that rely on forced reactor coolant flow for core cooling. The NuScale \ndesign uses passive natural circulation of \nthe primary coolant, eliminating the need for reactor coolant pumps.Not Applicable\nSRP 15.4.1, Rev 3: \nUncontrolled Control Rod \nAssembly Withdrawal From a Subcritical or Low Power \nStartup ConditionII.1.A Thermal Margin Limits Conforms\nCritical heat flux (CHF) is more appropriate \nterminology for NuScale phenomena than \ndeparture from nucleate boiling (DNBR).15.4.1\nSRP 15.4.1, Rev 3: \nUncontrolled Control Rod Assembly Withdrawal From a \nSubcritical or Low Power \nStartup ConditionII.1.B Fuel Centerline Temperatures Conforms For slower reactivity insertions, NuScale \nuses a heat generation rate limit to ensure that fuel centerline melting limits are met.15.4.1\nSRP 15.4.1, Rev 3: \nUncontrolled Control Rod \nAssembly Withdrawal From a \nSubcritical or Low Power Startup ConditionII.1.C Uniform Cladding Strain Not Applicable The SRP states that this criterion applies to \nBWRs. NuScale uses the 95/95 MCHFR \napproach to ensure no cladding or fuel \nfailures.Not Applicable\nSRP 15.4.2, Rev 3: \nUncontrolled Control Rod \nAssembly Withdrawal at PowerII.1.A Thermal Margin Limits Conforms\nCHF is more appropriate terminology for \nNuScale phenomenon than DNBR.15.4.2Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria related to uncontrolled control rod assembly withdrawal during startup. It notes that NuScale meets thermal margin and fuel temperature limits, using critical heat flux (CHF) and heat generation rate limits appropriate for its design, while some criteria related to forced coolant flow are not applicable due to NuScale’s use of passive natural circulation.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "298",
+      "hop": 4,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
+    },
+    "nuscale_ch01_0366": {
+      "node_id": "nuscale_ch01_0366",
+      "title": "DSRS 9.3.6, Rev 0: Containment Evacuation and Flooding SystemsII.1 GDC 2",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-123 Revision 5\nDSRS 9.3.4, Rev 0: Chemical \nand Volume Control System (PWR) (Including Boron \nRecovery System)II.4\nComponents of the RCPB, quality \nclassification and seismic design classificationConforms The CVCS is located outside the RCPB. 9.3.4\nDSRS 9.3.4, Rev 0: Chemical \nand Volume Control System (PWR) (Including Boron \nRecovery System)II.5 Chemical and Volume Control System \nDesign and Arrangement Conforms None. 9.3.4\nDSRS 9.3.4, Rev 0: Chemical \nand Volume Control System (PWR) (Including Boron \nRecovery System)II.6 Detection of Reactor Coolant Leakage \nOutside ContainmentConforms None. 9.3.4\nDSRS 9.3.4, Rev 0: Chemical \nand Volume Control System (PWR) (Including Boron \nRecovery System)II.7\nPrevention of CVCS Holdup Tank Wall \nBuckling/Failure; CVCS Venting and DrainingPartially Conforms\nA portion of this acceptance criterion is \napplicable but the specific language refers to CVCS designs that are not relevant to the \nNuScale design. The NuScale CVCS design \ndoes not have holdup tanks that are subject to the vacuum conditions  in subtier Bulletin \n80-05. The last sentence of this acceptance \ncriterion is applicable to the NuScale CVCS design, which will include appropriate \nventing and draining capability.9.3.4\nDSRS 9.3.4, Rev 0: Chemical \nand Volume Control System (PWR) (Including Boron \nRecovery System)II.8\nITAAC Conforms None. 9.3.4\n14.3\nSRP 9.3.5, Rev 3: Standby Liquid Control System (BWR)All Various Not Applicable\nThis SRP section and its acceptance criteria \nare applicable only to BWRs.Not Applicable\nDSRS 9.3.6, Rev 0: \nContainment Evacuation and \nFlooding SystemsII.1 GDC 2 Conforms None. 9.3.6\nDSRS 9.3.6, Rev 0: \nContainment Evacuation and Flooding SystemsII.2\nGDC 60 Conforms None. 9.3.6Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for containment evacuation and flooding systems, specifically addressing GDC 2. It states that the NuScale design meets the requirements of DSRS 9.3.6, Rev 0, with no exceptions or additional notes.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "251",
+      "hop": 4,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
+    },
+    "nuscale_ch01_0738": {
+      "node_id": "nuscale_ch01_0738",
+      "title": "SRP 15.4.3, Rev 3: Control Rod Misoperation (System Malfunction or Operator Error)II.1 Thermal Margin Limits",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-171 Revision 5\nSRP 15.4.2, Rev 3: \nUncontrolled Control Rod Assembly Withdrawal at \nPowerII.1.B Fuel Centerline Temperatures Conforms For slower reactivity insertions, NuScale \nuses a heat generation rate limit to ensure that fuel centerline melting limits are met.15.4.2\nSRP 15.4.2, Rev 3: \nUncontrolled Control Rod Assembly Withdrawal at \nPowerII.1.C Uniform Cladding Strain Not Applicable The SRP states that this criterion applies to \nBWRs. NuScale uses the 95/95 MCHFR approach to ensure no cladding or fuel \nfailures.Not Applicable\nSRP 15.4.3, Rev 3: Control Rod \nMisoperation (System Malfunction or Operator \nError)II.1 Thermal Margin Limits Conforms\nCHF is more appropriate terminology for \nNuScale phenomenon than DNBR.15.4.3\nSRP 15.4.3, Rev 3: Control Rod \nMisoperation (System Malfunction or Operator \nError)II.2 Fuel Centerline Temperatures Conforms Fo r slower reactivity insertions, NuScale \nuses a heat generation rate limit to meet fuel centerline melting limits.15.4.3\nSRP 15.4.3, Rev 3: Control Rod \nMisoperation (System Malfunction or Operator \nError)II.3 Uniform Cladding Strain Conforms None. 15.4.3\nSRP 15.4.4-15.4.5, Rev 2: \nStartup of an Inactive Loop or Recirculation Loop at an \nIncorrect Temperature, and \nFlow Controller Malfunction Causing an Increase in BWR \nCore Flow RateII.A RCS and MSS Pressures Not Applicable This  guidance is not applicable because the \nspecific language refers to PWR designs that use forced reactor coolant flow and have \nreactor coolant loops and pumps. The \nNuScale design does not require or include reactor coolant pumps. The potential for a \npostulated startup reactivity accident (e.g., \ninitiated by abnormal startup sequence) has been identified as an event requiring \nconsideration for the NuScale reactor \ndesign. The guidance for these AOOs is available in DSRS 15.4.6 - Inadvertent \nDecrease in Boron Concentration in the \nReactor Coolant System (PWR).Not ApplicableTable 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria regarding control rod misoperation and related thermal margin limits. It confirms that NuScale meets requirements for fuel centerline temperature and cladding strain by using appropriate heat generation rate limits and the 95/95 MCHFR approach, and clarifies that certain criteria are not applicable due to differences in reactor design. The terminology and analysis methods are adapted to fit NuScale’s unique system characteristics, such as using CHF instead of DNBR.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "299",
+      "hop": 4,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0558",
-      "target": "nuscale_ch01_0052",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section B provides the nominal operating parameters (Table 1.3-1) necessary to assess coolant inventory needs, while Section A documents regulatory conformance and references to design features that must be satisfied by the adequacy of the coolant inventory."
-    },
-    {
-      "source": "nuscale_ch01_0558",
-      "target": "nuscale_ch05_0004",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section B describes the Reactor Coolant System (RCS) features and functions, such as degasification and pressure boundary integrity, which are the operational and design details that must be evaluated against the regulatory criteria and conformance statements outlined in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0558",
+      "source": "nuscale_ch01_0043",
       "target": "nuscale_ch05_0025",
       "relation": "SPECIFIES",
-      "confidence": 0.8,
-      "description": "Section A lists regulatory guidance and conformance statements for radiation protection design features, while Section B provides detailed descriptions of reactor coolant system (RCS) component materials, with both sections referencing the NuScale Final Safety Analysis Report but focusing on different aspects (regulatory compliance vs. technical design details) that must be integrated to assess coolant inventory adequacy."
-    },
-    {
-      "source": "nuscale_ch01_0558",
-      "target": "nuscale_ch01_0043",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.9,
-      "description": "Section B describes the ultimate heat sink and decay heat removal system that relies on the reactor coolant system (RCS) volumes from Table 5.1-1, which must be adequate to support the operating parameters listed in Table 1.3-1, thus Section B's system function depends on the adequacy of the coolant inventory specified in Section A's referenced tables."
-    },
-    {
-      "source": "nuscale_ch01_0558",
-      "target": "nuscale_ch05_0003",
-      "relation": "SATISFIES",
       "confidence": 0.85,
-      "description": "Section B describes the design and function of the reactor coolant system (RCS), which is the system whose coolant inventory adequacy is being evaluated using the operating parameters from Table 1.3-1, while Section A lists regulatory guidance and conformance statements that set the requirements or criteria the RCS design (including coolant inventory) must satisfy."
-    },
-    {
-      "source": "nuscale_ch01_0052",
-      "target": "nuscale_ch05_0004",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.95,
-      "description": "Section A provides the nominal operating parameters (such as pressure, temperature, and flow rates) from Table 1.3-1, which must be supported by the reactor coolant system (RCS) volumes detailed in Table 5.1-1 referenced in Section B to determine if the coolant inventory is adequate for the module's operating conditions."
-    },
-    {
-      "source": "nuscale_ch01_0052",
-      "target": "nuscale_ch05_0025",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A provides nominal operating parameters (such as pressures and temperatures) from Table 1.3-1, which are necessary to assess the adequacy of the RCS volumes listed in Table 5.1-1 (referenced in the analysis question), while Section B describes the physical components and materials of the pressurizer, which is part of the RCS volume, thus connecting the operating conditions to the physical design."
-    },
-    {
-      "source": "nuscale_ch01_0052",
-      "target": "nuscale_ch01_0043",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section A provides the nominal operating parameters (such as temperatures, pressures, and flow rates) from Table 1.3-1, which are necessary to assess whether the RCS volumes from Table 5.1-1 (not shown here) in Section B are sufficient to support the module's cooling and heat removal functions under normal and postulated conditions."
-    },
-    {
-      "source": "nuscale_ch01_0052",
-      "target": "nuscale_ch05_0003",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.95,
-      "description": "Section A provides the nominal operating parameters (such as temperatures and pressures) from Table 1.3-1, which must be compared with the RCS volumes detailed in Section B's Table 5.1-1 to assess whether the coolant inventory is sufficient for the module's specified operating conditions."
-    },
-    {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0025",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general system description of the RCS and its degasification function, while Section B specifies the detailed design and material composition of the pressurizer components referenced in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch01_0043",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A describes the reactor coolant system's (RCS) capability to maintain coolant inventory and integrity, while Section B outlines the ultimate heat sink's role in removing decay heat from the RCS, both of which are necessary to ensure the coolant inventory is adequate for safe module operation under the specified operating parameters."
-    },
-    {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0003",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes specific operational features of the RCS, such as degasification and pressure boundary integrity, which are design details that specify and support the general design basis and functional description of the RCS provided in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch01_0043",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A details the pressurizer's materials and components within the RCS, while Section B describes the decay heat removal system's capability to cool the RCS under operating and accident conditions, both providing technical context necessary to assess whether the RCS coolant inventory (from Table 5.1-1) is sufficient for the operating parameters (from Table 1.3-1)."
-    },
-    {
-      "source": "nuscale_ch05_0025",
-      "target": "nuscale_ch05_0003",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides detailed component and material information for the pressurizer, which is a specific part of the broader RCS described in Section B, thereby specifying details for Section B's general system description."
+      "description": "Section A describes the operational function and safety role of the coolant system under various conditions, while Section B provides detailed material and component specifications for the pressurizer, which is a key part of the coolant system described in Section A."
     },
     {
       "source": "nuscale_ch01_0043",
       "target": "nuscale_ch05_0003",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.9,
-      "description": "Section B describes the design and components of the reactor coolant system (RCS), which establishes the system whose coolant inventory adequacy is being evaluated using the operating parameters from Table 1.3-1 and the RCS volumes from Table 5.1-1, while Section A describes the ultimate heat sink and decay heat removal systems that depend on the RCS's coolant inventory to function as intended under operating and accident conditions."
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section B describes the components and function of the reactor coolant system (RCS), which Section A references as the system cooled by the ultimate heat sink and decay heat removal equipment, connecting the RCS's design and operation to its cooling and safety provisions."
     },
     {
-      "source": "nuscale_ch01_0767",
+      "source": "nuscale_ch01_0043",
       "target": "nuscale_ch01_0052",
       "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.95,
-      "description": "Section B provides the nominal operating parameters for the NuScale module (Table 1.3-1), which are used as input parameters in Section A's safety analysis (DSRS 15.5.1-15.5.2) to evaluate whether the coolant inventory is adequate under specified operating conditions."
+      "confidence": 0.85,
+      "description": "Section B's Table 1.3-1 provides the nominal operating parameters (such as pressure, temperature, and flow rates) that must be supported by the reactor coolant system (RCS), while Section A describes the ultimate heat sink and decay heat removal systems that rely on the RCS coolant inventory to function as intended, thus connecting the adequacy of the coolant inventory to the operating conditions."
     },
     {
-      "source": "nuscale_ch01_0767",
+      "source": "nuscale_ch01_0043",
       "target": "nuscale_ch05_0004",
       "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A references the need for input parameters and initial conditions (such as operating parameters) for accident analysis, while Section B provides a system description that includes relevant RCS features and functions, thus Section B supports the context and technical basis for the adequacy assessment required in Section A."
+      "confidence": 0.85,
+      "description": "Section A describes the decay heat removal system's ability to cool the RCS under various conditions, while Section B details the RCS's features for maintaining coolant integrity and removing noncondensible gases, both of which are necessary to assess whether the coolant inventory (from Table 5.1-1) is sufficient for the operating parameters (from Table 1.3-1)."
     },
     {
-      "source": "nuscale_ch01_0362",
+      "source": "nuscale_ch01_0558",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.7,
+      "description": "Section A references regulatory guidance and conformance statements for radiation protection design features, while Section B provides detailed descriptions of the pressurizer and RCS component materials; Section A's general regulatory requirements are specified in more detail by Section B's component descriptions."
+    },
+    {
+      "source": "nuscale_ch01_0558",
+      "target": "nuscale_ch05_0003",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section B describes the design and components of the NuScale reactor coolant system (RCS), which must provide adequate coolant inventory for safe operation, while Section A lists regulatory guidance and conformance statements that set the requirements the RCS design (including coolant inventory) must satisfy."
+    },
+    {
+      "source": "nuscale_ch01_0558",
+      "target": "nuscale_ch05_0004",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section B describes the reactor coolant system (RCS) features and functions, such as degasification and pressure boundary integrity, which are design elements that must satisfy the regulatory requirements and criteria referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed component and material information for the pressurizer, which is a specific part of the RCS generally described in Section B, thereby specifying the construction details for the system overviewed in Section B."
+    },
+    {
+      "source": "nuscale_ch05_0025",
       "target": "nuscale_ch01_0052",
       "relation": "IS_PREREQUISITE_OF",
       "confidence": 0.95,
-      "description": "Section A outlines the regulatory conformance and design criteria for the Chemical and Volume Control System (CVCS), which is responsible for maintaining adequate reactor coolant inventory, while Section B provides the nominal operating parameters (from Table 1.3-1) necessary to assess whether the RCS volumes (from Table 5.1-1) are sufficient for safe operation, thus connecting the regulatory requirements to the actual design values."
+      "description": "Section B provides the nominal operating parameters (such as pressures, temperatures, and flow rates) from Table 1.3-1, which are necessary to assess whether the RCS volumes described in Section A (and detailed in Table 5.1-1) are sufficient to maintain adequate coolant inventory under the module's operating conditions."
+    },
+    {
+      "source": "nuscale_ch05_0025",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides detailed material and component specifications for the pressurizer, which is a subsystem described more generally in Section B as part of the overall RCS function and integrity."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch01_0052",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A describes the design and components of the NuScale reactor coolant system (RCS), while Section B provides the nominal operating parameters (from Table 1.3-1) that must be supported by the RCS volumes (from Table 5.1-1), thus connecting the system's physical design to its operational requirements."
+    },
+    {
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the RCS design and its reliance on natural circulation, while Section B specifies operational features (such as degasification and pressure boundary integrity) that support the adequacy of coolant inventory under operating conditions."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch05_0004",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A provides the nominal operating parameters (such as pressures, temperatures, and flow rates) from Table 1.3-1, which are necessary to assess whether the RCS volumes listed in Table 5.1-1 (referenced in Section B's system description) are sufficient to maintain adequate coolant inventory under the module's operating conditions."
     },
     {
       "source": "nuscale_ch01_0362",
-      "target": "nuscale_ch05_0004",
+      "target": "nuscale_ch01_0043",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A discusses the design and regulatory conformance of the Chemical and Volume Control System (CVCS) for maintaining reactor coolant inventory, while Section B describes the Ultimate Heat Sink and decay heat removal systems that depend on adequate coolant inventory to function as intended, thus linking the adequacy of coolant inventory (from A) to the operational effectiveness of the heat removal systems (in B)."
+    },
+    {
+      "source": "nuscale_ch01_0362",
+      "target": "nuscale_ch05_0025",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses the design and regulatory conformance of the Chemical and Volume Control System (CVCS), which is responsible for maintaining coolant inventory, while Section B describes the physical components and materials of the Reactor Coolant System (RCS), including the pressurizer, both of which are directly connected through their roles in ensuring adequate coolant inventory for safe module operation."
+    },
+    {
+      "source": "nuscale_ch01_0857",
+      "target": "nuscale_ch01_0043",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.9,
+      "description": "Section A provides regulatory criteria and acceptance standards for evaluating technical adequacy, while Section B describes the NuScale module's cooling system design features that must be assessed against those criteria to determine if the coolant inventory is adequate for operating conditions."
+    },
+    {
+      "source": "nuscale_ch01_0857",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A provides regulatory criteria and acceptance guidelines for evaluating the technical adequacy of safety analyses, while Section B describes specific design details of the NuScale reactor coolant system components referenced in those analyses, connecting them through the need to demonstrate conformance with regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0767",
+      "target": "nuscale_ch01_0043",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides the regulatory requirements and initial conditions for evaluating reactor coolant inventory during a chemical and volume control system malfunction, while Section B describes the ultimate heat sink and decay heat removal systems that must be capable of handling the reactor coolant inventory under those conditions."
+    },
+    {
+      "source": "nuscale_ch01_0767",
+      "target": "nuscale_ch01_0558",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A addresses the input parameters and initial conditions for reactor coolant inventory control, while Section B outlines radiation protection design features, both of which rely on the adequacy of coolant inventory to ensure safe operating conditions and regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch01_0767",
+      "target": "nuscale_ch05_0025",
       "relation": "SPECIFIES",
       "confidence": 0.9,
-      "description": "Section A outlines the regulatory requirements and conformance for the Chemical and Volume Control System (CVCS), which is responsible for maintaining reactor coolant inventory, while Section B describes the physical features and functions of the Reactor Coolant System (RCS), including its volume and mechanisms for maintaining coolant integrity; thus, Section B provides the design details necessary to assess whether the CVCS (Section A) can ensure adequate coolant inventory under operating conditions."
+      "description": "Section A references the operating parameters and initial conditions relevant to evaluating coolant inventory adequacy, while Section B specifies the design details and volumes of the Reactor Coolant System components that determine the actual coolant inventory, thus Section B provides the necessary data to assess whether the parameters in Section A are satisfied."
+    },
+    {
+      "source": "nuscale_ch05_0012",
+      "target": "nuscale_ch01_0043",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the inability to distinguish specific sources of RCS leakage, while Section B describes the decay heat removal system's capability to maintain cooling even in the event of a steam generator tube failure, connecting through the shared concern of maintaining RCS integrity and coolant inventory under abnormal conditions."
     },
     {
       "source": "nuscale_ch05_0012",
       "target": "nuscale_ch01_0558",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the limitations of leakage detection in the NuScale reactor coolant system, while Section B lists the degree of conformance with regulatory guidance on radiation protection design features, including those related to leakage monitoring, thus Section A provides specific implementation details that relate to the general regulatory expectations outlined in Section B."
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the limitations of leakage detection in the NuScale reactor coolant pressure boundary, while Section B outlines the degree of conformance with regulatory guidance on radiation protection design features, including those related to leakage detection instrumentation, thus Section A's operational limitations are relevant to Section B's regulatory evaluation."
     },
     {
       "source": "nuscale_ch05_0012",
-      "target": "nuscale_ch01_0052",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section B provides detailed material specifications for pressurizer components that are referenced in Section A's discussion of the reactor coolant pressure boundary and its leakage detection capabilities."
+    },
+    {
+      "source": "nuscale_ch01_0362",
+      "target": "nuscale_ch01_0767",
       "relation": "IS_PREREQUISITE_OF",
       "confidence": 0.9,
-      "description": "Section B provides the nominal operating parameters (such as pressures, temperatures, and flow rates) for the NuScale module, which are necessary inputs for evaluating the adequacy of the coolant inventory described in Section A, where the focus is on leakage detection and the integrity of the reactor coolant pressure boundary."
+      "description": "Section A specifies the design and arrangement of the Chemical and Volume Control System (CVCS), which determines the system's ability to maintain adequate coolant inventory, while Section B defines the input parameters and initial conditions (such as power level and scram characteristics) under which the adequacy of the coolant inventory must be evaluated."
     },
     {
-      "source": "nuscale_ch05_0012",
-      "target": "nuscale_ch05_0004",
+      "source": "nuscale_ch01_0362",
+      "target": "nuscale_ch05_0012",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A discusses the challenges in detecting RCS leakage due to the absence of traditional leakage paths, while Section B describes system features (like degasification and pressure-retaining components) that are relevant to maintaining coolant inventory and RCPB integrity, thus both sections provide supporting information for evaluating whether the coolant inventory is adequate under operating conditions."
+      "description": "Section A outlines the design and regulatory conformance of the Chemical and Volume Control System (CVCS), which is responsible for maintaining coolant inventory, while Section B discusses the detection of reactor coolant pressure boundary leakage, both of which are directly connected through their roles in ensuring the adequacy and integrity of the reactor coolant system inventory under operating conditions."
     },
     {
-      "source": "nuscale_ch01_0767",
-      "target": "nuscale_ch01_0362",
+      "source": "nuscale_ch01_0857",
+      "target": "nuscale_ch01_0767",
       "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A discusses the initial conditions and input parameters for evaluating reactor coolant inventory changes due to chemical and volume control system malfunctions, while Section B specifies the design and arrangement of the Chemical and Volume Control System that determines the actual coolant inventory and its control, thus Section B provides the system design basis that Section A uses as input for its safety analysis."
+      "confidence": 0.85,
+      "description": "Section A provides general regulatory acceptance criteria for technical adequacy and conformance, while Section B specifies the detailed input parameters and initial conditions (such as RCS volumes and operating parameters) needed to evaluate whether the coolant inventory is adequate under specific malfunction scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0857",
+      "target": "nuscale_ch05_0012",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A provides regulatory criteria and acceptance standards for evaluating technical adequacy, while Section B describes the actual design features and limitations of the NuScale reactor coolant pressure boundary leakage detection, connecting them through the need to assess whether the design (Section B) satisfies the regulatory requirements (Section A) for coolant inventory adequacy."
     },
     {
       "source": "nuscale_ch01_0767",
       "target": "nuscale_ch05_0012",
       "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A discusses the input parameters and initial conditions for evaluating reactor coolant inventory changes due to system malfunctions, while Section B describes the detection capabilities and limitations for reactor coolant pressure boundary leakage, both of which are connected through their focus on maintaining and monitoring adequate reactor coolant inventory under operating conditions."
-    },
-    {
-      "source": "nuscale_ch01_0362",
-      "target": "nuscale_ch05_0012",
-      "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A outlines the design and regulatory conformance of the Chemical and Volume Control System (CVCS), which is responsible for maintaining coolant inventory, while Section B discusses the detection of reactor coolant pressure boundary leakage, both of which are connected by their roles in ensuring the adequacy and integrity of the reactor coolant system (RCS) inventory under operating conditions."
+      "description": "Section A discusses the initial conditions and parameters for evaluating reactor coolant inventory changes due to system malfunctions, while Section B describes the detection capabilities and limitations for identifying reactor coolant pressure boundary leakage, both of which are connected by their relevance to assessing whether the coolant inventory is adequate under operating conditions and potential leakage scenarios."
     },
     {
-      "source": "nuscale_ch01_0044",
-      "target": "nuscale_ch01_0052",
-      "relation": "SATISFIES",
-      "confidence": 0.8,
-      "description": "Section B provides the nominal operating parameters (from Table 1.3-1) that must be supported by the coolant inventory, while Section A describes the system features (including coolant control and heat removal) that are designed to maintain adequate coolant inventory under those operating conditions."
-    },
-    {
-      "source": "nuscale_ch01_0044",
-      "target": "nuscale_ch05_0004",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the Chemical and Volume Control System's role in maintaining coolant inventory and system cooling under various conditions, while Section B details the RCS's features for degasification and pressure boundary integrity, both of which are necessary to ensure that the coolant inventory (from Table 5.1-1) is adequate to support the operating parameters (from Table 1.3-1)."
-    },
-    {
-      "source": "nuscale_ch01_0042",
-      "target": "nuscale_ch01_0558",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A describes the implementation of digital control systems for monitoring and trending plant parameters, which supports the ability to ensure compliance with the radiation protection design features and regulatory criteria referenced in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0042",
-      "target": "nuscale_ch01_0052",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.9,
-      "description": "Section B provides the nominal operating parameters in Table 1.3-1, which are necessary for evaluating whether the coolant inventory (referenced in Table 5.1-1) is adequate for the NuScale module's operating conditions as required by the analysis question."
-    },
-    {
-      "source": "nuscale_ch01_0042",
-      "target": "nuscale_ch05_0004",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A describes the monitoring and control systems for reactor operations, while Section B details the physical features of the Reactor Coolant System (RCS), with both sections providing complementary information necessary to assess whether the coolant inventory (from Table 5.1-1) is sufficient for the operating parameters (from Table 1.3-1) under the control and monitoring described."
-    },
-    {
-      "source": "nuscale_ch01_0044",
-      "target": "nuscale_ch01_0042",
+      "source": "nuscale_ch01_0017",
+      "target": "nuscale_ch01_0043",
       "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A describes the Chemical and Volume Control System's role in maintaining coolant inventory and supporting decay heat removal, while Section B outlines the monitoring and control of the Decay Heat Removal System, both of which are connected through their functions in ensuring adequate coolant inventory and safe operating conditions as required by the operating parameters and RCS volumes."
+      "description": "Section A describes the physical layout and process overview of the NuScale reactor and its cooling systems, while Section B details the decay heat removal system's capability to cool the reactor coolant system (RCS) under postulated events, thus both sections provide complementary information about the systems responsible for maintaining adequate coolant inventory and heat removal under operating and accident conditions."
     },
     {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch01_0558",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section A describes the reactor coolant system's design and function, which must be evaluated against the regulatory requirements and conformance criteria referenced in Section B to determine if the coolant inventory is adequate for safe operation."
-    },
-    {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch01_0052",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A describes the components and function of the NuScale reactor coolant system (RCS), while Section B provides the nominal operating parameters (such as pressures, temperatures, and flow rates) that the RCS must support, connecting the system's physical design to its required operational performance."
-    },
-    {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch05_0004",
+      "source": "nuscale_ch01_0017",
+      "target": "nuscale_ch05_0025",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A provides a general overview of the RCS design and its reliance on natural circulation, while Section B specifies operational features such as degasification and pressure boundary integrity that support the adequacy of coolant inventory under operating conditions."
+      "description": "Section A provides a general facility and system overview, while Section B references specific component materials and cross-references other sections for further detail, indicating that Section B provides detailed specifications for components generally described in Section A."
     },
     {
-      "source": "nuscale_ch05_0009",
-      "target": "nuscale_ch01_0052",
-      "relation": "IS_PREREQUISITE_OF",
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0043",
+      "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section B provides the nominal operating parameters (from Table 1.3-1) that are necessary to evaluate whether the overpressure protection provisions and code compliance described in Section A are adequate for the NuScale module's operating conditions."
+      "description": "Section A describes the ECCS's function to remove decay heat and manage coolant during a LOCA, while Section B outlines the DHRS's role in removing decay heat under normal and certain accident conditions, both relying on the RCS volumes and operating parameters from Tables 1.3-1 and 5.1-1 to ensure adequate coolant inventory for safe operation."
     },
     {
-      "source": "nuscale_ch05_0009",
-      "target": "nuscale_ch05_0004",
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch05_0025",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A describes the function and operation of the Emergency Core Cooling System (ECCS), which relies on the reactor coolant system (RCS) volumes detailed in Section B to ensure adequate coolant inventory for decay heat removal during emergencies."
+    },
+    {
+      "source": "nuscale_ch01_0017",
+      "target": "nuscale_ch01_0024",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the facility and core layout relevant to the reactor coolant system, while Section B details the Emergency Core Cooling System's function in maintaining core cooling during a loss-of-coolant accident, both of which are connected through their reliance on the reactor coolant inventory and volumes specified in the referenced tables for adequate operation."
+    },
+    {
+      "source": "nuscale_ch01_0368",
+      "target": "nuscale_ch01_0043",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section B describes the ultimate heat sink and decay heat removal system that relies on the reactor coolant system (RCS) volumes and operating parameters provided in Table 1.3-1 and Table 5.1-1, which are referenced in the analysis question to assess coolant inventory adequacy, while Section A outlines regulatory conformance requirements that the system must satisfy."
+    },
+    {
+      "source": "nuscale_ch01_0368",
+      "target": "nuscale_ch05_0025",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A references regulatory conformance requirements for containment and flooding systems, while Section B provides detailed design information about the pressurizer materials, with the connection being that the design details in Section B support the regulatory conformance claims in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0732",
+      "target": "nuscale_ch01_0043",
       "relation": "SATISFIES",
       "confidence": 0.85,
-      "description": "Section A outlines the regulatory and code compliance requirements for the integrity and overpressure protection of the reactor coolant boundary, while Section B describes the system features (such as degasification and pressure retention) that are implemented to satisfy those integrity and protection requirements."
+      "description": "Section A outlines regulatory requirements and conformance for thermal margin limits and safety systems, while Section B describes the NuScale module's cooling system design and capabilities, with both sections connected by the need to ensure that the coolant inventory and heat removal systems meet the operating and safety requirements specified in Section A."
     },
     {
-      "source": "nuscale_ch05_0002",
-      "target": "nuscale_ch05_0009",
+      "source": "nuscale_ch01_0732",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A outlines the regulatory requirements and safety analysis criteria for thermal margin and system response under various operating and accident conditions, while Section B provides detailed design information about the reactor coolant system components, specifically the pressurizer, which is essential for evaluating whether the coolant inventory (as specified in Table 5.1-1) supports safe operation under the parameters listed in Table 1.3-1."
+    },
+    {
+      "source": "nuscale_ch01_0366",
+      "target": "nuscale_ch01_0043",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses the design and regulatory conformance of the Chemical and Volume Control System (CVCS), which manages coolant inventory, while Section B describes the decay heat removal system's capability to cool the reactor coolant system (RCS) under various conditions; both sections are connected through their roles in ensuring adequate coolant inventory and heat removal for safe module operation."
+    },
+    {
+      "source": "nuscale_ch01_0366",
+      "target": "nuscale_ch01_0558",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A addresses the design and regulatory conformance of systems directly responsible for maintaining coolant inventory (such as the Chemical and Volume Control System), while Section B discusses radiation protection features that depend on adequate coolant inventory to ensure radiological safety, thus Section A's adequacy supports Section B's safety objectives."
+    },
+    {
+      "source": "nuscale_ch01_0366",
+      "target": "nuscale_ch05_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses regulatory conformance and design criteria for the Chemical and Volume Control System (CVCS), which is responsible for maintaining coolant inventory, while Section B provides detailed descriptions of Reactor Coolant System (RCS) components, including the pressurizer, which directly affects coolant inventory management; thus, Section B specifies the technical details that Section A's regulatory criteria are applied to."
+    },
+    {
+      "source": "nuscale_ch01_0738",
+      "target": "nuscale_ch01_0043",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A discusses thermal margin limits and fuel protection criteria under abnormal operating conditions, while Section B describes the ultimate heat sink and decay heat removal systems that ensure adequate cooling of the reactor coolant system (RCS), thus both sections are related through their roles in maintaining safe operating conditions and protecting fuel integrity by ensuring sufficient coolant inventory and heat removal capability."
+    },
+    {
+      "source": "nuscale_ch01_0738",
+      "target": "nuscale_ch05_0025",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the thermal margin limits and regulatory conformance for control rod misoperation scenarios, while Section B provides detailed design information about the pressurizer and its materials, with the connection being that the pressurizer's design (Section B) supports the ability to maintain adequate thermal margins and coolant inventory as required in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0368",
+      "target": "nuscale_ch01_0366",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.8,
+      "description": "Section A references regulatory conformance for containment evacuation and flooding systems, while Section B specifies regulatory conformance for the chemical and volume control system, both of which are prerequisites for evaluating whether the coolant inventory (from Table 5.1-1) is adequate for the module's operating parameters (from Table 1.3-1)."
+    },
+    {
+      "source": "nuscale_ch01_0732",
+      "target": "nuscale_ch01_0366",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides the operating parameters that define the required coolant inventory for safe operation, while Section B specifies the RCS volumes and system design that must accommodate these parameters, thus allowing assessment of whether the coolant inventory is adequate."
+    },
+    {
+      "source": "nuscale_ch01_0732",
+      "target": "nuscale_ch01_0738",
       "relation": "IS_PREREQUISITE_OF",
       "confidence": 0.85,
-      "description": "Section A describes the design and function of the reactor coolant system, whose adequacy (including coolant inventory) must comply with the regulatory codes and requirements referenced in Section B."
+      "description": "Section A and Section B both address thermal margin limits and fuel safety criteria for different control rod-related transients, providing regulatory requirements and design conformance that must be satisfied by the coolant inventory and operating parameters described in the referenced tables."
+    },
+    {
+      "source": "nuscale_ch01_0366",
+      "target": "nuscale_ch01_0738",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A provides information on the design and arrangement of the Chemical and Volume Control System (CVCS), which is responsible for maintaining coolant inventory, while Section B specifies thermal margin and fuel temperature limits that depend on adequate coolant inventory for safe operation; thus, the adequacy of coolant inventory in Section A is necessary to satisfy the operational safety limits in Section B."
     }
   ]
 }

@@ -1,0 +1,114 @@
+{
+  "timestamp": "2026-03-25T10:20:50.424186",
+  "evaluation_framework": "RAGAs v0.4",
+  "config": {
+    "model": "gpt-4.1",
+    "evaluator_model": "gpt-4.1",
+    "embedding_model": "text-embedding-3-small",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 3,
+    "errors": 0
+  },
+  "metrics_description": {
+    "faithfulness": "Fraction of claims in the answer that are supported by the retrieved context (0-1)",
+    "answer_relevancy": "How relevant the answer is to the question, measured by reverse question generation (0-1)",
+    "context_recall": "Fraction of expected answer sentences supported by retrieved context (0-1)",
+    "factual_correctness": "Factual overlap between agent answer and expected answer (0-1)",
+    "keyword_hit": "Fraction of expected keywords present in the agent answer (0-1)"
+  },
+  "summary": {
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.9765,
+    "context_recall": 1.0,
+    "factual_correctness": 0.51,
+    "keyword_hit": 0.4
+  },
+  "by_type": {
+    "text_only": {
+      "count": 3,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9765,
+      "context_recall": 1.0,
+      "factual_correctness": 0.51,
+      "keyword_hit": 0.4
+    }
+  },
+  "results": [
+    {
+      "id": "Q071",
+      "type": "text_only",
+      "question": "How does the NuScale natural circulation driving force compare to forced circulation in a conventional PWR?",
+      "expected_answer": "NuScale relies on buoyancy-driven natural circulation with no RCPs, producing lower flow rates than forced circulation PWRs. This is acceptable because the lower power density of the NuScale core requires less coolant flow for adequate heat removal.",
+      "agent_answer": "The NuScale natural circulation driving force is significantly lower than the forced circulation in a conventional PWR, as NuScale relies solely on buoyancy-driven flow without pumps, resulting in lower flow rates and pressure drops (e.g., best-estimate flow at 100% power is 587.0 kg/s). This is supported by the system description and flow data in [nuscale_ch05_0002], [nuscale_ch05_0003], and Table 5.1-2. No direct numerical comparison to conventional PWR pump head is provided, but the qualitative difference is clear.",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.972,
+      "context_recall": 1.0,
+      "factual_correctness": 0.67,
+      "keyword_hit": 0.6,
+      "kg_nodes": 11,
+      "kg_edges": 31,
+      "hops_used": 3,
+      "retrieved_contexts_count": 12,
+      "agent_sec": 105.6,
+      "eval_sec": 44.9,
+      "total_sec": 150.5,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0004] System Description | node: [nuscale_ch05_0003] Design Basis | node: [nuscale_ch05_0020] Steam Generators | node: [nuscale_ch05_0002] Summary Description | node: [nuscale_ch05_0021] Reactor Coolant System Piping | node: [nuscale_ch05_0006] System Evaluation | edge: SPECIFIES | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS | edge: SPECIFIES | edge: LEADS_TO | edge: SPECIFIES | edge: SPECIFIES | edge: SUPPORTS | edge: SPECIFIES | edge: CONTRADICTS | edge: SUPPORTS | edge: SPECIFIES",
+        "Hop 2: node: [nuscale_ch05_0017] Reactor Vessel Integrity | node: [nuscale_ch05_0012] Reactor Coolant Pressure Boundary Leakag | node: [nuscale_ch05_0016] Pressure-Temperature Limits, Pressurized | node: [nuscale_ch05_0005] System Components | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: LEADS_TO | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: REFERENCES | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS",
+        "Hop 3: node: [nuscale_ch05_0022] Decay Heat Removal System | edge: SUPPORTS | edge: IS_PREREQUISITE_OF | edge: SUPPORTS",
+        "Hop 4: no results"
+      ]
+    },
+    {
+      "id": "Q072",
+      "type": "text_only",
+      "question": "How does the NuScale containment differ from a conventional large dry containment?",
+      "expected_answer": "NuScale uses a compact steel containment vessel (CNV) operating under vacuum, while conventional PWRs use large concrete dry containments at near-atmospheric pressure. The NuScale CNV is submerged in the reactor pool, providing direct heat transfer capability, while conventional containments rely on spray and fan cooler systems.",
+      "agent_answer": "The NuScale containment differs from a conventional large dry containment by being a compact, evacuated (vacuum) vessel without containment spray, sump, or fission product clean-up systems, relying instead on passive safety features and submersion in a reactor pool for heat removal and fission product control. This is supported by Table 1.2-2 (Design Features of a NuScale Power Module) and nodes [nuscale_ch01_0168], [nuscale_ch01_0169], and [nuscale_ch01_0022]. No secondary containment or pressure suppression pool is used, and many conventional regulatory criteria are not applicable.",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "context_recall": 1.0,
+      "factual_correctness": 0.29,
+      "keyword_hit": 0.4,
+      "kg_nodes": 20,
+      "kg_edges": 80,
+      "hops_used": 4,
+      "retrieved_contexts_count": 21,
+      "agent_sec": 186.4,
+      "eval_sec": 45.3,
+      "total_sec": 231.7,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0014] Acronyms and Abbreviations | node: [nuscale_ch01_0188] BTP 6-1, (March 2007): pH for Emergency  | node: [nuscale_ch01_0035] Fuel Handling and Reactor Maintenance Ar | node: [nuscale_ch01_0168] SRP 6.5.3, Rev 3: Fission Product Contro | node: [nuscale_ch01_0189] BTP 6-2, Rev 3: Minimum Containment Pres | node: [nuscale_ch01_0167] SRP 6.5.3, Rev 3: Fission Product Contro | edge: IS_PREREQUISITE_OF | edge: SPECIFIES | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS",
+        "Hop 2: node: [nuscale_ch01_0113] Figure 1.7-3b: Piping and In strumentati | node: [nuscale_ch01_0112] Figure 1.7-3a: Piping and Instrumentatio | edge: SPECIFIES | edge: SUPPORTS | edge: REFERENCES | edge: SPECIFIES | edge: CONTRADICTS | edge: IS_PREREQUISITE_OF | edge: SUPPORTS",
+        "Hop 3: node: [nuscale_ch01_0303] DSRS 9.1.3, Rev 0: Spent Fuel Pool Cooli | node: [nuscale_ch01_0059] Steam Generator Thermal-Hydraulic Perfor | node: [nuscale_ch01_0043] Ultimate Heat Sink | node: [nuscale_ch01_0060] NuScale Integral System Test Program | node: [nuscale_ch01_0067] Drawings and Other Detailed Information | node: [nuscale_ch01_0068] Electrical and Instrumentation and Contr | edge: REFERENCES | edge: SUPPORTS | edge: SUPPORTS | edge: REFERENCES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: REFERENCES | edge: CONTRADICTS | edge: SEMANTIC | edge: SPECIFIES | edge: SUPPORTS | edge: SPECIFIES | edge: REFERENCES | edge: SUPPORTS | edge: SEMANTIC | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: REFERENCES | edge: REFERENCES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: REFERENCES | edge: SUPPORTS | edge: SPECIFIES",
+        "Hop 4: node: [nuscale_ch01_0003] Plant Location | node: [nuscale_ch01_0020] Safety Considerations | node: [nuscale_ch01_0002] Introduction | node: [nuscale_ch01_0022] Engineered Safety Feature Materials | node: [nuscale_ch01_0171] SRP 6.5.5, Rev 1: Pressure Suppression P | node: [nuscale_ch01_0169] SRP 6.5.3, Rev 3: Fission Product Contro | edge: REFERENCES | edge: SUPPORTS | edge: SPECIFIES | edge: CONTRADICTS | edge: REFERENCES | edge: SPECIFIES | edge: IS_PREREQUISITE_OF | edge: CONTRADICTS | edge: SPECIFIES | edge: REFERENCES | edge: SUPPORTS | edge: SUPPORTS | edge: REFERENCES | edge: SUPPORTS | edge: SUPPORTS | edge: SPECIFIES | edge: SPECIFIES | edge: SUPPORTS | edge: SPECIFIES | edge: SPECIFIES | edge: SEMANTIC | edge: CONTRADICTS | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS"
+      ]
+    },
+    {
+      "id": "Q073",
+      "type": "text_only",
+      "question": "How does the NuScale passive safety approach compare to active safety systems in conventional PWRs?",
+      "expected_answer": "NuScale uses passive safety systems that operate without AC power or operator action, relying on natural forces like gravity and natural circulation. Conventional PWRs require active pumps, diesel generators, and operator actions for emergency core cooling and heat removal.",
+      "agent_answer": "The NuScale passive safety approach eliminates the need for active safety systems (such as pumps, emergency diesel generators, and AC power) required in conventional PWRs, relying instead on natural convection, passive heat removal, and an evacuated containment vessel to achieve a lower core damage frequency and enhanced safety. This is evidenced by Table 1.2-2, Table 1.3-1, and nodes [nuscale_ch01_0020], [nuscale_ch01_0021], [nuscale_ch01_0024], and [nuscale_ch01_0052], which show that NuScale’s design removes the need for active components and external power for safety functions, unlike conventional PWRs. No significant uncertainties are noted in the evidence provided.",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9575,
+      "context_recall": 1.0,
+      "factual_correctness": 0.57,
+      "keyword_hit": 0.2,
+      "kg_nodes": 11,
+      "kg_edges": 42,
+      "hops_used": 2,
+      "retrieved_contexts_count": 12,
+      "agent_sec": 103.5,
+      "eval_sec": 32.2,
+      "total_sec": 135.7,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0020] Safety Considerations | node: [nuscale_ch01_0289] SRP BTP 8-9, Rev. 0: Open Phase Conditio | node: [nuscale_ch01_0021] Engineered Safety Features and Emergency | node: [nuscale_ch01_0022] Engineered Safety Feature Materials | node: [nuscale_ch01_0150] DSRS 3.11, Rev. 0: Environmental Qualifi | edge: SATISFIES | edge: REFERENCES | edge: REFERENCES | edge: CONTRADICTS | edge: SUPPORTS | edge: SUPPORTS | edge: CONTRADICTS | edge: CONTRADICTS | edge: CONTRADICTS",
+        "Hop 2: node: [nuscale_ch01_0669] DSRS 15.1.1-15.1.4, Rev 0: Decrease in F | node: [nuscale_ch01_0052] Comparison with Other Facilities | node: [nuscale_ch01_0666] DSRS 15.1.1-15.1.4, Rev 0: Decrease in F | node: [nuscale_ch01_0057] Critical Heat Flux Testing - NuFuel HTP2 | node: [nuscale_ch01_0024] Emergency Core Cooling System | node: [nuscale_ch01_0063] Emergency Core Cooling System Valve Desi | edge: SUPPORTS | edge: CONTRADICTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: SATISFIES | edge: SUPPORTS | edge: SUPPORTS | edge: CONTRADICTS | edge: SUPPORTS | edge: SUPPORTS | edge: CONTRADICTS | edge: SUPPORTS | edge: SUPPORTS | edge: SATISFIES | edge: SUPPORTS | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: SATISFIES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS | edge: SATISFIES | edge: SUPPORTS | edge: IS_PREREQUISITE_OF | edge: SUPPORTS | edge: SUPPORTS",
+        "Hop 3: Early stop — evidence sufficient"
+      ]
+    }
+  ]
+}

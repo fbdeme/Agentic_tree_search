@@ -11,7 +11,7 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 - [x] ~~Analyze results by question type~~ → See history.md v0.3.1 for full breakdown
 - [x] ~~Run multihop benchmark (200q)~~ → 200/200 success, judgment CR=0.82, SATISFIES 659 instances
 - [x] ~~Fix Faithfulness measurement rate~~ → Root cause: RAGAs default max_tokens=1024. Fixed to 4096. Now 200/200 (100%) measured. (v0.4.3)
-- [ ] **Improve single_evidence CR (0.45)** — BM25 precision for finding one specific node. Browse-first likely solution. NEXT PRIORITY.
+- [x] ~~Improve single_evidence CR (0.45)~~ → Browse-first fixed: CR 0.45→0.89, only 4% CR=0 (v0.4.5)
 - [x] ~~Address FC~~ → Reduced answer length (2213→324 chars), FC improved 0.39→0.58. Remaining gap is structural (different evidence nodes → different wording). (v0.4.4)
 
 ### Search (Action) Enhancement
@@ -19,7 +19,7 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 - [x] ~~Multi-document search reliability~~ → search() spans all documents (v0.3.0)
 - [x] ~~BM25 search ranking~~ → Replaces naive keyword match, specific nodes rank higher (v0.3.1)
 - [x] ~~Action history / search memory~~ → Agent Memory implemented (v0.4.2). Search log prevents keyword repetition.
-- [ ] **Browse-first pattern**: First hop browses document structure before searching. Solves single_evidence CR=0.45.
+- [x] ~~Browse-first pattern~~ → Document structure auto-injected in Hop 1, browse(depth) added (v0.4.5)
 - [ ] **Query expansion**: Auto-generate keyword variants (PZR↔pressurizer). Zero LLM cost.
 - [ ] **Follow-reference tool**: When node mentions "see Table 5.1-1", follow that reference directly.
 - [ ] Store `end_index` in tree nodes (not just `page_index`) for accurate page range
@@ -29,9 +29,16 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 
 ### Edge Quality
 - [x] ~~SATISFIES/VIOLATES never appeared~~ → Fixed by description-first edge inference (v0.4.0). CONTRADICTS (3), SATISFIES (1), SEMANTIC (1) emerged in pilot.
-- [ ] Run full 100-question evaluation with new edge inference and analyze edge type distribution
-- [ ] Validate two-tier edge hierarchy hypothesis with full results
-- [ ] Address edge explosion (Q003: 45 edges from 12 nodes) — consider selective pairing or max edge limits
+- [x] ~~Full edge distribution analysis~~ → 8/9 types emerged, SATISFIES 584 (8.1%) across 200q (v0.4.5)
+- [ ] Address edge explosion (judgment avg 48.7 edges) — consider selective pairing or max edge limits
+
+### Benchmark Improvement
+- [ ] Request benchmark v3 with improvements (see docs/benchmark_feedback.md):
+  - Comprehensive expected_answers (multiple valid perspectives)
+  - Source-pinned questions (reduce ambiguity)
+  - 30%+ "No" judgment questions (test violation detection)
+  - 3-4 evidence chain questions (deeper multi-hop)
+  - Broader document coverage (Section 1.9 regulatory tables)
 
 ---
 
@@ -107,6 +114,8 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 - [x] Multihop benchmark (200q): 100 min (8x parallel), 200/200 success, SATISFIES 659 instances (v0.4.2)
 - [x] Faithfulness 100% measurement: RAGAs max_tokens 1024→4096 (v0.4.3)
 - [x] Concise answers (2213→324 chars): Faith 0.71→0.95, FC 0.39→0.58 (v0.4.4)
+- [x] Browse-first + concise answers (200q): Faith 0.93, CR 0.93, FC 0.42 (v0.4.5)
+- [x] Benchmark feedback document: FC ceiling analysis + 5 improvement proposals (v0.4.5)
 - [x] Relevance-based image selection: question keywords vs caption overlap (v0.3.2)
 - [x] BM25 caption indexing: reference captions now searchable (v0.3.2)
 - [x] Root cause analysis: Faithfulness N/A = answer length + KG size, not images (v0.3.2)

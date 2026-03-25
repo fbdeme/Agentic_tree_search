@@ -2,182 +2,153 @@
   "question": "Compare the 100% power flow conditions with minimum design flow conditions from Table 5.1-2.",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch05_0005": {
-      "node_id": "nuscale_ch05_0005",
-      "title": "System Components",
-      "summary": "This section describes the main components of the NuScale reactor system, focusing on the Reactor Pressure Vessel (RPV), Reactor Coolant System (RCS) piping, and the Pressurizer (PZR). The RPV serves as a primary barrier to fission product release and houses key reactor internals, while the RCS piping connects various subsystems and the PZR is integrated with the RPV to help control system pressure. Each component's functions and connections are briefly outlined, with references to more detailed sections.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "10",
-      "hop": 1
-    },
     "nuscale_ch05_0006": {
       "node_id": "nuscale_ch05_0006",
       "title": "System Evaluation",
-      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance by establishing steady-state parameters—such as coolant temperatures, flow rates, and pressures—across different power levels using thermal hydraulic modeling and verification. It details how uncertainties and design considerations are addressed to ensure efficient operation, maximize electrical generation, and maintain safety margins, particularly emphasizing the low pressure losses that support the plant’s natural circulation design.",
+      "content": "NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-5 Revision 5top of each SG. The DHRS is connected to the stea m and feed piping to permit use of \nthe SG to remove decay heat  from the primary coolant.\nThe SGs are further described in Section 5.4.\n5.1.4 System Evaluation\nTo optimize performance of the NuScale Power Plant over the range of  power levels within \nthe design basis, steady state values for primary and secondary side parameters are \nestablished as a function of reactor power. Th e following criteria are considered to define \noptimal performance: maximizing electrical ge neration, using support systems efficiently, \nand providing margin to analytical limits . The following parameters are determined: \nprimary coolant temperatures, primary coolant flow rates, PZR water level, SG water level \nand mass, feedwater and steam flow rates,  feedwater and steam pressure, and steam \nsuperheat. The steady state parameters are ca lculated using the thermal hydraulic software \nNRELAP5 and are verified by hand calculation.\nCalculations establish a best-estimate flow , maximum flow, and minimum flow for the \napplicable design considerations , as well as the primary cool ant temperatures at each flow \ncondition. In establishing the range of design flows, the calculations account for uncertainties in the component flow resistances, the amount of core bypass flow, and the \nthermal head capability. Bounding uncertaintie s are determined based on testing data and \ndesign requirements.\nThe pressure losses through the RCS flow pa th are very low, to support the natural \ncirculation design of the RCS. Since the pressure losses due to flow are small, the pressure at any location in the RCS flow  path is primarily a function of the static head. The primary \ncoolant flows over the outside of the helica l SG tubes; therefore,  SG tube plugging \nuncertainties are not applicable to the prim ary coolant natural circulation flow rate \ndetermination.\nMinimum design flow is the lowest expected va lue for the primary coolant flow rate and is \ncalculated by biasing analytical uncertaintie s to minimize the flow rate. Minimum design \nprimary coolant flow rate is us ed in design analyses where it  is bounding to assume a low \nflow rate.\nMaximum design flow is the highest expected value for the primary coolant flow rate. \nMaximum design flow is calculated by biasin g analytical uncertainties to maximize the \nprimary coolant flow rate. Maximum design prim ary coolant flow rate is used in design \nanalyses where it is bounding to assume a high flow rate.\nThe module heatup system is used to heat up the RCS and provide primary coolant flow \nbefore the reactor is critical . Between hot zero power and 15 percent reactor power, the \nheat generated from the reactor core is used to heat up the RCS to the normal operating \naverage coolant temperature. Between 15 perc ent reactor power and full power operating \nconditions, the average primary coolant temperat ure is maintained at a constant value. The \nfull power average coolant temperature is higher for higher pr imary coolant flow \nconditions, and lower for lo wer primary coolant flow co nditions. This phenomenon \nprovides for similar hot leg te mperatures at full power condit ions, which allows for the SG \nto generate sufficient superheat independent of the full power primary coolant flow rate.NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-6 Revision 5The RCS volumes are shown in Table 5.1-1. The thermal-hydraulic design for reactor core \ncoolant flow by natural ci rculation is discussed in Table 5.1-2 and Section 4.4.NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-7 Revision 5Table 5.1-1: Reactor Coolant System Volumes\nRCS Region Nominal \nVolume (ft3)*\nHot Leg (lower riser, riser transition, upper riser, riser supports) 635Cold Leg [feedwater plenums, downcomer transition, downcomer (lower riser), core barrel, RPV bottom \nhead, flow diverter]578\nCore Region (fuel assembly region  and reflector cooling channels) 89\nSG Region 621\nPZR Region (main steam plenums, PZR, RPV top head) 578PZR Region, cylindrical (main steam plenums and PZR) 487*Volumes are rounded to the nearest cubic foot.NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-8 Revision 5Table 5.1-2: Primary System Temperatures and Flow Rates\nReactor Power Primary Flow Primary Coolant Temperature\n% MWt % (Kg/s) Core dT TCold  (°F) Tavg (°F) THot (°F)\nBest-Estimate Flow\n0 0 0-12 0-68.5Note(1) 0 Note(1) 425.5 Note(1)\n15 24 47.7 280.2 31.7 528.5 543.3 558.2\n50 80 75.6 443.7 66.5 512.2 543.3 574.475 120 88.9 521.6 84.6 503.8 543.3 582.9\n100 160 100 587.0 99.8 496.6 543.3 590.1\nMinimum Design Flow\n100 160 91.7 538.5 107.60 487.4 538.7 590.1\nMaximum Design Flow\n100 160 112.5 660.5 89.65 507.8 548.9 590.0\nNote (1):  When core decay heat is not available as a heat source, the module heatup system  provides the driving force for \nnatural circulation flow. Flow rate will va ry as a function of module heatup syst em performance, steam generator operation \nand RCS temperature. A typical hot zero power temperature an d range of the steady state best-estimate flow rates are \nidentified.NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-9 Revision 5Figure 5.1-1: NuScale Powe r Module Major Components\nContainment Vessel\nPressurizer Region\nPressurizer Baffle Plate\nReactor Pressure Vessel\nReactor Vessel Internals\nReactor Core RegionControl Rod Drive MechanismsNuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-10 Revision 5\nFigure 5.1-2: Reactor Coolan t System Simplified Diagram\nPZRRSVs\nSG2 SG1\nRRV 1\n(ECCS)Reactor Pressure VesselRRV 2\n(ECCS)CNT\nPZR HEATER 2\nReactor\nCorePZR SPRAY SUPPLYRCS DISCHARGE\nRCS INJECTIONRVVs\n(ECCS)\nPZR HEATER 1RPV HIGH POINT DEGASIFICATION\nNRRCS CNTCNT RCS\nRCS CNTCNT RCS\nRCS ECCS\nECCS RCS\nRCS ECCS RCS ECCSTO ECCS ACTUATION VALVESZS\nO/CZS\nO/CTE\nx2\nPE\nx4\nPE\nx4LE\nx4\nTE\nx2\nNRTE\nx4\nWRTE\nx4\nNRTE\nx4\nWRTE\nx4NRTE\nx4\nTE\nx4\nNRTE\nx4FE\nx4NRRCS DISCHARGERCS INJECTIONPRESSURIZER SPRAY\nPRESSURIZER DEGASIFICATION\nNR\nWRTO ECCS ACTUATION VALVESNuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-11 Revision 5Figure 5.1-3: Reactor Coolant System Schematic Flow Diagram\n10\n134567 8\n1412\n213911\n15\n16\nNo. Stage\n1 Core support blocks in downcomer\n2 Downcomer to lower plenum turn\n3 Lower core plate\n4C o r e\n5 Upper core plate\n6 Control rod assembly guide tubes\n7 Control rod assembly guide tube support plate\n8 Riser transition\n9 Control rod drive shaft support\n10 Pressurizer baffle\n11 Upper riser turn to annulus\n12 Downcomer through steam generator\n13 Downcomer transition\n14 Upper core support blocks\n15 Containment vessel\n16 Reactor vessel\n\n--- Referenced Tables (structured) ---\n[Table 5.1-1: Reactor Coolant System Volumes]\nRCS Region | Nominal\nVolume (ft3)*\nHot Leg (lower riser, riser transition, upper riser, riser supports) | 635\nCold Leg [feedwater plenums, downcomer transition, downcomer (lower riser), core barrel, RPV bottom\nhead, flow diverter] | 578\nCore Region (fuel assembly region and reflector cooling channels) | 89\nSG Region | 621\nPZR Region (main steam plenums, PZR, RPV top head) | 578\nPZR Region, cylindrical (main steam plenums and PZR) | 487\n[Table 5.1-2: Primary System Temperatures and Flow Rates]\n% | MWt | % | (Kg/s) | Core dT | T (°F)\nCold | T (°F)\navg | T (°F)\nHot\nBest-Estimate Flow\n0 | 0 | 0-12 | 0-68.5Note(1) | 0 | Note(1) | 425.5 | Note(1)\n15 | 24 | 47.7 | 280.2 | 31.7 | 528.5 | 543.3 | 558.2\n50 | 80 | 75.6 | 443.7 | 66.5 | 512.2 | 543.3 | 574.4\n75 | 120 | 88.9 | 521.6 | 84.6 | 503.8 | 543.3 | 582.9\n100 | 160 | 100 | 587.0 | 99.8 | 496.6 | 543.3 | 590.1\nMinimum Design Flow\n100 | 160 | 91.7 | 538.5 | 107.60 | 487.4 | 538.7 | 590.1\nMaximum Design Flow\n100 | 160 | 112.5 | 660.5 | 89.65 | 507.8 | 548.9 | 590.0",
+      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance across different power levels by establishing steady-state parameters such as coolant temperatures, flow rates, and pressures, using both software and manual calculations. It accounts for uncertainties in flow resistances and design requirements, ensuring efficient operation, safety margins, and minimal pressure losses to support the plant’s natural circulation design.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "12",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 5.1-1",
+          "page": 16,
+          "caption": "NuScale Power Module Major Components"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.1-2",
+          "page": 17,
+          "caption": "Reactor Coolant System Simplified Diagram"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.1-3",
+          "page": 18,
+          "caption": "Reactor Coolant System Schematic Flow Diagram"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.1-1",
+          "page": 14,
+          "caption": "Reactor Coolant System Volumes",
+          "structured_text": "RCS Region | Nominal\nVolume (ft3)*\nHot Leg (lower riser, riser transition, upper riser, riser supports) | 635\nCold Leg [feedwater plenums, downcomer transition, downcomer (lower riser), core barrel, RPV bottom\nhead, flow diverter] | 578\nCore Region (fuel assembly region and reflector cooling channels) | 89\nSG Region | 621\nPZR Region (main steam plenums, PZR, RPV top head) | 578\nPZR Region, cylindrical (main steam plenums and PZR) | 487"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.1-2",
+          "page": 15,
+          "caption": "Primary System Temperatures and Flow Rates",
+          "structured_text": "% | MWt | % | (Kg/s) | Core dT | T (°F)\nCold | T (°F)\navg | T (°F)\nHot\nBest-Estimate Flow\n0 | 0 | 0-12 | 0-68.5Note(1) | 0 | Note(1) | 425.5 | Note(1)\n15 | 24 | 47.7 | 280.2 | 31.7 | 528.5 | 543.3 | 558.2\n50 | 80 | 75.6 | 443.7 | 66.5 | 512.2 | 543.3 | 574.4\n75 | 120 | 88.9 | 521.6 | 84.6 | 503.8 | 543.3 | 582.9\n100 | 160 | 100 | 587.0 | 99.8 | 496.6 | 543.3 | 590.1\nMinimum Design Flow\n100 | 160 | 91.7 | 538.5 | 107.60 | 487.4 | 538.7 | 590.1\nMaximum Design Flow\n100 | 160 | 112.5 | 660.5 | 89.65 | 507.8 | 548.9 | 590.0"
+        }
+      ]
+    },
+    "nuscale_ch05_0005": {
+      "node_id": "nuscale_ch05_0005",
+      "title": "System Components",
+      "content": "NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-3 Revision 5opened to allow feedwater to recirculate through the DHRS heat exchangers and \nsecondary water chemistry conditions for we t layup are established. The SGs are then \nisolated from the main steam and feedwater systems. PZR wate r level is reduced using the \nchemical volume control system to match th e water level in the CNV in preparation for \nopening the RVVs and RRVs. Nitrogen is vent ed from the PZR through the RPV high point \ndegasification line until PZR pressure matc hes containment pressu re. When the PZR and \ncontainment pressure and water level are matched, the RVVs and RRVs are opened.\n5.1.3 System Components\n5.1.3.1 Reactor Pressure Vessel\nThe RPV is a metal vessel that forms part of the RCPB and is  a barrier to the release of \nfission products. Most of the reactor coolant is contained in the RPV. The RPV is \nsupported laterally and vertically by th e CNV. The RPV contains and supports the \nreactor core, RVI, steam generators, and PZR.  The RPV provides pe netrations, support, \nand alignment for the control rod drive syst em. The RPV also provides penetrations and \nattachment locations for the RCS instruments, the ECCS valves (RVVs and RRVs), and \nRCS piping (RCS injection, RCS discharg e, PZR spray supply, and RPV high point \ndegasification lines). In addition, the RPV also provides steam and feedwater plenums \nfor the steam generators and RSV penetrations.\nThe RPV and appurtenances are fu rther described in Section 5.3. \n5.1.3.2 Reactor Cool ant System Piping\nThe RCS piping external to the RPV consists of the following lines: \n• two PZR spray line branches from a common spray header \n• RPV high point degasification line \n• RCS injection line \n• RCS discharge line \nThe RCS injection line has branch lines that connect to each of the ECCS valve reset \nvalves.\nThe RCS piping is further described in Section 5.4.\n5.1.3.3 Pressurizer \nThe PZR, which is integral to  the RPV, occupies the volume inside the RPV above the \nPZR baffle plate. The RCS co mponents in the PZR volume  are the PZR spray nozzles \n(which are part of the RVI) and the PZR heat er assemblies. The PZR provides a point in \nthe RCS where liquid and vapor are main tained in equilibrium under saturated \nconditions at a temperature greater than THOT for pressure contro l of the RCS during \nsteady-state operations and transients. Maintaining the saturated conditions higher \nthan THOT ensures the reactor cool ant remains subcooled duri ng normal operations. \nThe PZR also serves as a surge volume.NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-4 Revision 5The PZR is further described in Section 5.4.\n5.1.3.4 Reactor Vessel Internals\nThe RVI contain several sub-assemblies th at provide support and alignment for the \ncore, the control rod assemblies, the control rod drive shafts, survei llance capsules, and \nthe instrument guide tubes. Additionally, the RVI channel reactor coolant flow from the reactor core to the SGs and back within the RPV.\nThe RVI sub-assemblies include the core support assembly, surveillance capsule \nassemblies, lower riser assembly, upper rise r assembly, flow diverter, and PZR spray \nnozzles.\nThe RVI are further described in  Section 3.9.5 and Section 5.3.\n5.1.3.5 Reactor Safety Valves\nTwo pilot operated, self-actuating RSVs connect to the top of the RPV upper head and \ndischarge directly to the CNV. These valv es are a part of the RCPB and provide \noverpressure protection as required by th e American Society of Mechanical Engineers \n(ASME) Boiler and Pressure Vessel Code. \nThe RSVs are further described in Section 5.2.\n5.1.3.6 Emergency Core Cooling Valves\nThe ECCS valves consist of three RVVs an d two RRVs. The RVVs connect to the upper \nhead portion of the RPV and discharge the PZR steam space directly to the CNV. Two \nRRVs connect to the RPV shell just above the main closure flange. When opened, they permit recirculation of water in the CNV ba ck into the RPV and ultimately through the \ncore. The ECCS valves are a part of the RCPB and are used during emergency core \ncooling operation. The RVVs also provide overpressure protection during operations at low temperature conditions.\nThe RVVs and RRVs are furthe r described in Section 6.3.\n5.1.3.7 Steam Generators\nThe SGS is an integral part of the RP V (although not a component of the RCS) \ncomposed of the SG tubes, SG tube support s, steam and feedwater piping inside \ncontainment, SG tube inlet flow restrictor s, feed plenums, and steam plenums. The \ndesign contains two independent, but inte rtwined, SGs located inside the RPV that \nfacilitate heat transfer to the secondary co olant system and provide redundancy for the \nDHRS. The SGs are a once-through, helical-c oil design, with primary-side reactor \ncoolant outside the tubes and secondary-side  fluid inside the tubes. On the primary \nside, the reactor coolant flows downward across the outside of the tubes, transferring \nheat to the fluid inside the SG tubes. On  the secondary side, preheated feedwater \nenters the two feed plenums at the bottom  of each SG, flows up the helical tubes \nwhere it is heated, boiled, and superheated, and exits the two steam plenums at the NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-5 Revision 5top of each SG. The DHRS is connected to the stea m and feed piping to permit use of \nthe SG to remove decay heat  from the primary coolant.\nThe SGs are further described in Section 5.4.\n5.1.4 System Evaluation\nTo optimize performance of the NuScale Power Plant over the range of  power levels within \nthe design basis, steady state values for primary and secondary side parameters are \nestablished as a function of reactor power. Th e following criteria are considered to define \noptimal performance: maximizing electrical ge neration, using support systems efficiently, \nand providing margin to analytical limits . The following parameters are determined: \nprimary coolant temperatures, primary coolant flow rates, PZR water level, SG water level \nand mass, feedwater and steam flow rates,  feedwater and steam pressure, and steam \nsuperheat. The steady state parameters are ca lculated using the thermal hydraulic software \nNRELAP5 and are verified by hand calculation.\nCalculations establish a best-estimate flow , maximum flow, and minimum flow for the \napplicable design considerations , as well as the primary cool ant temperatures at each flow \ncondition. In establishing the range of design flows, the calculations account for uncertainties in the component flow resistances, the amount of core bypass flow, and the \nthermal head capability. Bounding uncertaintie s are determined based on testing data and \ndesign requirements.\nThe pressure losses through the RCS flow pa th are very low, to support the natural \ncirculation design of the RCS. Since the pressure losses due to flow are small, the pressure at any location in the RCS flow  path is primarily a function of the static head. The primary \ncoolant flows over the outside of the helica l SG tubes; therefore,  SG tube plugging \nuncertainties are not applicable to the prim ary coolant natural circulation flow rate \ndetermination.\nMinimum design flow is the lowest expected va lue for the primary coolant flow rate and is \ncalculated by biasing analytical uncertaintie s to minimize the flow rate. Minimum design \nprimary coolant flow rate is us ed in design analyses where it  is bounding to assume a low \nflow rate.\nMaximum design flow is the highest expected value for the primary coolant flow rate. \nMaximum design flow is calculated by biasin g analytical uncertainties to maximize the \nprimary coolant flow rate. Maximum design prim ary coolant flow rate is used in design \nanalyses where it is bounding to assume a high flow rate.\nThe module heatup system is used to heat up the RCS and provide primary coolant flow \nbefore the reactor is critical . Between hot zero power and 15 percent reactor power, the \nheat generated from the reactor core is used to heat up the RCS to the normal operating \naverage coolant temperature. Between 15 perc ent reactor power and full power operating \nconditions, the average primary coolant temperat ure is maintained at a constant value. The \nfull power average coolant temperature is higher for higher pr imary coolant flow \nconditions, and lower for lo wer primary coolant flow co nditions. This phenomenon \nprovides for similar hot leg te mperatures at full power condit ions, which allows for the SG \nto generate sufficient superheat independent of the full power primary coolant flow rate.",
+      "summary": "This section describes the main components of the NuScale reactor system, focusing on the Reactor Pressure Vessel (RPV), Reactor Coolant System (RCS) piping, and the Pressurizer (PZR). The RPV serves as a primary barrier to fission product release and houses key reactor internals, while the RCS piping connects various system elements, and the PZR is integrated into the RPV to help control system pressure. Each component’s function and connections within the overall system are briefly outlined.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "10",
+      "hop": 1,
+      "references": []
     },
     "nuscale_ch05_0003": {
       "node_id": "nuscale_ch05_0003",
       "title": "Design Basis",
-      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain fuel integrity, minimize solid deposits, and ensure uniform boron concentration under all operating conditions. These design bases collectively support the safety and performance of each NuScale Power Module.",
+      "content": "NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-1 Revision 5CHAPTER 5 REACTOR COOLANT SY STEM AND CONNECTING SYSTEMS\n5.1 Summary Description\nThe reactor coolant system (RCS) provides for the circulation of the primary coolant. The \nNuScale Power, LLC (NuScale) design relies on na tural circulation flow for the reactor coolant \nand does not include reactor coolant pumps or an external piping system. The RCS is a subsystem of the NuScale Power Module (NPM). The RCS includes the reactor pressure vessel \n(RPV) and integral pressurizer (PZR), the reactor ve ssel internals (RVI), the reactor safety valves \n(RSVs), RCS piping inside the containment vessel (CNV) (RCS injection, RC S discharge, PZR spray \nsupply, and RPV high-point degasification lines), the PZR control cabinet and the RCS \ninstruments and cables.\nChapter 1 provides an overview of the NuScale Po wer Plant design that includes up to twelve \nindividual NPMs. The description in this chapter applies to ea ch of the NPMs individually, \nunless otherwise stated.\n5.1.1 Design Basis\nThe performance and safety design bases of the RCS and its major components are \ninterrelated. These design ba ses are listed as follows:\n• The RCS promotes natural circulation to tr ansfer approximately 160 MW thermal power \nfrom the reactor core to the steam generato r system (SGS) during power operation and \nthe heat produced when the reactor is subcri tical, including the initial phase of plant \ncooldown. \n• The RCS provides coolant to the reactor core such that specified acceptable fuel design \nlimits are not violated during normal oper ation including the ef fects of anticipated \noperational occurrences. \n• The RCS water chemistry is maintained so that solid deposits on the reactor core and \nthe steam generators (SGs) are minimized. \n• The RCS maintains a uniform concentration of soluble boron concentration during \nnormal, transient, and accident conditions, and adequate chemical and thermal mixing to maintain reactivity.\n• Steady-state temperatures are maintained th roughout the reactor coolant to maintain \nthe temperature of the RVI and RPV below de sign limits during normal and accident \nconditions. \n• The PZR has sufficient capacity  to control reactor coolant pressure within the permitted \noperating range for normal operating transients without actuating the RSVs.\n• The RCS removes decay heat from the reac tor core during shutdown and refueling \noperations by a combination of heat tr ansfer to the DHRS through the SGS and \nconvection from the RPV to the reactor pool.\n• The RCS provides the water used as the co re neutron moderator and reflector blocks \nthat reflect a portion of the neutrons that esca pe the fuel region, improving neutron \neconomy in the core. NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-2 Revision 5• The RCS provides a degasification line to remove noncondensible gases from the PZR \nvolume at the top of the RPV during normal  operation. Reactor vent valves (RVVs), \nwhich are opened to discharge the PZR steam space directly to  the CNV as part of ECCS \noperation, also allow noncondensible ga ses to be removed from the PZR during \nemergency core cooling operation.\n• The pressure-retaining portions of the RCS assist in maintaining the integrity of the \nreactor coolant pressure boun dary (RCPB) that provides a barrier to the release of \nradionuclides. \n5.1.2 System Description\nThe RCS is a subsystem of the NPM and is locate d inside the CNV. The RCS includes the RPV, \nthe integral PZR, the RVI, the RSVs, reactor coolant piping inside the CNV and the RCS instruments and controls.\nThe RCS interfacing systems include the chem ical and volume control system via the \ncontainment system, the emergency core coolin g system (ECCS) valves consisting of RVVs \nand reactor recirculation valves (RRVs), the CNV, control rod drive system, SGS, and the \nprimary sampling system (through the chemical and volume control system). \nA diagram of an individual NPM is provided in Figure 5.1-1 showing the RPV within the CNV \nand denoting major RCS components. A simplifi ed RCS diagram is provided in Figure 5.1-2.\nDuring normal operation, the RCS transports heat from the reactor core to the SGs by \nnatural circulation. The motive force for the reactor coolant flow is natural convection, \ndriven by differences in coolant density betw een the hot coolant leaving the reactor core \nand the colder coolant leaving the SGs, an d by the elevation difference between the \nreactor core (heat source) and th e SGs (heat sink). The reactor coolant is heated in the core, \ntravels upward through the lower and upper ri ser assemblies, and at the top of the upper \nriser assembly is turned downward by the PZR baffle plate. The heat ed coolant then flows \ninto the annular space between the upper riser assembly and the vertical shell of the RPV. \nThis annular space contains the SG helical tube bundles. As the reactor coolant flows \ndownward across the outside of the SG tubes, it transfers heat to the secondary coolant \ninside the tubes. Heat transfer to the SG  tubes lowers the temperature of the reactor \ncoolant, increasing its density and causing the cooler, dense coolant to sink into the annular downcomer space between the lower ri ser assembly and core  barrel and continue \ninto the lower plenum near the bottom of th e RPV where the reactor coolant returns to the \nreactor core. \nA schematic flow diagram of the RCS is provided in Figure 5.1-3, denoting major \ncomponents, and major RCS loop flow stages  during normal steady-state, full-power \noperating conditions. In addition, Ta ble 5.1-1 identifies the RCS volumes. \nThe SGS (in conjunction with the main steam and main feedwater systems) are used to \nremove decay heat from the RCS during the initial phase of module cooldown. When decay \nheat is sufficiently low and the RCS temperature  is low enough to support filling the CNV, \nthe CNV is filled to the PZR baffle plate by the containment flooding system. RCS cooldown \ncontinues passively as decay heat is tr ansferred through the RPV to the flooded \ncontainment and through the CNV to the reactor pool. The DHRS actuation valves are ",
+      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain proper coolant flow, water chemistry, and boron concentration to protect fuel integrity and support safe operation under normal and transient conditions.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "8",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 5.1-1",
+          "page": 16,
+          "caption": "NuScale Power Module Major Components"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.1-2",
+          "page": 17,
+          "caption": "Reactor Coolant System Simplified Diagram"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.1-3",
+          "page": 18,
+          "caption": "Reactor Coolant System Schematic Flow Diagram"
+        }
+      ]
     },
     "nuscale_ch05_0019": {
       "node_id": "nuscale_ch05_0019",
       "title": "Reactor Coolant System Component and Subsystem Design",
-      "summary": "This section describes the design of the Reactor Coolant System (RCS) components and subsystems in the NuScale Power Module, detailing the integration of the reactor, steam generators, pressurizer, safety and ECCS valves, and associated piping within the reactor pressure vessel (RPV). It also outlines the configuration and boundaries of the steam generator system, emphasizing the integral design of the steam generators within the RPV and the separation between primary and secondary sides.",
+      "content": "NuScale Final Safety Analysis Report Reactor Coolant System Component and Subsystem Design\nTier 2 5.4-1 Revision 55.4 Reactor Coolant System Component and Subsystem Design\nThe reactor pressure vess el (RPV) of each integrated NuScal e Power Module (NPM) contains the \nreactor and reactor vessel intern als; a pressurizer; two steam ge nerators (SGs); reactor safety \nvalves (RSVs); emergency core cooling system (ECCS) valves; reactor coolant system (RCS) \ninjection, discharge, pressurizer spray, and high-point degasification vent lines; and a decay \nheat removal system (DHRS).\nThe design basis and description of the reactor and reactor vessel internals are provided in \nChapter 4. The design basis and description of the RSVs are pr ovided in Section 5.2.2 and the \ndesign basis and description of the ECCS valves  (i.e., reactor vent va lves (RVVs) and reactor \nrecirculation valves (RRVs)) are provid ed in Section 6.3 and Section 5.2.2. \n5.4.1 Steam Generators\nThe steam generator system (SGS)  consists of: the FW piping from the CNTS to the feed \nplenum access port; thermal relief valve; feed  plenum access port an d access cover; steam \ngenerators (SGs); steam plenum cap; steam pl enum access port and access cover; and MS \npiping from the steam plenum access port to the CNTS. The FW plenum is within the feed \nplenum access port with the tube sheet fo rming the boundary between the primary and \nsecondary side. The MS plenum is within th e RPV integral steam plenum shell with the \nsteam plenum cap and RPV integral baffle  plate forming the bo undary between the \nprimary and secondary side. The FW piping, ther mal relief valve, steam plenum access port, \nand MS piping of the SGS form th e secondary side of the SGS. \nThe SGs in the NPM are integral to the RPV. The RPV forms the SG shell and provides the \nouter pressure boundary of the SGs. The stea m generator tube, tube-to-tubesheet welds, \nand tubesheets provide part of the reactor co olant pressure bounda ry (RCPB). Refer to \nSection 5.2 and Section 5.3 for description and design basis informat ion regarding the RPV \nand the RCPB.\n5.4.1.1 Design Basis\nThe SGs transfer sensible heat from the RC S to the secondary steam system and supply \nsuperheated steam to the steam and power conversion cycle as described in Chapter 10. \nTable 5.4-1 provides a summary of the oper ating conditions fo r thermal-hydraulic \ndesign of the SGs. The secondary plant pa rameters represent fu ll-power steam flow \nconditions at the outlet of the steam pl enums at best estima te primary coolant \nconditions.\nThe SGs provide sufficient stable flow on th e secondary side of the tubes at operational \npower levels and mass flow rates to prec lude reactor power oscillations that could \nresult in exceeding specified acceptable fuel design limits.\nThe secondary side of each SG tube has a fl ow restriction device that is designed to \nreduce the potential for secondary side density wave oscillations. Density wave \noscillations result in transient loads on applicable regions of the RCS integral RPV and \nSG. The transient load contributions from this event are consid ered in the ASME \n\n--- Referenced Tables (structured) ---\n[Table 5.4-1: Steam Generator Full-Load Thermal-Hydraulic Operating Conditions (Best Estimate)]\n(1)Total heat transfer ( | MW\nt | ) | 159.13\nSG | outlet pressure (psia) | 500.1\nSG | outlet temperature (°F) | 584.4\nSG | inlet temperature (°F) | 299.7\nSG | flow (lbm | / | hr) | 532298",
+      "summary": "This section describes the design of the NuScale Power Module's Reactor Coolant System (RCS) components and subsystems, including the reactor pressure vessel, steam generators, safety and emergency valves, and associated piping. It details how the steam generators are integrated within the reactor vessel, forming part of the primary and secondary system boundaries, and references where further design specifics can be found in other report sections.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "91",
-      "hop": 2
-    },
-    "nuscale_ch05_0017": {
-      "node_id": "nuscale_ch05_0017",
-      "title": "Reactor Vessel Integrity",
-      "summary": "This section outlines the procedures and regulatory compliance measures for maintaining reactor vessel integrity in the NuScale Power Plant. It details the development of operating procedures to ensure pressure-temperature limits are not exceeded, evaluates the vessel’s resistance to pressurized thermal shock and upper-shelf energy degradation over a 60-year design life, and confirms that all criteria remain within regulatory limits.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "73",
-      "hop": 3
-    },
-    "nuscale_ch05_0009": {
-      "node_id": "nuscale_ch05_0009",
-      "title": "Overpressure Protection",
-      "summary": "This section outlines NuScale's compliance with NRC regulations and ASME Boiler and Pressure Vessel Code (BPVC) requirements for overpressure protection of the reactor coolant boundary. It details how code cases for design, fabrication, construction, preservice, and inservice inspections and testing are selected and verified according to specific regulatory guides and federal regulations, ensuring all conditions and requirements are met. Table 5.2-1 consolidates the specific ASME code cases used.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "21",
-      "hop": 3
-    },
-    "nuscale_ch05_0004": {
-      "node_id": "nuscale_ch05_0004",
-      "title": "System Description",
-      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes components such as the reactor pressure vessel, pressurizer, and associated piping and controls. The RCS removes heat from the reactor core to the steam generators using natural circulation, and it incorporates features for removing noncondensible gases and maintaining the integrity of the pressure boundary to prevent radionuclide release. The system interfaces with several other subsystems, including emergency core cooling and chemical control systems.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "9",
-      "hop": 4
+      "hop": 2,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 5.4-1",
+          "page": 132,
+          "caption": "Steam Generator Full-Load Thermal-Hydraulic Operating Conditions (Best Estimate)",
+          "structured_text": "(1)Total heat transfer ( | MW\nt | ) | 159.13\nSG | outlet pressure (psia) | 500.1\nSG | outlet temperature (°F) | 584.4\nSG | inlet temperature (°F) | 299.7\nSG | flow (lbm | / | hr) | 532298"
+        }
+      ]
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch05_0005",
-      "target": "nuscale_ch05_0006",
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0005",
       "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section B discusses the establishment of steady state values for system parameters at various power levels, which directly relates to the 100% power flow and minimum design flow conditions referenced in Table 5.1-2, while Section A describes system component operations that are influenced by these flow conditions."
-    },
-    {
-      "source": "nuscale_ch05_0005",
-      "target": "nuscale_ch05_0003",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes specific operational procedures involving system components like the pressurizer and chemical volume control system, which are part of the broader reactor coolant system design and functions outlined in Section B."
+      "confidence": 0.8,
+      "description": "Section A discusses how steady state flow parameters are established for different reactor power levels, while Section B describes system component operations that are affected by or set up for those flow conditions, connecting both sections through the operational states defined in Table 5.1-2."
     },
     {
       "source": "nuscale_ch05_0006",
       "target": "nuscale_ch05_0003",
       "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A discusses how steady state flow parameters are established for different power levels to optimize system performance, while Section B outlines the design basis and natural circulation flow approach of the reactor coolant system, providing the foundational context for the flow conditions compared in Table 5.1-2."
+      "confidence": 0.9,
+      "description": "Section A discusses how steady state flow parameters are established for optimal performance at various power levels, while Section B outlines the design basis and components of the reactor coolant system that enable these flow conditions, connecting the operational analysis to the system's foundational design."
     },
     {
-      "source": "nuscale_ch05_0019",
-      "target": "nuscale_ch05_0005",
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch05_0003",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A outlines the design and components of the reactor coolant system, which establishes the operational parameters (such as flow conditions) that are then referenced in Section B's description of system operations and transitions, including flow adjustments during specific procedures."
+      "description": "Section A describes specific operational procedures and component manipulations (e.g., PZR water level adjustment, nitrogen venting) that are possible due to the design features and system boundaries established in Section B's general description of the reactor coolant system (RCS) and its reliance on natural circulation."
     },
     {
       "source": "nuscale_ch05_0019",
       "target": "nuscale_ch05_0006",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section B establishes steady state flow parameters at various power levels, including 100% and minimum design flow, which are implemented in the component and subsystem design described in Section A."
+      "description": "Section B establishes steady state parameter values for various power levels, including 100% and minimum design flow conditions, which are detailed in Table 5.1-2 and are implemented in the component and subsystem designs described in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0019",
+      "target": "nuscale_ch05_0005",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A outlines the design and components of the reactor coolant system, which establishes the operational parameters such as 100% power flow and minimum design flow, while Section B describes operational procedures and system states that depend on these design flow conditions for safe transitions and system isolation."
     },
     {
       "source": "nuscale_ch05_0019",
       "target": "nuscale_ch05_0003",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A provides detailed descriptions of the reactor coolant system components and subsystems that are summarized in Section B's general overview of the system's design basis and function."
-    },
-    {
-      "source": "nuscale_ch05_0017",
-      "target": "nuscale_ch05_0005",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A discusses the development of operating procedures to ensure reactor vessel integrity under various power conditions, while Section B describes system component operations during transitions, both of which are connected by the need to maintain safe pressure and temperature limits during different flow conditions as referenced in Table 5.1-2."
-    },
-    {
-      "source": "nuscale_ch05_0017",
-      "target": "nuscale_ch05_0006",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.9,
-      "description": "Section B establishes steady state flow parameters at various power levels, which Section A relies on to develop operating procedures that ensure reactor vessel integrity under both 100% power and minimum design flow conditions."
-    },
-    {
-      "source": "nuscale_ch05_0017",
-      "target": "nuscale_ch05_0003",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A discusses the development of operating procedures to ensure reactor vessel integrity by not exceeding pressure-temperature limits during various power conditions, while Section B provides the design basis and description of the reactor coolant system that establishes the flow conditions (such as 100% power and minimum design flow) referenced in those procedures."
-    },
-    {
-      "source": "nuscale_ch05_0009",
-      "target": "nuscale_ch05_0005",
-      "relation": "SATISFIES",
-      "confidence": 0.7,
-      "description": "Section A outlines regulatory compliance and code requirements for overpressure protection, while Section B describes operational procedures affecting system component conditions, both of which are connected through the design and operational parameters (such as flow conditions) that must comply with the specified codes and requirements."
-    },
-    {
-      "source": "nuscale_ch05_0009",
-      "target": "nuscale_ch05_0006",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.9,
-      "description": "Section B establishes steady state flow parameters at various power levels, including 100% and minimum design flow, which Section A relies on to ensure overpressure protection and compliance with regulatory codes under those conditions."
-    },
-    {
-      "source": "nuscale_ch05_0009",
-      "target": "nuscale_ch05_0003",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A references compliance with regulatory codes for overpressure protection, while Section B provides the general design basis and description of the reactor coolant system, establishing the system context in which overpressure protection requirements are applied."
-    },
-    {
-      "source": "nuscale_ch05_0017",
-      "target": "nuscale_ch05_0009",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses the development of operating procedures to ensure reactor vessel pressure-temperature limits are not exceeded during various flow conditions, while Section B outlines compliance with ASME and NRC overpressure protection requirements, both addressing how the reactor vessel's integrity is maintained under different operational scenarios such as 100% power and minimum design flow."
-    },
-    {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0005",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A describes the function of the RCS degasification line and RVVs in removing noncondensible gases from the PZR during both normal and emergency operations, while Section B provides specific operational steps involving the degasification line and RVVs during system layup and pressure equalization, thus Section B specifies the operational context for the general system functions described in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0006",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the system features and operational modes (including flow paths and components) that enable different flow conditions, while Section B evaluates how steady state flow parameters (such as those at 100% power and minimum design flow) are established and optimized based on the system's capabilities described in Section A."
-    },
-    {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch05_0003",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes specific operational features of the RCS, such as degasification and emergency venting, while Section B provides the general design basis for the RCS, including its reliance on natural circulation, thus Section A provides details that specify the general system described in Section B."
+      "description": "Section A provides detailed descriptions of the reactor coolant system components and subsystems, which are specified in general terms in Section B's summary of the design basis, connecting them through the design values and system configuration relevant to flow conditions."
     }
   ]
 }

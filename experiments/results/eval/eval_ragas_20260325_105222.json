@@ -1,0 +1,123 @@
+{
+  "timestamp": "2026-03-25T10:52:22.040153",
+  "evaluation_framework": "RAGAs v0.4",
+  "config": {
+    "model": "gpt-4.1",
+    "evaluator_model": "gpt-4.1",
+    "embedding_model": "text-embedding-3-small",
+    "max_hops": 4,
+    "top_k": 2,
+    "question_type_filter": null,
+    "total_questions": 3,
+    "errors": 0
+  },
+  "metrics_description": {
+    "faithfulness": "Fraction of claims in the answer that are supported by the retrieved context (0-1)",
+    "answer_relevancy": "How relevant the answer is to the question, measured by reverse question generation (0-1)",
+    "context_recall": "Fraction of expected answer sentences supported by retrieved context (0-1)",
+    "factual_correctness": "Factual overlap between agent answer and expected answer (0-1)",
+    "keyword_hit": "Fraction of expected keywords present in the agent answer (0-1)"
+  },
+  "summary": {
+    "faithfulness": 0.9333,
+    "answer_relevancy": 0.9918,
+    "context_recall": 1.0,
+    "factual_correctness": 0.4467,
+    "keyword_hit": 0.5237
+  },
+  "by_type": {
+    "table_only": {
+      "count": 1,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9754,
+      "context_recall": 1.0,
+      "factual_correctness": 0.5,
+      "keyword_hit": 0.571
+    },
+    "text_only": {
+      "count": 2,
+      "faithfulness": 0.9,
+      "answer_relevancy": 1.0,
+      "context_recall": 1.0,
+      "factual_correctness": 0.42,
+      "keyword_hit": 0.5
+    }
+  },
+  "results": [
+    {
+      "id": "Q136",
+      "type": "text_only",
+      "question": "Is the NuScale natural circulation design adequate for removing core heat without reactor coolant pumps?",
+      "expected_answer": "Yes. The natural circulation design is adequate because the NuScale core has a much lower power density than conventional PWRs, and the tall RPV with large height difference between heat source (core) and heat sink (SG) provides sufficient buoyancy-driven flow. Analysis shows 587 kg/s flow at 100% power is sufficient for heat removal.",
+      "agent_answer": "Yes, the NuScale natural circulation design is adequate for removing core heat without reactor coolant pumps, as the system maintains primary coolant temperatures below 420°F within 36 hours using passive natural circulation and the Decay Heat Removal System, as demonstrated by the temperature cooldown curves and system design data.",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "context_recall": 1.0,
+      "factual_correctness": 0.29,
+      "keyword_hit": 0.4,
+      "kg_nodes": 13,
+      "kg_edges": 47,
+      "hops_used": 4,
+      "retrieved_contexts_count": 14,
+      "agent_sec": 107.6,
+      "eval_sec": 32.7,
+      "total_sec": 140.2,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0002] Summary Description | node: [nuscale_ch05_0022] Decay Heat Removal System | node: [nuscale_ch05_0003] Design Basis | edge: SPECIFIES | edge: SPECIFIES",
+        "Hop 2: node: [nuscale_ch05_0006] System Evaluation | node: [nuscale_ch05_0024] Pressurizer | node: [nuscale_ch05_0025] References | node: [nuscale_ch05_0013] References | node: [nuscale_ch05_0005] System Components | edge: SUPPORTS | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: IS_PREREQUISITE_OF | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SUPPORTS | edge: REFERENCES | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: SPECIFIES | edge: IS_PREREQUISITE_OF | edge: REFERENCES | edge: REFERENCES | edge: SUPPORTS | edge: SPECIFIES | edge: REFERENCES | edge: SPECIFIES | edge: REFERENCES | edge: SPECIFIES | edge: IS_PREREQUISITE_OF",
+        "Hop 3: node: [nuscale_ch05_0017] Reactor Vessel Integrity | node: [nuscale_ch05_0021] Reactor Coolant System Piping | node: [nuscale_ch05_0019] Reactor Coolant System Component and Sub | node: [nuscale_ch05_0018] References | edge: SPECIFIES | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: SEMANTIC | edge: SUPPORTS | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: SPECIFIES | edge: REFERENCES",
+        "Hop 4: node: [nuscale_ch05_0023] Reactor Coolant System High-Point Vents | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS"
+      ]
+    },
+    {
+      "id": "Q137",
+      "type": "text_only",
+      "question": "Does the NuScale vacuum containment design provide adequate pressure suppression during a LOCA?",
+      "expected_answer": "Yes. The vacuum CNV provides effective pressure suppression because steam released during a LOCA condenses on the cool CNV inner wall, which is maintained at reactor pool water temperature. The vacuum starting condition and condensation mechanism keep containment pressure well below design limits without active spray systems.",
+      "agent_answer": "Yes, the NuScale vacuum containment design provides adequate pressure suppression during a LOCA by maintaining subatmospheric pressure, enabling rapid passive cooling that keeps peak containment pressure below design limits and ensures containment integrity without the need for a suppression pool.",
+      "faithfulness": 0.8,
+      "answer_relevancy": 1.0,
+      "context_recall": 1.0,
+      "factual_correctness": 0.55,
+      "keyword_hit": 0.6,
+      "kg_nodes": 19,
+      "kg_edges": 69,
+      "hops_used": 4,
+      "retrieved_contexts_count": 20,
+      "agent_sec": 162.0,
+      "eval_sec": 35.5,
+      "total_sec": 197.6,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch01_0171] SRP 6.5.5, Rev 1: Pressure Suppression P | node: [nuscale_ch01_0779] DSRS 15.6.5, Rev 0: Loss-of-Coolant Acci | node: [nuscale_ch01_0780] SRP 15.6.5.A, Rev 1: Radiological Conseq | node: [nuscale_ch01_0169] SRP 6.5.3, Rev 3: Fission Product Contro | node: [nuscale_ch01_0022] Engineered Safety Feature Materials | node: [nuscale_ch01_0020] Safety Considerations | edge: CONTRADICTS | edge: CONTRADICTS | edge: SUPPORTS | edge: SPECIFIES | edge: SPECIFIES | edge: REFERENCES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: CONTRADICTS",
+        "Hop 2: node: [nuscale_ch01_0601] SRP 13.3, Rev 3: Emergency PlanningII.22 | node: [nuscale_ch01_0701] DSRS 15.1.6, Rev 0: Loss of Containment  | node: [nuscale_ch01_0357] DSRS 9.3.4, Rev 0: Chemical and Volume C | node: [nuscale_ch01_0776] DSRS 15.6.5, Rev 0: Loss-of-Coolant Acci | node: [nuscale_ch01_0699] DSRS 15.1.6, Rev 0: Loss of Containment  | node: [nuscale_ch01_0604] SRP 13.3, Rev 3: Emergency PlanningII.25 | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: CONTRADICTS | edge: REFERENCES | edge: REFERENCES | edge: REFERENCES | edge: SPECIFIES | edge: IS_PREREQUISITE_OF | edge: SEMANTIC | edge: SUPPORTS | edge: SUPPORTS | edge: REFERENCES | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES | edge: IS_PREREQUISITE_OF | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS | edge: SPECIFIES | edge: SUPPORTS | edge: IS_PREREQUISITE_OF",
+        "Hop 3: node: [nuscale_ch01_0052] Comparison with Other Facilities | node: [nuscale_ch01_0694] DSRS 15.1.6, Rev 0: Loss of Containment  | node: [nuscale_ch01_0660] SRP 15.0.2, (March 2007): Review of Tran | node: [nuscale_ch01_0717] DSRS 15.2.6, Rev 0: Loss of nullmergency | node: [nuscale_ch01_0781] SRP 15.6.5.A, Rev 1: Radiological Conseq | edge: IS_PREREQUISITE_OF | edge: IS_PREREQUISITE_OF | edge: SPECIFIES | edge: CONTRADICTS | edge: SPECIFIES | edge: SPECIFIES | edge: IS_PREREQUISITE_OF | edge: SPECIFIES | edge: SPECIFIES | edge: CONTRADICTS | edge: SUPPORTS | edge: IS_PREREQUISITE_OF | edge: REFERENCES | edge: REFERENCES | edge: SATISFIES | edge: SATISFIES | edge: SATISFIES | edge: SPECIFIES | edge: IS_PREREQUISITE_OF | edge: SUPPORTS | edge: SUPPORTS | edge: SPECIFIES | edge: SPECIFIES | edge: SATISFIES",
+        "Hop 4: node: [nuscale_ch01_0023] Containment Systems | node: [nuscale_ch01_0700] DSRS 15.1.6, Rev 0: Loss of Containment  | edge: SUPPORTS | edge: SATISFIES | edge: SATISFIES | edge: SUPPORTS | edge: IS_PREREQUISITE_OF | edge: SATISFIES"
+      ]
+    },
+    {
+      "id": "Q138",
+      "type": "table_only",
+      "question": "Based on Table 5.3-8, do the NuScale RPV materials satisfy the PTS screening criteria of 10 CFR 50.61?",
+      "expected_answer": "Yes. Table 5.3-8 shows that the RTPTS values for all RPV beltline materials are well below the screening criteria of 270 degrees F for plates/forgings and 300 degrees F for welds. The maximum RTPTS is for the weld at 120.4 degrees F, providing a margin of approximately 180 degrees F below the 300 degrees F weld criterion.",
+      "agent_answer": "Yes, based on Table 5.3-8, the NuScale RPV materials satisfy the PTS screening criteria of 10 CFR 50.61, as all calculated RTPTS values for the shell, weld, and bottom head at both 32 and 57 EFPY are well below the regulatory screening limits (e.g., 94.8°F vs. 270°F for the shell at 57 EFPY, 125.9°F vs. 300°F for the weld at 57 EFPY).",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9754,
+      "context_recall": 1.0,
+      "factual_correctness": 0.5,
+      "keyword_hit": 0.571,
+      "kg_nodes": 6,
+      "kg_edges": 13,
+      "hops_used": 3,
+      "retrieved_contexts_count": 7,
+      "agent_sec": 47.3,
+      "eval_sec": 33.0,
+      "total_sec": 80.4,
+      "trajectory": [
+        "Hop 1: node: [nuscale_ch05_0017] Reactor Vessel Integrity | node: [nuscale_ch05_0018] References | node: [nuscale_ch05_0016] Pressure-Temperature Limits, Pressurized | edge: SUPPORTS | edge: SUPPORTS | edge: SUPPORTS",
+        "Hop 2: node: [nuscale_ch05_0015] Reactor Vessel Materials | edge: IS_PREREQUISITE_OF | edge: SPECIFIES | edge: SPECIFIES",
+        "Hop 3: node: [nuscale_ch05_0007] Integrity of Reactor Coolant Boundary | node: [nuscale_ch05_0008] Compliance with Codes and Code Cases | edge: SUPPORTS | edge: SPECIFIES | edge: SPECIFIES | edge: SUPPORTS | edge: SPECIFIES | edge: SPECIFIES | edge: SPECIFIES",
+        "Hop 4: no results"
+      ]
+    }
+  ]
+}

@@ -2,155 +2,507 @@
   "question": "What does Table 1.3-1 say about NuScale fuel assemblies, and how does Figure 5.1-1 show the core region within the module?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0558": {
-      "node_id": "nuscale_ch01_0558",
-      "title": "DSRS 12.3-12.4, Rev 0: Radiation Protection Design FeaturesII.9 RG 8.15",
-      "summary": "This section summarizes the NuScale Final Safety Analysis Report’s conformance with various regulatory guides related to radiation protection design features, as outlined in DSRS 12.3-12.4, Rev 0. It details whether each regulatory guide is applicable, and if so, whether the design fully or partially conforms, with references to supporting sections or tables for further information. Several guides are noted as not applicable, while others are partially or fully met.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "278",
-      "hop": 1
-    },
-    "nuscale_ch05_0004": {
-      "node_id": "nuscale_ch05_0004",
-      "title": "System Description",
-      "summary": "The Reactor Coolant System (RCS) in the NuScale design is located inside the containment vessel and includes components such as the reactor pressure vessel, pressurizer, and associated piping and controls. It removes heat from the reactor core to the steam generators using natural circulation, and features systems for removing noncondensible gases and maintaining pressure boundary integrity to prevent radionuclide release. The RCS interfaces with several other systems, including emergency core cooling and chemical control, to ensure safe and efficient operation.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "9",
-      "hop": 1
-    },
-    "nuscale_ch01_0056": {
-      "node_id": "nuscale_ch01_0056",
-      "title": "Critical Heat Flux Testing - Preliminary Fuel Design",
-      "summary": "This section outlines the verification and confirmation tests for unique NuScale Power Module design features, focusing on areas lacking prior data or operational experience. Specifically, it describes two critical heat flux (CHF) test programs for the fuel design: the preliminary program supported code development and safety analysis, providing data for the NSP2 CHF correlation used in the final fuel design.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "83",
-      "hop": 1
-    },
     "nuscale_ch01_0733": {
       "node_id": "nuscale_ch01_0733",
       "title": "SRP 15.4.1, Rev 3: Uncontrolled Control Rod Assembly Withdrawal From a Subcritical or Low Power Startup ConditionII.1.B Fuel Centerline Temperatures",
-      "summary": "This section confirms that for SRP 15.4.1, Rev 3, regarding uncontrolled control rod assembly withdrawal from a subcritical or low power startup condition, NuScale ensures fuel centerline temperatures remain within safe limits by applying a heat generation rate limit during slower reactivity insertions. This approach ensures that fuel centerline melting limits are not exceeded, demonstrating conformance with regulatory criteria.",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-170 Revision 5\nDSRS 15.2.8, Rev 0: Feedwater \nSystem Pipe Break Inside and Outside Containment (PWR)II.4\nDHRS must be safety grade and \nautomatically initiated when required.Conforms None. 15.2.8\nDSRS 15.2.8, Rev 0: Feedwater \nSystem Pipe Break Inside and \nOutside Containment (PWR)II.5 Assumptions fo r Initial Plant \nConditions and Po stulated FailuresConforms None. 15.2.8\nSRP 15.3.1-15.3.2, Rev 2: Loss \nof Forced Reactor Coolant \nFlow Including Trip of Pump \nMotor and Flow Controller MalfunctionsAll Various Not Applicable\nApplicable only to LWR designs that rely on \nforced reactor coolant fl ow for core cooling. \nThe NuScale design uses passive natural \ncirculation of the primary coolant, eliminating the need for reactor coolant \npumps.Not Applicable\nSRP 15.3.3-15.3.4, Rev 2: \nReactor Coolant Pump Rotor Seizure and Reactor Coolant \nPump Shaft BreakAll Various Not Applicable\nSection 15.3.3 - 15.3.4 ar e applicable only to \nLWR designs that rely on forced reactor coolant flow for core cooling. The NuScale \ndesign uses passive natural circulation of \nthe primary coolant, eliminating the need for reactor coolant pumps.Not Applicable\nSRP 15.4.1, Rev 3: \nUncontrolled Control Rod \nAssembly Withdrawal From a Subcritical or Low Power \nStartup ConditionII.1.A Thermal Margin Limits Conforms\nCritical heat flux (CHF) is more appropriate \nterminology for NuScale phenomena than \ndeparture from nucleate boiling (DNBR).15.4.1\nSRP 15.4.1, Rev 3: \nUncontrolled Control Rod Assembly Withdrawal From a \nSubcritical or Low Power \nStartup ConditionII.1.B Fuel Centerline Temperatures Conforms For slower reactivity insertions, NuScale \nuses a heat generation rate limit to ensure that fuel centerline melting limits are met.15.4.1\nSRP 15.4.1, Rev 3: \nUncontrolled Control Rod \nAssembly Withdrawal From a \nSubcritical or Low Power Startup ConditionII.1.C Uniform Cladding Strain Not Applicable The SRP states that this criterion applies to \nBWRs. NuScale uses the 95/95 MCHFR \napproach to ensure no cladding or fuel \nfailures.Not Applicable\nSRP 15.4.2, Rev 3: \nUncontrolled Control Rod \nAssembly Withdrawal at PowerII.1.A Thermal Margin Limits Conforms\nCHF is more appropriate terminology for \nNuScale phenomenon than DNBR.15.4.2Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section explains that for SRP 15.4.1, Rev 3, regarding uncontrolled control rod assembly withdrawal from a subcritical or low power startup condition, NuScale conforms to regulatory criteria for fuel centerline temperatures. Specifically, NuScale uses a heat generation rate limit during slower reactivity insertions to ensure fuel centerline melting limits are not exceeded.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "298",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
-    "nuscale_ch05_0003": {
-      "node_id": "nuscale_ch05_0003",
-      "title": "Design Basis",
-      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain proper coolant flow, water chemistry, and boron concentration to protect fuel integrity and support safe operation under normal and transient conditions.",
+    "nuscale_ch01_0558": {
+      "node_id": "nuscale_ch01_0558",
+      "title": "DSRS 12.3-12.4, Rev 0: Radiation Protection Design FeaturesII.9 RG 8.15",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-150 Revision 5\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design FeaturesII.2\nRG 1.52 Not Applicable See RG 1.52 in Table 1.9-2. Not Applicable\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.3 RG 1.69 Partially Conforms See RG 1.69 in Table 1.9-2. 12.3.2\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.4 RG 1.97 Partially Conforms See RG 1.97 in Table 1.9-2. 7.2.13\n12.3.4\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design FeaturesII.5\nRG 1.183 Partially Conforms See RG 1.183 in Table 1.9-2. 12.2\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.6 RG 8.2 Not Applicable See RG 8.2 in Table 1.9-2. Not Applicable\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.7 RG 8.8 Partially Conforms See RG 8.8 in Table 1.9-2. 12.3.1\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design FeaturesII.8\nRG 8.10 Not Applicable See RG 8.10 in Table 1.9-2. Not Applicable\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.9 RG 8.15 Not Applicable See RG 8.15 in Table 1.9-2. Not Applicable\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.10 RG 8.19 Conforms None. 12.4\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design FeaturesII.11\nRG 8.25 Not Applicable See RG 8.25 in Table 1.9-2. Not Applicable\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.12 RG 8.38 Partially Conforms See RG 8.38 in Table 1.9-2. 12.3.1\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.13 ANSI/ANS/HPSSC-6.8.1-1981 Conforms None. 12.3.4Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-2: Conformance with Regulatory Guides (Continued)]\n8.39 | Release of Patients Administered\nRadioactive Materials | - | Not Applicable | This guidance governs activities applicable only to\nfacilities that administer radio-pharmaceuticals. | Not Applicable\n8.40 | Methods for Measuring Effective\nDose Equivalent from External\nExposure | - | Not Applicable | This guidance governs dosimetry methods for deter-\nmining effective dose equivalent for external radia-\ntion exposures. These methods are the responsibility\nof the COL applicant or licensee. | Not Applicable\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section summarizes NuScale’s conformance with various regulatory guides related to radiation protection design features, as outlined in DSRS 12.3-12.4, Rev 0. It details which regulatory guides are fully, partially, or not applicable to the NuScale design, with references to supporting sections and tables for further information.",
       "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "8",
-      "hop": 1
+      "source_doc": "nuscale_ch01",
+      "page_range": "278",
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-2",
+          "page": 173,
+          "caption": "Conformance with Regulatory Guides (Continued)",
+          "structured_text": "8.39 | Release of Patients Administered\nRadioactive Materials | - | Not Applicable | This guidance governs activities applicable only to\nfacilities that administer radio-pharmaceuticals. | Not Applicable\n8.40 | Methods for Measuring Effective\nDose Equivalent from External\nExposure | - | Not Applicable | This guidance governs dosimetry methods for deter-\nmining effective dose equivalent for external radia-\ntion exposures. These methods are the responsibility\nof the COL applicant or licensee. | Not Applicable"
+        },
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
     "nuscale_ch01_0052": {
       "node_id": "nuscale_ch01_0052",
       "title": "Comparison with Other Facilities",
-      "summary": "This section compares the major design features and nominal parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It highlights differences in core output, fuel assembly design, reactor coolant system, and safety systems, with detailed data provided in tables for side-by-side comparison. The comparison demonstrates NuScale's unique design choices, such as smaller size, fewer components, and simplified systems relative to conventional PWRs.",
+      "content": "NuScale Final Safety Analysis Report Comparison with Other Facilities\nTier 2 1.3-1 Revision 51.3 Comparison with Other Facilities\nThe major NuScale Power Plant design feature s and nominal parameters are provided in \nTable 1.3-1 and discussed further in the associated final safety anal ysis report (FSAR) section(s). \nThese NuScale features and values  are shown in comparison with a typical pressurized water \nreactor (PWR) plant design. All values are no minal and provided for comparison only. The \ntypical PWR values presented are representative of the Standardized Nu clear Unit Power Plant \nSystem design.\nTable 1.3-2 provides a comparison of safety sy stems and components re quired to protect the \nreactor core for the NuScale Power Plant versus a typical PWR plant.NuScale Final Safety Analysis Report Comparison with Other Facilities\nTier 2 1.3-2 Revision 5Table 1.3-1: NuScale Plant Comp arison with Other Facilities\nNuScale Plant Parameter or Feature (per NPM) Typical PWR NuScale\nNominal gross electrical output (MWe) 1,186 50Core thermal output (MWt) 3,411 160Number of fuel assemblies 193 37Fuel assembly lattice -17x17 17x17Effective fuel length (ft) 12 6.56Fuel rods per fuel assembly 264 264Average linear heat rate (kW/ft) 5.4 2.5Number of Control Rod Assemblies 53 16Design life (years) 40 60Reactor Coolant SystemNumber of heat transfer loops 4 No External LoopsReactor Coolant Pipes (in.) 27.5-31 NoneOperating pressure (psia) 2,250 1,850Hot leg temperature (°F) 618 590Reactor VesselVessel inner diameter (in.) 173 107.5Thermal shielding- and reflector design Neutro n pad design Stacked stainless steel reflector \nblocks\nIn-core instrumentation Bot tom mounted Top mounted\nSteam GeneratorNumber 4 2Type Vertical U-tube Helical coilHeat transfer area (ft2) 55,000 Approximately 18,000Number of tubes 5,626 1,380Reactor Coolant Pumps 4 0PressurizerInternal volume (ft3) 1,800 568Surge nozzle nominal diameter (in.) 14 NoneResidual Heat Removal Pumps 2 NoneContainmentType PCCV Steel Pressure VesselInner diameter (ft-in.) 140-0 14-2Height (ft-in.) 205-0 (inner) 75-8.5 (outer)Containment Spray Pumps 2 NoneHigh Pressure Safety Injection Pumps 2 NoneCharging / Safety Injection Pumps 2 NoneLow Pressure Safety Injection Pumps 2 NoneAccumulators 4 NoneI&C System type Analog DigitalEmergency Diesel Generators 2 NoneTurbine Type 1800 rpm, Tandem Compound Six \nFlow3,600 rpm, 10 stage with Superheat\nEmergency Feedwater Pumps 3 None\nCharging Pumps (CVCS pumps) 2 2Used for Safety Injection Yes NoVolume Control Tank 1 0Reactor Component Cooling Wa ter Pumps 4 6 total for 12 NPMsNuScale Final Safety Analysis Report Comparison with Other Facilities\nTier 2 1.3-3 Revision 5Table 1.3-2: Safety Systems and Components  Required to Protec t the Reactor Core - \nNuScale Comparison with Other Facilities\nSafety System or Comp onent Typical PWR NuScale\nReactor Pressure Vessel X XContainment Vessel X X\nReactor Coolant System X X\nDecay Heat Removal System X XEmergency Core Cooling System X XControl Rod Drive System X XContainment Isolation System X XUltimate Heat Sink X XResidual Heat Removal System XSafety Injection System XRefueling Water Storage Tank XCondensate Storage Tank XAuxiliary Feedwater System XEmergency Service Water System XHydrogen Recombiner or Ignition System XContainment Spray System XReactor Coolant Pumps XSafety-Related Electrical Distribution System XAlternative Off-Site Power XEmergency Diesel Generators XSafety-Related Class 1E Battery System XAnticipated Transient Without Scram (ATWS) System X\n\n--- Referenced Tables (structured) ---\n[Table 1.3-1: NuScale Plant Comparison with Other Facilities]\nNominal gross electrical output (MWe) | 1,186 | 50\nCore thermal output (MWt) | 3,411 | 160\nNumber of fuel assemblies | 193 | 37\nFuel assembly lattice | -17x17 | 17x17\nEffective fuel length (ft) | 12 | 6.56\nFuel rods per fuel assembly | 264 | 264\nAverage linear heat rate (kW/ft) | 5.4 | 2.5\nNumber of Control Rod Assemblies | 53 | 16\nDesign life (years) | 40 | 60\nReactor Coolant System\nNumber of heat transfer loops | 4 | No External Loops\nReactor Coolant Pipes (in.) | 27.5-31 | None\nOperating pressure (psia) | 2,250 | 1,850\nHot leg temperature (°F) | 618 | 590\nReactor Vessel\nVessel inner diameter (in.) | 173 | 107.5\nThermal shielding- and reflector design | Neutron pad design | Stacked stainless steel reflector\nblocks\nIn-core instrumentation | Bottom mounted | Top mounted\nSteam Generator\nNumber | 4 | 2\nType | Vertical U-tube | Helical coil\nHeat transfer area (ft2) | 55,000 | Approximately 18,000\nNumber of tubes | 5,626 | 1,380\nReactor Coolant Pumps | 4 | 0\nPressurizer\nInternal volume (ft3) | 1,800 | 568\nSurge nozzle nominal diameter (in.) | 14 | None\nResidual Heat Removal Pumps | 2 | None\nContainment\nType | PCCV | Steel Pressure Vessel\nInner diameter (ft-in.) | 140-0 | 14-2\nHeight (ft-in.) | 205-0 (inner) | 75-8.5 (outer)\nContainment Spray Pumps | 2 | None\nHigh Pressure Safety Injection Pumps | 2 | None\nCharging / Safety Injection Pumps | 2 | None\nLow Pressure Safety Injection Pumps | 2 | None\nAccumulators | 4 | None\nI&C System type | Analog | Digital\nEmergency Diesel Generators | 2 | None\nTurbine Type | 1800 rpm, Tandem Compound Six\nFlow | 3,600 rpm, 10 stage with Superheat\nEmergency Feedwater Pumps | 3 | None\nCharging Pumps (CVCS pumps) | 2 | 2\nUsed for Safety Injection | Yes | No\nVolume Control Tank | 1 | 0\nReactor Component Cooling Water Pumps | 4 | 6 total for 12 NPMs\n[Table 1.3-2: Safety Systems and Components Required to Protect the Reactor Core -]\nReactor Pressure Vessel | X | X\nContainment Vessel | X | X\nReactor Coolant System | X | X\nDecay Heat Removal System | X | X\nEmergency Core Cooling System | X | X\nControl Rod Drive System | X | X\nContainment Isolation System | X | X\nUltimate Heat Sink | X | X\nResidual Heat Removal System | X\nSafety Injection System | X\nRefueling Water Storage Tank | X\nCondensate Storage Tank | X\nAuxiliary Feedwater System | X\nEmergency Service Water System | X\nHydrogen Recombiner or Ignition System | X\nContainment Spray System | X\nReactor Coolant Pumps | X\nSafety-Related Electrical Distribution System | X\nAlternative Off-Site Power | X\nEmergency Diesel Generators | X\nSafety-Related Class 1E Battery System | X\nAnticipated Transient Without Scram (ATWS) System | X",
+      "summary": "This section compares the major design features and parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It highlights differences in size, output, core design, and safety systems, showing that NuScale uses smaller, simpler, and more integrated components compared to conventional PWRs. The comparison is summarized in tables for easy reference.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "79",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.3-1",
+          "page": 80,
+          "caption": "NuScale Plant Comparison with Other Facilities",
+          "structured_text": "Nominal gross electrical output (MWe) | 1,186 | 50\nCore thermal output (MWt) | 3,411 | 160\nNumber of fuel assemblies | 193 | 37\nFuel assembly lattice | -17x17 | 17x17\nEffective fuel length (ft) | 12 | 6.56\nFuel rods per fuel assembly | 264 | 264\nAverage linear heat rate (kW/ft) | 5.4 | 2.5\nNumber of Control Rod Assemblies | 53 | 16\nDesign life (years) | 40 | 60\nReactor Coolant System\nNumber of heat transfer loops | 4 | No External Loops\nReactor Coolant Pipes (in.) | 27.5-31 | None\nOperating pressure (psia) | 2,250 | 1,850\nHot leg temperature (°F) | 618 | 590\nReactor Vessel\nVessel inner diameter (in.) | 173 | 107.5\nThermal shielding- and reflector design | Neutron pad design | Stacked stainless steel reflector\nblocks\nIn-core instrumentation | Bottom mounted | Top mounted\nSteam Generator\nNumber | 4 | 2\nType | Vertical U-tube | Helical coil\nHeat transfer area (ft2) | 55,000 | Approximately 18,000\nNumber of tubes | 5,626 | 1,380\nReactor Coolant Pumps | 4 | 0\nPressurizer\nInternal volume (ft3) | 1,800 | 568\nSurge nozzle nominal diameter (in.) | 14 | None\nResidual Heat Removal Pumps | 2 | None\nContainment\nType | PCCV | Steel Pressure Vessel\nInner diameter (ft-in.) | 140-0 | 14-2\nHeight (ft-in.) | 205-0 (inner) | 75-8.5 (outer)\nContainment Spray Pumps | 2 | None\nHigh Pressure Safety Injection Pumps | 2 | None\nCharging / Safety Injection Pumps | 2 | None\nLow Pressure Safety Injection Pumps | 2 | None\nAccumulators | 4 | None\nI&C System type | Analog | Digital\nEmergency Diesel Generators | 2 | None\nTurbine Type | 1800 rpm, Tandem Compound Six\nFlow | 3,600 rpm, 10 stage with Superheat\nEmergency Feedwater Pumps | 3 | None\nCharging Pumps (CVCS pumps) | 2 | 2\nUsed for Safety Injection | Yes | No\nVolume Control Tank | 1 | 0\nReactor Component Cooling Water Pumps | 4 | 6 total for 12 NPMs"
+        },
+        {
+          "type": "table",
+          "id": "Table 1.3-2",
+          "page": 81,
+          "caption": "Safety Systems and Components Required to Protect the Reactor Core -",
+          "structured_text": "Reactor Pressure Vessel | X | X\nContainment Vessel | X | X\nReactor Coolant System | X | X\nDecay Heat Removal System | X | X\nEmergency Core Cooling System | X | X\nControl Rod Drive System | X | X\nContainment Isolation System | X | X\nUltimate Heat Sink | X | X\nResidual Heat Removal System | X\nSafety Injection System | X\nRefueling Water Storage Tank | X\nCondensate Storage Tank | X\nAuxiliary Feedwater System | X\nEmergency Service Water System | X\nHydrogen Recombiner or Ignition System | X\nContainment Spray System | X\nReactor Coolant Pumps | X\nSafety-Related Electrical Distribution System | X\nAlternative Off-Site Power | X\nEmergency Diesel Generators | X\nSafety-Related Class 1E Battery System | X\nAnticipated Transient Without Scram (ATWS) System | X"
+        }
+      ]
+    },
+    "nuscale_ch05_0004": {
+      "node_id": "nuscale_ch05_0004",
+      "title": "System Description",
+      "content": "NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-2 Revision 5• The RCS provides a degasification line to remove noncondensible gases from the PZR \nvolume at the top of the RPV during normal  operation. Reactor vent valves (RVVs), \nwhich are opened to discharge the PZR steam space directly to  the CNV as part of ECCS \noperation, also allow noncondensible ga ses to be removed from the PZR during \nemergency core cooling operation.\n• The pressure-retaining portions of the RCS assist in maintaining the integrity of the \nreactor coolant pressure boun dary (RCPB) that provides a barrier to the release of \nradionuclides. \n5.1.2 System Description\nThe RCS is a subsystem of the NPM and is locate d inside the CNV. The RCS includes the RPV, \nthe integral PZR, the RVI, the RSVs, reactor coolant piping inside the CNV and the RCS instruments and controls.\nThe RCS interfacing systems include the chem ical and volume control system via the \ncontainment system, the emergency core coolin g system (ECCS) valves consisting of RVVs \nand reactor recirculation valves (RRVs), the CNV, control rod drive system, SGS, and the \nprimary sampling system (through the chemical and volume control system). \nA diagram of an individual NPM is provided in Figure 5.1-1 showing the RPV within the CNV \nand denoting major RCS components. A simplifi ed RCS diagram is provided in Figure 5.1-2.\nDuring normal operation, the RCS transports heat from the reactor core to the SGs by \nnatural circulation. The motive force for the reactor coolant flow is natural convection, \ndriven by differences in coolant density betw een the hot coolant leaving the reactor core \nand the colder coolant leaving the SGs, an d by the elevation difference between the \nreactor core (heat source) and th e SGs (heat sink). The reactor coolant is heated in the core, \ntravels upward through the lower and upper ri ser assemblies, and at the top of the upper \nriser assembly is turned downward by the PZR baffle plate. The heat ed coolant then flows \ninto the annular space between the upper riser assembly and the vertical shell of the RPV. \nThis annular space contains the SG helical tube bundles. As the reactor coolant flows \ndownward across the outside of the SG tubes, it transfers heat to the secondary coolant \ninside the tubes. Heat transfer to the SG  tubes lowers the temperature of the reactor \ncoolant, increasing its density and causing the cooler, dense coolant to sink into the annular downcomer space between the lower ri ser assembly and core  barrel and continue \ninto the lower plenum near the bottom of th e RPV where the reactor coolant returns to the \nreactor core. \nA schematic flow diagram of the RCS is provided in Figure 5.1-3, denoting major \ncomponents, and major RCS loop flow stages  during normal steady-state, full-power \noperating conditions. In addition, Ta ble 5.1-1 identifies the RCS volumes. \nThe SGS (in conjunction with the main steam and main feedwater systems) are used to \nremove decay heat from the RCS during the initial phase of module cooldown. When decay \nheat is sufficiently low and the RCS temperature  is low enough to support filling the CNV, \nthe CNV is filled to the PZR baffle plate by the containment flooding system. RCS cooldown \ncontinues passively as decay heat is tr ansferred through the RPV to the flooded \ncontainment and through the CNV to the reactor pool. The DHRS actuation valves are NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-3 Revision 5opened to allow feedwater to recirculate through the DHRS heat exchangers and \nsecondary water chemistry conditions for we t layup are established. The SGs are then \nisolated from the main steam and feedwater systems. PZR wate r level is reduced using the \nchemical volume control system to match th e water level in the CNV in preparation for \nopening the RVVs and RRVs. Nitrogen is vent ed from the PZR through the RPV high point \ndegasification line until PZR pressure matc hes containment pressu re. When the PZR and \ncontainment pressure and water level are matched, the RVVs and RRVs are opened.\n5.1.3 System Components\n5.1.3.1 Reactor Pressure Vessel\nThe RPV is a metal vessel that forms part of the RCPB and is  a barrier to the release of \nfission products. Most of the reactor coolant is contained in the RPV. The RPV is \nsupported laterally and vertically by th e CNV. The RPV contains and supports the \nreactor core, RVI, steam generators, and PZR.  The RPV provides pe netrations, support, \nand alignment for the control rod drive syst em. The RPV also provides penetrations and \nattachment locations for the RCS instruments, the ECCS valves (RVVs and RRVs), and \nRCS piping (RCS injection, RCS discharg e, PZR spray supply, and RPV high point \ndegasification lines). In addition, the RPV also provides steam and feedwater plenums \nfor the steam generators and RSV penetrations.\nThe RPV and appurtenances are fu rther described in Section 5.3. \n5.1.3.2 Reactor Cool ant System Piping\nThe RCS piping external to the RPV consists of the following lines: \n• two PZR spray line branches from a common spray header \n• RPV high point degasification line \n• RCS injection line \n• RCS discharge line \nThe RCS injection line has branch lines that connect to each of the ECCS valve reset \nvalves.\nThe RCS piping is further described in Section 5.4.\n5.1.3.3 Pressurizer \nThe PZR, which is integral to  the RPV, occupies the volume inside the RPV above the \nPZR baffle plate. The RCS co mponents in the PZR volume  are the PZR spray nozzles \n(which are part of the RVI) and the PZR heat er assemblies. The PZR provides a point in \nthe RCS where liquid and vapor are main tained in equilibrium under saturated \nconditions at a temperature greater than THOT for pressure contro l of the RCS during \nsteady-state operations and transients. Maintaining the saturated conditions higher \nthan THOT ensures the reactor cool ant remains subcooled duri ng normal operations. \nThe PZR also serves as a surge volume.",
+      "summary": "The Reactor Coolant System (RCS) in the NuScale design is responsible for removing heat from the reactor core and transferring it to the steam generators using natural circulation, driven by density and elevation differences. The RCS includes key components such as the reactor pressure vessel, pressurizer, and associated valves, and interfaces with several other systems for safety and operational control, including degasification and emergency core cooling. The system is designed to maintain the integrity of the reactor coolant pressure boundary and prevent the release of radionuclides.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "9",
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 5.1-1",
+          "page": 16,
+          "caption": "NuScale Power Module Major Components"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.1-2",
+          "page": 17,
+          "caption": "Reactor Coolant System Simplified Diagram"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.1-3",
+          "page": 18,
+          "caption": "Reactor Coolant System Schematic Flow Diagram"
+        }
+      ]
+    },
+    "nuscale_ch01_0056": {
+      "node_id": "nuscale_ch01_0056",
+      "title": "Critical Heat Flux Testing - Preliminary Fuel Design",
+      "content": "NuScale Final Safety Analysis Report Requirements for Additional Technical Information\nTier 2 1.5-1 Revision 51.5 Requirements for Additional Technical Information\nThis section describes the verification and conf irmation tests of unique  design features that \nsupport the safety analysis for the NuScale Power Plant. The test ing program described in this \nsection was developed to provide data to support the final safety analyses.\n1.5.1 NuScale Testing Programs\nThe following testing programs have been comp leted or are currently in progress. The tests \nfocus on design features of th e NuScale Power Module (NPM) fo r which applicable data or \noperational experience did not previously exist.  Tests specific to th e NuScale fuel design \nare summarized in Section 1.5.1.1 and Section 1 .5.1.2; tests specific to the steam generator \n(SG) are summarized in Section 1.5.1.3 and Sect ion 1.5.1.4; tests specific  to the control rod \nassemblies are summarized in Section 1.5. 1.6 and Section 1.5.1.7; and tests involving \nintegrated system phenomena ar e summarized in Section 1.5.1.5.\n1.5.1.1 Critical Heat Flux Te sting - Preliminary Fuel Design\nThe NPM employs a fuel design for heat generation that is similar to a standard \npressurized water reactor (PWR), with the ex ception of the fuel assembly height and \nthe reactor coolant driving force. The NuScale fuel is approximately half the height of \nstandard PWR fuel and feature s low-flow natural circulatio n of primary coolant rather \nthan pump-driven primary coolant flow. In or der to meet fuel licensing requirements, \ntwo critical heat flux (CHF) test programs were conducted: (1) a test program described \nin this section for the prelim inary fuel design, and (2) a second test program described \nin Section 1.5.1.2 for the final fuel design. The preliminary fuel design test program \nsupported code development and safety an alysis efforts, and provided data for \ndevelopment of NuScale's NSP2 CHF co rrelation for the final fuel design.\nThe NPM reactor core design employs 37 nucl ear fuel assemblies. Each assembly is \ncomposed of a 17x17 square lattice of fu el rods assembled according to a given \nrod-to-rod pitch. Each fuel rod is approximately 2 meters in length. Fuel rods are assembled using spacer grids placed at specified locations along the length of the fuel \nrods such that fuel rods are evenly spaced  and adequately supported. Primary coolant \nenters the NPM reactor core from the bottom  through the core inlet plenum and heat \ntransfer to the coolant occurs as coolant travels upward along the length of the fuel \nassemblies.\nIn off-normal conditions, su ch as anticipated operationa l occurrences and postulated \naccidents, it must be known how close the heat transfer mode is to transitioning to a \nstate where a continuous steam layer covers th e fuel rods or portio ns of the fuel rods. \nThe point at which this transition occurs is  referred to as the CHF point. In order to \ndetermine the CHF point for the reduced- length fuel under appropriate flow \nconditions, a CHF testing program was cond ucted over a wide range of operating \nconditions. In these tests, instrumentation was used to measure key test parameters, \nincluding: resistance temperature dete ctors (RTD), thermocouples, pressure \ntransducers, mass flow rate  instruments, and electrical voltage and current meters. \nThese sensors were used to measure heater ro d temperatures and fluid flow conditions \nat various points of the fluid loop, and the electrical power supplied to heater rods \nwhen CHF occurred. The tests allowed NuScale to obtain fuel bundle subchannel exit NuScale Final Safety Analysis Report Requirements for Additional Technical Information\nTier 2 1.5-2 Revision 5temperatures to determine mixing coeffi cients and to obtain single-phase and \ntwo-phase pressure drop characteristics of the test assembly for a range of bundle \npowers and hydraulic conditions. All in formation necessary for CHF correlation \ndevelopment and evaluation was collected.\nTesting for the preliminary fuel design CHF test series was performed at Stern \nLaboratories in Ontario, Cana da using their existing high-p ressure flow loop, electrical \npower supplies, heat rejection devices, water conditioning system, and data acquisition system. The test section an d fuel simulators were designed and \nmanufactured to represent the preliminar y NuScale fuel design. Fuel assembly \nsimulators with different axial power shapes  were manufactured along with two sets of \nspacer grids that allowed testing of a 5x5 fuel assembly simulation bundle with or \nwithout the center fuel rod replaced by a guide tube. The approach of using a 5x5 \nrepresentation of the larger 17x17 fuel assembly is an industry-accepted practice for CHF testing of PWR fuel bundles. The fuel assembly simulation bundles were mounted \nwithin a square flow channel and installe d in the instrumented test section. This \nallowed testing of three separate configurations of fuel assembly simulation bundles with different axial flux shapes and fuel as sembly subchannels as described in NuScale \nPower Critical Heat Flux Correlation s topical report (Reference 1.5-1).\nTests were performed to envelope a range of bounding conditions and axial power \nshapes for vertical 5x5 fuel assembly co nfigurations in accordance with the test \nspecification and program docu mentation, which provided de tailed test matrices for \nsteady-state and transient CHF testing, pressure drop, and thermal mixing. The vertical \n5x5 fuel assembly configur ations were tested using industry-accepted test and \nacceptance methodology.\nThe CHF testing was conducted by flowing water over the test sections at discrete test \npoints covering a range of hydraulic conditio ns sufficient to develop a CHF correlation \nthat spanned the NPM operational envelope . At each test point, the loop was \nconfigured for the specified fl ow, inlet temperature, and ex it pressure conditions. The \nbundle power was increased until CHF was detected, which was indicated by an excursion of the fuel simulator thermocoup les. Loop flow cond itions (temperature, \npressure, and flow), bundle power, rod power , and fuel simulator temperatures were \nrecorded for each run. As-built data for the te st section and test article, such as flow \nchannel width, fuel simulator diameters, and spacer grid dimensions, were also \nrecorded.\nIn conclusion, tests were performed for a variety of therma l conditions using \nrepresentative 5x5 fuel assembly simulation s with a 2-meter heated length, differing \naxial power profiles, with and without a simu lated guide tube. The testing investigated \nthe effects of shorter fuel length and low-flow natural circulation of the primary coolant, and provided data that were used to develop NuScale's NSP2 CHF correlation \nin support of the NuScale sm all modular reactor technolo gy. This test program was \ninspected by the NRC in accordance wi th Inspection Procedures IP 35034, 35017, and \n36100.NuScale Final Safety Analysis Report Requirements for Additional Technical Information\nTier 2 1.5-3 Revision 51.5.1.2 Critical Heat Flux Testing - NuFuel HTP2™ Fuel Design\nThe primary objective for this test program wa s to obtain CHF data for the NuScale fuel \ndesign that employs AREVA HMP ™/HTP ™ spacer grid technology (designated as \nNuFuel HTP2 ™) to augment the existing database that was previously obtained for \nNuScale's preliminary fuel design (described in Section 1.5.1.1). The new data was used \nto develop NuScale NSP4 CHF correlation  and to validate NuScale's NSP2 CHF \ncorrelation developed using th e preliminary fuel design tests for the NPM application. \nIn addition, this test allowed NuScale to obtain bundle subchannel exit temperatures to \ndetermine mixing coefficients, and to colle ct single-phase and two-phase pressure \ndrop characteristics of the assembly for a range of bundle powers and hydraulic conditions.\nThe CHF test employed an electrically-hea ted test section that consisted of a 5x5 \nsimulated fuel bundle built to prot otypic geometry and employing AREVA \nHTP ™/HMP ™ grid technology. The fuel assembly  simulators with different power \nshapes were tested using a 5x5 fuel bundle wi th or without the center fuel rod replaced \nby a guide tube. The testing was conducted by flowing water through the test section at specified flow rates over a range of hydr aulic conditions of th e NPM. At each test \npoint, the loop was configured for a specif ied flow rate, inlet temperature, and exit \npressure conditions, and the bundle power was increased until CHF was detected over \na range of operating conditio ns and axial power shapes fo r vertical 5X5 fuel assembly \nconfigurations. The occurrenc e of CHF was indicated by an excursion of the fuel \nsimulator temperatures.\nThe prototypic fuel design tests were conducted at the AREVA Karlstein Thermal \nHydraulics (KATHY) facility lo cated in Karlstein, Germany. The test data was used to \nvalidate the applicability of NuScale's NSP2 CHF correlation and to develop the NSP4 \ncorrelation for the NuFuel HTP2 ™ fuel design.\n1.5.1.3 Steam Generator Thermal-Hydraulic Pe rformance Testing - Electrically Heated \nFacility\nThe NPM incorporates two collo cated SGs housed within th e reactor pressure vessel. \nThe SGs provide heat transfer to and from  the primary system for both normal and \noff-normal conditions. Through natural circulation, the reactor coolant system transfers \nthe core power to the SG converting feed  water into steam. Unlike current PWR \ndesigns, the reactor coolant flows around the outside of the SG tubes (primary side) \nand the feedwater and main steam flow thro ugh the inside of the tubes (secondary \nside). Because these design aspects of the he lical SGs are different from those used in \nthe nuclear fleet, operational experience is  not available and larg e-scale experimental \ndata were needed for valida tion of NuScale thermal-hydraulic systems and design \ncomputer codes, as well as determinat ion of SG performance characteristics. \nThe objective of this testing was to de termine the secondary side (inside tube) \nthermal-hydraulic performance of individual helical tubes representative of those used \nin the NPM steam generator design. This requ ired testing over a range of conditions \nrepresentative of the oper ational envelope. Measuremen t data were required to \nevaluate the distribution of temperature an d pressure on the inside of the tubes. ",
+      "summary": "This section outlines the verification and confirmation testing programs for unique NuScale Power Module design features, focusing on areas lacking prior data or operational experience. Specifically, it describes the preliminary critical heat flux (CHF) testing conducted on the NuScale fuel design, which differs from standard PWR fuel in assembly height and coolant flow, to support safety analysis and develop the NSP2 CHF correlation for the final fuel design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "83",
+      "hop": 1,
+      "references": []
+    },
+    "nuscale_ch05_0003": {
+      "node_id": "nuscale_ch05_0003",
+      "title": "Design Basis",
+      "content": "NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-1 Revision 5CHAPTER 5 REACTOR COOLANT SY STEM AND CONNECTING SYSTEMS\n5.1 Summary Description\nThe reactor coolant system (RCS) provides for the circulation of the primary coolant. The \nNuScale Power, LLC (NuScale) design relies on na tural circulation flow for the reactor coolant \nand does not include reactor coolant pumps or an external piping system. The RCS is a subsystem of the NuScale Power Module (NPM). The RCS includes the reactor pressure vessel \n(RPV) and integral pressurizer (PZR), the reactor ve ssel internals (RVI), the reactor safety valves \n(RSVs), RCS piping inside the containment vessel (CNV) (RCS injection, RC S discharge, PZR spray \nsupply, and RPV high-point degasification lines), the PZR control cabinet and the RCS \ninstruments and cables.\nChapter 1 provides an overview of the NuScale Po wer Plant design that includes up to twelve \nindividual NPMs. The description in this chapter applies to ea ch of the NPMs individually, \nunless otherwise stated.\n5.1.1 Design Basis\nThe performance and safety design bases of the RCS and its major components are \ninterrelated. These design ba ses are listed as follows:\n• The RCS promotes natural circulation to tr ansfer approximately 160 MW thermal power \nfrom the reactor core to the steam generato r system (SGS) during power operation and \nthe heat produced when the reactor is subcri tical, including the initial phase of plant \ncooldown. \n• The RCS provides coolant to the reactor core such that specified acceptable fuel design \nlimits are not violated during normal oper ation including the ef fects of anticipated \noperational occurrences. \n• The RCS water chemistry is maintained so that solid deposits on the reactor core and \nthe steam generators (SGs) are minimized. \n• The RCS maintains a uniform concentration of soluble boron concentration during \nnormal, transient, and accident conditions, and adequate chemical and thermal mixing to maintain reactivity.\n• Steady-state temperatures are maintained th roughout the reactor coolant to maintain \nthe temperature of the RVI and RPV below de sign limits during normal and accident \nconditions. \n• The PZR has sufficient capacity  to control reactor coolant pressure within the permitted \noperating range for normal operating transients without actuating the RSVs.\n• The RCS removes decay heat from the reac tor core during shutdown and refueling \noperations by a combination of heat tr ansfer to the DHRS through the SGS and \nconvection from the RPV to the reactor pool.\n• The RCS provides the water used as the co re neutron moderator and reflector blocks \nthat reflect a portion of the neutrons that esca pe the fuel region, improving neutron \neconomy in the core. NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-2 Revision 5• The RCS provides a degasification line to remove noncondensible gases from the PZR \nvolume at the top of the RPV during normal  operation. Reactor vent valves (RVVs), \nwhich are opened to discharge the PZR steam space directly to  the CNV as part of ECCS \noperation, also allow noncondensible ga ses to be removed from the PZR during \nemergency core cooling operation.\n• The pressure-retaining portions of the RCS assist in maintaining the integrity of the \nreactor coolant pressure boun dary (RCPB) that provides a barrier to the release of \nradionuclides. \n5.1.2 System Description\nThe RCS is a subsystem of the NPM and is locate d inside the CNV. The RCS includes the RPV, \nthe integral PZR, the RVI, the RSVs, reactor coolant piping inside the CNV and the RCS instruments and controls.\nThe RCS interfacing systems include the chem ical and volume control system via the \ncontainment system, the emergency core coolin g system (ECCS) valves consisting of RVVs \nand reactor recirculation valves (RRVs), the CNV, control rod drive system, SGS, and the \nprimary sampling system (through the chemical and volume control system). \nA diagram of an individual NPM is provided in Figure 5.1-1 showing the RPV within the CNV \nand denoting major RCS components. A simplifi ed RCS diagram is provided in Figure 5.1-2.\nDuring normal operation, the RCS transports heat from the reactor core to the SGs by \nnatural circulation. The motive force for the reactor coolant flow is natural convection, \ndriven by differences in coolant density betw een the hot coolant leaving the reactor core \nand the colder coolant leaving the SGs, an d by the elevation difference between the \nreactor core (heat source) and th e SGs (heat sink). The reactor coolant is heated in the core, \ntravels upward through the lower and upper ri ser assemblies, and at the top of the upper \nriser assembly is turned downward by the PZR baffle plate. The heat ed coolant then flows \ninto the annular space between the upper riser assembly and the vertical shell of the RPV. \nThis annular space contains the SG helical tube bundles. As the reactor coolant flows \ndownward across the outside of the SG tubes, it transfers heat to the secondary coolant \ninside the tubes. Heat transfer to the SG  tubes lowers the temperature of the reactor \ncoolant, increasing its density and causing the cooler, dense coolant to sink into the annular downcomer space between the lower ri ser assembly and core  barrel and continue \ninto the lower plenum near the bottom of th e RPV where the reactor coolant returns to the \nreactor core. \nA schematic flow diagram of the RCS is provided in Figure 5.1-3, denoting major \ncomponents, and major RCS loop flow stages  during normal steady-state, full-power \noperating conditions. In addition, Ta ble 5.1-1 identifies the RCS volumes. \nThe SGS (in conjunction with the main steam and main feedwater systems) are used to \nremove decay heat from the RCS during the initial phase of module cooldown. When decay \nheat is sufficiently low and the RCS temperature  is low enough to support filling the CNV, \nthe CNV is filled to the PZR baffle plate by the containment flooding system. RCS cooldown \ncontinues passively as decay heat is tr ansferred through the RPV to the flooded \ncontainment and through the CNV to the reactor pool. The DHRS actuation valves are ",
+      "summary": "The Design Basis section describes the NuScale reactor coolant system (RCS), which uses natural circulation without pumps or external piping to transfer heat from the reactor core to the steam generator. The RCS is designed to ensure safe and efficient cooling, maintain water chemistry, and provide uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch05",
+      "page_range": "8",
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 5.1-1",
+          "page": 16,
+          "caption": "NuScale Power Module Major Components"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.1-2",
+          "page": 17,
+          "caption": "Reactor Coolant System Simplified Diagram"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.1-3",
+          "page": 18,
+          "caption": "Reactor Coolant System Schematic Flow Diagram"
+        }
+      ]
     },
     "nuscale_ch01_0794": {
       "node_id": "nuscale_ch01_0794",
       "title": "SRP 15.7.4, Rev 1: Radiological Consequences of Fuel Handling AccidentsII.5 Radiation Detection in Containment",
-      "summary": "The NuScale design does not use ESF-grade ventilation systems for accident mitigation, relying instead on nonsafety-related ventilation that meets regulatory guidelines but is not credited in accident analyses. While the standard radiation detection criteria reference traditional containment buildings, NuScale’s design uses individual steel containment vessels for each module, so the intent of the criteria is applied to the Reactor Building where fuel handling occurs, rather than to a conventional containment structure.",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-183 Revision 5\nSRP 15.7.4, Rev 1: Radiological \nConsequences of Fuel Handling AccidentsII.4\nESF Grade Atmosphere Clean-Up \nSystem in Spent Fuel Storage AreaNot Applicable The NuScale design does not rely on ESF \nventilation systems to mitigate the consequences of a design basis accident. \nNonsafety-related no rmal ventilation \nsystems provide atmosphere cleanup capability, as necessary, that meets the \ndesign, testing, and maintenance \nguidelines in RG 1.140. These systems provide appropriate containment, \nconfinement, and filtering to limit releases \nof airborne radioactivity to the environment during normal operations, anticipated \noperational occurrences, and postulated \naccident conditions. However, these systems are not required following an \naccident, and receive no credit in the \ndetermination of the radiological consequences of an accident.Not Applicable\nSRP 15.7.4, Rev 1: Radiological \nConsequences of Fuel \nHandling AccidentsII.5 Radiation Detection in Containment Partially Conforms The intent of this acceptance criterion is \napplicable but the specific language refers \nto LWR designs that incorporate a containment building within which fuel \nhandling operations are performed. The \nNuScale design does not use a containment building. Rather, each NPM has its own \ncompact steel containment vessel \nimmediately surrounding the reactor vessel. The containment design provisions of this \nguidance for fuel handling operations \ninside containment are not relevant to the NuScale containment vessel design. \nHowever, the intent of this acceptance \ncriterion is appropriate to apply to the NuScale Reactor Building, where the \noperating NPMs reside in the reactor pool \nand fuel handling operations are performed.15.7.4Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments SectionNuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-184 Revision 5\nSRP 15.7.5, Rev 2: Spent Fuel \nCask Drop AccidentsAll Various Partially Conforms One of the principal functions of the \nNuScale reactor building crane (RBC) is to move spent fuel casks in the Reactor \nBuilding refueling ar ea. The RBC system \ndesign conforms to the single-failure-proof guidelines of NUREG-0612 so that any \ncredible failure of a single component will \nnot result in the loss of capability to stop and hold a critical load. The single-failure-\nproof crane precludes the need to perform \nload drop evaluations and as a result no accident analysis has been performed to \nassess radiological consequences of a spent \nfuel cask drop accident or a NPM drop accident.15.7.5\n15.7.6\nSRP 15.7.5, Rev 2: Spent Fuel \nCask Drop AccidentsII.1 Acceptability of Site and Dose \nMitigating ESF SystemsNot Applicable The RBC system  design conforms to the \nsingle-failure-proof guidelines of NUREG-\n0612 so that any credible failure of a single component will not result in the loss of \ncapability to stop and hold a critical load. \nThe single-failure-proof crane precludes the need to perform load drop evaluations and \nas a result no accident analysis has been \nperformed to assess radiological consequences of a spent fuel cask drop \naccident or a NPM drop accident.Not Applicable\nSRP 15.7.5, Rev 2: Spent Fuel \nCask Drop AccidentsII.2 Radioactivity Control Features of Fuel \nStorage and Handling SystemsNot Applicable The RBC system  design conforms to the \nsingle-failure-proof guidelines of NUREG-0612 so that any credible failure of a single \ncomponent will not result in the loss of \ncapability to stop and hold a critical load. The single-failure-proof crane precludes the \nneed to perform load drop evaluations and \nas a result no accident analysis has been performed to assess radiological \nconsequences of a spent fuel cask drop \naccident or a NPM drop accident.Not ApplicableTable 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "The NuScale design does not use safety-related ESF ventilation systems for accident mitigation; instead, normal ventilation systems provide atmosphere cleanup as needed but are not credited in accident analyses. While NuScale does not have a traditional containment building, it partially conforms to SRP 15.7.4 radiation detection criteria by applying the intent of the guidance to its reactor building and compact containment vessels, where fuel handling occurs.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "311",
-      "hop": 2
-    },
-    "nuscale_ch01_0037": {
-      "node_id": "nuscale_ch01_0037",
-      "title": "Control Building",
-      "summary": "This section describes the refueling operations for a NuScale Power Module (NPM), which are conducted independently for each module. The process involves moving the NPM from its operating bay to the refueling area, disassembling it for inspection, maintenance, and refueling, and then reassembling and returning it to service after successful testing and inspection.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "38",
-      "hop": 2
-    },
-    "nuscale_ch01_0068": {
-      "node_id": "nuscale_ch01_0068",
-      "title": "Electrical and Instrumentation and Control Drawings",
-      "summary": "This section explains that simplified electrical, instrumentation, and control (I&C) drawings are included in the NuScale Final Safety Analysis Report to visually clarify design information alongside the written text. It lists the types of diagrams provided, references tables and figures for diagram legends, and notes that applicants referencing the NuScale design must supply site-specific diagrams and legends as needed.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "95",
-      "hop": 2
+      "hop": 4,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
     "nuscale_ch01_0051": {
       "node_id": "nuscale_ch01_0051",
       "title": "Plant Features of Special Interest",
-      "summary": "This section describes key plant features of special interest at the NuScale Power Plant, including the Central Utility Building (CUB) and Diesel Generator Buildings (DGBs), which house essential but nonsafety-related systems and backup power equipment. It also highlights human factors considerations, emphasizing fail-safe design, automation, digital controls, and workload management to minimize human error and meet regulatory requirements.",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-18 Revision 5• verify identity and access status as  well as search fo r contraband items.\n• provide a structure or space to monitor a ccess into areas of the plant as well as \nmonitoring tamper alarm devices.\n1.2.2.5.4 Central Utility Building\nThe CUB is a nonsafety-relate d structure that houses comm on utility plant services, \nwhich include the following:\n• [[chiller equipment\n• instrument air system\n• service air system\n• chemical treatment equipment for demineralized water\n• maintenance area\n• life safety\n• demineralized water equipment\n• security functions]]\n1.2.2.5.5 [[Diesel Generator Buildings\nThe NuScale Power Plant design includes two DGBs, each housing a single backup \ndiesel generator. The principal functions of each DGB are to provide support and \nhousing for the backup diesel generators  and their auxiliary equipment. The DGB \nhouses no safety-related systems and has no functional requirements that support \nthe ESFs. The DGBs house the following:\n• diesel engines and associ ated support equipment\n• generators\n• DGB HVAC system\n• maintenance area]]\n1.2.3 Plant Features of Special Interest\nHuman Factors ConsiderationsThe NuScale Power Plant design minimize s human error throug h fail-safe design \nfunctionality, allows multi-modular control ca pability from a single control room with \neffective automation design, em ploys digital display design and soft control technology to \nenhance usability, and provides optimum workload management.\nThe HFE program satisfies specific regulatory  requirements and guidance, and leverages \nhuman performance and operating experience from nuclear and non-nuclear industries.\nChapter 18 describes the HFE Program.NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-19 Revision 5Table 1.2-1: Overall Characteristics of a NuScale Power Plant\nOverall Plant\nNominal net output 570 MWe*\nNumber of power modules 12\nPower Module\nNumber of reactors OneThermal power rating 160 MWthNominal gross electrical output\n50 MWe\nRCS normal operating pressure 1,850 psiaSteam generator number TwoSteam generator type Vertical helical tubeSteam cycle Rankine-subcritical regenerative with superheatTurbine type 3,600 rpm, condensing, with extraction\nReactor Core\nFuel UO\n2 (<4.95% enrichment)\nRefueling intervals 24 months\n* Nominal net output is total gross electrical output minus house loads.NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-20 Revision 5Table 1.2-2: Design Features of a NuScale Power Module\nNuScale Design Feature Primary Impact Safety Enhancement\nRCS contained within the RPV No large diameter primary coolant \npipingEliminates postulated large-break LOCA spectrum accidents\nNatural-convection-cooled core No reactor coolant pumps Eliminates reactor c oolant pump accidents, \nshaft breaks, pump seizure, missile generation \nand pump leaks\nHigh containment design pressure Containment peak pressure for \nworst case design-basis accident \nremains below containment design \npressureContainment integrity assured, minimizing the \npotential for radioactive releases during \npostulated accidents.\nRPV and NSSS inside the CNV During an accident, any water lost \nfrom RPV stays within containment \nand is returned to the RPV by \npassive meansNo postulated design-basis small-break LOCA capable of uncovering nuclear fuel\nEvacuated containment Subatmospheric pressure during \nnormal operation Minimal amount of noncondensible gases increases the steam condensation rate for \ncontainment heat removal during postulated \nsmall-break LOCA. Amount of oxygen in containment during normal operations is \nminimized.\nNo insulation on RPV Eliminates pot ential sump screen blockage and \npermits cooling of the exterior of the vessel during an accident\nLow power core (160 MWt) Re duces decay heat removal \nrequirementsEnhances in-vessel retention; maintains low \naccident consequences; reduces fission \nproduct source term; simplifies emergency planning\nReactor pool with partially \n(approximately 90%) immersed NPMCNV partially immersed in reactor poolProvides passive long-term cooling\nPassive safety systems\nSafety systems cool and \ndepressurize the RPV/CNV even in the event of loss of external powerActive safety systems are not requiredNuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-21 Revision 5\nFigure 1.2-1: Conceptual Site Layout\nNuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-22 Revision 5\nFigure 1.2-2: NuScale Functional Boundaries\nRXBNUSCALE POWER MODULES (NPMS)\nCRBStructures within the \nCERTIFIED DESIGNNUSCALE POWER PLANT\nTGB\nTGB\nCooling TowerSWYD CUBOwner Controlled Area\nSECAdmin/Training\nWarehouseRWBSECProtected Area (PA) Boundary Double Fence\nProtected Area (PA) Boundary Double FenceSecurity Owner Controlled Area (SOCA) Fence\nSecurity Owner Controlled Area (SOCA) FenceCooling Tower\nOwner Controlled Area boundary\nNuScale Power Plant boundary (SOCA Fence)Structures not described in the FSAR\nConceptual Design Structures containing Certified Design SSCs \nConceptual Design SSCsCertified Design Structures or Components NuScale Power ModulesANB\nAAPBDG\nBDGSCWS TowerSCWS PumpsNuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-23 Revision 5\nFigure 1.2-3: Schematic of a Si ngle NuScale Power Module and Associated Secondary Equipment\nNuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-24 Revision 5\nFigure 1.2-4: Layout of a Mu lti-Module NuScale Power Plant\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-25 Revision 5\nFigure 1.2-5: Cutaway Illustration of 12 Module Configuration\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-26 Revision 5Figure 1.2-6: Cutaway View of NuScale Power Module\nNuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-27 Revision 5Figure 1.2-7: Steam Generator and Reactor Flow\nNuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-28 Revision 5Figure 1.2-8: Decay Heat Removal System\nNuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-29 Revision 5Figure 1.2-9: Emergency Core Cooling SystemNuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-30 Revision 5Figure 1.2-10: Reactor Building 24’-0” Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-31 Revision 5Figure 1.2-11: Reactor Building 35'-8\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-32 Revision 5Figure 1.2-12: Reactor Building 50'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-33 Revision 5Figure 1.2-13: Reactor Building 62'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-34 Revision 5Figure 1.2-14: Reactor Building 75'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-35 Revision 5Figure 1.2-15: Reactor Building 86'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-36 Revision 5Figure 1.2-16: Reactor Building 100'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-37 Revision 5Figure 1.2-17: Reactor Building 126'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-38 Revision 5Figure 1.2-18: Reactor Building 145'-6\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-39 Revision 5Figure 1.2-19: Reactor Building East and West Section View\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-40 Revision 5Figure 1.2-20: Reactor Building South Section View\n{{  Withheld - See Part 9  }}NuScale Final Safety  Analysis Report General Plant Description\nTier 2 1.2-41 Revision 5Figure 1.2-21: Control Building 50'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety  Analysis Report General Plant Description\nTier 2 1.2-42 Revision 5Figure 1.2-22: Control Building 63'-3\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety  Analysis Report General Plant Description\nTier 2 1.2-43 Revision 5Figure 1.2-23: Control Building 76'-6\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety  Analysis Report General Plant Description\nTier 2 1.2-44 Revision 5Figure 1.2-24: Control Building 100'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety  Analysis Report General Plant Description\nTier 2 1.2-45 Revision 5Figure 1.2-25: Control Building 120'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety  Analysis Report General Plant Description\nTier 2 1.2-46 Revision 5Figure 1.2-26: Control Building North Section View\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-47 Revision 5Figure 1.2-27: Control Building West Section View\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-48 Revision 5Figure 1.2-28: Radioactive Waste Building 71'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-49 Revision 5Figure 1.2-29: Radioactive Waste Building 82'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-50 Revision 5Figure 1.2-30: Radioactive Wast e Building 100'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-51 Revision 5Figure 1.2-31: Radioactive Waste Building 120’-0” Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-52 Revision 5Figure 1.2-32: Radioactive Waste Building North and South Section Views\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-53 Revision 5Figure 1.2-33: Radioactive Waste Building West Section View\n{{  Withheld - See Part 9  }}\n\n--- Referenced Tables (structured) ---\n[Table 1.2-1: Overall Characteristics of a NuScale Power Plant]\nOverall Plant\nNominal net output | 570 | MWe | *\nNumber of power modules | 12\nPower Module\nNumber of reactors | One\nThermal power rating | 160 MWth\nNominal gross electrical output | 50 | MWe\nRCS normal operating pressure | 1,850 psia\nSteam generator number | Two\nSteam generator type | Vertical helical tube\nSteam cycle | Rankine-subcritical regenerative with superheat\nTurbine type | 3,600 rpm, condensing, with extraction\nReactor Core\nFuel | UO (<4.95% enrichment)\n2\nRefueling intervals | 24 months\n* Nominal net output is total gross electrical output minus house loads.\n[Table 1.2-2: Design Features of a NuScale Power Module]\nRCS contained within the RPV | No large diameter primary coolant\npiping | Eliminates postulated large-break LOCA\nspectrum accidents\nNatural-convection-cooled core | No reactor coolant pumps | Eliminates reactor coolant pump accidents,\nshaft breaks, pump seizure, missile generation\nand pump leaks\nHigh containment design pressure | Containment peak pressure for\nworst case design-basis accident\nremains below containment design\npressure | Containment integrity assured, minimizing the\npotential for radioactive releases during\npostulated accidents.\nRPV and NSSS | During an accident, any water lost\nfrom RPV stays within containment\nand is returned to the RPV by\npassive means | No postulated design-basis small-break LOCA\ncapable of uncovering nuclear fuel\nEvacuated containment | Subatmospheric pressure during\nnormal operation\nNo insulation on RPV | Minimal amount of noncondensible gases\nincreases the steam condensation rate for\ncontainment heat removal during postulated\nsmall-break LOCA. Amount of oxygen in\ncontainment during normal operations is\nminimized.\nEliminates potential sump screen blockage and\npermits cooling of the exterior of the vessel\nduring an accident\nLow power core (160 MWt) | Reduces decay heat removal\nrequirements | Enhances in-vessel retention; maintains low\naccident consequences; reduces fission\nproduct source term; simplifies emergency\nplanning\nReactor pool with partially\n(approximately 90%) immersed NPM | CNV | Provides passive long-term cooling\nPassive safety systems | Safety systems cool and\ndepressurize the RPV/CNV even in\nthe event of loss of external power | Active safety systems are not required",
+      "summary": "This section describes key plant features of special interest in the NuScale Power Plant, including the Central Utility Building (CUB), which houses various utility services and security functions, and the Diesel Generator Buildings (DGBs), which provide backup power but are not safety-related. It also highlights human factors considerations, emphasizing fail-safe design, automation, digital controls, and workload management to minimize human error and meet regulatory requirements.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "43",
-      "hop": 2
+      "hop": 4,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 1.2-1",
+          "page": 46,
+          "caption": "Conceptual Site Layout"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-10",
+          "page": 55,
+          "caption": "Reactor Building 24’-0” Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-11",
+          "page": 56,
+          "caption": "Reactor Building 35'-8\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-12",
+          "page": 57,
+          "caption": "Reactor Building 50'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-13",
+          "page": 58,
+          "caption": "Reactor Building 62'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-14",
+          "page": 59,
+          "caption": "Reactor Building 75'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-15",
+          "page": 60,
+          "caption": "Reactor Building 86'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-16",
+          "page": 61,
+          "caption": "Reactor Building 100'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-17",
+          "page": 62,
+          "caption": "Reactor Building 126'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-18",
+          "page": 63,
+          "caption": "Reactor Building 145'-6\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-19",
+          "page": 64,
+          "caption": "Reactor Building East and West Section View"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-2",
+          "page": 47,
+          "caption": "NuScale Functional Boundaries"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-20",
+          "page": 65,
+          "caption": "Reactor Building South Section View"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-21",
+          "page": 66,
+          "caption": "Control Building 50'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-22",
+          "page": 67,
+          "caption": "Control Building 63'-3\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-23",
+          "page": 68,
+          "caption": "Control Building 76'-6\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-24",
+          "page": 69,
+          "caption": "Control Building 100'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-25",
+          "page": 70,
+          "caption": "Control Building 120'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-26",
+          "page": 71,
+          "caption": "Control Building North Section View"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-27",
+          "page": 72,
+          "caption": "Control Building West Section View"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-28",
+          "page": 73,
+          "caption": "Radioactive Waste Building 71'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-29",
+          "page": 74,
+          "caption": "Radioactive Waste Building 82'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-3",
+          "page": 48,
+          "caption": "Schematic of a Single NuScale Power Module and Associated Secondary Equipment"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-30",
+          "page": 75,
+          "caption": "Radioactive Waste Building 100'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-31",
+          "page": 76,
+          "caption": "Radioactive Waste Building 120’-0” Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-32",
+          "page": 77,
+          "caption": "Radioactive Waste Building North and South Section Views"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-33",
+          "page": 78,
+          "caption": "Radioactive Waste Building West Section View"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-4",
+          "page": 49,
+          "caption": "Layout of a Multi-Module NuScale Power Plant"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-5",
+          "page": 50,
+          "caption": "Cutaway Illustration of 12 Module Configuration"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-6",
+          "page": 51,
+          "caption": "Cutaway View of NuScale Power Module"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-7",
+          "page": 52,
+          "caption": "Steam Generator and Reactor Flow"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-8",
+          "page": 53,
+          "caption": "Decay Heat Removal System"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-9",
+          "page": 54,
+          "caption": "Emergency Core Cooling System"
+        },
+        {
+          "type": "table",
+          "id": "Table 1.2-1",
+          "page": 44,
+          "caption": "Overall Characteristics of a NuScale Power Plant",
+          "structured_text": "Overall Plant\nNominal net output | 570 | MWe | *\nNumber of power modules | 12\nPower Module\nNumber of reactors | One\nThermal power rating | 160 MWth\nNominal gross electrical output | 50 | MWe\nRCS normal operating pressure | 1,850 psia\nSteam generator number | Two\nSteam generator type | Vertical helical tube\nSteam cycle | Rankine-subcritical regenerative with superheat\nTurbine type | 3,600 rpm, condensing, with extraction\nReactor Core\nFuel | UO (<4.95% enrichment)\n2\nRefueling intervals | 24 months\n* Nominal net output is total gross electrical output minus house loads."
+        },
+        {
+          "type": "table",
+          "id": "Table 1.2-2",
+          "page": 45,
+          "caption": "Design Features of a NuScale Power Module",
+          "structured_text": "RCS contained within the RPV | No large diameter primary coolant\npiping | Eliminates postulated large-break LOCA\nspectrum accidents\nNatural-convection-cooled core | No reactor coolant pumps | Eliminates reactor coolant pump accidents,\nshaft breaks, pump seizure, missile generation\nand pump leaks\nHigh containment design pressure | Containment peak pressure for\nworst case design-basis accident\nremains below containment design\npressure | Containment integrity assured, minimizing the\npotential for radioactive releases during\npostulated accidents.\nRPV and NSSS | During an accident, any water lost\nfrom RPV stays within containment\nand is returned to the RPV by\npassive means | No postulated design-basis small-break LOCA\ncapable of uncovering nuclear fuel\nEvacuated containment | Subatmospheric pressure during\nnormal operation\nNo insulation on RPV | Minimal amount of noncondensible gases\nincreases the steam condensation rate for\ncontainment heat removal during postulated\nsmall-break LOCA. Amount of oxygen in\ncontainment during normal operations is\nminimized.\nEliminates potential sump screen blockage and\npermits cooling of the exterior of the vessel\nduring an accident\nLow power core (160 MWt) | Reduces decay heat removal\nrequirements | Enhances in-vessel retention; maintains low\naccident consequences; reduces fission\nproduct source term; simplifies emergency\nplanning\nReactor pool with partially\n(approximately 90%) immersed NPM | CNV | Provides passive long-term cooling\nPassive safety systems | Safety systems cool and\ndepressurize the RPV/CNV even in\nthe event of loss of external power | Active safety systems are not required"
+        }
+      ]
     },
-    "nuscale_ch01_0067": {
-      "node_id": "nuscale_ch01_0067",
-      "title": "Drawings and Other Detailed Information",
-      "summary": "This section describes the inclusion of simplified instrumentation, control, electrical, and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information alongside the written text. It references tables and figures listing and explaining the symbols used in these diagrams, and notes that applicants referencing the NuScale design must provide additional site-specific diagrams and legends as needed.",
+    "nuscale_ch01_0037": {
+      "node_id": "nuscale_ch01_0037",
+      "title": "Control Building",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-13 Revision 51.2.2.1.2 Refueling Operations\nRefueling operations for an individual NP M is independent of the operating status \nof the remaining NPMs.\nDuring refueling, an NPM is moved from it s operating bay in the reactor pool to the \nrefueling pool using the RBC. The RBC lifts the NPM off its supports within the reactor bay and moves it to the open channel in the center of the reactor pool, \nwhich serves as a pathway to transp ort the NPM to the refueling area.\nIn the refueling area, the NP M is set into the containm ent flange tool where the \nCNV flange is unbolted. The crane lifts the NPM, separating the lower CNV from the \nupper CNV with RPV still attached and in tact. Next, the crane moves the upper CNV \nand RPV to the reactor vessel  flange tool where the RP V flange is unbolted. The \ncrane again lifts the NPM, this time separa ting the upper and lower RPV, leaving the \nlower RPV including the reactor core, in the reactor vessel flange tool. Finally, the \ncrane transports the upper NPM (now consisting of just the upper CNV with \nattached upper RPV) to the module inspec tion rack in the dry dock. Inspection, \ntesting, and maintenance are performed wh ile the core is being refueled using a \ndedicated fuel handling machine.\nAfter inspection, maintenance, and testing are complete and the reactor core has \nbeen refueled, the upper portion of the NPM is moved from the dry dock to the \nrefueling pool where the NP M is reassembled in reverse order using the dedicated \nflange tools. Following reassembly, the NPM is moved into the reactor pool and \nreturned to its operating bay by the RBC.  In the operating bay, startup tests are \nperformed and the reactor is prepared for restart. After the NPM has passed \nnecessary tests and inspection s, and the reactor coolant is at startup conditions, \nthe NPM is brought online, and st eam and power production begins.\n1.2.2.2 Control Building\nThe CRB is located approximately 30 ft ea st of the RXB. See Figure 1.2-21 through \nFigure 1.2-27 for CRB drawings. The overall CR B footprint is rectan gular, approximately \n120 ft long by 80 ft wide  at the 100'-0\" elevation.\nThe following portions of the CRB are nonsafety-related and Seismic Category II: \n• above the 120'-0\" elevation\n• inside the elevator shaf t (full building height)\n• inside the two stairwells  (full building height)\n• the fire protection vestibule located on the East side of the CRB\nStructural steel and metal siding are used above the 120'-0\" elevation. The remaining \nportion of the CRB, below the 120'-0\" elevation,  is a safety-r elated, Seismic Category I, \nconcrete structure.\nThe lowest elevation of the CRB primarily houses electrical equipment and CRHS air \nbottles. There is a tunnel that connects th e RXB to the CRB. The tunnel has two levels; NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-14 Revision 5an upper tunnel for personnel access to the RXB and a lower tunnel that is a utilities \ntunnel between the CRB and the RXB.\nThe MCR and the associated spaces are located below grade in the CRB. This is the area \nserviced by the CRHS. Associated spac es for the MCR incl ude the following:\n• conference room (shift turnover)\n• open office area (auxiliary operator room)\n• two offices\n• storage room\n• janitor closet\n• three air locks\n• viewing area\n• shift manager’s office\n• reference room\n• emergency equipment room\n• lavatories\n• break room\n• telecommunication room\nThe technical support center (T SC) and the associated spaces  are located at grade level \nin the CRB. Associated sp aces for the TSC include:\n• records storage\n• three offices\n• two conference rooms\n• data equipment room\n• lavatories\n• data maintenance room\n• break room\nAdditional equipment located in the CRB includes the control room HVAC system \n(CRVS) equipment, the chilled water syst em equipment supporting the CRVS, and an \nelevator machine room.\n1.2.2.2.1 Main Control Room\nThe MCR contains control panels for all installed NPMs. Each reactor operator \nmonitors and controls multiple NPMs fr om a control room panel. Figure 18.7-1 \nprovides the layout for the MCR.",
+      "summary": "The section describes the refueling operations for a NuScale Power Module (NPM), which are conducted independently for each module. The process involves moving the NPM from its operating bay to the refueling pool, disassembling it for inspection, maintenance, and refueling, and then reassembling and returning it to service after successful testing and inspection.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "95",
-      "hop": 2
+      "page_range": "38",
+      "hop": 4,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 1.2-21",
+          "page": 66,
+          "caption": "Control Building 50'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-27",
+          "page": 72,
+          "caption": "Control Building West Section View"
+        }
+      ]
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0558",
-      "target": "nuscale_ch05_0004",
-      "relation": "SATISFIES",
-      "confidence": 0.8,
-      "description": "Section A references regulatory guidance and conformance tables that set requirements for radiation protection and design features, while Section B describes system features (such as degasification and pressure boundary integrity) that are designed to satisfy those regulatory requirements."
+      "source": "nuscale_ch01_0733",
+      "target": "nuscale_ch01_0558",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A and Section B both present NuScale FSAR conformance tables that cross-reference regulatory guidance and standards, connecting specific design features (such as fuel centerline temperatures and radiation protection) to their respective regulatory criteria and indicating the degree of conformance."
     },
     {
-      "source": "nuscale_ch01_0558",
+      "source": "nuscale_ch01_0733",
+      "target": "nuscale_ch01_0052",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section B's Table 1.3-1 provides nominal design values for NuScale fuel assemblies, which are referenced in Section A's safety analysis to assess compliance with regulatory criteria for fuel centerline temperatures."
+    },
+    {
+      "source": "nuscale_ch01_0733",
+      "target": "nuscale_ch05_0004",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A references regulatory criteria and conformance related to fuel centerline temperatures and system safety functions, while Section B provides a system-level description of the reactor coolant system (RCS) components and their roles, with both sections connected through their focus on the safety and integrity of the reactor core and associated systems."
+    },
+    {
+      "source": "nuscale_ch01_0733",
       "target": "nuscale_ch01_0056",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A lists regulatory guidance and conformance statements relevant to radiation protection design features, while Section B describes testing programs (including for fuel design) that provide data to support the safety analyses required by those regulatory criteria, thus Section B supports the claims of regulatory conformance made in Section A."
+      "description": "Section B describes the testing programs that provide data to support the safety analysis results, such as fuel centerline temperatures, which are evaluated in Section A to demonstrate conformance with regulatory criteria."
     },
     {
-      "source": "nuscale_ch01_0558",
-      "target": "nuscale_ch01_0733",
-      "relation": "REFERENCES",
-      "confidence": 0.85,
-      "description": "Section A lists regulatory guidance documents and their conformance status for radiation protection design features, while Section B lists regulatory guidance and conformance for fuel behavior and safety system requirements, both referencing the NuScale Final Safety Analysis Report to demonstrate compliance with NRC criteria."
-    },
-    {
-      "source": "nuscale_ch01_0558",
+      "source": "nuscale_ch01_0733",
       "target": "nuscale_ch05_0003",
-      "relation": "SATISFIES",
-      "confidence": 0.8,
-      "description": "Section A references regulatory guidance and conformance tables that set requirements for radiation protection design features, while Section B provides a summary description of the reactor coolant system, which includes the core region and fuel assemblies that must comply with those regulatory requirements."
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria and conformance related to fuel centerline temperatures and system safety, while Section B provides a summary description of the reactor coolant system design, which includes the reactor vessel internals where the fuel assemblies are located, thus Section B provides the physical and functional context for the regulatory requirements discussed in Section A."
     },
     {
       "source": "nuscale_ch01_0558",
       "target": "nuscale_ch01_0052",
       "relation": "REFERENCES",
-      "confidence": 0.8,
-      "description": "Section B's Table 1.3-1 provides nominal design values for NuScale fuel assemblies, which are referenced in Section A as part of the overall regulatory conformance discussion, connecting specific design parameters to regulatory criteria."
+      "confidence": 0.85,
+      "description": "Section B (Table 1.3-1) provides nominal design values for NuScale fuel assemblies, which are referenced and further discussed in the FSAR sections mentioned in Section A, establishing a structural connection where Section A points to the detailed data in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0558",
+      "target": "nuscale_ch05_0004",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A lists regulatory guidance and conformance statements relevant to radiation protection design features, while Section B describes system features (such as degasification and pressure boundary integrity) that are designed to satisfy those regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0558",
+      "target": "nuscale_ch01_0056",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A references regulatory guidance and conformance related to radiation protection design features, while Section B describes testing programs (including for fuel assemblies) that provide data to support the safety analysis required by those regulatory criteria, thus Section B supports the claims or requirements outlined in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0558",
+      "target": "nuscale_ch05_0003",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory guidance and conformance tables that set requirements for radiation protection design features, while Section B provides a summary description of the reactor coolant system and its components, meaning Section B's technical details are evaluated for compliance against the regulatory criteria outlined in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch05_0004",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A states that Table 1.3-1 provides nominal design parameters for NuScale fuel assemblies, while Section B describes the system layout (including the core region) that would be visually depicted in Figure 5.1-1, thus connecting the design values in Table 1.3-1 to their physical arrangement shown in Figure 5.1-1."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch01_0056",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A provides nominal design values for NuScale fuel assemblies in Table 1.3-1, while Section B describes testing programs that generate data to verify and support those design values for safety analysis."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch05_0003",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Table 1.3-1 in Section A provides nominal design parameters for NuScale fuel assemblies, while Figure 5.1-1 in Section B visually depicts the core region within the module, illustrating the physical arrangement that corresponds to the parameters listed in Table 1.3-1."
     },
     {
       "source": "nuscale_ch05_0004",
       "target": "nuscale_ch01_0056",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section B describes testing programs that provide data to support the safety analysis discussed in Section A, specifically verifying that unique design features (such as those in the RCS described in Section A) meet safety requirements."
-    },
-    {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch01_0733",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section A describes the reactor coolant system's features for maintaining pressure boundary integrity, which is a prerequisite for the fuel centerline temperature analyses and regulatory conformance discussed in Section B."
+      "description": "Section B describes testing programs that provide data to support the safety analysis discussed in Section A, specifically verifying unique design features of the NuScale system described in Section A."
     },
     {
       "source": "nuscale_ch05_0004",
@@ -160,193 +512,74 @@
       "description": "Section A provides specific operational details (e.g., degasification and venting functions) that elaborate on the general system components and functions described in Section B."
     },
     {
-      "source": "nuscale_ch05_0004",
-      "target": "nuscale_ch01_0052",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section B (Table 1.3-1) provides nominal design values for NuScale fuel assemblies for comparison with typical PWRs, while Section A references Figure 5.1-1, which visually depicts the core region within the module that contains these fuel assemblies, thus connecting the tabulated data to its physical layout."
+      "source": "nuscale_ch01_0056",
+      "target": "nuscale_ch05_0003",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes testing programs that generate data to support the safety analysis of unique NuScale fuel assembly design features, while Section B provides a summary description of the reactor coolant system, which includes the core region where these fuel assemblies are located, thus connecting the verification of fuel design (A) to its operational context within the core (B)."
     },
     {
-      "source": "nuscale_ch01_0056",
+      "source": "nuscale_ch01_0794",
+      "target": "nuscale_ch01_0733",
+      "relation": "SEMANTIC",
+      "confidence": 0.7,
+      "description": "Section A discusses the NuScale design's approach to atmospheric cleanup in the context of fuel handling accidents, while Section B addresses fuel centerline temperatures and safety system requirements during control rod withdrawal and feedwater system pipe breaks, both referencing NuScale FSAR conformance with regulatory criteria for accident scenarios."
+    },
+    {
+      "source": "nuscale_ch01_0794",
+      "target": "nuscale_ch01_0558",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A and Section B both discuss NuScale's conformance with regulatory criteria for radiological safety, with Section A focusing on accident mitigation systems and Section B detailing radiation protection design features and their alignment with specific regulatory guides."
+    },
+    {
+      "source": "nuscale_ch01_0794",
+      "target": "nuscale_ch01_0052",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B's Table 1.3-1 provides nominal design values for NuScale fuel assemblies, which serve as the technical basis for understanding the core region referenced in Section A's discussion of radiological consequences and containment systems."
+    },
+    {
+      "source": "nuscale_ch01_0051",
+      "target": "nuscale_ch01_0052",
+      "relation": "REFERENCES",
+      "confidence": 0.7,
+      "description": "Section B (Table 1.3-1) provides nominal design values for NuScale fuel assemblies, which are referenced in Section A's general plant description to contextualize plant features of special interest."
+    },
+    {
+      "source": "nuscale_ch01_0037",
       "target": "nuscale_ch01_0733",
       "relation": "SATISFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the testing programs for NuScale fuel design features that provide data supporting safety analyses, while Section B lists regulatory criteria and conformance statements that these analyses and test results must satisfy."
+      "confidence": 0.7,
+      "description": "Section A describes the operational procedures for moving a NuScale Power Module (NPM) during refueling, while Section B outlines regulatory criteria and safety analysis requirements that the NuScale design must conform to, connecting them through the need for operational procedures (from A) to satisfy regulatory safety requirements (from B)."
     },
     {
-      "source": "nuscale_ch01_0056",
-      "target": "nuscale_ch05_0003",
+      "source": "nuscale_ch01_0037",
+      "target": "nuscale_ch01_0558",
       "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A discusses testing programs that verify unique design features of the NuScale fuel assemblies, while Section B provides a summary description of the reactor coolant system, which includes the core region where these fuel assemblies are located, thus connecting the verification of fuel design (A) to its placement and function within the core region (B)."
+      "confidence": 0.7,
+      "description": "Section A describes operational procedures for refueling NuScale modules, while Section B lists regulatory conformance for radiation protection design features, with both sections connected through the need for radiation protection measures during refueling operations."
     },
     {
-      "source": "nuscale_ch01_0056",
-      "target": "nuscale_ch01_0052",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Table 1.3-1 in Section B provides nominal design values for NuScale fuel assemblies, which are the basis for the verification and confirmation tests described in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0733",
-      "target": "nuscale_ch05_0003",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A references regulatory criteria and conformance related to fuel centerline temperatures and system responses, while Section B provides a summary description of the reactor coolant system design, which includes the core region and its components, thus Section B specifies the physical and functional context for the regulatory requirements discussed in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0733",
-      "target": "nuscale_ch01_0052",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section B (Table 1.3-1) provides nominal design values for NuScale fuel assemblies, which Section A references as part of the regulatory analysis to ensure that fuel centerline temperatures and other safety criteria are met."
-    },
-    {
-      "source": "nuscale_ch05_0003",
+      "source": "nuscale_ch01_0037",
       "target": "nuscale_ch01_0052",
       "relation": "REFERENCES",
-      "confidence": 0.85,
-      "description": "Section B's Table 1.3-1 provides nominal design values for NuScale fuel assemblies, which are referenced and further detailed in Section A's summary description of the reactor coolant system and its components."
+      "confidence": 0.8,
+      "description": "Section B's Table 1.3-1 provides nominal design values for NuScale fuel assemblies, which are referenced in Section A's general plant description and operational context, connecting the specific fuel assembly data to the broader operational procedures."
     },
     {
       "source": "nuscale_ch01_0794",
-      "target": "nuscale_ch01_0558",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A and Section B both discuss NuScale's conformance with regulatory guidance for radiological safety, with Section A focusing on accident mitigation systems and Section B detailing radiation protection design features and their alignment with specific regulatory guides."
-    },
-    {
-      "source": "nuscale_ch01_0794",
-      "target": "nuscale_ch05_0004",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A discusses the radiological consequences and containment strategies for fuel handling accidents, while Section B describes the reactor coolant system's design features that contribute to maintaining containment integrity, thus Section B provides supporting technical details relevant to the containment functions referenced in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0794",
-      "target": "nuscale_ch01_0056",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses the radiological safety systems and regulatory conformance for fuel handling accidents, while Section B outlines the testing programs (including critical heat flux testing) that provide technical data to support the safety analysis referenced in Section A, thus Section B supports the claims made in Section A regarding safety and regulatory compliance."
-    },
-    {
-      "source": "nuscale_ch01_0037",
-      "target": "nuscale_ch01_0558",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.8,
-      "description": "Section A describes operational procedures for refueling NuScale modules, while Section B lists regulatory conformance for radiation protection design features, with both sections connected through the need for refueling operations (A) to comply with radiation protection requirements (B) during such activities."
-    },
-    {
-      "source": "nuscale_ch01_0037",
-      "target": "nuscale_ch05_0004",
+      "target": "nuscale_ch01_0051",
       "relation": "SUPPORTS",
       "confidence": 0.7,
-      "description": "Section A describes the operational process of moving a NuScale Power Module (NPM) for refueling, while Section B outlines the reactor coolant system's (RCS) features that maintain system integrity during both normal and emergency operations, with both sections connected by their focus on the handling and safety of the reactor module during different operational states."
-    },
-    {
-      "source": "nuscale_ch01_0037",
-      "target": "nuscale_ch01_0056",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section B describes testing programs that generate data supporting the safety analysis of NuScale fuel assemblies, which are summarized in Table 1.3-1, while Figure 5.1-1 (referenced in the analysis question) visually depicts the core region where these fuel assemblies are located, thus connecting the technical data (Section B) to its physical context (Figure 5.1-1)."
-    },
-    {
-      "source": "nuscale_ch01_0068",
-      "target": "nuscale_ch01_0558",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A describes the use of figures and tables (such as Table 1.3-1) to provide visual clarification of design information, which supports the regulatory conformance discussions in Section B by supplying detailed design documentation referenced in regulatory reviews."
-    },
-    {
-      "source": "nuscale_ch01_0068",
-      "target": "nuscale_ch05_0004",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A provides visual and schematic details (including figures and tables) that clarify and support the system descriptions found in Section B, such as the layout and function of reactor components like the core region and fuel assemblies."
-    },
-    {
-      "source": "nuscale_ch01_0068",
-      "target": "nuscale_ch01_0056",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A provides visual and schematic details (including figures and tables) that clarify the design of NuScale components, while Section B describes the testing programs that generate data to support and verify those design features, connecting the visualized design with its technical validation."
-    },
-    {
-      "source": "nuscale_ch01_0051",
-      "target": "nuscale_ch05_0004",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A describes general plant features and utility structures, while Section B details the reactor coolant system's function and integrity, with both sections providing context for understanding how plant infrastructure (A) supports and interfaces with core systems (B) relevant to the analysis of fuel assemblies and core regions."
-    },
-    {
-      "source": "nuscale_ch01_0051",
-      "target": "nuscale_ch01_0056",
-      "relation": "REFERENCES",
-      "confidence": 0.7,
-      "description": "Section B describes testing programs that provide data supporting the safety analysis of unique NuScale fuel assembly design features, which are referenced in Section A's general plant description as part of the plant's features of special interest."
-    },
-    {
-      "source": "nuscale_ch01_0067",
-      "target": "nuscale_ch01_0558",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A provides the detailed drawings and figures (such as Figure 5.1-1) that visually clarify the design information referenced in Section B's regulatory conformance tables, thereby supporting the demonstration that the NuScale fuel assemblies and core region meet the radiation protection design features required by DSRS 12.3-12.4."
-    },
-    {
-      "source": "nuscale_ch01_0067",
-      "target": "nuscale_ch05_0004",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides visual and detailed design information, such as drawings and figures (including Figure 5.1-1), that clarify and specify the system descriptions and functional summaries presented in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0067",
-      "target": "nuscale_ch01_0056",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A provides visual and schematic details (such as drawings and figures) that clarify the physical layout and design of NuScale components, while Section B describes the testing programs that verify and confirm the performance and safety of those same design features, connecting the visual information to the technical validation process."
+      "description": "Section A discusses the radiological safety features and ventilation systems relevant to fuel handling accidents, while Section B describes the physical plant structures (like the Central Utility Building) that house utility services, with both sections connected through their roles in supporting plant safety and operational infrastructure."
     },
     {
       "source": "nuscale_ch01_0794",
       "target": "nuscale_ch01_0037",
       "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A discusses the radiological consequences and containment measures during fuel handling accidents, while Section B describes the physical process and movement of the NuScale Power Module (NPM) during refueling operations, both addressing different aspects of fuel handling safety and logistics."
-    },
-    {
-      "source": "nuscale_ch01_0794",
-      "target": "nuscale_ch01_0068",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses the NuScale FSAR's conformance with regulatory criteria for radiological consequences and containment systems, while Section B explains that drawings and tables (such as Table 1.3-1) provide detailed design information, indicating that the detailed data in Section B supports the regulatory analysis in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0794",
-      "target": "nuscale_ch01_0067",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section B provides visual and tabular details, such as Table 1.3-1 and Figure 5.1-1, that clarify and support the design information and regulatory conformance discussed in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0037",
-      "target": "nuscale_ch01_0067",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section B provides drawings and figures that visually clarify and supplement the operational descriptions found in Section A, such as the movement and positioning of the NPM during refueling."
-    },
-    {
-      "source": "nuscale_ch01_0068",
-      "target": "nuscale_ch01_0067",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A and Section B both introduce the use of figures and tables (such as Table 1.3-1 and Figure 5.1-1) to visually clarify design information in the NuScale Final Safety Analysis Report, indicating that these visual aids are intended to supplement the written text for better understanding of components like fuel assemblies and core regions."
-    },
-    {
-      "source": "nuscale_ch01_0051",
-      "target": "nuscale_ch01_0067",
-      "relation": "REFERENCES",
-      "confidence": 0.85,
-      "description": "Section A provides a general description of plant features and structures, while Section B explains that figures and tables (such as Table 1.3-1 and Figure 5.1-1) are used to visually clarify and supplement the written design information described in sections like A."
+      "confidence": 0.8,
+      "description": "Section A discusses the radiological consequences and containment measures during fuel handling accidents, while Section B describes the physical process and movement of the NuScale Power Module (NPM) during refueling operations, both addressing different aspects of fuel handling safety and procedures."
     }
   ]
 }

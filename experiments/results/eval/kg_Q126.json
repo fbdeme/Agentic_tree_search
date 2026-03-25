@@ -2,221 +2,189 @@
   "question": "Compare the NuScale RCS flow (0 RCPs, Table 1.3-1) with the primary flow rates in Table 5.1-2.",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0069": {
-      "node_id": "nuscale_ch01_0069",
-      "title": "Piping and Instrumentation Diagrams",
-      "summary": "This section describes the use of simplified electrical, instrumentation and control (I&C), and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information alongside the written text. It lists the relevant diagrams and legends used for both I&C and piping and instrumentation diagrams, and notes that site-specific diagrams and legends will be provided by COL applicants referencing the NuScale design certification.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "95",
-      "hop": 1
-    },
-    "nuscale_ch01_0558": {
-      "node_id": "nuscale_ch01_0558",
-      "title": "DSRS 12.3-12.4, Rev 0: Radiation Protection Design FeaturesII.9 RG 8.15",
-      "summary": "This section summarizes NuScale’s conformance with various regulatory guides related to radiation protection design features, as outlined in DSRS 12.3-12.4, Rev 0. It details whether each regulatory guide is applicable, fully or partially conformed to, or not applicable, with references to supporting sections and tables for further information.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "278",
-      "hop": 1
-    },
     "nuscale_ch05_0006": {
       "node_id": "nuscale_ch05_0006",
       "title": "System Evaluation",
-      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance across different power levels by establishing steady-state parameters for both primary and secondary systems, such as coolant temperatures, flow rates, and pressures. These parameters are calculated using thermal hydraulic software and verified by hand, with uncertainties and design margins considered to ensure efficient operation and safety. The design supports natural circulation with low pressure losses, and uncertainties like SG tube plugging do not affect primary coolant flow rate determination.",
+      "content": "NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-5 Revision 5top of each SG. The DHRS is connected to the stea m and feed piping to permit use of \nthe SG to remove decay heat  from the primary coolant.\nThe SGs are further described in Section 5.4.\n5.1.4 System Evaluation\nTo optimize performance of the NuScale Power Plant over the range of  power levels within \nthe design basis, steady state values for primary and secondary side parameters are \nestablished as a function of reactor power. Th e following criteria are considered to define \noptimal performance: maximizing electrical ge neration, using support systems efficiently, \nand providing margin to analytical limits . The following parameters are determined: \nprimary coolant temperatures, primary coolant flow rates, PZR water level, SG water level \nand mass, feedwater and steam flow rates,  feedwater and steam pressure, and steam \nsuperheat. The steady state parameters are ca lculated using the thermal hydraulic software \nNRELAP5 and are verified by hand calculation.\nCalculations establish a best-estimate flow , maximum flow, and minimum flow for the \napplicable design considerations , as well as the primary cool ant temperatures at each flow \ncondition. In establishing the range of design flows, the calculations account for uncertainties in the component flow resistances, the amount of core bypass flow, and the \nthermal head capability. Bounding uncertaintie s are determined based on testing data and \ndesign requirements.\nThe pressure losses through the RCS flow pa th are very low, to support the natural \ncirculation design of the RCS. Since the pressure losses due to flow are small, the pressure at any location in the RCS flow  path is primarily a function of the static head. The primary \ncoolant flows over the outside of the helica l SG tubes; therefore,  SG tube plugging \nuncertainties are not applicable to the prim ary coolant natural circulation flow rate \ndetermination.\nMinimum design flow is the lowest expected va lue for the primary coolant flow rate and is \ncalculated by biasing analytical uncertaintie s to minimize the flow rate. Minimum design \nprimary coolant flow rate is us ed in design analyses where it  is bounding to assume a low \nflow rate.\nMaximum design flow is the highest expected value for the primary coolant flow rate. \nMaximum design flow is calculated by biasin g analytical uncertainties to maximize the \nprimary coolant flow rate. Maximum design prim ary coolant flow rate is used in design \nanalyses where it is bounding to assume a high flow rate.\nThe module heatup system is used to heat up the RCS and provide primary coolant flow \nbefore the reactor is critical . Between hot zero power and 15 percent reactor power, the \nheat generated from the reactor core is used to heat up the RCS to the normal operating \naverage coolant temperature. Between 15 perc ent reactor power and full power operating \nconditions, the average primary coolant temperat ure is maintained at a constant value. The \nfull power average coolant temperature is higher for higher pr imary coolant flow \nconditions, and lower for lo wer primary coolant flow co nditions. This phenomenon \nprovides for similar hot leg te mperatures at full power condit ions, which allows for the SG \nto generate sufficient superheat independent of the full power primary coolant flow rate.NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-6 Revision 5The RCS volumes are shown in Table 5.1-1. The thermal-hydraulic design for reactor core \ncoolant flow by natural ci rculation is discussed in Table 5.1-2 and Section 4.4.NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-7 Revision 5Table 5.1-1: Reactor Coolant System Volumes\nRCS Region Nominal \nVolume (ft3)*\nHot Leg (lower riser, riser transition, upper riser, riser supports) 635Cold Leg [feedwater plenums, downcomer transition, downcomer (lower riser), core barrel, RPV bottom \nhead, flow diverter]578\nCore Region (fuel assembly region  and reflector cooling channels) 89\nSG Region 621\nPZR Region (main steam plenums, PZR, RPV top head) 578PZR Region, cylindrical (main steam plenums and PZR) 487*Volumes are rounded to the nearest cubic foot.NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-8 Revision 5Table 5.1-2: Primary System Temperatures and Flow Rates\nReactor Power Primary Flow Primary Coolant Temperature\n% MWt % (Kg/s) Core dT TCold  (°F) Tavg (°F) THot (°F)\nBest-Estimate Flow\n0 0 0-12 0-68.5Note(1) 0 Note(1) 425.5 Note(1)\n15 24 47.7 280.2 31.7 528.5 543.3 558.2\n50 80 75.6 443.7 66.5 512.2 543.3 574.475 120 88.9 521.6 84.6 503.8 543.3 582.9\n100 160 100 587.0 99.8 496.6 543.3 590.1\nMinimum Design Flow\n100 160 91.7 538.5 107.60 487.4 538.7 590.1\nMaximum Design Flow\n100 160 112.5 660.5 89.65 507.8 548.9 590.0\nNote (1):  When core decay heat is not available as a heat source, the module heatup system  provides the driving force for \nnatural circulation flow. Flow rate will va ry as a function of module heatup syst em performance, steam generator operation \nand RCS temperature. A typical hot zero power temperature an d range of the steady state best-estimate flow rates are \nidentified.NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-9 Revision 5Figure 5.1-1: NuScale Powe r Module Major Components\nContainment Vessel\nPressurizer Region\nPressurizer Baffle Plate\nReactor Pressure Vessel\nReactor Vessel Internals\nReactor Core RegionControl Rod Drive MechanismsNuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-10 Revision 5\nFigure 5.1-2: Reactor Coolan t System Simplified Diagram\nPZRRSVs\nSG2 SG1\nRRV 1\n(ECCS)Reactor Pressure VesselRRV 2\n(ECCS)CNT\nPZR HEATER 2\nReactor\nCorePZR SPRAY SUPPLYRCS DISCHARGE\nRCS INJECTIONRVVs\n(ECCS)\nPZR HEATER 1RPV HIGH POINT DEGASIFICATION\nNRRCS CNTCNT RCS\nRCS CNTCNT RCS\nRCS ECCS\nECCS RCS\nRCS ECCS RCS ECCSTO ECCS ACTUATION VALVESZS\nO/CZS\nO/CTE\nx2\nPE\nx4\nPE\nx4LE\nx4\nTE\nx2\nNRTE\nx4\nWRTE\nx4\nNRTE\nx4\nWRTE\nx4NRTE\nx4\nTE\nx4\nNRTE\nx4FE\nx4NRRCS DISCHARGERCS INJECTIONPRESSURIZER SPRAY\nPRESSURIZER DEGASIFICATION\nNR\nWRTO ECCS ACTUATION VALVESNuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-11 Revision 5Figure 5.1-3: Reactor Coolant System Schematic Flow Diagram\n10\n134567 8\n1412\n213911\n15\n16\nNo. Stage\n1 Core support blocks in downcomer\n2 Downcomer to lower plenum turn\n3 Lower core plate\n4C o r e\n5 Upper core plate\n6 Control rod assembly guide tubes\n7 Control rod assembly guide tube support plate\n8 Riser transition\n9 Control rod drive shaft support\n10 Pressurizer baffle\n11 Upper riser turn to annulus\n12 Downcomer through steam generator\n13 Downcomer transition\n14 Upper core support blocks\n15 Containment vessel\n16 Reactor vessel\n\n--- Referenced Tables (structured) ---\n[Table 5.1-1: Reactor Coolant System Volumes]\nRCS Region | Nominal\nVolume (ft3)*\nHot Leg (lower riser, riser transition, upper riser, riser supports) | 635\nCold Leg [feedwater plenums, downcomer transition, downcomer (lower riser), core barrel, RPV bottom\nhead, flow diverter] | 578\nCore Region (fuel assembly region and reflector cooling channels) | 89\nSG Region | 621\nPZR Region (main steam plenums, PZR, RPV top head) | 578\nPZR Region, cylindrical (main steam plenums and PZR) | 487\n[Table 5.1-2: Primary System Temperatures and Flow Rates]\n% | MWt | % | (Kg/s) | Core dT | T (°F)\nCold | T (°F)\navg | T (°F)\nHot\nBest-Estimate Flow\n0 | 0 | 0-12 | 0-68.5Note(1) | 0 | Note(1) | 425.5 | Note(1)\n15 | 24 | 47.7 | 280.2 | 31.7 | 528.5 | 543.3 | 558.2\n50 | 80 | 75.6 | 443.7 | 66.5 | 512.2 | 543.3 | 574.4\n75 | 120 | 88.9 | 521.6 | 84.6 | 503.8 | 543.3 | 582.9\n100 | 160 | 100 | 587.0 | 99.8 | 496.6 | 543.3 | 590.1\nMinimum Design Flow\n100 | 160 | 91.7 | 538.5 | 107.60 | 487.4 | 538.7 | 590.1\nMaximum Design Flow\n100 | 160 | 112.5 | 660.5 | 89.65 | 507.8 | 548.9 | 590.0",
+      "summary": "The System Evaluation section describes how the NuScale Power Plant optimizes performance across different power levels by establishing steady-state parameters for both primary and secondary systems, such as coolant temperatures, flow rates, and pressures. These parameters are calculated using thermal hydraulic software and verified by hand, with uncertainties and design margins considered to ensure efficient operation and safety. The design supports natural circulation with low pressure losses, and uncertainties related to steam generator tube plugging do not affect primary coolant flow rate determination.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "12",
-      "hop": 1
-    },
-    "nuscale_ch01_0052": {
-      "node_id": "nuscale_ch01_0052",
-      "title": "Comparison with Other Facilities",
-      "summary": "This section compares the major design features and parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It highlights differences in size, output, and system components, showing that NuScale uses smaller, simpler, and more integrated systems compared to conventional PWRs. Tables provide side-by-side comparisons of key parameters and safety systems for both designs.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "79",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 5.1-1",
+          "page": 16,
+          "caption": "NuScale Power Module Major Components"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.1-2",
+          "page": 17,
+          "caption": "Reactor Coolant System Simplified Diagram"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.1-3",
+          "page": 18,
+          "caption": "Reactor Coolant System Schematic Flow Diagram"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.1-1",
+          "page": 14,
+          "caption": "Reactor Coolant System Volumes",
+          "structured_text": "RCS Region | Nominal\nVolume (ft3)*\nHot Leg (lower riser, riser transition, upper riser, riser supports) | 635\nCold Leg [feedwater plenums, downcomer transition, downcomer (lower riser), core barrel, RPV bottom\nhead, flow diverter] | 578\nCore Region (fuel assembly region and reflector cooling channels) | 89\nSG Region | 621\nPZR Region (main steam plenums, PZR, RPV top head) | 578\nPZR Region, cylindrical (main steam plenums and PZR) | 487"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.1-2",
+          "page": 15,
+          "caption": "Primary System Temperatures and Flow Rates",
+          "structured_text": "% | MWt | % | (Kg/s) | Core dT | T (°F)\nCold | T (°F)\navg | T (°F)\nHot\nBest-Estimate Flow\n0 | 0 | 0-12 | 0-68.5Note(1) | 0 | Note(1) | 425.5 | Note(1)\n15 | 24 | 47.7 | 280.2 | 31.7 | 528.5 | 543.3 | 558.2\n50 | 80 | 75.6 | 443.7 | 66.5 | 512.2 | 543.3 | 574.4\n75 | 120 | 88.9 | 521.6 | 84.6 | 503.8 | 543.3 | 582.9\n100 | 160 | 100 | 587.0 | 99.8 | 496.6 | 543.3 | 590.1\nMinimum Design Flow\n100 | 160 | 91.7 | 538.5 | 107.60 | 487.4 | 538.7 | 590.1\nMaximum Design Flow\n100 | 160 | 112.5 | 660.5 | 89.65 | 507.8 | 548.9 | 590.0"
+        }
+      ]
     },
     "nuscale_ch05_0005": {
       "node_id": "nuscale_ch05_0005",
       "title": "System Components",
-      "summary": "This section describes the main components of the NuScale reactor system, focusing on the Reactor Pressure Vessel (RPV), Reactor Coolant System (RCS) piping, and the Pressurizer (PZR). The RPV serves as a primary barrier to fission product release and houses key reactor internals, while the RCS piping connects various subsystems, and the PZR is integrated into the RPV to help control system pressure. Each component's functions and connections are briefly outlined, with references to further detailed sections.",
+      "content": "NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-3 Revision 5opened to allow feedwater to recirculate through the DHRS heat exchangers and \nsecondary water chemistry conditions for we t layup are established. The SGs are then \nisolated from the main steam and feedwater systems. PZR wate r level is reduced using the \nchemical volume control system to match th e water level in the CNV in preparation for \nopening the RVVs and RRVs. Nitrogen is vent ed from the PZR through the RPV high point \ndegasification line until PZR pressure matc hes containment pressu re. When the PZR and \ncontainment pressure and water level are matched, the RVVs and RRVs are opened.\n5.1.3 System Components\n5.1.3.1 Reactor Pressure Vessel\nThe RPV is a metal vessel that forms part of the RCPB and is  a barrier to the release of \nfission products. Most of the reactor coolant is contained in the RPV. The RPV is \nsupported laterally and vertically by th e CNV. The RPV contains and supports the \nreactor core, RVI, steam generators, and PZR.  The RPV provides pe netrations, support, \nand alignment for the control rod drive syst em. The RPV also provides penetrations and \nattachment locations for the RCS instruments, the ECCS valves (RVVs and RRVs), and \nRCS piping (RCS injection, RCS discharg e, PZR spray supply, and RPV high point \ndegasification lines). In addition, the RPV also provides steam and feedwater plenums \nfor the steam generators and RSV penetrations.\nThe RPV and appurtenances are fu rther described in Section 5.3. \n5.1.3.2 Reactor Cool ant System Piping\nThe RCS piping external to the RPV consists of the following lines: \n• two PZR spray line branches from a common spray header \n• RPV high point degasification line \n• RCS injection line \n• RCS discharge line \nThe RCS injection line has branch lines that connect to each of the ECCS valve reset \nvalves.\nThe RCS piping is further described in Section 5.4.\n5.1.3.3 Pressurizer \nThe PZR, which is integral to  the RPV, occupies the volume inside the RPV above the \nPZR baffle plate. The RCS co mponents in the PZR volume  are the PZR spray nozzles \n(which are part of the RVI) and the PZR heat er assemblies. The PZR provides a point in \nthe RCS where liquid and vapor are main tained in equilibrium under saturated \nconditions at a temperature greater than THOT for pressure contro l of the RCS during \nsteady-state operations and transients. Maintaining the saturated conditions higher \nthan THOT ensures the reactor cool ant remains subcooled duri ng normal operations. \nThe PZR also serves as a surge volume.NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-4 Revision 5The PZR is further described in Section 5.4.\n5.1.3.4 Reactor Vessel Internals\nThe RVI contain several sub-assemblies th at provide support and alignment for the \ncore, the control rod assemblies, the control rod drive shafts, survei llance capsules, and \nthe instrument guide tubes. Additionally, the RVI channel reactor coolant flow from the reactor core to the SGs and back within the RPV.\nThe RVI sub-assemblies include the core support assembly, surveillance capsule \nassemblies, lower riser assembly, upper rise r assembly, flow diverter, and PZR spray \nnozzles.\nThe RVI are further described in  Section 3.9.5 and Section 5.3.\n5.1.3.5 Reactor Safety Valves\nTwo pilot operated, self-actuating RSVs connect to the top of the RPV upper head and \ndischarge directly to the CNV. These valv es are a part of the RCPB and provide \noverpressure protection as required by th e American Society of Mechanical Engineers \n(ASME) Boiler and Pressure Vessel Code. \nThe RSVs are further described in Section 5.2.\n5.1.3.6 Emergency Core Cooling Valves\nThe ECCS valves consist of three RVVs an d two RRVs. The RVVs connect to the upper \nhead portion of the RPV and discharge the PZR steam space directly to the CNV. Two \nRRVs connect to the RPV shell just above the main closure flange. When opened, they permit recirculation of water in the CNV ba ck into the RPV and ultimately through the \ncore. The ECCS valves are a part of the RCPB and are used during emergency core \ncooling operation. The RVVs also provide overpressure protection during operations at low temperature conditions.\nThe RVVs and RRVs are furthe r described in Section 6.3.\n5.1.3.7 Steam Generators\nThe SGS is an integral part of the RP V (although not a component of the RCS) \ncomposed of the SG tubes, SG tube support s, steam and feedwater piping inside \ncontainment, SG tube inlet flow restrictor s, feed plenums, and steam plenums. The \ndesign contains two independent, but inte rtwined, SGs located inside the RPV that \nfacilitate heat transfer to the secondary co olant system and provide redundancy for the \nDHRS. The SGs are a once-through, helical-c oil design, with primary-side reactor \ncoolant outside the tubes and secondary-side  fluid inside the tubes. On the primary \nside, the reactor coolant flows downward across the outside of the tubes, transferring \nheat to the fluid inside the SG tubes. On  the secondary side, preheated feedwater \nenters the two feed plenums at the bottom  of each SG, flows up the helical tubes \nwhere it is heated, boiled, and superheated, and exits the two steam plenums at the NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-5 Revision 5top of each SG. The DHRS is connected to the stea m and feed piping to permit use of \nthe SG to remove decay heat  from the primary coolant.\nThe SGs are further described in Section 5.4.\n5.1.4 System Evaluation\nTo optimize performance of the NuScale Power Plant over the range of  power levels within \nthe design basis, steady state values for primary and secondary side parameters are \nestablished as a function of reactor power. Th e following criteria are considered to define \noptimal performance: maximizing electrical ge neration, using support systems efficiently, \nand providing margin to analytical limits . The following parameters are determined: \nprimary coolant temperatures, primary coolant flow rates, PZR water level, SG water level \nand mass, feedwater and steam flow rates,  feedwater and steam pressure, and steam \nsuperheat. The steady state parameters are ca lculated using the thermal hydraulic software \nNRELAP5 and are verified by hand calculation.\nCalculations establish a best-estimate flow , maximum flow, and minimum flow for the \napplicable design considerations , as well as the primary cool ant temperatures at each flow \ncondition. In establishing the range of design flows, the calculations account for uncertainties in the component flow resistances, the amount of core bypass flow, and the \nthermal head capability. Bounding uncertaintie s are determined based on testing data and \ndesign requirements.\nThe pressure losses through the RCS flow pa th are very low, to support the natural \ncirculation design of the RCS. Since the pressure losses due to flow are small, the pressure at any location in the RCS flow  path is primarily a function of the static head. The primary \ncoolant flows over the outside of the helica l SG tubes; therefore,  SG tube plugging \nuncertainties are not applicable to the prim ary coolant natural circulation flow rate \ndetermination.\nMinimum design flow is the lowest expected va lue for the primary coolant flow rate and is \ncalculated by biasing analytical uncertaintie s to minimize the flow rate. Minimum design \nprimary coolant flow rate is us ed in design analyses where it  is bounding to assume a low \nflow rate.\nMaximum design flow is the highest expected value for the primary coolant flow rate. \nMaximum design flow is calculated by biasin g analytical uncertainties to maximize the \nprimary coolant flow rate. Maximum design prim ary coolant flow rate is used in design \nanalyses where it is bounding to assume a high flow rate.\nThe module heatup system is used to heat up the RCS and provide primary coolant flow \nbefore the reactor is critical . Between hot zero power and 15 percent reactor power, the \nheat generated from the reactor core is used to heat up the RCS to the normal operating \naverage coolant temperature. Between 15 perc ent reactor power and full power operating \nconditions, the average primary coolant temperat ure is maintained at a constant value. The \nfull power average coolant temperature is higher for higher pr imary coolant flow \nconditions, and lower for lo wer primary coolant flow co nditions. This phenomenon \nprovides for similar hot leg te mperatures at full power condit ions, which allows for the SG \nto generate sufficient superheat independent of the full power primary coolant flow rate.",
+      "summary": "This section describes the main components of the NuScale reactor system, focusing on the Reactor Pressure Vessel (RPV), Reactor Coolant System (RCS) piping, and the Pressurizer (PZR). The RPV serves as a primary barrier to fission product release and houses key reactor internals, while the RCS piping connects various subsystems and the PZR is integrated into the RPV to help control system pressure. Each component's functions and connections are briefly outlined, with references to further details in subsequent sections.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "10",
-      "hop": 2
+      "hop": 1,
+      "references": []
     },
-    "nuscale_ch01_0741": {
-      "node_id": "nuscale_ch01_0741",
-      "title": "SRP 15.4.4-15.4.5, Rev 2: Startup of an Inactive Loop or Recirculation Loop at an Incorrect Temperature, and Flow Controller Malfunction Causing an Increase in BWR Core Flow RateII.A RCS and MSS Pressures",
-      "summary": "The section explains that the regulatory guidance in SRP 15.4.4-15.4.5 regarding startup of an inactive loop or recirculation loop at an incorrect temperature, and flow controller malfunction causing increased BWR core flow rate, is not applicable to the NuScale reactor design because it does not use reactor coolant pumps or forced coolant flow. Instead, NuScale addresses similar postulated startup reactivity accidents under DSRS 15.4.6, which covers inadvertent decreases in boron concentration in the reactor coolant system.",
+    "nuscale_ch01_0069": {
+      "node_id": "nuscale_ch01_0069",
+      "title": "Piping and Instrumentation Diagrams",
+      "content": "NuScale Final Safety Analysis Report Drawings and Other Detailed Information\nTier 2 1.7-1 Revision 51.7 Drawings and Other Detailed Information\nWhere appropriate, simplified instrumentation an d controls (I&C), electrical, or mechanical \ndrawings are provided as figures. These figures ar e used in conjunction wi th the written text in \nthe associated section to provide visual clar ification of design in formation. Component \nposition indications shown on these figures do not represent a specific operational state unless \nnoted.\n1.7.1 Electrical and Instrumentation and Control Drawings\nTable 1.7-1 provides a list of I& C functional diagrams and electr ical one-line diagrams used \nin the FSAR.\nSee Figure 1.7-1a, Figure 1.7-1b, and Figure 1. 7-2 for the legends of the symbols and \ncharacters used in elec trical and I&C diagrams.\nCOL Item 1.7-1: A COL applicant that references th e NuScale Power Plant design certification will \nprovide site-specific diagrams and legends, as applicable.\n1.7.2 Piping and Instrumentation Diagrams\nTable 1.7-2 provides a list of syst em drawings used in the FSAR. \nSee Figure 1.7-3a through Figure 1.7- 3f for a legend of the symb ols and characters used in \npiping and instrumentation diagrams.\nCOL Item 1.7-2: A COL applicant that references th e NuScale Power Plant design certification will \nlist additional site-specific piping and instrumentation diagrams and legends as \napplicable.NuScale Final Safety Analysis Report Drawings and Other Detailed Information\nTier 2 1.7-2 Revision 5Table 1.7-1: Instrumentation and Controls Functional and Electrical One-Line Diagrams\nFigure Title\nFigure 7.0-1 Overall Instrumentation and Controls System Architecture Diagram\nFigure 7.0-3 Module Protection Syst em Safety Architecture Overview\nFigure 7.0-4 Separation Group A Communication Architecture\nFigure 7.0-5 Separation Group A and Division I Reactor Trip System and Engineered Safety Features \nActuation System Comm unication Architecture\nFigure 7.0-6 Reactor Trip Breaker ArrangementFigure 7.0-7 Equipment Interface Module ConfigurationFigure 7.0-8 Equipment Interface Module OutputFigure 7.0-9 Pressurizer Trip Breaker ArrangementFigure 7.0-10 Module Protecti on System Gateway Diagram\nFigures 7.0-11a and 7.0-11b Module Pr otection System Power Distribution\nFigure 7.0-12 Neutron Monitoring  System Ex-Core Block Diagram\nFigure 7.0-13 Plant Protection System Block DiagramFigure 7.0-14 Safety Display and Indication System BoundaryFigure 7.0-15 Safety Display and Indication HubFigure 7.0-16 Display Interface ModuleFigure 7.0-17 Module Control System Inte rnal Functions and External Interfaces\nFigure 7.0-20 Plant Control System Inte rnal Functions and External Interfaces\nFigure 8.3-1 Station Single Line DiagramFigures 8.3-2a and 8.3-2b 13.8kV and Switchyard SystemFigures 8.3-3a and 8.3-3b Medium Voltage Altern ating Current Electrical  Distribution System\nFigures 8.3-4a through 8.3-4z Low Voltage Altern ating Current Electrical  Distribution System\nFigures 8.3-5a and 8.3-5b Backup Power Supply System\nFigure 8.3-6\nHighly Reliable Direct Current Power System (Common)\nFigures 8.3-7a and 8.3-7b Highly Reliable Direct Current Power System (Module Specific)\nFigures 8.3-8a through 8.3-8f Normal Direct Current Power System\nFigure 11.5-2 Process and Effluent Radiat ion Monitoring System I&C ConfigurationNuScale Final Safety Analysis Report Drawings and Other Detailed Information\nTier 2 1.7-3 Revision 5Table 1.7-2: System Drawings\nFigure Title\nFigure 5.1-2 Reactor Coolant System Simplified DiagramFigure 5.1‐3 Reactor Coolant System Schematic Flow DiagramFigure 5.4-9 Steam Generator Simplified DiagramFigure 5.4-10 Decay Heat Removal System Simplified DiagramFigure 6.2‐4 Containment System Pi ping and Instrumentation Diagram\nFigure 6.2‐7 Containment Isolation Valve Actuator Hydraulic Schematic\nFigure 6.2‐8 Containment Isolatio n Valve Hydraulic Skid Schematic\nFigure 6.3-1 Emergency Core Cooling SystemFigure 6.3‐3 Emergency Core Cooling System Valve and Actuator Schematic\nFigure 6.4-1 Control Room Habitability System DiagramFigure 9.1.3-1 Spent Fuel Pool Cooling System DiagramFigures 9.1.3-2a and 9.1.3-2b Reac tor Pool Cooling System Diagram\nFigure 9.1.3-3 Pool Cleanup System DiagramFigure 9.1.3-4 Pool Surge Control System DiagramFigure 9.2.2-1 Reactor Componen t Cooling Water System Diagram\nFigure 9.2.3-1 Demineralized Water System DiagramFigure 9.2.5-2 Ultimate Heat Sink Qualifie d Makeup Line and Instrumentation Diagram\nFigure 9.2.6‐1 Condensate Storage FacilityFigure 9.2.7-1 Site Cooling Water System DiagramFigure 9.2.8-1 Chilled Water System DiagramFigure 9.2.9-1 Utility Water System DiagramFigure 9.3.1-1 Instrument Air and Service Air System DiagramFigure 9.3.1-2 Nitrogen Dist ribution System Diagram\nFigure 9.3.2-1 Containment Sampling System DiagramFigure 9.3.3-1 Radioactive Waste Drain System DiagramFigure 9.3.3-2 Balance-of-Plant Drain System DiagramFigure 9.3.4-1 Chemical and Volume Control System DiagramFigure 9.3.4-2 Boron Addition System DiagramFigure 9.3.6-1 Containment Evacuation System Diagram\nFigure 9.3.6-2 Containment Flood ing and Drain System Diagram\nFigure 9.4.1-1 Control Room Ventilation System DiagramFigure 9.4.2-1\nReactor Building HVAC System Diagram\nFigure 9.4.3-1 Radioactive Waste Building  HVAC System Diagram\nFigure 9.4.4-1 Turbine Building HVAC System DiagramFigure 9.5.1-1 Fire Protection System Water Supplies and Fire PumpsFigure 9.5.1-2 Fire Protection System Yard Fire Main LoopFigure 10.1-1 Power Conversion System Block Flow DiagramFigure 10.1-2 Flow Diagram and Heat Balance Diagram at Rated Power for Steam and Power \nConversion System Cycle\nFigure 10.2-1 Turbine Generator System  Piping and Instrumentation Diagram\nFigure 10.3‐1 Main Steam System Pi ping and Instrumentation Diagram\nFigure 10.4-1 Main Condenser Pipi ng and Instrumentation Diagram\nFigure 10.4-2 Condenser Air Removal Syst em Piping and Instrumentation Diagram\nFigure 10.4-3 Circulating Water System Piping  and Instrumentation Di agram (Typical of 2)\nFigures 10.4-4a and 10.4-4b Auxiliary Boiler System Piping and Instrumentation Diagram\nFigures 11.2-1a through 11.2-1j Liquid  Radioactive Waste System Diagram\nFigures 11.3-1a and 11.3-1b Gaseous Radioactive Waste System Diagram\nFigure 11.4-1 Block Diagram of th e Solid Radioactive Waste System\nFigure 11.4-2a Process Flow Diagram for Wet Solid WasteFigure 11.4-2b Solid Radioactive Waste System DiagramNuScale Final Safety Analysis Report Drawings and Other Detailed Information\nTier 2 1.7-4 Revision 5Figure 11.5‐1 Radioactive Effluent Flow Paths with Process and Effluent Radiation Monitors\nFigure 11.5‐3 Off‐Line Radiation MonitorFigure 11.5‐4 Adjacent‐to‐ Line Radiation Monitor\nFigure 11.5‐5 In‐Line Radiation Monitor\nFigure 11.5‐6 RBVS Plant Exhaust Stack Effluent Radiation MonitorTable 1.7-2: System Drawings (Continued)\nFigure Title\n\n--- Referenced Tables (structured) ---\n[Table 1.7-1: Instrumentation and Controls Functional and Electrical One-Line Diagrams]\nFigure 7.0-1 | Overall Instrumentation and Controls System Architecture Diagram\nFigure 7.0-3 | Module Protection System Safety Architecture Overview\nFigure 7.0-4 | Separation Group A Communication Architecture\nFigure 7.0-5 | Separation Group A and Division I Reactor Trip System and Engineered Safety Features\nActuation System Communication Architecture\nFigure 7.0-6 | Reactor Trip Breaker Arrangement\nFigure 7.0-7 | Equipment Interface Module Configuration\nFigure 7.0-8 | Equipment Interface Module Output\nFigure 7.0-9 | Pressurizer Trip Breaker Arrangement\nFigure 7.0-10 | Module Protection System Gateway Diagram\nFigures 7.0-11a and 7.0-11b | Module Protection System Power Distribution\nFigure 7.0-12 | Neutron Monitoring System Ex-Core Block Diagram\nFigure 7.0-13 | Plant Protection System Block Diagram\nFigure 7.0-14 | Safety Display and Indication System Boundary\nFigure 7.0-15 | Safety Display and Indication Hub\nFigure 7.0-16 | Display Interface Module\nFigure 7.0-17 | Module Control System Internal Functions and External Interfaces\nFigure 7.0-20 | Plant Control System Internal Functions and External Interfaces\nFigure 8.3-1 | Station Single Line Diagram\nFigures 8.3-2a and 8.3-2b | 13.8kV and Switchyard System\nFigures 8.3-3a and 8.3-3b | Medium Voltage Alternating Current Electrical Distribution System\nFigures 8.3-4a through 8.3-4z | Low Voltage Alternating Current Electrical Distribution System\nFigures 8.3-5a and 8.3-5b | Backup Power Supply System\nFigure 8.3-6 | Highly Reliable | Direct Current | Power System (Common)\nFigures 8.3-7a and 8.3-7b | Highly Reliable | Direct Current | Power System (Module Specific)\nFigures 8.3-8a through 8.3-8f | Normal | Direct Current | Power System\nFigure 11.5-2 | Process and Effluent Radiation Monitoring System I&C Configuration\n[Table 1.7-2: System Drawings (Continued)]\nFigure 11.5‐1 | Radioactive Effluent Flow Paths with Process and Effluent Radiation Monitors\nFigure 11.5‐3 | Off‐Line Radiation Monitor\nFigure 11.5‐4 | Adjacent‐to‐Line Radiation Monitor\nFigure 11.5‐5 | In‐Line Radiation Monitor\nFigure 11.5‐6 | RBVS Plant Exhaust Stack Effluent Radiation Monitor",
+      "summary": "This section describes the use of simplified electrical, instrumentation and control (I&C), and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information. It lists the relevant diagrams and legends provided for both I&C and piping and instrumentation diagrams, and notes that site-specific diagrams and legends will be supplied by COL applicants referencing the NuScale design certification.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "299",
-      "hop": 2
+      "page_range": "95",
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.7-1",
+          "page": 96,
+          "caption": "Instrumentation and Controls Functional and Electrical One-Line Diagrams",
+          "structured_text": "Figure 7.0-1 | Overall Instrumentation and Controls System Architecture Diagram\nFigure 7.0-3 | Module Protection System Safety Architecture Overview\nFigure 7.0-4 | Separation Group A Communication Architecture\nFigure 7.0-5 | Separation Group A and Division I Reactor Trip System and Engineered Safety Features\nActuation System Communication Architecture\nFigure 7.0-6 | Reactor Trip Breaker Arrangement\nFigure 7.0-7 | Equipment Interface Module Configuration\nFigure 7.0-8 | Equipment Interface Module Output\nFigure 7.0-9 | Pressurizer Trip Breaker Arrangement\nFigure 7.0-10 | Module Protection System Gateway Diagram\nFigures 7.0-11a and 7.0-11b | Module Protection System Power Distribution\nFigure 7.0-12 | Neutron Monitoring System Ex-Core Block Diagram\nFigure 7.0-13 | Plant Protection System Block Diagram\nFigure 7.0-14 | Safety Display and Indication System Boundary\nFigure 7.0-15 | Safety Display and Indication Hub\nFigure 7.0-16 | Display Interface Module\nFigure 7.0-17 | Module Control System Internal Functions and External Interfaces\nFigure 7.0-20 | Plant Control System Internal Functions and External Interfaces\nFigure 8.3-1 | Station Single Line Diagram\nFigures 8.3-2a and 8.3-2b | 13.8kV and Switchyard System\nFigures 8.3-3a and 8.3-3b | Medium Voltage Alternating Current Electrical Distribution System\nFigures 8.3-4a through 8.3-4z | Low Voltage Alternating Current Electrical Distribution System\nFigures 8.3-5a and 8.3-5b | Backup Power Supply System\nFigure 8.3-6 | Highly Reliable | Direct Current | Power System (Common)\nFigures 8.3-7a and 8.3-7b | Highly Reliable | Direct Current | Power System (Module Specific)\nFigures 8.3-8a through 8.3-8f | Normal | Direct Current | Power System\nFigure 11.5-2 | Process and Effluent Radiation Monitoring System I&C Configuration"
+        },
+        {
+          "type": "table",
+          "id": "Table 1.7-2",
+          "page": 98,
+          "caption": "System Drawings (Continued)",
+          "structured_text": "Figure 11.5‐1 | Radioactive Effluent Flow Paths with Process and Effluent Radiation Monitors\nFigure 11.5‐3 | Off‐Line Radiation Monitor\nFigure 11.5‐4 | Adjacent‐to‐Line Radiation Monitor\nFigure 11.5‐5 | In‐Line Radiation Monitor\nFigure 11.5‐6 | RBVS Plant Exhaust Stack Effluent Radiation Monitor"
+        }
+      ]
     },
-    "nuscale_ch01_0044": {
-      "node_id": "nuscale_ch01_0044",
-      "title": "Chemical and Volume Control System",
-      "summary": "The Chemical and Volume Control System section describes the NuScale reactor’s passive decay heat removal system, which uses two independent trains, each capable of removing 100% of the decay heat via natural circulation and passive condensers immersed in the reactor pool. In case of a steam generator tube failure or loss of AC power, the system isolates the affected components and continues cooling the reactor by transferring heat to a large, stainless steel-lined ultimate heat sink pool, ensuring safe heat removal even during accidents.",
+    "nuscale_ch01_0052": {
+      "node_id": "nuscale_ch01_0052",
+      "title": "Comparison with Other Facilities",
+      "content": "NuScale Final Safety Analysis Report Comparison with Other Facilities\nTier 2 1.3-1 Revision 51.3 Comparison with Other Facilities\nThe major NuScale Power Plant design feature s and nominal parameters are provided in \nTable 1.3-1 and discussed further in the associated final safety anal ysis report (FSAR) section(s). \nThese NuScale features and values  are shown in comparison with a typical pressurized water \nreactor (PWR) plant design. All values are no minal and provided for comparison only. The \ntypical PWR values presented are representative of the Standardized Nu clear Unit Power Plant \nSystem design.\nTable 1.3-2 provides a comparison of safety sy stems and components re quired to protect the \nreactor core for the NuScale Power Plant versus a typical PWR plant.NuScale Final Safety Analysis Report Comparison with Other Facilities\nTier 2 1.3-2 Revision 5Table 1.3-1: NuScale Plant Comp arison with Other Facilities\nNuScale Plant Parameter or Feature (per NPM) Typical PWR NuScale\nNominal gross electrical output (MWe) 1,186 50Core thermal output (MWt) 3,411 160Number of fuel assemblies 193 37Fuel assembly lattice -17x17 17x17Effective fuel length (ft) 12 6.56Fuel rods per fuel assembly 264 264Average linear heat rate (kW/ft) 5.4 2.5Number of Control Rod Assemblies 53 16Design life (years) 40 60Reactor Coolant SystemNumber of heat transfer loops 4 No External LoopsReactor Coolant Pipes (in.) 27.5-31 NoneOperating pressure (psia) 2,250 1,850Hot leg temperature (°F) 618 590Reactor VesselVessel inner diameter (in.) 173 107.5Thermal shielding- and reflector design Neutro n pad design Stacked stainless steel reflector \nblocks\nIn-core instrumentation Bot tom mounted Top mounted\nSteam GeneratorNumber 4 2Type Vertical U-tube Helical coilHeat transfer area (ft2) 55,000 Approximately 18,000Number of tubes 5,626 1,380Reactor Coolant Pumps 4 0PressurizerInternal volume (ft3) 1,800 568Surge nozzle nominal diameter (in.) 14 NoneResidual Heat Removal Pumps 2 NoneContainmentType PCCV Steel Pressure VesselInner diameter (ft-in.) 140-0 14-2Height (ft-in.) 205-0 (inner) 75-8.5 (outer)Containment Spray Pumps 2 NoneHigh Pressure Safety Injection Pumps 2 NoneCharging / Safety Injection Pumps 2 NoneLow Pressure Safety Injection Pumps 2 NoneAccumulators 4 NoneI&C System type Analog DigitalEmergency Diesel Generators 2 NoneTurbine Type 1800 rpm, Tandem Compound Six \nFlow3,600 rpm, 10 stage with Superheat\nEmergency Feedwater Pumps 3 None\nCharging Pumps (CVCS pumps) 2 2Used for Safety Injection Yes NoVolume Control Tank 1 0Reactor Component Cooling Wa ter Pumps 4 6 total for 12 NPMsNuScale Final Safety Analysis Report Comparison with Other Facilities\nTier 2 1.3-3 Revision 5Table 1.3-2: Safety Systems and Components  Required to Protec t the Reactor Core - \nNuScale Comparison with Other Facilities\nSafety System or Comp onent Typical PWR NuScale\nReactor Pressure Vessel X XContainment Vessel X X\nReactor Coolant System X X\nDecay Heat Removal System X XEmergency Core Cooling System X XControl Rod Drive System X XContainment Isolation System X XUltimate Heat Sink X XResidual Heat Removal System XSafety Injection System XRefueling Water Storage Tank XCondensate Storage Tank XAuxiliary Feedwater System XEmergency Service Water System XHydrogen Recombiner or Ignition System XContainment Spray System XReactor Coolant Pumps XSafety-Related Electrical Distribution System XAlternative Off-Site Power XEmergency Diesel Generators XSafety-Related Class 1E Battery System XAnticipated Transient Without Scram (ATWS) System X\n\n--- Referenced Tables (structured) ---\n[Table 1.3-1: NuScale Plant Comparison with Other Facilities]\nNominal gross electrical output (MWe) | 1,186 | 50\nCore thermal output (MWt) | 3,411 | 160\nNumber of fuel assemblies | 193 | 37\nFuel assembly lattice | -17x17 | 17x17\nEffective fuel length (ft) | 12 | 6.56\nFuel rods per fuel assembly | 264 | 264\nAverage linear heat rate (kW/ft) | 5.4 | 2.5\nNumber of Control Rod Assemblies | 53 | 16\nDesign life (years) | 40 | 60\nReactor Coolant System\nNumber of heat transfer loops | 4 | No External Loops\nReactor Coolant Pipes (in.) | 27.5-31 | None\nOperating pressure (psia) | 2,250 | 1,850\nHot leg temperature (°F) | 618 | 590\nReactor Vessel\nVessel inner diameter (in.) | 173 | 107.5\nThermal shielding- and reflector design | Neutron pad design | Stacked stainless steel reflector\nblocks\nIn-core instrumentation | Bottom mounted | Top mounted\nSteam Generator\nNumber | 4 | 2\nType | Vertical U-tube | Helical coil\nHeat transfer area (ft2) | 55,000 | Approximately 18,000\nNumber of tubes | 5,626 | 1,380\nReactor Coolant Pumps | 4 | 0\nPressurizer\nInternal volume (ft3) | 1,800 | 568\nSurge nozzle nominal diameter (in.) | 14 | None\nResidual Heat Removal Pumps | 2 | None\nContainment\nType | PCCV | Steel Pressure Vessel\nInner diameter (ft-in.) | 140-0 | 14-2\nHeight (ft-in.) | 205-0 (inner) | 75-8.5 (outer)\nContainment Spray Pumps | 2 | None\nHigh Pressure Safety Injection Pumps | 2 | None\nCharging / Safety Injection Pumps | 2 | None\nLow Pressure Safety Injection Pumps | 2 | None\nAccumulators | 4 | None\nI&C System type | Analog | Digital\nEmergency Diesel Generators | 2 | None\nTurbine Type | 1800 rpm, Tandem Compound Six\nFlow | 3,600 rpm, 10 stage with Superheat\nEmergency Feedwater Pumps | 3 | None\nCharging Pumps (CVCS pumps) | 2 | 2\nUsed for Safety Injection | Yes | No\nVolume Control Tank | 1 | 0\nReactor Component Cooling Water Pumps | 4 | 6 total for 12 NPMs\n[Table 1.3-2: Safety Systems and Components Required to Protect the Reactor Core -]\nReactor Pressure Vessel | X | X\nContainment Vessel | X | X\nReactor Coolant System | X | X\nDecay Heat Removal System | X | X\nEmergency Core Cooling System | X | X\nControl Rod Drive System | X | X\nContainment Isolation System | X | X\nUltimate Heat Sink | X | X\nResidual Heat Removal System | X\nSafety Injection System | X\nRefueling Water Storage Tank | X\nCondensate Storage Tank | X\nAuxiliary Feedwater System | X\nEmergency Service Water System | X\nHydrogen Recombiner or Ignition System | X\nContainment Spray System | X\nReactor Coolant Pumps | X\nSafety-Related Electrical Distribution System | X\nAlternative Off-Site Power | X\nEmergency Diesel Generators | X\nSafety-Related Class 1E Battery System | X\nAnticipated Transient Without Scram (ATWS) System | X",
+      "summary": "This section compares the major design features and parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It highlights differences in size, output, core design, and safety systems, showing that NuScale uses a smaller, simpler, and more integrated design with fewer components and lower power output per module compared to conventional PWRs. The comparison is summarized in tables for easy reference.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "41",
-      "hop": 4
+      "page_range": "79",
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.3-1",
+          "page": 80,
+          "caption": "NuScale Plant Comparison with Other Facilities",
+          "structured_text": "Nominal gross electrical output (MWe) | 1,186 | 50\nCore thermal output (MWt) | 3,411 | 160\nNumber of fuel assemblies | 193 | 37\nFuel assembly lattice | -17x17 | 17x17\nEffective fuel length (ft) | 12 | 6.56\nFuel rods per fuel assembly | 264 | 264\nAverage linear heat rate (kW/ft) | 5.4 | 2.5\nNumber of Control Rod Assemblies | 53 | 16\nDesign life (years) | 40 | 60\nReactor Coolant System\nNumber of heat transfer loops | 4 | No External Loops\nReactor Coolant Pipes (in.) | 27.5-31 | None\nOperating pressure (psia) | 2,250 | 1,850\nHot leg temperature (°F) | 618 | 590\nReactor Vessel\nVessel inner diameter (in.) | 173 | 107.5\nThermal shielding- and reflector design | Neutron pad design | Stacked stainless steel reflector\nblocks\nIn-core instrumentation | Bottom mounted | Top mounted\nSteam Generator\nNumber | 4 | 2\nType | Vertical U-tube | Helical coil\nHeat transfer area (ft2) | 55,000 | Approximately 18,000\nNumber of tubes | 5,626 | 1,380\nReactor Coolant Pumps | 4 | 0\nPressurizer\nInternal volume (ft3) | 1,800 | 568\nSurge nozzle nominal diameter (in.) | 14 | None\nResidual Heat Removal Pumps | 2 | None\nContainment\nType | PCCV | Steel Pressure Vessel\nInner diameter (ft-in.) | 140-0 | 14-2\nHeight (ft-in.) | 205-0 (inner) | 75-8.5 (outer)\nContainment Spray Pumps | 2 | None\nHigh Pressure Safety Injection Pumps | 2 | None\nCharging / Safety Injection Pumps | 2 | None\nLow Pressure Safety Injection Pumps | 2 | None\nAccumulators | 4 | None\nI&C System type | Analog | Digital\nEmergency Diesel Generators | 2 | None\nTurbine Type | 1800 rpm, Tandem Compound Six\nFlow | 3,600 rpm, 10 stage with Superheat\nEmergency Feedwater Pumps | 3 | None\nCharging Pumps (CVCS pumps) | 2 | 2\nUsed for Safety Injection | Yes | No\nVolume Control Tank | 1 | 0\nReactor Component Cooling Water Pumps | 4 | 6 total for 12 NPMs"
+        },
+        {
+          "type": "table",
+          "id": "Table 1.3-2",
+          "page": 81,
+          "caption": "Safety Systems and Components Required to Protect the Reactor Core -",
+          "structured_text": "Reactor Pressure Vessel | X | X\nContainment Vessel | X | X\nReactor Coolant System | X | X\nDecay Heat Removal System | X | X\nEmergency Core Cooling System | X | X\nControl Rod Drive System | X | X\nContainment Isolation System | X | X\nUltimate Heat Sink | X | X\nResidual Heat Removal System | X\nSafety Injection System | X\nRefueling Water Storage Tank | X\nCondensate Storage Tank | X\nAuxiliary Feedwater System | X\nEmergency Service Water System | X\nHydrogen Recombiner or Ignition System | X\nContainment Spray System | X\nReactor Coolant Pumps | X\nSafety-Related Electrical Distribution System | X\nAlternative Off-Site Power | X\nEmergency Diesel Generators | X\nSafety-Related Class 1E Battery System | X\nAnticipated Transient Without Scram (ATWS) System | X"
+        }
+      ]
     },
-    "nuscale_ch05_0003": {
-      "node_id": "nuscale_ch05_0003",
-      "title": "Design Basis",
-      "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain fuel integrity, minimize solid deposits, and ensure uniform boron concentration under all operating conditions, supporting both performance and safety requirements.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "8",
-      "hop": 4
-    },
-    "nuscale_ch01_0743": {
-      "node_id": "nuscale_ch01_0743",
-      "title": "SRP 15.4.4-15.4.5, Rev 2: Startup of an Inactive Loop or Recirculation Loop at an Incorrect Temperature, and Flow Controller Malfunction Causing an Increase in BWR Core Flow RateII.C Events of Moderate Frequency",
-      "summary": "This section explains that the regulatory guidance in SRP 15.4.4-15.4.5, which addresses startup of inactive loops or flow controller malfunctions in PWR and BWR designs, does not apply to the NuScale reactor because it does not use reactor coolant pumps or forced coolant flow. Instead, any relevant postulated startup reactivity accidents for NuScale are addressed under DSRS 15.4.6, which covers inadvertent decreases in boron concentration.",
+    "nuscale_ch01_0558": {
+      "node_id": "nuscale_ch01_0558",
+      "title": "DSRS 12.3-12.4, Rev 0: Radiation Protection Design FeaturesII.9 RG 8.15",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-150 Revision 5\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design FeaturesII.2\nRG 1.52 Not Applicable See RG 1.52 in Table 1.9-2. Not Applicable\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.3 RG 1.69 Partially Conforms See RG 1.69 in Table 1.9-2. 12.3.2\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.4 RG 1.97 Partially Conforms See RG 1.97 in Table 1.9-2. 7.2.13\n12.3.4\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design FeaturesII.5\nRG 1.183 Partially Conforms See RG 1.183 in Table 1.9-2. 12.2\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.6 RG 8.2 Not Applicable See RG 8.2 in Table 1.9-2. Not Applicable\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.7 RG 8.8 Partially Conforms See RG 8.8 in Table 1.9-2. 12.3.1\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design FeaturesII.8\nRG 8.10 Not Applicable See RG 8.10 in Table 1.9-2. Not Applicable\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.9 RG 8.15 Not Applicable See RG 8.15 in Table 1.9-2. Not Applicable\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.10 RG 8.19 Conforms None. 12.4\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design FeaturesII.11\nRG 8.25 Not Applicable See RG 8.25 in Table 1.9-2. Not Applicable\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.12 RG 8.38 Partially Conforms See RG 8.38 in Table 1.9-2. 12.3.1\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.13 ANSI/ANS/HPSSC-6.8.1-1981 Conforms None. 12.3.4Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-2: Conformance with Regulatory Guides (Continued)]\n8.39 | Release of Patients Administered\nRadioactive Materials | - | Not Applicable | This guidance governs activities applicable only to\nfacilities that administer radio-pharmaceuticals. | Not Applicable\n8.40 | Methods for Measuring Effective\nDose Equivalent from External\nExposure | - | Not Applicable | This guidance governs dosimetry methods for deter-\nmining effective dose equivalent for external radia-\ntion exposures. These methods are the responsibility\nof the COL applicant or licensee. | Not Applicable\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section summarizes the NuScale Final Safety Analysis Report’s conformance with various regulatory guides related to radiation protection design features, as outlined in DSRS 12.3-12.4, Rev 0. It details whether each regulatory guide is applicable, and if so, whether the design fully or partially conforms, with references to supporting sections or tables for further information. Several guides are noted as not applicable, while others are partially or fully met.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "300",
-      "hop": 4
+      "page_range": "278",
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-2",
+          "page": 173,
+          "caption": "Conformance with Regulatory Guides (Continued)",
+          "structured_text": "8.39 | Release of Patients Administered\nRadioactive Materials | - | Not Applicable | This guidance governs activities applicable only to\nfacilities that administer radio-pharmaceuticals. | Not Applicable\n8.40 | Methods for Measuring Effective\nDose Equivalent from External\nExposure | - | Not Applicable | This guidance governs dosimetry methods for deter-\nmining effective dose equivalent for external radia-\ntion exposures. These methods are the responsibility\nof the COL applicant or licensee. | Not Applicable"
+        },
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0069",
-      "target": "nuscale_ch01_0558",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A provides detailed design drawings and figures (including instrumentation and control diagrams) that visually clarify system configurations such as RCS flow, while Section B documents the conformance of these design features to specific regulatory criteria for radiation protection, thus Section A's technical details support the regulatory claims made in Section B."
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch05_0005",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the establishment of steady state primary and secondary flow parameters as a function of reactor power, which are directly quantified by the primary flow rates listed in Table 5.1-2 referenced in the analysis question."
     },
     {
-      "source": "nuscale_ch01_0069",
-      "target": "nuscale_ch05_0006",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A provides detailed diagrams and figures that visually represent system components and flows, which can be used to interpret and verify the primary flow rates listed as steady-state values in Section B's system evaluation tables."
-    },
-    {
-      "source": "nuscale_ch01_0069",
-      "target": "nuscale_ch01_0052",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section B (Table 1.3-1) provides the nominal RCS flow values for NuScale (0 RCPs), which are the design parameters that should be compared against the primary flow rates listed in Table 5.1-2, while Section A provides the supporting drawings and figures that visually clarify the system design referenced in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0558",
-      "target": "nuscale_ch05_0006",
-      "relation": "SATISFIES",
-      "confidence": 0.8,
-      "description": "Section A references regulatory guidance and conformance criteria for radiation protection design features, while Section B provides system evaluation details including primary flow rates, thus Section B provides the technical design results (primary flow rates) that must be compared against the regulatory requirements referenced in Section A."
+      "source": "nuscale_ch05_0006",
+      "target": "nuscale_ch01_0069",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses the establishment of steady state primary and secondary flow parameters for optimal plant performance, while Section B provides detailed drawings and tables (including Table 1.3-1) that specify the actual RCS flow rates, thus Section B provides the specific data referenced in Section A's general evaluation."
     },
     {
       "source": "nuscale_ch05_0006",
       "target": "nuscale_ch01_0052",
       "relation": "REFERENCES",
       "confidence": 0.85,
-      "description": "Section A discusses the establishment of steady state primary flow rates as a function of reactor power, while Section B provides the nominal RCS flow values (including 0 RCPs) in Table 1.3-1 for comparison with other facilities, thus Section A's analysis relies on or references the specific flow values presented in Section B."
+      "description": "Section A discusses the establishment of steady state primary flow parameters for optimal plant performance, while Section B provides nominal RCS flow values (including 0 RCPs) in Table 1.3-1 for comparison with other facilities, thus connecting Section A's design evaluation with Section B's specific flow data."
     },
     {
       "source": "nuscale_ch05_0005",
-      "target": "nuscale_ch01_0069",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes operational procedures and system component states relevant to RCS flow, while Section B provides the detailed drawings and figures that visually clarify and support the textual descriptions in Section A, connecting operational context with design documentation."
-    },
-    {
-      "source": "nuscale_ch05_0005",
-      "target": "nuscale_ch05_0006",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A describes operational steps and system configurations affecting RCS flow, while Section B discusses how steady-state flow parameters, such as those in Table 5.1-2, are established and evaluated for optimal plant performance, connecting the operational context to the quantitative flow values."
-    },
-    {
-      "source": "nuscale_ch01_0741",
-      "target": "nuscale_ch01_0069",
-      "relation": "REFERENCES",
-      "confidence": 0.9,
-      "description": "Section A references regulatory criteria and design limits for RCS flow and fuel safety, while Section B provides the detailed drawings and tables (including Table 1.3-1) that specify the actual NuScale RCS flow values, thus Section A's analysis relies on the data presented in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0741",
-      "target": "nuscale_ch05_0006",
-      "relation": "REFERENCES",
-      "confidence": 0.9,
-      "description": "Section A references specific RCS flow conditions (0 RCPs, Table 1.3-1) that should be compared to the primary flow rates established in Section B's Table 5.1-2, connecting them through the design values for RCS flow under different operational scenarios."
-    },
-    {
-      "source": "nuscale_ch05_0005",
-      "target": "nuscale_ch01_0741",
-      "relation": "SATISFIES",
-      "confidence": 0.8,
-      "description": "Section A provides operational details and system preparation steps for the NuScale RCS, while Section B outlines regulatory criteria and conformance for RCS and MSS pressures, connecting them through the requirement that operational procedures (A) must satisfy the regulatory limits and criteria (B) for primary flow rates."
-    },
-    {
-      "source": "nuscale_ch01_0044",
-      "target": "nuscale_ch01_0069",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the functional operation and safety role of the Chemical and Volume Control System during specific events, while Section B provides the detailed drawings and diagrams that visually clarify and support the system descriptions in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0044",
-      "target": "nuscale_ch05_0006",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the decay heat removal system's capability to cool the RCS via natural circulation, while Section B discusses how steady-state primary flow rates (including those with 0 RCPs) are established as a function of reactor power, connecting both sections through the operational performance and flow characteristics of the RCS under different conditions."
-    },
-    {
-      "source": "nuscale_ch05_0003",
       "target": "nuscale_ch01_0069",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A provides a general design description stating that the NuScale RCS relies on natural circulation without reactor coolant pumps, which is the operational context for the RCS flow values presented in Section B's detailed drawings and tables."
+      "description": "Section A describes the operational procedures and system component states relevant to RCS flow, while Section B provides the detailed drawings and figures (including Table 1.3-1) that visually clarify and specify the flow rates and component positions referenced in Section A."
     },
     {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch05_0006",
+      "source": "nuscale_ch05_0005",
+      "target": "nuscale_ch01_0052",
+      "relation": "REFERENCES",
+      "confidence": 0.95,
+      "description": "Section B (Table 1.3-1) provides the nominal NuScale RCS flow rate with 0 RCPs, which can be directly compared to the primary flow rates discussed in Section A (Table 5.1-2) to assess consistency or differences in reported values."
+    },
+    {
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0052",
       "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes the design basis of the NuScale RCS, specifically noting reliance on natural circulation without reactor coolant pumps, which directly informs the system evaluation in Section B where steady state primary flow rates (as in Table 5.1-2) are established based on this design."
+      "confidence": 0.8,
+      "description": "Section B (Table 1.3-1) provides the nominal RCS flow values for NuScale (including 0 RCPs), which are the specific design parameters that should be compared against the primary flow rates detailed in Table 5.1-2, while Section A references the drawings and figures that visually clarify the system design but do not directly provide the flow values."
     },
     {
-      "source": "nuscale_ch01_0743",
-      "target": "nuscale_ch01_0069",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A explains that certain SRP guidance is not applicable to NuScale due to the absence of reactor coolant pumps, while Section B provides the detailed drawings and tables (such as Table 1.3-1) that illustrate the actual RCS flow configuration without pumps, thus supporting Section A's claim."
-    },
-    {
-      "source": "nuscale_ch01_0743",
-      "target": "nuscale_ch05_0006",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A explains that SRP 15.4.4-15.4.5 guidance on RCS flow is not applicable to NuScale due to the absence of reactor coolant pumps, while Section B discusses how NuScale establishes steady-state primary flow rates as part of its system evaluation, connecting both sections through the design choice of natural circulation (no RCPs) and its impact on flow rate parameters."
-    },
-    {
-      "source": "nuscale_ch01_0044",
-      "target": "nuscale_ch05_0003",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A describes the decay heat removal system's reliance on natural circulation for cooling, which aligns with Section B's summary that the NuScale RCS operates solely on natural circulation without reactor coolant pumps, connecting both sections through the design choice of natural circulation flow."
-    },
-    {
-      "source": "nuscale_ch01_0044",
-      "target": "nuscale_ch01_0743",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section B explains that SRP 15.4.4-15.4.5 guidance is not applicable to NuScale because it lacks reactor coolant pumps, which is consistent with Section A's description of a natural circulation RCS without pumps."
-    },
-    {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch01_0743",
-      "relation": "SUPPORTS",
-      "confidence": 1.0,
-      "description": "Section A describes the NuScale RCS design as relying solely on natural circulation without reactor coolant pumps, while Section B explains that certain regulatory criteria are not applicable to NuScale because it lacks reactor coolant pumps, directly referencing the design described in Section A."
+      "source": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0558",
+      "relation": "REFERENCES",
+      "confidence": 0.7,
+      "description": "Section A provides detailed design drawings and figures, including instrumentation and control diagrams relevant to RCS flow, while Section B documents the NuScale FSAR's conformance with regulatory criteria for radiation protection, which may reference or require information from the design drawings in Section A to demonstrate compliance."
     }
   ]
 }

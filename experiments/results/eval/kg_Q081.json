@@ -2,180 +2,596 @@
   "question": "Looking at Figure 1.2-6, how does the cutaway view of the NPM show the relative sizes of the containment and reactor vessels?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0002": {
-      "node_id": "nuscale_ch01_0002",
-      "title": "Introduction",
-      "summary": "This section introduces the NuScale Final Safety Analysis Report (FSAR), which is required for standard design certification under U.S. nuclear regulations. It outlines the scope of the report, describing the NuScale Power Module (NPM) as a modular, scalable nuclear steam supply system, and highlights key safety and design features such as passive safety systems, compact containment, and advanced digital controls.",
+    "nuscale_ch01_0001": {
+      "node_id": "nuscale_ch01_0001",
+      "title": "CHAPTER 1 INTRODUCTION AND GENERAL DESCRIPTION OF THE PLANT",
+      "content": "NuScale Final Safety Analysis Report Introduction\nTier 2 1.1-1 Revision 5CHAPTER 1 INTRODUCTION AND GENE RAL DESCRIPTION OF THE PLANT\n1.1 Introduction\nThis document represents the Final Safety  Analysis Report (F SAR) required under \n10 CFR 52.47(a) to be provided as part of an application for a standard  design certification \nunder 10 CFR 52, Subpart B and will be referred to as such throughout. It describes the NuScale \nPower, LLC design, including (1) the design base s and limits on its operation; (2) a safety \nanalysis of the structures, system s, and components and of the fa cility as a whole; and (3) the \ninformation prescribed in 10 CFR 52.47(a) th at is relevant to the NuScale design.\nA NuScale Power Module (NPM) shown in Figure 1.2-6 and Figure 1.2-7, is a collection of \nsystems, sub-systems, and components that together constitute a modularized, movable, nuclear steam supply system (NSSS). The NPM is co mposed of a reactor core, a pressurizer, and \ntwo steam generators integrated within a reac tor pressure vessel (RPV) and housed in a \ncompact steel containment vessel.\nThe NuScale advanced small modular reactor plant de sign is scalable, such that from one (1) to \ntwelve (12) NPMs operate within  a single Reactor Building. The information provided in this \nFSAR includes the design of an individual NPM,  as well as plant design and interfaces for a \n12 NPM facility. In general, chapters describe a single module. Multi-module information is only \nnoted where warranted (e.g., shared sy stems or analyses such as seismic).\nThe NuScale design features:\n• No AC or DC power required for safe shutdown and cooling\n• Compact helical coil steam generators with reactor pressure on the outside of the tubes\n• High-strength steel containment immersed in a pool of water\n• Sub-atmospheric containment pressure during normal operation\n• Small core with a correspondingly small source term\n• Comprehensive digital instrumentation and controls (I&C) moni toring and control\nImportant features of a mu lti-unit plant include:\n• a scalable plant design, which allows for incremental plant capacity growth.\n• a compact nuclear island.\n• the ability to operate in \"island mode\".\n1.1.1 Plant Location\nThe NuScale Power Plant is designed to be locate d on a site having site characteristics (e.g., \nseismology, hydrology, meteorology, geology,  and other site-related characteristics) \nbounded by the parameters  described in Chapter 2, Site Characteristics.\nCOL Item 1.1-1: A COL applicant that references th e NuScale Power Plant design certification will \nidentify the site-spe cific plant location.",
+      "summary": "This section introduces the NuScale Final Safety Analysis Report (FSAR), which is required for standard design certification under U.S. regulations. It provides an overview of the NuScale Power Module (NPM), a modular, scalable nuclear steam supply system, and highlights key safety and design features such as passive safety systems, compact containment, and advanced instrumentation. The FSAR covers both single-module and multi-module plant configurations.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "8",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 1.2-6",
+          "page": 51,
+          "caption": "Cutaway View of NuScale Power Module"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-7",
+          "page": 52,
+          "caption": "Steam Generator and Reactor Flow"
+        }
+      ]
     },
     "nuscale_ch01_0051": {
       "node_id": "nuscale_ch01_0051",
       "title": "Plant Features of Special Interest",
-      "summary": "This section describes key plant features of special interest in the NuScale Power Plant, including the Central Utility Building (CUB) and Diesel Generator Buildings (DGB), which house essential but nonsafety-related systems and backup power equipment. It also highlights human factors considerations, emphasizing fail-safe design, automation, digital controls, and workload management to minimize human error and meet regulatory requirements.",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-18 Revision 5• verify identity and access status as  well as search fo r contraband items.\n• provide a structure or space to monitor a ccess into areas of the plant as well as \nmonitoring tamper alarm devices.\n1.2.2.5.4 Central Utility Building\nThe CUB is a nonsafety-relate d structure that houses comm on utility plant services, \nwhich include the following:\n• [[chiller equipment\n• instrument air system\n• service air system\n• chemical treatment equipment for demineralized water\n• maintenance area\n• life safety\n• demineralized water equipment\n• security functions]]\n1.2.2.5.5 [[Diesel Generator Buildings\nThe NuScale Power Plant design includes two DGBs, each housing a single backup \ndiesel generator. The principal functions of each DGB are to provide support and \nhousing for the backup diesel generators  and their auxiliary equipment. The DGB \nhouses no safety-related systems and has no functional requirements that support \nthe ESFs. The DGBs house the following:\n• diesel engines and associ ated support equipment\n• generators\n• DGB HVAC system\n• maintenance area]]\n1.2.3 Plant Features of Special Interest\nHuman Factors ConsiderationsThe NuScale Power Plant design minimize s human error throug h fail-safe design \nfunctionality, allows multi-modular control ca pability from a single control room with \neffective automation design, em ploys digital display design and soft control technology to \nenhance usability, and provides optimum workload management.\nThe HFE program satisfies specific regulatory  requirements and guidance, and leverages \nhuman performance and operating experience from nuclear and non-nuclear industries.\nChapter 18 describes the HFE Program.NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-19 Revision 5Table 1.2-1: Overall Characteristics of a NuScale Power Plant\nOverall Plant\nNominal net output 570 MWe*\nNumber of power modules 12\nPower Module\nNumber of reactors OneThermal power rating 160 MWthNominal gross electrical output\n50 MWe\nRCS normal operating pressure 1,850 psiaSteam generator number TwoSteam generator type Vertical helical tubeSteam cycle Rankine-subcritical regenerative with superheatTurbine type 3,600 rpm, condensing, with extraction\nReactor Core\nFuel UO\n2 (<4.95% enrichment)\nRefueling intervals 24 months\n* Nominal net output is total gross electrical output minus house loads.NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-20 Revision 5Table 1.2-2: Design Features of a NuScale Power Module\nNuScale Design Feature Primary Impact Safety Enhancement\nRCS contained within the RPV No large diameter primary coolant \npipingEliminates postulated large-break LOCA spectrum accidents\nNatural-convection-cooled core No reactor coolant pumps Eliminates reactor c oolant pump accidents, \nshaft breaks, pump seizure, missile generation \nand pump leaks\nHigh containment design pressure Containment peak pressure for \nworst case design-basis accident \nremains below containment design \npressureContainment integrity assured, minimizing the \npotential for radioactive releases during \npostulated accidents.\nRPV and NSSS inside the CNV During an accident, any water lost \nfrom RPV stays within containment \nand is returned to the RPV by \npassive meansNo postulated design-basis small-break LOCA capable of uncovering nuclear fuel\nEvacuated containment Subatmospheric pressure during \nnormal operation Minimal amount of noncondensible gases increases the steam condensation rate for \ncontainment heat removal during postulated \nsmall-break LOCA. Amount of oxygen in containment during normal operations is \nminimized.\nNo insulation on RPV Eliminates pot ential sump screen blockage and \npermits cooling of the exterior of the vessel during an accident\nLow power core (160 MWt) Re duces decay heat removal \nrequirementsEnhances in-vessel retention; maintains low \naccident consequences; reduces fission \nproduct source term; simplifies emergency planning\nReactor pool with partially \n(approximately 90%) immersed NPMCNV partially immersed in reactor poolProvides passive long-term cooling\nPassive safety systems\nSafety systems cool and \ndepressurize the RPV/CNV even in the event of loss of external powerActive safety systems are not requiredNuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-21 Revision 5\nFigure 1.2-1: Conceptual Site Layout\nNuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-22 Revision 5\nFigure 1.2-2: NuScale Functional Boundaries\nRXBNUSCALE POWER MODULES (NPMS)\nCRBStructures within the \nCERTIFIED DESIGNNUSCALE POWER PLANT\nTGB\nTGB\nCooling TowerSWYD CUBOwner Controlled Area\nSECAdmin/Training\nWarehouseRWBSECProtected Area (PA) Boundary Double Fence\nProtected Area (PA) Boundary Double FenceSecurity Owner Controlled Area (SOCA) Fence\nSecurity Owner Controlled Area (SOCA) FenceCooling Tower\nOwner Controlled Area boundary\nNuScale Power Plant boundary (SOCA Fence)Structures not described in the FSAR\nConceptual Design Structures containing Certified Design SSCs \nConceptual Design SSCsCertified Design Structures or Components NuScale Power ModulesANB\nAAPBDG\nBDGSCWS TowerSCWS PumpsNuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-23 Revision 5\nFigure 1.2-3: Schematic of a Si ngle NuScale Power Module and Associated Secondary Equipment\nNuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-24 Revision 5\nFigure 1.2-4: Layout of a Mu lti-Module NuScale Power Plant\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-25 Revision 5\nFigure 1.2-5: Cutaway Illustration of 12 Module Configuration\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-26 Revision 5Figure 1.2-6: Cutaway View of NuScale Power Module\nNuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-27 Revision 5Figure 1.2-7: Steam Generator and Reactor Flow\nNuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-28 Revision 5Figure 1.2-8: Decay Heat Removal System\nNuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-29 Revision 5Figure 1.2-9: Emergency Core Cooling SystemNuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-30 Revision 5Figure 1.2-10: Reactor Building 24’-0” Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-31 Revision 5Figure 1.2-11: Reactor Building 35'-8\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-32 Revision 5Figure 1.2-12: Reactor Building 50'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-33 Revision 5Figure 1.2-13: Reactor Building 62'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-34 Revision 5Figure 1.2-14: Reactor Building 75'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-35 Revision 5Figure 1.2-15: Reactor Building 86'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-36 Revision 5Figure 1.2-16: Reactor Building 100'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-37 Revision 5Figure 1.2-17: Reactor Building 126'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-38 Revision 5Figure 1.2-18: Reactor Building 145'-6\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-39 Revision 5Figure 1.2-19: Reactor Building East and West Section View\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-40 Revision 5Figure 1.2-20: Reactor Building South Section View\n{{  Withheld - See Part 9  }}NuScale Final Safety  Analysis Report General Plant Description\nTier 2 1.2-41 Revision 5Figure 1.2-21: Control Building 50'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety  Analysis Report General Plant Description\nTier 2 1.2-42 Revision 5Figure 1.2-22: Control Building 63'-3\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety  Analysis Report General Plant Description\nTier 2 1.2-43 Revision 5Figure 1.2-23: Control Building 76'-6\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety  Analysis Report General Plant Description\nTier 2 1.2-44 Revision 5Figure 1.2-24: Control Building 100'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety  Analysis Report General Plant Description\nTier 2 1.2-45 Revision 5Figure 1.2-25: Control Building 120'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety  Analysis Report General Plant Description\nTier 2 1.2-46 Revision 5Figure 1.2-26: Control Building North Section View\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-47 Revision 5Figure 1.2-27: Control Building West Section View\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-48 Revision 5Figure 1.2-28: Radioactive Waste Building 71'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-49 Revision 5Figure 1.2-29: Radioactive Waste Building 82'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-50 Revision 5Figure 1.2-30: Radioactive Wast e Building 100'-0\" Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-51 Revision 5Figure 1.2-31: Radioactive Waste Building 120’-0” Elevation\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-52 Revision 5Figure 1.2-32: Radioactive Waste Building North and South Section Views\n{{  Withheld - See Part 9  }}NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-53 Revision 5Figure 1.2-33: Radioactive Waste Building West Section View\n{{  Withheld - See Part 9  }}\n\n--- Referenced Tables (structured) ---\n[Table 1.2-1: Overall Characteristics of a NuScale Power Plant]\nOverall Plant\nNominal net output | 570 | MWe | *\nNumber of power modules | 12\nPower Module\nNumber of reactors | One\nThermal power rating | 160 MWth\nNominal gross electrical output | 50 | MWe\nRCS normal operating pressure | 1,850 psia\nSteam generator number | Two\nSteam generator type | Vertical helical tube\nSteam cycle | Rankine-subcritical regenerative with superheat\nTurbine type | 3,600 rpm, condensing, with extraction\nReactor Core\nFuel | UO (<4.95% enrichment)\n2\nRefueling intervals | 24 months\n* Nominal net output is total gross electrical output minus house loads.\n[Table 1.2-2: Design Features of a NuScale Power Module]\nRCS contained within the RPV | No large diameter primary coolant\npiping | Eliminates postulated large-break LOCA\nspectrum accidents\nNatural-convection-cooled core | No reactor coolant pumps | Eliminates reactor coolant pump accidents,\nshaft breaks, pump seizure, missile generation\nand pump leaks\nHigh containment design pressure | Containment peak pressure for\nworst case design-basis accident\nremains below containment design\npressure | Containment integrity assured, minimizing the\npotential for radioactive releases during\npostulated accidents.\nRPV and NSSS | During an accident, any water lost\nfrom RPV stays within containment\nand is returned to the RPV by\npassive means | No postulated design-basis small-break LOCA\ncapable of uncovering nuclear fuel\nEvacuated containment | Subatmospheric pressure during\nnormal operation\nNo insulation on RPV | Minimal amount of noncondensible gases\nincreases the steam condensation rate for\ncontainment heat removal during postulated\nsmall-break LOCA. Amount of oxygen in\ncontainment during normal operations is\nminimized.\nEliminates potential sump screen blockage and\npermits cooling of the exterior of the vessel\nduring an accident\nLow power core (160 MWt) | Reduces decay heat removal\nrequirements | Enhances in-vessel retention; maintains low\naccident consequences; reduces fission\nproduct source term; simplifies emergency\nplanning\nReactor pool with partially\n(approximately 90%) immersed NPM | CNV | Provides passive long-term cooling\nPassive safety systems | Safety systems cool and\ndepressurize the RPV/CNV even in\nthe event of loss of external power | Active safety systems are not required",
+      "summary": "This section describes key plant features of special interest at the NuScale Power Plant, including the Central Utility Building (CUB) and Diesel Generator Buildings (DGBs), which house essential but nonsafety-related equipment and backup systems. It also highlights human factors considerations, emphasizing fail-safe design, automation, digital controls, and workload management to minimize human error and meet regulatory requirements.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "43",
-      "hop": 1
-    },
-    "nuscale_ch01_0036": {
-      "node_id": "nuscale_ch01_0036",
-      "title": "Refueling Operations",
-      "summary": "Refueling operations for a NuScale Power Module (NPM) are conducted independently from other modules. The process involves moving the NPM from its operating bay to the refueling pool, disassembling it for inspection, maintenance, and refueling, and then reassembling and returning it to service after successful testing and startup procedures.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "38",
-      "hop": 1
-    },
-    "nuscale_ch01_0001": {
-      "node_id": "nuscale_ch01_0001",
-      "title": "CHAPTER 1 INTRODUCTION AND GENERAL DESCRIPTION OF THE PLANT",
-      "summary": "This section introduces the NuScale Final Safety Analysis Report (FSAR), which is required for standard design certification under U.S. regulations. It provides an overview of the NuScale Power Module (NPM), a scalable, modular nuclear steam supply system designed for flexible deployment, highlighting its key safety features, compact design, and advanced instrumentation. The FSAR covers both individual module and multi-module plant configurations, focusing on safety analysis and operational limits.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "8",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 1.2-1",
+          "page": 46,
+          "caption": "Conceptual Site Layout"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-10",
+          "page": 55,
+          "caption": "Reactor Building 24’-0” Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-11",
+          "page": 56,
+          "caption": "Reactor Building 35'-8\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-12",
+          "page": 57,
+          "caption": "Reactor Building 50'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-13",
+          "page": 58,
+          "caption": "Reactor Building 62'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-14",
+          "page": 59,
+          "caption": "Reactor Building 75'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-15",
+          "page": 60,
+          "caption": "Reactor Building 86'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-16",
+          "page": 61,
+          "caption": "Reactor Building 100'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-17",
+          "page": 62,
+          "caption": "Reactor Building 126'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-18",
+          "page": 63,
+          "caption": "Reactor Building 145'-6\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-19",
+          "page": 64,
+          "caption": "Reactor Building East and West Section View"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-2",
+          "page": 47,
+          "caption": "NuScale Functional Boundaries"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-20",
+          "page": 65,
+          "caption": "Reactor Building South Section View"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-21",
+          "page": 66,
+          "caption": "Control Building 50'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-22",
+          "page": 67,
+          "caption": "Control Building 63'-3\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-23",
+          "page": 68,
+          "caption": "Control Building 76'-6\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-24",
+          "page": 69,
+          "caption": "Control Building 100'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-25",
+          "page": 70,
+          "caption": "Control Building 120'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-26",
+          "page": 71,
+          "caption": "Control Building North Section View"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-27",
+          "page": 72,
+          "caption": "Control Building West Section View"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-28",
+          "page": 73,
+          "caption": "Radioactive Waste Building 71'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-29",
+          "page": 74,
+          "caption": "Radioactive Waste Building 82'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-3",
+          "page": 48,
+          "caption": "Schematic of a Single NuScale Power Module and Associated Secondary Equipment"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-30",
+          "page": 75,
+          "caption": "Radioactive Waste Building 100'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-31",
+          "page": 76,
+          "caption": "Radioactive Waste Building 120’-0” Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-32",
+          "page": 77,
+          "caption": "Radioactive Waste Building North and South Section Views"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-33",
+          "page": 78,
+          "caption": "Radioactive Waste Building West Section View"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-4",
+          "page": 49,
+          "caption": "Layout of a Multi-Module NuScale Power Plant"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-5",
+          "page": 50,
+          "caption": "Cutaway Illustration of 12 Module Configuration"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-6",
+          "page": 51,
+          "caption": "Cutaway View of NuScale Power Module"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-7",
+          "page": 52,
+          "caption": "Steam Generator and Reactor Flow"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-8",
+          "page": 53,
+          "caption": "Decay Heat Removal System"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-9",
+          "page": 54,
+          "caption": "Emergency Core Cooling System"
+        },
+        {
+          "type": "table",
+          "id": "Table 1.2-1",
+          "page": 44,
+          "caption": "Overall Characteristics of a NuScale Power Plant",
+          "structured_text": "Overall Plant\nNominal net output | 570 | MWe | *\nNumber of power modules | 12\nPower Module\nNumber of reactors | One\nThermal power rating | 160 MWth\nNominal gross electrical output | 50 | MWe\nRCS normal operating pressure | 1,850 psia\nSteam generator number | Two\nSteam generator type | Vertical helical tube\nSteam cycle | Rankine-subcritical regenerative with superheat\nTurbine type | 3,600 rpm, condensing, with extraction\nReactor Core\nFuel | UO (<4.95% enrichment)\n2\nRefueling intervals | 24 months\n* Nominal net output is total gross electrical output minus house loads."
+        },
+        {
+          "type": "table",
+          "id": "Table 1.2-2",
+          "page": 45,
+          "caption": "Design Features of a NuScale Power Module",
+          "structured_text": "RCS contained within the RPV | No large diameter primary coolant\npiping | Eliminates postulated large-break LOCA\nspectrum accidents\nNatural-convection-cooled core | No reactor coolant pumps | Eliminates reactor coolant pump accidents,\nshaft breaks, pump seizure, missile generation\nand pump leaks\nHigh containment design pressure | Containment peak pressure for\nworst case design-basis accident\nremains below containment design\npressure | Containment integrity assured, minimizing the\npotential for radioactive releases during\npostulated accidents.\nRPV and NSSS | During an accident, any water lost\nfrom RPV stays within containment\nand is returned to the RPV by\npassive means | No postulated design-basis small-break LOCA\ncapable of uncovering nuclear fuel\nEvacuated containment | Subatmospheric pressure during\nnormal operation\nNo insulation on RPV | Minimal amount of noncondensible gases\nincreases the steam condensation rate for\ncontainment heat removal during postulated\nsmall-break LOCA. Amount of oxygen in\ncontainment during normal operations is\nminimized.\nEliminates potential sump screen blockage and\npermits cooling of the exterior of the vessel\nduring an accident\nLow power core (160 MWt) | Reduces decay heat removal\nrequirements | Enhances in-vessel retention; maintains low\naccident consequences; reduces fission\nproduct source term; simplifies emergency\nplanning\nReactor pool with partially\n(approximately 90%) immersed NPM | CNV | Provides passive long-term cooling\nPassive safety systems | Safety systems cool and\ndepressurize the RPV/CNV even in\nthe event of loss of external power | Active safety systems are not required"
+        }
+      ]
     },
     "nuscale_ch01_0035": {
       "node_id": "nuscale_ch01_0035",
       "title": "Fuel Handling and Reactor Maintenance Areas",
-      "summary": "The fuel handling and reactor maintenance areas are located at the west end of the Reactor Building and include spaces for the spent fuel pool, refueling pool, and dry dock, all designed to support safe fuel handling and reactor maintenance operations. These areas facilitate the movement and storage of new and spent fuel assemblies, provide radiation protection for workers, and are equipped with cranes and access points for efficient operation during refueling and maintenance activities.",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-12 Revision 5Pipe fittings and electrical connections are provided above the reactor pool water level \nto permit manual connection and disconnection during NPM installation, refueling \noutages, and during replac ement or removal of NPMs.\nTable 3.2-1, Classification of Structures,  Systems, and Components, provides the \nlocation and classification of systems, structures, and components.\n1.2.2.1.1 Fuel Handling and Reactor Maintenance Areas\nThe fuel handling and reactor maintenance areas are located in the west end of the \nRXB and include space for the SFP, refu eling pool, and dry dock. The pools are \nshown in Figure 1.2-16.\nThe operating areas at the we st end, 100'-0\" elevation of the RXB provide space for \nthe operation of fuel handling equipmen t and accessing the upper portion of an \nNPM while the reactor core is being refueled.\nThe refueling pool is connected directly to the reactor pool accommodating \ntransport of an NPM through the pool wate r using the Reactor Building crane (RBC). \nA weir between the refuelin g pool and SFP provides a ccess for fuel assembly \ntransport under water during the refuel ing process. The fuel handling and \nmaintenance areas are designed to pr ovide radiation protection for plant \noperations and maintenance personne l who are working in those areas.\nThe area west of the SFP contains a fuel receiving area and a jib crane for loading \nnew fuel assemblies into the new fuel elev ator. The area has pallet jack access to \naid in new fuel receiving activities. Upon receipt, new fuel assemblies are inspected \nand temporarily stored in racks in the SF P before being placed in a reactor core.\nThe SFP provides storage spac e for the accumulated spent fuel assemblies prior to \nremoval for dry storage and for tempor ary short-term storage for new fuel \nassemblies. Spent fuel assemblies remove d from the reactor core are placed in \nspent fuel storage racks in the SFP. \nThe refueling pool contains  the bolting tools to disassemble and reassemble the \nNPM during refueling. The reactor core re mains in the lower head of the RPV while \nin the refueling pool for refueling and fu el management. A fuel handling machine \nmoves new and used fuel through the we ir between the refu eling pool and SFP.\nThe dry dock area contains the module in spection rack and is separated from the \nrefueling pool by a gate. With the gate closed, the dry dock water level can be \nlowered and maintenance activities on the upper NPM can be completed. \nNecessary inspection and testing equipment for the NPM are moved to this area \nduring refueling.\nThe dry dock provides maintenance access to the upper section of the NPM. The \ndry dock is also used for placing new NP M components into the reactor pool and \npreparing them for assembly. Additionally, it  provides access for shipment of used \nNPMs off-site.NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-13 Revision 51.2.2.1.2 Refueling Operations\nRefueling operations for an individual NP M is independent of the operating status \nof the remaining NPMs.\nDuring refueling, an NPM is moved from it s operating bay in the reactor pool to the \nrefueling pool using the RBC. The RBC lifts the NPM off its supports within the reactor bay and moves it to the open channel in the center of the reactor pool, \nwhich serves as a pathway to transp ort the NPM to the refueling area.\nIn the refueling area, the NP M is set into the containm ent flange tool where the \nCNV flange is unbolted. The crane lifts the NPM, separating the lower CNV from the \nupper CNV with RPV still attached and in tact. Next, the crane moves the upper CNV \nand RPV to the reactor vessel  flange tool where the RP V flange is unbolted. The \ncrane again lifts the NPM, this time separa ting the upper and lower RPV, leaving the \nlower RPV including the reactor core, in the reactor vessel flange tool. Finally, the \ncrane transports the upper NPM (now consisting of just the upper CNV with \nattached upper RPV) to the module inspec tion rack in the dry dock. Inspection, \ntesting, and maintenance are performed wh ile the core is being refueled using a \ndedicated fuel handling machine.\nAfter inspection, maintenance, and testing are complete and the reactor core has \nbeen refueled, the upper portion of the NPM is moved from the dry dock to the \nrefueling pool where the NP M is reassembled in reverse order using the dedicated \nflange tools. Following reassembly, the NPM is moved into the reactor pool and \nreturned to its operating bay by the RBC.  In the operating bay, startup tests are \nperformed and the reactor is prepared for restart. After the NPM has passed \nnecessary tests and inspection s, and the reactor coolant is at startup conditions, \nthe NPM is brought online, and st eam and power production begins.\n1.2.2.2 Control Building\nThe CRB is located approximately 30 ft ea st of the RXB. See Figure 1.2-21 through \nFigure 1.2-27 for CRB drawings. The overall CR B footprint is rectan gular, approximately \n120 ft long by 80 ft wide  at the 100'-0\" elevation.\nThe following portions of the CRB are nonsafety-related and Seismic Category II: \n• above the 120'-0\" elevation\n• inside the elevator shaf t (full building height)\n• inside the two stairwells  (full building height)\n• the fire protection vestibule located on the East side of the CRB\nStructural steel and metal siding are used above the 120'-0\" elevation. The remaining \nportion of the CRB, below the 120'-0\" elevation,  is a safety-r elated, Seismic Category I, \nconcrete structure.\nThe lowest elevation of the CRB primarily houses electrical equipment and CRHS air \nbottles. There is a tunnel that connects th e RXB to the CRB. The tunnel has two levels; ",
+      "summary": "The fuel handling and reactor maintenance areas are located at the west end of the Reactor Building and include spaces for the spent fuel pool, refueling pool, and dry dock, all designed to facilitate safe fuel handling and reactor maintenance operations. These areas are equipped with specialized equipment and features to support refueling, fuel assembly transport, and storage, while also providing radiation protection for personnel.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "37",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 1.2-16",
+          "page": 61,
+          "caption": "Reactor Building 100'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-21",
+          "page": 66,
+          "caption": "Control Building 50'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-27",
+          "page": 72,
+          "caption": "Control Building West Section View"
+        }
+      ]
     },
-    "nuscale_ch01_0005": {
-      "node_id": "nuscale_ch01_0005",
-      "title": "Reactor Type",
-      "summary": "The NuScale reactor is a small modular pressurized water reactor (PWR) featuring a passive safety design. Each module integrates the reactor core, steam generators, and pressurizer within a single vessel, surrounded by a steel containment vessel designed to withstand high-pressure events. The plant can include up to 12 modules, each producing 160 MWt (about 50 MWe), for a total net output of approximately 570 MWe for a 12-module facility.",
+    "nuscale_ch01_0002": {
+      "node_id": "nuscale_ch01_0002",
+      "title": "Introduction",
+      "content": "NuScale Final Safety Analysis Report Introduction\nTier 2 1.1-1 Revision 5CHAPTER 1 INTRODUCTION AND GENE RAL DESCRIPTION OF THE PLANT\n1.1 Introduction\nThis document represents the Final Safety  Analysis Report (F SAR) required under \n10 CFR 52.47(a) to be provided as part of an application for a standard  design certification \nunder 10 CFR 52, Subpart B and will be referred to as such throughout. It describes the NuScale \nPower, LLC design, including (1) the design base s and limits on its operation; (2) a safety \nanalysis of the structures, system s, and components and of the fa cility as a whole; and (3) the \ninformation prescribed in 10 CFR 52.47(a) th at is relevant to the NuScale design.\nA NuScale Power Module (NPM) shown in Figure 1.2-6 and Figure 1.2-7, is a collection of \nsystems, sub-systems, and components that together constitute a modularized, movable, nuclear steam supply system (NSSS). The NPM is co mposed of a reactor core, a pressurizer, and \ntwo steam generators integrated within a reac tor pressure vessel (RPV) and housed in a \ncompact steel containment vessel.\nThe NuScale advanced small modular reactor plant de sign is scalable, such that from one (1) to \ntwelve (12) NPMs operate within  a single Reactor Building. The information provided in this \nFSAR includes the design of an individual NPM,  as well as plant design and interfaces for a \n12 NPM facility. In general, chapters describe a single module. Multi-module information is only \nnoted where warranted (e.g., shared sy stems or analyses such as seismic).\nThe NuScale design features:\n• No AC or DC power required for safe shutdown and cooling\n• Compact helical coil steam generators with reactor pressure on the outside of the tubes\n• High-strength steel containment immersed in a pool of water\n• Sub-atmospheric containment pressure during normal operation\n• Small core with a correspondingly small source term\n• Comprehensive digital instrumentation and controls (I&C) moni toring and control\nImportant features of a mu lti-unit plant include:\n• a scalable plant design, which allows for incremental plant capacity growth.\n• a compact nuclear island.\n• the ability to operate in \"island mode\".\n1.1.1 Plant Location\nThe NuScale Power Plant is designed to be locate d on a site having site characteristics (e.g., \nseismology, hydrology, meteorology, geology,  and other site-related characteristics) \nbounded by the parameters  described in Chapter 2, Site Characteristics.\nCOL Item 1.1-1: A COL applicant that references th e NuScale Power Plant design certification will \nidentify the site-spe cific plant location.",
+      "summary": "This section introduces the NuScale Final Safety Analysis Report (FSAR), which is submitted as part of the application for standard design certification under U.S. regulations. It outlines the scope of the report, describing the NuScale Power Module (NPM) design, its modular and scalable features, and key safety characteristics such as passive shutdown, compact containment, and advanced digital controls.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "8",
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 1.2-6",
+          "page": 51,
+          "caption": "Cutaway View of NuScale Power Module"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-7",
+          "page": 52,
+          "caption": "Steam Generator and Reactor Flow"
+        }
+      ]
+    },
+    "nuscale_ch01_0036": {
+      "node_id": "nuscale_ch01_0036",
+      "title": "Refueling Operations",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-13 Revision 51.2.2.1.2 Refueling Operations\nRefueling operations for an individual NP M is independent of the operating status \nof the remaining NPMs.\nDuring refueling, an NPM is moved from it s operating bay in the reactor pool to the \nrefueling pool using the RBC. The RBC lifts the NPM off its supports within the reactor bay and moves it to the open channel in the center of the reactor pool, \nwhich serves as a pathway to transp ort the NPM to the refueling area.\nIn the refueling area, the NP M is set into the containm ent flange tool where the \nCNV flange is unbolted. The crane lifts the NPM, separating the lower CNV from the \nupper CNV with RPV still attached and in tact. Next, the crane moves the upper CNV \nand RPV to the reactor vessel  flange tool where the RP V flange is unbolted. The \ncrane again lifts the NPM, this time separa ting the upper and lower RPV, leaving the \nlower RPV including the reactor core, in the reactor vessel flange tool. Finally, the \ncrane transports the upper NPM (now consisting of just the upper CNV with \nattached upper RPV) to the module inspec tion rack in the dry dock. Inspection, \ntesting, and maintenance are performed wh ile the core is being refueled using a \ndedicated fuel handling machine.\nAfter inspection, maintenance, and testing are complete and the reactor core has \nbeen refueled, the upper portion of the NPM is moved from the dry dock to the \nrefueling pool where the NP M is reassembled in reverse order using the dedicated \nflange tools. Following reassembly, the NPM is moved into the reactor pool and \nreturned to its operating bay by the RBC.  In the operating bay, startup tests are \nperformed and the reactor is prepared for restart. After the NPM has passed \nnecessary tests and inspection s, and the reactor coolant is at startup conditions, \nthe NPM is brought online, and st eam and power production begins.\n1.2.2.2 Control Building\nThe CRB is located approximately 30 ft ea st of the RXB. See Figure 1.2-21 through \nFigure 1.2-27 for CRB drawings. The overall CR B footprint is rectan gular, approximately \n120 ft long by 80 ft wide  at the 100'-0\" elevation.\nThe following portions of the CRB are nonsafety-related and Seismic Category II: \n• above the 120'-0\" elevation\n• inside the elevator shaf t (full building height)\n• inside the two stairwells  (full building height)\n• the fire protection vestibule located on the East side of the CRB\nStructural steel and metal siding are used above the 120'-0\" elevation. The remaining \nportion of the CRB, below the 120'-0\" elevation,  is a safety-r elated, Seismic Category I, \nconcrete structure.\nThe lowest elevation of the CRB primarily houses electrical equipment and CRHS air \nbottles. There is a tunnel that connects th e RXB to the CRB. The tunnel has two levels; ",
+      "summary": "Refueling operations for a NuScale Power Module (NPM) are conducted independently from other modules. The process involves moving the NPM from its operating bay to the refueling pool, disassembling it using cranes and specialized tools for inspection, maintenance, and refueling, and then reassembling and returning it to service after successful testing.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "38",
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 1.2-21",
+          "page": 66,
+          "caption": "Control Building 50'-0\" Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-27",
+          "page": 72,
+          "caption": "Control Building West Section View"
+        }
+      ]
+    },
+    "nuscale_ch01_0004": {
+      "node_id": "nuscale_ch01_0004",
+      "title": "Containment Type",
+      "content": "NuScale Final Safety Analysis Report Introduction\nTier 2 1.1-2 Revision 51.1.2 Containment Type\nThe NuScale containment vessel (CNV) is a su pported, cylindrical vessel-type containment \nthat is designed to withstand limiting high-pressure transients. The containment vessel (CNV) is an American Society of Mechanical Engineers (ASME) Boiler and Pressure Vessel \nCode (BPVC) Class MC (steel) containment that is designed, analyzed, fabricated, inspected, \ntested and stamped as an ASME BPVC Class 1 pr essure vessel. The CNV internal pressure is \nmaintained at a vacuum during normal operations and as such insulation materials are not \nrequired between the reactor ve ssel and the CNV. The contai nment vessels are mounted to \nthe Reactor Building module compartment wa lls and at the bottom within the Reactor \nBuilding pool.\n1.1.3 Reactor Type\nThe NuScale NSSS is a passive NuScale-designed small modular pressurized water reactor. \nThis design is comprised of an integral po wer module consisting of a reactor core, two \nsteam generator tube bundles, and a pressurizer contained with in a single reactor vessel, \nalong with the containment vessel that imme diately surrounds the reactor vessel. This \ndesign eliminates the need for external pi ping to connect the steam generators and \npressurizer to the RPV. Natura l circulation provides reactor coolant system flow, thereby \neliminating the need fo r reactor coolant pumps.\n1.1.4 Power Output\nA NuScale Power Plant consists of from on e to12 NPMs. Each NPM is rated at 160 MWt \n(1,920 MWt, total), with approx imately 50 MWe (600 MWe total) ou tput. Electrical output is \ndependent on environmental conditions. When  considering house loads, the total net \noutput is approximately 570 MWe for a 12 NPM facility. Design power assumes an \nadditional 2 percent to accoun t for measurement uncertainty.\n1.1.5 Schedule\nCOL Item 1.1-2: A COL applicant that references th e NuScale Power Plant design certification will \nprovide the schedules for completion of construction and commercial operation of \neach power module.\n1.1.6 Format and Content\n1.1.6.1 Regulatory Guide 1.206\nThe format and content of this FSAR generally follow the format and content \nguidelines of Regulatory Guide 1.206. Howe ver, where applicable, Sections may be \nskipped or additional sections inserted. In  addition, this FSAR includes Chapter 20, \nMitigation of Beyond-Design-Basis Even ts and Chapter 21, Multi-Module Design \nConsiderations, which are not includ ed in Regulatory Guide (RG) 1.206.\n1.1.6.2 Standard Review Plan - NuScal e Design Specific Review Standard\nA NuScale design specific review standard (DSRS) has been developed by the NRC as a \nsupplement to NUREG-0800, “Standard Review Plan for the Review of Safety Analysis ",
+      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and operates under vacuum during normal conditions, eliminating the need for insulation. The NuScale reactor is a passive, integral small modular pressurized water reactor with natural circulation and no external piping for steam generators or pressurizer, and each module produces about 50 MWe, with a 12-module plant yielding a net output of approximately 570 MWe.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "9",
-      "hop": 2
-    },
-    "nuscale_ch01_0015": {
-      "node_id": "nuscale_ch01_0015",
-      "title": "General Plant Description",
-      "summary": "This section provides a summary of the NuScale plant’s overall design, including its main systems such as safety features, power conversion, fuel handling, cooling, and waste management. It explains the distinction between certified and site-specific design elements, clarifies the use of representative information for context, and notes how security-related details are handled. Each COL applicant must reference the NuScale FSAR and provide site-specific information as required.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "26",
-      "hop": 2
+      "hop": 2,
+      "references": []
     },
     "nuscale_ch01_0007": {
       "node_id": "nuscale_ch01_0007",
       "title": "Schedule",
-      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and operates under vacuum during normal conditions. The reactor is a passive, integral small modular pressurized water reactor (SMR) with natural circulation and no need for external piping or coolant pumps. Each NuScale Power Module (NPM) produces 160 MWt (about 50 MWe), and a 12-module plant yields a net output of approximately 570 MWe; applicants referencing this design must provide their own construction and operation schedules.",
+      "content": "NuScale Final Safety Analysis Report Introduction\nTier 2 1.1-2 Revision 51.1.2 Containment Type\nThe NuScale containment vessel (CNV) is a su pported, cylindrical vessel-type containment \nthat is designed to withstand limiting high-pressure transients. The containment vessel (CNV) is an American Society of Mechanical Engineers (ASME) Boiler and Pressure Vessel \nCode (BPVC) Class MC (steel) containment that is designed, analyzed, fabricated, inspected, \ntested and stamped as an ASME BPVC Class 1 pr essure vessel. The CNV internal pressure is \nmaintained at a vacuum during normal operations and as such insulation materials are not \nrequired between the reactor ve ssel and the CNV. The contai nment vessels are mounted to \nthe Reactor Building module compartment wa lls and at the bottom within the Reactor \nBuilding pool.\n1.1.3 Reactor Type\nThe NuScale NSSS is a passive NuScale-designed small modular pressurized water reactor. \nThis design is comprised of an integral po wer module consisting of a reactor core, two \nsteam generator tube bundles, and a pressurizer contained with in a single reactor vessel, \nalong with the containment vessel that imme diately surrounds the reactor vessel. This \ndesign eliminates the need for external pi ping to connect the steam generators and \npressurizer to the RPV. Natura l circulation provides reactor coolant system flow, thereby \neliminating the need fo r reactor coolant pumps.\n1.1.4 Power Output\nA NuScale Power Plant consists of from on e to12 NPMs. Each NPM is rated at 160 MWt \n(1,920 MWt, total), with approx imately 50 MWe (600 MWe total) ou tput. Electrical output is \ndependent on environmental conditions. When  considering house loads, the total net \noutput is approximately 570 MWe for a 12 NPM facility. Design power assumes an \nadditional 2 percent to accoun t for measurement uncertainty.\n1.1.5 Schedule\nCOL Item 1.1-2: A COL applicant that references th e NuScale Power Plant design certification will \nprovide the schedules for completion of construction and commercial operation of \neach power module.\n1.1.6 Format and Content\n1.1.6.1 Regulatory Guide 1.206\nThe format and content of this FSAR generally follow the format and content \nguidelines of Regulatory Guide 1.206. Howe ver, where applicable, Sections may be \nskipped or additional sections inserted. In  addition, this FSAR includes Chapter 20, \nMitigation of Beyond-Design-Basis Even ts and Chapter 21, Multi-Module Design \nConsiderations, which are not includ ed in Regulatory Guide (RG) 1.206.\n1.1.6.2 Standard Review Plan - NuScal e Design Specific Review Standard\nA NuScale design specific review standard (DSRS) has been developed by the NRC as a \nsupplement to NUREG-0800, “Standard Review Plan for the Review of Safety Analysis ",
+      "summary": "The section describes the NuScale containment vessel as a cylindrical, ASME-certified steel vessel designed to withstand high-pressure events, with internal pressure maintained at a vacuum during normal operations. The NuScale reactor is a passive, integral small modular pressurized water reactor, eliminating the need for external piping and reactor coolant pumps. Each module produces about 50 MWe, with a 12-module plant yielding a net output of approximately 570 MWe, and applicants referencing the design must provide construction and implementation schedules.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "9",
-      "hop": 2
+      "hop": 2,
+      "references": []
+    },
+    "nuscale_ch01_0008": {
+      "node_id": "nuscale_ch01_0008",
+      "title": "Format and Content",
+      "content": "NuScale Final Safety Analysis Report Introduction\nTier 2 1.1-2 Revision 51.1.2 Containment Type\nThe NuScale containment vessel (CNV) is a su pported, cylindrical vessel-type containment \nthat is designed to withstand limiting high-pressure transients. The containment vessel (CNV) is an American Society of Mechanical Engineers (ASME) Boiler and Pressure Vessel \nCode (BPVC) Class MC (steel) containment that is designed, analyzed, fabricated, inspected, \ntested and stamped as an ASME BPVC Class 1 pr essure vessel. The CNV internal pressure is \nmaintained at a vacuum during normal operations and as such insulation materials are not \nrequired between the reactor ve ssel and the CNV. The contai nment vessels are mounted to \nthe Reactor Building module compartment wa lls and at the bottom within the Reactor \nBuilding pool.\n1.1.3 Reactor Type\nThe NuScale NSSS is a passive NuScale-designed small modular pressurized water reactor. \nThis design is comprised of an integral po wer module consisting of a reactor core, two \nsteam generator tube bundles, and a pressurizer contained with in a single reactor vessel, \nalong with the containment vessel that imme diately surrounds the reactor vessel. This \ndesign eliminates the need for external pi ping to connect the steam generators and \npressurizer to the RPV. Natura l circulation provides reactor coolant system flow, thereby \neliminating the need fo r reactor coolant pumps.\n1.1.4 Power Output\nA NuScale Power Plant consists of from on e to12 NPMs. Each NPM is rated at 160 MWt \n(1,920 MWt, total), with approx imately 50 MWe (600 MWe total) ou tput. Electrical output is \ndependent on environmental conditions. When  considering house loads, the total net \noutput is approximately 570 MWe for a 12 NPM facility. Design power assumes an \nadditional 2 percent to accoun t for measurement uncertainty.\n1.1.5 Schedule\nCOL Item 1.1-2: A COL applicant that references th e NuScale Power Plant design certification will \nprovide the schedules for completion of construction and commercial operation of \neach power module.\n1.1.6 Format and Content\n1.1.6.1 Regulatory Guide 1.206\nThe format and content of this FSAR generally follow the format and content \nguidelines of Regulatory Guide 1.206. Howe ver, where applicable, Sections may be \nskipped or additional sections inserted. In  addition, this FSAR includes Chapter 20, \nMitigation of Beyond-Design-Basis Even ts and Chapter 21, Multi-Module Design \nConsiderations, which are not includ ed in Regulatory Guide (RG) 1.206.\n1.1.6.2 Standard Review Plan - NuScal e Design Specific Review Standard\nA NuScale design specific review standard (DSRS) has been developed by the NRC as a \nsupplement to NUREG-0800, “Standard Review Plan for the Review of Safety Analysis ",
+      "summary": "The section describes the NuScale containment vessel as a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and maintained at a vacuum during normal operations. The NuScale reactor is a passive, integral small modular pressurized water reactor with natural circulation and no external piping for steam generators or pressurizer, and each module produces about 50 MWe, with a 12-module plant yielding approximately 570 MWe net output. The section also notes that applicants referencing the NuScale design must provide construction schedules.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "9",
+      "hop": 2,
+      "references": []
     },
     "nuscale_ch01_0168": {
       "node_id": "nuscale_ch01_0168",
       "title": "SRP 6.5.3, Rev 3: Fission Product Control Systems and StructuresII.2 Secondary Containment",
-      "summary": "The NuScale design does not include secondary containment or fission product clean-up systems, as its passive safety features and submerged containment vessel inherently control fission products. Therefore, regulatory criteria related to secondary containment and certain fission product control systems are not applicable to the NuScale Power Module, and only specific containment parameters such as leakage rates are relevant for review.",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-101 Revision 5\nSRP 6.5.3, Rev 3: Fission \nProduct Control Systems and StructuresII.1 Primary Containment Partially Conforms\nA portion of this acceptance criterion and its \nsubtier guidance is applicable only to LWR designs that include containment fission \nproduct clean-up systems. The NuScale \ncontainment vessel does not contain fission product clean up systems, nor does it \ninclude or require pressure suppression \nsystems (e.g., suppression pools or active containment heat removal systems such as \ncontainment spray) that serve a fission \nproduct removal/dose mitigation function. Rather, fission product control is inherent in \nthe passive design of the NuScale Power \nModule, wherein the compact containment vessel is submerged in the reactor pool. \nTherefore, the aspects of this guidance \nrelated to these systems are not applicable to the DCA. This guidance is applicable to \nthe review of certain NuScale containment \nparameters and design features, such as design leakage rate and systems leakage \nprior to containment isolation.6.5.3\nSRP 6.5.3, Rev 3: Fission \nProduct Control Systems and StructuresII.2 Secondary Containment Not Applicable\nThis acceptance criterion is applicable only \nto LWRs that incorporate both a primary and secondary containment. The NuScale \ncontainment vessel design does not include \na secondary containment. Not Applicable\nSRP 6.5.3, Rev 3: Fission \nProduct Control Systems and \nStructuresII.4 Other Fission Product Control \nSystemsNot Applicable The only credited ESF fission product \ncontrol system in the NuScale Power Plant \ndesign is the containment vessel in \nconjunction with the containment isolation valves and passive containment isolation \nbarriers.Not ApplicableTable 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "The NuScale design does not include secondary containment or fission product clean-up systems typically required for LWRs, as its passive safety features and submerged containment vessel inherently control fission products. Therefore, the regulatory criteria in SRP 6.5.3, Rev 3 related to secondary containment and certain fission product control systems are not applicable to the NuScale design. Only the containment vessel and its isolation features are credited for fission product control in this design.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "229",
-      "hop": 2
+      "hop": 2,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
+    },
+    "nuscale_ch01_0005": {
+      "node_id": "nuscale_ch01_0005",
+      "title": "Reactor Type",
+      "content": "NuScale Final Safety Analysis Report Introduction\nTier 2 1.1-2 Revision 51.1.2 Containment Type\nThe NuScale containment vessel (CNV) is a su pported, cylindrical vessel-type containment \nthat is designed to withstand limiting high-pressure transients. The containment vessel (CNV) is an American Society of Mechanical Engineers (ASME) Boiler and Pressure Vessel \nCode (BPVC) Class MC (steel) containment that is designed, analyzed, fabricated, inspected, \ntested and stamped as an ASME BPVC Class 1 pr essure vessel. The CNV internal pressure is \nmaintained at a vacuum during normal operations and as such insulation materials are not \nrequired between the reactor ve ssel and the CNV. The contai nment vessels are mounted to \nthe Reactor Building module compartment wa lls and at the bottom within the Reactor \nBuilding pool.\n1.1.3 Reactor Type\nThe NuScale NSSS is a passive NuScale-designed small modular pressurized water reactor. \nThis design is comprised of an integral po wer module consisting of a reactor core, two \nsteam generator tube bundles, and a pressurizer contained with in a single reactor vessel, \nalong with the containment vessel that imme diately surrounds the reactor vessel. This \ndesign eliminates the need for external pi ping to connect the steam generators and \npressurizer to the RPV. Natura l circulation provides reactor coolant system flow, thereby \neliminating the need fo r reactor coolant pumps.\n1.1.4 Power Output\nA NuScale Power Plant consists of from on e to12 NPMs. Each NPM is rated at 160 MWt \n(1,920 MWt, total), with approx imately 50 MWe (600 MWe total) ou tput. Electrical output is \ndependent on environmental conditions. When  considering house loads, the total net \noutput is approximately 570 MWe for a 12 NPM facility. Design power assumes an \nadditional 2 percent to accoun t for measurement uncertainty.\n1.1.5 Schedule\nCOL Item 1.1-2: A COL applicant that references th e NuScale Power Plant design certification will \nprovide the schedules for completion of construction and commercial operation of \neach power module.\n1.1.6 Format and Content\n1.1.6.1 Regulatory Guide 1.206\nThe format and content of this FSAR generally follow the format and content \nguidelines of Regulatory Guide 1.206. Howe ver, where applicable, Sections may be \nskipped or additional sections inserted. In  addition, this FSAR includes Chapter 20, \nMitigation of Beyond-Design-Basis Even ts and Chapter 21, Multi-Module Design \nConsiderations, which are not includ ed in Regulatory Guide (RG) 1.206.\n1.1.6.2 Standard Review Plan - NuScal e Design Specific Review Standard\nA NuScale design specific review standard (DSRS) has been developed by the NRC as a \nsupplement to NUREG-0800, “Standard Review Plan for the Review of Safety Analysis ",
+      "summary": "The NuScale reactor is a small modular pressurized water reactor (PWR) featuring a cylindrical steel containment vessel designed to ASME standards, which operates under vacuum during normal conditions and does not require insulation. Each NuScale Power Module (NPM) integrates the reactor core, steam generators, and pressurizer within a single vessel, uses natural circulation for cooling (eliminating the need for pumps), and is rated at 160 MWt (about 50 MWe), with up to 12 modules providing a total net output of approximately 570 MWe for a full facility.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "9",
+      "hop": 2,
+      "references": []
     },
     "nuscale_ch01_0167": {
       "node_id": "nuscale_ch01_0167",
       "title": "SRP 6.5.3, Rev 3: Fission Product Control Systems and StructuresII.1 Primary Containment",
-      "summary": "The NuScale design partially conforms to SRP 6.5.3 requirements for primary containment, as its passive containment vessel does not include fission product clean-up or pressure suppression systems; instead, fission product control is achieved through inherent design features. Requirements related to secondary containment and other fission product control systems are not applicable, as the NuScale design does not include these features. Only the containment vessel, isolation valves, and passive barriers are credited for fission product control in the NuScale Power Plant.",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-101 Revision 5\nSRP 6.5.3, Rev 3: Fission \nProduct Control Systems and StructuresII.1 Primary Containment Partially Conforms\nA portion of this acceptance criterion and its \nsubtier guidance is applicable only to LWR designs that include containment fission \nproduct clean-up systems. The NuScale \ncontainment vessel does not contain fission product clean up systems, nor does it \ninclude or require pressure suppression \nsystems (e.g., suppression pools or active containment heat removal systems such as \ncontainment spray) that serve a fission \nproduct removal/dose mitigation function. Rather, fission product control is inherent in \nthe passive design of the NuScale Power \nModule, wherein the compact containment vessel is submerged in the reactor pool. \nTherefore, the aspects of this guidance \nrelated to these systems are not applicable to the DCA. This guidance is applicable to \nthe review of certain NuScale containment \nparameters and design features, such as design leakage rate and systems leakage \nprior to containment isolation.6.5.3\nSRP 6.5.3, Rev 3: Fission \nProduct Control Systems and StructuresII.2 Secondary Containment Not Applicable\nThis acceptance criterion is applicable only \nto LWRs that incorporate both a primary and secondary containment. The NuScale \ncontainment vessel design does not include \na secondary containment. Not Applicable\nSRP 6.5.3, Rev 3: Fission \nProduct Control Systems and \nStructuresII.4 Other Fission Product Control \nSystemsNot Applicable The only credited ESF fission product \ncontrol system in the NuScale Power Plant \ndesign is the containment vessel in \nconjunction with the containment isolation valves and passive containment isolation \nbarriers.Not ApplicableTable 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "The NuScale design partially conforms to SRP 6.5.3, Rev 3 requirements for fission product control systems, as its containment vessel does not include active fission product clean-up or pressure suppression systems; instead, fission product control relies on the passive, submerged containment design. Criteria related to secondary containment and other fission product control systems are not applicable, as NuScale does not utilize these features. The review focuses on containment parameters such as leakage rates and isolation systems.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "229",
-      "hop": 2
-    },
-    "nuscale_ch01_0161": {
-      "node_id": "nuscale_ch01_0161",
-      "title": "SRP 6.4, Rev 3: Control Room Habitability SystemII.5 Relative Location of Source and Control Room",
-      "summary": "This section explains that certain regulatory criteria related to control room habitability and emergency ventilation systems do not apply to the NuScale reactor design, as it uses compressed air tanks for clean air during accidents, eliminating reliance on ventilation system inlets. Dose guidelines for new reactors are partially applicable, while toxic gas hazard requirements are the responsibility of the COL applicant. Additionally, NuScale does not use engineered safety feature (ESF) filter or ventilation systems for accident mitigation, so related guidance is not applicable.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "228",
-      "hop": 3
-    },
-    "nuscale_ch01_0073": {
-      "node_id": "nuscale_ch01_0073",
-      "title": "Departures",
-      "summary": "This section outlines the interface requirements between the NuScale Power Plant’s certified design and the site-specific design provided in the combined license (COL) application. It explains the types of interface requirements (CDI and COL), lists the information items that COL applicants must address, and specifies that any departures from the certified design must be documented by the COL applicant.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "108",
-      "hop": 3
-    },
-    "nuscale_ch01_0033": {
-      "node_id": "nuscale_ch01_0033",
-      "title": "General Arrangement of Major Structures and Equipment",
-      "summary": "This section describes the general arrangement of major structures and equipment at the NuScale Power Plant, focusing on the centrally located Reactor Building (RXB). The RXB is a large, reinforced concrete structure designed for safety and radiation protection, housing the NuScale Power Modules (NPMs) in a common reactor pool with individual bays arranged in two rows. The section also references detailed figures and notes that some buildings, like the administration and warehouse, are outside the report's scope.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "36",
-      "hop": 3
+      "hop": 2,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
     "nuscale_ch01_0390": {
       "node_id": "nuscale_ch01_0390",
       "title": "SRP 9.5.1.1, Rev 0: Fire Protection ProgramII.7 Operational Program and Proposed Implementation Milestones",
-      "summary": "This section explains that the operational fire protection program and its implementation milestones are the responsibility of the Combined License (COL) applicant, not the NuScale design certification applicant. NuScale acknowledges the relevant regulatory guidance but notes that full compliance, especially regarding passive separation of redundant trains, may not always be feasible due to the modular design. Therefore, NuScale ensures that fire protection measures are in place to maintain shutdown capability, while ultimate program implementation is deferred to the COL applicant.",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-128 Revision 5\nSRP 9.5.1.1, Rev 0: Fire \nProtection ProgramII.5 Fire Protection Program for New \nReactor Combined License ApplicationsPartially Conforms\nThis acceptance criterion and its subtier \nguidance apply to COL applicants under 10 CFR 52. COL applicants referencing a \ncertified design are responsible for \nimplementing this guidance. Notwithstanding the above, NuScale, as an \napplicant for a design certification, \nconsiders this guidance to be applicable to \nthe design certification application to the \nextent necessary to ensure that the COL \napplicant can satisfy this guidance.9.5.1\nAppendix 9A\nSRP 9.5.1.1, Rev 0: Fire Protection ProgramII.6 Enhanced Fire Protection Criteria for \nNew Reactor Designs (Including \nAppendix A)Partially Conforms\nThe enhanced fire protection criteria for \nnew reactor designs specify passive \nseparation of redundant trains as the \npreferred approach to ensure safe-shutdown capability. Due to the modular \nnature and small size of the NuScale Power \nModule, it is not feasib le in all instances to \nprovide installed passive separation of \nredundant trains. When train separation is \nnot feasible, fire protection for redundant shutdown systems is employed to ensure, \nto the extent practicable, such that one \nshutdown division will be free of fire damage.9.5.1\nTable 9.5.1-2\nAppendix 9A\nSRP 9.5.1.1, Rev 0: Fire Protection ProgramII.7 Operational Program and Proposed \nImplementation MilestonesNot Applicable\nThis acceptance criterion is the \nresponsibility of the COL applicant.Not Applicable\nSRP 9.5.1.2, Rev 0: Risk-\nInformed, Performance-Based Fire Protection \nProgramAll Various Not Applicable\nDevelopment and implementation of a risk-\ninformed, performance-based fire protection program is the responsibility of \nCOL applicants that reference the NuScale \ndesign, and that elect to implement the provisions of 10 CFR 50.48(c).Not Applicable\nDSRS 9.5.2, Rev 0: \nCommunication SystemsII.1 Emergency Facilities and Equipment Partially Conforms\nThis acceptance criterion is the \nresponsibility of the COL applicant.9.5.2Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section explains that the operational fire protection program and its implementation milestones are the responsibility of the Combined License (COL) applicant, not the NuScale design certification applicant. NuScale acknowledges the relevant regulatory guidance but notes that full conformance is not required at the design certification stage; instead, COL applicants must ensure compliance during their application process.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "256",
-      "hop": 3
+      "hop": 3,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
-    "nuscale_ch01_0060": {
-      "node_id": "nuscale_ch01_0060",
-      "title": "NuScale Integral System Test Program",
-      "summary": "The NuScale Integral System Test Program was established to collect thermal-hydraulic data for system characterization and to validate safety analysis codes using a scaled model of the NuScale Power Module (NPM). The NIST-1 facility replicates key reactor systems and supports the development and validation of proprietary safety codes, ensuring accurate modeling of the NPM’s unique features. Testing at NIST-1 has provided essential data for NuScale’s safety analysis and design certification efforts.",
+    "nuscale_ch01_0033": {
+      "node_id": "nuscale_ch01_0033",
+      "title": "General Arrangement of Major Structures and Equipment",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-11 Revision 51.2.1.7 Radioactive Waste Management System\nThe radioactive waste management system is discussed in detail in Chapter 11. Liquid, \ngaseous, and solid radioactive waste manage ment systems are discussed in detail in \nSections 11.2, 11.3, and 11.4, respectively. Process effluent radiation monitoring and \nsampling systems are discussed in Section 11.5.\n1.2.2 General Arrangement of Major Structures and Equipment\nFigure 1.2-2 presents the layout of a NuScal e Power Plant. This figure includes an \nadministration and training building and a warehouse that are outs ide the scope of the \nFSAR and not discussed further.\n1.2.2.1 Reactor Building\nAs shown in Figure 1.2-2, the RXB is approx imately central to the site. See Figure 1.2-5 \nand Figure 1.2-10 through Figure 1.2-20 for RXB drawings. Dimens ions provided in \nFigure 1.2-5 are nominal or approximate va lues for illustrative purposes. The RXB \nhouses the NPMs and systems and components required for plant operation and shutdown. The RXB is primaril y a rectangular configuration that is approximately 350 ft \nlong and 150 ft wide, and ex tends approximately 81 ft abov e nominal plant grade level. \nThe bottom of the RXB foundation is 86 ft below grade except for the areas under the \nelevator pit and the refueling pool, which ar e approximately 92 ft below grade. The RXB \nis a Seismic Category I, reinfo rced concrete structure with design consider ations for the \neffects of aircraft impact, environmental co nditions, postulated design basis accidents \n(internal and external), and design basis threats. The RXB also provides radiation protection to plant operations and maintenance personnel.\nEach NPM is located in the co mmon reactor pool in its ow n three-walled bay with the \nopen wall towards the center of the pool. The bays are arranged into  two rows with six \nbays per row along the north and south walls of the reactor pool at the east end of the \npool. A central channel is provided between  the bays to allow for movement of the \nNPMs between the bays and the refueling po ol. The bays are approximately 20 ft wide \nby 20 ft long by 98 ft deep with a normal  reactor pool water de pth of approximately \n69 ft (this correlates to an elevation of ap proximately 94'). Each bay has a concrete \nbioshield to reduce radiation levels in th e RXB and to prevent deposition of foreign \nmaterials onto an NPM. The bioshield consists of a two foot thick horizontal slab \ncomprised of reinforced  concrete with a stainless steel surface and a vertical assembly \ncomprised of a square stainless steel tube fr aming system and series  of radiation panel \nassemblies that extends into the pool. The ho rizontal slab is bolted to the top of the \nbay. Nine radiation panels are attached on both sides of the vert ical bioshield framing \nsystem to provide a radiation barrier and vent ilation. The bioshields are designed to be \nremoved to access the NPM. To accommodate the removed bi oshield, each bioshield is \ndesigned to have another bioshield stacked on top of it to allow for NPM movement during refueling.\nThe NPM, reactor pool, and SFP are below grad e. The surface of the reactor pool water \nis approximately 6 feet below grade. Al so located below grade are most primary \nsystems and some radioactive waste equipmen t. Hoisting and handling equipment is \nlocated above grade.",
+      "summary": "This section describes the general arrangement of major structures and equipment at a NuScale Power Plant, focusing on the central placement and design of the Reactor Building (RXB). The RXB is a large, reinforced concrete structure designed for safety and radiation protection, housing the NuScale Power Modules (NPMs) in a common reactor pool with individual bays arranged in two rows. The section also references figures for detailed layouts and notes that some buildings, like the administration and warehouse, are outside the report’s scope.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "87",
-      "hop": 3
+      "page_range": "36",
+      "hop": 3,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 1.2-10",
+          "page": 55,
+          "caption": "Reactor Building 24’-0” Elevation"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-2",
+          "page": 47,
+          "caption": "NuScale Functional Boundaries"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-20",
+          "page": 65,
+          "caption": "Reactor Building South Section View"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-5",
+          "page": 50,
+          "caption": "Cutaway Illustration of 12 Module Configuration"
+        }
+      ]
     },
-    "nuscale_ch01_0039": {
-      "node_id": "nuscale_ch01_0039",
-      "title": "Technical Support Center",
-      "summary": "The Technical Support Center (TSC) is established in compliance with NUREG-0696 requirements to support plant operations, with further details provided in Section 13.3. The TSC, along with advanced digital control systems and specialized monitoring displays in the main control room, ensures effective supervision, diagnostics, and response for all reactor modules and plant systems.",
+    "nuscale_ch01_0161": {
+      "node_id": "nuscale_ch01_0161",
+      "title": "SRP 6.4, Rev 3: Control Room Habitability SystemII.5 Relative Location of Source and Control Room",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-100 Revision 5\nSRP 6.4, Rev 3: Control Room \nHabitability SystemII.5 Relative Location of Source and \nControl RoomNot Applicable This guidance is applicable only to reactor \ndesigns that rely on the control room emergency ventilation system for control \nroom habitability during a design basis \naccident. The NuScale control room habitability system uses compressed air \ntanks as a clean air source during \npostulated accident even ts. This eliminates \nthe potential for radioactive material or \ntoxic gases to enter the control room via \nventilation system inlets.Not Applicable\nSRP 6.4, Rev 3: Control Room \nHabitability SystemII.6.A Dose Guidelines for Current \nOperating Reactors That Do Not \nImplement an Alternative Source \nTermNot Applicable This guidance is applicable only to currently \noperating reactors.Not Applicable\nSRP 6.4, Rev 3: Control Room \nHabitability SystemII.6.B Dose Guidelines for New Reactors \nand Licensees That Implement an \nAlternative Source TermConforms The subtier RG 1.183 is partially applicable. 6.4.1\nSRP 6.4, Rev 3: Control Room \nHabitability SystemII.7 Toxic Gas Hazards Partially Conforms Programmatic requirements are the COL \napplicant responsibility.6.4\nSRP 6.5.1, Rev 4: ESF \nAtmosphere Cleanup \nSystemsII First full paragraph on Page 6.5.1-6, \nDesign, Testing, and Maintenance of \nESF Atmosphere Cleanup System Air \nFiltration and Adsorption UnitsNot Applicable The NuScale Power Plant design does not \nuse engineered safety feature (ESF) filter \nsystems or ESF ventilation systems to \nmitigate the consequences of a design basis accident. In the NuScale Power Plant design \nthere is a nonsafety-related Reactor \nBuilding heating ventilating and air conditioning system which includes \nfiltering; however, it is not credited in the \ndose analysis.Not Applicable\nSRP 6.5.2, Rev 4: Containment \nSpray as a Fission Product \nCleanup SystemAll Various Not Applicable This SRP section and its acceptance criteria \n(II.1 through II.3) are applicable only to large \nLWRs with containment spray systems. The \nNuScale containment vessel design does not incorporate a spray system. Not ApplicableTable 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "The NuScale design does not rely on traditional control room emergency ventilation systems for habitability during accidents; instead, it uses compressed air tanks to provide a clean air source, eliminating the risk of contamination through ventilation inlets. As a result, several regulatory criteria related to ventilation-based habitability and ESF filtration systems are not applicable, while some dose guideline requirements partially apply and toxic gas hazard responsibilities are deferred to the COL applicant.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "40",
-      "hop": 4
+      "page_range": "228",
+      "hop": 3,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
+    },
+    "nuscale_ch01_0117": {
+      "node_id": "nuscale_ch01_0117",
+      "title": "Figure 1.7-3f: Piping and In strumentation Diagram Legends",
+      "content": "NuScale Final Safety Analysis Report Drawings and Other Detailed Information\nTier 2 1.7-13 Revision 5Figure 1.7-3f: Piping and In strumentation Diagram Legends\nSAMPLE INSERT PROBE, FLANGED / SAMPLE WELL,\nFLANGEDANALYSIS AUXILIARY AND ACCESSORY DEVICES\nSAMPLE ANALYSIS ACCESSORY, FLANGEDAW\nAX\nDIAPHRAGM PRESSURE SEAL, GENERIC CONNECTION /\nDIAPHRAGM CHEMICAL SEAL, GENERIC CONNECTIONINSTRUMENT PURGE/FLUSHING FLUID OR DEVICESFLOW STRAIGHTENING VANES / FLOW CONDITIONING\nELEMENT\nDIAPHRAGM PRESSURE SEAL, WELDED/ DIAPHRAGM\nCHEMICAL SEAL, WELDED\nTHERMOWELL, FLANGED (NOTE 2)\n(BUBBLE MAY BE OMITTED IF CONNECTED TO\nANOTHER INSTRUMENT)PFX\nTWFLOW\nPRESSURE\nTEMPERATUREPRIMARY ELEMENTS \u0003\nFLOW\nINTEGRAL ORIFICE PLATEFLOW TUBEFLOW NOZZLEVENTURI TUBEGENERIC VENTURI TUBE, FLOW NOZZLE, OR\nFLOW TUBE (NOTE 1)MULTI-HOLE ORIFICE PLATECIRCLE QUADRANT ORIFICE PLATEECCENTRIC CIRCLE ORIFICE PLATECONCENTRIC CIRCLE ORIFICE PLATEQUICK-CHANGE ORIFICE PLATEGENERIC ORIFICE PLATE\nAVERAGING PITOT TUBESTANDARD PITOT TUBECONE METER / POSITIVE DISPLACEMENT FLOWMETERTHERMAL MASS FLOWMETERMAGNETIC FLOWMETERTARGET FLOWMETERVORTEX SHEDDING FLOWMETERTURBINE FLOWMETER / PROPELLER FLOWMETER\nWEDGE METER\nOPEN CHANNEL WEIR PLATEVARIABLE AREA FLOWMETERSONIC FLOWMETER / ULTRASONIC FLOWMETERCORIOLLIS FLOWMETER\nOPEN CHANNEL FLUME\nANALYSIS\nFIBEROPTIC SENSING PROBEDUAL ELEMENT SENSING PROBESINGLE ELEMENT SENSING PROBE\nBURNER\nFLAME ROD / FLAME DETECTORULTRAVIOLET FLAME DETECTOR / TELEVISION FLAME\nMONITOR\nPRESSURE\nSTRAIN GAGE OR OTHER ELECTRONIC SENSOR (NOTE 2)\n(BUBBLE MAY BE OMITTED IF CONNECTED TO ANOTHER\nINSTRUMENT)\nTEMPERATURE\nGENERIC ELEMENT WITHOUT THERMOWELL (NOTE 2)\n(BUBBLE MAY BE OMITTED IF CONNECTED TO\nANOTHER INSTRUMENT)LEVEL\nINTERNALLY MOUNTED BALL FLOAT\n(MAY BE INSTALLED THROUGH TOP OF VESSEL)\nINTERNALLY MOUNTED DISPLACER\nRADARINSERT PROBE\n(MAY BE INSTALLED THROUGH TOP OF VESSEL)FLOAT WITH GUIDE WIRES\n(LOCATION READOUT SHOULD BE NOTED: AT GRADE, AT\nTOP, OR ACCESSIBLE FROM A LADDER)\n(GUIDE WIRES MAY BE OMITTED)RADIATION SINGLE POINT\nPRIMARY ELEMENT (E.G. DIP TUBE) AND STILLING WELL (MAY\nBE INSTALLED THROUGH SIDE OF VESSEL)\n(MAY BE INSTALLED WITHOUT STILLING WELL)RADIATION, MULTI-POINT OR CONTINUOUS\nTEPELINE NUMBERING FORMAT\nGG  -  CC  -  DDDD  -  XXXX  -  TUVX  -  KK\nINSULATION CODE\nPIPING LINE SPECIFICATION NUMBER\nUNIQUE IDENTIFIER\nSYSTEM ABBREVIATION\nMODULE  NUMBER\nNOMINAL DIAMETER\nCOMPONENT IDENTIFICATION SYSTEM\n           CC  -  DDDD  -  EEEE  -  XXXXY  -  ZZ\nATTACHED COMPONENT MODIFIER\nUNIQUE IDENTIFIER/SUFFIX\nCOMPONENT TYPE\nSYSTEM ABBREVIATION\nMODULE  NUMBER\nENGINEERING DRAWING NUMBERING\nAAAA - CC  -  DDDD  -  Y - NN - XXXX  -  SYY\nSHEET NUMBER\nUNIQUE IDENTIFIER\nDRAWING TYPE\nDISCIPLINE CODE\nSYSTEM CODE\nMODULE UMBERPROJECT IDENTIFIER127(6\u001d\n\u0014\u0011 $%%5(9,$7,216\u0003)520\u0003)81&7,21\u0003,'(17,),(56\n7$%/(\u000321\u0003),*85(\u0003\u0014\u0011\u001a\u0010\u0016H\u00036+$//\u0003%(\u000386('\u0003,)025(\u00037+$1\u000321(\u0003\u0003(/(0(17\u00037<3(\u0003$33($56\u0003217+(\u0003'5$:,1*\u0011\n\u0015\u0011 $1\u0003$%%5(9,$7,21\u0003)520\u00037+(\u0003)81&7,21\n,'(17,),(56\u00037$%/(\u000321\u0003),*85(\u0003\u0014\u0011\u001a\u0010\u0016H\u00036+28/'\n%(\u000386('\u000372\u0003,'(17,)<\u00037+(\u0003(/(0(17\u00037<3(\u0011NuScale Final Safety Analysis Report Interfaces with Certified Design\nTier 2 1.8-1 Revision 51.8 Interfaces with Certified Design\nThis section addresses interface requirements  between the NuScale Power Plant certified \ndesign and the site-specific design provided in the combined licens e (COL) application. \nSection 1.2 identifies the structures, systems, an d components that are included in the certified \ndesign. Figure 1.2-1 provides a representation of  the overall facility and Figure 1.2-2 provides \nthe general boundaries between the cert ified design and site-specific design.\nTable 1.8-1 identifies the interfac es between the NuScale certifie d design and the site-specific \ndesign. There are two types of interface requirements described:\n• CDI: Conceptual design information that is provided for the non-ce rtified portion of the \nplant to facilitate review of the certified desi gn and to confirm the adequacy of identified \ninterface requirements. \n• COL: NuScale design assumptions related to site-specific design el ements that are the \nresponsibility of the COL applicant. This type of interface is identified as a COL information \nitem.\n1.8.1 Combined License Information Items\nInformation that must be prov ided in order to li cense and operate a site-specific NuScale \nPower Plant, but is not included in the certif ied design, is identified  throughout the Final \nSafety Analysis Report as COL information items. Table 1.8-2 lists the COL information \nitems, includes the COL info rmation item text and identifies the section where the \ninformation item is located. The COL applicant addresses each  COL information item in the \nsection where it is located.\n1.8.2 Departures\nCOL Item 1.8-1: A COL applicant that references th e NuScale Power Plant design certification will \nprovide a list of departures from the certified design.\n\n--- Referenced Tables (structured) ---\n[Table 1.8-1: Summary of NuScale Certified Design Interfaces with Remainder of Plant]\nTurbine Generator Buildings | CDI | 1.2.2\nAnnex Building | CDI | 1.2.2\nCooling towers, pump houses, and associated structures, systems, and\ncomponents (e.g., cooling tower basin, circulating water pumps, cooling\ntower fans, chemical treatment building, etc.) | CDI | CDI | 1.2.2,\n10.4.5\nSecurity Buildings | CDI | 1.2.2\nCentral Utility Building | CDI | 1.2.2\nDiesel Generator Buildings | CDI | 1.2.2\nOffsite power transmission system, main switchyard, and transformer area | CDI | 8.2\nAuxiliary AC power system | CDI | 8.3.1\nSite cooling water system | CDI | 9.2.7\nCirculating water system | CDI | 10.4.5\nGrounding and lightning protection system | CDI | 8.3.1\nPlant exhaust stack | CDI | 9.4.2\nPotable and sanitary water systems | COL | 9.2.4\nResin tanks for the condensate polishing system | COL | 10.4\nSite drainage system | COL | N/A\nRaw water system | COL | 9.2.9\nSite parameters, geographic and demographic characteristics,\nmeteorological characteristics, nearby industrial, transportation, and military\nfacilities, hydrologic characteristics, geology, seismology, and geotechnical\ncharacteristics, weather conditions and site topography, flooding | COL | COL | Table 2.0-1, 2.1, 2.2,\n2.3, 2.4, 2.5, 3.3, 3.4\nSite-specific communications | COL | 9.5.2\nTurbine generators | COL | 3.5-1\nOperational Support Center | COL | 13.3\n[Table 1.8-2: Combined License Information Items (Continued)]\nItem No. | Description of COL Information Item | Section\nCOL Item 20.1-8: | A COL applicant that references the NuScale Power Plant design certification will develop\nprocedures, training, and a qualification program for operations, maintenance, testing, and\ncalibration of ultimate heat sink level instrumentation to ensure the level instruments will be\navailable when needed and personnel are knowledgeable in interpreting the information as\naddressed in Nuclear Energy Institute (NEI) 12-02, Revision 1, Industry Guidance for Compliance\nwith NRC Order EA-12-051, “To Modify Licenses with Regard to Reliable Spent Fuel Pool\nInstrumentation.” | 20.1\nCOL Item 20.2-1: | A COL applicant that references the NuScale Power Plant design certification will develop\nenhanced firefighting capabilities in accordance with 10 CFR 50.155(b)(2). The enhanced\nfirefighting capabilities should address the expectation elements listed in Section 4.1.3 of the\nTechnical Report TR-0816-50796 (Reference 20.2-1). | 20.2\nCOL Item 20.2-2: | A COL applicant that references the NuScale Power Plant design certification will provide a\nmeans for water spray scrubbing using fog nozzles and the availability of water sources, and\naddress runoff water containment issues (sandbags, portable dikes, etc.) as an attenuation\nmeasure for mitigating radiation releases outside containment. | 20.2",
+      "summary": "This section provides the legend for piping and instrumentation diagrams (P&IDs) used in the NuScale Final Safety Analysis Report. It lists and describes various symbols representing sample probes, pressure and temperature devices, flow measurement instruments, level sensors, and other auxiliary and accessory devices used in the diagrams. These legends ensure consistent interpretation of P&IDs throughout the documentation.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "107",
+      "hop": 4,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 1.2-1",
+          "page": 46,
+          "caption": "Conceptual Site Layout"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-2",
+          "page": 47,
+          "caption": "NuScale Functional Boundaries"
+        },
+        {
+          "type": "table",
+          "id": "Table 1.8-1",
+          "page": 109,
+          "caption": "Summary of NuScale Certified Design Interfaces with Remainder of Plant",
+          "structured_text": "Turbine Generator Buildings | CDI | 1.2.2\nAnnex Building | CDI | 1.2.2\nCooling towers, pump houses, and associated structures, systems, and\ncomponents (e.g., cooling tower basin, circulating water pumps, cooling\ntower fans, chemical treatment building, etc.) | CDI | CDI | 1.2.2,\n10.4.5\nSecurity Buildings | CDI | 1.2.2\nCentral Utility Building | CDI | 1.2.2\nDiesel Generator Buildings | CDI | 1.2.2\nOffsite power transmission system, main switchyard, and transformer area | CDI | 8.2\nAuxiliary AC power system | CDI | 8.3.1\nSite cooling water system | CDI | 9.2.7\nCirculating water system | CDI | 10.4.5\nGrounding and lightning protection system | CDI | 8.3.1\nPlant exhaust stack | CDI | 9.4.2\nPotable and sanitary water systems | COL | 9.2.4\nResin tanks for the condensate polishing system | COL | 10.4\nSite drainage system | COL | N/A\nRaw water system | COL | 9.2.9\nSite parameters, geographic and demographic characteristics,\nmeteorological characteristics, nearby industrial, transportation, and military\nfacilities, hydrologic characteristics, geology, seismology, and geotechnical\ncharacteristics, weather conditions and site topography, flooding | COL | COL | Table 2.0-1, 2.1, 2.2,\n2.3, 2.4, 2.5, 3.3, 3.4\nSite-specific communications | COL | 9.5.2\nTurbine generators | COL | 3.5-1\nOperational Support Center | COL | 13.3"
+        },
+        {
+          "type": "table",
+          "id": "Table 1.8-2",
+          "page": 128,
+          "caption": "Combined License Information Items (Continued)",
+          "structured_text": "Item No. | Description of COL Information Item | Section\nCOL Item 20.1-8: | A COL applicant that references the NuScale Power Plant design certification will develop\nprocedures, training, and a qualification program for operations, maintenance, testing, and\ncalibration of ultimate heat sink level instrumentation to ensure the level instruments will be\navailable when needed and personnel are knowledgeable in interpreting the information as\naddressed in Nuclear Energy Institute (NEI) 12-02, Revision 1, Industry Guidance for Compliance\nwith NRC Order EA-12-051, “To Modify Licenses with Regard to Reliable Spent Fuel Pool\nInstrumentation.” | 20.1\nCOL Item 20.2-1: | A COL applicant that references the NuScale Power Plant design certification will develop\nenhanced firefighting capabilities in accordance with 10 CFR 50.155(b)(2). The enhanced\nfirefighting capabilities should address the expectation elements listed in Section 4.1.3 of the\nTechnical Report TR-0816-50796 (Reference 20.2-1). | 20.2\nCOL Item 20.2-2: | A COL applicant that references the NuScale Power Plant design certification will provide a\nmeans for water spray scrubbing using fog nozzles and the availability of water sources, and\naddress runoff water containment issues (sandbags, portable dikes, etc.) as an attenuation\nmeasure for mitigating radiation releases outside containment. | 20.2"
+        }
+      ]
+    },
+    "nuscale_ch01_0015": {
+      "node_id": "nuscale_ch01_0015",
+      "title": "General Plant Description",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-1 Revision 51.2 General Plant Description\nThis section summarizes the plant design and provides a general description of the overall \nfacility. The description includes:\n• principal design criteria, operating char acteristics, and safety considerations\n• engineered safety features (ESFs) and emergency systems\n• instrumentation, controls, and electrical systems\n• power conversion system\n• fuel, fuel handling, and storage systems\n• plant cooling water systems\n• radioactive waste management systems\n• auxiliary systems (e.g., compressed air,  non-radioactive drains, water systems)\nEach COL Applicant will develop a Final Safety An alysis Report (FSAR) that incorporates by \nreference the NuScale FSAR. The NuScale FSAR  includes COL items that identify where \nsite-specific information must be provided. Ho wever, in some instan ces, representative \ninformation is necessary to provide context for interface requirements as specified in \n10 CFR 52.47(a)(24) and 10 CFR 52.47(a)(25). This representative or conceptual design \ninformation (CDI) is outside th e scope of the NuScale Power Plant certified design. Where \nprovided, CDI is delineated by  double brackets ([[]]). The scop e of the certified design and \nsite-specific design is shown in Figure 1.2- 2. The basic systems associated with power \ngeneration are shown in Figure 1.2-3. Although  some components from these systems are \nphysically located in buildings that are CDI, the system itself is not, wi th the exception of the \nclouded portion, which identifies the CDI coolin g towers and certain circ ulating water systems. \nSecurity-related informatio n is delineated using double braces {{ }}. This information is withheld \nin accordance with 10 CFR 2.390(d)(1).\n1.2.1 Principal Site Characteristics\nFigure 1.2-1 presents a representative conceptual  layout of the overall site. The majority of \nthe site buildings are located within the prot ected area (PA) and surrounded by a double \nfence and intrusion-detection equipment. The PA is located within the security owner \ncontrolled area (SOCA) surrounded by an additi onal single fence. An administration and \ntraining building and a warehouse are shown outside of the SOCA fence.\nA NuScale Power Module (NPM) shown in Figure 1.2-6, is a collection of systems, \nsub-systems, and components that make up  a modularized, movable, nuclear steam \nsupply system (NSSS). Each NPM is comprised of a reactor core, a pressurizer, and two \nsteam generators (SGs) integrated within a re actor pressure vessel (RPV) and housed in a \ncompact steel containment vessel (CNV).\nThe NuScale Power Plant is de signed for 1 to 12 NPMs with  the associated primary and \nsecondary systems and components necessary to produce power and maintain the facility. This includes main steam systems, turbin e generator sets, condensate and feedwater \nsystems, and shared external cooling water systems (Figure 1.2-3), plus module assembly \nequipment, fuel handling equipment, turb ine maintenance equipment, and radioactive ",
+      "summary": "This section provides a summary of the NuScale plant’s overall design, including key systems such as safety features, power conversion, fuel handling, cooling, waste management, and auxiliary systems. It explains that each Combined License (COL) applicant must reference the NuScale Final Safety Analysis Report (FSAR) and supplement it with site-specific information, while distinguishing between certified design elements and conceptual design information (CDI). Security-related details are specially marked and withheld according to regulatory requirements.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "26",
+      "hop": 4,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 1.2-1",
+          "page": 46,
+          "caption": "Conceptual Site Layout"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-3",
+          "page": 48,
+          "caption": "Schematic of a Single NuScale Power Module and Associated Secondary Equipment"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-6",
+          "page": 51,
+          "caption": "Cutaway View of NuScale Power Module"
+        }
+      ]
+    },
+    "nuscale_ch01_0072": {
+      "node_id": "nuscale_ch01_0072",
+      "title": "Combined License Information Items",
+      "content": "NuScale Final Safety Analysis Report Interfaces with Certified Design\nTier 2 1.8-1 Revision 51.8 Interfaces with Certified Design\nThis section addresses interface requirements  between the NuScale Power Plant certified \ndesign and the site-specific design provided in the combined licens e (COL) application. \nSection 1.2 identifies the structures, systems, an d components that are included in the certified \ndesign. Figure 1.2-1 provides a representation of  the overall facility and Figure 1.2-2 provides \nthe general boundaries between the cert ified design and site-specific design.\nTable 1.8-1 identifies the interfac es between the NuScale certifie d design and the site-specific \ndesign. There are two types of interface requirements described:\n• CDI: Conceptual design information that is provided for the non-ce rtified portion of the \nplant to facilitate review of the certified desi gn and to confirm the adequacy of identified \ninterface requirements. \n• COL: NuScale design assumptions related to site-specific design el ements that are the \nresponsibility of the COL applicant. This type of interface is identified as a COL information \nitem.\n1.8.1 Combined License Information Items\nInformation that must be prov ided in order to li cense and operate a site-specific NuScale \nPower Plant, but is not included in the certif ied design, is identified  throughout the Final \nSafety Analysis Report as COL information items. Table 1.8-2 lists the COL information \nitems, includes the COL info rmation item text and identifies the section where the \ninformation item is located. The COL applicant addresses each  COL information item in the \nsection where it is located.\n1.8.2 Departures\nCOL Item 1.8-1: A COL applicant that references th e NuScale Power Plant design certification will \nprovide a list of departures from the certified design.\n\n--- Referenced Tables (structured) ---\n[Table 1.8-1: Summary of NuScale Certified Design Interfaces with Remainder of Plant]\nTurbine Generator Buildings | CDI | 1.2.2\nAnnex Building | CDI | 1.2.2\nCooling towers, pump houses, and associated structures, systems, and\ncomponents (e.g., cooling tower basin, circulating water pumps, cooling\ntower fans, chemical treatment building, etc.) | CDI | CDI | 1.2.2,\n10.4.5\nSecurity Buildings | CDI | 1.2.2\nCentral Utility Building | CDI | 1.2.2\nDiesel Generator Buildings | CDI | 1.2.2\nOffsite power transmission system, main switchyard, and transformer area | CDI | 8.2\nAuxiliary AC power system | CDI | 8.3.1\nSite cooling water system | CDI | 9.2.7\nCirculating water system | CDI | 10.4.5\nGrounding and lightning protection system | CDI | 8.3.1\nPlant exhaust stack | CDI | 9.4.2\nPotable and sanitary water systems | COL | 9.2.4\nResin tanks for the condensate polishing system | COL | 10.4\nSite drainage system | COL | N/A\nRaw water system | COL | 9.2.9\nSite parameters, geographic and demographic characteristics,\nmeteorological characteristics, nearby industrial, transportation, and military\nfacilities, hydrologic characteristics, geology, seismology, and geotechnical\ncharacteristics, weather conditions and site topography, flooding | COL | COL | Table 2.0-1, 2.1, 2.2,\n2.3, 2.4, 2.5, 3.3, 3.4\nSite-specific communications | COL | 9.5.2\nTurbine generators | COL | 3.5-1\nOperational Support Center | COL | 13.3\n[Table 1.8-2: Combined License Information Items (Continued)]\nItem No. | Description of COL Information Item | Section\nCOL Item 20.1-8: | A COL applicant that references the NuScale Power Plant design certification will develop\nprocedures, training, and a qualification program for operations, maintenance, testing, and\ncalibration of ultimate heat sink level instrumentation to ensure the level instruments will be\navailable when needed and personnel are knowledgeable in interpreting the information as\naddressed in Nuclear Energy Institute (NEI) 12-02, Revision 1, Industry Guidance for Compliance\nwith NRC Order EA-12-051, “To Modify Licenses with Regard to Reliable Spent Fuel Pool\nInstrumentation.” | 20.1\nCOL Item 20.2-1: | A COL applicant that references the NuScale Power Plant design certification will develop\nenhanced firefighting capabilities in accordance with 10 CFR 50.155(b)(2). The enhanced\nfirefighting capabilities should address the expectation elements listed in Section 4.1.3 of the\nTechnical Report TR-0816-50796 (Reference 20.2-1). | 20.2\nCOL Item 20.2-2: | A COL applicant that references the NuScale Power Plant design certification will provide a\nmeans for water spray scrubbing using fog nozzles and the availability of water sources, and\naddress runoff water containment issues (sandbags, portable dikes, etc.) as an attenuation\nmeasure for mitigating radiation releases outside containment. | 20.2",
+      "summary": "This section explains the interface requirements between the NuScale Power Plant’s certified design and the site-specific design provided in the combined license (COL) application. It describes how certain design elements are divided between the certified and site-specific portions, identifies information items that COL applicants must address, and requires applicants to list any departures from the certified design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "108",
+      "hop": 4,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 1.2-1",
+          "page": 46,
+          "caption": "Conceptual Site Layout"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-2",
+          "page": 47,
+          "caption": "NuScale Functional Boundaries"
+        },
+        {
+          "type": "table",
+          "id": "Table 1.8-1",
+          "page": 109,
+          "caption": "Summary of NuScale Certified Design Interfaces with Remainder of Plant",
+          "structured_text": "Turbine Generator Buildings | CDI | 1.2.2\nAnnex Building | CDI | 1.2.2\nCooling towers, pump houses, and associated structures, systems, and\ncomponents (e.g., cooling tower basin, circulating water pumps, cooling\ntower fans, chemical treatment building, etc.) | CDI | CDI | 1.2.2,\n10.4.5\nSecurity Buildings | CDI | 1.2.2\nCentral Utility Building | CDI | 1.2.2\nDiesel Generator Buildings | CDI | 1.2.2\nOffsite power transmission system, main switchyard, and transformer area | CDI | 8.2\nAuxiliary AC power system | CDI | 8.3.1\nSite cooling water system | CDI | 9.2.7\nCirculating water system | CDI | 10.4.5\nGrounding and lightning protection system | CDI | 8.3.1\nPlant exhaust stack | CDI | 9.4.2\nPotable and sanitary water systems | COL | 9.2.4\nResin tanks for the condensate polishing system | COL | 10.4\nSite drainage system | COL | N/A\nRaw water system | COL | 9.2.9\nSite parameters, geographic and demographic characteristics,\nmeteorological characteristics, nearby industrial, transportation, and military\nfacilities, hydrologic characteristics, geology, seismology, and geotechnical\ncharacteristics, weather conditions and site topography, flooding | COL | COL | Table 2.0-1, 2.1, 2.2,\n2.3, 2.4, 2.5, 3.3, 3.4\nSite-specific communications | COL | 9.5.2\nTurbine generators | COL | 3.5-1\nOperational Support Center | COL | 13.3"
+        },
+        {
+          "type": "table",
+          "id": "Table 1.8-2",
+          "page": 128,
+          "caption": "Combined License Information Items (Continued)",
+          "structured_text": "Item No. | Description of COL Information Item | Section\nCOL Item 20.1-8: | A COL applicant that references the NuScale Power Plant design certification will develop\nprocedures, training, and a qualification program for operations, maintenance, testing, and\ncalibration of ultimate heat sink level instrumentation to ensure the level instruments will be\navailable when needed and personnel are knowledgeable in interpreting the information as\naddressed in Nuclear Energy Institute (NEI) 12-02, Revision 1, Industry Guidance for Compliance\nwith NRC Order EA-12-051, “To Modify Licenses with Regard to Reliable Spent Fuel Pool\nInstrumentation.” | 20.1\nCOL Item 20.2-1: | A COL applicant that references the NuScale Power Plant design certification will develop\nenhanced firefighting capabilities in accordance with 10 CFR 50.155(b)(2). The enhanced\nfirefighting capabilities should address the expectation elements listed in Section 4.1.3 of the\nTechnical Report TR-0816-50796 (Reference 20.2-1). | 20.2\nCOL Item 20.2-2: | A COL applicant that references the NuScale Power Plant design certification will provide a\nmeans for water spray scrubbing using fog nozzles and the availability of water sources, and\naddress runoff water containment issues (sandbags, portable dikes, etc.) as an attenuation\nmeasure for mitigating radiation releases outside containment. | 20.2"
+        }
+      ]
     }
   },
   "edges": [
-    {
-      "source": "nuscale_ch01_0002",
-      "target": "nuscale_ch01_0036",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.8,
-      "description": "Section A provides the overall context and regulatory basis for the NuScale design described in detail in Section B, which includes operational procedures such as refueling that depend on the physical configuration (including the relative sizes of containment and reactor vessels) depicted in Figure 1.2-6."
-    },
-    {
-      "source": "nuscale_ch01_0002",
-      "target": "nuscale_ch01_0035",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.8,
-      "description": "Section A provides the overall context and regulatory basis for the NuScale FSAR, while Section B gives specific details about the physical layout and components relevant to the NPM, both of which are necessary to interpret Figure 1.2-6's depiction of containment and reactor vessel sizes."
-    },
-    {
-      "source": "nuscale_ch01_0036",
-      "target": "nuscale_ch01_0001",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.8,
-      "description": "Section A discusses the handling and movement of the NPM during refueling, which relies on the physical configuration and relative sizes of the containment and reactor vessels described in Section B's general plant description."
-    },
-    {
-      "source": "nuscale_ch01_0036",
-      "target": "nuscale_ch01_0035",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A describes the movement and placement of the NPM during refueling, while Section B outlines the physical areas and connections used during such operations, connecting them through the logistical and spatial requirements for handling the NPM."
-    },
     {
       "source": "nuscale_ch01_0001",
       "target": "nuscale_ch01_0035",
@@ -184,256 +600,270 @@
       "description": "Section A provides the overall context and purpose of the FSAR, while Section B gives specific details about the physical layout and components, both of which are necessary to interpret Figure 1.2-6's depiction of the containment and reactor vessels' relative sizes."
     },
     {
-      "source": "nuscale_ch01_0005",
+      "source": "nuscale_ch01_0001",
+      "target": "nuscale_ch01_0036",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides the general design description and regulatory context for the NuScale plant, while Section B details specific operational procedures (refueling) that depend on the design features described in Section A, such as the containment and reactor vessels."
+    },
+    {
+      "source": "nuscale_ch01_0051",
       "target": "nuscale_ch01_0002",
       "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides specific details about plant features such as the Central Utility Building, while Section B offers a general introduction to the entire plant design and the scope of the safety analysis report, with Section A elaborating on aspects broadly described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0035",
+      "target": "nuscale_ch01_0002",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides specific details about the location and classification of reactor-related areas and components, which are part of the general plant description introduced in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0035",
+      "target": "nuscale_ch01_0036",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the physical layout and maintenance access for NPMs, while Section B details the movement and handling of NPMs during refueling, both referencing the spatial arrangement and handling of the NPMs as depicted in Figure 1.2-6."
+    },
+    {
+      "source": "nuscale_ch01_0002",
+      "target": "nuscale_ch01_0036",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides the overall context and regulatory basis for the NuScale FSAR, while Section B describes specific operational procedures (refueling) that are part of the plant's general description referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0004",
+      "target": "nuscale_ch01_0001",
+      "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A provides specific technical details about the containment vessel's design and classification, which supports Section B's general introduction to the plant's design and safety analysis as described in the FSAR."
+      "description": "Section A provides specific details about the containment vessel's type and design, which are part of the general plant description outlined in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0004",
+      "target": "nuscale_ch01_0035",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the design and structural characteristics of the containment vessel, while Section B references the physical location and classification of reactor-related components, both of which are visually represented in Figure 1.2-6 to illustrate the spatial relationship and relative sizes of the containment and reactor vessels."
+    },
+    {
+      "source": "nuscale_ch01_0007",
+      "target": "nuscale_ch01_0001",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides specific technical details about the containment vessel's design and classification, which supports Section B's general description of the plant and its safety analysis by supplying concrete information about a key structure."
+    },
+    {
+      "source": "nuscale_ch01_0007",
+      "target": "nuscale_ch01_0035",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the design and structural characteristics of the containment vessel, while Section B references the classification and location of reactor-related structures, both of which provide context for interpreting Figure 1.2-6's depiction of the relative sizes of the containment and reactor vessels."
+    },
+    {
+      "source": "nuscale_ch01_0008",
+      "target": "nuscale_ch01_0001",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific technical details about the containment vessel's design and function, which are part of the general plant description and safety analysis context introduced in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0008",
+      "target": "nuscale_ch01_0035",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the design and structural characteristics of the containment vessel, while Section B references the physical location and classification of reactor-related components, both of which are visually represented in Figure 1.2-6 to illustrate the relative sizes and spatial arrangement of the containment and reactor vessels."
+    },
+    {
+      "source": "nuscale_ch01_0168",
+      "target": "nuscale_ch01_0001",
+      "relation": "REFERENCES",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria for containment systems and discusses how the NuScale design conforms, while Section B provides the general description and safety analysis context for the plant design, including containment and reactor vessels, thus Section A's regulatory discussion is applied to the design described in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0168",
+      "target": "nuscale_ch01_0035",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section A discusses regulatory conformance related to containment systems, while Section B provides a physical description of the plant layout including the location of containment and reactor vessels, thus Section B provides specific details that illustrate or specify the general containment concepts referenced in Section A."
     },
     {
       "source": "nuscale_ch01_0005",
-      "target": "nuscale_ch01_0036",
-      "relation": "IS_PREREQUISITE_OF",
+      "target": "nuscale_ch01_0001",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A provides specific technical details about the containment vessel's design and classification, which supports Section B's general description of the plant and its safety analysis by supplying foundational information about a key structure."
+    },
+    {
+      "source": "nuscale_ch01_0005",
+      "target": "nuscale_ch01_0035",
+      "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A describes the design and structural characteristics of the containment vessel, which provides context for understanding the physical arrangement and relative sizes depicted in Figure 1.2-6, while Section B discusses operational procedures that involve moving the NPM, implicitly relying on the containment and reactor vessel configuration described in Section A."
+      "description": "Section A describes the design and structural characteristics of the containment vessel, while Section B references the physical locations and classifications of reactor-related components, both of which are visually represented and spatially related in Figure 1.2-6 to illustrate the relative sizes and arrangement of the containment and reactor vessels."
+    },
+    {
+      "source": "nuscale_ch01_0167",
+      "target": "nuscale_ch01_0001",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses specific containment system features and regulatory conformance, while Section B provides the general design description and safety analysis context in which the containment and reactor vessels' relative sizes (as shown in Figure 1.2-6) are introduced."
+    },
+    {
+      "source": "nuscale_ch01_0167",
+      "target": "nuscale_ch01_0035",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses regulatory criteria and partial conformance regarding containment systems, while Section B provides a physical description of the plant layout and locations of components, with both sections connected by their references to the containment and reactor vessels' design and arrangement as depicted in Figure 1.2-6."
+    },
+    {
+      "source": "nuscale_ch01_0004",
+      "target": "nuscale_ch01_0168",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the design and structural characteristics of the NuScale containment vessel, while Section B discusses the regulatory conformance of the containment system, specifically noting the absence of certain systems, thus Section A provides technical details that support the regulatory context outlined in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0004",
+      "target": "nuscale_ch01_0167",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the design and structural characteristics of the NuScale containment vessel, while Section B discusses how the containment vessel conforms (or partially conforms) to regulatory requirements for primary containment, connecting them through the vessel's design features and regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch01_0007",
+      "target": "nuscale_ch01_0168",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the design and structural characteristics of the NuScale containment vessel, while Section B discusses the regulatory conformance of the containment vessel design, connecting them through the containment vessel's features and their compliance with regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0007",
+      "target": "nuscale_ch01_0167",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the design and structural characteristics of the NuScale containment vessel, while Section B discusses the regulatory conformance of the containment vessel with respect to fission product control systems, connecting them through the containment vessel's features and compliance context."
+    },
+    {
+      "source": "nuscale_ch01_0008",
+      "target": "nuscale_ch01_0168",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the design and structural characteristics of the NuScale containment vessel, while Section B discusses the regulatory conformance of the containment vessel with respect to fission product control systems, connecting them through the containment vessel's features and compliance with regulatory criteria."
+    },
+    {
+      "source": "nuscale_ch01_0008",
+      "target": "nuscale_ch01_0167",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the design and structural characteristics of the NuScale containment vessel, while Section B discusses the regulatory conformance of the containment vessel with respect to fission product control systems, connecting them through the containment vessel's features and regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0168",
+      "target": "nuscale_ch01_0005",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A discusses regulatory acceptance criteria for containment systems, while Section B provides the specific design details of the NuScale containment vessel, connecting them through the design features that must meet regulatory requirements."
+    },
+    {
+      "source": "nuscale_ch01_0005",
+      "target": "nuscale_ch01_0167",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A describes the design and structural characteristics of the NuScale containment vessel, while Section B discusses how the containment vessel aligns or partially conforms with specific regulatory requirements for primary containment, connecting them through the vessel's design features and regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch01_0390",
+      "target": "nuscale_ch01_0001",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses regulatory guidance for fire protection programs and their applicability to design certification, while Section B introduces the FSAR and its purpose to describe the plant design and safety analysis, connecting them through the context of regulatory compliance for design certification applications."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0001",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides specific details about the general arrangement and layout of major plant structures, which are broadly introduced in Section B's overall description of the plant and its safety analysis context."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0035",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A introduces the general arrangement of major structures and references figures that depict plant layouts, while Section B provides specific details about the location and function of the fuel handling and reactor maintenance areas, both contributing to understanding spatial relationships such as those shown in Figure 1.2-6."
+    },
+    {
+      "source": "nuscale_ch01_0161",
+      "target": "nuscale_ch01_0001",
+      "relation": "SPECIFIES",
+      "confidence": 0.7,
+      "description": "Section A references regulatory guidance on control room habitability systems, while Section B provides the general introduction and scope of the safety analysis report that includes descriptions of plant structures such as the containment and reactor vessels, thus Section B provides the broader context within which Section A's specific regulatory discussion is situated."
+    },
+    {
+      "source": "nuscale_ch01_0033",
+      "target": "nuscale_ch01_0161",
+      "relation": "CONTRADICTS",
+      "confidence": 0.8,
+      "description": "Section A describes the general arrangement of major structures and equipment, including figures that show layouts relevant to the NPM, while Section B discusses regulatory guidance on the relative location of the source and control room, but states that this guidance is not applicable to the NuScale design due to its unique habitability system; thus, both sections address spatial relationships of plant components, but Section B explicitly excludes the regulatory requirement that would otherwise relate to the spatial information in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0117",
+      "target": "nuscale_ch01_0001",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A provides diagram legends for interpreting technical drawings, which can be used to understand the detailed figures referenced in Section B's general description of the plant design."
     },
     {
       "source": "nuscale_ch01_0015",
-      "target": "nuscale_ch01_0002",
+      "target": "nuscale_ch01_0001",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A provides a detailed general description of the plant's design elements, which are introduced at a higher level in Section B as part of the overall safety analysis report context."
+      "description": "Section A provides a detailed general description of the plant's design features, which elaborates on the broader introductory overview presented in Section B."
     },
     {
       "source": "nuscale_ch01_0015",
       "target": "nuscale_ch01_0051",
-      "relation": "SEMANTIC",
-      "confidence": 0.6,
-      "description": "Section A provides a general overview of the plant design, while Section B details specific plant features such as the Central Utility Building, with both sections contributing context for understanding Figure 1.2-6 but neither directly describing the relative sizes of the containment and reactor vessels."
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A provides a general overview of the plant design, while Section B details specific plant features such as the Central Utility Building, with both sections contributing contextual information necessary to interpret Figure 1.2-6's depiction of the relative sizes of the containment and reactor vessels."
     },
     {
       "source": "nuscale_ch01_0015",
-      "target": "nuscale_ch01_0036",
-      "relation": "SEMANTIC",
-      "confidence": 0.7,
-      "description": "Section A provides a general overview of the plant design, which includes the containment and reactor vessels whose relative sizes are visually depicted in Figure 1.2-6, while Section B discusses refueling operations that involve moving the NPM (which includes these vessels), thus both sections reference the same physical components but from different operational perspectives."
-    },
-    {
-      "source": "nuscale_ch01_0007",
-      "target": "nuscale_ch01_0002",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A provides specific details about the containment vessel's design and classification, which supports the general plant description and safety analysis context introduced in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0007",
-      "target": "nuscale_ch01_0036",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A describes the design and structural characteristics of the containment vessel, while Section B discusses operational procedures involving the movement and placement of the NPM into the containment, connecting the vessel's design to its use during refueling."
-    },
-    {
-      "source": "nuscale_ch01_0168",
-      "target": "nuscale_ch01_0002",
-      "relation": "REFERENCES",
-      "confidence": 0.85,
-      "description": "Section A discusses regulatory conformance related to containment systems, while Section B introduces the FSAR document that includes descriptions and analyses (such as Figure 1.2-6) of the plant's structures, including the containment and reactor vessels, thus Section B provides the context and source for the specific design details referenced in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0168",
-      "target": "nuscale_ch01_0036",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A discusses the regulatory conformance and design features of the NuScale containment vessel, while Section B describes the physical movement and handling of the NPM during refueling, with both sections connected by their references to the containment vessel's structure and function as depicted in Figure 1.2-6."
-    },
-    {
-      "source": "nuscale_ch01_0167",
-      "target": "nuscale_ch01_0002",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section A discusses specific containment system features and their regulatory conformance, while Section B provides the general context and scope of the FSAR, which includes descriptions of containment and reactor vessels—thus, Section B sets the context for the detailed information in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0167",
-      "target": "nuscale_ch01_0036",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A discusses the design features and regulatory conformance of the NuScale containment vessel, while Section B describes the physical movement and handling of the NPM during refueling, with both sections connected by their focus on the containment vessel's structure and function as it relates to reactor operations."
-    },
-    {
-      "source": "nuscale_ch01_0005",
-      "target": "nuscale_ch01_0015",
+      "target": "nuscale_ch01_0035",
       "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides specific details about the containment vessel's design and classification, which are part of the broader general plant description summarized in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0005",
-      "target": "nuscale_ch01_0168",
-      "relation": "SATISFIES",
-      "confidence": 0.8,
-      "description": "Section A describes the design and structural characteristics of the NuScale containment vessel, while Section B discusses how the containment vessel aligns with specific regulatory criteria for containment systems, connecting them through the vessel's design features and regulatory conformance."
-    },
-    {
-      "source": "nuscale_ch01_0005",
-      "target": "nuscale_ch01_0167",
-      "relation": "SATISFIES",
       "confidence": 0.85,
-      "description": "Section A describes the design and structural characteristics of the NuScale containment vessel, while Section B discusses the regulatory conformance of the containment vessel to SRP 6.5.3 requirements, specifically noting the absence of certain systems, thus Section A provides the technical details that Section B evaluates for regulatory compliance."
+      "description": "Section A provides a general overview of the plant design, while Section B specifies details about the location and features of the fuel handling and reactor maintenance areas, thus elaborating on aspects introduced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0072",
+      "target": "nuscale_ch01_0001",
+      "relation": "SPECIFIES",
+      "confidence": 0.85,
+      "description": "Section A specifies the interface requirements and identifies structures, systems, and components included in the certified design, while Section B provides the general description and safety analysis context for those same structures, thus Section A provides details for the general framework established in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0072",
+      "target": "nuscale_ch01_0035",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A references Figure 1.2-1 and Section B discusses the physical layout and maintenance areas, both of which provide context for interpreting Figure 1.2-6's depiction of the relative sizes of the containment and reactor vessels."
+    },
+    {
+      "source": "nuscale_ch01_0117",
+      "target": "nuscale_ch01_0072",
+      "relation": "SPECIFIES",
+      "confidence": 0.8,
+      "description": "Section B references Figure 1.2-1 and Figure 1.2-2 to describe boundaries and representations of the facility, while Section A provides diagram legends for interpreting detailed drawings, so Section A specifies how to read the types of diagrams that Section B references for facility representation."
     },
     {
       "source": "nuscale_ch01_0015",
-      "target": "nuscale_ch01_0007",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A provides a general overview of the plant and its major systems, while Section B gives specific details about the containment vessel's design and classification, with both sections contributing context for interpreting Figure 1.2-6's depiction of the relative sizes of the containment and reactor vessels."
-    },
-    {
-      "source": "nuscale_ch01_0015",
-      "target": "nuscale_ch01_0168",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A provides a general description of the plant and its containment and reactor vessels, while Section B discusses regulatory criteria for containment systems, connecting them through the design features and regulatory expectations for containment described in both sections."
-    },
-    {
-      "source": "nuscale_ch01_0015",
-      "target": "nuscale_ch01_0167",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A provides a general description of the plant design, including the containment and reactor vessels, while Section B discusses regulatory criteria for primary containment systems, connecting them through their focus on containment design features and compliance."
-    },
-    {
-      "source": "nuscale_ch01_0007",
-      "target": "nuscale_ch01_0168",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the design and structural characteristics of the NuScale containment vessel, while Section B discusses the regulatory conformance of the containment vessel design, specifically noting the absence of certain systems, thus Section A provides technical details that support the regulatory evaluation in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0007",
-      "target": "nuscale_ch01_0167",
-      "relation": "SATISFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the design and structural characteristics of the NuScale containment vessel, while Section B discusses how the containment vessel conforms (or partially conforms) to regulatory criteria for primary containment, connecting them through the vessel's design features and regulatory compliance."
-    },
-    {
-      "source": "nuscale_ch01_0161",
-      "target": "nuscale_ch01_0002",
+      "target": "nuscale_ch01_0072",
       "relation": "REFERENCES",
       "confidence": 0.85,
-      "description": "Section A references specific regulatory guidance for control room habitability systems, while Section B provides the general introduction and scope of the safety analysis report that includes such systems, connecting them through the overall regulatory framework and documentation structure."
-    },
-    {
-      "source": "nuscale_ch01_0161",
-      "target": "nuscale_ch01_0036",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A discusses control room habitability requirements and their applicability to the NuScale design, while Section B describes the physical movement and handling of the NPM during refueling, with both sections referencing the physical configuration and containment of the NPM as relevant to safety analysis."
-    },
-    {
-      "source": "nuscale_ch01_0073",
-      "target": "nuscale_ch01_0002",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A specifies the interface requirements and identifies structures, systems, and components included in the certified design, which are generally described in Section B's introduction to the overall plant design and safety analysis."
-    },
-    {
-      "source": "nuscale_ch01_0073",
-      "target": "nuscale_ch01_0051",
-      "relation": "REFERENCES",
-      "confidence": 0.7,
-      "description": "Section A references Figure 1.2-1 and Figure 1.2-2 to describe facility representations and boundaries, while Section B is from the general plant description section that would include Figure 1.2-6, indicating that Section A's interface discussion structurally references the context in which Section B's plant features and figures (including cutaway views) are presented."
-    },
-    {
-      "source": "nuscale_ch01_0073",
-      "target": "nuscale_ch01_0036",
-      "relation": "REFERENCES",
-      "confidence": 0.8,
-      "description": "Section A outlines the certified design boundaries and references figures that depict the overall facility layout, while Section B describes operational procedures involving the movement and placement of the NPM, both relying on the spatial relationships and representations shown in figures like Figure 1.2-6 to understand containment and reactor vessel sizes."
-    },
-    {
-      "source": "nuscale_ch01_0033",
-      "target": "nuscale_ch01_0002",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A provides specific details about the general arrangement of major structures and equipment, which are introduced in Section B as part of the overall plant description required for regulatory purposes."
-    },
-    {
-      "source": "nuscale_ch01_0033",
-      "target": "nuscale_ch01_0036",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.85,
-      "description": "Section A provides the general arrangement and layout context for major structures like the containment and reactor vessels, which is foundational for understanding the spatial relationships depicted in Figure 1.2-6 that Section B relies on when describing the movement and placement of the NPM during refueling operations."
-    },
-    {
-      "source": "nuscale_ch01_0390",
-      "target": "nuscale_ch01_0002",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A discusses regulatory conformance requirements for fire protection programs in the context of design certification, while Section B introduces the overall purpose and scope of the Final Safety Analysis Report, which includes describing the plant design and its safety analysis—thus, Section B provides the general context within which Section A's specific regulatory requirements are addressed."
-    },
-    {
-      "source": "nuscale_ch01_0060",
-      "target": "nuscale_ch01_0002",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A describes the test program that generates data for validating the NPM design, while Section B introduces the FSAR document that includes general descriptions and safety analyses of the plant, with both sections connected by their focus on providing technical and descriptive information about the NuScale plant design."
-    },
-    {
-      "source": "nuscale_ch01_0060",
-      "target": "nuscale_ch01_0036",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A describes the use of a scaled test facility to characterize the NPM design, which provides technical data that supports the general plant description and operational procedures outlined in Section B, such as those involving the movement and handling of the NPM during refueling."
-    },
-    {
-      "source": "nuscale_ch01_0161",
-      "target": "nuscale_ch01_0073",
-      "relation": "REFERENCES",
-      "confidence": 0.85,
-      "description": "Section B identifies and references figures (including Figure 1.2-2) that visually represent the certified design boundaries, which are necessary for interpreting the cutaway view discussed in Section A regarding the relative sizes of the containment and reactor vessels."
-    },
-    {
-      "source": "nuscale_ch01_0161",
-      "target": "nuscale_ch01_0060",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A discusses the regulatory context and requirements for control room habitability systems, while Section B describes the NuScale Integral System Test Program that provides technical data and validation for the NPM design, with both sections connected by their focus on demonstrating and validating safety features of the NuScale reactor system."
-    },
-    {
-      "source": "nuscale_ch01_0073",
-      "target": "nuscale_ch01_0033",
-      "relation": "REFERENCES",
-      "confidence": 0.85,
-      "description": "Section A references the figures and boundaries that are further detailed in Section B's discussion of the general arrangement of major structures and equipment, connecting the certified design interfaces to the physical layout shown in the figures."
-    },
-    {
-      "source": "nuscale_ch01_0073",
-      "target": "nuscale_ch01_0390",
-      "relation": "REFERENCES",
-      "confidence": 0.8,
-      "description": "Section A describes the interface requirements and boundaries between the certified design and site-specific design, which are relevant for understanding which parts of the NPM (including containment and reactor vessels) are depicted in Figure 1.2-6, while Section B outlines regulatory criteria for fire protection that COL applicants must implement, referencing the certified design described in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0073",
-      "target": "nuscale_ch01_0060",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section A identifies the certified design boundaries and references figures that depict the facility layout, while Section B describes the test program that uses a scaled representation of the NPM design, thus both sections are connected through their reliance on the same design definitions and representations (such as those in Figure 1.2-6) for analysis and validation."
-    },
-    {
-      "source": "nuscale_ch01_0033",
-      "target": "nuscale_ch01_0060",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A provides the general arrangement and layout of major structures, including the containment and reactor vessels, while Section B describes the test program that uses a scaled representation of these structures to validate their design and safety performance, thus Section B supports the accuracy and relevance of the information presented in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0390",
-      "target": "nuscale_ch01_0060",
-      "relation": "SUPPORTS",
-      "confidence": 0.7,
-      "description": "Section B describes the NuScale Integral System Test Program, which generates data and validates safety codes for the NPM design, supporting the implementation and operational milestones discussed in Section A's fire protection program requirements."
+      "description": "Section A provides a general description of the plant, including references to figures like Figure 1.2-6 that illustrate design features such as the relative sizes of the containment and reactor vessels, while Section B discusses how Section 1.2 (from Section A) identifies certified design boundaries relevant to the combined license application."
     }
   ]
 }

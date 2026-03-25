@@ -495,9 +495,48 @@ FC upper bound is ~0.6 due to structural limitation:
 
 ---
 
+---
+
+## v0.4.5 — Concise Answers + Browse-first (`82c23e4`)
+
+**Date**: 2026-03-25
+
+### Changes
+- **Answer generation**: "300 words" → "1-2 sentences ONLY" + max_tokens 800→300
+- **Browse-first**: `get_document_overview(depth=3)` auto-injected in first hop prompt
+- **browse(depth)**: depth parameter for tree-view browsing
+- **RAGAs max_tokens**: 1024→4096 (100% Faithfulness measurement)
+
+### Full 200-Question Results (Multihop Benchmark)
+
+| Metric | v0.4.2 | v0.4.5 | Change |
+|--------|--------|--------|--------|
+| Faithfulness | 0.71 (n=200) | **0.93** | **+0.22** |
+| Answer Relevancy | 0.81 | **0.84** | +0.03 |
+| Context Recall | 0.69 | **0.93** | **+0.24** |
+| Factual Correctness | 0.39 | **0.42** | +0.03 |
+| Answer length | 2,213 chars | **386 chars** | -83% |
+
+By reasoning type:
+| Type | Faith | AR | CR | FC |
+|------|-------|-----|-----|-----|
+| factual | 0.91 | 0.85 | 0.92 | 0.40 |
+| comparative | 0.92 | 0.78 | 0.91 | 0.43 |
+| judgment | **0.95** | **0.89** | **0.97** | **0.44** |
+
+Key improvements:
+- single_evidence CR: 0.45→**0.89** (CR=0 cases: 42%→4%)
+- judgment FC=0 cases: **0/65 (0%)** — no judgment question gets zero FC
+- Browse usage: agent uses document structure in Hop 1, then targeted search
+
+### FC Ceiling Analysis
+FC ~0.42 is structural: agent uses different evidence nodes than expected answer author → different wording for same conclusion. Detailed analysis in `docs/benchmark_feedback.md`.
+
+---
+
 ## Known Issues (Unresolved)
 
-1. **single_evidence CR=0.45**: BM25 precision too low for finding one specific node. Browse-first pattern needed.
-2. **FC structural ceiling ~0.6**: Agent uses different evidence nodes than expected answer → different wording. RAGAs claim-level comparison penalizes.
-3. **browse tool under-utilized**: Agent defaults to search-heavy strategy.
-4. **VIOLATES rare (2/8069)**: Structural — FSAR describes compliant designs only.
+1. **FC structural ceiling ~0.5**: Agent uses different evidence nodes → different wording. Benchmark improvement needed (see benchmark_feedback.md).
+2. **Keyword Hit dropped**: 0.65→0.53 due to shorter answers. Secondary keywords omitted.
+3. **VIOLATES rare (1/7169)**: FSAR is a compliance document — no real violations.
+4. **factual FC=0 still 36%**: Single-fact questions with specific values most affected by wording mismatch.

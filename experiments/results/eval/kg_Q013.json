@@ -2,71 +2,134 @@
   "question": "According to Table 1.2-1, what is the thermal power rating of each NuScale Power Module?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0810": {
-      "node_id": "nuscale_ch01_0810",
-      "title": "DSRS 15.9.A, Rev 0: Thermal Hydraulic Stability Review ResponsibilitiesII.4 Detect and Suppress Method: Exclusion zone and buffer region methodology",
-      "summary": "The NuScale design does not use the exclusion zone or buffer region methodology for thermal hydraulic stability, as reactor trip signals are designed to prevent conditions that could lead to unstable flow oscillations. Instead, the existing reactor trip system (RTS) provides protection by tripping the reactor before safety limits are violated, making additional detect and suppress (D&S) methods or backup options unnecessary. The RTS system partially conforms to regulatory criteria by preventing instability conditions, but it does not actively detect or suppress instabilities.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "315",
-      "hop": 1
-    },
     "nuscale_ch01_0015": {
       "node_id": "nuscale_ch01_0015",
       "title": "General Plant Description",
-      "summary": "This section provides an overview of the NuScale plant design, summarizing its main systems such as safety features, power conversion, fuel handling, cooling, waste management, and auxiliary systems. It explains the distinction between certified and site-specific design elements, noting that some information is representative or conceptual and marked accordingly, while security-related details are withheld. The section also references figures illustrating the plant layout and system boundaries.",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-1 Revision 51.2 General Plant Description\nThis section summarizes the plant design and provides a general description of the overall \nfacility. The description includes:\n• principal design criteria, operating char acteristics, and safety considerations\n• engineered safety features (ESFs) and emergency systems\n• instrumentation, controls, and electrical systems\n• power conversion system\n• fuel, fuel handling, and storage systems\n• plant cooling water systems\n• radioactive waste management systems\n• auxiliary systems (e.g., compressed air,  non-radioactive drains, water systems)\nEach COL Applicant will develop a Final Safety An alysis Report (FSAR) that incorporates by \nreference the NuScale FSAR. The NuScale FSAR  includes COL items that identify where \nsite-specific information must be provided. Ho wever, in some instan ces, representative \ninformation is necessary to provide context for interface requirements as specified in \n10 CFR 52.47(a)(24) and 10 CFR 52.47(a)(25). This representative or conceptual design \ninformation (CDI) is outside th e scope of the NuScale Power Plant certified design. Where \nprovided, CDI is delineated by  double brackets ([[]]). The scop e of the certified design and \nsite-specific design is shown in Figure 1.2- 2. The basic systems associated with power \ngeneration are shown in Figure 1.2-3. Although  some components from these systems are \nphysically located in buildings that are CDI, the system itself is not, wi th the exception of the \nclouded portion, which identifies the CDI coolin g towers and certain circ ulating water systems. \nSecurity-related informatio n is delineated using double braces {{ }}. This information is withheld \nin accordance with 10 CFR 2.390(d)(1).\n1.2.1 Principal Site Characteristics\nFigure 1.2-1 presents a representative conceptual  layout of the overall site. The majority of \nthe site buildings are located within the prot ected area (PA) and surrounded by a double \nfence and intrusion-detection equipment. The PA is located within the security owner \ncontrolled area (SOCA) surrounded by an additi onal single fence. An administration and \ntraining building and a warehouse are shown outside of the SOCA fence.\nA NuScale Power Module (NPM) shown in Figure 1.2-6, is a collection of systems, \nsub-systems, and components that make up  a modularized, movable, nuclear steam \nsupply system (NSSS). Each NPM is comprised of a reactor core, a pressurizer, and two \nsteam generators (SGs) integrated within a re actor pressure vessel (RPV) and housed in a \ncompact steel containment vessel (CNV).\nThe NuScale Power Plant is de signed for 1 to 12 NPMs with  the associated primary and \nsecondary systems and components necessary to produce power and maintain the facility. This includes main steam systems, turbin e generator sets, condensate and feedwater \nsystems, and shared external cooling water systems (Figure 1.2-3), plus module assembly \nequipment, fuel handling equipment, turb ine maintenance equipment, and radioactive ",
+      "summary": "This section provides an overview of the NuScale plant design, summarizing key systems such as safety features, power conversion, fuel handling, cooling, and waste management. It explains the distinction between certified and site-specific design elements, noting that some information is representative or conceptual and marked accordingly. The section also references figures illustrating the plant layout and system boundaries, and clarifies how security-related information is handled.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "26",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 1.2-1",
+          "page": 46,
+          "caption": "Conceptual Site Layout"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-3",
+          "page": 48,
+          "caption": "Schematic of a Single NuScale Power Module and Associated Secondary Equipment"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-6",
+          "page": 51,
+          "caption": "Cutaway View of NuScale Power Module"
+        }
+      ]
     },
     "nuscale_ch01_0811": {
       "node_id": "nuscale_ch01_0811",
       "title": "DSRS 15.9.A, Rev 0: Thermal Hydraulic Stability Review ResponsibilitiesII.5 Detect and Suppress Method Trip of reactor before SAFDL violation",
-      "summary": "The NuScale design does not use the exclusion zone or buffer region methodology for thermal hydraulic stability, as existing reactor trip signals already prevent violation of safety limits before unstable flow oscillations can develop. The system partially conforms to regulatory criteria by ensuring reactor trips occur before SAFDL violations, but does not employ detect and suppress methods or related instrumentation, as instabilities are not directly detected or suppressed. Backup options are not required due to the reliability of existing trip signals and technical specifications.",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-187 Revision 5\nDSRS 15.9.A, Rev 0: Thermal \nHydraulic Stability Review ResponsibilitiesII.4 Detect and Suppress Method: \nExclusion zone and buffer region methodologyNot Applicable\nExclusion zone option is not used in the \nNuScale design. Reactor trip signals prevent violation of CHF limits before unstable flow \noscillations can develop. Protective action \noccurs prior to development of oscillation.Not Applicable\nDSRS 15.9.A, Rev 0: Thermal \nHydraulic Stability Review \nResponsibilitiesII.5\nDetect and Suppress Method Trip of \nreactor before SAFDL violationPartially Conforms Existing reactor trip signals provide an \nexclusion zone that prevents violation of \nSAFDL limits from other causes, which is \nalready more limiting than the exclusion zone needed to preclude flow instabilities. 4.4.4\n4.4.7\nDSRS 15.9.A, Rev 0: Thermal \nHydraulic Stability Review \nResponsibilitiesII.6 Backup options if licensing solutions \ndeclared inoperableNot Applicable\nDetect and Suppress options are not \nemployed. Existing technical specifications \nfor RTS provide cont rols on allowable \nunavailabilities of protective trips. Backup \noptions are not required.Not Applicable\nDSRS 15.9.A, Rev 0: Thermal \nHydraulic Stability Review ResponsibilitiesII.7\nCriteria to determine the \nacceptability of the D&S System compliance with the requirements of \nGDC 20Partially Conforms\nRTS system trips reactor prior to conditions \nthat could initiate flow instabilities. Stabilities are not detected and suppressed.4.4.7\nDSRS 15.9.A, Rev 0: Thermal \nHydraulic Stability Review ResponsibilitiesII.8 Detect and Suppress system to \nmonitor process variables and systems.Not Applicable RTS system trips reactor prior to conditions \nthat could initiate flow instabilities. Stabilities are not detected and suppressed.Not Applicable\nDSRS 15.9.A, Rev 0: Thermal \nHydraulic Stability Review \nResponsibilitiesII.9 Stability-related instrumentation \nfunctionality should be \ndemonstrated by analysis.Conforms\nReactor trip signals prevent violation of CHF \nlimits before flow instabilities can develop. \nNo unique monitoring is required to detect hydraulic instabilities.4.4.7\n15.9.A\n7.2\nDSRS 15.9.A, Rev 0: Thermal \nHydraulic Stability Review \nResponsibilitiesII.10\nEnsure plant is free from other \ninstability modes th at could violate \nSAFDLsConforms None. 4.4.4\n4.4.7\n15.9.A\nDSRS 15.9.A, Rev 0: Thermal \nHydraulic Stability Review \nResponsibilitiesII.11 D&S System extremely high \nprobability of functioning in the \nevent of an AOO.Partially Conforms RTS system is used instead of a D&S. RTS \noccurs prior to conditio ns that could initiate \ninstabilities.4.4.7\n4.4.6Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "The NuScale design does not use the exclusion zone or detect-and-suppress methods for thermal hydraulic stability; instead, existing reactor trip signals act preemptively to prevent violation of safety limits before flow instabilities can develop. The system partially conforms to some regulatory criteria by providing more limiting protection than required, but does not include backup detect-and-suppress options or specific stability monitoring instrumentation, as these are deemed unnecessary due to the effectiveness of the reactor trip system.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "315",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
     "nuscale_ch01_0072": {
       "node_id": "nuscale_ch01_0072",
       "title": "Combined License Information Items",
-      "summary": "This section explains the interface requirements between the NuScale Power Plant certified design and the site-specific design provided in the combined license (COL) application. It distinguishes between conceptual design information (CDI) for non-certified portions and COL information items, which are site-specific responsibilities of the COL applicant. The section also notes that COL applicants must address all COL information items and provide a list of any departures from the certified design.",
+      "content": "NuScale Final Safety Analysis Report Interfaces with Certified Design\nTier 2 1.8-1 Revision 51.8 Interfaces with Certified Design\nThis section addresses interface requirements  between the NuScale Power Plant certified \ndesign and the site-specific design provided in the combined licens e (COL) application. \nSection 1.2 identifies the structures, systems, an d components that are included in the certified \ndesign. Figure 1.2-1 provides a representation of  the overall facility and Figure 1.2-2 provides \nthe general boundaries between the cert ified design and site-specific design.\nTable 1.8-1 identifies the interfac es between the NuScale certifie d design and the site-specific \ndesign. There are two types of interface requirements described:\n• CDI: Conceptual design information that is provided for the non-ce rtified portion of the \nplant to facilitate review of the certified desi gn and to confirm the adequacy of identified \ninterface requirements. \n• COL: NuScale design assumptions related to site-specific design el ements that are the \nresponsibility of the COL applicant. This type of interface is identified as a COL information \nitem.\n1.8.1 Combined License Information Items\nInformation that must be prov ided in order to li cense and operate a site-specific NuScale \nPower Plant, but is not included in the certif ied design, is identified  throughout the Final \nSafety Analysis Report as COL information items. Table 1.8-2 lists the COL information \nitems, includes the COL info rmation item text and identifies the section where the \ninformation item is located. The COL applicant addresses each  COL information item in the \nsection where it is located.\n1.8.2 Departures\nCOL Item 1.8-1: A COL applicant that references th e NuScale Power Plant design certification will \nprovide a list of departures from the certified design.\n\n--- Referenced Tables (structured) ---\n[Table 1.8-1: Summary of NuScale Certified Design Interfaces with Remainder of Plant]\nTurbine Generator Buildings | CDI | 1.2.2\nAnnex Building | CDI | 1.2.2\nCooling towers, pump houses, and associated structures, systems, and\ncomponents (e.g., cooling tower basin, circulating water pumps, cooling\ntower fans, chemical treatment building, etc.) | CDI | CDI | 1.2.2,\n10.4.5\nSecurity Buildings | CDI | 1.2.2\nCentral Utility Building | CDI | 1.2.2\nDiesel Generator Buildings | CDI | 1.2.2\nOffsite power transmission system, main switchyard, and transformer area | CDI | 8.2\nAuxiliary AC power system | CDI | 8.3.1\nSite cooling water system | CDI | 9.2.7\nCirculating water system | CDI | 10.4.5\nGrounding and lightning protection system | CDI | 8.3.1\nPlant exhaust stack | CDI | 9.4.2\nPotable and sanitary water systems | COL | 9.2.4\nResin tanks for the condensate polishing system | COL | 10.4\nSite drainage system | COL | N/A\nRaw water system | COL | 9.2.9\nSite parameters, geographic and demographic characteristics,\nmeteorological characteristics, nearby industrial, transportation, and military\nfacilities, hydrologic characteristics, geology, seismology, and geotechnical\ncharacteristics, weather conditions and site topography, flooding | COL | COL | Table 2.0-1, 2.1, 2.2,\n2.3, 2.4, 2.5, 3.3, 3.4\nSite-specific communications | COL | 9.5.2\nTurbine generators | COL | 3.5-1\nOperational Support Center | COL | 13.3\n[Table 1.8-2: Combined License Information Items (Continued)]\nItem No. | Description of COL Information Item | Section\nCOL Item 20.1-8: | A COL applicant that references the NuScale Power Plant design certification will develop\nprocedures, training, and a qualification program for operations, maintenance, testing, and\ncalibration of ultimate heat sink level instrumentation to ensure the level instruments will be\navailable when needed and personnel are knowledgeable in interpreting the information as\naddressed in Nuclear Energy Institute (NEI) 12-02, Revision 1, Industry Guidance for Compliance\nwith NRC Order EA-12-051, “To Modify Licenses with Regard to Reliable Spent Fuel Pool\nInstrumentation.” | 20.1\nCOL Item 20.2-1: | A COL applicant that references the NuScale Power Plant design certification will develop\nenhanced firefighting capabilities in accordance with 10 CFR 50.155(b)(2). The enhanced\nfirefighting capabilities should address the expectation elements listed in Section 4.1.3 of the\nTechnical Report TR-0816-50796 (Reference 20.2-1). | 20.2\nCOL Item 20.2-2: | A COL applicant that references the NuScale Power Plant design certification will provide a\nmeans for water spray scrubbing using fog nozzles and the availability of water sources, and\naddress runoff water containment issues (sandbags, portable dikes, etc.) as an attenuation\nmeasure for mitigating radiation releases outside containment. | 20.2",
+      "summary": "This section explains the interface requirements between the NuScale Power Plant certified design and the site-specific design provided in the combined license (COL) application. It distinguishes between conceptual design information (CDI) for non-certified plant portions and COL information items, which are site-specific design responsibilities. The section also notes that COL applicants must address all COL information items and provide a list of any departures from the certified design.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "108",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 1.2-1",
+          "page": 46,
+          "caption": "Conceptual Site Layout"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 1.2-2",
+          "page": 47,
+          "caption": "NuScale Functional Boundaries"
+        },
+        {
+          "type": "table",
+          "id": "Table 1.8-1",
+          "page": 109,
+          "caption": "Summary of NuScale Certified Design Interfaces with Remainder of Plant",
+          "structured_text": "Turbine Generator Buildings | CDI | 1.2.2\nAnnex Building | CDI | 1.2.2\nCooling towers, pump houses, and associated structures, systems, and\ncomponents (e.g., cooling tower basin, circulating water pumps, cooling\ntower fans, chemical treatment building, etc.) | CDI | CDI | 1.2.2,\n10.4.5\nSecurity Buildings | CDI | 1.2.2\nCentral Utility Building | CDI | 1.2.2\nDiesel Generator Buildings | CDI | 1.2.2\nOffsite power transmission system, main switchyard, and transformer area | CDI | 8.2\nAuxiliary AC power system | CDI | 8.3.1\nSite cooling water system | CDI | 9.2.7\nCirculating water system | CDI | 10.4.5\nGrounding and lightning protection system | CDI | 8.3.1\nPlant exhaust stack | CDI | 9.4.2\nPotable and sanitary water systems | COL | 9.2.4\nResin tanks for the condensate polishing system | COL | 10.4\nSite drainage system | COL | N/A\nRaw water system | COL | 9.2.9\nSite parameters, geographic and demographic characteristics,\nmeteorological characteristics, nearby industrial, transportation, and military\nfacilities, hydrologic characteristics, geology, seismology, and geotechnical\ncharacteristics, weather conditions and site topography, flooding | COL | COL | Table 2.0-1, 2.1, 2.2,\n2.3, 2.4, 2.5, 3.3, 3.4\nSite-specific communications | COL | 9.5.2\nTurbine generators | COL | 3.5-1\nOperational Support Center | COL | 13.3"
+        },
+        {
+          "type": "table",
+          "id": "Table 1.8-2",
+          "page": 128,
+          "caption": "Combined License Information Items (Continued)",
+          "structured_text": "Item No. | Description of COL Information Item | Section\nCOL Item 20.1-8: | A COL applicant that references the NuScale Power Plant design certification will develop\nprocedures, training, and a qualification program for operations, maintenance, testing, and\ncalibration of ultimate heat sink level instrumentation to ensure the level instruments will be\navailable when needed and personnel are knowledgeable in interpreting the information as\naddressed in Nuclear Energy Institute (NEI) 12-02, Revision 1, Industry Guidance for Compliance\nwith NRC Order EA-12-051, “To Modify Licenses with Regard to Reliable Spent Fuel Pool\nInstrumentation.” | 20.1\nCOL Item 20.2-1: | A COL applicant that references the NuScale Power Plant design certification will develop\nenhanced firefighting capabilities in accordance with 10 CFR 50.155(b)(2). The enhanced\nfirefighting capabilities should address the expectation elements listed in Section 4.1.3 of the\nTechnical Report TR-0816-50796 (Reference 20.2-1). | 20.2\nCOL Item 20.2-2: | A COL applicant that references the NuScale Power Plant design certification will provide a\nmeans for water spray scrubbing using fog nozzles and the availability of water sources, and\naddress runoff water containment issues (sandbags, portable dikes, etc.) as an attenuation\nmeasure for mitigating radiation releases outside containment. | 20.2"
+        }
+      ]
+    },
+    "nuscale_ch01_0810": {
+      "node_id": "nuscale_ch01_0810",
+      "title": "DSRS 15.9.A, Rev 0: Thermal Hydraulic Stability Review ResponsibilitiesII.4 Detect and Suppress Method: Exclusion zone and buffer region methodology",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-187 Revision 5\nDSRS 15.9.A, Rev 0: Thermal \nHydraulic Stability Review ResponsibilitiesII.4 Detect and Suppress Method: \nExclusion zone and buffer region methodologyNot Applicable\nExclusion zone option is not used in the \nNuScale design. Reactor trip signals prevent violation of CHF limits before unstable flow \noscillations can develop. Protective action \noccurs prior to development of oscillation.Not Applicable\nDSRS 15.9.A, Rev 0: Thermal \nHydraulic Stability Review \nResponsibilitiesII.5\nDetect and Suppress Method Trip of \nreactor before SAFDL violationPartially Conforms Existing reactor trip signals provide an \nexclusion zone that prevents violation of \nSAFDL limits from other causes, which is \nalready more limiting than the exclusion zone needed to preclude flow instabilities. 4.4.4\n4.4.7\nDSRS 15.9.A, Rev 0: Thermal \nHydraulic Stability Review \nResponsibilitiesII.6 Backup options if licensing solutions \ndeclared inoperableNot Applicable\nDetect and Suppress options are not \nemployed. Existing technical specifications \nfor RTS provide cont rols on allowable \nunavailabilities of protective trips. Backup \noptions are not required.Not Applicable\nDSRS 15.9.A, Rev 0: Thermal \nHydraulic Stability Review ResponsibilitiesII.7\nCriteria to determine the \nacceptability of the D&S System compliance with the requirements of \nGDC 20Partially Conforms\nRTS system trips reactor prior to conditions \nthat could initiate flow instabilities. Stabilities are not detected and suppressed.4.4.7\nDSRS 15.9.A, Rev 0: Thermal \nHydraulic Stability Review ResponsibilitiesII.8 Detect and Suppress system to \nmonitor process variables and systems.Not Applicable RTS system trips reactor prior to conditions \nthat could initiate flow instabilities. Stabilities are not detected and suppressed.Not Applicable\nDSRS 15.9.A, Rev 0: Thermal \nHydraulic Stability Review \nResponsibilitiesII.9 Stability-related instrumentation \nfunctionality should be \ndemonstrated by analysis.Conforms\nReactor trip signals prevent violation of CHF \nlimits before flow instabilities can develop. \nNo unique monitoring is required to detect hydraulic instabilities.4.4.7\n15.9.A\n7.2\nDSRS 15.9.A, Rev 0: Thermal \nHydraulic Stability Review \nResponsibilitiesII.10\nEnsure plant is free from other \ninstability modes th at could violate \nSAFDLsConforms None. 4.4.4\n4.4.7\n15.9.A\nDSRS 15.9.A, Rev 0: Thermal \nHydraulic Stability Review \nResponsibilitiesII.11 D&S System extremely high \nprobability of functioning in the \nevent of an AOO.Partially Conforms RTS system is used instead of a D&S. RTS \noccurs prior to conditio ns that could initiate \ninstabilities.4.4.7\n4.4.6Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "The NuScale design does not use the exclusion zone or buffer region methodology for thermal hydraulic stability, as reactor trip signals are designed to prevent conditions that could lead to unstable flow oscillations. Instead, the existing reactor trip system (RTS) provides protection by tripping the reactor before safety limits are violated, making additional detect and suppress (D&S) methods or backup options unnecessary. The RTS partially conforms to some regulatory criteria by preventing instability conditions, but does not actively detect or suppress instabilities.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "315",
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0810",
-      "target": "nuscale_ch01_0811",
-      "relation": "REFERENCES",
-      "confidence": 0.85,
-      "description": "Section A and Section B both discuss the NuScale design's approach to thermal hydraulic stability by describing the exclusion of the exclusion zone methodology and the use of reactor trip signals to prevent SAFDL and CHF violations, with Section B specifying the trip before SAFDL violation as a protective measure referenced in Section A."
-    },
-    {
       "source": "nuscale_ch01_0015",
       "target": "nuscale_ch01_0811",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A provides a general description of the plant design, which includes operating characteristics such as thermal power rating, while Section B discusses regulatory criteria for thermal hydraulic stability that depend on the plant's operating parameters, including thermal power."
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.85,
+      "description": "Section A provides a general overview of the plant design, which includes operating characteristics such as thermal power rating, while Section B discusses regulatory requirements for thermal hydraulic stability that depend on knowing the module's thermal power rating to ensure safety limits are not exceeded."
     },
     {
       "source": "nuscale_ch01_0015",
       "target": "nuscale_ch01_0072",
       "relation": "REFERENCES",
-      "confidence": 0.9,
-      "description": "Section A provides a general description of the plant design, including operating characteristics such as thermal power, while Section B references Section 1.2 (from Section A) as the source identifying certified design features, thus linking the general plant description to the interface requirements."
+      "confidence": 0.85,
+      "description": "Section A provides a general description of the plant, including references to Section 1.2 where design characteristics such as thermal power rating are summarized, while Section B discusses how Section 1.2 identifies certified design components relevant for COL interface requirements."
     },
     {
       "source": "nuscale_ch01_0811",
-      "target": "nuscale_ch01_0072",
+      "target": "nuscale_ch01_0810",
       "relation": "REFERENCES",
-      "confidence": 0.9,
-      "description": "Section B references Section 1.2, which contains Table 1.2-1—the source for the thermal power rating asked about in the analysis question—while Section A discusses safety analysis methods but does not provide or reference the specific design value."
+      "confidence": 0.95,
+      "description": "Section A references and partially repeats the content of Section B, specifically regarding the exclusion zone and buffer region methodology not being applicable to the NuScale design."
     }
   ]
 }

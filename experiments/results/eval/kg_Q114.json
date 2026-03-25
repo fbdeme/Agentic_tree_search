@@ -2,736 +2,737 @@
   "question": "Compare the NuScale passive safety approach described in Ch.01 with the specific passive systems detailed in Ch.05.",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0069": {
-      "node_id": "nuscale_ch01_0069",
-      "title": "Piping and Instrumentation Diagrams",
-      "summary": "This section describes the use of simplified electrical, instrumentation and control (I&C), and mechanical drawings in the NuScale Final Safety Analysis Report to visually clarify design information. It lists tables and figures that provide the relevant diagrams and legends, and notes that site-specific diagrams and legends will be provided by COL applicants referencing the NuScale design certification.",
+    "nuscale_ch01_0024": {
+      "node_id": "nuscale_ch01_0024",
+      "title": "Emergency Core Cooling System",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-8 Revision 51.2.1.2.3 Emergency Core Cooling System\nThe ECCS provides a passive means of deca y heat removal in the event of a LOCA. \nThe ECCS consists of thre e independent reactor vent valves and two independent \nreactor recirculation valves (Figure 1.2-9). A ll five valves are closed during normal \noperation.\nDuring ECCS operation, the reactor vent valves vent steam from the RPV into the \nCNV where the steam condenses and collect s in the bottom of the containment. \nThe reactor recirculation valves allow wate r to reenter the RPV and be circulated \nthrough the core. When reactor coolant temperature is reduced to below the \nboiling point, core cooling continues via conduction dire ctly into the reactor pool. \nThe cooling function of the ECCS is enti rely passive, with heat being conducted \nthrough the CNV wall to the reactor pool. Section 6.3 provides design and \noperational information for the ECCS.\n1.2.1.2.4 Control Room Habitability System\nThe control room habitability system (CRHS) ensures that plant operators are \nadequately protected against the effects of accidental releases of toxic or \nradioactive gases. The CRHS is a passive system that provides clean, compressed, \nbreathable air to the MCR in the event of a radioactive re lease or when AC power is \nnot available. Areas served by the CRHS are maintained at positive pressure relative \nto adjacent areas. Compressed breathable air storage capacity can provide clean air \nto the MCR spaces for at least 72 hours fo llowing an initiating event. Section 6.4 \nprovides design and operatio nal information for the CRHS.\n1.2.1.2.5 Fission Product Removal and Control Systems\nThe only fission product removal and contro l system credited in  the design is the \nCNV in conjunction with th e containment isolation system. Fission product control \nis inherent in the design of the NPM, wherein the CNV atmosphere is depleted \nthrough the passive process of aerosol deposition. Section 6.5 provides \ninformation for this ESF.\n1.2.1.2.6 Inservice Inspection of Class 2 and 3 Components\nThe inservice inspection program includes  the pre-service examinations and the \nperiodic inservice inspections and tests nece ssary to ensure that safety-related and \nrisk-significant systems, structures, and co mponents are capable of fulfilling their \nintended safety functions. Section 6.6 provides detailed information for the \ninservice inspection program.\n1.2.1.3 Instrumentation, Cont rols, and Electrical Systems\nThe I&C architectural design philosophy inco rporates clear interc onnection interfaces, \nseparation between safety and nonsafety systems, and simplification of system functions. The I&C architecture primarily co nsists of the following  systems, which are \ndescribed in Section 7.0:",
+      "summary": "The Emergency Core Cooling System (ECCS) in the NuScale design is a fully passive system that removes decay heat during a loss-of-coolant accident (LOCA) using three independent reactor vent valves and two recirculation valves, all of which are closed during normal operation. During an emergency, the system vents steam into containment for condensation and recirculates water to the core, with continued cooling achieved by heat conduction through the containment wall to the reactor pool.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "95",
-      "hop": 1
-    },
-    "nuscale_ch01_0020": {
-      "node_id": "nuscale_ch01_0020",
-      "title": "Safety Considerations",
-      "summary": "The NuScale design enhances safety by maintaining a vacuum in the containment vessel (CNV), which reduces corrosion, aids in leak detection, and limits combustible gases. Its passive safety systems and integral design eliminate large-break loss-of-coolant accident (LOCA) scenarios and reduce reliance on external power, resulting in a lower core damage frequency compared to conventional reactors.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "32",
-      "hop": 1
+      "page_range": "33",
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 1.2-9",
+          "page": 54,
+          "caption": "Emergency Core Cooling System"
+        }
+      ]
     },
     "nuscale_ch01_0022": {
       "node_id": "nuscale_ch01_0022",
       "title": "Engineered Safety Feature Materials",
-      "summary": "The NuScale reactor’s containment vessel (CNV) is kept under vacuum during normal operation, which reduces corrosion, aids in leak detection, limits oxygen for combustion, and eliminates the need for insulation. Its passive safety features—including the absence of external coolant loops and reliance on passive cooling—reduce accident risks, eliminate large-break LOCA scenarios, and result in a lower core damage frequency compared to conventional reactors.",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-7 Revision 5The CNV is maintained at a vacuum un der normal operating conditions. The \nbenefits of maintaining a vacuum in the CNV include:\n• minimizes moisture content that could im pact the reliability and contribute to \ncorrosion of components within the CNV\n• facilitates detection of leakage from the reactor coolant pressure boundary\n• eliminates convective heat transfer and therefore, the need for RPV insulation, \nwhich reduces potential debr is generated in the CNV\n• limits the initial amount of oxygen  in containment (severe accident \ncombustible gas consideration)\nFollowing an actuation of the ECCS, stea m is vented from the RPV through the \nreactor vent valves. This results in an initial spike in containment pressure and \ntemperature. Steam in contact with the inside surface of the CNV is passively \ncooled and condensed by conduction and convection to the reactor pool water. \nThis passive process rapidly reduces co ntainment pressure and temperature and \nmaintains containment pressure and temper ature at less than design conditions \nindefinitely.\n1.2.1.1.3 Safety Considerations\nNuScale has achieved an improvement in safety over existing plants through \nsimplicity of design, reliance on passive safety systems, and small fuel inventory. \nThe integral design of the NPM eliminat es external coolant loop piping, which \neliminates large-break LOCA scenarios. The availability of passive safety systems for \ndecay heat removal, emergency core co oling, and control room habitability \neliminates the need for external powe r under accident conditions. With these \npassive safety systems, small-break LOCAs do  not challenge the safety of the plant. \nThe result is a design with a core damage  frequency that is lower than the current \nlight water reactor fleet.\nThe reactor core has a small radioactive so urce term as compared to a conventional \n1,000 MWe nuclear reactor. Based on the sm aller fuel inventory, the amount of \nradioactive material available for release d uring a postulated accident is reduced. \nTable 1.2-2 provides a listing of some of the features of the NPM.\n1.2.1.2 Engineered Safety F eatures and Emergency Systems\n1.2.1.2.1 Engineered Safety Feature Materials\nDetails are provided in Sect ion 6.1 related to the select ion and fabrication methods \nfor metallic and organic materials used in ESF components to ensure compatibility \nwith fluids that the component may be  exposed to during normal, accident, \nmaintenance, and testing conditions.\n1.2.1.2.2 Containment Systems\nThe containment is an integr al part of the NPM and pr ovides primary containment \nfor the RCS. Section 6.2 provides furthe r information for the containment system.\n\n--- Referenced Tables (structured) ---\n[Table 1.2-2: Design Features of a NuScale Power Module]\nRCS contained within the RPV | No large diameter primary coolant\npiping | Eliminates postulated large-break LOCA\nspectrum accidents\nNatural-convection-cooled core | No reactor coolant pumps | Eliminates reactor coolant pump accidents,\nshaft breaks, pump seizure, missile generation\nand pump leaks\nHigh containment design pressure | Containment peak pressure for\nworst case design-basis accident\nremains below containment design\npressure | Containment integrity assured, minimizing the\npotential for radioactive releases during\npostulated accidents.\nRPV and NSSS | During an accident, any water lost\nfrom RPV stays within containment\nand is returned to the RPV by\npassive means | No postulated design-basis small-break LOCA\ncapable of uncovering nuclear fuel\nEvacuated containment | Subatmospheric pressure during\nnormal operation\nNo insulation on RPV | Minimal amount of noncondensible gases\nincreases the steam condensation rate for\ncontainment heat removal during postulated\nsmall-break LOCA. Amount of oxygen in\ncontainment during normal operations is\nminimized.\nEliminates potential sump screen blockage and\npermits cooling of the exterior of the vessel\nduring an accident\nLow power core (160 MWt) | Reduces decay heat removal\nrequirements | Enhances in-vessel retention; maintains low\naccident consequences; reduces fission\nproduct source term; simplifies emergency\nplanning\nReactor pool with partially\n(approximately 90%) immersed NPM | CNV | Provides passive long-term cooling\nPassive safety systems | Safety systems cool and\ndepressurize the RPV/CNV even in\nthe event of loss of external power | Active safety systems are not required",
+      "summary": "The NuScale reactor’s containment vessel (CNV) is maintained under vacuum during normal operation, which reduces corrosion, aids in leak detection, and limits combustible gases. Its passive safety features—including elimination of large external piping and reliance on passive cooling—result in improved safety, lower core damage frequency, and a smaller radioactive source term compared to conventional reactors.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "32",
-      "hop": 1
-    },
-    "nuscale_ch01_0024": {
-      "node_id": "nuscale_ch01_0024",
-      "title": "Emergency Core Cooling System",
-      "summary": "The Emergency Core Cooling System (ECCS) in the NuScale design is a fully passive system that removes decay heat during a loss-of-coolant accident (LOCA) using three independent reactor vent valves and two recirculation valves, all of which are closed during normal operation. During an emergency, the system vents steam into containment, condenses it, and recirculates water to cool the core, with heat ultimately conducted passively to the reactor pool.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "33",
-      "hop": 1
-    },
-    "nuscale_ch01_0052": {
-      "node_id": "nuscale_ch01_0052",
-      "title": "Comparison with Other Facilities",
-      "summary": "This section compares the major design features and parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It highlights differences in size, output, core design, and safety systems, showing that NuScale uses smaller, simpler, and more integrated components compared to conventional PWRs. The comparison is summarized in tables for easy reference.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "79",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.2-2",
+          "page": 45,
+          "caption": "Design Features of a NuScale Power Module",
+          "structured_text": "RCS contained within the RPV | No large diameter primary coolant\npiping | Eliminates postulated large-break LOCA\nspectrum accidents\nNatural-convection-cooled core | No reactor coolant pumps | Eliminates reactor coolant pump accidents,\nshaft breaks, pump seizure, missile generation\nand pump leaks\nHigh containment design pressure | Containment peak pressure for\nworst case design-basis accident\nremains below containment design\npressure | Containment integrity assured, minimizing the\npotential for radioactive releases during\npostulated accidents.\nRPV and NSSS | During an accident, any water lost\nfrom RPV stays within containment\nand is returned to the RPV by\npassive means | No postulated design-basis small-break LOCA\ncapable of uncovering nuclear fuel\nEvacuated containment | Subatmospheric pressure during\nnormal operation\nNo insulation on RPV | Minimal amount of noncondensible gases\nincreases the steam condensation rate for\ncontainment heat removal during postulated\nsmall-break LOCA. Amount of oxygen in\ncontainment during normal operations is\nminimized.\nEliminates potential sump screen blockage and\npermits cooling of the exterior of the vessel\nduring an accident\nLow power core (160 MWt) | Reduces decay heat removal\nrequirements | Enhances in-vessel retention; maintains low\naccident consequences; reduces fission\nproduct source term; simplifies emergency\nplanning\nReactor pool with partially\n(approximately 90%) immersed NPM | CNV | Provides passive long-term cooling\nPassive safety systems | Safety systems cool and\ndepressurize the RPV/CNV even in\nthe event of loss of external power | Active safety systems are not required"
+        }
+      ]
     },
     "nuscale_ch01_0025": {
       "node_id": "nuscale_ch01_0025",
       "title": "Control Room Habitability System",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-8 Revision 51.2.1.2.3 Emergency Core Cooling System\nThe ECCS provides a passive means of deca y heat removal in the event of a LOCA. \nThe ECCS consists of thre e independent reactor vent valves and two independent \nreactor recirculation valves (Figure 1.2-9). A ll five valves are closed during normal \noperation.\nDuring ECCS operation, the reactor vent valves vent steam from the RPV into the \nCNV where the steam condenses and collect s in the bottom of the containment. \nThe reactor recirculation valves allow wate r to reenter the RPV and be circulated \nthrough the core. When reactor coolant temperature is reduced to below the \nboiling point, core cooling continues via conduction dire ctly into the reactor pool. \nThe cooling function of the ECCS is enti rely passive, with heat being conducted \nthrough the CNV wall to the reactor pool. Section 6.3 provides design and \noperational information for the ECCS.\n1.2.1.2.4 Control Room Habitability System\nThe control room habitability system (CRHS) ensures that plant operators are \nadequately protected against the effects of accidental releases of toxic or \nradioactive gases. The CRHS is a passive system that provides clean, compressed, \nbreathable air to the MCR in the event of a radioactive re lease or when AC power is \nnot available. Areas served by the CRHS are maintained at positive pressure relative \nto adjacent areas. Compressed breathable air storage capacity can provide clean air \nto the MCR spaces for at least 72 hours fo llowing an initiating event. Section 6.4 \nprovides design and operatio nal information for the CRHS.\n1.2.1.2.5 Fission Product Removal and Control Systems\nThe only fission product removal and contro l system credited in  the design is the \nCNV in conjunction with th e containment isolation system. Fission product control \nis inherent in the design of the NPM, wherein the CNV atmosphere is depleted \nthrough the passive process of aerosol deposition. Section 6.5 provides \ninformation for this ESF.\n1.2.1.2.6 Inservice Inspection of Class 2 and 3 Components\nThe inservice inspection program includes  the pre-service examinations and the \nperiodic inservice inspections and tests nece ssary to ensure that safety-related and \nrisk-significant systems, structures, and co mponents are capable of fulfilling their \nintended safety functions. Section 6.6 provides detailed information for the \ninservice inspection program.\n1.2.1.3 Instrumentation, Cont rols, and Electrical Systems\nThe I&C architectural design philosophy inco rporates clear interc onnection interfaces, \nseparation between safety and nonsafety systems, and simplification of system functions. The I&C architecture primarily co nsists of the following  systems, which are \ndescribed in Section 7.0:",
       "summary": "The Control Room Habitability System (CRHS) is a passive safety feature designed to protect plant operators from accidental releases of toxic or radioactive gases by supplying clean, compressed air to the main control room (MCR). It maintains positive pressure in protected areas and can provide breathable air for at least 72 hours after an incident, even if AC power is unavailable.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "33",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 1.2-9",
+          "page": 54,
+          "caption": "Emergency Core Cooling System"
+        }
+      ]
     },
-    "nuscale_ch01_0669": {
-      "node_id": "nuscale_ch01_0669",
-      "title": "DSRS 15.1.1-15.1.4, Rev 0: Decrease in Feedwater Temperature, Increase in Feedwater Flow, Increase in Steam Flow, and Inadvertent Opening of the Turbine Bypass System or Inadvertent Operation of the Decay Heat Removal SystemII.4 Specific CriterionInstrument Spans and Setpoints use RG 1.105",
-      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for abnormal operational occurrences such as changes in feedwater temperature, flow, steam flow, and inadvertent system operations. It confirms that NuScale meets requirements for system pressure, critical heat flux, event classification, and instrument setpoints, aligning with NRC guidance and ensuring plant safety under these conditions. The report references adherence to RG 1.105 for instrument spans and setpoints and compliance with the Standard Review Plan.",
+    "nuscale_ch01_0021": {
+      "node_id": "nuscale_ch01_0021",
+      "title": "Engineered Safety Features and Emergency Systems",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-7 Revision 5The CNV is maintained at a vacuum un der normal operating conditions. The \nbenefits of maintaining a vacuum in the CNV include:\n• minimizes moisture content that could im pact the reliability and contribute to \ncorrosion of components within the CNV\n• facilitates detection of leakage from the reactor coolant pressure boundary\n• eliminates convective heat transfer and therefore, the need for RPV insulation, \nwhich reduces potential debr is generated in the CNV\n• limits the initial amount of oxygen  in containment (severe accident \ncombustible gas consideration)\nFollowing an actuation of the ECCS, stea m is vented from the RPV through the \nreactor vent valves. This results in an initial spike in containment pressure and \ntemperature. Steam in contact with the inside surface of the CNV is passively \ncooled and condensed by conduction and convection to the reactor pool water. \nThis passive process rapidly reduces co ntainment pressure and temperature and \nmaintains containment pressure and temper ature at less than design conditions \nindefinitely.\n1.2.1.1.3 Safety Considerations\nNuScale has achieved an improvement in safety over existing plants through \nsimplicity of design, reliance on passive safety systems, and small fuel inventory. \nThe integral design of the NPM eliminat es external coolant loop piping, which \neliminates large-break LOCA scenarios. The availability of passive safety systems for \ndecay heat removal, emergency core co oling, and control room habitability \neliminates the need for external powe r under accident conditions. With these \npassive safety systems, small-break LOCAs do  not challenge the safety of the plant. \nThe result is a design with a core damage  frequency that is lower than the current \nlight water reactor fleet.\nThe reactor core has a small radioactive so urce term as compared to a conventional \n1,000 MWe nuclear reactor. Based on the sm aller fuel inventory, the amount of \nradioactive material available for release d uring a postulated accident is reduced. \nTable 1.2-2 provides a listing of some of the features of the NPM.\n1.2.1.2 Engineered Safety F eatures and Emergency Systems\n1.2.1.2.1 Engineered Safety Feature Materials\nDetails are provided in Sect ion 6.1 related to the select ion and fabrication methods \nfor metallic and organic materials used in ESF components to ensure compatibility \nwith fluids that the component may be  exposed to during normal, accident, \nmaintenance, and testing conditions.\n1.2.1.2.2 Containment Systems\nThe containment is an integr al part of the NPM and pr ovides primary containment \nfor the RCS. Section 6.2 provides furthe r information for the containment system.\n\n--- Referenced Tables (structured) ---\n[Table 1.2-2: Design Features of a NuScale Power Module]\nRCS contained within the RPV | No large diameter primary coolant\npiping | Eliminates postulated large-break LOCA\nspectrum accidents\nNatural-convection-cooled core | No reactor coolant pumps | Eliminates reactor coolant pump accidents,\nshaft breaks, pump seizure, missile generation\nand pump leaks\nHigh containment design pressure | Containment peak pressure for\nworst case design-basis accident\nremains below containment design\npressure | Containment integrity assured, minimizing the\npotential for radioactive releases during\npostulated accidents.\nRPV and NSSS | During an accident, any water lost\nfrom RPV stays within containment\nand is returned to the RPV by\npassive means | No postulated design-basis small-break LOCA\ncapable of uncovering nuclear fuel\nEvacuated containment | Subatmospheric pressure during\nnormal operation\nNo insulation on RPV | Minimal amount of noncondensible gases\nincreases the steam condensation rate for\ncontainment heat removal during postulated\nsmall-break LOCA. Amount of oxygen in\ncontainment during normal operations is\nminimized.\nEliminates potential sump screen blockage and\npermits cooling of the exterior of the vessel\nduring an accident\nLow power core (160 MWt) | Reduces decay heat removal\nrequirements | Enhances in-vessel retention; maintains low\naccident consequences; reduces fission\nproduct source term; simplifies emergency\nplanning\nReactor pool with partially\n(approximately 90%) immersed NPM | CNV | Provides passive long-term cooling\nPassive safety systems | Safety systems cool and\ndepressurize the RPV/CNV even in\nthe event of loss of external power | Active safety systems are not required",
+      "summary": "The NuScale reactor design maintains a vacuum in the containment vessel (CNV) to reduce corrosion, facilitate leak detection, and minimize heat transfer and oxygen content, enhancing safety. In emergencies, passive systems rapidly reduce containment pressure and temperature without external power, and the integral design eliminates large-break loss-of-coolant accident (LOCA) risks, resulting in a lower core damage frequency compared to conventional reactors.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "289",
-      "hop": 2
+      "page_range": "32",
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.2-2",
+          "page": 45,
+          "caption": "Design Features of a NuScale Power Module",
+          "structured_text": "RCS contained within the RPV | No large diameter primary coolant\npiping | Eliminates postulated large-break LOCA\nspectrum accidents\nNatural-convection-cooled core | No reactor coolant pumps | Eliminates reactor coolant pump accidents,\nshaft breaks, pump seizure, missile generation\nand pump leaks\nHigh containment design pressure | Containment peak pressure for\nworst case design-basis accident\nremains below containment design\npressure | Containment integrity assured, minimizing the\npotential for radioactive releases during\npostulated accidents.\nRPV and NSSS | During an accident, any water lost\nfrom RPV stays within containment\nand is returned to the RPV by\npassive means | No postulated design-basis small-break LOCA\ncapable of uncovering nuclear fuel\nEvacuated containment | Subatmospheric pressure during\nnormal operation\nNo insulation on RPV | Minimal amount of noncondensible gases\nincreases the steam condensation rate for\ncontainment heat removal during postulated\nsmall-break LOCA. Amount of oxygen in\ncontainment during normal operations is\nminimized.\nEliminates potential sump screen blockage and\npermits cooling of the exterior of the vessel\nduring an accident\nLow power core (160 MWt) | Reduces decay heat removal\nrequirements | Enhances in-vessel retention; maintains low\naccident consequences; reduces fission\nproduct source term; simplifies emergency\nplanning\nReactor pool with partially\n(approximately 90%) immersed NPM | CNV | Provides passive long-term cooling\nPassive safety systems | Safety systems cool and\ndepressurize the RPV/CNV even in\nthe event of loss of external power | Active safety systems are not required"
+        }
+      ]
     },
-    "nuscale_ch01_0189": {
-      "node_id": "nuscale_ch01_0189",
-      "title": "BTP 6-2, Rev 3: Minimum Containment Pressure Model for PWR ECCS PerformanceAll (B.1 thru B.3)Various",
-      "summary": "This section reviews NuScale’s conformance with regulatory criteria related to containment pressure and water chemistry for PWR ECCS performance. It notes that some criteria partially apply, but specific requirements for systems like containment spray or sump do not, as these are not part of the NuScale design. Additionally, certain guidance, such as minimum containment pressure modeling and bypass leakage paths, is not applicable since NuScale’s design does not result in core uncovery during a LOCA and lacks secondary containment.",
+    "nuscale_ch01_0020": {
+      "node_id": "nuscale_ch01_0020",
+      "title": "Safety Considerations",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-7 Revision 5The CNV is maintained at a vacuum un der normal operating conditions. The \nbenefits of maintaining a vacuum in the CNV include:\n• minimizes moisture content that could im pact the reliability and contribute to \ncorrosion of components within the CNV\n• facilitates detection of leakage from the reactor coolant pressure boundary\n• eliminates convective heat transfer and therefore, the need for RPV insulation, \nwhich reduces potential debr is generated in the CNV\n• limits the initial amount of oxygen  in containment (severe accident \ncombustible gas consideration)\nFollowing an actuation of the ECCS, stea m is vented from the RPV through the \nreactor vent valves. This results in an initial spike in containment pressure and \ntemperature. Steam in contact with the inside surface of the CNV is passively \ncooled and condensed by conduction and convection to the reactor pool water. \nThis passive process rapidly reduces co ntainment pressure and temperature and \nmaintains containment pressure and temper ature at less than design conditions \nindefinitely.\n1.2.1.1.3 Safety Considerations\nNuScale has achieved an improvement in safety over existing plants through \nsimplicity of design, reliance on passive safety systems, and small fuel inventory. \nThe integral design of the NPM eliminat es external coolant loop piping, which \neliminates large-break LOCA scenarios. The availability of passive safety systems for \ndecay heat removal, emergency core co oling, and control room habitability \neliminates the need for external powe r under accident conditions. With these \npassive safety systems, small-break LOCAs do  not challenge the safety of the plant. \nThe result is a design with a core damage  frequency that is lower than the current \nlight water reactor fleet.\nThe reactor core has a small radioactive so urce term as compared to a conventional \n1,000 MWe nuclear reactor. Based on the sm aller fuel inventory, the amount of \nradioactive material available for release d uring a postulated accident is reduced. \nTable 1.2-2 provides a listing of some of the features of the NPM.\n1.2.1.2 Engineered Safety F eatures and Emergency Systems\n1.2.1.2.1 Engineered Safety Feature Materials\nDetails are provided in Sect ion 6.1 related to the select ion and fabrication methods \nfor metallic and organic materials used in ESF components to ensure compatibility \nwith fluids that the component may be  exposed to during normal, accident, \nmaintenance, and testing conditions.\n1.2.1.2.2 Containment Systems\nThe containment is an integr al part of the NPM and pr ovides primary containment \nfor the RCS. Section 6.2 provides furthe r information for the containment system.\n\n--- Referenced Tables (structured) ---\n[Table 1.2-2: Design Features of a NuScale Power Module]\nRCS contained within the RPV | No large diameter primary coolant\npiping | Eliminates postulated large-break LOCA\nspectrum accidents\nNatural-convection-cooled core | No reactor coolant pumps | Eliminates reactor coolant pump accidents,\nshaft breaks, pump seizure, missile generation\nand pump leaks\nHigh containment design pressure | Containment peak pressure for\nworst case design-basis accident\nremains below containment design\npressure | Containment integrity assured, minimizing the\npotential for radioactive releases during\npostulated accidents.\nRPV and NSSS | During an accident, any water lost\nfrom RPV stays within containment\nand is returned to the RPV by\npassive means | No postulated design-basis small-break LOCA\ncapable of uncovering nuclear fuel\nEvacuated containment | Subatmospheric pressure during\nnormal operation\nNo insulation on RPV | Minimal amount of noncondensible gases\nincreases the steam condensation rate for\ncontainment heat removal during postulated\nsmall-break LOCA. Amount of oxygen in\ncontainment during normal operations is\nminimized.\nEliminates potential sump screen blockage and\npermits cooling of the exterior of the vessel\nduring an accident\nLow power core (160 MWt) | Reduces decay heat removal\nrequirements | Enhances in-vessel retention; maintains low\naccident consequences; reduces fission\nproduct source term; simplifies emergency\nplanning\nReactor pool with partially\n(approximately 90%) immersed NPM | CNV | Provides passive long-term cooling\nPassive safety systems | Safety systems cool and\ndepressurize the RPV/CNV even in\nthe event of loss of external power | Active safety systems are not required",
+      "summary": "The NuScale design enhances safety by maintaining a vacuum in the containment vessel (CNV), which reduces corrosion, aids in leak detection, and limits combustible gases. Its passive safety systems and integral design eliminate large-break loss-of-coolant accident (LOCA) scenarios and reduce reliance on external power, resulting in a lower core damage frequency compared to conventional reactors.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "232",
-      "hop": 2
+      "page_range": "32",
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.2-2",
+          "page": 45,
+          "caption": "Design Features of a NuScale Power Module",
+          "structured_text": "RCS contained within the RPV | No large diameter primary coolant\npiping | Eliminates postulated large-break LOCA\nspectrum accidents\nNatural-convection-cooled core | No reactor coolant pumps | Eliminates reactor coolant pump accidents,\nshaft breaks, pump seizure, missile generation\nand pump leaks\nHigh containment design pressure | Containment peak pressure for\nworst case design-basis accident\nremains below containment design\npressure | Containment integrity assured, minimizing the\npotential for radioactive releases during\npostulated accidents.\nRPV and NSSS | During an accident, any water lost\nfrom RPV stays within containment\nand is returned to the RPV by\npassive means | No postulated design-basis small-break LOCA\ncapable of uncovering nuclear fuel\nEvacuated containment | Subatmospheric pressure during\nnormal operation\nNo insulation on RPV | Minimal amount of noncondensible gases\nincreases the steam condensation rate for\ncontainment heat removal during postulated\nsmall-break LOCA. Amount of oxygen in\ncontainment during normal operations is\nminimized.\nEliminates potential sump screen blockage and\npermits cooling of the exterior of the vessel\nduring an accident\nLow power core (160 MWt) | Reduces decay heat removal\nrequirements | Enhances in-vessel retention; maintains low\naccident consequences; reduces fission\nproduct source term; simplifies emergency\nplanning\nReactor pool with partially\n(approximately 90%) immersed NPM | CNV | Provides passive long-term cooling\nPassive safety systems | Safety systems cool and\ndepressurize the RPV/CNV even in\nthe event of loss of external power | Active safety systems are not required"
+        }
+      ]
     },
     "nuscale_ch01_0044": {
       "node_id": "nuscale_ch01_0044",
       "title": "Chemical and Volume Control System",
-      "summary": "The Chemical and Volume Control System section describes the NuScale reactor’s passive decay heat removal system, which uses two independent trains, each capable of removing 100% of the decay heat via natural circulation and passive condensers immersed in the reactor pool. In case of a steam generator tube failure or loss of AC power, the system isolates the affected components and passively transfers heat to a large, stainless steel-lined ultimate heat sink pool, ensuring continued cooling and safety without external power.",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-16 Revision 5closed-loop, two-phase natural circulation cooling system. Two trains of decay heat \nremoval equipment are provided, one attached to each SG loop. Each train is \ncapable of removing 100 percent of the deca y heat load and cooling the RCS. Each \ntrain has a passive condenser immersed in  the reactor pool. In the event of a SG \ntube failure, the affected SG is isolated and the DHRS provides cooling through the \nintact SG.\nOn receipt of an actuation signal, feedwa ter and main steam isolation valves are \nclosed and the DHRS valves open. Reacto r coolant continues to circulate through \nthe RPV collecting decay heat from the core. As water from the DHRS condenser \ntravels through the SG tubes it is conver ted to steam absorbing decay heat from \nthe reactor coolant. The steam then flow s back to the DHRS condenser where it \ngives up excess heat to the reactor pool water and is condensed, and the cycle is \nrepeated. This transfer of heat promotes natural circulation in both the RCS and the \nDHRS.\nSection 5.4.2 provides desi gn and operational info rmation for the DHRS.\n1.2.2.4.2 Ultimate Heat Sink\nThe ultimate heat sink is a large, stainl ess steel-lined, reinforced concrete pool \nlocated in the RXB below plant grade level. The ultimate heat sink consists of the \nreactor pool area, the refueling pool area , and the spent fuel pool area. The pool \nareas are shown in Figure 1.2- 16. During normal plant op erations, heat is removed \nfrom the pool through the reactor pool cooling system and rejected into the \natmosphere through a cooling tower or other external heat sink. The spent fuel pool has an independent spent fuel pool cooling system.\nIn a design basis accident involving a sustai ned loss of all AC po wer, decay heat is \nremoved from the NPMs throug h passive heat transfer to the pool resulting in pool \nheat up and boiling. Water inventory in th e reactor pool is adequate to cool the \nNPMs for at least 72 hours without adding water. \nThe reactor pool provides an additional means of fission product retention beyond \nthat of the fuel, fuel cladding, RPV, and the containment for certain events.\nSection 9.2.5 provides design and operational informatio n for the ultimate heat \nsink.\n1.2.2.4.3 Chemical and Volume Control System\nThe CVCS is simple in design and its oper ation is not credited during or after an \naccident. During normal operation, the CV CS recirculates a po rtion of the reactor \ncoolant through demineralizers  and filters to maintain reactor coolant cleanliness \nand chemistry. A portion of the recirculat ed coolant is used to supply pressurizer \nspray for controlling reacto r pressure. Reactor coolant inventory is controlled by \ninjection of additional water when reacto r coolant levels are low or letdown of \nreactor coolant to the liquid radioactive waste system when coolant inventory is \nhigh.NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-17 Revision 5Additionally, during the NPM startup process,  the CVCS is used in conjunction with \nthe module heatup system, to add heat to the reactor coolant to establish natural \ncirculation flow in the RCS.\nBoron concentration in the RCS is controlle d by a feed-and-bleed process. Injection \npumps provide borated water or clean demi neralized water that is delivered into \nthe RCS with excess reactor coolant being letdown to the radioactive waste system. \nSafety-related protection is provided for an anticipated operational occurrence \ninvolving unintended dilution of the RCS due to CVCS equipment failure or \noperating error.\nSection 9.3.4 provides desi gn and operational info rmation of the CVCS.\n1.2.2.5 Other Site Structures\n1.2.2.5.1 Turbine Generator Building\nA NuScale Power Plant has two separate TGBs. The TGBs are nonsafety-related \nstructures. Each building houses six t urbine generator sets along with their \nauxiliaries, the condensers, condensate systems, and the feedwater systems. A \nlaydown area and overhead crane are provided for installation and maintenance \nactivities in each TGB.\n1.2.2.5.2 Annex Building\nThe ANB is a nonsafety-rela ted structure. The ANB houses  several facilities and \nserves several functions, including:\n• controlling access to both radiologically-controlled and \nnonradiologically-controlled areas of the RXB\n• housing various personnel support servic es such as locker rooms, showers, \ntoilet facilities, lunch and co nference rooms, and first aid\n• [[providing space for personnel and component decontamination equipment \nand employee dosimeter processing\n• housing a portion of the facilities that support plant security such as secondary \nalarm station, security briefing room, armory, security manager's office, etc.]]\n1.2.2.5.3 Security Buildings\nThe SCBs are nonsafety related structure s that include the following structures:\n• primary access control building\n• main security building\n• vehicle barrier system\nThe SCBs provide the followin g nonsafety-related functions:\n• control personnel and vehicle entry into  the PA and screen personnel seeking \nunescorted access into the PA.",
+      "summary": "The Chemical and Volume Control System section describes the NuScale reactor’s closed-loop, two-phase natural circulation cooling system, which uses two independent decay heat removal trains, each capable of fully cooling the reactor. In emergencies, passive condensers transfer decay heat to a large, stainless steel-lined ultimate heat sink pool, ensuring safe heat removal even during a total loss of AC power.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "41",
-      "hop": 2
+      "hop": 2,
+      "references": []
     },
-    "nuscale_ch01_0188": {
-      "node_id": "nuscale_ch01_0188",
-      "title": "BTP 6-1, (March 2007): pH for Emergency Coolant Water for Pressurized Water ReactorsB.3 Hydrogen Generation from Aluminum Corrosion",
-      "summary": "This section reviews NuScale's conformance with regulatory criteria regarding pH control and hydrogen generation from aluminum corrosion in emergency coolant water for pressurized water reactors. While some criteria reference systems not present in the NuScale design (such as containment spray systems or sumps), the intent of the guidelines is still met due to similar water recirculation processes within the NuScale containment vessel. Other criteria, such as those related to minimum containment pressure and dual containment leakage, are deemed not applicable to the NuScale design.",
+    "nuscale_ch01_0669": {
+      "node_id": "nuscale_ch01_0669",
+      "title": "DSRS 15.1.1-15.1.4, Rev 0: Decrease in Feedwater Temperature, Increase in Feedwater Flow, Increase in Steam Flow, and Inadvertent Opening of the Turbine Bypass System or Inadvertent Operation of the Decay Heat Removal SystemII.4 Specific CriterionInstrument Spans and Setpoints use RG 1.105",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-161 Revision 5\nDSRS 15.1.1-15.1.4, Rev 0: \nDecrease in Feedwater Temperature, Increase in \nFeedwater Flow, Increase in \nSteam Flow, and Inadvertent Opening of the Turbine \nBypass System or Inadvertent \nOperation of the Decay Heat Removal SystemII.1\nSpecific CriterionSystem Pressure Conforms None. 15.1.1-15.1.4\nDSRS 15.1.1-15.1.4, Rev 0: \nDecrease in Feedwater \nTemperature, Increase in Feedwater Flow, Increase in \nSteam Flow, and Inadvertent \nOpening of the Turbine Bypass System or Inadvertent \nOperation of the Decay Heat \nRemoval SystemII.2\nSpecific \nCriterion\nMCHFR Remains Above 95/95 Limit Conforms NuScale has determined that critical heat \nflux more accurate ly describes plant \nphenomena than departure from nucleate boiling.15.1.1-15.1.4\nDSRS 15.1.1-15.1.4, Rev 0: \nDecrease in Feedwater \nTemperature, Increase in \nFeedwater Flow, Increase in Steam Flow, and Inadvertent \nOpening of the Turbine \nBypass System or Inadvertent Operation of the Decay Heat \nRemoval SystemII.3\nSpecific \nCriterion\nAOOs Should Not Generate More \nSerious ConditionConforms NuScale events are classified by AOO, IE, \naccident, and special event, but will \nconform with SRP requirement that \nincidents of moderate frequency should not generate a more serious plant condition \nwithout other faults occurring \nindependently.15.1.1-15.1.4\nDSRS 15.1.1-15.1.4, Rev 0: \nDecrease in Feedwater Temperature, Increase in \nFeedwater Flow, Increase in \nSteam Flow, and Inadvertent Opening of the Turbine \nBypass System or Inadvertent \nOperation of the Decay Heat Removal SystemII.4\nSpecific Criterion\nInstrument Spans and Setpoints use RG 1.105Conforms None. 15.1.1-15.1.4Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments SectionNuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-162 Revision 5\nDSRS 15.1.1-15.1.4, Rev 0: \nDecrease in Feedwater Temperature, Increase in \nFeedwater Flow, Increase in \nSteam Flow, and Inadvertent Opening of the Turbine \nBypass System or Inadvertent \nOperation of the Decay Heat Removal SystemII.5\nSpecific CriterionIdentify Limiting Single Failure Conforms None. 15.1.1-15.1.4\nDSRS 15.1.1-15.1.4, Rev 0: \nDecrease in Feedwater \nTemperature, Increase in Feedwater Flow, Increase in \nSteam Flow, and Inadvertent \nOpening of the Turbine Bypass System or Inadvertent \nOperation of the Decay Heat \nRemoval SystemII.1 Analytical \nParametersInitial Power Level is 102% Conforms None. 15.1.1-15.1.4\nDSRS 15.1.1-15.1.4, Rev 0: \nDecrease in Feedwater \nTemperature, Increase in \nFeedwater Flow, Increase in Steam Flow, and Inadvertent \nOpening of the Turbine \nBypass System or Inadvertent Operation of the Decay Heat \nRemoval SystemII.2 Analytical \nParametersConservative Scram Used Conforms None. 15.1.1-15.1.4\nDSRS 15.1.1-15.1.4, Rev 0: \nDecrease in Feedwater Temperature, Increase in \nFeedwater Flow, Increase in \nSteam Flow, and Inadvertent Opening of the Turbine \nBypass System or Inadvertent \nOperation of the Decay Heat Removal SystemII.3 Analytical \nParametersCore Burnup Conforms None. 15.1.1-15.1.4Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for abnormal operational occurrences such as changes in feedwater temperature, flow, steam flow, and inadvertent system operations. It confirms that NuScale meets specific criteria for system pressure, critical heat flux, event classification, and instrument setpoints, aligning with NRC guidance and ensuring plant safety under these conditions.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "232",
-      "hop": 2
+      "page_range": "289",
+      "hop": 2,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
     "nuscale_ch01_0666": {
       "node_id": "nuscale_ch01_0666",
       "title": "DSRS 15.1.1-15.1.4, Rev 0: Decrease in Feedwater Temperature, Increase in Feedwater Flow, Increase in Steam Flow, and Inadvertent Opening of the Turbine Bypass System or Inadvertent Operation of the Decay Heat Removal SystemII.1 Specific CriterionSystem Pressure",
-      "summary": "This section summarizes NuScale’s conformance with regulatory criteria for abnormal operational events such as changes in feedwater temperature, flow, steam flow, and inadvertent system operations. It confirms that NuScale meets requirements for system pressure, critical heat flux limits, event classification, and instrument setpoints, aligning with the Standard Review Plan and Design Specific Review Standard. No exceptions or non-conformances are noted.",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-161 Revision 5\nDSRS 15.1.1-15.1.4, Rev 0: \nDecrease in Feedwater Temperature, Increase in \nFeedwater Flow, Increase in \nSteam Flow, and Inadvertent Opening of the Turbine \nBypass System or Inadvertent \nOperation of the Decay Heat Removal SystemII.1\nSpecific CriterionSystem Pressure Conforms None. 15.1.1-15.1.4\nDSRS 15.1.1-15.1.4, Rev 0: \nDecrease in Feedwater \nTemperature, Increase in Feedwater Flow, Increase in \nSteam Flow, and Inadvertent \nOpening of the Turbine Bypass System or Inadvertent \nOperation of the Decay Heat \nRemoval SystemII.2\nSpecific \nCriterion\nMCHFR Remains Above 95/95 Limit Conforms NuScale has determined that critical heat \nflux more accurate ly describes plant \nphenomena than departure from nucleate boiling.15.1.1-15.1.4\nDSRS 15.1.1-15.1.4, Rev 0: \nDecrease in Feedwater \nTemperature, Increase in \nFeedwater Flow, Increase in Steam Flow, and Inadvertent \nOpening of the Turbine \nBypass System or Inadvertent Operation of the Decay Heat \nRemoval SystemII.3\nSpecific \nCriterion\nAOOs Should Not Generate More \nSerious ConditionConforms NuScale events are classified by AOO, IE, \naccident, and special event, but will \nconform with SRP requirement that \nincidents of moderate frequency should not generate a more serious plant condition \nwithout other faults occurring \nindependently.15.1.1-15.1.4\nDSRS 15.1.1-15.1.4, Rev 0: \nDecrease in Feedwater Temperature, Increase in \nFeedwater Flow, Increase in \nSteam Flow, and Inadvertent Opening of the Turbine \nBypass System or Inadvertent \nOperation of the Decay Heat Removal SystemII.4\nSpecific Criterion\nInstrument Spans and Setpoints use RG 1.105Conforms None. 15.1.1-15.1.4Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section summarizes NuScale’s compliance with regulatory criteria for abnormal operational events such as changes in feedwater temperature, flow, steam flow, and inadvertent system operations. It confirms that NuScale meets requirements for system pressure, critical heat flux limits, prevention of escalation to more serious conditions, and use of appropriate instrument setpoints, aligning with the Standard Review Plan and Design Specific Review Standard.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "289",
-      "hop": 2
+      "hop": 2,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
     "nuscale_ch05_0003": {
       "node_id": "nuscale_ch05_0003",
       "title": "Design Basis",
+      "content": "NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-1 Revision 5CHAPTER 5 REACTOR COOLANT SY STEM AND CONNECTING SYSTEMS\n5.1 Summary Description\nThe reactor coolant system (RCS) provides for the circulation of the primary coolant. The \nNuScale Power, LLC (NuScale) design relies on na tural circulation flow for the reactor coolant \nand does not include reactor coolant pumps or an external piping system. The RCS is a subsystem of the NuScale Power Module (NPM). The RCS includes the reactor pressure vessel \n(RPV) and integral pressurizer (PZR), the reactor ve ssel internals (RVI), the reactor safety valves \n(RSVs), RCS piping inside the containment vessel (CNV) (RCS injection, RC S discharge, PZR spray \nsupply, and RPV high-point degasification lines), the PZR control cabinet and the RCS \ninstruments and cables.\nChapter 1 provides an overview of the NuScale Po wer Plant design that includes up to twelve \nindividual NPMs. The description in this chapter applies to ea ch of the NPMs individually, \nunless otherwise stated.\n5.1.1 Design Basis\nThe performance and safety design bases of the RCS and its major components are \ninterrelated. These design ba ses are listed as follows:\n• The RCS promotes natural circulation to tr ansfer approximately 160 MW thermal power \nfrom the reactor core to the steam generato r system (SGS) during power operation and \nthe heat produced when the reactor is subcri tical, including the initial phase of plant \ncooldown. \n• The RCS provides coolant to the reactor core such that specified acceptable fuel design \nlimits are not violated during normal oper ation including the ef fects of anticipated \noperational occurrences. \n• The RCS water chemistry is maintained so that solid deposits on the reactor core and \nthe steam generators (SGs) are minimized. \n• The RCS maintains a uniform concentration of soluble boron concentration during \nnormal, transient, and accident conditions, and adequate chemical and thermal mixing to maintain reactivity.\n• Steady-state temperatures are maintained th roughout the reactor coolant to maintain \nthe temperature of the RVI and RPV below de sign limits during normal and accident \nconditions. \n• The PZR has sufficient capacity  to control reactor coolant pressure within the permitted \noperating range for normal operating transients without actuating the RSVs.\n• The RCS removes decay heat from the reac tor core during shutdown and refueling \noperations by a combination of heat tr ansfer to the DHRS through the SGS and \nconvection from the RPV to the reactor pool.\n• The RCS provides the water used as the co re neutron moderator and reflector blocks \nthat reflect a portion of the neutrons that esca pe the fuel region, improving neutron \neconomy in the core. NuScale Final Safety Analysis Report Summary Description\nTier 2 5.1-2 Revision 5• The RCS provides a degasification line to remove noncondensible gases from the PZR \nvolume at the top of the RPV during normal  operation. Reactor vent valves (RVVs), \nwhich are opened to discharge the PZR steam space directly to  the CNV as part of ECCS \noperation, also allow noncondensible ga ses to be removed from the PZR during \nemergency core cooling operation.\n• The pressure-retaining portions of the RCS assist in maintaining the integrity of the \nreactor coolant pressure boun dary (RCPB) that provides a barrier to the release of \nradionuclides. \n5.1.2 System Description\nThe RCS is a subsystem of the NPM and is locate d inside the CNV. The RCS includes the RPV, \nthe integral PZR, the RVI, the RSVs, reactor coolant piping inside the CNV and the RCS instruments and controls.\nThe RCS interfacing systems include the chem ical and volume control system via the \ncontainment system, the emergency core coolin g system (ECCS) valves consisting of RVVs \nand reactor recirculation valves (RRVs), the CNV, control rod drive system, SGS, and the \nprimary sampling system (through the chemical and volume control system). \nA diagram of an individual NPM is provided in Figure 5.1-1 showing the RPV within the CNV \nand denoting major RCS components. A simplifi ed RCS diagram is provided in Figure 5.1-2.\nDuring normal operation, the RCS transports heat from the reactor core to the SGs by \nnatural circulation. The motive force for the reactor coolant flow is natural convection, \ndriven by differences in coolant density betw een the hot coolant leaving the reactor core \nand the colder coolant leaving the SGs, an d by the elevation difference between the \nreactor core (heat source) and th e SGs (heat sink). The reactor coolant is heated in the core, \ntravels upward through the lower and upper ri ser assemblies, and at the top of the upper \nriser assembly is turned downward by the PZR baffle plate. The heat ed coolant then flows \ninto the annular space between the upper riser assembly and the vertical shell of the RPV. \nThis annular space contains the SG helical tube bundles. As the reactor coolant flows \ndownward across the outside of the SG tubes, it transfers heat to the secondary coolant \ninside the tubes. Heat transfer to the SG  tubes lowers the temperature of the reactor \ncoolant, increasing its density and causing the cooler, dense coolant to sink into the annular downcomer space between the lower ri ser assembly and core  barrel and continue \ninto the lower plenum near the bottom of th e RPV where the reactor coolant returns to the \nreactor core. \nA schematic flow diagram of the RCS is provided in Figure 5.1-3, denoting major \ncomponents, and major RCS loop flow stages  during normal steady-state, full-power \noperating conditions. In addition, Ta ble 5.1-1 identifies the RCS volumes. \nThe SGS (in conjunction with the main steam and main feedwater systems) are used to \nremove decay heat from the RCS during the initial phase of module cooldown. When decay \nheat is sufficiently low and the RCS temperature  is low enough to support filling the CNV, \nthe CNV is filled to the PZR baffle plate by the containment flooding system. RCS cooldown \ncontinues passively as decay heat is tr ansferred through the RPV to the flooded \ncontainment and through the CNV to the reactor pool. The DHRS actuation valves are ",
       "summary": "The Design Basis section outlines that the NuScale reactor coolant system (RCS) uses natural circulation without pumps or external piping, ensuring safe and efficient heat transfer from the reactor core to the steam generator. The RCS is designed to maintain proper coolant flow, water chemistry, and boron concentration to protect fuel integrity and support safe operation under normal and transient conditions.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "8",
-      "hop": 2
+      "hop": 2,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 5.1-1",
+          "page": 16,
+          "caption": "NuScale Power Module Major Components"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.1-2",
+          "page": 17,
+          "caption": "Reactor Coolant System Simplified Diagram"
+        },
+        {
+          "type": "figure",
+          "id": "Figure 5.1-3",
+          "page": 18,
+          "caption": "Reactor Coolant System Schematic Flow Diagram"
+        }
+      ]
     },
-    "nuscale_ch01_0168": {
-      "node_id": "nuscale_ch01_0168",
-      "title": "SRP 6.5.3, Rev 3: Fission Product Control Systems and StructuresII.2 Secondary Containment",
-      "summary": "The NuScale design does not include secondary containment or fission product clean-up systems, as its passive safety features and submerged containment vessel inherently control fission products. Therefore, regulatory criteria related to secondary containment and certain fission product control systems are not applicable to the NuScale design, and only specific containment parameters are reviewed for conformance.",
+    "nuscale_ch01_0189": {
+      "node_id": "nuscale_ch01_0189",
+      "title": "BTP 6-2, Rev 3: Minimum Containment Pressure Model for PWR ECCS PerformanceAll (B.1 thru B.3)Various",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-104 Revision 5\nBTP 6-1, (March 2007): pH for \nEmergency Coolant Water for Pressurized Water ReactorsB.2 Spray Water pH and Water Chemistry \nRequirements for Fission Product RemovalPartially Conforms\nThe intent of a portio n of this acceptance \ncriterion is applicable but the specific language refers to SSC that are not in the \nNuScale design. Specifically the NuScale \ndesign does not use a containment spray system or a sump. However, during ECCS \noperation, ECCS water does collect inside \nthe NuScale containment vessel for recirculation back to the reactor core, and \nthus the pH guideline contained in this \nacceptance criterion is applicable to the DCA.6.2.2\nBTP 6-1, (March 2007): pH for \nEmergency Coolant Water for \nPressurized Water ReactorsB.3 Hydrogen Generation from \nAluminum CorrosionConforms This acceptance criter ion is applicable but \ncertain language in BTP 6-1, which would \nbe applied by Acceptance Criterion B.3, refers to SSC that are not in the NuScale \ndesign. Specifically, the NuScale design \ndoes not use a containment spray system or a sump. However, during ECCS operation, \nECCS water does collect inside the NuScale \ncontainment vessel for recirculation back to the reactor core, and thus the intent of this \nacceptance criterion is applicable to the \nDCA.6.3.2\nBTP 6-2, Rev 3: Minimum \nContainment Pressure Model \nfor PWR ECCS PerformanceAll (B.1 thru \nB.3)Various Not Applicable This guidance is applic able only to PWRs for \nwhich a postulated LOCA results in core \nuncovery. For the NuScale design, a LOCA \ndoes not result in core uncovery.Not Applicable\nBTP 6-3, Rev 3: Determination \nof Bypass Leakage Paths in \nDual Containment PlantsAll Various Not Applicable These acceptance criteria (B.1 through B.9) \nare applicable only to large LWRs that \nincorporate both a primary and secondary \ncontainment. The NuScale containment vessel design does not include a secondary \ncontainment. Not ApplicableTable 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section explains that the guidance in BTP 6-2, Rev 3 regarding the minimum containment pressure model for PWR ECCS performance is not applicable to the NuScale design, as a postulated LOCA in NuScale does not result in core uncovery. Therefore, the regulatory criteria addressed in BTP 6-2 do not apply to the NuScale reactor.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "229",
-      "hop": 3
+      "page_range": "232",
+      "hop": 2,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
-    "nuscale_ch01_0167": {
-      "node_id": "nuscale_ch01_0167",
-      "title": "SRP 6.5.3, Rev 3: Fission Product Control Systems and StructuresII.1 Primary Containment",
-      "summary": "The NuScale design partially conforms to SRP 6.5.3, Rev 3 requirements for fission product control, as its passive containment vessel does not include active fission product clean-up or pressure suppression systems, making some guidance inapplicable. The design does not have secondary containment or other credited engineered safety feature (ESF) fission product control systems, so those criteria are also not applicable. Only the primary containment vessel and its isolation features are credited for fission product control in the NuScale plant.",
+    "nuscale_ch01_0188": {
+      "node_id": "nuscale_ch01_0188",
+      "title": "BTP 6-1, (March 2007): pH for Emergency Coolant Water for Pressurized Water ReactorsB.3 Hydrogen Generation from Aluminum Corrosion",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-104 Revision 5\nBTP 6-1, (March 2007): pH for \nEmergency Coolant Water for Pressurized Water ReactorsB.2 Spray Water pH and Water Chemistry \nRequirements for Fission Product RemovalPartially Conforms\nThe intent of a portio n of this acceptance \ncriterion is applicable but the specific language refers to SSC that are not in the \nNuScale design. Specifically the NuScale \ndesign does not use a containment spray system or a sump. However, during ECCS \noperation, ECCS water does collect inside \nthe NuScale containment vessel for recirculation back to the reactor core, and \nthus the pH guideline contained in this \nacceptance criterion is applicable to the DCA.6.2.2\nBTP 6-1, (March 2007): pH for \nEmergency Coolant Water for \nPressurized Water ReactorsB.3 Hydrogen Generation from \nAluminum CorrosionConforms This acceptance criter ion is applicable but \ncertain language in BTP 6-1, which would \nbe applied by Acceptance Criterion B.3, refers to SSC that are not in the NuScale \ndesign. Specifically, the NuScale design \ndoes not use a containment spray system or a sump. However, during ECCS operation, \nECCS water does collect inside the NuScale \ncontainment vessel for recirculation back to the reactor core, and thus the intent of this \nacceptance criterion is applicable to the \nDCA.6.3.2\nBTP 6-2, Rev 3: Minimum \nContainment Pressure Model \nfor PWR ECCS PerformanceAll (B.1 thru \nB.3)Various Not Applicable This guidance is applic able only to PWRs for \nwhich a postulated LOCA results in core \nuncovery. For the NuScale design, a LOCA \ndoes not result in core uncovery.Not Applicable\nBTP 6-3, Rev 3: Determination \nof Bypass Leakage Paths in \nDual Containment PlantsAll Various Not Applicable These acceptance criteria (B.1 through B.9) \nare applicable only to large LWRs that \nincorporate both a primary and secondary \ncontainment. The NuScale containment vessel design does not include a secondary \ncontainment. Not ApplicableTable 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section reviews NuScale's conformance with regulatory criteria regarding pH control and hydrogen generation from aluminum corrosion in emergency coolant water for pressurized water reactors. While NuScale's design lacks certain systems referenced in the criteria (such as containment spray systems and sumps), the intent of the guidelines is still met due to the collection and recirculation of ECCS water within the containment vessel. Some criteria, particularly those related to large LWRs with dual containment, are deemed not applicable to the NuScale design.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "229",
-      "hop": 3
+      "page_range": "232",
+      "hop": 2,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
     "nuscale_ch01_0043": {
       "node_id": "nuscale_ch01_0043",
       "title": "Ultimate Heat Sink",
-      "summary": "The Ultimate Heat Sink section describes a large, stainless steel-lined, reinforced concrete pool that serves as the final heat removal system for the NuScale plant. In normal operations, heat is removed via a cooling system and external heat sink, while in the event of a total loss of AC power, decay heat is passively transferred to the pool, which has sufficient water inventory to ensure continued cooling through natural circulation and boiling.",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-16 Revision 5closed-loop, two-phase natural circulation cooling system. Two trains of decay heat \nremoval equipment are provided, one attached to each SG loop. Each train is \ncapable of removing 100 percent of the deca y heat load and cooling the RCS. Each \ntrain has a passive condenser immersed in  the reactor pool. In the event of a SG \ntube failure, the affected SG is isolated and the DHRS provides cooling through the \nintact SG.\nOn receipt of an actuation signal, feedwa ter and main steam isolation valves are \nclosed and the DHRS valves open. Reacto r coolant continues to circulate through \nthe RPV collecting decay heat from the core. As water from the DHRS condenser \ntravels through the SG tubes it is conver ted to steam absorbing decay heat from \nthe reactor coolant. The steam then flow s back to the DHRS condenser where it \ngives up excess heat to the reactor pool water and is condensed, and the cycle is \nrepeated. This transfer of heat promotes natural circulation in both the RCS and the \nDHRS.\nSection 5.4.2 provides desi gn and operational info rmation for the DHRS.\n1.2.2.4.2 Ultimate Heat Sink\nThe ultimate heat sink is a large, stainl ess steel-lined, reinforced concrete pool \nlocated in the RXB below plant grade level. The ultimate heat sink consists of the \nreactor pool area, the refueling pool area , and the spent fuel pool area. The pool \nareas are shown in Figure 1.2- 16. During normal plant op erations, heat is removed \nfrom the pool through the reactor pool cooling system and rejected into the \natmosphere through a cooling tower or other external heat sink. The spent fuel pool has an independent spent fuel pool cooling system.\nIn a design basis accident involving a sustai ned loss of all AC po wer, decay heat is \nremoved from the NPMs throug h passive heat transfer to the pool resulting in pool \nheat up and boiling. Water inventory in th e reactor pool is adequate to cool the \nNPMs for at least 72 hours without adding water. \nThe reactor pool provides an additional means of fission product retention beyond \nthat of the fuel, fuel cladding, RPV, and the containment for certain events.\nSection 9.2.5 provides design and operational informatio n for the ultimate heat \nsink.\n1.2.2.4.3 Chemical and Volume Control System\nThe CVCS is simple in design and its oper ation is not credited during or after an \naccident. During normal operation, the CV CS recirculates a po rtion of the reactor \ncoolant through demineralizers  and filters to maintain reactor coolant cleanliness \nand chemistry. A portion of the recirculat ed coolant is used to supply pressurizer \nspray for controlling reacto r pressure. Reactor coolant inventory is controlled by \ninjection of additional water when reacto r coolant levels are low or letdown of \nreactor coolant to the liquid radioactive waste system when coolant inventory is \nhigh.",
+      "summary": "The Ultimate Heat Sink for the NuScale plant is a large, stainless steel-lined, reinforced concrete pool located below grade, comprising the reactor, refueling, and spent fuel pool areas. During normal operations, heat is removed via a cooling system and external heat sink, while in the event of a total loss of AC power, decay heat is passively transferred to the pool, which has sufficient water inventory to ensure continued cooling through heat-up and boiling.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "41",
-      "hop": 3
+      "hop": 3,
+      "references": []
     },
-    "nuscale_ch01_0023": {
-      "node_id": "nuscale_ch01_0023",
-      "title": "Containment Systems",
-      "summary": "The NuScale containment vessel (CNV) is maintained under vacuum during normal operation, which reduces moisture and corrosion, aids in leak detection, and limits oxygen for safety. In the event of an emergency, passive cooling rapidly reduces pressure and temperature, and the plant’s design—with passive safety systems and a small fuel inventory—improves safety and lowers core damage frequency compared to conventional reactors.",
+    "nuscale_ch01_0168": {
+      "node_id": "nuscale_ch01_0168",
+      "title": "SRP 6.5.3, Rev 3: Fission Product Control Systems and StructuresII.2 Secondary Containment",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-101 Revision 5\nSRP 6.5.3, Rev 3: Fission \nProduct Control Systems and StructuresII.1 Primary Containment Partially Conforms\nA portion of this acceptance criterion and its \nsubtier guidance is applicable only to LWR designs that include containment fission \nproduct clean-up systems. The NuScale \ncontainment vessel does not contain fission product clean up systems, nor does it \ninclude or require pressure suppression \nsystems (e.g., suppression pools or active containment heat removal systems such as \ncontainment spray) that serve a fission \nproduct removal/dose mitigation function. Rather, fission product control is inherent in \nthe passive design of the NuScale Power \nModule, wherein the compact containment vessel is submerged in the reactor pool. \nTherefore, the aspects of this guidance \nrelated to these systems are not applicable to the DCA. This guidance is applicable to \nthe review of certain NuScale containment \nparameters and design features, such as design leakage rate and systems leakage \nprior to containment isolation.6.5.3\nSRP 6.5.3, Rev 3: Fission \nProduct Control Systems and StructuresII.2 Secondary Containment Not Applicable\nThis acceptance criterion is applicable only \nto LWRs that incorporate both a primary and secondary containment. The NuScale \ncontainment vessel design does not include \na secondary containment. Not Applicable\nSRP 6.5.3, Rev 3: Fission \nProduct Control Systems and \nStructuresII.4 Other Fission Product Control \nSystemsNot Applicable The only credited ESF fission product \ncontrol system in the NuScale Power Plant \ndesign is the containment vessel in \nconjunction with the containment isolation valves and passive containment isolation \nbarriers.Not ApplicableTable 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "The NuScale design does not include secondary containment or fission product clean-up systems, as its passive safety features and submerged containment vessel inherently control fission products. Therefore, regulatory criteria related to secondary containment and certain fission product control systems are not applicable to the NuScale Power Module, and only specific containment parameters such as leakage rates are relevant for review.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "32",
-      "hop": 3
+      "page_range": "229",
+      "hop": 3,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
+    },
+    "nuscale_ch01_0167": {
+      "node_id": "nuscale_ch01_0167",
+      "title": "SRP 6.5.3, Rev 3: Fission Product Control Systems and StructuresII.1 Primary Containment",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-101 Revision 5\nSRP 6.5.3, Rev 3: Fission \nProduct Control Systems and StructuresII.1 Primary Containment Partially Conforms\nA portion of this acceptance criterion and its \nsubtier guidance is applicable only to LWR designs that include containment fission \nproduct clean-up systems. The NuScale \ncontainment vessel does not contain fission product clean up systems, nor does it \ninclude or require pressure suppression \nsystems (e.g., suppression pools or active containment heat removal systems such as \ncontainment spray) that serve a fission \nproduct removal/dose mitigation function. Rather, fission product control is inherent in \nthe passive design of the NuScale Power \nModule, wherein the compact containment vessel is submerged in the reactor pool. \nTherefore, the aspects of this guidance \nrelated to these systems are not applicable to the DCA. This guidance is applicable to \nthe review of certain NuScale containment \nparameters and design features, such as design leakage rate and systems leakage \nprior to containment isolation.6.5.3\nSRP 6.5.3, Rev 3: Fission \nProduct Control Systems and StructuresII.2 Secondary Containment Not Applicable\nThis acceptance criterion is applicable only \nto LWRs that incorporate both a primary and secondary containment. The NuScale \ncontainment vessel design does not include \na secondary containment. Not Applicable\nSRP 6.5.3, Rev 3: Fission \nProduct Control Systems and \nStructuresII.4 Other Fission Product Control \nSystemsNot Applicable The only credited ESF fission product \ncontrol system in the NuScale Power Plant \ndesign is the containment vessel in \nconjunction with the containment isolation valves and passive containment isolation \nbarriers.Not ApplicableTable 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "The NuScale design partially conforms to SRP 6.5.3, Rev 3 requirements for fission product control systems, as its containment vessel does not include active fission product clean-up or pressure suppression systems; instead, fission product control relies on the passive, submerged containment design. Criteria related to secondary containment and other fission product control systems are not applicable, as NuScale does not utilize these features. The only credited engineered safety feature (ESF) for fission product control is the containment vessel with its isolation systems.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "229",
+      "hop": 3,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
     "nuscale_ch01_0331": {
       "node_id": "nuscale_ch01_0331",
       "title": "SRP 9.2.5, Rev 3: Ultimate Heat SinkII.4 Cooling Water System Inspection",
-      "summary": "The NuScale design fully conforms to SRP 9.2.5, Rev 3, Section II.4 regarding Cooling Water System Inspection, with no exceptions or comments noted. This indicates that the inspection requirements for the ultimate heat sink's cooling water system are met as specified in the regulatory criteria.",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-119 Revision 5\nSRP 9.2.4, Rev 3: Potable and \nSanitary Water SystemsII.1 Control of Releases of Radioactive \nMaterials to the PWSWPartially Conforms The NuScale potable and sanitary water \nsystems do not interface with systems potentially containing radioactivity. The \nNuScale potable and sanitary water systems \nare designed such that failure will not result in flooding or other adverse impacts on \nessential SSC.9.2.4\nSRP 9.2.5, Rev 3: Ultimate \nHeat SinkII.1 Protection Against Natural \nPhenomenaPartially Conforms Since RG 1.27 is not applicable to the \nNuScale design, compliance with GDC 2 is demonstrated by adherence to RG 1.13, \nRegulatory Positions C.1 and C.2. The \nNuScale UHS provides both spent fuel cooling and containment heat removal, and \nis protected from natural phenomena and \nsite-related events by the Seismic Category I RXB structure and with a Seismic Category I \nemergency makeup line.9.2.5\nSRP 9.2.5, Rev 3: Ultimate \nHeat SinkII.2 Sharing of Structures, Systems, and \nComponentsConforms None. 9.2.5\nSRP 9.2.5, Rev 3: Ultimate \nHeat SinkII.3 Cooling Water System Partially Conforms This acceptance criterion is applicable \nexcept for aspects related to the use of \nfiberglass piping (see RG 1.72). The NuScale \ndesign does not use fiberglass piping.9.2.5\nSRP 9.2.5, Rev 3: Ultimate \nHeat SinkII.4 Cooling Water System Inspection Conforms None. 9.2.5\nSRP 9.2.5, Rev 3: Ultimate \nHeat SinkII.5 Cooling Water System Testing Conforms None. 9.2.5Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "The NuScale design fully conforms to SRP 9.2.5, Rev 3, Section II.4 requirements for Cooling Water System Inspection, with no exceptions or comments noted. This indicates that the inspection criteria for the ultimate heat sink's cooling water system are met as specified in the regulatory guidance.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "247",
-      "hop": 3
+      "hop": 3,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
     "nuscale_ch01_0063": {
       "node_id": "nuscale_ch01_0063",
       "title": "Emergency Core Cooling System Valve Design Certification Application Demonstration Test",
-      "summary": "This section describes the demonstration test program for the Emergency Core Cooling System (ECCS) valves in the NuScale reactor design. The test program aimed to verify the functional performance of the ECCS valves—including their operation at reactor pressures and temperatures, and in borated coolant—using a test setup that replicated the actual valve configuration and included unique features like the inadvertent actuation block (IAB). Testing was conducted at a specialized facility to ensure the valves met safety and operational requirements.",
+      "content": "NuScale Final Safety Analysis Report Requirements for Additional Technical Information\nTier 2 1.5-7 Revision 5Test results confirmed the operability of th e control rod drive sh afts for a range of \npotential component conditions and distortions. Test results also confirmed CRA drop \ntime and CRA impact force at end of drop.\n1.5.1.8 Emergency Core Cooling System Valve Design Certification Application \nDemonstration Test\nThe NPM design utilizes emergency core cool ing system (ECCS) valves. The reactor vent \nvalves (RVVs) are located on th e reactor vessel pressurizer, and the reactor recirculation \nvalves (RRVs) are located on the reactor vessel downcomer. The RVVs and RRVs are \nfunctionally similar in design, however the RV Vs are larger than the RRVs. Each of the \nECCS valves are pilot operated by remote -mounted trip and reset solenoid valves \nlocated at the reactor containment bounda ry. An inadvertent actuation block (IAB) \nfeature is included in the system, located inside containment on each main valve. \nA test program was developed to demonstrate functional performance of the ECCS \nvalve system design including the unique  aspects of the design, such as the \nconfiguration of the ECCS valve components  and the IAB feature. The purpose of this \ntest program was to\n• demonstrate the ECCS valves function  at reactor operating pressures and \ntemperatures.\n• demonstrate the ECCS valves func tion in borated reactor coolant.\nTesting activities were performed at the Curtis s-Wright Valve Group Ta rget Rock facility \nin Farmingdale, New York, usin g high pressure and temperat ure valve test cells. A test \narticle was designed to represent an RRV consisting of the main valve, trip valve, reset valve, and IAB valve components. To repres ent the NPM design, a pilot-operated main \nvalve was used with an inle t connected to a source able to provide water at reactor \noperating pressures and temperatures, and an  outlet that exhausted to atmosphere. \nTrip line tubing and a trip valve representa tive of the NPM design  was connected to the \nmain valve to simulate NPM valve actuatio n performance and potential for boric acid \nbuildup in internal passages. A reset valve was used to pressurize and close the main \nvalve prior to each test run. A representative  IAB valve was used in the same functional \nconfiguration as the NPM design.\nTypes of tests carried out included main va lve actuation, IAB functionality, and boric \nacid effects. Boric acid effe cts testing was performed using a vessel simulating the main \nvalve control chamber in place of the main  valve. Boric acid concentrations were \nselected to bound refueling and operating boron concentrations for the NPM design. \nTests were performed through the range of reactor operating pressures and \ntemperatures.\nThis test program was inspected by the NRC in accordance with Inspection Procedures \nIP35034. \n1.5.2 NuScale Test and Inspection Plans\nInformation on NuScale test and inspection plans related to plant startup testing is \nprovided in Section 14.2.",
+      "summary": "This section describes the demonstration test program for the Emergency Core Cooling System (ECCS) valves in the NuScale reactor design. The program aimed to verify the functional performance of the ECCS valves—including their operation at reactor pressures and temperatures, and in borated coolant—using test articles and facilities that simulated actual operating conditions. The tests also evaluated unique design features such as the inadvertent actuation block (IAB) and confirmed the valves' operability and response.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "89",
-      "hop": 3
+      "hop": 4,
+      "references": []
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0069",
-      "target": "nuscale_ch01_0020",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A provides detailed drawings and diagrams that visually clarify the design and operation of systems whose safety considerations and operational benefits are described in Section B, connecting the physical layout to the functional safety features."
-    },
-    {
-      "source": "nuscale_ch01_0069",
+      "source": "nuscale_ch01_0024",
       "target": "nuscale_ch01_0022",
       "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A provides detailed drawings and diagrams that visually clarify the design and operation of systems, which include the passive safety features whose material benefits and operational advantages are described in Section B."
+      "confidence": 0.9,
+      "description": "Section A describes the ECCS's passive decay heat removal function, which relies on venting steam into the CNV, while Section B details the CNV's vacuum conditions that enable effective condensation and heat transfer for the ECCS, thus specifying the supporting environment for ECCS operation."
     },
     {
-      "source": "nuscale_ch01_0069",
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A provides a general description of the NuScale passive safety approach (ECCS) as outlined in Chapter 1, while Section B details the specific components and operation of the ECCS as described in Chapter 5, thus Section B specifies the technical implementation of the general approach in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0021",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the specific operation and components of the passive Emergency Core Cooling System (ECCS), which is an example of the general passive safety features introduced in Section B as part of the engineered safety features of the NuScale design."
+    },
+    {
+      "source": "nuscale_ch01_0024",
+      "target": "nuscale_ch01_0020",
+      "relation": "IS_PREREQUISITE_OF",
+      "confidence": 0.95,
+      "description": "Section A describes the ECCS as a passive safety system that relies on the containment vessel (CNV) environment, while Section B details the safety benefits of maintaining a vacuum in the CNV, which is a prerequisite for the effective operation of passive systems like the ECCS."
+    },
+    {
+      "source": "nuscale_ch01_0022",
+      "target": "nuscale_ch01_0025",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the general passive safety feature of maintaining a vacuum in the containment vessel (CNV), which supports the specific passive Emergency Core Cooling System (ECCS) detailed in Section B by providing an environment that enhances the reliability and effectiveness of passive decay heat removal."
+    },
+    {
+      "source": "nuscale_ch01_0022",
+      "target": "nuscale_ch01_0021",
+      "relation": "REFERENCES",
+      "confidence": 1.0,
+      "description": "Section A and Section B are identical excerpts describing the vacuum maintenance in the CNV and its safety benefits, thus Section A directly references and repeats the content of Section B."
+    },
+    {
+      "source": "nuscale_ch01_0022",
+      "target": "nuscale_ch01_0020",
+      "relation": "SEMANTIC",
+      "confidence": 1.0,
+      "description": "Section A and Section B are identical excerpts describing the benefits of maintaining a vacuum in the CNV, thus they provide the same information regarding passive safety features relevant to both general safety approach and specific system details."
+    },
+    {
+      "source": "nuscale_ch01_0025",
+      "target": "nuscale_ch01_0021",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the Emergency Core Cooling System's passive heat removal function, which relies on venting steam into the containment vessel (CNV), while Section B details the CNV's vacuum condition that enables efficient condensation of steam during such passive safety operations."
+    },
+    {
+      "source": "nuscale_ch01_0025",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the Emergency Core Cooling System's passive heat removal function, while Section B outlines the safety benefits of maintaining a vacuum in the containment vessel, which supports the effectiveness and reliability of passive systems like the ECCS."
+    },
+    {
+      "source": "nuscale_ch01_0044",
       "target": "nuscale_ch01_0024",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A provides detailed drawings and diagrams, including instrumentation and control layouts, that visually clarify the design and operation of passive safety systems such as the Emergency Core Cooling System described in Section B."
+      "description": "Both Section A and Section B describe specific passive safety systems (the DHRS and ECCS, respectively) that implement the general NuScale passive safety approach outlined in Chapter 1 by providing independent, passive means of decay heat removal under different accident scenarios."
     },
     {
-      "source": "nuscale_ch01_0069",
-      "target": "nuscale_ch01_0052",
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0022",
       "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A provides detailed drawings and diagrams of NuScale's systems, which can be used to visually clarify and support the design features and parameters compared to other facilities as described in Section B."
+      "description": "Section A describes a passive decay heat removal system that relies on natural circulation and passive condensers, while Section B details the containment vessel's vacuum environment, which supports the reliability and effectiveness of passive safety systems by minimizing corrosion and facilitating leak detection."
     },
     {
-      "source": "nuscale_ch01_0069",
+      "source": "nuscale_ch01_0044",
       "target": "nuscale_ch01_0025",
       "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A provides detailed drawings and diagrams that visually clarify the design and operation of passive safety systems, such as the ECCS described in Section B, thereby specifying the implementation details of the general passive safety approach."
+      "confidence": 0.95,
+      "description": "Section A describes the passive Decay Heat Removal System (DHRS) as part of NuScale's overall passive safety approach, while Section B details the Emergency Core Cooling System (ECCS) as another specific passive system, both of which are concrete implementations of the general passive safety philosophy outlined in Chapter 1."
     },
     {
-      "source": "nuscale_ch01_0020",
+      "source": "nuscale_ch01_0669",
+      "target": "nuscale_ch01_0024",
+      "relation": "SATISFIES",
+      "confidence": 0.9,
+      "description": "Section A outlines regulatory criteria and conformance requirements for passive safety system responses to specific transients, while Section B describes the design and function of the Emergency Core Cooling System as a passive safety feature that addresses those criteria."
+    },
+    {
+      "source": "nuscale_ch01_0669",
+      "target": "nuscale_ch01_0022",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A outlines regulatory criteria and accident scenarios that NuScale's passive safety systems must address, while Section B describes specific design features of the containment vessel (CNV) that contribute to passive safety, thus providing detailed examples of how the general passive safety approach in Section A is implemented."
+    },
+    {
+      "source": "nuscale_ch01_0669",
+      "target": "nuscale_ch01_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A outlines regulatory criteria and conformance requirements for passive safety system responses to specific transients, while Section B describes the design and operation of the Emergency Core Cooling System (ECCS) as a specific passive safety feature that addresses those criteria."
+    },
+    {
+      "source": "nuscale_ch01_0666",
+      "target": "nuscale_ch01_0024",
+      "relation": "SATISFIES",
+      "confidence": 0.95,
+      "description": "Section A outlines regulatory criteria for system pressure response to certain transients, while Section B describes the passive Emergency Core Cooling System (ECCS) that is designed to satisfy these criteria by providing passive decay heat removal during such events."
+    },
+    {
+      "source": "nuscale_ch01_0666",
       "target": "nuscale_ch01_0022",
       "relation": "SUPPORTS",
-      "confidence": 1.0,
-      "description": "Section A and Section B are identical excerpts describing the vacuum maintenance in the CNV and its passive safety benefits, thus they provide the same supporting details for the passive safety approach in both general and engineered safety feature contexts."
+      "confidence": 0.85,
+      "description": "Section A outlines regulatory criteria and conformance for system pressure during certain transients, while Section B describes passive design features (vacuum in the CNV) that support meeting these criteria by enhancing safety and reliability."
     },
     {
-      "source": "nuscale_ch01_0020",
+      "source": "nuscale_ch01_0666",
+      "target": "nuscale_ch01_0025",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A references regulatory criteria for system pressure response to certain transients, while Section B describes the Emergency Core Cooling System as a specific passive system designed to remove decay heat, thereby supporting the passive safety approach referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch05_0003",
       "target": "nuscale_ch01_0024",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A outlines general passive safety features of the NuScale design, such as maintaining a vacuum in the containment vessel, while Section B details a specific passive system—the Emergency Core Cooling System—that implements these safety principles for decay heat removal."
+      "description": "Section A describes the general design basis of the NuScale reactor coolant system relying on passive natural circulation, while Section B details the specific passive Emergency Core Cooling System (ECCS) that implements this approach for decay heat removal during a LOCA, thus Section B provides a concrete example of the passive safety approach outlined in Section A."
     },
     {
-      "source": "nuscale_ch01_0020",
-      "target": "nuscale_ch01_0052",
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch01_0022",
       "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes specific safety benefits of maintaining a vacuum in the CNV as part of NuScale's passive safety approach, while Section B provides a comparative overview of NuScale's design features (including passive safety systems) relative to typical PWRs, thus Section A's details support and exemplify the broader claims made in Section B."
+      "confidence": 0.9,
+      "description": "Section A describes the reliance on natural circulation for reactor cooling as a passive safety feature, while Section B details how maintaining a vacuum in the containment vessel (CNV) supports the reliability and effectiveness of such passive systems by minimizing corrosion and heat transfer, thus supporting the overall passive safety approach."
     },
     {
-      "source": "nuscale_ch01_0020",
+      "source": "nuscale_ch05_0003",
       "target": "nuscale_ch01_0025",
       "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A outlines the general passive safety philosophy of maintaining a vacuum in the containment vessel (CNV), which underpins the operation of specific passive systems like the Emergency Core Cooling System (ECCS) detailed in Section B, as the vacuum environment enhances the effectiveness and reliability of these passive safety features."
+      "confidence": 0.95,
+      "description": "Section A describes the general reliance on passive natural circulation for reactor cooling, while Section B details the specific passive Emergency Core Cooling System (ECCS) components that implement this approach for decay heat removal during accidents."
     },
     {
-      "source": "nuscale_ch01_0022",
+      "source": "nuscale_ch01_0189",
       "target": "nuscale_ch01_0024",
       "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes the vacuum conditions in the containment vessel (CNV) that support the reliability and effectiveness of passive safety features, while Section B details the Emergency Core Cooling System (ECCS), a specific passive safety system that operates within the CNV environment described in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0022",
-      "target": "nuscale_ch01_0052",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes specific design features of the NuScale containment vessel that contribute to its passive safety approach, while Section B provides a comparative overview of these and other features relative to typical PWR designs, thereby contextualizing the passive safety approach within the broader industry."
-    },
-    {
-      "source": "nuscale_ch01_0022",
-      "target": "nuscale_ch01_0025",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the general passive safety feature of maintaining a vacuum in the containment vessel (CNV), which supports the function of specific passive systems like the Emergency Core Cooling System (ECCS) detailed in Section B by enhancing reliability and reducing corrosion, thus contributing to the overall passive safety approach."
-    },
-    {
-      "source": "nuscale_ch01_0024",
-      "target": "nuscale_ch01_0052",
-      "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A describes the specific design and operation of NuScale's passive Emergency Core Cooling System, while Section B provides a comparative overview of NuScale's major design features (including passive safety systems) against typical PWRs, thus Section A provides details that support and exemplify the general claims made in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0024",
-      "target": "nuscale_ch01_0025",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A (Ch.01) provides a general overview of the NuScale passive safety approach, while Section B (Ch.05) details the specific design and operation of the Emergency Core Cooling System as an implementation of that approach."
-    },
-    {
-      "source": "nuscale_ch01_0052",
-      "target": "nuscale_ch01_0025",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general comparison of NuScale's passive safety features with those of typical PWRs, while Section B details a specific passive safety system (the ECCS) that exemplifies the type of system referenced in Section A's overview."
-    },
-    {
-      "source": "nuscale_ch01_0669",
-      "target": "nuscale_ch01_0069",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A references regulatory criteria and specific instrument setpoints for passive safety system responses, while Section B provides the detailed drawings and diagrams that visually clarify and specify the design and instrumentation referenced in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0669",
-      "target": "nuscale_ch01_0020",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section B describes the general passive safety features of the NuScale containment (CNV) that support the specific safety criteria and system responses to transients and accidents analyzed in Section A, such as those involving feedwater and steam flow events."
-    },
-    {
-      "source": "nuscale_ch01_0669",
-      "target": "nuscale_ch01_0022",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A outlines regulatory criteria and accident scenarios that NuScale's passive safety systems must address, while Section B describes specific design features of the containment vessel (CNV) that contribute to passive safety, thus Section B provides detailed examples of how the general passive safety approach referenced in Section A is implemented."
-    },
-    {
-      "source": "nuscale_ch01_0189",
-      "target": "nuscale_ch01_0069",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A discusses regulatory criteria and partial conformance regarding containment and ECCS water chemistry in the NuScale design, while Section B provides detailed drawings and diagrams that visually clarify the specific passive system components referenced in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0189",
-      "target": "nuscale_ch01_0020",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A discusses how NuScale's passive safety approach partially conforms to regulatory criteria due to the absence of traditional systems like containment spray and sump, while Section B describes the unique vacuum containment design that eliminates the need for such systems, directly connecting the design approach in A to the specific system details in B."
+      "description": "Section A discusses the regulatory acceptance criteria for containment pressure and water chemistry during ECCS operation, noting partial conformance due to differences in NuScale's design, while Section B describes the specific passive ECCS features in NuScale that address decay heat removal and water collection, thus Section B provides the detailed system implementation that Section A evaluates for regulatory compliance."
     },
     {
       "source": "nuscale_ch01_0189",
       "target": "nuscale_ch01_0022",
       "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A discusses how NuScale's design partially conforms to regulatory criteria for containment spray and sump systems, noting their absence, while Section B describes the containment vessel's vacuum conditions and associated benefits, both sections connecting through the unique passive safety features that replace traditional systems."
+      "confidence": 0.9,
+      "description": "Section A discusses how NuScale's design partially conforms to regulatory criteria for containment water chemistry, noting the absence of a containment spray system, while Section B describes the vacuum conditions in the containment vessel that eliminate the need for such systems, thus providing context for the design choices referenced in Section A."
     },
     {
-      "source": "nuscale_ch01_0044",
-      "target": "nuscale_ch01_0069",
+      "source": "nuscale_ch01_0189",
+      "target": "nuscale_ch01_0025",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A describes the functional design and operation of the passive safety system, while Section B provides detailed drawings and diagrams that visually specify and clarify the components and configuration referenced in Section A."
+      "description": "Section A discusses regulatory criteria and partial conformance regarding containment spray and sump systems, noting their absence in NuScale's passive safety approach, while Section B details the specific passive ECCS design features that achieve decay heat removal without those systems, thus illustrating how the general passive safety approach in Ch.01 is realized through the specific systems in Ch.05."
+    },
+    {
+      "source": "nuscale_ch01_0188",
+      "target": "nuscale_ch01_0024",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A discusses regulatory criteria for emergency coolant water chemistry and notes partial conformance due to the absence of certain systems in NuScale's design, while Section B describes the NuScale ECCS as a passive system that collects condensed steam in the containment, directly illustrating how NuScale's passive safety approach implements (and diverges from) the referenced regulatory expectations."
+    },
+    {
+      "source": "nuscale_ch01_0188",
+      "target": "nuscale_ch01_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A discusses regulatory criteria for emergency coolant water chemistry, noting partial conformance due to the absence of certain systems in NuScale's design, while Section B describes how maintaining a vacuum in the containment vessel (CNV) minimizes moisture and corrosion, which supports the rationale for NuScale's alternative passive safety features."
+    },
+    {
+      "source": "nuscale_ch01_0188",
+      "target": "nuscale_ch01_0025",
+      "relation": "SATISFIES",
+      "confidence": 0.85,
+      "description": "Section A discusses regulatory criteria for emergency coolant water chemistry and notes partial conformance due to the absence of certain systems in NuScale's design, while Section B describes the NuScale ECCS passive safety system that replaces those systems, connecting them through the design's approach to meeting regulatory expectations."
     },
     {
       "source": "nuscale_ch01_0044",
-      "target": "nuscale_ch01_0020",
-      "relation": "SUPPORTS",
+      "target": "nuscale_ch01_0669",
+      "relation": "SATISFIES",
       "confidence": 0.9,
-      "description": "Section A describes a specific passive safety system (the decay heat removal system) that operates within the containment vessel, while Section B outlines the safety benefits of maintaining a vacuum in the containment vessel, which supports the effectiveness and reliability of passive systems like the one described in Section A."
+      "description": "Section A describes the design and operation of NuScale's passive decay heat removal system, while Section B outlines the regulatory criteria and accident scenarios (such as inadvertent operation of the decay heat removal system) that the passive system in Section A is intended to address, showing that the design in A is evaluated against the requirements in B."
     },
     {
       "source": "nuscale_ch01_0044",
-      "target": "nuscale_ch01_0022",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes a specific passive safety system (the decay heat removal system) that operates within the containment vessel, while Section B details the engineered features of the containment vessel (CNV) that support and enhance the effectiveness of such passive systems by maintaining a vacuum and reducing corrosion and heat transfer."
-    },
-    {
-      "source": "nuscale_ch01_0188",
-      "target": "nuscale_ch01_0069",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A discusses the regulatory conformance of NuScale's passive safety systems, referencing the absence of certain systems (like containment spray) in the design, while Section B provides detailed drawings and diagrams that visually clarify the actual passive system configurations implemented in NuScale, thus Section B specifies the technical details for the general regulatory discussion in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0188",
-      "target": "nuscale_ch01_0020",
-      "relation": "SUPPORTS",
+      "target": "nuscale_ch01_0666",
+      "relation": "SATISFIES",
       "confidence": 0.9,
-      "description": "Section A discusses how NuScale's design partially conforms to regulatory criteria regarding emergency coolant water chemistry, noting the absence of certain systems (e.g., containment spray) present in traditional PWRs, while Section B describes the unique vacuum-maintained containment vessel (CNV) design features that eliminate the need for those systems, thus providing context for the differences in passive safety approach."
+      "description": "Section A describes the passive decay heat removal system's design and operation, while Section B lists regulatory criteria (DSRS 15.1.1-15.1.4) that the system must conform to, connecting them through the requirement that the passive system's performance must satisfy these specific regulatory scenarios."
     },
     {
-      "source": "nuscale_ch01_0188",
-      "target": "nuscale_ch01_0022",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A discusses regulatory criteria for emergency coolant water chemistry and notes partial conformance due to the absence of certain systems in the NuScale design, while Section B describes how the NuScale containment vessel's vacuum environment minimizes moisture and corrosion, thereby supporting the rationale for not needing those systems."
-    },
-    {
-      "source": "nuscale_ch01_0666",
-      "target": "nuscale_ch01_0069",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A outlines the regulatory criteria and conformance for passive safety system responses to specific transients, while Section B provides the detailed piping and instrumentation diagrams that visually represent the design and configuration of those passive systems, thereby specifying the technical implementation of the general safety approach described in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0666",
-      "target": "nuscale_ch01_0020",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section B describes the general passive safety features of the NuScale containment (CNV) that support the system pressure criteria and accident scenarios analyzed in Section A, thereby providing the design basis for how passive systems address the regulatory requirements detailed in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0666",
-      "target": "nuscale_ch01_0022",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section B describes the engineered safety features (such as the containment vessel vacuum) that support the passive safety approach referenced in Section A's conformance with regulatory criteria for system pressure during specific transients."
-    },
-    {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch01_0069",
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch05_0003",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section A provides a general description of the NuScale reactor coolant system's reliance on passive natural circulation, while Section B offers detailed drawings and diagrams that visually specify and clarify the components and systems described in Section A."
+      "description": "Section A describes the passive decay heat removal system as part of the overall passive safety approach introduced in Section B, which outlines the design basis reliance on natural circulation without pumps."
     },
     {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch01_0020",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A details the specific design of the reactor coolant system relying on natural circulation, which is an implementation of the general passive safety approach described in Section B's overview of plant safety features such as vacuum maintenance in the containment vessel."
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0189",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the passive decay heat removal system as part of NuScale's overall passive safety approach, while Section B discusses regulatory criteria for containment systems (such as spray and sump) that NuScale partially conforms to due to design differences, connecting them through the implementation and regulatory evaluation of passive safety features."
     },
     {
-      "source": "nuscale_ch05_0003",
-      "target": "nuscale_ch01_0022",
+      "source": "nuscale_ch01_0044",
+      "target": "nuscale_ch01_0188",
+      "relation": "SATISFIES",
+      "confidence": 0.8,
+      "description": "Section A describes the passive decay heat removal system in NuScale's design, while Section B discusses regulatory criteria for emergency coolant water chemistry, noting partial applicability due to differences in system design; thus, Section A's system implementation is being compared against Section B's regulatory expectations."
+    },
+    {
+      "source": "nuscale_ch01_0669",
+      "target": "nuscale_ch01_0666",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A references and provides additional details (such as instrument spans and setpoints using RG 1.105) for the same passive safety system criteria described in Section B, specifically regarding system pressure conformance for the listed transients."
+    },
+    {
+      "source": "nuscale_ch01_0669",
+      "target": "nuscale_ch05_0003",
       "relation": "SPECIFIES",
       "confidence": 0.9,
-      "description": "Section A details the specific design of the reactor coolant system that uses natural circulation (a passive safety feature), while Section B describes the general plant-level passive safety approach of maintaining a vacuum in the containment vessel, both illustrating how NuScale implements passive safety through system design and containment environment control."
+      "description": "Section A references regulatory criteria and accident scenarios that the NuScale passive safety approach must address, while Section B details the specific design features of the reactor coolant system that implement the passive safety functions described in Section A."
     },
     {
       "source": "nuscale_ch01_0669",
       "target": "nuscale_ch01_0189",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes how NuScale's passive safety approach addresses specific transient events and conforms to regulatory criteria, while Section B details the regulatory requirements for containment pressure and water chemistry during ECCS operation, both connecting through their focus on passive system performance and regulatory conformance in accident scenarios."
-    },
-    {
-      "source": "nuscale_ch01_0669",
-      "target": "nuscale_ch01_0044",
-      "relation": "SATISFIES",
-      "confidence": 0.95,
-      "description": "Section A references regulatory criteria and accident scenarios that require passive safety system responses, while Section B details the specific passive systems (such as the decay heat removal system) that are designed to address those scenarios, showing that the systems in B are intended to satisfy the requirements and accident responses outlined in A."
-    },
-    {
-      "source": "nuscale_ch01_0669",
-      "target": "nuscale_ch01_0188",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A describes specific passive safety system responses and regulatory conformance for transient events, while Section B details chemical and water chemistry requirements for emergency coolant systems, both addressing different aspects of NuScale's passive safety approach as required in the analysis question."
+      "description": "Section A describes the NuScale passive safety approach in terms of system responses and regulatory conformance for specific transients, while Section B details the passive system's containment pressure and water chemistry requirements, both connecting through their focus on how NuScale's passive systems meet regulatory criteria for safety analysis."
     },
     {
       "source": "nuscale_ch01_0669",
-      "target": "nuscale_ch01_0666",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides detailed instrument spans and setpoints (using RG 1.105) for the passive safety scenarios described in Section B, which specifies the system pressure criteria for the same events, thus Section A elaborates on the technical implementation of the general requirements in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0669",
-      "target": "nuscale_ch05_0003",
-      "relation": "SATISFIES",
-      "confidence": 0.9,
-      "description": "Section A references regulatory criteria and accident scenarios that the NuScale design must address, while Section B describes the specific passive reactor coolant system features (such as natural circulation and absence of pumps) that are intended to satisfy those regulatory requirements."
-    },
-    {
-      "source": "nuscale_ch01_0189",
-      "target": "nuscale_ch01_0044",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A discusses the partial conformance of NuScale's design with regulatory criteria for containment spray and sump systems, noting their absence, while Section B describes the passive decay heat removal system that replaces these traditional systems, thus providing the specific implementation details for the general passive safety approach referenced in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0189",
       "target": "nuscale_ch01_0188",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A references and partially conforms to the regulatory requirements in Section B, specifically noting that while the intent of the pH and water chemistry criteria applies, the NuScale design differs in not using a containment spray system or sump as described in Section B."
-    },
-    {
-      "source": "nuscale_ch01_0189",
-      "target": "nuscale_ch01_0666",
-      "relation": "SATISFIES",
-      "confidence": 0.8,
-      "description": "Section A discusses the NuScale design's partial conformance with regulatory criteria for containment and ECCS water chemistry, while Section B details the NuScale design's conformance with system pressure criteria for specific passive safety events, connecting them through their evaluation of NuScale's passive safety systems against regulatory requirements."
-    },
-    {
-      "source": "nuscale_ch01_0189",
-      "target": "nuscale_ch05_0003",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A discusses the regulatory conformance of NuScale's passive safety approach, specifically noting deviations from traditional PWR systems (like the absence of a containment spray system), while Section B details the design basis of NuScale's passive reactor coolant system that relies on natural circulation and integral components, thus providing the technical specifics that explain and justify the differences highlighted in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0044",
-      "target": "nuscale_ch01_0188",
-      "relation": "SATISFIES",
-      "confidence": 0.8,
-      "description": "Section A describes the NuScale passive safety system's design and operation, while Section B discusses regulatory criteria for emergency coolant water chemistry, noting partial conformance due to design differences; thus, Section A's design choices are evaluated against Section B's regulatory requirements."
-    },
-    {
-      "source": "nuscale_ch01_0044",
-      "target": "nuscale_ch01_0666",
-      "relation": "SATISFIES",
-      "confidence": 0.9,
-      "description": "Section A describes the design and function of NuScale's passive decay heat removal system, while Section B lists regulatory criteria (DSRS 15.1.1-15.1.4) that these passive systems must satisfy regarding system pressure during specific transients, thus connecting the design features in A to the regulatory requirements in B."
-    },
-    {
-      "source": "nuscale_ch01_0044",
-      "target": "nuscale_ch05_0003",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes the passive decay heat removal capability of the Chemical and Volume Control System, which is an implementation detail that exemplifies the general passive safety approach of natural circulation outlined in Section B's design basis for the reactor coolant system."
-    },
-    {
-      "source": "nuscale_ch01_0188",
-      "target": "nuscale_ch01_0666",
-      "relation": "SEMANTIC",
-      "confidence": 0.8,
-      "description": "Section A discusses NuScale's partial conformance with regulatory criteria for emergency coolant water chemistry, while Section B addresses NuScale's conformance with system pressure criteria for specific passive safety events, both referencing how NuScale's passive safety systems align with regulatory requirements but focusing on different technical aspects."
-    },
-    {
-      "source": "nuscale_ch01_0188",
-      "target": "nuscale_ch05_0003",
       "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A discusses regulatory criteria for emergency coolant water chemistry and notes partial conformance due to the absence of certain systems in the NuScale design, while Section B describes the NuScale reactor coolant system's reliance on natural circulation and lack of traditional components, directly explaining why some regulatory criteria in Section A are only partially applicable."
+      "confidence": 0.8,
+      "description": "Section A describes specific transient events and the associated regulatory criteria for system response, while Section B addresses water chemistry requirements during emergency cooling, both of which are connected through their relevance to the performance and safety of NuScale's passive safety systems under accident conditions."
     },
     {
       "source": "nuscale_ch01_0666",
       "target": "nuscale_ch05_0003",
-      "relation": "SATISFIES",
+      "relation": "SPECIFIES",
       "confidence": 0.9,
-      "description": "Section A references regulatory criteria for system pressure response to transients, while Section B specifies the design features of the NuScale reactor coolant system—including reliance on natural circulation—that are intended to satisfy those criteria."
+      "description": "Section A references regulatory criteria for system pressure response to certain transients, while Section B describes the NuScale reactor coolant system's reliance on passive natural circulation, which is the specific passive safety feature that addresses those criteria."
     },
     {
-      "source": "nuscale_ch01_0168",
-      "target": "nuscale_ch01_0069",
+      "source": "nuscale_ch01_0666",
+      "target": "nuscale_ch01_0189",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A discusses the regulatory conformance of NuScale's containment systems, noting the absence of certain passive safety features, while Section B provides detailed diagrams that visually clarify the specific design and instrumentation of these systems, thereby specifying the technical implementation of the general safety approach described in Section A."
+      "description": "Section A describes NuScale's conformance with passive safety criteria for system pressure during specific transients, while Section B details how NuScale's passive ECCS partially conforms to containment pressure and water chemistry requirements, thus Section B provides specific technical details that elaborate on the general passive safety approach referenced in Section A."
     },
     {
-      "source": "nuscale_ch01_0168",
-      "target": "nuscale_ch01_0020",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section B provides specific design features and operational benefits of the NuScale containment vessel that illustrate how the passive safety approach described generally in Section A is implemented, particularly regarding the absence of active fission product clean-up systems."
-    },
-    {
-      "source": "nuscale_ch01_0168",
-      "target": "nuscale_ch01_0022",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section B provides specific design features and operational benefits of the NuScale containment vessel (CNV) that support the general passive safety approach referenced in Section A, illustrating how the passive safety philosophy is realized in practice."
-    },
-    {
-      "source": "nuscale_ch01_0167",
-      "target": "nuscale_ch01_0069",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section B provides detailed drawings and diagrams that visually clarify the specific passive systems referenced in Section A's general description of NuScale's containment approach."
-    },
-    {
-      "source": "nuscale_ch01_0167",
-      "target": "nuscale_ch01_0020",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section B describes the design features and safety benefits of maintaining a vacuum in the NuScale containment vessel, which Section A references as part of its explanation for why certain traditional fission product control systems are not included in the NuScale design."
-    },
-    {
-      "source": "nuscale_ch01_0167",
-      "target": "nuscale_ch01_0022",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A discusses the absence of traditional fission product clean-up and active containment heat removal systems in the NuScale design, while Section B details how maintaining a vacuum in the containment vessel (CNV) provides passive safety benefits that support this design choice."
-    },
-    {
-      "source": "nuscale_ch01_0043",
-      "target": "nuscale_ch01_0069",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general description of the passive safety approach and system functions, while Section B offers detailed drawings and diagrams that visually specify and clarify the components and operation described in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0043",
-      "target": "nuscale_ch01_0020",
+      "source": "nuscale_ch01_0666",
+      "target": "nuscale_ch01_0188",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A describes the passive decay heat removal system's design and operation, while Section B outlines safety benefits (such as corrosion reduction and leak detection) that result from maintaining a vacuum in the containment vessel, which supports the effectiveness and reliability of the passive systems described in Section A."
+      "description": "Section A discusses NuScale's conformance with regulatory criteria for system pressure during certain transients, while Section B addresses conformance with water chemistry requirements for emergency coolant, both providing evidence of how specific passive safety system features in Ch.05 meet the broader passive safety approach described in Ch.01."
     },
     {
-      "source": "nuscale_ch01_0043",
-      "target": "nuscale_ch01_0022",
-      "relation": "SUPPORTS",
-      "confidence": 0.8,
-      "description": "Section A describes the passive decay heat removal system's operational features, while Section B details the containment vessel's vacuum environment, which supports the reliability and effectiveness of passive safety systems like those in Section A by minimizing corrosion and facilitating leak detection."
-    },
-    {
-      "source": "nuscale_ch01_0023",
-      "target": "nuscale_ch01_0069",
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch01_0189",
       "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general description of the containment system's passive safety features, while Section B offers detailed drawings and diagrams that visually clarify and specify the design and operation of those same passive systems."
+      "confidence": 0.85,
+      "description": "Section A describes the NuScale reactor's reliance on passive natural circulation for coolant flow, while Section B discusses how the NuScale design partially conforms to regulatory criteria for emergency coolant systems by noting differences in system components (e.g., absence of containment spray and sump), thus connecting the general passive safety approach in Ch.01 with the specific passive system implementations and regulatory considerations in Ch.05."
     },
     {
-      "source": "nuscale_ch01_0023",
-      "target": "nuscale_ch01_0020",
+      "source": "nuscale_ch05_0003",
+      "target": "nuscale_ch01_0188",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the NuScale reactor's reliance on passive natural circulation for coolant flow, while Section B discusses how the NuScale design partially conforms to regulatory criteria for emergency coolant water chemistry, noting differences due to the absence of certain active systems referenced in the regulation."
+    },
+    {
+      "source": "nuscale_ch01_0189",
+      "target": "nuscale_ch01_0188",
       "relation": "REFERENCES",
-      "confidence": 1.0,
-      "description": "Section A and Section B are identical excerpts describing the containment vessel vacuum and its safety benefits, thus Section A directly references and repeats the content of Section B."
+      "confidence": 0.95,
+      "description": "Section A references and partially conforms to the regulatory requirements described in Section B, specifically noting that while the intent of the pH and water chemistry criteria applies, the specific system components referenced in B are not present in the NuScale design described in A."
     },
     {
-      "source": "nuscale_ch01_0023",
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the general passive safety approach of using closed-loop natural circulation and passive condensers for decay heat removal, while Section B details a specific passive system (ECCS) that also removes decay heat during a LOCA, both illustrating different implementations of NuScale's passive safety strategy."
+    },
+    {
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes the passive decay heat removal system's reliance on the reactor pool and condenser, while Section B details how maintaining a vacuum in the containment vessel supports the reliability and effectiveness of these passive safety systems by reducing corrosion and heat transfer pathways."
+    },
+    {
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A describes the general passive safety approach of using a closed-loop, natural circulation system for decay heat removal, while Section B details a specific passive system (ECCS) that also removes decay heat during a LOCA, both illustrating how the general approach in Ch.01 is implemented by specific systems in Ch.05."
+    },
+    {
+      "source": "nuscale_ch01_0168",
+      "target": "nuscale_ch01_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A discusses the general regulatory conformance of NuScale's containment systems with passive safety features, while Section B details the specific design and operation of the Emergency Core Cooling System as a passive safety system, thus Section B provides specific examples that illustrate and specify the general passive safety approach described in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0168",
+      "target": "nuscale_ch01_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section B provides specific design features and operational benefits of the NuScale containment vessel (CNV) that support the general passive safety approach referenced in Section A, particularly regarding the absence of active fission product clean-up and heat removal systems."
+    },
+    {
+      "source": "nuscale_ch01_0168",
+      "target": "nuscale_ch01_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A discusses the general regulatory conformance of NuScale's containment systems with passive safety features, while Section B provides specific details about the Emergency Core Cooling System (ECCS) as a passive safety system, thereby specifying how the general passive safety approach in Section A is implemented in practice."
+    },
+    {
+      "source": "nuscale_ch01_0167",
+      "target": "nuscale_ch01_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A discusses the general regulatory conformance of NuScale's containment systems, noting the absence of certain active fission product clean-up systems, while Section B details the specific passive Emergency Core Cooling System (ECCS) that provides decay heat removal, illustrating how NuScale's passive safety approach is implemented in practice."
+    },
+    {
+      "source": "nuscale_ch01_0167",
+      "target": "nuscale_ch01_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A discusses the absence of traditional containment fission product clean-up and active heat removal systems in the NuScale design, while Section B details how maintaining a vacuum in the containment vessel (CNV) provides passive safety benefits that compensate for the lack of such systems."
+    },
+    {
+      "source": "nuscale_ch01_0167",
+      "target": "nuscale_ch01_0025",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Section A discusses the general regulatory conformance of NuScale's containment systems, noting the absence of active fission product clean-up and pressure suppression systems, while Section B details the Emergency Core Cooling System (ECCS) as a specific passive safety feature that removes decay heat without active systems, illustrating how the general passive safety approach in Ch.01 is implemented through specific systems in Ch.05."
+    },
+    {
+      "source": "nuscale_ch01_0331",
+      "target": "nuscale_ch01_0024",
+      "relation": "SPECIFIES",
+      "confidence": 0.9,
+      "description": "Section A discusses the general regulatory conformance and inspection criteria for passive safety-related systems like the ultimate heat sink, while Section B details the specific design and operation of the NuScale Emergency Core Cooling System as a passive safety feature, thus Section B provides specific examples that illustrate and fulfill the general passive safety approach referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0331",
       "target": "nuscale_ch01_0022",
       "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A and Section B both describe the vacuum maintenance in the CNV and its benefits, indicating that the containment system's passive safety features are realized through the engineered safety feature materials, with both sections providing identical information."
+      "confidence": 0.9,
+      "description": "Section A discusses the regulatory conformance and safety design features of NuScale's cooling water systems, while Section B details specific engineered safety features (such as the vacuum-maintained CNV) that exemplify the passive safety approach referenced in Section A, thus Section B provides concrete examples that specify and implement the general passive safety approach described in Section A."
     },
     {
       "source": "nuscale_ch01_0331",
-      "target": "nuscale_ch01_0069",
+      "target": "nuscale_ch01_0025",
       "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section B provides detailed piping and instrumentation diagrams that visually clarify and specify the passive safety system designs described more generally in Section A's regulatory conformance discussion."
+      "confidence": 0.9,
+      "description": "Section A discusses the general regulatory conformance and safety design philosophy for NuScale's cooling water systems, while Section B provides specific details about the passive Emergency Core Cooling System (ECCS) that implements the passive safety approach referenced in Section A."
     },
     {
-      "source": "nuscale_ch01_0331",
-      "target": "nuscale_ch01_0020",
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0168",
       "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section A discusses regulatory conformance and inspection criteria for NuScale's cooling water and ultimate heat sink systems, while Section B describes specific passive safety features of the NuScale containment vessel (CNV), with both sections connected by their focus on passive safety mechanisms that support the plant's overall safety approach."
+      "description": "Section A describes the NuScale passive decay heat removal system as part of the general plant safety approach, while Section B discusses the conformance of NuScale's containment systems with regulatory criteria, specifically noting the absence of certain active or clean-up systems, thus both sections are connected by how NuScale's passive safety features (A) relate to regulatory expectations for containment and fission product control (B)."
     },
     {
-      "source": "nuscale_ch01_0331",
-      "target": "nuscale_ch01_0022",
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0167",
       "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A discusses regulatory conformance and inspection criteria for NuScale's cooling water and ultimate heat sink systems, while Section B details specific passive safety features (such as the CNV vacuum) that contribute to the plant's overall passive safety approach, thus Section B provides concrete examples that specify and implement the general passive safety approach referenced in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0063",
-      "target": "nuscale_ch01_0069",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A describes the functional testing and operability confirmation of ECCS valves, while Section B provides the detailed drawings and diagrams that visually represent these passive safety system components, thus Section B specifies the physical and control details for the systems discussed in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0063",
-      "target": "nuscale_ch01_0020",
-      "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A describes the testing and operability confirmation of the ECCS valves, which are a specific passive safety system, while Section B outlines general passive safety benefits of maintaining a vacuum in the containment vessel, showing that the specific ECCS valve system in A supports the broader passive safety approach described in B."
+      "description": "Section A describes the NuScale passive decay heat removal system as part of its overall passive safety approach, while Section B discusses the conformance of NuScale's containment systems with regulatory criteria, specifically noting the absence of certain active systems, thus Section A provides specific design details that exemplify the general passive safety approach referenced in Section B."
     },
     {
-      "source": "nuscale_ch01_0063",
-      "target": "nuscale_ch01_0022",
-      "relation": "SUPPORTS",
+      "source": "nuscale_ch01_0043",
+      "target": "nuscale_ch01_0331",
+      "relation": "SATISFIES",
       "confidence": 0.85,
-      "description": "Section A describes the testing and operability confirmation of ECCS valves, which are a specific passive safety system, while Section B outlines the general plant design features (such as the CNV vacuum) that support the reliability and effectiveness of passive safety systems like those in Section A."
+      "description": "Section A describes the design and function of NuScale's passive ultimate heat sink system, while Section B evaluates the system's conformance with regulatory criteria for ultimate heat sinks, connecting them through the regulatory assessment of the design described in Section A."
     },
     {
       "source": "nuscale_ch01_0168",
       "target": "nuscale_ch01_0167",
       "relation": "SUPPORTS",
       "confidence": 0.95,
-      "description": "Section A and Section B both discuss NuScale's partial conformance with SRP 6.5.3 requirements for containment fission product control, specifically noting the absence of fission product clean-up and pressure suppression systems in the NuScale design."
-    },
-    {
-      "source": "nuscale_ch01_0168",
-      "target": "nuscale_ch01_0043",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides the general regulatory context and conformance status for NuScale's passive safety approach, while Section B details a specific passive system (the Ultimate Heat Sink and DHRS) that exemplifies how NuScale implements passive safety to meet those regulatory expectations."
-    },
-    {
-      "source": "nuscale_ch01_0168",
-      "target": "nuscale_ch01_0023",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A discusses the regulatory conformance of NuScale's containment system, noting the absence of traditional fission product clean-up and pressure suppression systems, while Section B provides specific design details of the NuScale containment vessel (CNV), such as its vacuum maintenance and associated safety benefits, thereby illustrating how the general passive safety approach is implemented in the actual system design."
+      "description": "Section A (Secondary Containment) and Section B (Primary Containment) both discuss NuScale's partial conformance with SRP 6.5.3 criteria due to the absence of fission product clean-up and pressure suppression systems, directly connecting their regulatory evaluation of passive safety features."
     },
     {
       "source": "nuscale_ch01_0168",
       "target": "nuscale_ch01_0331",
       "relation": "SPECIFIES",
       "confidence": 0.85,
-      "description": "Section A discusses NuScale's conformance with containment-related passive safety criteria, while Section B addresses the conformance of passive cooling water systems, both providing specific examples of how NuScale's passive safety approach (from Ch.01) is implemented in different safety systems detailed in Ch.05."
-    },
-    {
-      "source": "nuscale_ch01_0168",
-      "target": "nuscale_ch01_0063",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A provides the general regulatory conformance context for NuScale's passive safety approach, while Section B details specific test results and technical information for a key passive safety system (ECCS valves) that implements part of that approach."
-    },
-    {
-      "source": "nuscale_ch01_0167",
-      "target": "nuscale_ch01_0043",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A discusses the general regulatory conformance of NuScale's containment approach, noting the absence of active fission product clean-up and pressure suppression systems, while Section B details the specific passive decay heat removal system (DHRS) that fulfills the passive safety function described in the general approach."
-    },
-    {
-      "source": "nuscale_ch01_0167",
-      "target": "nuscale_ch01_0023",
-      "relation": "SUPPORTS",
-      "confidence": 0.9,
-      "description": "Section A discusses the partial conformance of the NuScale containment system with regulatory criteria due to the absence of traditional fission product clean-up and pressure suppression systems, while Section B details the design features and operational benefits of the NuScale containment vessel (CNV), specifically its vacuum maintenance, which underpins the passive safety approach referenced in Section A."
+      "description": "Section A discusses the NuScale containment's lack of traditional active fission product clean-up and pressure suppression systems as part of its passive safety approach, while Section B details the design and inspection of the ultimate heat sink and cooling water systems that support passive safety by ensuring heat removal without reliance on active systems, thus both sections describe different components that together implement and exemplify NuScale's passive safety strategy."
     },
     {
       "source": "nuscale_ch01_0167",
       "target": "nuscale_ch01_0331",
       "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Both Section A and Section B describe how specific NuScale passive safety system designs partially conform to their respective regulatory criteria, highlighting the absence or modification of traditional systems (e.g., fission product clean-up, active heat removal, or interfaces with radioactive systems) as part of NuScale's passive safety approach."
+      "description": "Both Section A and Section B discuss how specific NuScale passive safety system designs partially conform to their respective regulatory criteria, highlighting the absence or modification of traditional systems (e.g., fission product clean-up, active heat removal, or interfaces with radioactive systems) as part of NuScale's passive safety approach."
     },
     {
-      "source": "nuscale_ch01_0167",
-      "target": "nuscale_ch01_0063",
+      "source": "nuscale_ch01_0063",
+      "target": "nuscale_ch01_0024",
       "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A discusses the general regulatory conformance of NuScale's containment systems, noting the absence of certain active safety features, while Section B provides specific test results demonstrating the operability of passive emergency core cooling system valves, illustrating how the specific passive systems in Ch.05 implement the broader passive safety approach described in Ch.01."
+      "confidence": 0.95,
+      "description": "Section A provides test results and technical validation for the ECCS valve operability, which are specific components described in Section B's general overview of the passive Emergency Core Cooling System."
     },
     {
-      "source": "nuscale_ch01_0043",
-      "target": "nuscale_ch01_0023",
+      "source": "nuscale_ch01_0063",
+      "target": "nuscale_ch01_0022",
       "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the passive decay heat removal system that relies on the reactor pool and condenser, while Section B details the containment vessel's vacuum environment, which supports the effectiveness of passive heat removal by minimizing heat transfer paths and corrosion, thus both sections describe complementary passive safety features that together fulfill NuScale's passive safety approach."
+      "confidence": 0.8,
+      "description": "Section A describes the testing and operability of ECCS valves as part of NuScale's passive safety approach, while Section B outlines how maintaining a vacuum in the CNV supports the reliability and effectiveness of safety features like the ECCS by minimizing corrosion and leakage, thus supporting the passive safety function."
     },
     {
-      "source": "nuscale_ch01_0043",
-      "target": "nuscale_ch01_0331",
-      "relation": "SATISFIES",
-      "confidence": 0.9,
-      "description": "Section A describes the design and function of NuScale's passive ultimate heat sink system, while Section B evaluates the system's conformance with regulatory criteria for ultimate heat sinks, thus connecting the design details in A to the regulatory requirements in B."
-    },
-    {
-      "source": "nuscale_ch01_0043",
-      "target": "nuscale_ch01_0063",
-      "relation": "SPECIFIES",
+      "source": "nuscale_ch01_0063",
+      "target": "nuscale_ch01_0025",
+      "relation": "SUPPORTS",
       "confidence": 0.95,
-      "description": "Section A provides a general overview of NuScale's passive safety approach, highlighting the use of passive condenser systems for decay heat removal, while Section B details the specific design and testing of the Emergency Core Cooling System (ECCS) valves, which are a component of the passive safety systems described in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0023",
-      "target": "nuscale_ch01_0331",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A describes the general passive safety features of the NuScale containment system, while Section B details the specific passive systems (such as the ultimate heat sink and water systems) that implement and operationalize these safety principles, connecting the general approach in Ch.01 to the specific systems in Ch.05."
-    },
-    {
-      "source": "nuscale_ch01_0023",
-      "target": "nuscale_ch01_0063",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A provides a general overview of the NuScale containment system's passive safety features, while Section B details specific passive system components (ECCS valves) that function within the containment described in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0331",
-      "target": "nuscale_ch01_0063",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A outlines general regulatory conformance and safety design principles for NuScale's cooling water systems, while Section B provides specific test results and technical details for the Emergency Core Cooling System valves, thereby specifying how the general passive safety approach in Section A is implemented in a particular system."
+      "description": "Section A provides test results confirming the operability and performance of the ECCS valves, which are the specific passive system components described in Section B as part of the overall passive safety approach for decay heat removal."
     }
   ]
 }

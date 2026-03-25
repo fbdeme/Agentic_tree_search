@@ -2,93 +2,138 @@
   "question": "What vessel inner diameter does Table 1.3-1 give for NuScale vs a typical PWR, and how does Table 5.3-1 further detail the NuScale RPV dimensions?",
   "current_hop": 4,
   "nodes": {
-    "nuscale_ch01_0558": {
-      "node_id": "nuscale_ch01_0558",
-      "title": "DSRS 12.3-12.4, Rev 0: Radiation Protection Design FeaturesII.9 RG 8.15",
-      "summary": "This section summarizes NuScale’s conformance with various regulatory guides related to radiation protection design features as outlined in DSRS 12.3-12.4, Rev 0. It details whether each regulatory guide is applicable, and if so, whether NuScale’s design fully or partially conforms, with references to supporting sections for further information. Several guides are noted as not applicable, while others are partially or fully met.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "278",
-      "hop": 1
-    },
-    "nuscale_ch05_0014": {
-      "node_id": "nuscale_ch05_0014",
-      "title": "Reactor Vessel",
-      "summary": "The NuScale Power Module (NPM) integrates the reactor core, steam generators, and pressurizer within a single reactor pressure vessel (RPV), which is surrounded by a containment vessel for safety. The RPV serves as a key pressure-retaining component, housing critical reactor systems and providing structural support, while its materials and fabrication adhere to stringent ASME Boiler and Pressure Vessel Code standards to ensure long-term integrity and containment of fission products.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "67",
-      "hop": 1
-    },
     "nuscale_ch05_0017": {
       "node_id": "nuscale_ch05_0017",
       "title": "Reactor Vessel Integrity",
-      "summary": "This section outlines the procedures and regulatory compliance measures to ensure the integrity of the NuScale reactor vessel over its 60-year design life. It details the development of operating procedures to maintain pressure-temperature limits, evaluates the vessel’s resistance to pressurized thermal shock and upper-shelf energy degradation, and confirms that predicted material properties remain within regulatory safety criteria throughout the vessel’s operational lifespan.",
+      "content": "NuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-7 Revision 55.3.2.2 Operating Procedures \nDevelopment of plant operating procedures to  ensure that the pressure-temperature \nlimits are not exceeded is addressed in Section 13.5. These procedures will ensure \ncompliance with th e technical specifications d uring normal power operating \nconditions and anticipated transients.\nCOL Item 5.3-2: A COL applicant that references th e NuScale Power Plant design certification will \ndevelop operating procedures to ensure that transients will not be more severe \nthan those for which the reactor design adequacy had been demonstrated. These \nprocedures will be based on material properties of the as-built reactor vessels.\n5.3.2.3 Pressurized Thermal Shock\nThe pressurized thermal shoc k (PTS) screening uses the methodology in 10 CFR 50.61. \nThe attenuated fluence below the inside  diameter cladding surface and the \ntemperature factor for RTNDT shift (including the nominal irradiation temperature \ncorrection factor) are calculated using the RG  1.99 equations. As shown in Table 5.3-8, \nthe predicted RTPTS remains below the 10 CFR 50.61 PTS screening criteria at 32-EFPY \nfluence and at 57-EFPY fluence, which bounds the NuScale 60-year design life. \n5.3.2.4 Upper-Shelf Energy\nReactor vessel beltline materials are evalua ted to ensure a minimum end-of-life Charpy \nV-notch upper shelf energy valu e of 50 ft-lb, as required by 10 CFR 50, Appendix G, at \n57-EFPY fluence, which bounds the NuScale 60-year design life. The initial Charpy \nV-notch upper shelf energy value is 75 ft-lb . The predicted 1/4-T Charpy upper shelf \nenergy decrease per RG 1.99 is summarized in Table 5.3-9. The predicted 1/4-T Charpy \nupper shelf energy after ad justing for NuScale RPV irradiation temperature is \nsummarized in Table 5.3-10. Only the 57-EFPY flue nce is calculated as  it represents the \nmost limiting case.\n5.3.3 Reactor Vessel Integrity\n5.3.3.1 Design\nCompatibility of the RPV design with established standards is described in \nSection 5.3.1. The basic design of the RPV establishes compatibility with required \ninspections as described in Section 5.2.4 and Section 5.3.1. \n5.3.3.2 Materials of Construction\nThe reactor vessel materials of construc tion are described in Section 5.2.3 and \nSection 5.3.1.\n5.3.3.3 Fabrication Methods\nThe fabrication methods used in the constructi on of the reactor vessel are described in \nSection 5.2.3 and Section 5.3.1.NuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-8 Revision 55.3.3.4 Inspection Requirements\nThe nondestructive examin ations performed are described in Section 5.3.1.\n5.3.3.5 Shipment and Installation\nPackaging, shipment, handling, and storage of the RPV is in accordance with ASME \nBPVC, Section III, 2013 edition, subsection  NCA-4134.13 and meet the requirements for \nLevel C items in accordance with ASME NQA-1-2008/1a-2009 Addenda \n(Reference 5.3-2), subpart 2.2.\nA dry environment is maintained for all RPV surfaces, both primary and secondary \nsides, by an installed non-chloride, non-corrosive desiccant. The RPV is shipped with humidity indicators covering a suitable rang e of moisture content. The RPV is shipped \nwith both the primary and secondary sides under positi ve pressure. The internal \natmosphere on both sides of the SG tubes ar e evacuated to eliminate residual moisture \nand filled with nitrogen having a dew point less than -20 degrees F.\nAppropriate foreign material exclusion meas ures are taken in preparation for shipping \nthe RPV.\n5.3.3.6 Operating Conditions\nOperating conditions as they relate to the integrity of the reactor vessel are presented \nin Section 5.2.2 and Section 5.3.2 and the plant technical specifications.\n5.3.3.7 Inservice Surveillance\nInservice surveillance of th e RPV is described in Section 5.2.4 and Section 5.3.1.\n5.3.3.8 Threaded Fasteners\nThreaded fasteners are discussed in Section 3.13 and Section 5.3.1.\n5.3.4 References\n5.3-1 American Society of Mechanical Engin eers, Boiler and Pressure Vessel Code, \n2013 Edition, Section III, \"Rules for Construction of Nuclear Facility \nComponents,\" New York, NY.\n5.3-2 American Society of Mechanical Engineers, Quality Assurance Requirements for \nNuclear Facility Applications , ASME NQA-1-2008/1a-2009 Addenda, New York, \nNY.\n5.3-3 ASTM International, \"Standard Prac tices for Detecting Susceptibility to \nlntergranular Attack in Austenitic Stainless Steels,\" ASTM A262-15, West \nConshohocken, PA.\n5.3-4 Not Used\n\n--- Referenced Tables (structured) ---\n[Table 5.3-10: 1/4-T Charpy Upper Shelf Energy after Adjusting for NuScale Reactor]\nLower | RPV | shell, beltline | 59.6 ft-lb min | -1.2 ft-lb | 58.4 ft-lb min\nLower | RPV | weld | 63.5 ft-lb min | -1.2 ft-lb | 62.3 ft-lb min\nRPV | bottom head | 64.1 ft-lb min | -1.2 ft-lb | 62.9 ft-lb min\n[Table 5.3-8: Pressurized Thermal Shock Screening Result]\n(32- | EFPY | Fluence)\nLower | RPV | shell, beltline | 9.94E+18 | -10 | 64.9 | 34.0 | 88.9 | 270 max\nLower | RPV | weld | 2.32E+18 | -20 | 77.6 | 56.0 | 113.6 | 300 max\nRPV | bottom head | 2.32E+18 | -10 | 50.4 | 34.0 | 74.4 | 270 max\n(57- | EFPY | Fluence)\nLower | RPV | shell, beltline | 1.77E+19 | -10 | 70.8 | 34.0 | 94.8 | 270 max\nLower | RPV | weld | 4.14E+18 | -20 | 89.9 | 56.0 | 125.9 | 300 max\nRPV | bottom head | 4.14E+18 | -10 | 55.9 | 34.0 | 79.9 | 270 max\n[Table 5.3-9: 1/4-T Charpy Upper Shelf Energy per RG 1.99, Rev. 2]\nLower | RPV | shell, beltline | 0.10 (a) | 1.37E+19 | 20.5% | 75 ft-lb | 59.6 ft-lb\nLower | RPV | weld | 0.06 | 3.21E+18 | 15.3% | 75 ft-lb | 63.5 ft-lb\nRPV | bottom head | 0.10 (a) | 3.21E+18 | 14.5% | 75 ft-lb | 64.1 ft-lb",
+      "summary": "This section outlines the procedures and regulatory compliance measures to ensure the integrity of the NuScale reactor vessel throughout its 60-year design life. It details the development of operating procedures to maintain pressure-temperature limits, evaluates the vessel’s resistance to pressurized thermal shock and upper-shelf energy degradation, and confirms that predicted material properties remain within regulatory safety criteria under anticipated operating conditions.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
       "page_range": "73",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 5.3-10",
+          "page": 85,
+          "caption": "1/4-T Charpy Upper Shelf Energy after Adjusting for NuScale Reactor",
+          "structured_text": "Lower | RPV | shell, beltline | 59.6 ft-lb min | -1.2 ft-lb | 58.4 ft-lb min\nLower | RPV | weld | 63.5 ft-lb min | -1.2 ft-lb | 62.3 ft-lb min\nRPV | bottom head | 64.1 ft-lb min | -1.2 ft-lb | 62.9 ft-lb min"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-8",
+          "page": 83,
+          "caption": "Pressurized Thermal Shock Screening Result",
+          "structured_text": "(32- | EFPY | Fluence)\nLower | RPV | shell, beltline | 9.94E+18 | -10 | 64.9 | 34.0 | 88.9 | 270 max\nLower | RPV | weld | 2.32E+18 | -20 | 77.6 | 56.0 | 113.6 | 300 max\nRPV | bottom head | 2.32E+18 | -10 | 50.4 | 34.0 | 74.4 | 270 max\n(57- | EFPY | Fluence)\nLower | RPV | shell, beltline | 1.77E+19 | -10 | 70.8 | 34.0 | 94.8 | 270 max\nLower | RPV | weld | 4.14E+18 | -20 | 89.9 | 56.0 | 125.9 | 300 max\nRPV | bottom head | 4.14E+18 | -10 | 55.9 | 34.0 | 79.9 | 270 max"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-9",
+          "page": 84,
+          "caption": "1/4-T Charpy Upper Shelf Energy per RG 1.99, Rev. 2",
+          "structured_text": "Lower | RPV | shell, beltline | 0.10 (a) | 1.37E+19 | 20.5% | 75 ft-lb | 59.6 ft-lb\nLower | RPV | weld | 0.06 | 3.21E+18 | 15.3% | 75 ft-lb | 63.5 ft-lb\nRPV | bottom head | 0.10 (a) | 3.21E+18 | 14.5% | 75 ft-lb | 64.1 ft-lb"
+        }
+      ]
+    },
+    "nuscale_ch01_0558": {
+      "node_id": "nuscale_ch01_0558",
+      "title": "DSRS 12.3-12.4, Rev 0: Radiation Protection Design FeaturesII.9 RG 8.15",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-150 Revision 5\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design FeaturesII.2\nRG 1.52 Not Applicable See RG 1.52 in Table 1.9-2. Not Applicable\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.3 RG 1.69 Partially Conforms See RG 1.69 in Table 1.9-2. 12.3.2\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.4 RG 1.97 Partially Conforms See RG 1.97 in Table 1.9-2. 7.2.13\n12.3.4\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design FeaturesII.5\nRG 1.183 Partially Conforms See RG 1.183 in Table 1.9-2. 12.2\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.6 RG 8.2 Not Applicable See RG 8.2 in Table 1.9-2. Not Applicable\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.7 RG 8.8 Partially Conforms See RG 8.8 in Table 1.9-2. 12.3.1\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design FeaturesII.8\nRG 8.10 Not Applicable See RG 8.10 in Table 1.9-2. Not Applicable\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.9 RG 8.15 Not Applicable See RG 8.15 in Table 1.9-2. Not Applicable\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.10 RG 8.19 Conforms None. 12.4\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design FeaturesII.11\nRG 8.25 Not Applicable See RG 8.25 in Table 1.9-2. Not Applicable\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.12 RG 8.38 Partially Conforms See RG 8.38 in Table 1.9-2. 12.3.1\nDSRS 12.3-12.4, Rev 0: \nRadiation Protection Design \nFeaturesII.13 ANSI/ANS/HPSSC-6.8.1-1981 Conforms None. 12.3.4Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-2: Conformance with Regulatory Guides (Continued)]\n8.39 | Release of Patients Administered\nRadioactive Materials | - | Not Applicable | This guidance governs activities applicable only to\nfacilities that administer radio-pharmaceuticals. | Not Applicable\n8.40 | Methods for Measuring Effective\nDose Equivalent from External\nExposure | - | Not Applicable | This guidance governs dosimetry methods for deter-\nmining effective dose equivalent for external radia-\ntion exposures. These methods are the responsibility\nof the COL applicant or licensee. | Not Applicable\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section summarizes NuScale’s conformance with various regulatory guides related to radiation protection design features, as outlined in DSRS 12.3-12.4, Rev 0. It details whether each guide is applicable, not applicable, or partially/conforms, with references to supporting sections and tables for further information. The document shows that some guides are fully met, some are partially met, and others are deemed not applicable to the NuScale design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "278",
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-2",
+          "page": 173,
+          "caption": "Conformance with Regulatory Guides (Continued)",
+          "structured_text": "8.39 | Release of Patients Administered\nRadioactive Materials | - | Not Applicable | This guidance governs activities applicable only to\nfacilities that administer radio-pharmaceuticals. | Not Applicable\n8.40 | Methods for Measuring Effective\nDose Equivalent from External\nExposure | - | Not Applicable | This guidance governs dosimetry methods for deter-\nmining effective dose equivalent for external radia-\ntion exposures. These methods are the responsibility\nof the COL applicant or licensee. | Not Applicable"
+        },
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
     "nuscale_ch01_0052": {
       "node_id": "nuscale_ch01_0052",
       "title": "Comparison with Other Facilities",
-      "summary": "This section compares the major design features and parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It highlights differences in size, output, core design, and safety systems, showing that NuScale uses a smaller, simpler, and more integrated design with fewer components and lower power output per module compared to conventional PWRs. The comparison is summarized in tables for clarity.",
+      "content": "NuScale Final Safety Analysis Report Comparison with Other Facilities\nTier 2 1.3-1 Revision 51.3 Comparison with Other Facilities\nThe major NuScale Power Plant design feature s and nominal parameters are provided in \nTable 1.3-1 and discussed further in the associated final safety anal ysis report (FSAR) section(s). \nThese NuScale features and values  are shown in comparison with a typical pressurized water \nreactor (PWR) plant design. All values are no minal and provided for comparison only. The \ntypical PWR values presented are representative of the Standardized Nu clear Unit Power Plant \nSystem design.\nTable 1.3-2 provides a comparison of safety sy stems and components re quired to protect the \nreactor core for the NuScale Power Plant versus a typical PWR plant.NuScale Final Safety Analysis Report Comparison with Other Facilities\nTier 2 1.3-2 Revision 5Table 1.3-1: NuScale Plant Comp arison with Other Facilities\nNuScale Plant Parameter or Feature (per NPM) Typical PWR NuScale\nNominal gross electrical output (MWe) 1,186 50Core thermal output (MWt) 3,411 160Number of fuel assemblies 193 37Fuel assembly lattice -17x17 17x17Effective fuel length (ft) 12 6.56Fuel rods per fuel assembly 264 264Average linear heat rate (kW/ft) 5.4 2.5Number of Control Rod Assemblies 53 16Design life (years) 40 60Reactor Coolant SystemNumber of heat transfer loops 4 No External LoopsReactor Coolant Pipes (in.) 27.5-31 NoneOperating pressure (psia) 2,250 1,850Hot leg temperature (°F) 618 590Reactor VesselVessel inner diameter (in.) 173 107.5Thermal shielding- and reflector design Neutro n pad design Stacked stainless steel reflector \nblocks\nIn-core instrumentation Bot tom mounted Top mounted\nSteam GeneratorNumber 4 2Type Vertical U-tube Helical coilHeat transfer area (ft2) 55,000 Approximately 18,000Number of tubes 5,626 1,380Reactor Coolant Pumps 4 0PressurizerInternal volume (ft3) 1,800 568Surge nozzle nominal diameter (in.) 14 NoneResidual Heat Removal Pumps 2 NoneContainmentType PCCV Steel Pressure VesselInner diameter (ft-in.) 140-0 14-2Height (ft-in.) 205-0 (inner) 75-8.5 (outer)Containment Spray Pumps 2 NoneHigh Pressure Safety Injection Pumps 2 NoneCharging / Safety Injection Pumps 2 NoneLow Pressure Safety Injection Pumps 2 NoneAccumulators 4 NoneI&C System type Analog DigitalEmergency Diesel Generators 2 NoneTurbine Type 1800 rpm, Tandem Compound Six \nFlow3,600 rpm, 10 stage with Superheat\nEmergency Feedwater Pumps 3 None\nCharging Pumps (CVCS pumps) 2 2Used for Safety Injection Yes NoVolume Control Tank 1 0Reactor Component Cooling Wa ter Pumps 4 6 total for 12 NPMsNuScale Final Safety Analysis Report Comparison with Other Facilities\nTier 2 1.3-3 Revision 5Table 1.3-2: Safety Systems and Components  Required to Protec t the Reactor Core - \nNuScale Comparison with Other Facilities\nSafety System or Comp onent Typical PWR NuScale\nReactor Pressure Vessel X XContainment Vessel X X\nReactor Coolant System X X\nDecay Heat Removal System X XEmergency Core Cooling System X XControl Rod Drive System X XContainment Isolation System X XUltimate Heat Sink X XResidual Heat Removal System XSafety Injection System XRefueling Water Storage Tank XCondensate Storage Tank XAuxiliary Feedwater System XEmergency Service Water System XHydrogen Recombiner or Ignition System XContainment Spray System XReactor Coolant Pumps XSafety-Related Electrical Distribution System XAlternative Off-Site Power XEmergency Diesel Generators XSafety-Related Class 1E Battery System XAnticipated Transient Without Scram (ATWS) System X\n\n--- Referenced Tables (structured) ---\n[Table 1.3-1: NuScale Plant Comparison with Other Facilities]\nNominal gross electrical output (MWe) | 1,186 | 50\nCore thermal output (MWt) | 3,411 | 160\nNumber of fuel assemblies | 193 | 37\nFuel assembly lattice | -17x17 | 17x17\nEffective fuel length (ft) | 12 | 6.56\nFuel rods per fuel assembly | 264 | 264\nAverage linear heat rate (kW/ft) | 5.4 | 2.5\nNumber of Control Rod Assemblies | 53 | 16\nDesign life (years) | 40 | 60\nReactor Coolant System\nNumber of heat transfer loops | 4 | No External Loops\nReactor Coolant Pipes (in.) | 27.5-31 | None\nOperating pressure (psia) | 2,250 | 1,850\nHot leg temperature (°F) | 618 | 590\nReactor Vessel\nVessel inner diameter (in.) | 173 | 107.5\nThermal shielding- and reflector design | Neutron pad design | Stacked stainless steel reflector\nblocks\nIn-core instrumentation | Bottom mounted | Top mounted\nSteam Generator\nNumber | 4 | 2\nType | Vertical U-tube | Helical coil\nHeat transfer area (ft2) | 55,000 | Approximately 18,000\nNumber of tubes | 5,626 | 1,380\nReactor Coolant Pumps | 4 | 0\nPressurizer\nInternal volume (ft3) | 1,800 | 568\nSurge nozzle nominal diameter (in.) | 14 | None\nResidual Heat Removal Pumps | 2 | None\nContainment\nType | PCCV | Steel Pressure Vessel\nInner diameter (ft-in.) | 140-0 | 14-2\nHeight (ft-in.) | 205-0 (inner) | 75-8.5 (outer)\nContainment Spray Pumps | 2 | None\nHigh Pressure Safety Injection Pumps | 2 | None\nCharging / Safety Injection Pumps | 2 | None\nLow Pressure Safety Injection Pumps | 2 | None\nAccumulators | 4 | None\nI&C System type | Analog | Digital\nEmergency Diesel Generators | 2 | None\nTurbine Type | 1800 rpm, Tandem Compound Six\nFlow | 3,600 rpm, 10 stage with Superheat\nEmergency Feedwater Pumps | 3 | None\nCharging Pumps (CVCS pumps) | 2 | 2\nUsed for Safety Injection | Yes | No\nVolume Control Tank | 1 | 0\nReactor Component Cooling Water Pumps | 4 | 6 total for 12 NPMs\n[Table 1.3-2: Safety Systems and Components Required to Protect the Reactor Core -]\nReactor Pressure Vessel | X | X\nContainment Vessel | X | X\nReactor Coolant System | X | X\nDecay Heat Removal System | X | X\nEmergency Core Cooling System | X | X\nControl Rod Drive System | X | X\nContainment Isolation System | X | X\nUltimate Heat Sink | X | X\nResidual Heat Removal System | X\nSafety Injection System | X\nRefueling Water Storage Tank | X\nCondensate Storage Tank | X\nAuxiliary Feedwater System | X\nEmergency Service Water System | X\nHydrogen Recombiner or Ignition System | X\nContainment Spray System | X\nReactor Coolant Pumps | X\nSafety-Related Electrical Distribution System | X\nAlternative Off-Site Power | X\nEmergency Diesel Generators | X\nSafety-Related Class 1E Battery System | X\nAnticipated Transient Without Scram (ATWS) System | X",
+      "summary": "This section compares the major design features and parameters of the NuScale Power Plant with those of a typical pressurized water reactor (PWR). It highlights differences in size, output, core design, and safety systems, showing that NuScale uses smaller, simpler, and more integrated components compared to conventional PWRs. The comparison is summarized in tables for easy reference.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "79",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.3-1",
+          "page": 80,
+          "caption": "NuScale Plant Comparison with Other Facilities",
+          "structured_text": "Nominal gross electrical output (MWe) | 1,186 | 50\nCore thermal output (MWt) | 3,411 | 160\nNumber of fuel assemblies | 193 | 37\nFuel assembly lattice | -17x17 | 17x17\nEffective fuel length (ft) | 12 | 6.56\nFuel rods per fuel assembly | 264 | 264\nAverage linear heat rate (kW/ft) | 5.4 | 2.5\nNumber of Control Rod Assemblies | 53 | 16\nDesign life (years) | 40 | 60\nReactor Coolant System\nNumber of heat transfer loops | 4 | No External Loops\nReactor Coolant Pipes (in.) | 27.5-31 | None\nOperating pressure (psia) | 2,250 | 1,850\nHot leg temperature (°F) | 618 | 590\nReactor Vessel\nVessel inner diameter (in.) | 173 | 107.5\nThermal shielding- and reflector design | Neutron pad design | Stacked stainless steel reflector\nblocks\nIn-core instrumentation | Bottom mounted | Top mounted\nSteam Generator\nNumber | 4 | 2\nType | Vertical U-tube | Helical coil\nHeat transfer area (ft2) | 55,000 | Approximately 18,000\nNumber of tubes | 5,626 | 1,380\nReactor Coolant Pumps | 4 | 0\nPressurizer\nInternal volume (ft3) | 1,800 | 568\nSurge nozzle nominal diameter (in.) | 14 | None\nResidual Heat Removal Pumps | 2 | None\nContainment\nType | PCCV | Steel Pressure Vessel\nInner diameter (ft-in.) | 140-0 | 14-2\nHeight (ft-in.) | 205-0 (inner) | 75-8.5 (outer)\nContainment Spray Pumps | 2 | None\nHigh Pressure Safety Injection Pumps | 2 | None\nCharging / Safety Injection Pumps | 2 | None\nLow Pressure Safety Injection Pumps | 2 | None\nAccumulators | 4 | None\nI&C System type | Analog | Digital\nEmergency Diesel Generators | 2 | None\nTurbine Type | 1800 rpm, Tandem Compound Six\nFlow | 3,600 rpm, 10 stage with Superheat\nEmergency Feedwater Pumps | 3 | None\nCharging Pumps (CVCS pumps) | 2 | 2\nUsed for Safety Injection | Yes | No\nVolume Control Tank | 1 | 0\nReactor Component Cooling Water Pumps | 4 | 6 total for 12 NPMs"
+        },
+        {
+          "type": "table",
+          "id": "Table 1.3-2",
+          "page": 81,
+          "caption": "Safety Systems and Components Required to Protect the Reactor Core -",
+          "structured_text": "Reactor Pressure Vessel | X | X\nContainment Vessel | X | X\nReactor Coolant System | X | X\nDecay Heat Removal System | X | X\nEmergency Core Cooling System | X | X\nControl Rod Drive System | X | X\nContainment Isolation System | X | X\nUltimate Heat Sink | X | X\nResidual Heat Removal System | X\nSafety Injection System | X\nRefueling Water Storage Tank | X\nCondensate Storage Tank | X\nAuxiliary Feedwater System | X\nEmergency Service Water System | X\nHydrogen Recombiner or Ignition System | X\nContainment Spray System | X\nReactor Coolant Pumps | X\nSafety-Related Electrical Distribution System | X\nAlternative Off-Site Power | X\nEmergency Diesel Generators | X\nSafety-Related Class 1E Battery System | X\nAnticipated Transient Without Scram (ATWS) System | X"
+        }
+      ]
     },
-    "nuscale_ch01_0033": {
-      "node_id": "nuscale_ch01_0033",
-      "title": "General Arrangement of Major Structures and Equipment",
-      "summary": "This section describes the general arrangement of major structures and equipment at a NuScale Power Plant, focusing on the central placement and design of the Reactor Building (RXB). The RXB is a large, reinforced concrete structure designed for safety and radiation protection, housing the NuScale Power Modules (NPMs) in a common reactor pool with individual bays arranged in two rows. The section also references detailed figures and chapters for further information on radioactive waste management and building layouts.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "36",
-      "hop": 2
-    },
-    "nuscale_ch01_0041": {
-      "node_id": "nuscale_ch01_0041",
-      "title": "Major Systems",
-      "summary": "The section describes the digital control systems in the NuScale plant, emphasizing the independence between safety-related and non-safety-related systems, and the use of human factors analysis to design operator displays for effective monitoring and control. It outlines typical control room functions, the alarm management system, and mentions the Technical Support Center and Radioactive Waste Building, which handles the processing and shipment of radioactive waste.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "40",
-      "hop": 3
-    },
-    "nuscale_ch05_0011": {
-      "node_id": "nuscale_ch05_0011",
-      "title": "Reactor Coolant Pressure Boundary Inservice Inspection and Testing",
-      "summary": "This section describes the materials and standards used for threaded fasteners in key reactor coolant system components, emphasizing the use of Alloy 718 for its compatibility and stress corrosion cracking resistance. It also outlines that preservice and inservice inspections and testing of pressure-retaining components are conducted according to the latest ASME BPVC Section XI requirements, as mandated by federal regulations, with inspection intervals and code editions specified in the inspection program.",
-      "modality": "text",
-      "source_doc": "nuscale_ch05",
-      "page_range": "37",
-      "hop": 3
-    },
-    "nuscale_ch05_0013": {
-      "node_id": "nuscale_ch05_0013",
-      "title": "References",
-      "summary": "This section lists references and standards used in the NuScale Final Safety Analysis Report regarding the integrity of the reactor coolant boundary. It includes guidelines and reports from the Electric Power Research Institute and the American Society of Mechanical Engineers, as well as tables summarizing relevant ASME code cases for reactor components.",
+    "nuscale_ch05_0014": {
+      "node_id": "nuscale_ch05_0014",
+      "title": "Reactor Vessel",
+      "content": "NuScale Final Safety Analysis Report Reactor Vessel\nTier 2 5.3-1 Revision 55.3 Reactor Vessel\nA NuScale Power Module (NPM) consists of a re actor core, two steam generators (SGs), and a \npressurizer all contained within a single reacto r pressure vessel (RPV ), with a containment \nvessel (CNV) that surrounds th e RPV. Each NPM includes the piping located between the RPV \nand the CNV. \nThe RPV is a pressure retaining vessel component of the reactor coolant system (RCS). The RCS \nis described in Section 5.1 and Section 5.2. The RP V metal vessel that form s part of the reactor \ncoolant pressure boundary (RCPB) is a barrier  to the release of fission products. The RPV \ncontains the reactor core, reacto r vessel internals, steam genera tors (SGs), pressurizer, and \nreactor coolant volume. The SGs are part of the RPV component. The RPV is supported laterally \nand vertically by the CNV. The RPV provides su pport and attachment locations for the control \nrod drive mechanisms (CRDMs), the CRDM se ismic support structure, pressurizer heater \nbundles, in-core instrumentation, steam generato r system piping, RCS piping, reactor safety \nvalves (RSVs), reactor vent valves, and reactor re circulation valves. The RPV, which includes the \nSGs, is certified and stamped in accordance wi th Article NCA-8000 of AS ME BPVC, Section III. \nThe reactor vessel is shown in Figure 5.3-1 and design parameters are presented in Table 5.3-1.\n5.3.1 Reactor Vessel Materials\n5.3.1.1 Material Specifications \nThe materials and applicable specifications  used in the RPV and appurtenances are \nshown in Table 5.2-4. \nThe RPV materials are selected and fabricated  to maintain RCPB integrity for the plant \ndesign lifetime. Bolting materials, pressure  retaining base materials, and weld filler \nmaterials are selected from the ASME Boiler and Pressure Vessel Code (BPVC), Section II \nand comply with Article NB-2000 of ASME BPVC, Section III (Reference 5.3-1). In \naddition, the fracture toughness properties  of the ferritic RCPB pressure-retaining \nmaterials comply with the requir ements of 10 CFR 50, Appendix G.\nThe RCPB materials comply with the re levant requirements of the following \nregulations:\n• 10 CFR 50, Appendix A\n− GDC 1 and 30 - The RPV is designed, fabr icated, and tested as ASME BPVC Class \n1 to the highest quality standards in  accordance with Quality Assurance \nProgram described in Chapter 17.\n− GDC 4 - The RPV is designed and fabricated to be compatible with \nenvironmental conditions of the reacto r coolant and containment atmosphere.\n− GDC 14 and 31 - The RPV is designed and fabricated with sufficient margin to \nassure the RCPB behaves in a non-brittle manner and to minimize the \nprobability of rapidly pr opagating fracture and gr oss rupture of the RCPB. \n• Appendix G to 10 CFR 50 - The RPV materi als are tested and meet applicable \nfracture toughness acceptance criteria.\n\n--- Referenced Tables (structured) ---\n[Table 5.2-4: Reactor Coolant Pressure Boundary Component and Support Materials]\nCRDM | Pressure Retaining Components\nLatch housing\nRod travel housing\nRod travel housing Plug | SA-965 | Grade F304LN\n[Table 5.3-1: Reactor Vessel Parameters]\nDesign Parameter | Value\nDesign pressure (psia) | 2100\nDesign temperature (degrees F) | 650\nOverall height, bottom of alignment feature to top of CRDM latch housing section (inches) | 778\nInside diameter of lower RPV section, cylindrical region, without clad (inches) | 96.5\nOutside diameter of lower RPV section, cylindrical region, without clad (inches) | 105\nInside diameter of upper RPV section, cylindrical region, without clad (inches) | 104.5\nOutside diameter of upper RPV section, cylindrical region, without clad (inches) | 112.5\nInside diameter of pressurizer, cylindrical region, without clad (inches) | 106.5\nOutside diameter of pressurizer, cylindrical region, without clad (inches) | 115.5\nInside diameter of upper head without clad (inches) | 104.5\nOutside diameter of upper head without clad (inches) | 112.5\nInner clad thickness (inches) | 0.25\nOuter clad thickness (inches) | 0.125",
+      "summary": "The Reactor Vessel section describes the NuScale Power Module’s reactor pressure vessel (RPV), which houses the reactor core, steam generators, and pressurizer within a containment vessel. The RPV serves as a critical pressure boundary to prevent the release of fission products and provides structural support for various reactor components. Materials used for the RPV are selected according to ASME Boiler and Pressure Vessel Code standards to ensure integrity and safety throughout the plant’s design life.",
       "modality": "text",
       "source_doc": "nuscale_ch05",
-      "page_range": "46",
-      "hop": 3
+      "page_range": "67",
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 5.3-1",
+          "page": 86,
+          "caption": "Reactor Vessel"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.2-4",
+          "page": 52,
+          "caption": "Reactor Coolant Pressure Boundary Component and Support Materials",
+          "structured_text": "CRDM | Pressure Retaining Components\nLatch housing\nRod travel housing\nRod travel housing Plug | SA-965 | Grade F304LN"
+        },
+        {
+          "type": "table",
+          "id": "Table 5.3-1",
+          "page": 76,
+          "caption": "Reactor Vessel Parameters",
+          "structured_text": "Design Parameter | Value\nDesign pressure (psia) | 2100\nDesign temperature (degrees F) | 650\nOverall height, bottom of alignment feature to top of CRDM latch housing section (inches) | 778\nInside diameter of lower RPV section, cylindrical region, without clad (inches) | 96.5\nOutside diameter of lower RPV section, cylindrical region, without clad (inches) | 105\nInside diameter of upper RPV section, cylindrical region, without clad (inches) | 104.5\nOutside diameter of upper RPV section, cylindrical region, without clad (inches) | 112.5\nInside diameter of pressurizer, cylindrical region, without clad (inches) | 106.5\nOutside diameter of pressurizer, cylindrical region, without clad (inches) | 115.5\nInside diameter of upper head without clad (inches) | 104.5\nOutside diameter of upper head without clad (inches) | 112.5\nInner clad thickness (inches) | 0.25\nOuter clad thickness (inches) | 0.125"
+        }
+      ]
     }
   },
   "edges": [
     {
-      "source": "nuscale_ch01_0558",
-      "target": "nuscale_ch05_0014",
+      "source": "nuscale_ch05_0017",
+      "target": "nuscale_ch01_0052",
       "relation": "SPECIFIES",
       "confidence": 0.95,
-      "description": "Section B provides detailed descriptions of the NuScale reactor pressure vessel (RPV) dimensions, which further specify and elaborate on the general vessel diameter values presented in Table 1.3-1 referenced in the analysis question."
+      "description": "Table 1.3-1 in Section B provides nominal vessel inner diameter values for both NuScale and a typical PWR, while Section A (Table 5.3-1) further specifies the detailed dimensions of the NuScale reactor pressure vessel, expanding on the summary comparison."
     },
     {
-      "source": "nuscale_ch01_0558",
-      "target": "nuscale_ch05_0017",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A (Table 1.3-1) provides the vessel inner diameter values for both NuScale and a typical PWR, while Section B (Table 5.3-1) further details the NuScale RPV dimensions by specifying additional measurements and characteristics."
+      "source": "nuscale_ch05_0017",
+      "target": "nuscale_ch05_0014",
+      "relation": "REFERENCES",
+      "confidence": 0.8,
+      "description": "Section A references the development of operating procedures to ensure vessel integrity, while Section B provides a general description of the NuScale reactor pressure vessel (RPV) and its components, with both sections connected by their focus on the RPV's design and operational requirements."
     },
     {
       "source": "nuscale_ch01_0558",
@@ -98,81 +143,18 @@
       "description": "Table 1.3-1 in Section B provides the vessel inner diameter for both NuScale and a typical PWR, while Table 5.3-1 (referenced in Section B) further details the NuScale RPV dimensions, thus Section B specifies the general comparison and points to where more detailed NuScale dimensions can be found."
     },
     {
-      "source": "nuscale_ch05_0014",
-      "target": "nuscale_ch05_0017",
-      "relation": "IS_PREREQUISITE_OF",
-      "confidence": 0.9,
-      "description": "Section A describes the physical configuration and components of the NuScale reactor pressure vessel, while Section B addresses the operational procedures required to maintain the vessel's integrity under specified pressure-temperature limits, connecting the vessel's design to its safe operation."
-    },
-    {
-      "source": "nuscale_ch05_0014",
-      "target": "nuscale_ch01_0052",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section B (Table 1.3-1) provides the nominal vessel inner diameter for both NuScale and a typical PWR for comparison, while Section A (Table 5.3-1) further specifies the detailed dimensions of the NuScale reactor pressure vessel."
-    },
-    {
-      "source": "nuscale_ch05_0017",
-      "target": "nuscale_ch01_0052",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Table 1.3-1 in Section B provides the nominal vessel inner diameter for both NuScale and a typical PWR, while Section A (Table 5.3-1) further specifies the detailed NuScale RPV dimensions, expanding on the summary comparison."
-    },
-    {
-      "source": "nuscale_ch01_0033",
-      "target": "nuscale_ch01_0558",
-      "relation": "REFERENCES",
-      "confidence": 0.85,
-      "description": "Section A provides a general description and references to where detailed plant and equipment arrangements (including vessel dimensions) are found, while Section B lists regulatory guidance and the degree of NuScale's conformance, referencing specific tables and sections for further detail."
-    },
-    {
-      "source": "nuscale_ch01_0033",
+      "source": "nuscale_ch01_0558",
       "target": "nuscale_ch05_0014",
       "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A provides a general overview and references the layout of major plant structures, while Section B gives specific details about the NuScale reactor vessel, thus Section B specifies the detailed dimensions and features of the reactor vessel that are generally described in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0033",
-      "target": "nuscale_ch05_0017",
-      "relation": "SPECIFIES",
-      "confidence": 0.9,
-      "description": "Section A provides a general overview and references figures and tables (such as Table 1.3-1) that summarize key plant parameters like vessel inner diameter, while Section B (and specifically Table 5.3-1) gives more detailed dimensional data for the NuScale reactor pressure vessel, thus specifying the general information from Section A."
-    },
-    {
-      "source": "nuscale_ch05_0011",
-      "target": "nuscale_ch05_0014",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A references Section 3.13 for further details on the design of threaded fasteners for the RPV, while Section B provides a general description of the reactor vessel and its integration within the NuScale Power Module, indicating that Section A's specifics are part of the broader context described in Section B."
-    },
-    {
-      "source": "nuscale_ch05_0011",
-      "target": "nuscale_ch05_0017",
-      "relation": "REFERENCES",
-      "confidence": 0.7,
-      "description": "Section A references Section 3.13 for further details on the design of threaded fasteners, while Section B discusses the development of operating procedures to ensure compliance with pressure-temperature limits, both relating to the integrity and operational requirements of the reactor pressure vessel (RPV)."
-    },
-    {
-      "source": "nuscale_ch05_0013",
-      "target": "nuscale_ch05_0014",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A provides references and standards that underpin the technical and regulatory basis for the reactor vessel's design, while Section B describes the physical configuration and components of the NuScale reactor vessel, with both sections connected through the regulatory and technical requirements that inform the vessel's design and description."
-    },
-    {
-      "source": "nuscale_ch05_0013",
-      "target": "nuscale_ch05_0017",
-      "relation": "REFERENCES",
-      "confidence": 0.8,
-      "description": "Section A provides references and standards cited in the NuScale FSAR, while Section B discusses the development of operating procedures for reactor vessel integrity, both of which are connected through their focus on ensuring compliance with technical and safety requirements for the reactor vessel."
-    },
-    {
-      "source": "nuscale_ch05_0011",
-      "target": "nuscale_ch05_0013",
-      "relation": "REFERENCES",
       "confidence": 0.95,
-      "description": "Section A discusses the use and requirements for threaded fasteners in the RPV, and explicitly cites Section B's referenced standards (such as ASME BPVC and EPRI guidelines) as the basis for material selection and quality assurance."
+      "description": "Table 1.3-1 provides the vessel inner diameter values for both NuScale and a typical PWR, while Table 5.3-1 further details the NuScale RPV dimensions by specifying additional measurements and design features."
+    },
+    {
+      "source": "nuscale_ch01_0052",
+      "target": "nuscale_ch05_0014",
+      "relation": "SPECIFIES",
+      "confidence": 0.95,
+      "description": "Table 1.3-1 in Section A provides the nominal inner diameter of the NuScale reactor vessel compared to a typical PWR, while Table 5.3-1 in Section B further details the specific dimensions and configuration of the NuScale RPV, expanding on the summary values from Section A."
     }
   ]
 }

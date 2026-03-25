@@ -2,98 +2,251 @@
   "question": "Explain how the NuScale containment vessel design differs from conventional containments and its role in safety.",
   "current_hop": 3,
   "nodes": {
-    "nuscale_ch01_0793": {
-      "node_id": "nuscale_ch01_0793",
-      "title": "SRP 15.7.4, Rev 1: Radiological Consequences of Fuel Handling AccidentsII.4 ESF Grade Atmosphere Clean-Up System in Spent Fuel Storage Area",
-      "summary": "The NuScale design does not use ESF-grade ventilation systems for mitigating fuel handling accident consequences; instead, nonsafety-related normal ventilation systems provide adequate atmosphere cleanup per regulatory guidelines, but are not credited in accident analyses. Additionally, while the NuScale design lacks a traditional containment building, the intent of radiation detection criteria is applied to the Reactor Building, where fuel handling occurs, rather than to individual containment vessels.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "311",
-      "hop": 1
-    },
-    "nuscale_ch01_0168": {
-      "node_id": "nuscale_ch01_0168",
-      "title": "SRP 6.5.3, Rev 3: Fission Product Control Systems and StructuresII.2 Secondary Containment",
-      "summary": "The NuScale design does not include secondary containment or fission product clean-up systems, as its passive safety features and submerged containment vessel inherently control fission products. Therefore, regulatory criteria related to secondary containment and certain fission product control systems are not applicable to the NuScale Power Module, and only specific containment parameters such as leakage rates are relevant for review.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "229",
-      "hop": 1
-    },
-    "nuscale_ch01_0023": {
-      "node_id": "nuscale_ch01_0023",
-      "title": "Containment Systems",
-      "summary": "The NuScale containment vessel (CNV) is maintained under vacuum during normal operations, which reduces moisture and corrosion, aids in leak detection, and limits oxygen for safety. In the event of an emergency, passive cooling rapidly reduces pressure and temperature, and the design’s reliance on passive safety systems and small fuel inventory results in improved safety and a lower core damage frequency compared to conventional reactors.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "32",
-      "hop": 1
-    },
     "nuscale_ch01_0020": {
       "node_id": "nuscale_ch01_0020",
       "title": "Safety Considerations",
-      "summary": "The NuScale design enhances safety by maintaining a vacuum in the containment vessel (CNV), which reduces corrosion, aids in leak detection, and limits combustible gases. Its passive safety systems and integral design eliminate large-break loss-of-coolant accident (LOCA) scenarios and reduce reliance on external power, resulting in a lower core damage frequency compared to conventional reactors.",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-7 Revision 5The CNV is maintained at a vacuum un der normal operating conditions. The \nbenefits of maintaining a vacuum in the CNV include:\n• minimizes moisture content that could im pact the reliability and contribute to \ncorrosion of components within the CNV\n• facilitates detection of leakage from the reactor coolant pressure boundary\n• eliminates convective heat transfer and therefore, the need for RPV insulation, \nwhich reduces potential debr is generated in the CNV\n• limits the initial amount of oxygen  in containment (severe accident \ncombustible gas consideration)\nFollowing an actuation of the ECCS, stea m is vented from the RPV through the \nreactor vent valves. This results in an initial spike in containment pressure and \ntemperature. Steam in contact with the inside surface of the CNV is passively \ncooled and condensed by conduction and convection to the reactor pool water. \nThis passive process rapidly reduces co ntainment pressure and temperature and \nmaintains containment pressure and temper ature at less than design conditions \nindefinitely.\n1.2.1.1.3 Safety Considerations\nNuScale has achieved an improvement in safety over existing plants through \nsimplicity of design, reliance on passive safety systems, and small fuel inventory. \nThe integral design of the NPM eliminat es external coolant loop piping, which \neliminates large-break LOCA scenarios. The availability of passive safety systems for \ndecay heat removal, emergency core co oling, and control room habitability \neliminates the need for external powe r under accident conditions. With these \npassive safety systems, small-break LOCAs do  not challenge the safety of the plant. \nThe result is a design with a core damage  frequency that is lower than the current \nlight water reactor fleet.\nThe reactor core has a small radioactive so urce term as compared to a conventional \n1,000 MWe nuclear reactor. Based on the sm aller fuel inventory, the amount of \nradioactive material available for release d uring a postulated accident is reduced. \nTable 1.2-2 provides a listing of some of the features of the NPM.\n1.2.1.2 Engineered Safety F eatures and Emergency Systems\n1.2.1.2.1 Engineered Safety Feature Materials\nDetails are provided in Sect ion 6.1 related to the select ion and fabrication methods \nfor metallic and organic materials used in ESF components to ensure compatibility \nwith fluids that the component may be  exposed to during normal, accident, \nmaintenance, and testing conditions.\n1.2.1.2.2 Containment Systems\nThe containment is an integr al part of the NPM and pr ovides primary containment \nfor the RCS. Section 6.2 provides furthe r information for the containment system.\n\n--- Referenced Tables (structured) ---\n[Table 1.2-2: Design Features of a NuScale Power Module]\nRCS contained within the RPV | No large diameter primary coolant\npiping | Eliminates postulated large-break LOCA\nspectrum accidents\nNatural-convection-cooled core | No reactor coolant pumps | Eliminates reactor coolant pump accidents,\nshaft breaks, pump seizure, missile generation\nand pump leaks\nHigh containment design pressure | Containment peak pressure for\nworst case design-basis accident\nremains below containment design\npressure | Containment integrity assured, minimizing the\npotential for radioactive releases during\npostulated accidents.\nRPV and NSSS | During an accident, any water lost\nfrom RPV stays within containment\nand is returned to the RPV by\npassive means | No postulated design-basis small-break LOCA\ncapable of uncovering nuclear fuel\nEvacuated containment | Subatmospheric pressure during\nnormal operation\nNo insulation on RPV | Minimal amount of noncondensible gases\nincreases the steam condensation rate for\ncontainment heat removal during postulated\nsmall-break LOCA. Amount of oxygen in\ncontainment during normal operations is\nminimized.\nEliminates potential sump screen blockage and\npermits cooling of the exterior of the vessel\nduring an accident\nLow power core (160 MWt) | Reduces decay heat removal\nrequirements | Enhances in-vessel retention; maintains low\naccident consequences; reduces fission\nproduct source term; simplifies emergency\nplanning\nReactor pool with partially\n(approximately 90%) immersed NPM | CNV | Provides passive long-term cooling\nPassive safety systems | Safety systems cool and\ndepressurize the RPV/CNV even in\nthe event of loss of external power | Active safety systems are not required",
+      "summary": "The NuScale design enhances safety by maintaining a vacuum in the containment vessel (CNV), which reduces corrosion, aids leak detection, and limits combustible gases. Its passive safety systems and integral design eliminate large-break loss-of-coolant accident (LOCA) scenarios and reduce reliance on external power, resulting in a lower core damage frequency compared to conventional reactors.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "32",
-      "hop": 1
-    },
-    "nuscale_ch01_0167": {
-      "node_id": "nuscale_ch01_0167",
-      "title": "SRP 6.5.3, Rev 3: Fission Product Control Systems and StructuresII.1 Primary Containment",
-      "summary": "The NuScale design partially conforms to SRP 6.5.3, Rev 3 requirements for fission product control systems, as its passive containment vessel does not include active fission product clean-up or pressure suppression systems, making some guidance inapplicable. The design does not have secondary containment or other credited engineered safety feature (ESF) fission product control systems, so those criteria are also not applicable. The review focuses on containment parameters such as leakage rates and isolation features relevant to the NuScale design.",
-      "modality": "text",
-      "source_doc": "nuscale_ch01",
-      "page_range": "229",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.2-2",
+          "page": 45,
+          "caption": "Design Features of a NuScale Power Module",
+          "structured_text": "RCS contained within the RPV | No large diameter primary coolant\npiping | Eliminates postulated large-break LOCA\nspectrum accidents\nNatural-convection-cooled core | No reactor coolant pumps | Eliminates reactor coolant pump accidents,\nshaft breaks, pump seizure, missile generation\nand pump leaks\nHigh containment design pressure | Containment peak pressure for\nworst case design-basis accident\nremains below containment design\npressure | Containment integrity assured, minimizing the\npotential for radioactive releases during\npostulated accidents.\nRPV and NSSS | During an accident, any water lost\nfrom RPV stays within containment\nand is returned to the RPV by\npassive means | No postulated design-basis small-break LOCA\ncapable of uncovering nuclear fuel\nEvacuated containment | Subatmospheric pressure during\nnormal operation\nNo insulation on RPV | Minimal amount of noncondensible gases\nincreases the steam condensation rate for\ncontainment heat removal during postulated\nsmall-break LOCA. Amount of oxygen in\ncontainment during normal operations is\nminimized.\nEliminates potential sump screen blockage and\npermits cooling of the exterior of the vessel\nduring an accident\nLow power core (160 MWt) | Reduces decay heat removal\nrequirements | Enhances in-vessel retention; maintains low\naccident consequences; reduces fission\nproduct source term; simplifies emergency\nplanning\nReactor pool with partially\n(approximately 90%) immersed NPM | CNV | Provides passive long-term cooling\nPassive safety systems | Safety systems cool and\ndepressurize the RPV/CNV even in\nthe event of loss of external power | Active safety systems are not required"
+        }
+      ]
     },
     "nuscale_ch01_0022": {
       "node_id": "nuscale_ch01_0022",
       "title": "Engineered Safety Feature Materials",
-      "summary": "The NuScale design maintains a vacuum in the containment vessel (CNV) to reduce corrosion, facilitate leak detection, minimize heat transfer, and limit oxygen for safety. Its passive safety features, such as the elimination of external coolant loops and reliance on passive cooling and emergency systems, result in improved safety, lower core damage frequency, and a smaller radioactive source term compared to conventional reactors.",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-7 Revision 5The CNV is maintained at a vacuum un der normal operating conditions. The \nbenefits of maintaining a vacuum in the CNV include:\n• minimizes moisture content that could im pact the reliability and contribute to \ncorrosion of components within the CNV\n• facilitates detection of leakage from the reactor coolant pressure boundary\n• eliminates convective heat transfer and therefore, the need for RPV insulation, \nwhich reduces potential debr is generated in the CNV\n• limits the initial amount of oxygen  in containment (severe accident \ncombustible gas consideration)\nFollowing an actuation of the ECCS, stea m is vented from the RPV through the \nreactor vent valves. This results in an initial spike in containment pressure and \ntemperature. Steam in contact with the inside surface of the CNV is passively \ncooled and condensed by conduction and convection to the reactor pool water. \nThis passive process rapidly reduces co ntainment pressure and temperature and \nmaintains containment pressure and temper ature at less than design conditions \nindefinitely.\n1.2.1.1.3 Safety Considerations\nNuScale has achieved an improvement in safety over existing plants through \nsimplicity of design, reliance on passive safety systems, and small fuel inventory. \nThe integral design of the NPM eliminat es external coolant loop piping, which \neliminates large-break LOCA scenarios. The availability of passive safety systems for \ndecay heat removal, emergency core co oling, and control room habitability \neliminates the need for external powe r under accident conditions. With these \npassive safety systems, small-break LOCAs do  not challenge the safety of the plant. \nThe result is a design with a core damage  frequency that is lower than the current \nlight water reactor fleet.\nThe reactor core has a small radioactive so urce term as compared to a conventional \n1,000 MWe nuclear reactor. Based on the sm aller fuel inventory, the amount of \nradioactive material available for release d uring a postulated accident is reduced. \nTable 1.2-2 provides a listing of some of the features of the NPM.\n1.2.1.2 Engineered Safety F eatures and Emergency Systems\n1.2.1.2.1 Engineered Safety Feature Materials\nDetails are provided in Sect ion 6.1 related to the select ion and fabrication methods \nfor metallic and organic materials used in ESF components to ensure compatibility \nwith fluids that the component may be  exposed to during normal, accident, \nmaintenance, and testing conditions.\n1.2.1.2.2 Containment Systems\nThe containment is an integr al part of the NPM and pr ovides primary containment \nfor the RCS. Section 6.2 provides furthe r information for the containment system.\n\n--- Referenced Tables (structured) ---\n[Table 1.2-2: Design Features of a NuScale Power Module]\nRCS contained within the RPV | No large diameter primary coolant\npiping | Eliminates postulated large-break LOCA\nspectrum accidents\nNatural-convection-cooled core | No reactor coolant pumps | Eliminates reactor coolant pump accidents,\nshaft breaks, pump seizure, missile generation\nand pump leaks\nHigh containment design pressure | Containment peak pressure for\nworst case design-basis accident\nremains below containment design\npressure | Containment integrity assured, minimizing the\npotential for radioactive releases during\npostulated accidents.\nRPV and NSSS | During an accident, any water lost\nfrom RPV stays within containment\nand is returned to the RPV by\npassive means | No postulated design-basis small-break LOCA\ncapable of uncovering nuclear fuel\nEvacuated containment | Subatmospheric pressure during\nnormal operation\nNo insulation on RPV | Minimal amount of noncondensible gases\nincreases the steam condensation rate for\ncontainment heat removal during postulated\nsmall-break LOCA. Amount of oxygen in\ncontainment during normal operations is\nminimized.\nEliminates potential sump screen blockage and\npermits cooling of the exterior of the vessel\nduring an accident\nLow power core (160 MWt) | Reduces decay heat removal\nrequirements | Enhances in-vessel retention; maintains low\naccident consequences; reduces fission\nproduct source term; simplifies emergency\nplanning\nReactor pool with partially\n(approximately 90%) immersed NPM | CNV | Provides passive long-term cooling\nPassive safety systems | Safety systems cool and\ndepressurize the RPV/CNV even in\nthe event of loss of external power | Active safety systems are not required",
+      "summary": "The section describes how maintaining a vacuum in the containment vessel (CNV) of the NuScale reactor provides several safety and operational benefits, such as reducing corrosion, aiding leak detection, and minimizing combustible gases. The design relies on passive safety features, including passive cooling and elimination of large external piping, which together reduce the risk of core damage and improve overall safety compared to traditional nuclear plants.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
       "page_range": "32",
-      "hop": 1
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.2-2",
+          "page": 45,
+          "caption": "Design Features of a NuScale Power Module",
+          "structured_text": "RCS contained within the RPV | No large diameter primary coolant\npiping | Eliminates postulated large-break LOCA\nspectrum accidents\nNatural-convection-cooled core | No reactor coolant pumps | Eliminates reactor coolant pump accidents,\nshaft breaks, pump seizure, missile generation\nand pump leaks\nHigh containment design pressure | Containment peak pressure for\nworst case design-basis accident\nremains below containment design\npressure | Containment integrity assured, minimizing the\npotential for radioactive releases during\npostulated accidents.\nRPV and NSSS | During an accident, any water lost\nfrom RPV stays within containment\nand is returned to the RPV by\npassive means | No postulated design-basis small-break LOCA\ncapable of uncovering nuclear fuel\nEvacuated containment | Subatmospheric pressure during\nnormal operation\nNo insulation on RPV | Minimal amount of noncondensible gases\nincreases the steam condensation rate for\ncontainment heat removal during postulated\nsmall-break LOCA. Amount of oxygen in\ncontainment during normal operations is\nminimized.\nEliminates potential sump screen blockage and\npermits cooling of the exterior of the vessel\nduring an accident\nLow power core (160 MWt) | Reduces decay heat removal\nrequirements | Enhances in-vessel retention; maintains low\naccident consequences; reduces fission\nproduct source term; simplifies emergency\nplanning\nReactor pool with partially\n(approximately 90%) immersed NPM | CNV | Provides passive long-term cooling\nPassive safety systems | Safety systems cool and\ndepressurize the RPV/CNV even in\nthe event of loss of external power | Active safety systems are not required"
+        }
+      ]
     },
-    "nuscale_ch01_0036": {
-      "node_id": "nuscale_ch01_0036",
-      "title": "Refueling Operations",
-      "summary": "Refueling operations for a NuScale Power Module (NPM) are conducted independently from other modules. The process involves moving the NPM from its operating bay to the refueling pool, disassembling it for core refueling and maintenance, and then reassembling and returning it to service after inspections and tests are completed.",
+    "nuscale_ch01_0793": {
+      "node_id": "nuscale_ch01_0793",
+      "title": "SRP 15.7.4, Rev 1: Radiological Consequences of Fuel Handling AccidentsII.4 ESF Grade Atmosphere Clean-Up System in Spent Fuel Storage Area",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-183 Revision 5\nSRP 15.7.4, Rev 1: Radiological \nConsequences of Fuel Handling AccidentsII.4\nESF Grade Atmosphere Clean-Up \nSystem in Spent Fuel Storage AreaNot Applicable The NuScale design does not rely on ESF \nventilation systems to mitigate the consequences of a design basis accident. \nNonsafety-related no rmal ventilation \nsystems provide atmosphere cleanup capability, as necessary, that meets the \ndesign, testing, and maintenance \nguidelines in RG 1.140. These systems provide appropriate containment, \nconfinement, and filtering to limit releases \nof airborne radioactivity to the environment during normal operations, anticipated \noperational occurrences, and postulated \naccident conditions. However, these systems are not required following an \naccident, and receive no credit in the \ndetermination of the radiological consequences of an accident.Not Applicable\nSRP 15.7.4, Rev 1: Radiological \nConsequences of Fuel \nHandling AccidentsII.5 Radiation Detection in Containment Partially Conforms The intent of this acceptance criterion is \napplicable but the specific language refers \nto LWR designs that incorporate a containment building within which fuel \nhandling operations are performed. The \nNuScale design does not use a containment building. Rather, each NPM has its own \ncompact steel containment vessel \nimmediately surrounding the reactor vessel. The containment design provisions of this \nguidance for fuel handling operations \ninside containment are not relevant to the NuScale containment vessel design. \nHowever, the intent of this acceptance \ncriterion is appropriate to apply to the NuScale Reactor Building, where the \noperating NPMs reside in the reactor pool \nand fuel handling operations are performed.15.7.4Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "The NuScale design does not use ESF-grade ventilation systems for mitigating fuel handling accident consequences; instead, nonsafety-related normal ventilation systems provide adequate atmosphere cleanup per regulatory guidelines, but are not credited in accident analyses. Additionally, while NuScale does not have a traditional containment building, the intent of radiation detection criteria is applied to the Reactor Building, where fuel handling occurs, rather than to individual containment vessels.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "38",
-      "hop": 2
+      "page_range": "311",
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
-    "nuscale_ch01_0008": {
-      "node_id": "nuscale_ch01_0008",
-      "title": "Format and Content",
-      "summary": "The section describes the NuScale containment vessel as a steel, cylindrical, ASME-certified pressure vessel designed to withstand high-pressure events, with a vacuum maintained inside during normal operations. The NuScale reactor is a passive, integral small modular pressurized water reactor (SMR) that uses natural circulation and eliminates the need for external piping and coolant pumps. Each NuScale Power Module (NPM) produces 160 MWt (about 50 MWe), and a plant can have up to 12 modules, yielding a total net output of approximately 570 MWe for a full facility.",
+    "nuscale_ch01_0167": {
+      "node_id": "nuscale_ch01_0167",
+      "title": "SRP 6.5.3, Rev 3: Fission Product Control Systems and StructuresII.1 Primary Containment",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-101 Revision 5\nSRP 6.5.3, Rev 3: Fission \nProduct Control Systems and StructuresII.1 Primary Containment Partially Conforms\nA portion of this acceptance criterion and its \nsubtier guidance is applicable only to LWR designs that include containment fission \nproduct clean-up systems. The NuScale \ncontainment vessel does not contain fission product clean up systems, nor does it \ninclude or require pressure suppression \nsystems (e.g., suppression pools or active containment heat removal systems such as \ncontainment spray) that serve a fission \nproduct removal/dose mitigation function. Rather, fission product control is inherent in \nthe passive design of the NuScale Power \nModule, wherein the compact containment vessel is submerged in the reactor pool. \nTherefore, the aspects of this guidance \nrelated to these systems are not applicable to the DCA. This guidance is applicable to \nthe review of certain NuScale containment \nparameters and design features, such as design leakage rate and systems leakage \nprior to containment isolation.6.5.3\nSRP 6.5.3, Rev 3: Fission \nProduct Control Systems and StructuresII.2 Secondary Containment Not Applicable\nThis acceptance criterion is applicable only \nto LWRs that incorporate both a primary and secondary containment. The NuScale \ncontainment vessel design does not include \na secondary containment. Not Applicable\nSRP 6.5.3, Rev 3: Fission \nProduct Control Systems and \nStructuresII.4 Other Fission Product Control \nSystemsNot Applicable The only credited ESF fission product \ncontrol system in the NuScale Power Plant \ndesign is the containment vessel in \nconjunction with the containment isolation valves and passive containment isolation \nbarriers.Not ApplicableTable 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "The NuScale design partially conforms to SRP 6.5.3, Rev 3 requirements for fission product control systems, as its containment vessel does not include active fission product clean-up or pressure suppression systems; instead, it relies on inherent passive safety features. Criteria related to secondary containment and other fission product control systems are not applicable, since NuScale does not use these systems and only credits the primary containment vessel and isolation features for fission product control.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "9",
-      "hop": 2
+      "page_range": "229",
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
-    "nuscale_ch01_0004": {
-      "node_id": "nuscale_ch01_0004",
-      "title": "Containment Type",
-      "summary": "The NuScale containment vessel is a cylindrical, steel, ASME-certified pressure vessel designed to withstand high-pressure events and operates under vacuum during normal conditions, eliminating the need for insulation. The NuScale reactor is a passive, small modular pressurized water reactor with an integral design that uses natural circulation and does not require reactor coolant pumps. Each module produces 160 MWt (about 50 MWe), and a plant can have up to 12 modules for a total net output of approximately 570 MWe.",
+    "nuscale_ch01_0168": {
+      "node_id": "nuscale_ch01_0168",
+      "title": "SRP 6.5.3, Rev 3: Fission Product Control Systems and StructuresII.2 Secondary Containment",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-101 Revision 5\nSRP 6.5.3, Rev 3: Fission \nProduct Control Systems and StructuresII.1 Primary Containment Partially Conforms\nA portion of this acceptance criterion and its \nsubtier guidance is applicable only to LWR designs that include containment fission \nproduct clean-up systems. The NuScale \ncontainment vessel does not contain fission product clean up systems, nor does it \ninclude or require pressure suppression \nsystems (e.g., suppression pools or active containment heat removal systems such as \ncontainment spray) that serve a fission \nproduct removal/dose mitigation function. Rather, fission product control is inherent in \nthe passive design of the NuScale Power \nModule, wherein the compact containment vessel is submerged in the reactor pool. \nTherefore, the aspects of this guidance \nrelated to these systems are not applicable to the DCA. This guidance is applicable to \nthe review of certain NuScale containment \nparameters and design features, such as design leakage rate and systems leakage \nprior to containment isolation.6.5.3\nSRP 6.5.3, Rev 3: Fission \nProduct Control Systems and StructuresII.2 Secondary Containment Not Applicable\nThis acceptance criterion is applicable only \nto LWRs that incorporate both a primary and secondary containment. The NuScale \ncontainment vessel design does not include \na secondary containment. Not Applicable\nSRP 6.5.3, Rev 3: Fission \nProduct Control Systems and \nStructuresII.4 Other Fission Product Control \nSystemsNot Applicable The only credited ESF fission product \ncontrol system in the NuScale Power Plant \ndesign is the containment vessel in \nconjunction with the containment isolation valves and passive containment isolation \nbarriers.Not ApplicableTable 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "The NuScale design does not include secondary containment or fission product clean-up systems, as its passive safety features and submerged containment vessel inherently control fission products. Therefore, regulatory criteria related to secondary containment and certain fission product control systems are not applicable to the NuScale Power Module, and only specific containment parameters such as leakage rates are relevant for review.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "9",
-      "hop": 2
+      "page_range": "229",
+      "hop": 1,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
     },
-    "nuscale_ch01_0051": {
-      "node_id": "nuscale_ch01_0051",
-      "title": "Plant Features of Special Interest",
-      "summary": "This section describes key plant features of special interest in the NuScale Power Plant, including the Central Utility Building (CUB) and Diesel Generator Buildings (DGBs), which house essential but nonsafety-related systems and backup power equipment. It also highlights human factors considerations, emphasizing fail-safe design, advanced automation, digital controls, and workload management to minimize human error and meet regulatory requirements.",
+    "nuscale_ch01_0023": {
+      "node_id": "nuscale_ch01_0023",
+      "title": "Containment Systems",
+      "content": "NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-7 Revision 5The CNV is maintained at a vacuum un der normal operating conditions. The \nbenefits of maintaining a vacuum in the CNV include:\n• minimizes moisture content that could im pact the reliability and contribute to \ncorrosion of components within the CNV\n• facilitates detection of leakage from the reactor coolant pressure boundary\n• eliminates convective heat transfer and therefore, the need for RPV insulation, \nwhich reduces potential debr is generated in the CNV\n• limits the initial amount of oxygen  in containment (severe accident \ncombustible gas consideration)\nFollowing an actuation of the ECCS, stea m is vented from the RPV through the \nreactor vent valves. This results in an initial spike in containment pressure and \ntemperature. Steam in contact with the inside surface of the CNV is passively \ncooled and condensed by conduction and convection to the reactor pool water. \nThis passive process rapidly reduces co ntainment pressure and temperature and \nmaintains containment pressure and temper ature at less than design conditions \nindefinitely.\n1.2.1.1.3 Safety Considerations\nNuScale has achieved an improvement in safety over existing plants through \nsimplicity of design, reliance on passive safety systems, and small fuel inventory. \nThe integral design of the NPM eliminat es external coolant loop piping, which \neliminates large-break LOCA scenarios. The availability of passive safety systems for \ndecay heat removal, emergency core co oling, and control room habitability \neliminates the need for external powe r under accident conditions. With these \npassive safety systems, small-break LOCAs do  not challenge the safety of the plant. \nThe result is a design with a core damage  frequency that is lower than the current \nlight water reactor fleet.\nThe reactor core has a small radioactive so urce term as compared to a conventional \n1,000 MWe nuclear reactor. Based on the sm aller fuel inventory, the amount of \nradioactive material available for release d uring a postulated accident is reduced. \nTable 1.2-2 provides a listing of some of the features of the NPM.\n1.2.1.2 Engineered Safety F eatures and Emergency Systems\n1.2.1.2.1 Engineered Safety Feature Materials\nDetails are provided in Sect ion 6.1 related to the select ion and fabrication methods \nfor metallic and organic materials used in ESF components to ensure compatibility \nwith fluids that the component may be  exposed to during normal, accident, \nmaintenance, and testing conditions.\n1.2.1.2.2 Containment Systems\nThe containment is an integr al part of the NPM and pr ovides primary containment \nfor the RCS. Section 6.2 provides furthe r information for the containment system.NuScale Final Safety Analysis Report General Plant Description\nTier 2 1.2-8 Revision 51.2.1.2.3 Emergency Core Cooling System\nThe ECCS provides a passive means of deca y heat removal in the event of a LOCA. \nThe ECCS consists of thre e independent reactor vent valves and two independent \nreactor recirculation valves (Figure 1.2-9). A ll five valves are closed during normal \noperation.\nDuring ECCS operation, the reactor vent valves vent steam from the RPV into the \nCNV where the steam condenses and collect s in the bottom of the containment. \nThe reactor recirculation valves allow wate r to reenter the RPV and be circulated \nthrough the core. When reactor coolant temperature is reduced to below the \nboiling point, core cooling continues via conduction dire ctly into the reactor pool. \nThe cooling function of the ECCS is enti rely passive, with heat being conducted \nthrough the CNV wall to the reactor pool. Section 6.3 provides design and \noperational information for the ECCS.\n1.2.1.2.4 Control Room Habitability System\nThe control room habitability system (CRHS) ensures that plant operators are \nadequately protected against the effects of accidental releases of toxic or \nradioactive gases. The CRHS is a passive system that provides clean, compressed, \nbreathable air to the MCR in the event of a radioactive re lease or when AC power is \nnot available. Areas served by the CRHS are maintained at positive pressure relative \nto adjacent areas. Compressed breathable air storage capacity can provide clean air \nto the MCR spaces for at least 72 hours fo llowing an initiating event. Section 6.4 \nprovides design and operatio nal information for the CRHS.\n1.2.1.2.5 Fission Product Removal and Control Systems\nThe only fission product removal and contro l system credited in  the design is the \nCNV in conjunction with th e containment isolation system. Fission product control \nis inherent in the design of the NPM, wherein the CNV atmosphere is depleted \nthrough the passive process of aerosol deposition. Section 6.5 provides \ninformation for this ESF.\n1.2.1.2.6 Inservice Inspection of Class 2 and 3 Components\nThe inservice inspection program includes  the pre-service examinations and the \nperiodic inservice inspections and tests nece ssary to ensure that safety-related and \nrisk-significant systems, structures, and co mponents are capable of fulfilling their \nintended safety functions. Section 6.6 provides detailed information for the \ninservice inspection program.\n1.2.1.3 Instrumentation, Cont rols, and Electrical Systems\nThe I&C architectural design philosophy inco rporates clear interc onnection interfaces, \nseparation between safety and nonsafety systems, and simplification of system functions. The I&C architecture primarily co nsists of the following  systems, which are \ndescribed in Section 7.0:\n\n--- Referenced Tables (structured) ---\n[Table 1.2-2: Design Features of a NuScale Power Module]\nRCS contained within the RPV | No large diameter primary coolant\npiping | Eliminates postulated large-break LOCA\nspectrum accidents\nNatural-convection-cooled core | No reactor coolant pumps | Eliminates reactor coolant pump accidents,\nshaft breaks, pump seizure, missile generation\nand pump leaks\nHigh containment design pressure | Containment peak pressure for\nworst case design-basis accident\nremains below containment design\npressure | Containment integrity assured, minimizing the\npotential for radioactive releases during\npostulated accidents.\nRPV and NSSS | During an accident, any water lost\nfrom RPV stays within containment\nand is returned to the RPV by\npassive means | No postulated design-basis small-break LOCA\ncapable of uncovering nuclear fuel\nEvacuated containment | Subatmospheric pressure during\nnormal operation\nNo insulation on RPV | Minimal amount of noncondensible gases\nincreases the steam condensation rate for\ncontainment heat removal during postulated\nsmall-break LOCA. Amount of oxygen in\ncontainment during normal operations is\nminimized.\nEliminates potential sump screen blockage and\npermits cooling of the exterior of the vessel\nduring an accident\nLow power core (160 MWt) | Reduces decay heat removal\nrequirements | Enhances in-vessel retention; maintains low\naccident consequences; reduces fission\nproduct source term; simplifies emergency\nplanning\nReactor pool with partially\n(approximately 90%) immersed NPM | CNV | Provides passive long-term cooling\nPassive safety systems | Safety systems cool and\ndepressurize the RPV/CNV even in\nthe event of loss of external power | Active safety systems are not required",
+      "summary": "The NuScale containment vessel (CNV) is kept under vacuum during normal operation, which reduces moisture and corrosion, aids in leak detection, and limits oxygen for safety. In the event of an emergency, passive cooling rapidly reduces pressure and temperature, and the plant’s design—with passive safety systems and no external coolant loops—significantly lowers core damage risk compared to conventional reactors.",
       "modality": "text",
       "source_doc": "nuscale_ch01",
-      "page_range": "43",
-      "hop": 2
+      "page_range": "32",
+      "hop": 1,
+      "references": [
+        {
+          "type": "figure",
+          "id": "Figure 1.2-9",
+          "page": 54,
+          "caption": "Emergency Core Cooling System"
+        },
+        {
+          "type": "table",
+          "id": "Table 1.2-2",
+          "page": 45,
+          "caption": "Design Features of a NuScale Power Module",
+          "structured_text": "RCS contained within the RPV | No large diameter primary coolant\npiping | Eliminates postulated large-break LOCA\nspectrum accidents\nNatural-convection-cooled core | No reactor coolant pumps | Eliminates reactor coolant pump accidents,\nshaft breaks, pump seizure, missile generation\nand pump leaks\nHigh containment design pressure | Containment peak pressure for\nworst case design-basis accident\nremains below containment design\npressure | Containment integrity assured, minimizing the\npotential for radioactive releases during\npostulated accidents.\nRPV and NSSS | During an accident, any water lost\nfrom RPV stays within containment\nand is returned to the RPV by\npassive means | No postulated design-basis small-break LOCA\ncapable of uncovering nuclear fuel\nEvacuated containment | Subatmospheric pressure during\nnormal operation\nNo insulation on RPV | Minimal amount of noncondensible gases\nincreases the steam condensation rate for\ncontainment heat removal during postulated\nsmall-break LOCA. Amount of oxygen in\ncontainment during normal operations is\nminimized.\nEliminates potential sump screen blockage and\npermits cooling of the exterior of the vessel\nduring an accident\nLow power core (160 MWt) | Reduces decay heat removal\nrequirements | Enhances in-vessel retention; maintains low\naccident consequences; reduces fission\nproduct source term; simplifies emergency\nplanning\nReactor pool with partially\n(approximately 90%) immersed NPM | CNV | Provides passive long-term cooling\nPassive safety systems | Safety systems cool and\ndepressurize the RPV/CNV even in\nthe event of loss of external power | Active safety systems are not required"
+        }
+      ]
+    },
+    "nuscale_ch01_0391": {
+      "node_id": "nuscale_ch01_0391",
+      "title": "SRP 9.5.1.2, Rev 0: Risk-Informed, Performance-Based Fire Protection ProgramAll Various",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-128 Revision 5\nSRP 9.5.1.1, Rev 0: Fire \nProtection ProgramII.5 Fire Protection Program for New \nReactor Combined License ApplicationsPartially Conforms\nThis acceptance criterion and its subtier \nguidance apply to COL applicants under 10 CFR 52. COL applicants referencing a \ncertified design are responsible for \nimplementing this guidance. Notwithstanding the above, NuScale, as an \napplicant for a design certification, \nconsiders this guidance to be applicable to \nthe design certification application to the \nextent necessary to ensure that the COL \napplicant can satisfy this guidance.9.5.1\nAppendix 9A\nSRP 9.5.1.1, Rev 0: Fire Protection ProgramII.6 Enhanced Fire Protection Criteria for \nNew Reactor Designs (Including \nAppendix A)Partially Conforms\nThe enhanced fire protection criteria for \nnew reactor designs specify passive \nseparation of redundant trains as the \npreferred approach to ensure safe-shutdown capability. Due to the modular \nnature and small size of the NuScale Power \nModule, it is not feasib le in all instances to \nprovide installed passive separation of \nredundant trains. When train separation is \nnot feasible, fire protection for redundant shutdown systems is employed to ensure, \nto the extent practicable, such that one \nshutdown division will be free of fire damage.9.5.1\nTable 9.5.1-2\nAppendix 9A\nSRP 9.5.1.1, Rev 0: Fire Protection ProgramII.7 Operational Program and Proposed \nImplementation MilestonesNot Applicable\nThis acceptance criterion is the \nresponsibility of the COL applicant.Not Applicable\nSRP 9.5.1.2, Rev 0: Risk-\nInformed, Performance-Based Fire Protection \nProgramAll Various Not Applicable\nDevelopment and implementation of a risk-\ninformed, performance-based fire protection program is the responsibility of \nCOL applicants that reference the NuScale \ndesign, and that elect to implement the provisions of 10 CFR 50.48(c).Not Applicable\nDSRS 9.5.2, Rev 0: \nCommunication SystemsII.1 Emergency Facilities and Equipment Partially Conforms\nThis acceptance criterion is the \nresponsibility of the COL applicant.9.5.2Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section explains that the development and implementation of a risk-informed, performance-based fire protection program (SRP 9.5.1.2, Rev 0) is not applicable to the NuScale design certification application. Instead, this responsibility lies with Combined License (COL) applicants who reference the NuScale design and choose to implement the relevant regulatory provisions.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "256",
+      "hop": 2,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
+    },
+    "nuscale_ch01_0059": {
+      "node_id": "nuscale_ch01_0059",
+      "title": "Steam Generator Thermal-Hydraulic Performance Testing - Fluid-Heated Facility",
+      "content": "NuScale Final Safety Analysis Report Requirements for Additional Technical Information\nTier 2 1.5-4 Revision 5The electrically-heated test focused on se condary-side performa nce and consisted of \nthree isolated tubes that we re instrumented with well-cont rolled boundary  conditions. \nHeating was accomplished usin g Joule heating, wherein a known electrical current is \npassed through the tube walls to produce a constant heat flux boundary condition on \nthe inside of the tubes. Three distinctiv e heating zones were employed to provide \ndifferent heat fluxes for the subcooled, bo iling, and superheat regions. Within each \nzone the heat flux was constant, which repres ents a simplification from the heat flux \nprofile that results when fluid heating is employed, as would occur in an operating \nNuScale SG. This approach enabled tube wall heat flux to be controlled during testing \nand permitted better access to instrumentation on the outside of the tubing. \nThe testing was performed at the Societa Informazioni Esperienze Termoidrauliche \n(SIET) test facility in Piacenza, Italy. Ty pes of testing carried out included adiabatic \ntesting, diabatic testing, transient testing, and density wave oscillation testing. Dynamic pressure measurements were record ed during test runs which supported \ndevelopment of power spectral density spectr a that may be used to support evaluation \nof the potential for internal two-phase (boili ng) pressure fluctuatio ns to contribute to \nflow induced vibration of SG tu bes. These data also were us ed to inform sizing of the \nSG inlet flow restrictors for stable seco ndary-side SG operation, to provide \nbenchmarking for NuScale thermal-hydraulic design and systems computer codes, and \nto define steam outlet conditions as a function of primary heat generation and secondary side conditions. This test progra m was inspected by the NRC in accordance \nwith Inspection Procedures IP 35034, 35017, and 36100.\n1.5.1.4 Steam Generator Thermal-Hydraulic Pe rformance Testing - Fluid-Heated Facility\nSubsequent to the SG tests described in Section 1.5.1.3 that used  three electrically \nheated SG tubes, a second set of SG test s was conducted using a 252-tube bundle array \nthat was fluid heated on the exterior of th e tubes to more accurately represent primary \nside SG conditions. \nThe test facility included a large pressure vessel, which was able to accommodate the \ntube bundle test section and allowed for testing at elevated pressures and \ntemperatures. The test facility included he aters and pumps that provided a span of \nflow rates at a wide range of thermal-hyd raulic conditions. Th e fluid-heated test \nfocused on overall primary and secondary side performance, and consisted of a bank of \n252 helical tubes, modeling five of the 21 helical coil columns, operated at \nnear-prototypic primary- and secondary-flow conditions. \nTesting activities were conducted at SIET in Piacenza, Italy usin g their fluid-heated \nhydraulic loop. Types of testing carried out included: adiabatic, diabatic, transient, \ndensity wave oscillation, and fluid-elastic instability tests. Each type of test consisted of \nmultiple test points covering a range of conditions to characterize the phenomena of interest at various combinations of primary-side and secondary-side pressures, \ntemperatures, and flow rates. In these tests,  thermocouples, pressure transducers, mass \nflow rate instruments, and strain gauges were used to collect temperature, pressure, \nflow rate, and vibration data at several locations on the primary and secondary sides of \nthe SG. These data have been used to be nchmark NuScale thermal-hydraulic design \nand systems computer codes, and to define steam outlet conditions as a function of \nprimary-fluid heating and se condary-side conditions.NuScale Final Safety Analysis Report Requirements for Additional Technical Information\nTier 2 1.5-5 Revision 51.5.1.5 NuScale Integral System Test Program\nThe purpose of the NuScale integral sy stem test program was to generate \nthermal-hydraulic data for system characterization and safety code validation using a \nscaled representation of the NPM design. Te sts have also informed safety methodology \ndevelopment. \nThe NuScale Integral System Test Facility (NIST-1) allows NuScale to replicate the \nintegrated thermal-hydraulic phenomenon occurring in the reac tor coolant system, \ncontainment, safety systems, and reactor pool. Data collected provide system \ncharacterization data required  for validation of safety-related software, NRELAP5 and \nPIM. The NRELAP5 code, which is based on a commercial version of RELAP5-3D, is a \nthermal-hydraulic analysis code developed at  NuScale for use in the thermal-hydraulic \ndesign, safety analysis, and licensing of th e NPM. The code inco rporates models and \ncorrelations specific to the unique design  features of the NPM. The PIM code is a \nNuScale-developed proprietary code used to assess the stability characteristics of the \nNPM during operation. \nThe NIST-1 is a scaled representation of the NPM reactor, containment, and reactor \npool systems. It is constructed of stainless steel and has a maximum operating pressure of 1650 psia (11.4 MPa) and temperature of 630 degrees F (605 degrees K). NIST-1 \nvolumes, lengths, and areas are obtained by multiplying the respective NPM design \nvolumes, lengths, active heat transfer area s, and flow areas by the applicable scale \nfactors determined through a detailed scalin g analysis. This process ensures the NIST-1 \nproperly captures the impo rtant thermal-hydraulic phen omena and processes that \nwould occur in the plant.\nA series of tests have been completed at  the NIST-1, located on the Oregon State \nUniversity campus in Corvallis, OR, in support of NuScale's Design Certification Application. These tests include:\n• facility characterization tests used to develop the NRELAP5 model of the NIST-1.\n• loss-of-coolant accident (LOCA) tests used to validate NRELAP5 for LOCA and \ncontainment analyses.\n• flow-stability tests used to validate  PIM for reactor stability analyses.\n• non-LOCA (anticipated operational occurren ce) tests used to validate NRELAP5 for \nnon-LOCA analyses.\n• long-term cooling tests used to validate NRELAP5 for long term cooling analyses.\nData obtained from the NIST-1 tests identi fied above have been used to successfully \nvalidate the NRELAP5 and PIM codes for LOCA and containment, non-LOCA, flow \nstability, and long term cool ing applications. This test program was inspected by the \nNRC in accordance with Inspecti on Procedures IP 35034, 35017, and 36100.\n1.5.1.6 Control Rod Drive Mechanism Proof Test\nThe control rod drive mechanism for the NP M contains features that are not common \nin conventional control rod drive mechanis ms: a remote disconnect mechanism and a \nlong control rod drive shaft. A proof-of-c oncept testing program was conducted to ",
+      "summary": "The electrically-heated steam generator test at the SIET facility in Italy used three instrumented tubes with controlled boundary conditions to simulate different heat flux regions (subcooled, boiling, superheat) and focused on secondary-side performance. The testing included various methods (adiabatic, diabatic, transient, and density wave oscillation) to gather data for evaluating pressure fluctuations, informing flow restrictor sizing, benchmarking design codes, and defining steam outlet conditions, with oversight by the NRC.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "86",
+      "hop": 2,
+      "references": []
+    },
+    "nuscale_ch01_0390": {
+      "node_id": "nuscale_ch01_0390",
+      "title": "SRP 9.5.1.1, Rev 0: Fire Protection ProgramII.7 Operational Program and Proposed Implementation Milestones",
+      "content": "NuScale Final Safety Analysis Report Conformance with Regulatory Criteria\nTier 2 1.9-128 Revision 5\nSRP 9.5.1.1, Rev 0: Fire \nProtection ProgramII.5 Fire Protection Program for New \nReactor Combined License ApplicationsPartially Conforms\nThis acceptance criterion and its subtier \nguidance apply to COL applicants under 10 CFR 52. COL applicants referencing a \ncertified design are responsible for \nimplementing this guidance. Notwithstanding the above, NuScale, as an \napplicant for a design certification, \nconsiders this guidance to be applicable to \nthe design certification application to the \nextent necessary to ensure that the COL \napplicant can satisfy this guidance.9.5.1\nAppendix 9A\nSRP 9.5.1.1, Rev 0: Fire Protection ProgramII.6 Enhanced Fire Protection Criteria for \nNew Reactor Designs (Including \nAppendix A)Partially Conforms\nThe enhanced fire protection criteria for \nnew reactor designs specify passive \nseparation of redundant trains as the \npreferred approach to ensure safe-shutdown capability. Due to the modular \nnature and small size of the NuScale Power \nModule, it is not feasib le in all instances to \nprovide installed passive separation of \nredundant trains. When train separation is \nnot feasible, fire protection for redundant shutdown systems is employed to ensure, \nto the extent practicable, such that one \nshutdown division will be free of fire damage.9.5.1\nTable 9.5.1-2\nAppendix 9A\nSRP 9.5.1.1, Rev 0: Fire Protection ProgramII.7 Operational Program and Proposed \nImplementation MilestonesNot Applicable\nThis acceptance criterion is the \nresponsibility of the COL applicant.Not Applicable\nSRP 9.5.1.2, Rev 0: Risk-\nInformed, Performance-Based Fire Protection \nProgramAll Various Not Applicable\nDevelopment and implementation of a risk-\ninformed, performance-based fire protection program is the responsibility of \nCOL applicants that reference the NuScale \ndesign, and that elect to implement the provisions of 10 CFR 50.48(c).Not Applicable\nDSRS 9.5.2, Rev 0: \nCommunication SystemsII.1 Emergency Facilities and Equipment Partially Conforms\nThis acceptance criterion is the \nresponsibility of the COL applicant.9.5.2Table 1.9-3: Conformance with NUREG-0800, Standard  Review Plan (SRP) and Design Specific Review \nStandard (DSRS) (Continued)\nSRP or DSRS Section, Rev: \nTitleAC AC Title/Description Conformance \nStatusComments Section\n\n--- Referenced Tables (structured) ---\n[Table 1.9-3: Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review]\nSRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3",
+      "summary": "This section explains that the operational fire protection program and its implementation milestones are the responsibility of the Combined License (COL) applicant, not the NuScale design certification applicant. NuScale acknowledges the relevant regulatory guidance but notes that full conformance is not required at the design certification stage; instead, COL applicants must ensure compliance when referencing the NuScale design.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "256",
+      "hop": 2,
+      "references": [
+        {
+          "type": "table",
+          "id": "Table 1.9-3",
+          "page": 323,
+          "caption": "Conformance with NUREG-0800, Standard Review Plan (SRP) and Design Specific Review",
+          "structured_text": "SRP | All | Various | Not Applicable | Applicable to licensees, plant-specific\nproposals for changes to the licensing basis. | Not Applicable\nAll | Various | Conforms | None. | 19.3"
+        }
+      ]
+    },
+    "nuscale_ch01_0060": {
+      "node_id": "nuscale_ch01_0060",
+      "title": "NuScale Integral System Test Program",
+      "content": "NuScale Final Safety Analysis Report Requirements for Additional Technical Information\nTier 2 1.5-5 Revision 51.5.1.5 NuScale Integral System Test Program\nThe purpose of the NuScale integral sy stem test program was to generate \nthermal-hydraulic data for system characterization and safety code validation using a \nscaled representation of the NPM design. Te sts have also informed safety methodology \ndevelopment. \nThe NuScale Integral System Test Facility (NIST-1) allows NuScale to replicate the \nintegrated thermal-hydraulic phenomenon occurring in the reac tor coolant system, \ncontainment, safety systems, and reactor pool. Data collected provide system \ncharacterization data required  for validation of safety-related software, NRELAP5 and \nPIM. The NRELAP5 code, which is based on a commercial version of RELAP5-3D, is a \nthermal-hydraulic analysis code developed at  NuScale for use in the thermal-hydraulic \ndesign, safety analysis, and licensing of th e NPM. The code inco rporates models and \ncorrelations specific to the unique design  features of the NPM. The PIM code is a \nNuScale-developed proprietary code used to assess the stability characteristics of the \nNPM during operation. \nThe NIST-1 is a scaled representation of the NPM reactor, containment, and reactor \npool systems. It is constructed of stainless steel and has a maximum operating pressure of 1650 psia (11.4 MPa) and temperature of 630 degrees F (605 degrees K). NIST-1 \nvolumes, lengths, and areas are obtained by multiplying the respective NPM design \nvolumes, lengths, active heat transfer area s, and flow areas by the applicable scale \nfactors determined through a detailed scalin g analysis. This process ensures the NIST-1 \nproperly captures the impo rtant thermal-hydraulic phen omena and processes that \nwould occur in the plant.\nA series of tests have been completed at  the NIST-1, located on the Oregon State \nUniversity campus in Corvallis, OR, in support of NuScale's Design Certification Application. These tests include:\n• facility characterization tests used to develop the NRELAP5 model of the NIST-1.\n• loss-of-coolant accident (LOCA) tests used to validate NRELAP5 for LOCA and \ncontainment analyses.\n• flow-stability tests used to validate  PIM for reactor stability analyses.\n• non-LOCA (anticipated operational occurren ce) tests used to validate NRELAP5 for \nnon-LOCA analyses.\n• long-term cooling tests used to validate NRELAP5 for long term cooling analyses.\nData obtained from the NIST-1 tests identi fied above have been used to successfully \nvalidate the NRELAP5 and PIM codes for LOCA and containment, non-LOCA, flow \nstability, and long term cool ing applications. This test program was inspected by the \nNRC in accordance with Inspecti on Procedures IP 35034, 35017, and 36100.\n1.5.1.6 Control Rod Drive Mechanism Proof Test\nThe control rod drive mechanism for the NP M contains features that are not common \nin conventional control rod drive mechanis ms: a remote disconnect mechanism and a \nlong control rod drive shaft. A proof-of-c oncept testing program was conducted to ",
+      "summary": "The NuScale Integral System Test Program was established to collect thermal-hydraulic data for system characterization and to validate safety analysis codes using a scaled model of the NuScale Power Module (NPM) design. The NIST-1 facility replicates key reactor systems and supports the development and validation of proprietary safety codes, ensuring accurate modeling of the NPM’s unique features. Testing at NIST-1 has provided essential data for NuScale’s safety analysis and design certification efforts.",
+      "modality": "text",
+      "source_doc": "nuscale_ch01",
+      "page_range": "87",
+      "hop": 2,
+      "references": []
     }
   },
   "edges": [
+    {
+      "source": "nuscale_ch01_0020",
+      "target": "nuscale_ch01_0022",
+      "relation": "SUPPORTS",
+      "confidence": 1.0,
+      "description": "Section A and Section B are identical excerpts describing the vacuum condition in the NuScale containment vessel and its safety benefits, thus both sections provide the same information supporting the analysis of the containment's safety role."
+    },
+    {
+      "source": "nuscale_ch01_0020",
+      "target": "nuscale_ch01_0793",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes unique safety features of the NuScale containment vessel, such as maintaining a vacuum, while Section B explains that the NuScale design does not require ESF-grade atmosphere clean-up systems due to its containment approach, thus Section A's design features support the rationale provided in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0020",
+      "target": "nuscale_ch01_0167",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes unique design features of the NuScale containment vessel, such as maintaining a vacuum, while Section B explains how these features result in partial conformance with conventional regulatory criteria for containment systems, specifically regarding the absence of fission product clean-up and pressure suppression systems."
+    },
+    {
+      "source": "nuscale_ch01_0020",
+      "target": "nuscale_ch01_0168",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A describes the unique vacuum-maintained design features and safety benefits of the NuScale containment vessel, while Section B explains how this design leads to partial conformance with conventional regulatory criteria due to the absence of traditional fission product clean-up and pressure suppression systems."
+    },
+    {
+      "source": "nuscale_ch01_0022",
+      "target": "nuscale_ch01_0793",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the unique vacuum condition and material benefits of the NuScale containment vessel, while Section B explains that, unlike conventional designs, NuScale does not require ESF-grade atmosphere clean-up systems for accident mitigation due to its containment approach, thus Section A's design features support the safety claims made in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0022",
+      "target": "nuscale_ch01_0167",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A describes the unique vacuum-maintained design features and safety benefits of the NuScale containment vessel, while Section B explains how this design leads to partial conformance with conventional regulatory criteria due to the absence of traditional fission product clean-up and pressure suppression systems, directly connecting the design differences to regulatory evaluation."
+    },
+    {
+      "source": "nuscale_ch01_0022",
+      "target": "nuscale_ch01_0168",
+      "relation": "LEADS_TO",
+      "confidence": 0.95,
+      "description": "Section A describes the unique vacuum-maintained design features of the NuScale containment vessel, while Section B explains how these features result in partial conformance with conventional regulatory criteria for containment systems, specifically due to the absence of fission product clean-up and pressure suppression systems."
+    },
+    {
+      "source": "nuscale_ch01_0022",
+      "target": "nuscale_ch01_0023",
+      "relation": "REFERENCES",
+      "confidence": 1.0,
+      "description": "Section A and Section B are identical excerpts describing the NuScale containment vessel's vacuum maintenance and its safety benefits, thus Section A directly references and repeats the content of Section B."
+    },
+    {
+      "source": "nuscale_ch01_0793",
+      "target": "nuscale_ch01_0167",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A explains that the NuScale design does not rely on ESF-grade atmosphere clean-up systems for accident mitigation, while Section B clarifies that the NuScale containment vessel lacks fission product clean-up and pressure suppression systems, both highlighting how NuScale's containment approach differs from conventional designs and its implications for safety."
+    },
     {
       "source": "nuscale_ch01_0793",
       "target": "nuscale_ch01_0168",
@@ -106,182 +259,147 @@
       "target": "nuscale_ch01_0023",
       "relation": "SUPPORTS",
       "confidence": 0.95,
-      "description": "Section A explains that the NuScale design does not rely on engineered safety feature (ESF) ventilation systems for accident mitigation, while Section B describes the unique vacuum-maintained containment vessel (CNV) design, highlighting how this design feature supports the safety approach referenced in Section A."
-    },
-    {
-      "source": "nuscale_ch01_0793",
-      "target": "nuscale_ch01_0020",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A explains that the NuScale design does not rely on traditional ESF ventilation systems for accident mitigation, while Section B describes the unique safety features of the NuScale containment vessel (CNV), such as maintaining a vacuum, which together illustrate how the NuScale containment approach differs from conventional designs and enhances safety."
-    },
-    {
-      "source": "nuscale_ch01_0793",
-      "target": "nuscale_ch01_0167",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A explains that the NuScale design does not rely on ESF-grade atmosphere clean-up systems for accident mitigation, while Section B clarifies that the NuScale containment vessel lacks fission product clean-up and pressure suppression systems, both highlighting how NuScale's containment approach differs from conventional designs and its implications for safety."
-    },
-    {
-      "source": "nuscale_ch01_0793",
-      "target": "nuscale_ch01_0022",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A explains that the NuScale design does not rely on traditional ESF ventilation systems for accident mitigation, while Section B describes the unique vacuum-maintained containment vessel (CNV) design features that enable this approach, directly connecting the design difference to its safety role."
-    },
-    {
-      "source": "nuscale_ch01_0168",
-      "target": "nuscale_ch01_0023",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A explains that the NuScale containment vessel lacks conventional fission product clean-up and pressure suppression systems, while Section B describes the unique vacuum-maintained design of the NuScale containment vessel and its safety benefits, together illustrating how NuScale's design differs from conventional containments and contributes to safety."
-    },
-    {
-      "source": "nuscale_ch01_0168",
-      "target": "nuscale_ch01_0020",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A explains that the NuScale containment vessel does not require traditional fission product clean-up or pressure suppression systems, while Section B describes the unique safety benefits of maintaining the containment vessel at a vacuum, highlighting how NuScale's design approach differs from conventional containments."
-    },
-    {
-      "source": "nuscale_ch01_0168",
-      "target": "nuscale_ch01_0167",
-      "relation": "REFERENCES",
-      "confidence": 0.95,
-      "description": "Section A references Section B by discussing the NuScale containment vessel's lack of fission product clean-up and pressure suppression systems, directly addressing the regulatory acceptance criteria outlined in Section B for primary containment."
-    },
-    {
-      "source": "nuscale_ch01_0168",
-      "target": "nuscale_ch01_0022",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A explains that the NuScale containment vessel lacks traditional fission product clean-up and pressure suppression systems found in conventional designs, while Section B details the unique safety benefits provided by maintaining a vacuum in the NuScale containment vessel, illustrating how its design differs and contributes to safety."
-    },
-    {
-      "source": "nuscale_ch01_0023",
-      "target": "nuscale_ch01_0020",
-      "relation": "REFERENCES",
-      "confidence": 1.0,
-      "description": "Section A and Section B are identical excerpts describing the NuScale containment vessel's vacuum maintenance and its safety benefits, thus Section A directly references the content of Section B."
-    },
-    {
-      "source": "nuscale_ch01_0023",
-      "target": "nuscale_ch01_0167",
-      "relation": "LEADS_TO",
-      "confidence": 0.95,
-      "description": "Section A describes unique design features of the NuScale containment vessel, such as maintaining a vacuum, while Section B explains how these features result in partial conformance with conventional regulatory criteria for containment systems, specifically due to the absence of fission product clean-up and pressure suppression systems."
-    },
-    {
-      "source": "nuscale_ch01_0023",
-      "target": "nuscale_ch01_0022",
-      "relation": "SUPPORTS",
-      "confidence": 1.0,
-      "description": "Section A and Section B present identical information about the NuScale containment vessel's vacuum maintenance and its safety benefits, directly supporting the analysis of how the design differs from conventional containments and its safety role."
-    },
-    {
-      "source": "nuscale_ch01_0020",
-      "target": "nuscale_ch01_0167",
-      "relation": "CONTRADICTS",
-      "confidence": 0.85,
-      "description": "Section A describes unique safety features of the NuScale containment vessel, such as maintaining a vacuum, while Section B explains how these design differences result in only partial conformance with conventional regulatory criteria for containment systems."
+      "description": "Section A explains that the NuScale design does not rely on engineered safety feature (ESF) ventilation systems for accident mitigation, while Section B describes the unique vacuum-maintained containment vessel (CNV) design, which inherently provides containment and safety functions, thus illustrating how NuScale's containment approach differs from conventional designs and supports its safety role."
     },
     {
       "source": "nuscale_ch01_0167",
-      "target": "nuscale_ch01_0022",
-      "relation": "SUPPORTS",
-      "confidence": 0.95,
-      "description": "Section A explains that the NuScale containment vessel lacks conventional fission product clean-up and pressure suppression systems, while Section B details the unique safety benefits of maintaining the containment vessel at a vacuum, highlighting how NuScale's design approach differs from conventional containments and contributes to safety."
-    },
-    {
-      "source": "nuscale_ch01_0036",
-      "target": "nuscale_ch01_0793",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the independent refueling operations enabled by the NuScale containment vessel design, while Section B explains that the NuScale design does not require ESF-grade atmosphere clean-up systems for accident mitigation, highlighting a safety role difference from conventional containments."
-    },
-    {
-      "source": "nuscale_ch01_0036",
       "target": "nuscale_ch01_0168",
       "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes operational procedures involving the movement and handling of the NuScale containment vessel during refueling, while Section B outlines how the NuScale containment vessel design omits conventional fission product clean-up and pressure suppression systems, highlighting a key design difference relevant to its safety role."
-    },
-    {
-      "source": "nuscale_ch01_0036",
-      "target": "nuscale_ch01_0023",
-      "relation": "SUPPORTS",
-      "confidence": 0.85,
-      "description": "Section A describes the handling and movement of the NuScale Power Module (NPM) during refueling, while Section B details the unique vacuum-maintained containment vessel (CNV) design, which is a key feature distinguishing NuScale from conventional containments and directly impacts safety during operations such as refueling."
-    },
-    {
-      "source": "nuscale_ch01_0008",
-      "target": "nuscale_ch01_0793",
-      "relation": "SUPPORTS",
       "confidence": 0.95,
-      "description": "Section A describes the unique design features and pressure boundary classification of the NuScale containment vessel, while Section B explains that, unlike conventional designs, NuScale does not depend on engineered safety feature (ESF) ventilation systems for accident mitigation, instead relying on the containment vessel's integrity as described in Section A."
+      "description": "Section A and Section B both discuss the NuScale containment vessel's partial conformance with SRP 6.5.3 criteria, specifically noting the absence of fission product clean-up and pressure suppression systems, thereby connecting their roles in primary and secondary containment safety functions."
     },
     {
-      "source": "nuscale_ch01_0008",
-      "target": "nuscale_ch01_0168",
-      "relation": "CONTRADICTS",
-      "confidence": 0.85,
-      "description": "Section A describes the unique design features of the NuScale containment vessel, while Section B explains how these features result in partial conformance with regulatory criteria that assume conventional containment systems with fission product clean-up and suppression systems."
-    },
-    {
-      "source": "nuscale_ch01_0008",
+      "source": "nuscale_ch01_0167",
       "target": "nuscale_ch01_0023",
       "relation": "SUPPORTS",
       "confidence": 0.95,
-      "description": "Section A describes the design features of the NuScale containment vessel, including its vacuum condition during normal operation, while Section B elaborates on the safety benefits provided by maintaining this vacuum, thus Section B supports and expands on the claims made in Section A regarding the vessel's safety role."
+      "description": "Section A explains that the NuScale containment vessel lacks conventional fission product clean-up and pressure suppression systems, while Section B describes the unique vacuum environment of the NuScale containment vessel and its safety benefits, together illustrating how NuScale's design differs functionally and structurally from conventional containments."
     },
     {
-      "source": "nuscale_ch01_0004",
-      "target": "nuscale_ch01_0793",
+      "source": "nuscale_ch01_0168",
+      "target": "nuscale_ch01_0023",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A explains that the NuScale containment vessel lacks conventional fission product clean-up and pressure suppression systems, while Section B describes the unique design feature of maintaining a vacuum in the containment vessel and its safety benefits, together illustrating how NuScale's design differs from conventional containments and contributes to safety."
+    },
+    {
+      "source": "nuscale_ch01_0391",
+      "target": "nuscale_ch01_0020",
       "relation": "SUPPORTS",
       "confidence": 0.9,
-      "description": "Section A describes the NuScale containment vessel's design features and pressure boundary classification, while Section B explains that the NuScale design does not rely on traditional ESF ventilation systems for accident mitigation, implying that the containment vessel itself fulfills the safety function typically supported by such systems in conventional designs."
+      "description": "Section B describes specific safety features and benefits of the NuScale containment vessel design, providing concrete examples that support the general regulatory conformance and safety claims referenced in Section A."
     },
     {
-      "source": "nuscale_ch01_0004",
-      "target": "nuscale_ch01_0168",
-      "relation": "LEADS_TO",
-      "confidence": 0.95,
-      "description": "Section A describes the unique design features of the NuScale containment vessel, while Section B explains how these features result in partial conformance with regulatory criteria that assume conventional containment systems with fission product clean-up and suppression systems."
+      "source": "nuscale_ch01_0391",
+      "target": "nuscale_ch01_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes specific design features and safety benefits of the NuScale containment vessel (CNV), which provide concrete examples that support Section A's discussion of how NuScale's design conforms to or addresses regulatory fire protection and safety criteria."
     },
     {
-      "source": "nuscale_ch01_0004",
-      "target": "nuscale_ch01_0023",
-      "relation": "SPECIFIES",
-      "confidence": 0.95,
-      "description": "Section A describes the structural and regulatory classification of the NuScale containment vessel, while Section B elaborates on the operational benefits of maintaining a vacuum in the same vessel, with both sections connected by the design feature of vacuum maintenance and its safety implications."
-    },
-    {
-      "source": "nuscale_ch01_0051",
+      "source": "nuscale_ch01_0391",
       "target": "nuscale_ch01_0793",
       "relation": "SUPPORTS",
       "confidence": 0.8,
-      "description": "Section B explains that the NuScale design does not use ESF-grade atmosphere clean-up systems for accident mitigation, instead relying on nonsafety-related ventilation, which contrasts with conventional containment approaches implied in the analysis question and thus highlights a key design difference referenced in Section A's general plant description."
+      "description": "Section A discusses NuScale's application of fire protection program guidance relevant to design certification, while Section B explains that the NuScale design does not rely on ESF-grade atmosphere clean-up systems for accident mitigation, both highlighting how NuScale's containment vessel design diverges from conventional approaches in meeting safety requirements."
     },
     {
-      "source": "nuscale_ch01_0051",
-      "target": "nuscale_ch01_0168",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes general plant features and structures like the Central Utility Building, while Section B discusses how the NuScale containment vessel design partially conforms to regulatory criteria by not including conventional fission product clean-up or pressure suppression systems, highlighting a design difference relevant to safety."
+      "source": "nuscale_ch01_0059",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes testing of the steam generator's thermal-hydraulic performance, which informs the design and operational parameters that impact the containment vessel's safety features discussed in Section B, such as heat transfer and moisture control."
     },
     {
-      "source": "nuscale_ch01_0036",
-      "target": "nuscale_ch01_0008",
-      "relation": "SPECIFIES",
-      "confidence": 0.85,
-      "description": "Section A describes operational procedures involving the movement of the NuScale Power Module (NPM) into the containment vessel during refueling, while Section B specifies the design characteristics and regulatory classification of the containment vessel itself, connecting operational use with design features."
+      "source": "nuscale_ch01_0059",
+      "target": "nuscale_ch01_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A describes the testing of steam generator tubes for thermal-hydraulic performance, while Section B outlines the unique vacuum environment of the NuScale containment vessel (CNV) and its safety benefits; both sections provide technical details that together illustrate how NuScale's containment design and associated systems differ from conventional designs in terms of operational features and safety roles."
     },
     {
-      "source": "nuscale_ch01_0036",
-      "target": "nuscale_ch01_0004",
-      "relation": "SPECIFIES",
+      "source": "nuscale_ch01_0059",
+      "target": "nuscale_ch01_0793",
+      "relation": "SUPPORTS",
+      "confidence": 0.8,
+      "description": "Section A describes the thermal-hydraulic testing of NuScale's steam generator tubes, while Section B explains that the NuScale design does not rely on traditional ESF ventilation systems for accident mitigation, both illustrating how NuScale's containment and safety approach differs from conventional designs by emphasizing inherent safety features over engineered safety features."
+    },
+    {
+      "source": "nuscale_ch01_0390",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
       "confidence": 0.85,
-      "description": "Section A describes operational procedures involving the movement of the NuScale Power Module (NPM) into the containment vessel during refueling, while Section B details the structural and safety design features of the containment vessel itself, connecting the operational use of the vessel in A to its unique design and safety role described in B."
+      "description": "Section B describes specific safety features and operational benefits of the NuScale containment vessel design, which provide supporting evidence for the safety claims and regulatory conformance discussed in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0390",
+      "target": "nuscale_ch01_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B describes specific design features and safety benefits of the NuScale containment vessel (CNV), which provide concrete examples that support the broader regulatory conformance and safety claims referenced in Section A."
+    },
+    {
+      "source": "nuscale_ch01_0390",
+      "target": "nuscale_ch01_0793",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A discusses the applicability of fire protection program guidance to the NuScale design certification, while Section B explains that the NuScale design does not rely on ESF ventilation systems for accident mitigation, both referencing how NuScale's unique design approach addresses regulatory criteria differently from conventional designs."
+    },
+    {
+      "source": "nuscale_ch01_0060",
+      "target": "nuscale_ch01_0020",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the testing program that validates the safety and performance of the NuScale containment vessel (CNV), while Section B details the unique safety features of the CNV design, with the test data from Section A supporting the safety claims made in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0060",
+      "target": "nuscale_ch01_0022",
+      "relation": "SUPPORTS",
+      "confidence": 0.95,
+      "description": "Section A describes the testing program that validates the safety performance of the NuScale containment vessel (CNV), while Section B details specific design features of the CNV—such as maintaining a vacuum—that contribute to its safety role, thus Section A provides evidence supporting the safety claims made in Section B."
+    },
+    {
+      "source": "nuscale_ch01_0060",
+      "target": "nuscale_ch01_0793",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section A describes the NuScale integral system test program that validates the unique containment vessel's thermal-hydraulic performance, while Section B explains that the NuScale design does not rely on conventional ESF-grade atmosphere clean-up systems for accident mitigation, highlighting a key design difference and safety approach."
+    },
+    {
+      "source": "nuscale_ch01_0391",
+      "target": "nuscale_ch01_0059",
+      "relation": "SUPPORTS",
+      "confidence": 0.7,
+      "description": "Section A outlines regulatory guidance and acceptance criteria for fire protection programs applicable to NuScale's design certification, while Section B describes technical testing of the NuScale steam generator's thermal-hydraulic performance, with both sections connected by their relevance to demonstrating the NuScale containment vessel's safety features and regulatory compliance."
+    },
+    {
+      "source": "nuscale_ch01_0391",
+      "target": "nuscale_ch01_0390",
+      "relation": "REFERENCES",
+      "confidence": 0.9,
+      "description": "Section A references the applicability of fire protection program guidance for design certification applicants like NuScale, while Section B details the operational program and implementation milestones required under the same guidance, connecting them through the regulatory requirements for fire protection in new reactor designs."
+    },
+    {
+      "source": "nuscale_ch01_0391",
+      "target": "nuscale_ch01_0060",
+      "relation": "SUPPORTS",
+      "confidence": 0.9,
+      "description": "Section B describes the NuScale Integral System Test Program, which provides thermal-hydraulic data and validation evidence that supports the safety claims and regulatory conformance discussed in Section A regarding the containment vessel design."
+    },
+    {
+      "source": "nuscale_ch01_0059",
+      "target": "nuscale_ch01_0060",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section A describes component-level thermal-hydraulic testing of steam generator tubes, while Section B details system-level integral testing that includes the containment vessel, with both providing experimental data to validate and inform the safety analysis of the NuScale design."
+    },
+    {
+      "source": "nuscale_ch01_0390",
+      "target": "nuscale_ch01_0060",
+      "relation": "SUPPORTS",
+      "confidence": 0.85,
+      "description": "Section B provides experimental data and validation (through the Integral System Test Program) that supports the safety claims and regulatory conformance discussed in Section A regarding the NuScale containment vessel design."
     }
   ]
 }
