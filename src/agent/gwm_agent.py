@@ -236,10 +236,16 @@ class GWMAgent:
                 "or broader/narrower concepts."
             )
 
+        # Document structure overview (first hop only — zero LLM cost)
+        structure_str = ""
+        if not search_log:
+            structure_str = "\n\n" + self.env.get_document_overview(depth=3)
+
         user = (
             f"Question: {question}\n\n"
             f"Already explored nodes: {explored_str}\n\n"
             f"Current knowledge:\n{kg.to_context_string()}"
+            f"{structure_str}"
             f"{memory_str}\n\n"
             f"What tools should I call next to find the answer?"
         )
@@ -279,11 +285,13 @@ class GWMAgent:
             if tool == "browse":
                 doc_id = action.get("doc_id")
                 node_id = action.get("node_id")
-                results = self.env.browse(doc_id, node_id)
+                depth = action.get("depth", 1)
+                results = self.env.browse(doc_id, node_id, depth=depth)
                 if results:
-                    print(f"   📂 browse({doc_id}, {node_id}): {len(results)} items")
-                    for r in results[:5]:
-                        print(f"      [{r['node_id']}] {r['title'][:50]} ({r['n_children']} children)")
+                    print(f"   📂 browse({doc_id}, {node_id}, depth={depth}): {len(results)} items")
+                    for r in results[:8]:
+                        indent = "  " * r.get("depth", 0)
+                        print(f"      {indent}[{r['node_id']}] {r['title'][:50]} ({r['n_children']} children)")
 
             elif tool == "read":
                 doc_id = action.get("doc_id", "")

@@ -69,48 +69,78 @@ class PageIndexEnvironment:
     # -----------------------------------------------------------
     # Tool 1: browse — list children of a node (like `ls`)
     # -----------------------------------------------------------
-    def browse(self, doc_id: str = None, node_id: str = None) -> list[dict]:
+    def browse(self, doc_id: str = None, node_id: str = None,
+               depth: int = 1) -> list[dict]:
         """
-        List children of a node. If node_id is None, returns root-level nodes.
-        Like `ls` in a file system.
+        List children of a node with configurable depth.
+        Like `ls` (depth=1) or `tree` (depth=2+) in a file system.
+
+        Args:
+            depth: How many levels deep to show (1=children, 2=grandchildren too)
 
         Returns:
-            [{"doc_id", "node_id", "title", "page_index", "summary", "n_children"}, ...]
+            [{"doc_id", "node_id", "title", "page_index", "n_children", "depth"}, ...]
         """
         if doc_id is None:
-            # List all documents and their root nodes
             results = []
             for did, doc in self.documents.items():
                 for node in doc["tree"]:
-                    results.append(self._node_listing(did, node))
+                    results.extend(self._browse_recursive(did, node, depth, 0))
             return results
 
         if doc_id not in self.documents:
             return []
 
         if node_id is None:
-            # Root level of this document
-            return [self._node_listing(doc_id, n)
-                    for n in self.documents[doc_id]["tree"]]
+            results = []
+            for n in self.documents[doc_id]["tree"]:
+                results.extend(self._browse_recursive(doc_id, n, depth, 0))
+            return results
 
-        # Children of specific node
         cache_key = f"{doc_id}::{node_id}"
         if cache_key not in self.node_cache:
             return []
 
         node = self.node_cache[cache_key]
-        children = node.get("nodes", [])
-        return [self._node_listing(doc_id, c) for c in children]
+        results = []
+        for child in node.get("nodes", []):
+            results.extend(self._browse_recursive(doc_id, child, depth, 0))
+        return results
 
-    def _node_listing(self, doc_id: str, node: dict) -> dict:
+    def _browse_recursive(self, doc_id: str, node: dict,
+                          max_depth: int, current_depth: int) -> list[dict]:
+        """Recursively collect node listings up to max_depth."""
+        results = [self._node_listing(doc_id, node, current_depth)]
+        if current_depth < max_depth - 1:
+            for child in node.get("nodes", []):
+                results.extend(self._browse_recursive(
+                    doc_id, child, max_depth, current_depth + 1))
+        return results
+
+    def _node_listing(self, doc_id: str, node: dict, depth: int = 0) -> dict:
         return {
             "doc_id": doc_id,
             "node_id": node.get("node_id", ""),
             "title": node.get("title", "Untitled"),
             "page_index": node.get("page_index", 0),
-            "summary": (node.get("summary", "") or "")[:150],
             "n_children": len(node.get("nodes", [])),
+            "depth": depth,
         }
+
+    def get_document_overview(self, depth: int = 2) -> str:
+        """
+        Generate a compact document structure overview for agent's first hop.
+        Shows all documents with their sections up to specified depth.
+        """
+        lines = ["=== Document Structure ==="]
+        for doc_id, doc in self.documents.items():
+            lines.append(f"\n📄 {doc['name']} (id={doc_id})")
+            items = self.browse(doc_id, None, depth=depth)
+            for item in items:
+                indent = "  " * (item["depth"] + 1)
+                children_str = f" [{item['n_children']} subsections]" if item["n_children"] > 0 else ""
+                lines.append(f"{indent}[{item['node_id']}] {item['title'][:60]}{children_str}")
+        return "\n".join(lines)
 
     # -----------------------------------------------------------
     # Tool 2: read — get full content of a node (like `cat`)
@@ -263,19 +293,19 @@ Available documents:
 {chr(10).join(docs)}
 
 Tools:
-1. browse(doc_id, node_id)
-   - Lists the children of a node (like `ls` in a file system)
-   - Use doc_id=null, node_id=null to see root-level nodes of all documents
-   - Use node_id=null to see root-level nodes of a specific document
-   - Use both to drill down into a specific section
+1. browse(doc_id, node_id, depth)
+   - Lists children of a node (like `ls` or `tree`)
+   - depth=1 (default): immediate children only
+   - depth=2: children + grandchildren (table of contents view)
+   - Use to drill down into a specific section and see its structure
 
 2. read(doc_id, node_id)
    - Returns the full content of a specific node (like `cat`)
-   - Use this when you've identified a relevant section and want to read it
+   - Use when you've identified a relevant section and want to read it
 
 3. search(keyword)
-   - Searches for a keyword across all node titles, summaries, and text (like `grep`)
-   - Use this when you know a specific term, value, or concept to find"""
+   - BM25-ranked keyword search across all nodes (like `grep`)
+   - Use when you know a specific term, value, or concept to find"""
 
     # -----------------------------------------------------------
     # Legacy: search_relevant_nodes (for backward compatibility)
