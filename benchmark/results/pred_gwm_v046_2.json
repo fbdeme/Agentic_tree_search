@@ -1,0 +1,232 @@
+{
+  "method": "gwm",
+  "timestamp": "2026-03-26T11:18:53.020107",
+  "total": 25,
+  "results": [
+    {
+      "id": "Q026",
+      "question": "What is the steam generator configuration shown in Figure 5.4-1, and what are its key design parameters from Table 5.4-1?",
+      "reasoning_type": "factual",
+      "complexity": "single_evidence",
+      "question_type": "composite",
+      "generated_answer": "The steam generator configuration in Figure 5.4-1 is a helical, once-through tube bundle with 1,380 helical tubes per module arranged in 21 columns; key design parameters from Table 5.4-1 include a total heat transfer of 159.13 MWt, outlet pressure of 500.1 psia, outlet temperature of 584.4°F, inlet temperature of 299.7°F, and flow of 532,298 lbm/hr.  \n(Source: Figure 5.4-1; Table 5.4-1)",
+      "expected_answer": "Figure 5.4-1 shows the helical coil steam generator assembly located within the RPV annulus between the riser and RPV wall. Table 5.4-1 specifies design pressure of 2100 psia, design temperature of 650 degrees F, steam outlet temperature of approximately 575 degrees F, and feedwater inlet temperature of approximately 300 degrees F."
+    },
+    {
+      "id": "Q027",
+      "question": "What material is used for the RPV shell, and what chemical composition limits apply to the beltline region according to Table 5.3-2?",
+      "reasoning_type": "factual",
+      "complexity": "single_evidence",
+      "question_type": "composite",
+      "generated_answer": "The RPV shell is made of ASME Code-specified materials, and the chemical composition limits for the beltline region are: sulfur 0.010%, phosphorus 0.010%, copper 0.06%, cobalt 0.05%, and nickel 0.85% for the forging material (see Table 5.3-2).  \nSource: [nuscale_ch05_0015]; Table 5.3-2.",
+      "expected_answer": "The RPV shell is fabricated from SA-508 Grade 3 Class 1 low-alloy steel (Table 5.2-4). Table 5.3-2 limits beltline chemistry to: S <= 0.010%, P <= 0.010%, Cu <= 0.06%, Ni <= 0.85% to minimize radiation embrittlement."
+    },
+    {
+      "id": "Q028",
+      "question": "What does the RCS Schematic Flow Diagram (Figure 5.1-3) show, and what are the corresponding temperature values from Table 5.1-2?",
+      "reasoning_type": "factual",
+      "complexity": "single_evidence",
+      "question_type": "composite",
+      "generated_answer": "The RCS Schematic Flow Diagram (Figure 5.1-3) shows the internal flow path and major components of the reactor coolant system, including the core, downcomer, riser, steam generator, and pressurizer; the corresponding temperature values from Table 5.1-2 at 100% power are: cold leg 496.6°F, average 543.3°F, and hot leg 590.1°F (best-estimate flow).  \n(Source: Figure 5.1-3; Table 5.1-2)",
+      "expected_answer": "Figure 5.1-3 shows the RCS schematic with flow paths through the core, riser, SG, and downcomer with instrument locations. Table 5.1-2 provides THot=590.1 degrees F, TCold=496.6 degrees F, and Tavg=543.3 degrees F at 100% power."
+    },
+    {
+      "id": "Q029",
+      "question": "What is the RPV cross section configuration shown in Figure 5.3-1, and what are the vessel inner diameter dimensions from Table 5.3-1?",
+      "reasoning_type": "factual",
+      "complexity": "single_evidence",
+      "question_type": "composite",
+      "generated_answer": "The RPV cross section configuration in Figure 5.3-1 includes the CRDM latch housing section, RPV head section, RPV top head, PZR shell, integral steam plenum, upper and lower RPV SG shells, feed and steam plenum access ports, upper RPV flanged transition shell, lower RPV section flange shell, and RPV bottom head; the vessel inner diameter dimensions from Table 5.3-1 are 96.5 inches (lower section), 104.5 inches (upper section), and 106.5 inches (pressurizer), all without clad.  \n(Source: Figure 5.3-1; Table 5.3-1)",
+      "expected_answer": "Figure 5.3-1 shows the RPV cross section with the core region, downcomer annulus, and vessel wall with cladding. Table 5.3-1 specifies inner diameters of 96.5 inches (lower), 104.5 inches (middle), and 106.5 inches (upper)."
+    },
+    {
+      "id": "Q030",
+      "question": "What does Figure 5.2-1 show about the reactor safety valve, and what are the RSV design parameters from Table 5.2-2?",
+      "reasoning_type": "factual",
+      "complexity": "single_evidence",
+      "question_type": "composite",
+      "generated_answer": "Figure 5.2-1 shows a simplified diagram of the reactor safety valve, illustrating key components such as the position sensor, main piston, main spring, main valve seat, and main disk; the RSV design parameters from Table 5.2-2 are: inlet size 3 inch, outlet size 4 inch, design pressure 2100 psia (internal), design temperature 650°F, minimum design capacity 63,360 lbm/hr saturated steam at 3% overpressure, nominal setpoints 2075 psia ±1% (first valve) and 2100 psia ±1% (second valve), and blowdown from set pressure 10% ±2%.  \n(Source: Figure 5.2-1 and Table 5.2-2)",
+      "expected_answer": "Figure 5.2-1 shows the physical configuration of the reactor safety valve mounted on the RPV head. Table 5.2-2 specifies 2 RSVs with 2100 psia design pressure, 63,360 lbm/hr capacity each, and setpoints of 2075/2100 psia."
+    },
+    {
+      "id": "Q031",
+      "question": "Describe the natural circulation mechanism in the NuScale RCS and the role of the riser in establishing flow.",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "text_only",
+      "generated_answer": "The NuScale RCS uses natural circulation, where heated coolant rises through the riser above the core due to reduced density, flows through the steam generators to transfer heat, and then descends as cooled water, with the riser providing the necessary elevation and separation to establish and sustain this circulation loop. The riser’s height creates the driving force for flow by maximizing the density difference between the hot and cold legs, enabling effective natural circulation without pumps (nuscale_ch05_0002, nuscale_ch05_0003, nuscale_ch05_0004; Figure 5.1-1).",
+      "expected_answer": "The NuScale RCS uses natural circulation without reactor coolant pumps. Heated coolant rises through the hot leg riser due to density differences between hot and cold fluid. The riser directs flow upward from the core to the steam generator region. Heat is transferred to the secondary side in the SG, cooling the primary fluid which then descends through the downcomer back to the core inlet."
+    },
+    {
+      "id": "Q032",
+      "question": "Describe the DHRS function and its passive cooling mechanism.",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "text_only",
+      "generated_answer": "The DHRS (Decay Heat Removal System) removes residual and core decay heat after shutdown by passively transferring heat from the reactor coolant system to the environment using natural circulation through the steam generators and DHRS condensers, maintaining RCS temperature below 420°F within 36 hours without external power (see Figure 5.4-10 and Figure 5.4-13; [nuscale_ch05_0022], [nuscale_ch05_0003], [nuscale_ch05_0002]).",
+      "expected_answer": "The Decay Heat Removal System provides passive cooling following a reactor trip. Each NPM has two independent DHRS trains connected to the SG secondary side. DHRS condensers are submerged in the reactor pool, transferring decay heat from the RCS through the SG tubes to the pool water by natural circulation on both primary and secondary sides."
+    },
+    {
+      "id": "Q033",
+      "question": "Explain how the NuScale containment vessel design differs from conventional containments and its role in safety.",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "text_only",
+      "generated_answer": "The NuScale containment vessel is maintained under vacuum (subatmospheric pressure) during normal operation, lacks conventional fission product clean-up and pressure suppression systems, and relies on passive safety features—this design reduces corrosion, aids leak detection, limits combustible gases, and enables rapid passive cooling, resulting in improved safety and lower core damage frequency compared to conventional containments (see Table 1.2-2; nuscale_ch01_0020, nuscale_ch01_0023, nuscale_ch01_0167, nuscale_ch01_0168).",
+      "expected_answer": "The NuScale CNV operates under vacuum conditions during normal operation, unlike conventional pressurized containments. This vacuum reduces heat transfer from RPV to containment and provides a pressure suppression function. During a LOCA, steam released into the CNV condenses on the cool inner wall, maintaining low containment pressure without active spray systems."
+    },
+    {
+      "id": "Q034",
+      "question": "What are the ECCS valve types and their actuation mechanism in the NuScale design?",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "text_only",
+      "generated_answer": "The ECCS valve types in the NuScale design are reactor vent valves (RVVs) and reactor recirculation valves (RRVs), which are Category B valves actuated by a trip-reset mechanism to open and discharge the pressurizer steam space; their actuation is mechanical and tested per ASME OM Code requirements.  \nSource: nuscale_ch05_0003, nuscale_ch05_0023, Table 5.2-8.",
+      "expected_answer": "The ECCS consists of reactor vent valves (RVVs) and reactor recirculation valves (RRVs). RVVs connect the RPV to the CNV above the waterline, and RRVs connect below. Both valve types are actuated by an inadvertent actuation block (IAB) that prevents spurious opening at normal operating pressure, and they fail open on loss of power."
+    },
+    {
+      "id": "Q035",
+      "question": "What is the pressurizer design in NuScale, and how does it control RCS pressure?",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "text_only",
+      "generated_answer": "The NuScale pressurizer is integrated into the upper reactor vessel, using two heater bundles (400 kW each) and two spray nozzles to control RCS pressure by maintaining a saturated steam-water interface, with real-time pressure and level instrumentation for control; see Figure 5.4-17 and Tables 5.4-6 and 5.4-7 (nuscale_ch05_0024, Table 5.4-6, Table 5.4-7).",
+      "expected_answer": "The NuScale pressurizer is an integral part of the upper RPV head, not a separate vessel. It uses electric heaters to increase pressure and a spray system to reduce pressure. The pressurizer volume accommodates RCS inventory changes during transients while maintaining pressure within the operating band."
+    },
+    {
+      "id": "Q036",
+      "question": "What is the chemical and volume control system (CVCS) role in the NuScale RCS?",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "text_only",
+      "generated_answer": "The chemical and volume control system (CVCS) in the NuScale RCS maintains proper coolant chemistry and boron concentration, and ensures material compatibility with the borated water environment to support fuel integrity and reactor coolant pressure boundary integrity (Source: nuscale_ch05_0002, nuscale_ch05_0011).",
+      "expected_answer": "The CVCS maintains RCS water chemistry by controlling boron concentration, removing corrosion products and fission products via ion exchangers and filters, and managing RCS inventory. It provides makeup water and letdown flow, and adjusts boron concentration for reactivity control during the fuel cycle."
+    },
+    {
+      "id": "Q037",
+      "question": "How does the NuScale LTOP system protect the RCS during low-temperature conditions?",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "text_only",
+      "generated_answer": "The NuScale LTOP system protects the RCS during low-temperature conditions by maintaining RCS pressure below temperature-dependent setpoints (e.g., 380 psia below 193°F, 615.5 psia at 240°F, 850 psia at 277°F and above), as specified in Table 5.2-10, using the integrated pressurizer and overpressure protection devices in compliance with ASME BPVC and NRC regulations.  \nSource: [nuscale_ch05_0009], [nuscale_ch05_0024], Table 5.2-10.",
+      "expected_answer": "Low Temperature Overpressure Protection prevents RCS pressure from exceeding limits when the reactor is at low temperatures and vessel ductility is reduced. The LTOP system uses relief valves with temperature-dependent setpoints. Multiple setpoint ranges are defined based on RCS temperature to ensure the pressure-temperature limits are not exceeded during heatup and cooldown."
+    },
+    {
+      "id": "Q038",
+      "question": "What corrosion-resistant materials are used for RCS pressure boundary components in contact with primary coolant?",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "text_only",
+      "generated_answer": "Corrosion-resistant materials used for RCS pressure boundary components in contact with primary coolant include stainless steels (Types 304/304L, 304LN), nickel-based alloys (Alloy 690, Alloy 718), and low alloy steels with stainless steel or nickel-based cladding, as specified in Table 5.4-3 and Table 5.2-4 and described in Section 5.2 and Section 5.4.1.5.  \n(Source: Table 5.4-3, Table 5.2-4, nuscale_ch05_0010, nuscale_ch05_0025)",
+      "expected_answer": "Primary coolant-wetted surfaces use corrosion-resistant materials. The RPV interior is clad with stainless steel or nickel-based alloy. Steam generator tubes are Alloy 690, chosen for stress corrosion cracking resistance. Bolting uses Alloy 718 for high-temperature strength and corrosion resistance."
+    },
+    {
+      "id": "Q039",
+      "question": "What inservice inspection capabilities does the NuScale RPV design provide?",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "text_only",
+      "generated_answer": "The NuScale RPV design provides inservice inspection capabilities in accordance with ASME BPVC Section XI, including volumetric and surface examinations of pressure-retaining components, VT-2 leakage monitoring, and VT-3 visual inspections of internals, with all threaded fasteners subject to volumetric examination during each inspection interval (see Table 5.2-6, Table 5.2-7, and [nuscale_ch05_0011]).",
+      "expected_answer": "The NuScale RPV design provides access for volumetric and surface examination of the vessel shell, welds, and nozzles per ASME Section XI requirements. The integral design requires specialized inspection approaches due to the compact configuration. RPV inspections are performed during refueling outages when the module is removed from the reactor pool."
+    },
+    {
+      "id": "Q040",
+      "question": "How does the NuScale secondary side interface with the primary system through the steam generator?",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "text_only",
+      "generated_answer": "The NuScale secondary side interfaces with the primary system through helical, once-through steam generator tubes (0.625-inch OD, 0.050-inch wall thickness) located inside the reactor pressure vessel, which transfer heat from the primary coolant to the secondary feedwater/steam without mixing the fluids, with the tube walls forming the pressure boundary between the two systems (2100 psia, 650°F design conditions).  \nSource: nuscale_ch05_0020, nuscale_ch05_0021, Table 5.4-2.",
+      "expected_answer": "Feedwater enters the SG tube side at approximately 300 degrees F and is heated by the primary coolant flowing on the shell side. The helical coil design maximizes heat transfer area in the compact space. Superheated steam exits at approximately 575 degrees F. The secondary side is at a lower pressure than the primary, ensuring any tube leak results in primary-to-secondary leakage direction."
+    },
+    {
+      "id": "Q041",
+      "question": "Using Tables 5.1-1 and 5.1-2, what is the relationship between the RCS hot leg volume and the hot leg temperature?",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "table_only",
+      "generated_answer": "The RCS hot leg volume is constant at 635 ft³, while the hot leg temperature increases with reactor power from 558.2°F at 15% power to 590.1°F at 100% power, indicating that hot leg temperature varies with power but not with hot leg volume.  \nSource: Table 5.1-1 (hot leg volume), Table 5.1-2 (hot leg temperature).",
+      "expected_answer": "Table 5.1-1 shows the hot leg volume is 635 ft³. Table 5.1-2 shows the hot leg temperature (THot) at 100% power is 590.1 degrees F. These two values define the hot leg thermal-hydraulic conditions."
+    },
+    {
+      "id": "Q042",
+      "question": "Using Table 5.2-5 and Table 5.2-4, what water chemistry limits apply to the primary coolant, and what materials must they protect?",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "table_only",
+      "generated_answer": "The primary coolant water chemistry limits are chloride ≤0.05 ppm, fluoride ≤0.05 ppm, dissolved oxygen ≤0.005 ppm, sulfate ≤0.05 ppm, hydrogen 25–50 cc/kg, and boron 0–2000 ppm, which protect reactor coolant pressure boundary materials such as SA-965 Grade F304LN stainless steel used in CRDM and other components (see Tables 5.2-5 and 5.2-4).  \nSource: Table 5.2-5; Table 5.2-4.",
+      "expected_answer": "Table 5.2-5 specifies chloride <= 0.05 ppm, fluoride <= 0.05 ppm, dissolved oxygen <= 0.005 ppm, dissolved hydrogen 25-50 cc/kg, and boron 0-2000 ppm. Table 5.2-4 shows these limits protect Alloy 690 SG tubes, SA-508 Grade 3 RPV steel, and stainless steel cladding."
+    },
+    {
+      "id": "Q043",
+      "question": "What do Tables 5.3-3 and 5.3-8 reveal about the RPV adjusted reference temperatures and PTS screening?",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "table_only",
+      "generated_answer": "Table 5.3-3 shows that the RPV adjusted reference temperatures at 57 EFPY are 92.2°F (shell), 120.4°F (weld), and 77.4°F (bottom head), while Table 5.3-8 demonstrates that all PTS screening values at both 32 and 57 EFPY remain well below the regulatory screening criteria (270°F for shell/bottom head, 300°F for weld), confirming compliance.  \n(Source: Table 5.3-3 and Table 5.3-8)",
+      "expected_answer": "Table 5.3-3 shows adjusted reference temperatures at 57 EFPY: 92.2 degrees F for the shell, 120.4 degrees F for welds, and 77.4 degrees F for the bottom head. Table 5.3-8 shows RTPTS screening values are well below the 270 degrees F (plates/forgings) and 300 degrees F (welds) criteria."
+    },
+    {
+      "id": "Q044",
+      "question": "From Tables 5.1-1, what are the core volume and the steam generator volume in the RCS?",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "table_only",
+      "generated_answer": "The core volume in the RCS is 89 ft³ and the steam generator volume is 621 ft³, as shown in Table 5.1-1.  \nSource: Table 5.1-1: Reactor Coolant System Volumes.",
+      "expected_answer": "Table 5.1-1 shows the core volume is 89 ft³ and the steam generator volume is 621 ft³. The SG volume is approximately 7 times larger than the core volume, reflecting the extensive helical coil tube bundle."
+    },
+    {
+      "id": "Q045",
+      "question": "What LTOP setpoints are specified in Table 5.2-10, and how do they relate to temperature?",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "table_only",
+      "generated_answer": "Table 5.2-10 specifies LTOP setpoints as follows: for temperatures <193°F, the setpoint is 380 psia; at 240°F, 615.5 psia; at 277°F and 318°F, 850 psia; and LTOP is not enabled above 318°F—these setpoints increase with temperature to protect the reactor coolant pressure boundary.  \nSource: Table 5.2-10: LTOP Pressure Setpoint as Function of Cold Temperature.",
+      "expected_answer": "Table 5.2-10 specifies three LTOP setpoints based on RCS temperature: below 193 degrees F the setpoint is 380 psia, at 240 degrees F it is 615.5 psia, and at 277 degrees F it is 850 psia. The setpoints increase with temperature as the vessel material can tolerate higher pressures at higher temperatures."
+    },
+    {
+      "id": "Q046",
+      "question": "What are the Charpy upper shelf energy values for NuScale RPV materials from Tables 5.3-9 and 5.3-10?",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "table_only",
+      "generated_answer": "The Charpy upper shelf energy values for NuScale RPV materials are: shell, beltline 59.6 ft-lb, weld 63.5 ft-lb, and bottom head 64.1 ft-lb (Table 5.3-9); after adjustment, the values are: shell, beltline 58.4 ft-lb, weld 62.3 ft-lb, and bottom head 62.9 ft-lb (Table 5.3-10).  \nSource: Table 5.3-9 and Table 5.3-10.",
+      "expected_answer": "Tables 5.3-9 and 5.3-10 show that the minimum Charpy upper shelf energy after irradiation is 58.4 ft-lb, which exceeds the 10 CFR 50 Appendix G requirement of 50 ft-lb minimum through the end of the design life."
+    },
+    {
+      "id": "Q047",
+      "question": "Comparing Figures 1.2-5 and 5.1-1, what internal components of the NPM are visible in the cutaway views?",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "image_only",
+      "generated_answer": "The internal components of the NPM visible in the cutaway views of Figures 1.2-5 and 5.1-1 are the containment vessel, control rod drive mechanisms, pressurizer region, pressurizer baffle plate, reactor pressure vessel, reactor vessel internals, and reactor core region (as shown in Figure 5.1-1).  \nSource: Figure 5.1-1; Figure 1.2-5 is withheld.",
+      "expected_answer": "Figure 1.2-5 (Ch.01 cutaway) and Figure 5.1-1 (Ch.05 major components) both show the RPV containing the core at the bottom, helical coil SG in the middle annular region, and pressurizer space at the top. The CNV surrounds the entire RPV. The riser separates the hot leg (inside) from the cold leg (annulus around the SG)."
+    },
+    {
+      "id": "Q048",
+      "question": "What do Figures 5.4-1 and 5.4-2 reveal about steam generator tube access for inspection?",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "image_only",
+      "generated_answer": "Figures 5.4-1 and 5.4-2 show that the steam generator tube bundle is arranged in helical coils within the reactor pressure vessel, with access provided at both the feedwater and steam plenums located at the vessel periphery, enabling inspection of tube ends from these accessible plenum regions.  \nSource: Figures 5.4-1 and 5.4-2, NuScale Final Safety Analysis Report.",
+      "expected_answer": "Figure 5.4-1 shows the helical coil SG assembly with tubes wound around the riser within the RPV annulus. Figure 5.4-2 shows the SG tube access ports at the top of the module, providing access to tube ends for inspection, plugging, and leak testing from above."
+    },
+    {
+      "id": "Q049",
+      "question": "What does Figure 5.4-7 show about the DHRS configuration, and how do Figures 5.4-8 through 5.4-16 characterize its performance?",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "image_only",
+      "generated_answer": "Figure 5.4-7 (not shown here, but referenced) depicts the DHRS configuration as a simplified schematic with two independent trains, each with a passive condenser, while Figures 5.4-8 through 5.4-16 demonstrate that the DHRS effectively reduces primary coolant temperature below 420°F within 36 hours under both one- and two-train operation scenarios, confirming its performance for safe decay heat removal (see Figures 5.4-10, 5.4-11, 5.4-12, and 5.4-13).  \nSource: Figures 5.4-10 to 5.4-13, nuscale_ch05.",
+      "expected_answer": "Figure 5.4-7 shows the DHRS schematic with condensers submerged in the reactor pool connected to the SG secondary side. Figures 5.4-8 through 5.4-16 show cooldown performance curves demonstrating how RCS temperature and pressure decrease over time during passive cooling, with the pool absorbing decay heat."
+    },
+    {
+      "id": "Q050",
+      "question": "What do Figures 1.2-2 and 1.2-3 show about the NuScale functional boundaries and the single NPM with secondary equipment?",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "image_only",
+      "generated_answer": "ERROR: Error code: 400 - {'error': {'message': \"We could not parse the JSON body of your request. (HINT: This likely means you aren't using your HTTP library correctly. The OpenAI API expects a JSON payload, but what was sent was not valid JSON. If you have trouble figuring out how to fix this, please contact us through our help center at help.openai.com.)\", 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+      "expected_answer": "Figure 1.2-2 shows the NuScale functional boundaries delineating the nuclear steam supply system from the balance of plant. Figure 1.2-3 shows a schematic of a single NPM with its associated secondary equipment including the turbine-generator, condenser, and feedwater system."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "timestamp": "2026-03-26T10:41:07.981138",
+  "source": "pred_gwm_pilot.json",
+  "filters": null,
+  "evaluators": {
+    "tonic": {
+      "model": "gpt-4-turbo",
+      "criteria": "similarity",
+      "scale": "0-5",
+      "threshold": 4
+    },
+    "mlflow": {
+      "model": "openai:/gpt-4o",
+      "criteria": "similarity+correctness",
+      "scale": "1-5",
+      "threshold": 4
+    },
+    "allganize": {
+      "model": "claude-sonnet-4-5-20250929",
+      "criteria": "correctness",
+      "scale": "0/1",
+      "threshold": 1
+    }
+  },
+  "summary": {
+    "total": 5,
+    "correct": 5,
+    "incorrect": 0,
+    "accuracy": 1.0
+  },
+  "by_question_type": {
+    "text_only": {
+      "total": 5,
+      "O": 5,
+      "X": 0,
+      "accuracy": 1.0
+    }
+  },
+  "by_reasoning_type": {
+    "factual": {
+      "total": 5,
+      "O": 5,
+      "X": 0,
+      "accuracy": 1.0
+    }
+  },
+  "by_complexity": {
+    "single_evidence": {
+      "total": 5,
+      "O": 5,
+      "X": 0,
+      "accuracy": 1.0
+    }
+  },
+  "matrix_9cell": {
+    "factual_single_evidence": {
+      "total": 5,
+      "O": 5,
+      "X": 0,
+      "accuracy": 1.0
+    }
+  },
+  "results": [
+    {
+      "id": "Q001",
+      "reasoning_type": "factual",
+      "complexity": "single_evidence",
+      "question_type": "text_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 5,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "What is the total net electrical output of a full 12-module NuScale plant?",
+      "generated_answer": "The total net electrical output of a full 12-module NuScale plant is approximately 570 MWe. Source: nuscale_ch01 p.9 (nodes nuscale_ch01_0005, nuscale_ch01_0006, nuscale_ch01_0007, nuscale_ch01_0008).",
+      "expected_answer": "The total net electrical output of a full NuScale plant with 12 modules is approximately 570 MWe."
+    },
+    {
+      "id": "Q002",
+      "reasoning_type": "factual",
+      "complexity": "single_evidence",
+      "question_type": "text_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 5,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "What is the operating pressure of the NuScale Reactor Coolant System?",
+      "generated_answer": "The operating pressure of the NuScale Reactor Coolant System is 1,850 psia. (Source: Table 1.3-1, NuScale Plant Comparison with Other Facilities)",
+      "expected_answer": "The NuScale RCS operates at 1850 psia."
+    },
+    {
+      "id": "Q003",
+      "reasoning_type": "factual",
+      "complexity": "single_evidence",
+      "question_type": "text_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "What type of steam generator does NuScale use?",
+      "generated_answer": "NuScale uses a helical, once-through steam generator with 1,380 helical tubes per module, integrated within the reactor pressure vessel. Source: Table 5.4-2, Table 1.2-1, Figure 5.4-1, Figure 5.4-2.",
+      "expected_answer": "NuScale uses helical coil steam generators integrated within the reactor pressure vessel."
+    },
+    {
+      "id": "Q004",
+      "reasoning_type": "factual",
+      "complexity": "single_evidence",
+      "question_type": "text_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 2,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "What is the fuel type used in the NuScale reactor?",
+      "generated_answer": "The NuScale reactor uses uranium dioxide (UO2) fuel with enrichment of less than 4.95%. Source: Table 1.2-1: Overall Characteristics of a NuScale Power Plant.",
+      "expected_answer": "NuScale uses UO2 (uranium dioxide) fuel in a standard 17x17 lattice configuration."
+    },
+    {
+      "id": "Q005",
+      "reasoning_type": "factual",
+      "complexity": "single_evidence",
+      "question_type": "text_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 5,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "What is the design life of a NuScale Power Module?",
+      "generated_answer": "The design life of a NuScale Power Module is 60 years (Table 1.3-1: NuScale Plant Comparison with Other Facilities, nuscale_ch01 p.79).",
+      "expected_answer": "The NuScale Power Module has a 60-year design life."
+    }
+  ]
+}

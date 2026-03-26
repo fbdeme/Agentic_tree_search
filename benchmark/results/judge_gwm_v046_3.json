@@ -1,0 +1,463 @@
+{
+  "timestamp": "2026-03-26T12:26:10.449869",
+  "source": "pred_gwm_v046_3.json",
+  "filters": null,
+  "evaluators": {
+    "tonic": {
+      "model": "gpt-4-turbo",
+      "criteria": "similarity",
+      "scale": "0-5",
+      "threshold": 4
+    },
+    "mlflow": {
+      "model": "openai:/gpt-4o",
+      "criteria": "similarity+correctness",
+      "scale": "1-5",
+      "threshold": 4
+    },
+    "allganize": {
+      "model": "claude-sonnet-4-5-20250929",
+      "criteria": "correctness",
+      "scale": "0/1",
+      "threshold": 1
+    }
+  },
+  "summary": {
+    "total": 25,
+    "correct": 19,
+    "incorrect": 6,
+    "accuracy": 0.76
+  },
+  "by_question_type": {
+    "composite": {
+      "total": 8,
+      "O": 6,
+      "X": 2,
+      "accuracy": 0.75
+    },
+    "text_only": {
+      "total": 11,
+      "O": 9,
+      "X": 2,
+      "accuracy": 0.8182
+    },
+    "table_only": {
+      "total": 4,
+      "O": 2,
+      "X": 2,
+      "accuracy": 0.5
+    },
+    "image_only": {
+      "total": 2,
+      "O": 2,
+      "X": 0,
+      "accuracy": 1.0
+    }
+  },
+  "by_reasoning_type": {
+    "factual": {
+      "total": 20,
+      "O": 14,
+      "X": 6,
+      "accuracy": 0.7
+    },
+    "comparative": {
+      "total": 5,
+      "O": 5,
+      "X": 0,
+      "accuracy": 1.0
+    }
+  },
+  "by_complexity": {
+    "multi_evidence": {
+      "total": 5,
+      "O": 3,
+      "X": 2,
+      "accuracy": 0.6
+    },
+    "cross_document": {
+      "total": 15,
+      "O": 11,
+      "X": 4,
+      "accuracy": 0.7333
+    },
+    "single_evidence": {
+      "total": 5,
+      "O": 5,
+      "X": 0,
+      "accuracy": 1.0
+    }
+  },
+  "matrix_9cell": {
+    "factual_multi_evidence": {
+      "total": 5,
+      "O": 3,
+      "X": 2,
+      "accuracy": 0.6
+    },
+    "factual_cross_document": {
+      "total": 15,
+      "O": 11,
+      "X": 4,
+      "accuracy": 0.7333
+    },
+    "comparative_single_evidence": {
+      "total": 5,
+      "O": 5,
+      "X": 0,
+      "accuracy": 1.0
+    }
+  },
+  "results": [
+    {
+      "id": "Q051",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "composite",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "What are the RCS volume components from Table 5.1-1, and how does the simplified diagram in Figure 5.1-2 show these regions?",
+      "generated_answer": "The RCS volume components from Table 5.1-1 are: Hot Leg (635 ft³), Cold Leg (578 ft³), Core Region (89 ft³), SG Region (621 ft³), PZR Region (578 ft³), and PZR Region, cylindrical (487 ft³); Figure 5.1-2 shows these regions as labeled sections in the simplified diagram, illustrating their physical arrangement and flow paths within the reactor coolant system. Source: Table 5.1-1 and Figure 5.1-2.",
+      "expected_answer": "Table 5.1-1 lists volumes: Hot Leg 635 ft³, Cold Leg 578 ft³, Core 89 ft³, SG 621 ft³, PZR 578 ft³. Figure 5.1-2 shows these as distinct regions in the natural circulation loop: core at the bottom, riser (hot leg) going up, pressurizer at the top, SG and downcomer (cold leg) going down."
+    },
+    {
+      "id": "Q052",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "composite",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "What are the RPV height and inner diameter from Table 5.3-1, and how does Figure 5.3-1 show the vessel cross section?",
+      "generated_answer": "The RPV height is 778 inches and the inner diameter of the lower RPV section is 96.5 inches (Table 5.3-1); Figure 5.3-1 shows a labeled cross-sectional elevation of the vessel, depicting major sections such as the CRDM latch housing, RPV head, upper and lower RPV sections, and bottom head. Source: Table 5.3-1, Figure 5.3-1.",
+      "expected_answer": "Table 5.3-1 specifies the RPV height as 778 inches with inner diameters of 96.5, 104.5, and 106.5 inches at different elevations. Figure 5.3-1 shows the RPV cross section with varying wall thickness and diameter, the core region, downcomer annulus, and internal support structures."
+    },
+    {
+      "id": "Q053",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "composite",
+      "tonic_similarity": 2,
+      "mlflow_similarity": 2,
+      "mlflow_correctness": 2,
+      "allganize_correctness": 0,
+      "final_vote": "X",
+      "question": "What DHRS performance does Figure 5.4-7 schematic show, and what initial conditions from Table 5.1-2 apply?",
+      "generated_answer": "Figure 5.4-7 schematic (not shown here, but referenced in the knowledge graph) demonstrates DHRS performance for decay heat removal following reactor shutdown, with initial conditions from Table 5.1-2 specifying reactor coolant system at normal operating pressure and temperature (2100 psia, 650°F). Source: Decay Heat Removal System; System Components; Table 5.1-2 (as referenced in the knowledge graph).",
+      "expected_answer": "Figure 5.4-7 shows the DHRS schematic with passive condensers transferring heat to the reactor pool. The initial conditions from Table 5.1-2 are THot=590.1 degrees F, TCold=496.6 degrees F, and flow rate of 587 kg/s at 100% power, which define the starting thermal state for DHRS cooldown analysis."
+    },
+    {
+      "id": "Q054",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "composite",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "What water chemistry specifications from Table 5.2-5 apply to the RCS, and how does the CVCS described in the text maintain them?",
+      "generated_answer": "The RCS water chemistry specifications from Table 5.2-5 are: chloride ≤0.05 ppm (max 0.15), fluoride ≤0.05 ppm (max 0.15), dissolved oxygen ≤0.005 ppm (max 0.10), sulfate ≤0.05 ppm, hydrogen 25–50 cc/kg, and boron 0–2000 ppm; the CVCS maintains these by controlling chemical additions, removing impurities, and monitoring water quality as described in the system text. Source: Table 5.2-5; ; .",
+      "expected_answer": "Table 5.2-5 specifies Cl <= 0.05 ppm, F <= 0.05 ppm, O2 <= 0.005 ppm, H2 25-50 cc/kg, and B 0-2000 ppm. The CVCS maintains these through continuous letdown/makeup flow, ion exchange demineralizers for impurity removal, hydrogen injection for oxygen control, and boron adjustment via the boric acid system."
+    },
+    {
+      "id": "Q055",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "composite",
+      "tonic_similarity": 1,
+      "mlflow_similarity": 2,
+      "mlflow_correctness": 2,
+      "allganize_correctness": 0,
+      "final_vote": "X",
+      "question": "What material specifications from Table 5.2-4 are used for RPV construction, and what does the text say about their qualification?",
+      "generated_answer": "Table 5.2-4 specifies that RPV construction uses materials such as SA-965 Grade F304LN for pressure retaining components, and the text states these materials are selected and fabricated in accordance with ASME BPVC standards and fully qualified to meet all regulatory requirements for quality, environmental compatibility, and fracture resistance (nuscale_ch05_0010; Table 5.2-4).",
+      "expected_answer": "Table 5.2-4 lists SA-508 Grade 3 for forgings, SA-533 Type B for plates, Alloy 690 for SG tubes, and Alloy 718 for bolting. These materials are qualified per ASME Section III requirements with additional NRC-approved restrictions on chemistry and heat treatment to ensure adequate fracture toughness and corrosion resistance."
+    },
+    {
+      "id": "Q056",
+      "reasoning_type": "factual",
+      "complexity": "cross_document",
+      "question_type": "text_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "What fuel enrichment limit is stated in Ch.01, and what does Ch.05 say about reactivity control through boron?",
+      "generated_answer": "The fuel enrichment limit stated in Chapter 1 is 4.95% U-235, and Chapter 5 confirms that reactivity control is achieved through soluble boron in the Chemical and Volume Control System (CVCS), which manages boron concentration in the reactor coolant for reactivity control. (Source: , , )",
+      "expected_answer": "Ch.01 states fuel enrichment is less than 4.95% U-235. Ch.05 describes boron concentration ranging from 0-2000 ppm in the RCS for reactivity control, managed by the CVCS through dilution and boration."
+    },
+    {
+      "id": "Q057",
+      "reasoning_type": "factual",
+      "complexity": "cross_document",
+      "question_type": "text_only",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 3,
+      "mlflow_correctness": 3,
+      "allganize_correctness": 1,
+      "final_vote": "X",
+      "question": "What does Ch.01 state about the NuScale containment design, and what specific CNV dimensions or pressure ratings does Ch.05 provide?",
+      "generated_answer": "Ch.01 states that the NuScale containment design uses a passive, submerged steel containment vessel (CNV) under vacuum during normal operation, without active fission product clean-up or pressure suppression systems, relying solely on the primary containment for fission product control (nuscale_ch01_0167, nuscale_ch01_0023). Ch.05 provides that the CNV is designed for high containment pressure, with the peak pressure for the worst-case design-basis accident remaining below the containment design pressure, but does not specify exact CNV dimensions or pressure ratings in the referenced sections (Table 1.2-2, nuscale_ch05_0003).",
+      "expected_answer": "Ch.01 describes the containment as a steel pressure vessel operating under vacuum during normal operation, surrounding each RPV. Ch.05 provides details on the CNV design pressure and its role in ECCS operation, where the CNV serves as the ultimate heat sink pathway through its wall to the reactor pool."
+    },
+    {
+      "id": "Q058",
+      "reasoning_type": "factual",
+      "complexity": "cross_document",
+      "question_type": "text_only",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "How is the NuScale seismic design described in Ch.01, and what implications does this have for RCS components per Ch.05?",
+      "generated_answer": "The NuScale seismic design in Ch.01 requires safety-related RCS components to be Seismic Category I and qualified per ASME BPVC Class 1 standards, ensuring they withstand seismic events; this mandates that RCS components in Ch.05, such as the pressurizer and high-point vents, are designed, inspected, and tested to these seismic and quality standards, as shown in Table 5.2-1 and related figures. Sources: nuscale_ch01_0360, nuscale_ch05_0008, Table 5.2-1, Figures 5.1-2, 5.4-17.",
+      "expected_answer": "Ch.01 describes the NuScale plant as designed for seismic events with modules submerged in a below-grade reactor pool for added protection. Ch.05 notes that RCS pressure boundary components are designed to Seismic Category I requirements per ASME Section III, ensuring structural integrity during design basis earthquakes."
+    },
+    {
+      "id": "Q059",
+      "reasoning_type": "factual",
+      "complexity": "cross_document",
+      "question_type": "text_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "What does Ch.01 say about eliminated systems in NuScale, and how does Ch.05 confirm the absence of reactor coolant pumps?",
+      "generated_answer": "Chapter 1 states that NuScale eliminates reactor coolant pumps and external loops, as shown in Table 1.3-1 and the design comparison with typical PWRs, while Chapter 5 confirms their absence by specifying that the reactor coolant system uses natural circulation without pumps or external piping (nuscale_ch01_0052; Table 1.3-1; nuscale_ch05_0002, nuscale_ch05_0003).",
+      "expected_answer": "Ch.01's Table 1.3-2 lists systems not needed in NuScale including RHR, SIS, RWST, AFW, and EDG. Ch.05 confirms the RCS operates entirely by natural circulation with zero reactor coolant pumps, eliminating RCP seal LOCA and loss-of-forced-circulation accidents."
+    },
+    {
+      "id": "Q060",
+      "reasoning_type": "factual",
+      "complexity": "cross_document",
+      "question_type": "text_only",
+      "tonic_similarity": 2,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "What does Ch.01 state about the plant control room, and how does Ch.05 describe the interface with RCS instrumentation?",
+      "generated_answer": "Ch.01 states that the plant control room shares ventilation for up to 12 modules, conforms to SRP 9.4.1 requirements for protection and environmental effects, and uses compressed air tanks for clean air during accidents (nuscale_ch01_0372, nuscale_ch01_0370). Ch.05 describes the interface with RCS instrumentation as providing continuous monitoring of RCS pressure and water level, with data supplied to plant control systems for operator use in the control room (nuscale_ch05_0024).",
+      "expected_answer": "Ch.01 describes a single control room that monitors and controls all 12 modules with a modular control system. Ch.05 describes RCS instrumentation including temperature, pressure, and level measurements that feed to the control room for operator monitoring and automatic protection system actuation."
+    },
+    {
+      "id": "Q061",
+      "reasoning_type": "factual",
+      "complexity": "cross_document",
+      "question_type": "text_only",
+      "tonic_similarity": 3,
+      "mlflow_similarity": 3,
+      "mlflow_correctness": 3,
+      "allganize_correctness": 0,
+      "final_vote": "X",
+      "question": "What does Ch.01 state about the NuScale spent fuel pool design, and what implications does the 24-month refueling cycle have for Ch.05 RCS operations?",
+      "generated_answer": "Ch.01 states that the NuScale spent fuel pool is located in dedicated fuel handling and reactor maintenance areas, with a cooling and cleanup system that fully meets GDC 5, GDC 61, GDC 63, and 10 CFR 20.1101(b) but only partially meets GDC 2 and GDC 4 due to the normal makeup water supply not being seismic Category I; the 24-month refueling cycle means RCS operations must ensure long-term coolant chemistry and integrity, as each module is refueled independently and relies on natural circulation for safe shutdown and decay heat removal. Sources: nuscale_ch01_0035, nuscale_ch01_0303, nuscale_ch01_0036, nuscale_ch05_0002, Table 1.2-1.",
+      "expected_answer": "Ch.01 describes a shared spent fuel pool for all 12 modules located adjacent to the reactor pool. The 24-month refueling cycle means the RCS must be cooled down, depressurized, and the module moved to the refueling area, which involves DHRS operation (Ch.05) to achieve safe conditions for fuel handling."
+    },
+    {
+      "id": "Q062",
+      "reasoning_type": "factual",
+      "complexity": "cross_document",
+      "question_type": "table_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 5,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Compare the operating pressure listed in Table 1.2-1 with the design pressure in Table 5.3-1 for the RPV.",
+      "generated_answer": "The operating pressure for the RPV listed in Table 1.2-1 is 1,850 psia, while the design pressure in Table 5.3-1 is 2,100 psia. (Source: Table 1.2-1, Table 5.3-1)",
+      "expected_answer": "Table 1.2-1 (Ch.01) lists the operating pressure as 1850 psia. Table 5.3-1 (Ch.05) lists the RPV design pressure as 2100 psia. The 250 psia margin between operating and design pressure accommodates transients and provides a safety margin."
+    },
+    {
+      "id": "Q063",
+      "reasoning_type": "factual",
+      "complexity": "cross_document",
+      "question_type": "table_only",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 3,
+      "mlflow_correctness": 3,
+      "allganize_correctness": 1,
+      "final_vote": "X",
+      "question": "What pressurizer volume does Table 1.3-1 give for NuScale vs a typical PWR, and how does Table 5.1-1 detail the NuScale pressurizer volume?",
+      "generated_answer": "Table 1.3-1 gives the NuScale pressurizer internal volume as 568 ft³ and a typical PWR as 1,800 ft³, while Table 5.1-1 provides a detailed breakdown of the NuScale pressurizer volume, confirming the 568 ft³ value. (Source: Table 1.3-1; Table 5.1-1, as referenced in and )",
+      "expected_answer": "Table 1.3-1 (Ch.01) shows NuScale PZR volume as 568 ft³ vs 1800 ft³ for a typical PWR. Table 5.1-1 (Ch.05) specifies the pressurizer volume as 578 ft³. The small difference reflects different measurement conventions but confirms the much smaller NuScale pressurizer."
+    },
+    {
+      "id": "Q064",
+      "reasoning_type": "factual",
+      "complexity": "cross_document",
+      "question_type": "table_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 5,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "According to Table 1.3-1 and Table 5.1-2, what are the NuScale hot leg temperatures in each source?",
+      "generated_answer": "According to Table 1.3-1, the NuScale hot leg temperature is 590°F (nominal), and according to Table 5.1-2, the NuScale hot leg temperature at 100% power is 590.1°F (best-estimate flow). Sources: Table 1.3-1 and Table 5.1-2.",
+      "expected_answer": "Table 1.3-1 (Ch.01) lists the NuScale hot leg temperature as 590 degrees F. Table 5.1-2 (Ch.05) provides more precision at 590.1 degrees F at 100% power. The values are consistent between the overview and detailed chapters."
+    },
+    {
+      "id": "Q065",
+      "reasoning_type": "factual",
+      "complexity": "cross_document",
+      "question_type": "table_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 3,
+      "mlflow_correctness": 3,
+      "allganize_correctness": 0,
+      "final_vote": "X",
+      "question": "What vessel inner diameter does Table 1.3-1 give for NuScale vs a typical PWR, and how does Table 5.3-1 further detail the NuScale RPV dimensions?",
+      "generated_answer": "Table 1.3-1 gives the vessel inner diameter as 107.5 inches for NuScale and 173 inches for a typical PWR, while Table 5.3-1 further details the NuScale RPV with lower section inside diameter 96.5 inches, upper section inside diameter 104.5 inches, and overall height 778 inches. (Source: Table 1.3-1 and Table 5.3-1)",
+      "expected_answer": "Table 1.3-1 (Ch.01) gives NuScale vessel ID as 107.5 inches vs 173 inches for a typical PWR. Table 5.3-1 (Ch.05) provides detailed dimensions: 96.5 inches (lower), 104.5 inches (middle), and 106.5 inches (upper section). The varying diameters reflect the RPV stepped shell design."
+    },
+    {
+      "id": "Q066",
+      "reasoning_type": "factual",
+      "complexity": "cross_document",
+      "question_type": "image_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Compare the NuScale Power Module as shown in Figure 1.2-4 (Ch.01) with the detailed component view in Figure 5.1-1 (Ch.05). What additional detail does Ch.05 provide?",
+      "generated_answer": "Chapter 05 (Figure 5.1-1) provides additional detail by labeling and depicting internal major components of the NuScale Power Module—such as the pressurizer region, pressurizer baffle plate, reactor vessel internals, and reactor core region—not shown in the general external overview of Figure 1.2-4 in Chapter 01 (source: Figure 5.1-1, nuscale_ch05_0004).",
+      "expected_answer": "Figure 1.2-4 shows the external module configuration with CNV and piping connections. Figure 5.1-1 provides a more detailed view showing internal components: core region, riser, SG tube bundle, pressurizer space, and their relative positions within the RPV, plus the CNV surrounding it."
+    },
+    {
+      "id": "Q067",
+      "reasoning_type": "factual",
+      "complexity": "cross_document",
+      "question_type": "image_only",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 5,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "How does the conceptual site layout in Figure 1.2-1 relate to the DHRS schematic in Figure 5.4-7 in terms of the reactor pool?",
+      "generated_answer": "The conceptual site layout in Figure 1.2-1 shows the physical location of the reactor pool within the Reactor Building, while the DHRS schematic in Figure 5.4-7 (referenced in the knowledge graph) details how the DHRS passive condensers are immersed in this same reactor pool to provide decay heat removal for the NuScale Power Modules. (Source: Figure 1.2-1; nuscale_ch01_0043; nuscale_ch05_0022)",
+      "expected_answer": "Figure 1.2-1 shows the overall site with the reactor building containing the shared reactor pool housing up to 12 modules. Figure 5.4-7 shows how each module's DHRS condensers are submerged in this same reactor pool, connecting the plant-level layout to the module-level safety system design."
+    },
+    {
+      "id": "Q068",
+      "reasoning_type": "factual",
+      "complexity": "cross_document",
+      "question_type": "composite",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 5,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Using Table 1.2-1, Table 5.1-2, and the RCS flow diagram Figure 5.1-3, describe the thermal-hydraulic operating conditions of the NuScale RCS.",
+      "generated_answer": "The NuScale RCS operates at 160 MWt with a best-estimate core flow of 587.0 kg/s, core temperature rise (ΔT) of 99.8°F, cold leg temperature of 496.6°F, average temperature of 543.3°F, and hot leg temperature of 590.1°F, using natural circulation as shown in the schematic flow diagram (Figure 5.1-3) and summarized in Table 5.1-2; the system layout and boundaries are depicted in Table 1.2-1 and Figure 5.1-3. (Source: Table 1.2-1, Table 5.1-2, Figure 5.1-3)",
+      "expected_answer": "Table 1.2-1 gives 160 MWt and 1850 psia operating conditions. Table 5.1-2 details THot=590.1 degrees F, TCold=496.6 degrees F, flow=587 kg/s. Figure 5.1-3 shows the flow schematic with the natural circulation path through core, riser, SG, and downcomer with instrument locations."
+    },
+    {
+      "id": "Q069",
+      "reasoning_type": "factual",
+      "complexity": "cross_document",
+      "question_type": "composite",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "What does Table 1.3-1 say about NuScale fuel assemblies, and how does Figure 5.1-1 show the core region within the module?",
+      "generated_answer": "Table 1.3-1 states that each NuScale module has 37 fuel assemblies, each with a 17x17 lattice, 264 fuel rods per assembly, and an effective fuel length of 6.56 ft; Figure 5.1-1 shows the core region as the lower section of the reactor vessel, clearly labeled \"Reactor Core Region\" within the module. (Source: Table 1.3-1, Figure 5.1-1)",
+      "expected_answer": "Table 1.3-1 states NuScale has 37 fuel assemblies with 6.56 ft active fuel length, compared to 193 assemblies and 12 ft in a typical PWR. Figure 5.1-1 shows the core region at the bottom of the RPV where these fuel assemblies are located, with the riser directly above directing heated coolant upward."
+    },
+    {
+      "id": "Q070",
+      "reasoning_type": "factual",
+      "complexity": "cross_document",
+      "question_type": "composite",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 5,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "What safety enhancement does Table 1.2-2 attribute to the integral RCS, and how does Figure 5.1-2 illustrate this design?",
+      "generated_answer": "Table 1.2-2 attributes the safety enhancement of the integral RCS to the elimination of large diameter primary coolant piping, which removes the possibility of postulated large-break LOCA spectrum accidents; Figure 5.1-2 illustrates this by showing all major RCS components (reactor core, steam generators, pressurizer) fully contained within a single reactor pressure vessel, with no external primary piping. (Source: Table 1.2-2; Figure 5.1-2)",
+      "expected_answer": "Table 1.2-2 states that housing the RCS within the RPV eliminates large-bore piping and thus eliminates large-break LOCA. Figure 5.1-2 shows the simplified RCS diagram where all components (core, SG, pressurizer) are within the single RPV, with no external loops or large-bore piping connecting separate vessels."
+    },
+    {
+      "id": "Q071",
+      "reasoning_type": "comparative",
+      "complexity": "single_evidence",
+      "question_type": "text_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "How does the NuScale natural circulation driving force compare to forced circulation in a conventional PWR?",
+      "generated_answer": "The NuScale natural circulation driving force is significantly lower than the forced circulation in a conventional PWR, as NuScale relies solely on density differences (thermal gradients) without pumps, resulting in lower flow rates (e.g., 587 kg/s at 100% power) compared to the much higher flow rates achieved by pump-driven forced circulation in conventional PWRs; this is directly contrasted in the design basis and system evaluation sections. (Source: nuscale_ch05_0003, nuscale_ch05_0006, Table 5.1-2)",
+      "expected_answer": "NuScale relies on buoyancy-driven natural circulation with no RCPs, producing lower flow rates than forced circulation PWRs. This is acceptable because the lower power density of the NuScale core requires less coolant flow for adequate heat removal."
+    },
+    {
+      "id": "Q072",
+      "reasoning_type": "comparative",
+      "complexity": "single_evidence",
+      "question_type": "text_only",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 3,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "How does the NuScale containment differ from a conventional large dry containment?",
+      "generated_answer": "The NuScale containment is a small, cylindrical, steel, ASME-certified pressure vessel (14 ft 2 in. diameter, 75 ft 8.5 in. height) maintained at a vacuum and lacking active fission product clean-up, pressure suppression, and spray systems, whereas a conventional large dry containment is a much larger (140 ft diameter, 205 ft height) reinforced concrete structure with such active systems and external coolant loops. Sources: nuscale_ch01_0004, Table 1.3-1, Table 1.2-2, nuscale_ch01_0167, nuscale_ch01_0052.",
+      "expected_answer": "NuScale uses a compact steel containment vessel (CNV) operating under vacuum, while conventional PWRs use large concrete dry containments at near-atmospheric pressure. The NuScale CNV is submerged in the reactor pool, providing direct heat transfer capability, while conventional containments rely on spray and fan cooler systems."
+    },
+    {
+      "id": "Q073",
+      "reasoning_type": "comparative",
+      "complexity": "single_evidence",
+      "question_type": "text_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 5,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "How does the NuScale passive safety approach compare to active safety systems in conventional PWRs?",
+      "generated_answer": "The NuScale passive safety approach eliminates the need for active safety systems (such as pumps, emergency diesel generators, and auxiliary feedwater systems) found in conventional PWRs by using natural circulation, passive decay heat removal, and a fully passive Emergency Core Cooling System, resulting in no reliance on external power or operator action for core cooling and depressurization during emergencies (see Table 1.3-1, Table 1.3-2, and Figures 1.2-7 and 1.2-9). Source: nuscale_ch01 pp. 32–33, 79, 95; Table 1.3-1, Table 1.3-2; Figures 1.2-7, 1.2-9.",
+      "expected_answer": "NuScale uses passive safety systems that operate without AC power or operator action, relying on natural forces like gravity and natural circulation. Conventional PWRs require active pumps, diesel generators, and operator actions for emergency core cooling and heat removal."
+    },
+    {
+      "id": "Q074",
+      "reasoning_type": "comparative",
+      "complexity": "single_evidence",
+      "question_type": "text_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "How does the NuScale ECCS design differ from conventional emergency core cooling systems?",
+      "generated_answer": "The NuScale ECCS design differs from conventional systems by using natural circulation without pumps or external piping, with all ECCS valves and components integrated inside the reactor pressure vessel, enabling passive emergency core cooling through gravity and pressure differentials rather than active mechanical systems. (Source: nuscale_ch05_0002, nuscale_ch05_0003, nuscale_ch05_0004, nuscale_ch05_0019; Figures 5.1-1, 5.1-2)",
+      "expected_answer": "NuScale ECCS uses valves (RVVs and RRVs) to establish communication between RPV and CNV, allowing coolant recirculation by gravity. Conventional ECCS uses multiple high and low pressure injection pumps, accumulators, and a refueling water storage tank. NuScale eliminates the need for these active injection systems."
+    },
+    {
+      "id": "Q075",
+      "reasoning_type": "comparative",
+      "complexity": "single_evidence",
+      "question_type": "text_only",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "How does NuScale's integral steam generator design differ from external U-tube steam generators?",
+      "generated_answer": "NuScale’s integral steam generator design places helical, once-through steam generator tubes entirely within the reactor pressure vessel (RPV), eliminating external piping and U-tube configurations found in conventional designs, which use external U-tube steam generators outside the RPV with more potential leak paths and flow-induced wear risks (see , , Table 5.4-2, Figure 5.4-1, Figure 5.4-9).",
+      "expected_answer": "NuScale uses helical coil SGs integrated within the RPV annulus, with primary coolant on the shell side and feedwater/steam inside the tubes. Conventional PWRs use external U-tube SGs with primary coolant inside the tubes. The integral design eliminates large primary piping between RPV and SG."
+    }
+  ]
+}

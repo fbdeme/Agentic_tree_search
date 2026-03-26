@@ -1,0 +1,445 @@
+{
+  "timestamp": "2026-03-26T12:25:36.015508",
+  "source": "pred_gwm_v046_7.json",
+  "filters": null,
+  "evaluators": {
+    "tonic": {
+      "model": "gpt-4-turbo",
+      "criteria": "similarity",
+      "scale": "0-5",
+      "threshold": 4
+    },
+    "mlflow": {
+      "model": "openai:/gpt-4o",
+      "criteria": "similarity+correctness",
+      "scale": "1-5",
+      "threshold": 4
+    },
+    "allganize": {
+      "model": "claude-sonnet-4-5-20250929",
+      "criteria": "correctness",
+      "scale": "0/1",
+      "threshold": 1
+    }
+  },
+  "summary": {
+    "total": 25,
+    "correct": 23,
+    "incorrect": 2,
+    "accuracy": 0.92
+  },
+  "by_question_type": {
+    "table_only": {
+      "total": 6,
+      "O": 6,
+      "X": 0,
+      "accuracy": 1.0
+    },
+    "image_only": {
+      "total": 4,
+      "O": 4,
+      "X": 0,
+      "accuracy": 1.0
+    },
+    "composite": {
+      "total": 5,
+      "O": 5,
+      "X": 0,
+      "accuracy": 1.0
+    },
+    "text_only": {
+      "total": 10,
+      "O": 8,
+      "X": 2,
+      "accuracy": 0.8
+    }
+  },
+  "by_reasoning_type": {
+    "judgment": {
+      "total": 25,
+      "O": 23,
+      "X": 2,
+      "accuracy": 0.92
+    }
+  },
+  "by_complexity": {
+    "multi_evidence": {
+      "total": 15,
+      "O": 15,
+      "X": 0,
+      "accuracy": 1.0
+    },
+    "cross_document": {
+      "total": 10,
+      "O": 8,
+      "X": 2,
+      "accuracy": 0.8
+    }
+  },
+  "matrix_9cell": {
+    "judgment_multi_evidence": {
+      "total": 15,
+      "O": 15,
+      "X": 0,
+      "accuracy": 1.0
+    },
+    "judgment_cross_document": {
+      "total": 10,
+      "O": 8,
+      "X": 2,
+      "accuracy": 0.8
+    }
+  },
+  "results": [
+    {
+      "id": "Q151",
+      "reasoning_type": "judgment",
+      "complexity": "multi_evidence",
+      "question_type": "table_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Based on Tables 5.1-1 and 5.1-2, is the RCS volume adequate for the thermal-hydraulic operating conditions?",
+      "generated_answer": "Yes, the RCS volume is adequate for the thermal-hydraulic operating conditions, as Table 5.1-1 shows a total nominal RCS volume distributed across all regions (e.g., hot leg 635 ft³, cold leg 578 ft³, core 89 ft³, SG 621 ft³, PZR 578 ft³), and Table 5.1-2 confirms that these volumes support the required flow rates (up to 660.5 kg/s) and temperature ranges (cold leg 487.4–507.8°F, hot leg up to 590.1°F) at all power levels. (Source: Table 5.1-1 and Table 5.1-2)",
+      "expected_answer": "Yes. Table 5.1-1 shows total RCS volume (Hot Leg 635 + Cold Leg 578 + Core 89 + SG 621 + PZR 578 ft³) is adequate for the flow conditions in Table 5.1-2 (587 kg/s, delta-T 99.8 degrees F). The volume proportions provide sufficient fluid inventory for natural circulation and accommodate thermal expansion."
+    },
+    {
+      "id": "Q152",
+      "reasoning_type": "judgment",
+      "complexity": "multi_evidence",
+      "question_type": "table_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 5,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Based on Tables 5.2-2 and 5.3-1, is the RSV capacity adequate for overpressure protection?",
+      "generated_answer": "Yes, the RSV capacity is adequate for overpressure protection, as each valve provides a minimum design capacity of 63,360 lbm/hr saturated steam at 3% overpressure, matching the reactor vessel’s design pressure of 2100 psia (Tables 5.2-2 and 5.3-1). Sources: Table 5.2-2, Table 5.3-1.",
+      "expected_answer": "Yes. Table 5.2-2 shows 2 RSVs with 63,360 lbm/hr capacity each and setpoints at 2075/2100 psia. Table 5.3-1 gives RPV design pressure of 2100 psia. The RSVs open before reaching design pressure (first at 2075 psia) with sufficient capacity to prevent exceeding the 2100 psia design limit during credible overpressure events."
+    },
+    {
+      "id": "Q153",
+      "reasoning_type": "judgment",
+      "complexity": "multi_evidence",
+      "question_type": "table_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Based on Table 5.2-5 and Table 5.2-4, are the water chemistry limits adequate to protect the specified RCS materials?",
+      "generated_answer": "Yes, the water chemistry limits in Table 5.2-5 are adequate to protect the specified RCS materials listed in Table 5.2-4, as they are based on regulatory requirements and EPRI guidelines referenced for material compatibility and integrity (nuscale_ch05_0010; Table 5.2-5; Table 5.2-4).",
+      "expected_answer": "Yes. Table 5.2-5 limits (Cl/F<=0.05 ppm, O2<=0.005 ppm, H2 25-50 cc/kg) are aligned with industry guidance (EPRI) for protecting the materials in Table 5.2-4: Alloy 690 SG tubes, SA-508/SA-533 RPV steel, and stainless steel cladding. The low oxygen and halide limits prevent SCC and pitting."
+    },
+    {
+      "id": "Q154",
+      "reasoning_type": "judgment",
+      "complexity": "multi_evidence",
+      "question_type": "table_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Based on Table 5.3-2 and Table 5.3-3, are the beltline chemistry limits adequate to limit irradiation embrittlement?",
+      "generated_answer": "Yes, the beltline chemistry limits (Cu ≤ 0.06%, Ni = 0.85%) in Table 5.3-2 are adequate, as Table 5.3-3 shows the 1/4-T adjusted reference temperatures at 57 EFPY remain well below regulatory screening criteria, confirming effective limitation of irradiation embrittlement (Table 5.3-2, Table 5.3-3).",
+      "expected_answer": "Yes. Table 5.3-2 limits (Cu<=0.06%, Ni<=0.85%, S/P<=0.010%) are stricter than Reg Guide 1.99 recommendations. Table 5.3-3 shows the resulting ARTs at 57 EFPY (max 120.4 degrees F for welds) are well below PTS screening criteria, confirming the chemistry limits adequately control embrittlement."
+    },
+    {
+      "id": "Q155",
+      "reasoning_type": "judgment",
+      "complexity": "multi_evidence",
+      "question_type": "table_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Based on Table 5.2-10 LTOP setpoints and Table 5.3-6/7 P-T limits, is there adequate margin between LTOP actuation and the P-T curves?",
+      "generated_answer": "Yes, there is adequate margin: the LTOP setpoints (e.g., 380 psig at ≤193°F, 615.5 psig at 240°F, 850 psig at ≥277°F per Table 5.2-10 and Figure 5.2-4) are well below the corresponding P-T limits for normal heatup/cooldown and inservice test conditions (Tables 5.3-6/7 and Figures 5.3-3, 5.3-4, 5.3-5), ensuring the vessel is protected from non-ductile failure. (Source: Table 5.2-10, Table 5.3-6, Table 5.3-7, Figures 5.2-4, 5.3-3, 5.3-4, 5.3-5)",
+      "expected_answer": "Yes. Table 5.2-10 setpoints (380/615.5/850 psia at low temperatures) are set well below the P-T limit curves in Tables 5.3-6/7 at the same temperatures. This margin accounts for valve response time, pressure overshoot, and measurement uncertainty, ensuring P-T limits are not exceeded."
+    },
+    {
+      "id": "Q156",
+      "reasoning_type": "judgment",
+      "complexity": "multi_evidence",
+      "question_type": "table_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 5,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Based on Tables 5.3-9/10, does the minimum Charpy upper shelf energy after irradiation satisfy 10 CFR 50 Appendix G?",
+      "generated_answer": "Yes, the minimum Charpy upper shelf energy after irradiation (58.4 ft-lb for the lower RPV shell, beltline) satisfies 10 CFR 50 Appendix G, which requires a minimum of 50 ft-lb; see Tables 5.3-9 and 5.3-10.",
+      "expected_answer": "Yes. Tables 5.3-9/10 show minimum USE of 58.4 ft-lb after irradiation at end-of-life fluence. This exceeds the 10 CFR 50 Appendix G requirement of 50 ft-lb, providing 8.4 ft-lb (17%) margin. The adequate margin reflects the strict beltline chemistry limits and reduced NuScale fluence levels."
+    },
+    {
+      "id": "Q157",
+      "reasoning_type": "judgment",
+      "complexity": "multi_evidence",
+      "question_type": "image_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 5,
+      "mlflow_correctness": 5,
+      "allganize_correctness": -1,
+      "final_vote": "O",
+      "question": "Based on Figures 5.4-7 and 5.4-8 through 5.4-16, does the DHRS design achieve adequate cooldown performance?",
+      "generated_answer": "Yes, the DHRS design achieves adequate cooldown performance, as Figures 5.4-7 and 5.4-8 through 5.4-16 show that primary coolant temperatures decrease below 420°F within 36 hours under all evaluated scenarios, meeting the design requirement for safe shutdown. (Source: Figures 5.4-13, 5.4-15, 5.4-16; nuscale_ch05_0022)",
+      "expected_answer": "Yes. Figure 5.4-7 shows the DHRS design with passive condensers in the reactor pool. Figures 5.4-8 through 5.4-16 show performance curves demonstrating monotonic decreases in RCS temperature and pressure over time, reaching safe cooldown conditions without active systems. The curves confirm the passive design achieves adequate performance."
+    },
+    {
+      "id": "Q158",
+      "reasoning_type": "judgment",
+      "complexity": "multi_evidence",
+      "question_type": "image_only",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Based on Figures 5.4-1 and 5.4-2, does the NuScale SG design provide adequate access for inspection and maintenance?",
+      "generated_answer": "Yes, Figures 5.4-1 and 5.4-2 show that the NuScale SG design provides adequate access for inspection and maintenance via removable access covers at both the main steam and feedwater tubesheets, allowing direct entry to the steam generator tube bundles. (Source: Figure 5.4-2, \"Configuration of Steam Generators in Upper Reactor Pressure Vessel Section\")",
+      "expected_answer": "Yes. Figure 5.4-1 shows the helical coil SG within the RPV annulus, and Figure 5.4-2 shows tube access ports at the top of the module. Despite the integrated design, access from above allows tube inspection, eddy current testing, and plugging of degraded tubes. This meets ASME Section XI ISI requirements for SG tubes."
+    },
+    {
+      "id": "Q159",
+      "reasoning_type": "judgment",
+      "complexity": "multi_evidence",
+      "question_type": "image_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Based on Figure 5.1-2 and Figure 5.1-3, is the RCS instrumentation layout adequate for monitoring natural circulation conditions?",
+      "generated_answer": "Yes, Figures 5.1-2 and 5.1-3 show that the RCS instrumentation layout provides coverage of key parameters (pressure, temperature, and flow paths) necessary for monitoring natural circulation conditions, supporting adequate system monitoring as described in the system summary and design basis sections (nuscale_ch05_0002, nuscale_ch05_0003, Figures 5.1-2, 5.1-3).",
+      "expected_answer": "Yes. Figure 5.1-2 shows the simplified flow path, and Figure 5.1-3 details the instrumentation: temperature sensors at hot and cold legs, pressure transmitters, and level measurements. These instrument locations cover all critical parameters needed to monitor natural circulation performance and detect abnormal conditions."
+    },
+    {
+      "id": "Q160",
+      "reasoning_type": "judgment",
+      "complexity": "multi_evidence",
+      "question_type": "image_only",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Based on Figures 1.2-5 and 5.3-1, does the RPV internal arrangement provide adequate space for all integrated components?",
+      "generated_answer": "Yes, Figures 1.2-5 and 5.3-1, along with Table 5.3-1, confirm that the RPV internal arrangement provides adequate space for all integrated components, with an inside diameter of up to 106.5 inches in the pressurizer region and clear spatial allocation for major internals. (Source: Figure 1.2-5, Table 5.3-1, Figure 5.3-1; nuscale_ch01_0033; nuscale_ch05_0015)",
+      "expected_answer": "Yes. Figure 1.2-5 cutaway shows all components (core, riser, SG, pressurizer) fitting within the RPV. Figure 5.3-1 cross section confirms adequate clearances with the stepped diameter design (96.5-106.5 inches ID) accommodating the core in the lower section and SG tubes in the upper/wider sections. The 778-inch height provides vertical separation."
+    },
+    {
+      "id": "Q161",
+      "reasoning_type": "judgment",
+      "complexity": "multi_evidence",
+      "question_type": "composite",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 5,
+      "allganize_correctness": -1,
+      "final_vote": "O",
+      "question": "Based on Table 5.1-2 and the text discussion of natural circulation, is the minimum design flow rate adequate for core cooling?",
+      "generated_answer": "Yes, the minimum design flow rate of 538.5 kg/s at 100% power is adequate for core cooling, as confirmed by Table 5.1-2 and the text discussion that the natural circulation design ensures sufficient heat removal under all operating conditions (nuscale_ch05_0006, Table 5.1-2).",
+      "expected_answer": "Yes. Table 5.1-2 shows minimum design flow at 91.7% is 538.5 kg/s with delta-T of 107.6 degrees F. The text explains this higher delta-T increases buoyancy driving force, providing self-regulating behavior. Even at minimum flow, adequate core cooling is maintained with acceptable fuel temperatures."
+    },
+    {
+      "id": "Q162",
+      "reasoning_type": "judgment",
+      "complexity": "multi_evidence",
+      "question_type": "composite",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Based on Table 5.4-1 and Figure 5.4-1, is the NuScale SG design adequate for transferring the full thermal power from primary to secondary?",
+      "generated_answer": "Yes, the NuScale steam generator (SG) design is adequate for transferring the full thermal power from primary to secondary, as Table 5.4-1 shows a total heat transfer of 159.13 MWt at full-load conditions, and Figure 5.4-1 confirms the SG configuration supports this transfer. Source: Table 5.4-1, Figure 5.4-1.",
+      "expected_answer": "Yes. Table 5.4-1 specifies ~71.4 lbm/sec per SG with feedwater at ~300 degrees F heated to ~575 degrees F steam. Figure 5.4-1 shows the helical coil geometry packing extensive tube length in the compact annulus. The large heat transfer surface area and counterflow arrangement provide adequate thermal duty for full power operation."
+    },
+    {
+      "id": "Q163",
+      "reasoning_type": "judgment",
+      "complexity": "multi_evidence",
+      "question_type": "composite",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Based on Table 5.3-1 parameters and Figure 5.3-1, is the RPV design adequate for containing the RCS at design conditions?",
+      "generated_answer": "Yes, the RPV design is adequate for containing the RCS at design conditions, as Table 5.3-1 shows the vessel is rated for a design pressure of 2100 psia and temperature of 650°F, and Figure 5.3-1 confirms the vessel configuration supports these parameters in compliance with ASME code requirements. (Source: Table 5.3-1; Figure 5.3-1; , , )",
+      "expected_answer": "Yes. Table 5.3-1 specifies design pressure 2100 psia, design temperature 650 degrees F, and RPV height 778 inches with varying IDs (96.5-106.5 in). Figure 5.3-1 shows the cross section with adequate wall thickness and cladding. The SA-508 Grade 3 material at these dimensions provides adequate structural integrity with required code margins per ASME Section III."
+    },
+    {
+      "id": "Q164",
+      "reasoning_type": "judgment",
+      "complexity": "multi_evidence",
+      "question_type": "composite",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Based on Table 5.2-5 chemistry limits and the CVCS text description, does the NuScale chemistry program adequately prevent corrosion degradation?",
+      "generated_answer": "Yes, the NuScale chemistry program adequately prevents corrosion degradation by maintaining strict limits on chloride (≤0.05 ppm), fluoride (≤0.05 ppm), dissolved oxygen (≤0.005 ppm), and sulfate (≤0.05 ppm) as shown in Table 5.2-5, and the CVCS description confirms these controls are implemented to protect reactor coolant pressure boundary materials from corrosion. Source: Table 5.2-5; ; .",
+      "expected_answer": "Yes. Table 5.2-5 limits halides (Cl/F<=0.05 ppm), oxygen (<=0.005 ppm), and maintains hydrogen (25-50 cc/kg). The CVCS uses ion exchangers, hydrogen injection, and continuous purification to maintain these limits. This comprehensive approach prevents SCC, pitting, and general corrosion of RCS materials for the 60-year life."
+    },
+    {
+      "id": "Q165",
+      "reasoning_type": "judgment",
+      "complexity": "multi_evidence",
+      "question_type": "composite",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Based on Table 5.2-2 RSV specifications and Figure 5.2-1, is the RSV installation adequate for reliable overpressure protection?",
+      "generated_answer": "Yes, the RSV installation is adequate for reliable overpressure protection, as Table 5.2-2 specifies a design pressure of 2100 psia, setpoints of 2075 psia ±1% and 2100 psia ±1%, and a minimum capacity of 63,360 lbm/hr saturated steam, with Figure 5.2-1 confirming a robust, code-compliant valve design; these meet regulatory and ASME BPVC requirements for overpressure protection. (Source: Table 5.2-2; Figure 5.2-1; ; )",
+      "expected_answer": "Yes. Table 5.2-2 specifies 2 RSVs with 63,360 lbm/hr capacity each at setpoints of 2075/2100 psia. Figure 5.2-1 shows the RSV mounted directly on the RPV head, providing a short, direct path for pressure relief without intermediate piping that could fail or restrict flow. The dual-valve arrangement provides redundancy."
+    },
+    {
+      "id": "Q166",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "text_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Given the Ch.01 claim that NuScale eliminates LBLOCA, does Ch.05 provide adequate technical basis for this claim?",
+      "generated_answer": "Yes, Ch.05 provides an adequate technical basis for the Ch.01 claim that NuScale eliminates LBLOCA by detailing the integral reactor vessel design with no large external loop piping (Figures 5.1-1, 5.1-2, 5.1-3), robust pressure boundary materials and inspection (Tables 5.2-4, 5.2-6), and safety valve design (Figures 5.2-1, 5.2-2), all of which preclude large break scenarios; this is explicitly supported by , , and .",
+      "expected_answer": "Yes. Ch.01 states the integral RCS eliminates large-bore piping and LBLOCA. Ch.05 confirms all RCS components are within the RPV with no external loops, and the largest possible break is limited to small instrument/CVCS connections. Ch.05's break spectrum analysis covers only small-break LOCAs, validating the Ch.01 claim."
+    },
+    {
+      "id": "Q167",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "text_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 5,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Does the Ch.05 DHRS analysis adequately support the Ch.01 claim of passive safety without AC power?",
+      "generated_answer": "Yes, the Ch.05 DHRS analysis demonstrates that the system passively removes decay heat and maintains safe reactor cooling without AC power, directly supporting the Ch.01 claim of passive safety by showing the DHRS keeps RCS temperature below 420°F within 36 hours and operates independently of active systems (see nuscale_ch05_0022, nuscale_ch01_0021, Table 1.2-2, and Figure 5.4-10).",
+      "expected_answer": "Yes. Ch.01 claims NuScale safety systems require no AC power. Ch.05 DHRS analysis demonstrates adequate decay heat removal using only natural circulation through passive condensers in the reactor pool. No pumps, motors, or electrical actuation (beyond initial valve opening) is required, fully supporting the passive safety claim."
+    },
+    {
+      "id": "Q168",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "text_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Is the NuScale 60-year design life claim from Ch.01 adequately supported by the Ch.05 RPV integrity analysis?",
+      "generated_answer": "Yes, the NuScale 60-year design life claim in Ch.01 is adequately supported by the Ch.05 RPV integrity analysis, which demonstrates compliance with ASME BPVC, provides pressure-temperature limits (Table 5.3-6, Figure 5.3-3), embrittlement and upper-shelf energy data (Tables 5.3-9, 5.3-10), and confirms all values remain within regulatory safety criteria for 60 years (nuscale_ch05_0016, nuscale_ch05_0017, nuscale_ch05_0008, nuscale_ch01_0135).",
+      "expected_answer": "Yes. Ch.01 claims 60-year design life. Ch.05 analyzes RPV embrittlement to 57 EFPY, showing all ART values well below PTS screening criteria and Charpy USE above 50 ft-lb requirements. The beltline chemistry restrictions and material surveillance program provide the technical basis for 60-year vessel integrity."
+    },
+    {
+      "id": "Q169",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "text_only",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 3,
+      "mlflow_correctness": 3,
+      "allganize_correctness": 0,
+      "final_vote": "X",
+      "question": "Does the shared reactor pool described in Ch.01 present adequate heat sink capacity for the DHRS functions described in Ch.05?",
+      "generated_answer": "Yes, the shared reactor pool described in Ch.01 provides adequate heat sink capacity for the DHRS functions in Ch.05, as it is designed as the ultimate heat sink with sufficient water inventory to ensure passive decay heat removal and maintain primary coolant temperature below 420°F within 36 hours, satisfying regulatory and design requirements (nuscale_ch01_0043; nuscale_ch05_0022; Table 5.4-5; Figure 5.4-13).",
+      "expected_answer": "Yes, but with constraints. Ch.01 describes a shared pool for 12 modules. Ch.05 shows DHRS heat rejection to this pool with a 140 degrees F temperature limit. The pool must absorb decay heat from potentially all 12 modules simultaneously. The pool design provides adequate capacity for this worst case, but the temperature limit constrains how long all modules can operate on DHRS."
+    },
+    {
+      "id": "Q170",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "text_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 5,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Is the NuScale approach of eliminating emergency diesel generators (Ch.01) adequately justified by the passive safety systems in Ch.05?",
+      "generated_answer": "Yes, the NuScale approach of eliminating emergency diesel generators is adequately justified by the passive safety systems in Ch.05, as the design uses natural circulation and passive decay heat removal systems that maintain all safety functions without reliance on AC or DC power, fully conforming to regulatory criteria (see nuscale_ch01_0412, nuscale_ch01_0044, nuscale_ch05_0003, Table 1.2-2, and Figures 5.1-1 to 5.1-3).",
+      "expected_answer": "Yes. Ch.01's Table 1.3-2 lists EDGs as eliminated. Ch.05 demonstrates that all safety functions (core cooling via natural circulation, decay heat removal via DHRS, ECCS via fail-open valves, containment via passive vacuum CNV) operate without AC power. The fail-safe design of ECCS valves and gravity-driven DHRS eliminates the need for backup power."
+    },
+    {
+      "id": "Q171",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "text_only",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Does the Ch.05 natural circulation analysis adequately justify Ch.01's claim that NuScale does not need reactor coolant pumps?",
+      "generated_answer": "Yes, the Ch.05 natural circulation analysis, supported by experimental data and system diagrams, adequately justifies Ch.01's claim that NuScale does not need reactor coolant pumps, as the design basis demonstrates safe and efficient core cooling solely by passive natural circulation (see nuscale_ch05_0003, nuscale_ch01_0731, Table 1.3-1, Figures 5.1-1 to 5.1-3).",
+      "expected_answer": "Yes. Ch.01 lists 0 RCPs with natural circulation as the driving force. Ch.05 demonstrates that the tall RPV geometry, low power density, and temperature-driven buoyancy produce 587 kg/s at 100% power, adequate for heat removal. The self-regulating nature (lower flow increases delta-T, increasing driving force) provides inherent stability without pumps."
+    },
+    {
+      "id": "Q172",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "text_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 3,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Is the NuScale approach to seismic design (below-grade pool, Ch.01) consistent with the Ch.05 Seismic Category I classification of RCS components?",
+      "generated_answer": "Yes, the NuScale approach to seismic design—using a below-grade pool within the reinforced concrete Reactor Building—is consistent with the Chapter 5 Seismic Category I classification of RCS components, as these safety-related systems and structures are explicitly classified and designed as Seismic Category I per , , and .",
+      "expected_answer": "Yes. Ch.01's below-grade reactor pool provides inherent seismic protection by reducing amplification of ground motion. Ch.05's Seismic Category I classification of all RCS pressure boundary components per ASME Section III ensures structural integrity during design basis earthquakes. Together, the site design and component qualification provide a consistent seismic protection approach."
+    },
+    {
+      "id": "Q173",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "text_only",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 0,
+      "final_vote": "O",
+      "question": "Does the single control room concept (Ch.01) present regulatory concerns given the RCS complexity described in Ch.05?",
+      "generated_answer": "The single control room concept does not present regulatory concerns despite RCS complexity, as the NuScale design conforms to applicable criteria for control room systems, ventilation, and human factors engineering, with any departures (e.g., from GDC 19) addressed by NuScale-specific criteria and found acceptable in the Final Safety Analysis Report (nuscale_ch01_0402, nuscale_ch01_0372, nuscale_ch01_0849, nuscale_ch01_0852, nuscale_ch05_0024).",
+      "expected_answer": "No significant concerns. Ch.01 describes a single control room for all 12 modules. Ch.05 shows the RCS is greatly simplified with passive safety systems requiring no operator action for safety functions. The reduced operator workload per module (no RCPs, no active ECCS injection, passive DHRS) supports the single control room approach."
+    },
+    {
+      "id": "Q174",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "text_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Is the 24-month refueling cycle (Ch.01) consistent with the Ch.05 RCS design for cooldown and depressurization?",
+      "generated_answer": "Yes, the 24-month refueling cycle is consistent with the Chapter 5 RCS design, as the Decay Heat Removal System (DHRS) ensures cooldown to below 420°F within 36 hours, supporting safe depressurization and refueling operations as required for the cycle (nuscale_ch05_0022, Table 1.2-1, Figures 5.4-13, 5.4-15, 5.4-16).",
+      "expected_answer": "Yes. Ch.01 specifies 24-month refueling. Ch.05 describes the DHRS capability for controlled cooldown and the LTOP system for safe depressurization at low temperatures. The module can be safely cooled, depressurized, and disconnected for movement to the refueling area within the planned outage window."
+    },
+    {
+      "id": "Q175",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "text_only",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 3,
+      "mlflow_correctness": 3,
+      "allganize_correctness": 1,
+      "final_vote": "X",
+      "question": "Does the NuScale approach of having multiple small modules (Ch.01) provide safety advantages over a single large reactor, considering the Ch.05 RCS design?",
+      "generated_answer": "Yes, the NuScale approach of multiple small modules provides safety advantages over a single large reactor by eliminating large-diameter primary coolant piping and reactor coolant pumps, thus removing large-break LOCA scenarios and reducing accident consequences, as supported by the integral RCS design with natural circulation and passive safety features (see Table 1.2-2, Table 1.3-1, and Figures 1.2-6, 5.1-1). Sources: , , , Table 1.2-2, Table 1.3-1, Figures 1.2-6, 5.1-1.",
+      "expected_answer": "Yes. Multiple small modules provide: (1) smaller radioactive source term per module, (2) ability to shut down and cool individual modules independently, (3) shared pool provides backup heat sink, and (4) the simplified passive RCS (Ch.05) means each module is self-contained with no dependencies on other modules for safety."
+    }
+  ]
+}

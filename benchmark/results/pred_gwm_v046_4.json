@@ -1,0 +1,232 @@
+{
+  "method": "gwm",
+  "timestamp": "2026-03-26T11:24:41.500231",
+  "total": 25,
+  "results": [
+    {
+      "id": "Q076",
+      "question": "How does the NuScale single control room concept differ from conventional multi-unit plants?",
+      "reasoning_type": "comparative",
+      "complexity": "single_evidence",
+      "question_type": "text_only",
+      "generated_answer": "The NuScale single control room concept differs from conventional multi-unit plants by allowing up to 12 reactor modules to be monitored and controlled from a single shared control room, rather than requiring a separate control room for each unit as in traditional designs (SRP 9.4.1, Rev 3; nuscale_ch01_0372). This unique approach necessitates a NuScale-specific principal design criterion (PDC-19) instead of the standard GDC 19, reflecting its departure from conventional multi-unit regulatory requirements (DSRS 9.5.2, Rev 0; nuscale_ch01_0402).",
+      "expected_answer": "NuScale operates all 12 modules from a single control room with a modular human-machine interface, while conventional multi-unit plants typically have separate control rooms for each unit. This is enabled by the simplified passive systems that reduce operator workload per module."
+    },
+    {
+      "id": "Q077",
+      "question": "According to Table 1.3-1, how does NuScale's electrical output compare to a typical PWR?",
+      "reasoning_type": "comparative",
+      "complexity": "single_evidence",
+      "question_type": "table_only",
+      "generated_answer": "According to Table 1.3-1, NuScale's nominal gross electrical output is 50 MWe per module, compared to 1,186 MWe for a typical PWR.  \nSource: Table 1.3-1: NuScale Plant Comparison with Other Facilities.",
+      "expected_answer": "Table 1.3-1 shows NuScale produces 50 MWe per module vs 1186 MWe for a typical PWR. The NuScale plant with 12 modules produces 570 MWe net, still less than half a single conventional PWR unit."
+    },
+    {
+      "id": "Q078",
+      "question": "According to Table 1.3-1, how does NuScale's thermal power compare to a typical PWR?",
+      "reasoning_type": "comparative",
+      "complexity": "single_evidence",
+      "question_type": "table_only",
+      "generated_answer": "According to Table 1.3-1, NuScale's core thermal output is 160 MWt, whereas a typical PWR's core thermal output is 3,411 MWt.  \nSource: Table 1.3-1, nuscale_ch01 p.79",
+      "expected_answer": "Table 1.3-1 shows NuScale thermal power is 160 MWt per module vs 3411 MWt for a typical PWR. The NuScale core is approximately 4.7% of a typical PWR thermal rating, which enables passive cooling."
+    },
+    {
+      "id": "Q079",
+      "question": "Using Table 1.3-1, compare the number of fuel assemblies and active fuel length between NuScale and a typical PWR.",
+      "reasoning_type": "comparative",
+      "complexity": "single_evidence",
+      "question_type": "table_only",
+      "generated_answer": "NuScale has 37 fuel assemblies with an active fuel length of 6.56 ft, while a typical PWR has 193 fuel assemblies with an active fuel length of 12 ft (Table 1.3-1).  \nSource: Table 1.3-1, NuScale Plant Comparison with Other Facilities.",
+      "expected_answer": "Table 1.3-1 shows NuScale has 37 fuel assemblies with 6.56 ft active fuel length, while a typical PWR has 193 assemblies with 12 ft active fuel length. NuScale uses about 19% as many assemblies with 55% of the fuel length."
+    },
+    {
+      "id": "Q080",
+      "question": "According to Table 1.3-1, how does NuScale's design life compare to a typical PWR?",
+      "reasoning_type": "comparative",
+      "complexity": "single_evidence",
+      "question_type": "table_only",
+      "generated_answer": "According to Table 1.3-1, NuScale's design life is 60 years, compared to 40 years for a typical PWR.  \nSource: Table 1.3-1: NuScale Plant Comparison with Other Facilities.",
+      "expected_answer": "Table 1.3-1 shows NuScale has a 60-year design life compared to 40 years for a typical PWR. The 50% longer design life reflects modern materials and design standards, plus the reduced neutron fluence on the RPV due to lower power density."
+    },
+    {
+      "id": "Q081",
+      "question": "Looking at Figure 1.2-6, how does the cutaway view of the NPM show the relative sizes of the containment and reactor vessels?",
+      "reasoning_type": "comparative",
+      "complexity": "single_evidence",
+      "question_type": "image_only",
+      "generated_answer": "Figure 1.2-6 shows that the containment vessel fully surrounds the reactor pressure vessel and is significantly larger in diameter and height, with the reactor vessel fitting concentrically inside the containment vessel and occupying most of its vertical length but less than its full width.  \nSource: Figure 1.2-6, \"Cutaway View of NuScale Power Module.\"",
+      "expected_answer": "Figure 1.2-6 shows the CNV is significantly larger than the RPV it contains, with a substantial annular gap between them. The RPV occupies the central portion while the CNV provides the external boundary. The vacuum gap between vessels serves as thermal insulation and pressure suppression volume."
+    },
+    {
+      "id": "Q082",
+      "question": "Based on Figure 5.4-1, how does the helical coil SG arrangement differ visually from a conventional U-tube SG?",
+      "reasoning_type": "comparative",
+      "complexity": "single_evidence",
+      "question_type": "image_only",
+      "generated_answer": "Figure 5.4-1 shows that the helical coil steam generator (SG) arrangement uses tightly wound, spiral (helical) tubes arranged in columns around the vessel circumference, whereas a conventional U-tube SG uses long, bent tubes in a U-shape; the helical design is compact and cylindrical, while the U-tube design is more elongated and planar.  \nSource: Figure 5.4-1, Steam Generator Helical Tube Bundle.",
+      "expected_answer": "Figure 5.4-1 shows the helical coil SG with tubes wound in a spiral pattern around the central riser within the RPV annulus. Unlike a conventional U-tube SG which has a separate vessel with straight/U-shaped tubes, the NuScale SG is fully integrated, compact, and uses the helical geometry to maximize heat transfer area in limited space."
+    },
+    {
+      "id": "Q083",
+      "question": "Using Table 1.3-2 and the text description of NuScale safety systems, compare the systems NuScale eliminates versus those retained.",
+      "reasoning_type": "comparative",
+      "complexity": "single_evidence",
+      "question_type": "composite",
+      "generated_answer": "NuScale eliminates the Residual Heat Removal System, Safety Injection System, Refueling Water Storage Tank, Condensate Storage Tank, Auxiliary Feedwater System, Emergency Service Water System, Hydrogen Recombiner/Ignition System, Containment Spray System, Reactor Coolant Pumps, Safety-Related Electrical Distribution System, Alternative Off-Site Power, Emergency Diesel Generators, Safety-Related Class 1E Battery System, and ATWS System, while retaining the Reactor Pressure Vessel, Containment Vessel, Reactor Coolant System, Decay Heat Removal System, Emergency Core Cooling System, Control Rod Drive System, Containment Isolation System, and Ultimate Heat Sink (see Table 1.3-2 and supporting text, nuscale_ch01_0052, nuscale_ch01_0021, nuscale_ch01_0022).",
+      "expected_answer": "Table 1.3-2 lists eliminated systems: RHR, SIS, RWST, AFW, EDG, and large containment spray. NuScale retains and simplifies: ECCS (passive valves instead of pumps), DHRS (passive condensers instead of AFW), and the containment (vacuum CNV instead of large dry with sprays). The passive approach eliminates more systems than it retains."
+    },
+    {
+      "id": "Q084",
+      "question": "How does the NuScale operating pressure in Table 1.2-1 compare to the LTOP setpoints in Table 5.2-10?",
+      "reasoning_type": "comparative",
+      "complexity": "single_evidence",
+      "question_type": "composite",
+      "generated_answer": "The NuScale RCS normal operating pressure is 1,850 psia (Table 1.2-1), which is significantly higher than the LTOP setpoints in Table 5.2-10, as LTOP setpoints are established well below normal operating pressure to protect the reactor vessel at low temperatures.  \n(Source: Table 1.2-1; relationship to Table 5.2-10 established in knowledge graph)",
+      "expected_answer": "Table 1.2-1 gives the operating pressure as 1850 psia. Table 5.2-10 shows LTOP setpoints at low temperatures: 380 psia (<193 degrees F), 615.5 psia (240 degrees F), and 850 psia (277 degrees F). The LTOP setpoints are much lower than operating pressure, protecting the vessel when it is cold and less ductile."
+    },
+    {
+      "id": "Q085",
+      "question": "Compare the NuScale RPV dimensions from Table 5.3-1 with the visual representation in Figure 5.3-1.",
+      "reasoning_type": "comparative",
+      "complexity": "single_evidence",
+      "question_type": "composite",
+      "generated_answer": "The NuScale RPV dimensions in Table 5.3-1—overall height 778 inches, lower section inside diameter 96.5 inches, upper section inside diameter 104.5 inches, and pressurizer inside diameter 106.5 inches—are accurately depicted in Figure 5.3-1, which visually differentiates the lower, upper, and pressurizer regions with corresponding proportional diameters and sectional transitions.  \n(Source: Table 5.3-1 and Figure 5.3-1)",
+      "expected_answer": "Table 5.3-1 specifies RPV height of 778 inches, design pressure 2100 psia, design temperature 650 degrees F, and varying IDs (96.5/104.5/106.5 in). Figure 5.3-1 cross section shows the stepped vessel profile with these different diameter regions, illustrating the lower shell, transition, and upper shell sections."
+    },
+    {
+      "id": "Q086",
+      "question": "Compare the NuScale DHRS passive cooling mechanism with conventional auxiliary feedwater systems.",
+      "reasoning_type": "comparative",
+      "complexity": "multi_evidence",
+      "question_type": "text_only",
+      "generated_answer": "The NuScale DHRS provides passive decay heat removal using natural circulation and integral condensers without external power or pumps, unlike conventional auxiliary feedwater systems that rely on active components and external power to supply feedwater to steam generators; the DHRS maintains RCS temperature below 420°F within 36 hours, ensuring safe cooldown (nuscale_ch05_0022, nuscale_ch05_0002, Table 5.4-5, Figures 5.4-13, 5.4-15).",
+      "expected_answer": "NuScale DHRS uses passive condensers submerged in the reactor pool, requiring no pumps, power, or operator action. Conventional AFW uses motor-driven and turbine-driven pumps with a separate water source. The DHRS eliminates multiple failure modes: pump failure, valve misposition, and loss of water supply."
+    },
+    {
+      "id": "Q087",
+      "question": "Compare the primary-to-secondary pressure relationship in NuScale vs conventional PWRs and its safety implications.",
+      "reasoning_type": "comparative",
+      "complexity": "multi_evidence",
+      "question_type": "text_only",
+      "generated_answer": "In NuScale, both the primary and secondary sides of the steam generator operate at the same pressure (2100 psia), eliminating the large primary-to-secondary pressure differential found in conventional PWRs and thus reducing the risk of tube rupture and radioactive release; this is enabled by the integrated reactor vessel design (see Table 5.4-2, Table 5.4-6, and Figure 5.4-2).  \nSource: [nuscale_ch05_0020], [nuscale_ch05_0019], [nuscale_ch05_0014], Table 5.4-2, Table 5.4-6, Figure 5.4-2.",
+      "expected_answer": "In both NuScale and conventional PWRs, primary pressure exceeds secondary pressure, so any SG tube leak results in primary-to-secondary leakage. However, NuScale's integral design means the SG is inside the RPV, so a tube leak does not result in RCS leakage outside containment. In conventional PWRs, a tube rupture releases radioactive primary coolant to the secondary side outside containment."
+    },
+    {
+      "id": "Q088",
+      "question": "Compare the NuScale RPV materials with those used in conventional PWR vessels.",
+      "reasoning_type": "comparative",
+      "complexity": "multi_evidence",
+      "question_type": "text_only",
+      "generated_answer": "The NuScale RPV uses low-alloy ferritic steel forgings (e.g., SA-508 Grade 3, Class 1) with stainless steel cladding, which are the same materials and ASME BPVC standards as conventional PWR vessels; both designs use similar chemical composition limits for key elements such as copper (≤0.06%), nickel (~0.85%), and phosphorus (≤0.010%) in the beltline region.  \n(Source: Table 5.3-2; [nuscale_ch05_0015]; [nuscale_ch05_0010])",
+      "expected_answer": "NuScale uses SA-508 Grade 3 Class 1 forgings and SA-533 Type B plates for the RPV, similar to conventional PWRs. However, NuScale imposes stricter chemistry limits on beltline materials (Cu <= 0.06%, Ni <= 0.85%) to minimize irradiation embrittlement over the 60-year design life."
+    },
+    {
+      "id": "Q089",
+      "question": "Compare the NuScale pressurizer design with a conventional separate pressurizer vessel.",
+      "reasoning_type": "comparative",
+      "complexity": "multi_evidence",
+      "question_type": "text_only",
+      "generated_answer": "The NuScale pressurizer is integrated into the upper region of the reactor vessel and separated by a baffle plate, unlike conventional designs that use a separate external pressurizer vessel connected by piping; this integration eliminates external piping, reduces system complexity, and maintains pressure control using internal heaters and spray nozzles (2 each) within the vessel (see Figures 5.1-1, 5.4-17, and Table 5.4-6).  \nSources: [nuscale_ch05_0024], [nuscale_ch05_0002], [nuscale_ch05_0014], Figure 5.1-1, Figure 5.4-17, Table 5.4-6.",
+      "expected_answer": "NuScale's pressurizer is integral to the upper RPV head, sharing the same vessel as the core and SG. Conventional PWRs have a separate pressurizer vessel connected via a surge line. The integral design eliminates the surge line, associated piping, and potential surge line LOCA. Both use heaters and spray for pressure control."
+    },
+    {
+      "id": "Q090",
+      "question": "How do the NuScale ECCS valve design and conventional ECCS injection systems differ in their response to a LOCA?",
+      "reasoning_type": "comparative",
+      "complexity": "multi_evidence",
+      "question_type": "text_only",
+      "generated_answer": "The NuScale ECCS uses passive, quick-opening valves to depressurize and flood the core using gravity and natural circulation, unlike conventional ECCS injection systems that rely on active pumps and external injection lines to deliver coolant during a LOCA (Loss of Coolant Accident) (nuscale_ch05_0003, nuscale_ch05_0005).",
+      "expected_answer": "NuScale ECCS valves (RVVs/RRVs) open to connect RPV to CNV, allowing steam to vent and condensed water to recirculate by gravity. Conventional ECCS activates high-pressure injection, then transitions to low-pressure injection and recirculation using pumps. NuScale's approach is fully passive while conventional systems require AC power for pump operation."
+    },
+    {
+      "id": "Q091",
+      "question": "Compare the primary coolant flow paths during normal operation vs DHRS operation.",
+      "reasoning_type": "comparative",
+      "complexity": "multi_evidence",
+      "question_type": "text_only",
+      "generated_answer": "During normal operation, primary coolant circulates by natural convection from the reactor core through the steam generators and back to the core, while during DHRS operation, the steam generators are isolated and coolant is recirculated through the DHRS heat exchangers to remove decay heat, bypassing the normal secondary-side flow path (Source: nuscale_ch05_0002, nuscale_ch05_0005, nuscale_ch05_0022, nuscale_ch05_0020).",
+      "expected_answer": "During normal operation, primary coolant flows upward through the core and riser, then downward through the SG region where heat transfers to the secondary side. During DHRS operation, after reactor trip and secondary isolation, the primary still circulates by natural circulation but heat is removed via the DHRS condensers in the pool through the SG tubes."
+    },
+    {
+      "id": "Q092",
+      "question": "Compare the NuScale RPV structural integrity program with conventional PWR vessel surveillance programs.",
+      "reasoning_type": "comparative",
+      "complexity": "multi_evidence",
+      "question_type": "text_only",
+      "generated_answer": "The NuScale RPV structural integrity program follows ASME BPVC and ASTM E185-82 requirements like conventional PWRs, with a surveillance capsule matrix (Table 5.3-4) and withdrawal schedule (Table 5.3-5) that are comparable, but is tailored to the integrated module design and specific vessel parameters of NuScale, ensuring equivalent or greater surveillance coverage and material testing frequency as shown in Figures 5.3-1 and 5.3-2 and Tables 5.3-4 and 5.3-5 (sources: nuscale_ch05_0015, nuscale_ch05_0016, Table 5.3-4, Table 5.3-5, Figures 5.3-1, 5.3-2).",
+      "expected_answer": "Both NuScale and conventional PWRs use material surveillance capsules to monitor irradiation effects on vessel material. NuScale benefits from lower neutron fluence due to smaller core power, resulting in less embrittlement. The NuScale adjusted reference temperatures at end of life remain well below PTS screening criteria, providing larger margins than many conventional plants."
+    },
+    {
+      "id": "Q093",
+      "question": "Compare the primary coolant chemistry control in NuScale with conventional PWR chemistry programs.",
+      "reasoning_type": "comparative",
+      "complexity": "multi_evidence",
+      "question_type": "text_only",
+      "generated_answer": "NuScale maintains primary coolant chemistry control using limits similar to conventional PWRs (e.g., chloride ≤ 0.05 ppm, dissolved oxygen ≤ 0.005 ppm, hydrogen 25–50 cc/kg), but its integrated design with natural circulation and internalized components (no external loops or pumps) reduces corrosion and contamination risks compared to conventional PWRs with external piping and pump-driven circulation (Table 5.2-5; nuscale_ch05_0002, nuscale_ch05_0004, nuscale_ch05_0005).",
+      "expected_answer": "Both NuScale and conventional PWRs use similar chemistry programs: boron for reactivity control, hydrogen for radiolysis suppression, and strict limits on contaminants. NuScale's CVCS performs the same functions but is sized for the smaller RCS volume. The key difference is NuScale's Alloy 690 SG tubes replacing Alloy 600, reducing SCC susceptibility."
+    },
+    {
+      "id": "Q094",
+      "question": "Compare the NuScale heatup and cooldown rate limitations with those of conventional PWRs.",
+      "reasoning_type": "comparative",
+      "complexity": "multi_evidence",
+      "question_type": "text_only",
+      "generated_answer": "NuScale heatup and cooldown rate limitations are established by ASME and NRC guidelines and are similar to those of conventional PWRs, with pressure-temperature limit curves (e.g., Table 5.3-6 and Figure 5.3-4) showing comparable operational boundaries; both designs restrict rates to protect vessel integrity, and NuScale’s Decay Heat Removal System maintains cooldown rates within these limits, analogous to conventional PWR practice (see also Figures 5.4-12 to 5.4-16).  \nSources: [nuscale_ch05_0016], Table 5.3-6, Figure 5.3-4, [nuscale_ch05_0022], Figures 5.4-12 to 5.4-16.",
+      "expected_answer": "Both NuScale and conventional PWRs must limit heatup/cooldown rates to protect RPV integrity. NuScale P-T limits are defined in Tables 5.3-6/7 with specific curves for heatup, cooldown, and ISLH conditions. The rates are governed by fracture mechanics analysis of the RPV beltline region under thermal stress."
+    },
+    {
+      "id": "Q095",
+      "question": "Compare the NuScale reactor safety valve (RSV) design philosophy with conventional PWR safety valves.",
+      "reasoning_type": "comparative",
+      "complexity": "multi_evidence",
+      "question_type": "text_only",
+      "generated_answer": "The NuScale RSV design uses a pilot-operated, position-monitored valve integrated within the reactor pressure vessel, emphasizing compactness and passive safety, whereas conventional PWR safety valves are typically direct spring-loaded or pilot-operated but external, with less integration and fewer passive features (see Figures 5.2-1 and 5.2-2; nuscale_ch05_0020, nuscale_ch05_0009).",
+      "expected_answer": "NuScale has 2 RSVs on the RPV head with setpoints of 2075/2100 psia to prevent overpressurization. Conventional PWRs have pressurizer safety valves (PSVs) on the separate pressurizer with similar functions. NuScale RSVs discharge into the containment (CNV) rather than to a relief tank, and the vacuum CNV aids in condensing discharged steam."
+    },
+    {
+      "id": "Q096",
+      "question": "Using Tables 5.1-1 and 5.1-2, compare the hot leg and cold leg volumes with their respective temperatures.",
+      "reasoning_type": "comparative",
+      "complexity": "multi_evidence",
+      "question_type": "table_only",
+      "generated_answer": "The hot leg volume is 635 ft³ with a typical hot leg temperature of 590.1°F at 100% power, while the cold leg volume is 578 ft³ with a typical cold leg temperature of 496.6°F at 100% power (Table 5.1-1 and Table 5.1-2).  \nSource: Table 5.1-1 and Table 5.1-2.",
+      "expected_answer": "Table 5.1-1 shows Hot Leg volume is 635 ft³ and Cold Leg volume is 578 ft³ (hot leg is ~10% larger). Table 5.1-2 shows THot=590.1 degrees F and TCold=496.6 degrees F, a temperature difference of 93.5 degrees F. The larger hot leg volume with higher temperature provides buoyancy driving head for natural circulation."
+    },
+    {
+      "id": "Q097",
+      "question": "Compare the 100% power flow conditions with minimum design flow conditions from Table 5.1-2.",
+      "reasoning_type": "comparative",
+      "complexity": "multi_evidence",
+      "question_type": "table_only",
+      "generated_answer": "At 100% power, the best-estimate core flow is 587.0 kg/s with a core ΔT of 99.8°F, while at minimum design flow (also 100% power), the core flow is 538.5 kg/s with a higher core ΔT of 107.6°F; both have the same hot leg temperature (590.1°F), but the minimum design flow has a lower cold leg temperature (487.4°F vs. 496.6°F).  \nSource: Table 5.1-2.",
+      "expected_answer": "At 100% power: flow rate is 587 kg/s with delta-T of 99.8 degrees F. At minimum design flow (91.7%): flow is 538.5 kg/s with delta-T of 107.6 degrees F. The lower flow rate produces a larger temperature rise across the core, as expected from energy balance."
+    },
+    {
+      "id": "Q098",
+      "question": "Compare the RSV setpoints from Table 5.2-2 with the RPV design pressure from Table 5.3-1.",
+      "reasoning_type": "comparative",
+      "complexity": "multi_evidence",
+      "question_type": "table_only",
+      "generated_answer": "The RSV setpoints are 2075 psia ±1% (first valve) and 2100 psia ±1% (second valve) per Table 5.2-2, which match or are just below the RPV design pressure of 2100 psia from Table 5.3-1.  \n(Source: Table 5.2-2; Table 5.3-1)",
+      "expected_answer": "Table 5.2-2 gives RSV setpoints of 2075 and 2100 psia. Table 5.3-1 gives RPV design pressure of 2100 psia. The first RSV opens at 2075 psia (25 psia below design) and the second at 2100 psia (at design pressure), ensuring pressure relief before exceeding design limits."
+    },
+    {
+      "id": "Q099",
+      "question": "Compare the adjusted reference temperatures for shell, weld, and bottom head materials from Table 5.3-3.",
+      "reasoning_type": "comparative",
+      "complexity": "multi_evidence",
+      "question_type": "table_only",
+      "generated_answer": "The adjusted reference temperatures at 57 effective full-power years are: shell (beltline) 92.2°F, weld 120.4°F, and bottom head 77.4°F (Table 5.3-3).",
+      "expected_answer": "Table 5.3-3 at 57 EFPY shows: shell ART = 92.2 degrees F, weld ART = 120.4 degrees F, bottom head ART = 77.4 degrees F. The weld has the highest ART, making it the limiting material for P-T curve development. The bottom head has the lowest ART due to less neutron fluence."
+    },
+    {
+      "id": "Q100",
+      "question": "Using Table 5.2-5, compare the chloride and fluoride limits with the dissolved oxygen limit in primary coolant.",
+      "reasoning_type": "comparative",
+      "complexity": "multi_evidence",
+      "question_type": "table_only",
+      "generated_answer": "The chloride and fluoride limits in primary coolant are each ≤0.05 ppm (normal) and 0.15 ppm (action), while the dissolved oxygen limit is ≤0.005 ppm (normal) and 0.10 ppm (action), making the dissolved oxygen limit an order of magnitude lower than the chloride and fluoride limits.  \nSource: Table 5.2-5.",
+      "expected_answer": "Table 5.2-5 shows chloride and fluoride limits are both 0.05 ppm, while dissolved oxygen must be below 0.005 ppm (10x stricter). The tighter oxygen control is needed to maintain reducing conditions that protect Alloy 690 SG tubes and stainless steel cladding from oxidative stress corrosion."
+    }
+  ]
+}
