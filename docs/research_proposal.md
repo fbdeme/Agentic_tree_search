@@ -136,59 +136,63 @@ Pipeline:
 
 ### 3.3 Results
 
-Full 200-question evaluation on the multi-evidence benchmark with GPT-4.1:
+Full 200-question evaluation on the multi-evidence benchmark with GPT-4.1, assessed by dual evaluation frameworks: RAGAs (continuous 0-1 metrics) and LLM-as-Judge (binary O/X accuracy with 3-evaluator majority vote).
 
-**By Reasoning Type:**
+**LLM-as-Judge Accuracy (MAM-RAG Table 8 methodology):**
+
+Overall: **162/200 = 81.0%**
+
+| | single_evidence | multi_evidence | cross_document |
+|--|:-:|:-:|:-:|
+| **factual** | 77% | 72% | 73% |
+| **comparative** | **100%** | 76% | 68% |
+| **judgment** | 80% | 88% | **94%** |
+
+By modality: text_only 76.2%, **table_only 86.0%**, image_only 80.0%, **composite 85.0%**
+
+**RAGAs Metrics by Reasoning Type:**
 
 | Metric | Overall (200) | factual (70) | comparative (65) | judgment (65) |
-|--------|--------------|-------------|------------------|--------------|
-| Faithfulness | **0.71** | 0.59 | **0.77** | **0.78** |
-| Answer Relevancy | **0.81** | 0.80 | 0.77 | **0.85** |
-| Context Recall | **0.69** | 0.54 | 0.70 | **0.85** |
-| Factual Correctness | **0.39** | 0.35 | **0.45** | 0.36 |
-| Keyword Hit | 0.65 | **0.71** | 0.65 | 0.60 |
+|--------|:------------:|:-----------:|:----------------:|:------------:|
+| Faithfulness | **0.93** | 0.92 | 0.92 | **0.97** |
+| Answer Relevancy | **0.84** | 0.85 | 0.78 | **0.89** |
+| Context Recall | **0.93** | 0.92 | 0.91 | **0.96** |
+| Factual Correctness | 0.42 | 0.35 | **0.49** | 0.41 |
 
-**Context Recall by Reasoning × Complexity:**
-
-|  | single_evidence | multi_evidence | cross_document |
-|--|-----------------|----------------|----------------|
-| factual | 0.33 | 0.60 | 0.88 |
-| comparative | 0.64 | 0.52 | 0.91 |
-| judgment | 0.60 | 0.70 | **0.94** |
-
-**Edge Type Distribution (8,069 total edges across 200 questions):**
+**Edge Type Distribution (7,391 total edges across 200 questions):**
 
 | Edge Type | Count | % | Category |
-|-----------|-------|---|----------|
-| SUPPORTS | 2,681 | 33.2% | Semantic |
-| SPECIFIES | 2,506 | 31.1% | Structural |
-| REFERENCES | 1,108 | 13.7% | Structural |
-| IS_PREREQUISITE_OF | 825 | 10.2% | Semantic |
-| SATISFIES | 659 | 8.2% | Semantic |
-| SEMANTIC | 156 | 1.9% | Free-form |
-| LEADS_TO | 87 | 1.1% | Semantic |
-| CONTRADICTS | 45 | 0.6% | Semantic |
-| VIOLATES | 2 | 0.0% | Semantic |
+|-----------|:-----:|:-:|----------|
+| SUPPORTS | 2,532 | 34.3% | Semantic |
+| SPECIFIES | 2,330 | 31.5% | Structural |
+| REFERENCES | 966 | 13.1% | Structural |
+| IS_PREREQUISITE_OF | 701 | 9.5% | Semantic |
+| SATISFIES | 622 | 8.4% | Semantic |
+| SEMANTIC | 149 | 2.0% | Free-form |
+| LEADS_TO | 66 | 0.9% | Semantic |
+| CONTRADICTS | 22 | 0.3% | Semantic |
+| VIOLATES | 3 | 0.04% | Semantic |
 
-**SATISFIES by reasoning type:** factual 93, comparative 207, judgment **359**
+**Edge Patterns — Correct (O) vs Incorrect (X):**
 
-**KG Construction Statistics:**
+| Edge | Correct (O) | Incorrect (X) | Difference |
+|------|:-----------:|:-------------:|:----------:|
+| SUPPORTS | 35.5% | 28.7% | **+6.8%p** |
+| SATISFIES | 9.0% | 5.8% | **+3.2%p** |
+| SPECIFIES | 30.0% | 38.4% | -8.4%p |
 
-| Reasoning Type | Avg Nodes | Avg Edges | Avg Hops (max 4) |
-|---------------|-----------|-----------|------------------|
-| factual | 10.8 | 29.2 | 3.4 |
-| comparative | 12.9 | 40.5 | 3.6 |
-| judgment | 15.0 | 52.3 | 3.8 |
+**Evaluation Framework Cross-Comparison:**
+
+RAGAs and LLM-as-Judge agree on 66.2% of questions. Disagreement cases reveal complementary strengths: RAGAs measures evidence grounding (is the answer supported by retrieved context?), while LLM-as-Judge measures answer correctness (does it match the expected answer?). 29 cases where RAGAs scored high but Judge scored X indicate correct evidence retrieval with wording mismatch; 38 cases of the inverse indicate correct answers from knowledge not fully captured in KG context.
 
 Key findings:
 
-- **Judgment questions achieve highest Context Recall (0.82)**: Regulatory judgment queries ("Does X satisfy requirement Y?") trigger the broadest exploration, as the agent must find both design specifications and regulatory requirements. Agent Memory prevents keyword repetition across hops, driving search diversity that covers both chapters.
-- **Cross-document CR=0.92 (counterintuitively highest)**: Questions requiring evidence from both Ch.01 and Ch.05 achieve higher recall than single-evidence questions (CR=0.45), because multi-hop exploration with diverse keywords naturally covers more document sections.
-- **SATISFIES edges validate core thesis (659 instances, 8.2%)**: Judgment questions alone produced 359 SATISFIES edges, confirming that regulatory compliance relationships emerge naturally under description-first inference. The two-stage approach (describe relationship → map to ontology label) is critical — under classification-first prompting, SATISFIES appeared 0 times across 100 questions.
-- **Comparative questions achieve highest Factual Correctness (0.46)**: Comparison answers naturally produce "A is X, B is Y" claim structures that align well with RAGAs claim-by-claim evaluation.
-- **All 9 edge types emerged**: 8 ontology types + SEMANTIC fallback. VIOLATES is rare (2 instances) due to FSAR being a certification document where designs are presented as compliant.
-- **Single-evidence paradox**: Single_evidence questions have the lowest CR (0.45) despite being "easiest" — finding one specific node requires exact BM25 keyword match, while multi-evidence questions benefit from broader exploration.
-- **Multimodal handling**: Tables passed as structured text (PyMuPDF `find_tables()`), figures as VLM images. Table_only Keyword Hit reaches 0.74 with structured extraction.
+- **Judgment + cross_document = 94% accuracy**: The system's core design purpose — regulatory compliance judgment across documents — achieves highest performance. SATISFIES edges (622 instances, 8.4%) drive evidence-based compliance determination.
+- **Semantic edges correlate with correctness**: Correct answers have +6.8%p more SUPPORTS and +3.2%p more SATISFIES edges, while incorrect answers are dominated by structural SPECIFIES edges (+8.4%p). This confirms that regulatory judgment edges directly contribute to answer quality.
+- **VIOLATES in certified documents**: 3 VIOLATES edges capture scope exclusions (non-safety systems exempt from seismic criteria) and partial conformance (innovative designs not fully matching legacy regulatory guidance) — nuanced relationships that simple RAG cannot detect.
+- **Structured table extraction enables table_only 86%**: PyMuPDF `find_tables()` extracts clean row/column data, passed directly in answer context as structured text rather than VLM images.
+- **Browse-first solves single-evidence paradox**: Document structure auto-injection at first hop improved single_evidence accuracy from 46% to 84%, eliminating the counterintuitive finding that "easy" questions were hardest.
+- **Dual evaluation reveals metric complementarity**: RAGAs and LLM-as-Judge measure different qualities (grounding vs correctness). A complete evaluation framework requires both.
 
 ## 4. Conclusion
 

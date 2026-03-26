@@ -562,9 +562,54 @@ Three traditional IR methods were evaluated:
 
 ---
 
+---
+
+## v0.4.6 Final — Dual Evaluation (RAGAs + LLM-as-Judge) (`2b76a1b`)
+
+**Date**: 2026-03-26
+
+### Full Pipeline: Answer Collection → RAGAs + LLM-as-Judge
+
+200 questions evaluated with both frameworks simultaneously.
+
+### LLM-as-Judge Results (MAM-RAG Table 8 methodology)
+
+**Overall: 162/200 = 81.0%**
+
+| Reasoning | Accuracy | | Complexity | Accuracy | | Modality | Accuracy |
+|-----------|:--------:|-|------------|:--------:|-|----------|:--------:|
+| factual | 74.3% | | single_evidence | 84.0% | | text_only | 76.2% |
+| comparative | 78.5% | | multi_evidence | 78.7% | | table_only | **86.0%** |
+| **judgment** | **90.8%** | | cross_document | 81.3% | | image_only | 80.0% |
+| | | | | | | composite | 85.0% |
+
+### RAGAs Results
+
+| Metric | Overall | factual | comparative | judgment |
+|--------|:-------:|:-------:|:-----------:|:--------:|
+| Faithfulness | 0.93 | 0.92 | 0.92 | **0.97** |
+| Answer Relevancy | 0.84 | 0.85 | 0.78 | **0.89** |
+| Context Recall | 0.93 | 0.92 | 0.91 | **0.96** |
+| Factual Correctness | 0.42 | 0.35 | **0.49** | 0.41 |
+
+### 3-Axis Analysis (see docs/experiment_analysis.md)
+
+1. **Benchmark Types**: judgment/cross_document 94% highest; factual/single 77% lowest
+2. **Evaluation Frameworks**: RAGAs vs Judge 66.2% agreement — complementary, not redundant
+3. **KG Edges**: Correct answers have +6.8%p SUPPORTS, +3.2%p SATISFIES vs incorrect
+
+### Case Studies
+- VIOLATES in certified document: scope exclusion + partial conformance
+- SATISFIES driving judgment: Q184 with 34 SATISFIES edges → correct regulatory determination
+- LEADS_TO causal chain: Q112 tracing power output → decay heat → pool temperature
+- Cross-document SATISFIES: Q178 connecting Ch.01 Rankine cycle → Ch.05 SG compliance
+- RAGAs vs Judge disagreement: Q019 Faith=1.0 but Judge=X (MLflow strict on additional detail)
+
+---
+
 ## Known Issues (Unresolved)
 
-1. **FC structural ceiling ~0.5**: Agent uses different evidence nodes → different wording. Benchmark improvement needed (see benchmark_feedback.md).
-2. **Keyword Hit dropped**: 0.65→0.53 due to shorter answers. Secondary keywords omitted.
-3. **VIOLATES rare (1/7169)**: FSAR is a compliance document — no real violations.
-4. **factual FC=0 still 36%**: Single-fact questions with specific values most affected by wording mismatch.
+1. **FC structural ceiling ~0.5**: Agent uses different evidence nodes → different wording.
+2. **Keyword Hit dropped**: 0.65→0.53 due to shorter answers.
+3. **VIOLATES rare (3/7391)**: FSAR is a compliance document.
+4. **RAGAs-Judge 33.8% disagreement**: Different aspects measured (grounding vs correctness).
