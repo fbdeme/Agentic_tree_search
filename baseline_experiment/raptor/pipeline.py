@@ -27,7 +27,6 @@ from .config import (
     RETRIEVAL_MODE,
     SYSTEM_PROMPT,
     TEMPERATURE,
-    TOP_K,
 )
 from .pdf_extractor import extract_chunks_from_pdf
 from .retriever import RAPTORRetriever
@@ -104,7 +103,7 @@ def run_inference(
         e = end or len(questions)
         questions = questions[s:e]
 
-    logger.info(f"추론 시작: {len(questions)}문항 (mode={RETRIEVAL_MODE}, top_k={TOP_K})")
+    logger.info(f"추론 시작: {len(questions)}문항 (mode={RETRIEVAL_MODE})")
     results: List[Dict] = []
     errors = 0
 
@@ -112,10 +111,8 @@ def run_inference(
         q_id = q.get("id", f"Q{i+1:03d}")
         try:
             t_ret = time.time()
-            nodes = retriever.retrieve(q["question"], top_k=TOP_K, mode=RETRIEVAL_MODE)
+            nodes, context = retriever.retrieve(q["question"], mode=RETRIEVAL_MODE)
             retrieval_time = time.time() - t_ret
-
-            context = "\n\n---\n\n".join(n["text"] for n in nodes)
 
             t_gen = time.time()
             response = client.chat.completions.create(
