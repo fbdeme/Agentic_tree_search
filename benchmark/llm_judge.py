@@ -132,7 +132,7 @@ def mlflow_eval(
     question_list: list, answer_list: list, ground_truth_list: list, model: str = MLFLOW_MODEL
 ) -> tuple[list, list]:
     """MLflow answer_similarity + answer_correctness: 1-5 scale each."""
-    mlflow.set_tracking_uri(str(RESULTS_DIR / "mlruns"))
+    mlflow.set_tracking_uri((RESULTS_DIR / "mlruns").as_uri())
 
     eval_data = pd.DataFrame({
         "inputs": question_list,
