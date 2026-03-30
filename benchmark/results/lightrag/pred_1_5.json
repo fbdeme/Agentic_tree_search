@@ -1,0 +1,53 @@
+{
+  "method": "lightrag",
+  "model": "gpt-4.1",
+  "timestamp": "2026-03-29T14:25:31.305073",
+  "total": 5,
+  "results": [
+    {
+      "id": "Q001",
+      "question": "What is the total net electrical output of a full 12-module NuScale plant?",
+      "expected_answer": "The total net electrical output of a full NuScale plant with 12 modules is approximately 570 MWe.",
+      "generated_answer": "The total net electrical output of a full 12-module NuScale plant is approximately 570 MWe [NuScale FSAR Ch.01].",
+      "reasoning_type": "factual",
+      "complexity": "single_evidence",
+      "question_type": "text_only"
+    },
+    {
+      "id": "Q002",
+      "question": "What is the operating pressure of the NuScale Reactor Coolant System?",
+      "expected_answer": "The NuScale RCS operates at 1850 psia.",
+      "generated_answer": "The operating pressure of the NuScale Reactor Coolant System is approximately 2100 psia [1].",
+      "reasoning_type": "factual",
+      "complexity": "single_evidence",
+      "question_type": "text_only"
+    },
+    {
+      "id": "Q003",
+      "question": "What type of steam generator does NuScale use?",
+      "expected_answer": "NuScale uses helical coil steam generators integrated within the reactor pressure vessel.",
+      "generated_answer": "NuScale uses vertical, once-through, helical-coil steam generators that are integral to the reactor pressure vessel. [1][2]",
+      "reasoning_type": "factual",
+      "complexity": "single_evidence",
+      "question_type": "text_only"
+    },
+    {
+      "id": "Q004",
+      "question": "What is the fuel type used in the NuScale reactor?",
+      "expected_answer": "NuScale uses UO2 (uranium dioxide) fuel in a standard 17x17 lattice configuration.",
+      "generated_answer": "The NuScale reactor uses uranium dioxide (UO₂) fuel with an enrichment of less than 4.95 percent U-235. [NuScale Final Safety Analysis Report Ch.01]",
+      "reasoning_type": "factual",
+      "complexity": "single_evidence",
+      "question_type": "text_only"
+    },
+    {
+      "id": "Q005",
+      "question": "What is the design life of a NuScale Power Module?",
+      "expected_answer": "The NuScale Power Module has a 60-year design life.",
+      "generated_answer": "The design life of a NuScale Power Module is 60 years. [2]",
+      "reasoning_type": "factual",
+      "complexity": "single_evidence",
+      "question_type": "text_only"
+    }
+  ]
+}
