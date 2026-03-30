@@ -4,7 +4,9 @@ GWM (Graph World Model) based multimodal agent for multi-hop regulatory document
 
 Implements GWM's State-Action-Transition loop with **PageIndex** as the environment (World), dynamically constructing a knowledge graph from NuScale FSAR documents.
 
-## Results (v0.4.6)
+## Results
+
+### GWM v0.4.6
 
 | Metric | Value |
 |--------|-------|
@@ -13,6 +15,17 @@ Implements GWM's State-Action-Transition loop with **PageIndex** as the environm
 | RAGAs Context Recall | **0.93** |
 | Judgment Accuracy | **90.8%** |
 | Cross-document Accuracy | **81.3%** |
+
+### Baseline Comparison — LLM-as-Judge (200Q, NuScale FSAR Ch.01 + Ch.05)
+
+| Method | Overall | judgment | comparative | factual | multi_evidence | cross_document |
+|--------|:-------:|:--------:|:-----------:|:-------:|:--------------:|:--------------:|
+| **GWM v0.4.6** | **81.0%** (162/200) | **90.8%** | — | — | — | **81.3%** |
+| RAPTOR (Sarthi et al. 2024) | 75.5% (151/200) | 92.3% | 72.3% | 62.9% | 78.7% | 73.3% |
+| **Δ (GWM − RAPTOR)** | **+5.5%p** | −1.5%p | — | — | — | +8.0%p |
+
+> Evaluator: 3-way majority vote — Tonic (GPT-4-turbo) · MLflow (GPT-4o) · Allganize (Claude Sonnet 4.5)
+> Full RAPTOR breakdown (question type · 9-cell matrix · evaluator detail) → [`baseline_experiment/README.md`](baseline_experiment/README.md)
 
 ## Architecture
 

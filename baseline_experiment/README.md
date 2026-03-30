@@ -112,21 +112,80 @@ python baseline_experiment/scripts/03_run_judge.py --show-results
 
 ---
 
-## RAPTOR 파라미터 조정
+## RAPTOR 파라미터
 
 [raptor/config.py](raptor/config.py) 에서 조정:
 
-| 파라미터 | 기본값 | 설명 |
-|----------|--------|------|
-| `CHUNK_SIZE` | 512 | 청크 토큰 크기 |
-| `CHUNK_OVERLAP` | 50 | 청크 간 오버랩 토큰 |
-| `EMBEDDING_MODEL` | text-embedding-3-small | 임베딩 모델 |
-| `UMAP_N_COMPONENTS` | 10 | UMAP 목표 차원 |
-| `GMM_MAX_CLUSTERS` | 50 | BIC 탐색 최대 k |
-| `GMM_THRESHOLD` | 0.5 | Soft assignment 확률 임계값 |
-| `MAX_LEVELS` | 3 | 트리 최대 레벨 |
-| `RETRIEVAL_MODE` | collapse_tree | 검색 모드 |
-| `TOP_K` | 5 | 검색 반환 노드 수 |
+| 파라미터 | 값 | 근거 |
+|----------|----|------|
+| `CHUNK_SIZE` | **100** tokens | 논문 §3 원문 |
+| `EMBEDDING_MODEL` | text-embedding-3-small | 논문 원본은 SentenceTransformer; OpenAI 통일 |
+| `UMAP_N_COMPONENTS` | 10 | 논문 원본 |
+| `UMAP_N_NEIGHBORS` (global) | `int((n−1)^0.5)` | 논문 `cluster_utils.py` 원본 |
+| `UMAP_N_NEIGHBORS` (local) | 10 | 논문 원본 고정값 |
+| `GMM_THRESHOLD` | **0.1** | 논문 `GMM_THRES=0.1` 원본 |
+| `MAX_LEVELS` | 3 | 논문: 수렴까지 재귀 → 실용적 상한 |
+| `RETRIEVAL_MODE` | collapse_tree | 논문 실험에서 tree_traversal보다 우위 |
+| `CONTEXT_TOKEN_BUDGET` | **2,000** tokens | 논문 §4 실험 설정 |
+
+---
+
+## 실험 결과
+
+> 실험일: 2026-03-30 · 브랜치: `baseline/raptor`
+
+### 전체 Accuracy
+
+| Method | Accuracy | n |
+|--------|:--------:|:-:|
+| **GWM v0.4.6** (비교) | **81.0%** | 200 |
+| **RAPTOR** | **75.5%** | 200 |
+| Δ | −5.5%p | |
+
+### Reasoning Type별
+
+| reasoning_type | RAPTOR | GWM v0.4.6 |
+|----------------|:------:|:----------:|
+| factual | 62.9% (44/70) | — |
+| comparative | 72.3% (47/65) | — |
+| **judgment** | **92.3%** (60/65) | **90.8%** |
+
+### Complexity별
+
+| complexity | RAPTOR | GWM v0.4.6 |
+|------------|:------:|:----------:|
+| single_evidence | 74.0% (37/50) | — |
+| multi_evidence | 78.7% (59/75) | — |
+| cross_document | 73.3% (55/75) | **81.3%** |
+
+### Question Type별
+
+| question_type | RAPTOR | n |
+|---------------|:------:|:-:|
+| text_only | **80.0%** | 80 |
+| image_only | **80.0%** | 30 |
+| composite | 72.5% | 40 |
+| table_only | 68.0% | 50 |
+
+### 9-Cell Matrix (reasoning × complexity)
+
+| | single_evidence | multi_evidence | cross_document |
+|---|:---:|:---:|:---:|
+| **factual** | 60.0% (18/30) | 72.0% (18/25) | 53.3% (8/15) |
+| **comparative** | **93.3%** (14/15) | 68.0% (17/25) | 64.0% (16/25) |
+| **judgment** | **100.0%** (5/5) | **96.0%** (24/25) | 88.6% (31/35) |
+
+### Evaluator 세부
+
+| Evaluator | 모델 | O 판정 | 기준 |
+|-----------|------|:------:|------|
+| Tonic | GPT-4-turbo | 176/200 | similarity ≥ 4 (0–5 scale) |
+| MLflow similarity | GPT-4o | 148/200 | similarity ≥ 4 (1–5 scale) |
+| MLflow correctness | GPT-4o | 144/200 | correctness ≥ 4 (1–5 scale) |
+| Allganize | Claude Sonnet 4.5 | 158/200 | binary == 1 |
+
+> Final vote: 4표 중 다수결 (동률 시 X 우선)
+> 세부 결과: [`results/raptor/judge.json`](results/raptor/judge.json) · [`benchmark/results/raptor/note.md`](../benchmark/results/raptor/note.md)
 
 ---
 
