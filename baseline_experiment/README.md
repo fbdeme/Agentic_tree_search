@@ -134,6 +134,19 @@ python baseline_experiment/scripts/03_run_judge.py --show-results
 
 > 실험일: 2026-03-30 · 브랜치: `baseline/raptor`
 
+### 비용/효율 지표 (guide §9)
+
+| 지표 | 값 |
+|------|-----|
+| 사전 인덱싱 시간 | **43.5분** (2,612초) |
+| 사전 인덱싱 LLM 호출 | ~624회 (클러스터 요약, GPT-4.1) |
+| 사전 인덱싱 비용 | **~$1.4** |
+| 문항당 평균 시간 | **~2초** (402초 / 200문항) |
+| 문항당 평균 LLM 호출 | **1회** (생성 1회, 검색은 embedding만) |
+| 200문항 총 비용 | **~$0.6** |
+
+---
+
 ### 전체 Accuracy
 
 | Method | Accuracy | n |
