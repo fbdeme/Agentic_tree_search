@@ -13,6 +13,7 @@ import json
 import os
 import sys
 import re
+import time
 import logging
 import argparse
 from pathlib import Path
@@ -169,22 +170,45 @@ def allganize_eval(
     )
     chain = prompt | llm | StrOutputParser()
 
+    _MAX_RETRIES = 5
+    _RETRY_BASE = 2.0  # seconds (exponential: 2, 4, 8, 16, 32)
+
     results = []
     for question, target, generated in tqdm(
         zip(questions, target_answers, generated_answers),
         total=len(questions), desc="ALLGANIZE Correctness",
     ):
+        raw = None
+        for attempt in range(_MAX_RETRIES):
+            try:
+                raw = chain.invoke({
+                    "question": question,
+                    "reference_answer": target,
+                    "llm_answer": generated,
+                })
+                break  # 성공 시 재시도 루프 탈출
+            except Exception as e:
+                err_str = str(e)
+                is_overload = "overloaded_error" in err_str or "529" in err_str
+                if is_overload and attempt < _MAX_RETRIES - 1:
+                    wait = _RETRY_BASE ** (attempt + 1)
+                    logger.warning(f"Anthropic overloaded (attempt {attempt+1}/{_MAX_RETRIES}), retrying in {wait:.0f}s...")
+                    time.sleep(wait)
+                else:
+                    logger.warning(f"allganize_eval exception: {e}")
+                    break
+
+        if raw is None:
+            results.append(-1)
+            continue
+
         try:
-            raw = chain.invoke({
-                "question": question,
-                "reference_answer": target,
-                "llm_answer": generated,
-            })
-            # Claude가 "1\n\n설명..." 형태로 응답할 수 있으므로 첫 번째 숫자만 추출
-            first_char = raw.strip()[0]
-            results.append(int(first_char))
+            m = re.search(r'[01]', raw)
+            if m is None:
+                raise ValueError(f"No 0/1 found in response: {raw[:50]!r}")
+            results.append(int(m.group()))
         except Exception as e:
-            logger.warning(f"allganize_eval exception: {e}")
+            logger.warning(f"allganize_eval parse exception: {e}")
             results.append(-1)
     return results
 
