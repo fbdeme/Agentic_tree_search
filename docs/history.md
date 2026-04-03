@@ -667,6 +667,63 @@ RAPTOR, GraphRAG의 pred.json에 `retrieved_contexts`가 포함되어 있어 RAG
 **"인덱싱 무비용" 주장 수정:**
 PageIndex 트리 생성에 `model="gpt-4.1"` + `if_add_node_summary="yes"` 사용 확인 → LLM 비용 발생. "인덱싱 무비용"은 부정확하며 "경량 인덱싱"으로 수정. 임베딩/KG 사전 구축은 불필요하나, 노드 요약 생성 비용은 존재함을 논문에 명시.
 
+### 논문 초안 Introduction 개선
+
+- Osprey [Hellert et al., 2026] 스타일 Domain-first 서사 → LLM 에이전트 범용 성공 → 과학 도메인 적용 시도 → 규제 도메인 벽 흐름으로 재구성
+- P1 과학 도메인 적용 시도: GAIA [Mayet, 2024], VISION [Mathur et al., 2025], ChemCrow [Bran et al., 2024], Boiko et al. [2023], PACuna [Sulc et al., 2023] 인용 추가
+- Osprey를 "적용 시도"가 아닌 "문제를 진단하고 해결한 선행 연구"로 재포지셔닝
+- NRC 투명성 주장 검증: 10 CFR 50 App B Criterion III 실제 규정 확인, AI 특화 규제는 부재함을 정직하게 명시
+- MAM-RAG 모든 언급 제거 (미출판)
+- PageIndex 학술 논문 부재 확인 → 오픈소스 프레임워크로 표기, Lumer et al. [2025, arXiv:2511.18177] 인용
+
+### VIOLATES Case Study (Section 6.3)
+
+FSAR 인증 문서에서 VIOLATES 3건 상세 분석:
+
+- **Q058 (×2)**: 내진 설계 scope exclusion — 비안전 계통(Chilled Water, Condensate Storage)은 Seismic Category I 요건 적용 범위 밖. "설계 오류"가 아닌 "적용 범위 경계" 포착.
+- **Q176 (×1)**: NuScale 혁신 설계(일체형 SG)로 인한 누설 감지 한계 → DSRS 15.6.5 부분 적합(partial conformance). FSAR 자체가 인정.
+- 핵심 인사이트: VIOLATES는 규제 적용 범위의 경계(scope boundary)와 부분 적합(partial conformance)을 포착 — 단순 RAG에서는 불가능한 뉘앙스.
+
+### 벤치마크 상세 분석 (Section 4)
+
+기존 Section 4를 대폭 보강:
+- 설계 원칙: 3축 직교 분류, 규제 심사 과정 모방, ground_truth_evidence 357개(text 152, table 125, figure 80)
+- 벤치마크 한계 5가지: FC 상한(~0.42), Judgment 극성 편향(98% Yes), 증거 깊이 부족(66% 2-hop), 문서 커버리지 불균형, 외부 검증 부재
+
+### Ablation Study (Section 6.1)
+
+**Phase 1 — 효율성 측정 (10Q × 4 variants):**
+- `experiments/ablation_study.py` 작성, AblationAgent 클래스로 컴포넌트 토글
+- 샘플: 10문항 (3 reasoning_type × 3 complexity × 4 question_type 포괄, VIOLATES case 포함)
+
+| Variant | 시간 | 엣지 | 비용 |
+|---------|:----:|:----:|:----:|
+| full | 104s | 49 | $0.216 |
+| no_vision | 98s | 42 | $0.196 (−9%) |
+| no_edges | 34s | 0 | $0.073 (−66%) |
+| no_browse_first | 91s | 44 | $0.180 (−17%) |
+
+**Phase 2 — 품질 평가 (3-evaluator Judge + RAGAS):**
+
+초기에는 단일 모델 Judge(GPT-4.1, 5점 척도)만 사용 → 본 실험의 3-평가자 다수결과 불일치 발견 → `benchmark/llm_judge.py` 기존 파이프라인으로 재평가.
+
+`experiments/ablation_evaluate.py`: 에이전트 재실행 + KG context 추출 + RAGAS 평가 통합 스크립트.
+pred.json 변환 후 `benchmark/llm_judge.py`로 3-평가자 Judge 별도 실행.
+
+| Variant | 3-Judge | Faith | CR | FC | 오답 |
+|---------|:-------:|:-----:|:--:|:--:|------|
+| **full** | **10/10** | 0.96 | 0.95 | 0.50 | — |
+| no_vision | 8/10 | 0.83 | 0.92 | 0.39 | Q101(table), Q131(composite) |
+| no_edges | 9/10 | 0.93 | 1.00 | 0.48 | Q058(VIOLATES scope boundary) |
+| no_browse_first | 9/10 | 0.97 | 0.94 | 0.57 | Q191(image/judgment) |
+
+**핵심 발견:**
+1. full이 유일한 10/10 — 모든 컴포넌트가 정확도에 기여
+2. 각 컴포넌트 제거 시 **서로 다른 유형의 문항**에서 실패 → 상호 보완적 작동 확인
+3. no_edges에서 Q058(VIOLATES case) 오답 = 6.3절 Case Study와 직접 연결 — 엣지 추론 없이는 scope boundary 판단 불가
+4. no_vision에서 가장 큰 정확도 하락(10→8) — table/composite 문항에서 필수적
+5. 엣지 추론이 비용의 66%를 차지하지만 안전-임계 도메인에서 제거 불가 (추적 가능성 요건)
+
 ---
 
 ## Known Issues (Unresolved)
