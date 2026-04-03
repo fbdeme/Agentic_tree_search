@@ -532,58 +532,62 @@
 
 **전체 요약 (효율성 + 품질):**
 
-| Variant | Judge | Faith | AR | CR | FC | 시간 | 비용 |
-|---------|:-----:|:-----:|:--:|:--:|:--:|:----:|:----:|
-| **full** | **8/10** | **0.96** | **0.84** | **0.95** | **0.50** | 104s | $0.216 |
+| Variant | 3-Judge | Faith | AR | CR | FC | 시간 | 비용 |
+|---------|:-------:|:-----:|:--:|:--:|:--:|:----:|:----:|
+| **full** | **10/10** | **0.96** | **0.84** | **0.95** | **0.50** | 104s | $0.216 |
 | no_vision | 8/10 | 0.83 | 0.82 | 0.92 | 0.39 | 98s | $0.196 (−9%) |
-| no_edges | 8/10 | 0.93 | 0.84 | **1.00** | 0.48 | **34s** | **$0.073 (−66%)** |
-| no_browse_first | 8/10 | **0.97** | 0.79 | 0.94 | **0.57** | 91s | $0.180 (−17%) |
+| no_edges | 9/10 | 0.93 | 0.84 | **1.00** | 0.48 | **34s** | **$0.073 (−66%)** |
+| no_browse_first | 9/10 | **0.97** | 0.79 | 0.94 | **0.57** | 91s | $0.180 (−17%) |
 
-**오답 분석 (Judge X):**
+> Judge = 3-평가자 다수결 (Tonic GPT-4-turbo, MLflow GPT-4o, Allganize Claude Sonnet 4.5)
+> RAGAS = GPT-4.1 evaluator (Faithfulness, Answer Relevancy, Context Recall, Factual Correctness)
 
-| Variant | 오답 문항 | 패턴 |
-|---------|----------|------|
-| full | Q101, Q176 | Q176은 전 variant 공통 오답 (난이도 문제) |
-| no_vision | Q101, Q176 | full과 동일 — Vision이 이 문항들에 영향 없음 |
-| no_edges | **Q058**, Q176 | **Q058 추가 오답** — 엣지 없이 내진 scope boundary 판단 실패 |
-| no_browse_first | Q176, **Q191** | **Q191 추가 오답** — 목차 없이 image 문항 탐색 실패 |
+**오답 분석 (3-Judge X):**
+
+| Variant | 정답률 | 오답 문항 | 실패 원인 |
+|---------|:------:|----------|----------|
+| **full** | **10/10** | — | — |
+| no_vision | **8/10** | Q101, Q131 | 표/복합 데이터 없이 비교 질문 실패 |
+| no_edges | 9/10 | **Q058** | 엣지 없이 내진 scope boundary 판단 실패 |
+| no_browse_first | 9/10 | **Q191** | 목차 없이 image/judgment 탐색 실패 |
 
 **핵심 발견:**
 
-1. **엣지 추론 제거: 비용 66% 절감, 그러나 규제 판단에서 실패**
+1. **Full system이 유일한 10/10** — 모든 컴포넌트가 정확도에 기여
+   - 어떤 컴포넌트를 제거해도 최소 1문항 이상 추가 오답 발생
+   - 각 컴포넌트가 **서로 다른 유형의 문항**에서 결정적 역할
+
+2. **Vision RAG 제거: 가장 큰 정확도 하락 (10/10 → 8/10)**
+   - **Q101(table/comparative)**: Tonic 4→1, MLflow 4→1 — 표 데이터 없이 비교 질문 완전 실패
+   - **Q131(composite/comparative)**: MLflow corr 4→2 — 복합 증거 종합 불가
+   - RAGAS도 하락: Faith 0.96→0.83, FC 0.50→0.39
+   - **결론**: Vision은 특히 table/composite 문항에서 필수적
+
+3. **엣지 추론 제거: 비용 66% 절감, 그러나 규제 판단에서 실패**
    - no_edges는 가장 저렴 ($0.073, 34초)이며 CR=1.00으로 증거 수집은 정상
-   - 그러나 **Q058 오답**: 엣지 없이는 내진 설계 적용 범위(scope exclusion)를 판단 못함
-     - full: VIOLATES 엣지로 "비안전 계통은 내진 요건 적용 범위 밖"을 명시적 추론 → Judge=O(4)
-     - no_edges: 노드만 나열, scope boundary 미식별 → Judge=X(3)
-   - Faith 0.96→0.93 소폭 하락 — 엣지 기반 KG context가 답변 grounding에 기여
-   - **결론**: 엣지 추론은 비용의 66%를 차지하지만, 규제 판단의 핵심이므로 안전-임계 도메인에서 제거 불가
+   - 그러나 **Q058 오답**: Tonic 4→2, Allganize 1→0 — 엣지 없이 scope exclusion 판단 실패
+     - full: VIOLATES 엣지로 "비안전 계통은 내진 요건 적용 범위 밖"을 명시적 추론 → O
+     - no_edges: 노드만 나열, scope boundary 미식별 → X
+   - **결론**: 엣지 추론은 비용의 66%를 차지하지만, 6.3절 VIOLATES case study가 보여주듯 규제 판단의 핵심
 
-2. **Vision RAG 제거: Faith −0.13, FC −0.11**
-   - Judge 정확도는 동일(8/10)이나 RAGAS 품질이 전반적으로 하락
-   - Faith: 0.96→0.83 — 표/도면 없이 답변의 근거가 약화
-   - **Q131(composite)**: Faith 1.00→0.00, CR 1.00→0.67 — Vision 없이 복합 증거 grounding 실패
-   - **Q101(table)**: Judge O→X, Faith 1.00→0.33 — 표 데이터 없이 비교 질문 답변 불가
-   - **결론**: Vision은 Judge 정확도보다 RAGAS 품질(grounding)에 더 큰 영향
+4. **Browse-first 제거: 복잡한 멀티모달 문항에서 탐색 실패**
+   - **Q191(image/judgment/cross)**: Tonic 4→0, MLflow 4→1 — 목차 없이 탐색 방향 설정 실패
+   - 단순 문항(Q001~Q031)에서는 영향 없음 — browse-first는 복잡 문항에서만 결정적
 
-3. **Browse-first 제거: Q191(image/judgment) 추가 오답**
-   - Judge O→X(score 4→1): 목차 없이 image_only × judgment × cross_document 탐색 실패
-   - 반면 FC가 오히려 상승(0.50→0.57) — 우연적 변동 (10문항 한계)
-   - **결론**: Browse-first는 복잡한 멀티모달 문항에서 탐색 방향 설정에 중요
-
-**문항별 Judge 상세:**
+**문항별 3-Judge 상세:**
 
 | QID | 유형 | full | no_vis | no_edg | no_brw |
 |-----|------|:----:|:------:|:------:|:------:|
-| Q001 | fact/single | O(5) | O(5) | O(5) | O(5) |
-| Q010 | fact/multi | O(5) | O(5) | O(5) | O(5) |
-| Q031 | fact/single/table | O(5) | O(5) | O(5) | O(5) |
-| Q058 | fact/cross | O(4) | O(4) | **X(3)** | O(4) |
-| Q071 | comp/single | O(5) | O(4) | O(4) | O(5) |
-| Q101 | comp/cross/table | X(3) | **X(2)** | O(4) | O(4) |
-| Q131 | comp/cross/comp | O(4) | O(4) | O(4) | O(4) |
-| Q161 | judg/multi | O(4) | O(4) | O(4) | O(4) |
-| Q176 | judg/cross | X(3) | X(3) | X(3) | X(3) |
-| Q191 | judg/cross/image | O(4) | O(4) | O(4) | **X(1)** |
+| Q001 | fact/single | O | O | O | O |
+| Q010 | fact/multi | O | O | O | O |
+| Q031 | fact/single/table | O | O | O | O |
+| Q058 | fact/cross | O | O | **X** | O |
+| Q071 | comp/single | O | O | O | O |
+| Q101 | comp/cross/table | O | **X** | O | O |
+| Q131 | comp/cross/comp | O | **X** | O | O |
+| Q161 | judg/multi | O | O | O | O |
+| Q176 | judg/cross | O | O | O | O |
+| Q191 | judg/cross/image | O | O | O | **X** |
 
 **베이스라인 대비 기여 분리** (200문항 전체, GWM vs RAPTOR):
 

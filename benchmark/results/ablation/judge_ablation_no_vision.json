@@ -1,0 +1,289 @@
+{
+  "timestamp": "2026-04-03T19:47:25.314373",
+  "source": "pred_ablation_no_vision.json",
+  "filters": null,
+  "evaluators": {
+    "tonic": {
+      "model": "gpt-4-turbo",
+      "criteria": "similarity",
+      "scale": "0-5",
+      "threshold": 4
+    },
+    "mlflow": {
+      "model": "openai:/gpt-4o",
+      "criteria": "similarity+correctness",
+      "scale": "1-5",
+      "threshold": 4
+    },
+    "allganize": {
+      "model": "claude-sonnet-4-5-20250929",
+      "criteria": "correctness",
+      "scale": "0/1",
+      "threshold": 1
+    }
+  },
+  "summary": {
+    "total": 10,
+    "correct": 8,
+    "incorrect": 2,
+    "accuracy": 0.8
+  },
+  "by_question_type": {
+    "text_only": {
+      "total": 6,
+      "O": 6,
+      "X": 0,
+      "accuracy": 1.0
+    },
+    "table_only": {
+      "total": 1,
+      "O": 0,
+      "X": 1,
+      "accuracy": 0.0
+    },
+    "composite": {
+      "total": 2,
+      "O": 1,
+      "X": 1,
+      "accuracy": 0.5
+    },
+    "image_only": {
+      "total": 1,
+      "O": 1,
+      "X": 0,
+      "accuracy": 1.0
+    }
+  },
+  "by_reasoning_type": {
+    "factual": {
+      "total": 4,
+      "O": 4,
+      "X": 0,
+      "accuracy": 1.0
+    },
+    "comparative": {
+      "total": 3,
+      "O": 1,
+      "X": 2,
+      "accuracy": 0.3333
+    },
+    "judgment": {
+      "total": 3,
+      "O": 3,
+      "X": 0,
+      "accuracy": 1.0
+    }
+  },
+  "by_complexity": {
+    "single_evidence": {
+      "total": 3,
+      "O": 3,
+      "X": 0,
+      "accuracy": 1.0
+    },
+    "multi_evidence": {
+      "total": 3,
+      "O": 2,
+      "X": 1,
+      "accuracy": 0.6667
+    },
+    "cross_document": {
+      "total": 4,
+      "O": 3,
+      "X": 1,
+      "accuracy": 0.75
+    }
+  },
+  "matrix_9cell": {
+    "factual_single_evidence": {
+      "total": 2,
+      "O": 2,
+      "X": 0,
+      "accuracy": 1.0
+    },
+    "factual_multi_evidence": {
+      "total": 1,
+      "O": 1,
+      "X": 0,
+      "accuracy": 1.0
+    },
+    "factual_cross_document": {
+      "total": 1,
+      "O": 1,
+      "X": 0,
+      "accuracy": 1.0
+    },
+    "comparative_single_evidence": {
+      "total": 1,
+      "O": 1,
+      "X": 0,
+      "accuracy": 1.0
+    },
+    "comparative_multi_evidence": {
+      "total": 1,
+      "O": 0,
+      "X": 1,
+      "accuracy": 0.0
+    },
+    "comparative_cross_document": {
+      "total": 1,
+      "O": 0,
+      "X": 1,
+      "accuracy": 0.0
+    },
+    "judgment_multi_evidence": {
+      "total": 1,
+      "O": 1,
+      "X": 0,
+      "accuracy": 1.0
+    },
+    "judgment_cross_document": {
+      "total": 2,
+      "O": 2,
+      "X": 0,
+      "accuracy": 1.0
+    }
+  },
+  "results": [
+    {
+      "id": "Q001",
+      "reasoning_type": "factual",
+      "complexity": "single_evidence",
+      "question_type": "text_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 5,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "What is the total net electrical output of a full 12-module NuScale plant?",
+      "generated_answer": "The total net electrical output of a full 12-module NuScale plant is approximately 570 MWe after accounting for house loads (nuscale_ch01_0006; nuscale_ch01_0007; nuscale_ch01_0008; nuscale_ch01_0005).",
+      "expected_answer": "The total net electrical output of a full NuScale plant with 12 modules is approximately 570 MWe."
+    },
+    {
+      "id": "Q010",
+      "reasoning_type": "factual",
+      "complexity": "single_evidence",
+      "question_type": "text_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "How many reactor safety valves does the NuScale RCS have?",
+      "generated_answer": "The NuScale Reactor Coolant System (RCS) has two spring-loaded safety valves. Source: nuscale_ch01_0769 (NuScale FSAR, discussion of spring-loaded safety valves in place of PORVs).",
+      "expected_answer": "The NuScale RCS has 2 reactor safety valves (RSVs)."
+    },
+    {
+      "id": "Q031",
+      "reasoning_type": "factual",
+      "complexity": "multi_evidence",
+      "question_type": "text_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Describe the natural circulation mechanism in the NuScale RCS and the role of the riser in establishing flow.",
+      "generated_answer": "The NuScale RCS uses natural circulation, where heated coolant rises through a central hot leg riser above the core, flows through the steam generators to transfer heat, and then descends as it cools, with the riser providing the necessary elevation and separation to establish and sustain this flow path. The riser’s role is to create a vertical height difference that drives the buoyancy-induced circulation essential for passive core cooling. Sources: nuscale_ch01_0018; nuscale_ch05_0003; nuscale_ch05_0019.",
+      "expected_answer": "The NuScale RCS uses natural circulation without reactor coolant pumps. Heated coolant rises through the hot leg riser due to density differences between hot and cold fluid. The riser directs flow upward from the core to the steam generator region. Heat is transferred to the secondary side in the SG, cooling the primary fluid which then descends through the downcomer back to the core inlet."
+    },
+    {
+      "id": "Q058",
+      "reasoning_type": "factual",
+      "complexity": "cross_document",
+      "question_type": "text_only",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 4,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "How is the NuScale seismic design described in Ch.01, and what implications does this have for RCS components per Ch.05?",
+      "generated_answer": "The NuScale seismic design in Ch.01 is described as fully conforming to GDC 2 and RG 1.100, requiring safety-related systems—including RCS components—to be seismically qualified to withstand design basis earthquakes, and this means all RCS pressure-retaining components in Ch.05 (such as the reactor vessel, pressurizer, and associated piping) are designed, fabricated, and tested to ASME BPVC Class 1 standards per 10 CFR 50.55a to ensure integrity under seismic events. Sources: nuscale_ch01_0307, nuscale_ch01_0150, nuscale_ch05_0008, nuscale_ch05_0007.",
+      "expected_answer": "Ch.01 describes the NuScale plant as designed for seismic events with modules submerged in a below-grade reactor pool for added protection. Ch.05 notes that RCS pressure boundary components are designed to Seismic Category I requirements per ASME Section III, ensuring structural integrity during design basis earthquakes."
+    },
+    {
+      "id": "Q071",
+      "reasoning_type": "comparative",
+      "complexity": "single_evidence",
+      "question_type": "text_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 5,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "How does the NuScale natural circulation driving force compare to forced circulation in a conventional PWR?",
+      "generated_answer": "The NuScale reactor uses natural circulation, which provides a significantly lower driving force for coolant flow compared to the forced circulation produced by reactor coolant pumps in a conventional PWR; NuScale achieves core cooling without pumps, relying on system design to minimize pressure losses and maintain adequate flow, whereas conventional PWRs use high-capacity pumps to generate much greater flow rates and pressure heads. Source: , , ,",
+      "expected_answer": "NuScale relies on buoyancy-driven natural circulation with no RCPs, producing lower flow rates than forced circulation PWRs. This is acceptable because the lower power density of the NuScale core requires less coolant flow for adequate heat removal."
+    },
+    {
+      "id": "Q101",
+      "reasoning_type": "comparative",
+      "complexity": "multi_evidence",
+      "question_type": "table_only",
+      "tonic_similarity": 1,
+      "mlflow_similarity": 1,
+      "mlflow_correctness": 1,
+      "allganize_correctness": 0,
+      "final_vote": "X",
+      "question": "Compare the SG design parameters from Table 5.4-1 with the RPV design parameters from Table 5.3-1.",
+      "generated_answer": "The SG (Steam Generator) design parameters from Table 5.4-1 show a lower design pressure (2,250 psia) and temperature (650°F) compared to the RPV (Reactor Pressure Vessel) design parameters from Table 5.3-1, which are 2,500 psia and 650°F, respectively; both components are integrated, but the RPV is designed for higher pressure. Source: nuscale_ch05_0019, nuscale_ch05_0020, nuscale_ch05_0014.",
+      "expected_answer": "Both the SG (Table 5.4-1) and RPV (Table 5.3-1) have the same design pressure of 2100 psia and design temperature of 650 degrees F, since the SG is integral to the RPV. The SG steam outlet is ~575 degrees F and FW inlet is ~300 degrees F. The RPV overall height is 778 inches, housing both core and SG regions."
+    },
+    {
+      "id": "Q131",
+      "reasoning_type": "comparative",
+      "complexity": "cross_document",
+      "question_type": "composite",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 3,
+      "mlflow_correctness": 2,
+      "allganize_correctness": 1,
+      "final_vote": "X",
+      "question": "Compare the NuScale vs PWR parameters from Table 1.3-1 with the NuScale RPV dimensions from Table 5.3-1 and Figure 5.3-1.",
+      "generated_answer": "Table 1.3-1 shows the NuScale RPV has a height of 22.0 m and an inside diameter of 2.8 m, compared to a typical PWR RPV height of 13.7 m and inside diameter of 4.0 m; Table 5.3-1 and Figure 5.3-1 confirm the NuScale RPV dimensions as 22.0 m tall and 2.8 m in diameter. (Source: nuscale_ch01_0052, nuscale_ch05_0015, nuscale_ch05_0014)",
+      "expected_answer": "Table 1.3-1 shows NuScale vessel ID ~107.5 in vs PWR ~173 in, and NuScale height-to-diameter ratio is much larger. Table 5.3-1 gives exact dimensions: 778 in height, 96.5-106.5 in ID. Figure 5.3-1 cross section shows the tall, narrow vessel profile that enables vertical natural circulation within a compact footprint."
+    },
+    {
+      "id": "Q161",
+      "reasoning_type": "judgment",
+      "complexity": "multi_evidence",
+      "question_type": "composite",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 5,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Based on Table 5.1-2 and the text discussion of natural circulation, is the minimum design flow rate adequate for core cooling?",
+      "generated_answer": "Yes, the minimum design flow rate specified in Table 5.1-2 is adequate for core cooling, as confirmed by the text discussion and supporting critical heat flux testing, which demonstrate that natural circulation meets all regulatory thermal margin and fuel temperature limits for the NuScale design. (Source: nuscale_ch05_0006; nuscale_ch01_0732; nuscale_ch01_0057)",
+      "expected_answer": "Yes. Table 5.1-2 shows minimum design flow at 91.7% is 538.5 kg/s with delta-T of 107.6 degrees F. The text explains this higher delta-T increases buoyancy driving force, providing self-regulating behavior. Even at minimum flow, adequate core cooling is maintained with acceptable fuel temperatures."
+    },
+    {
+      "id": "Q176",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "text_only",
+      "tonic_similarity": 4,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 3,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Is the integral SG design described in both Ch.01 and Ch.05 adequate for addressing steam generator tube rupture (SGTR) concerns?",
+      "generated_answer": "Yes, the integral steam generator (SG) design described in both Ch.01 and Ch.05 is adequate for addressing steam generator tube rupture (SGTR) concerns, as it meets regulatory requirements for radiological consequence analyses and incorporates design features and operational experience that support established tube plugging and degradation management criteria (nuscale_ch01_0662; nuscale_ch05_0020; nuscale_ch05_0021).",
+      "expected_answer": "Yes. Ch.01 describes the integral SG within the RPV. Ch.05 confirms that because the SG is inside the RPV/containment, an SGTR does not release radioactive coolant outside containment (unlike conventional PWRs where SGTR bypasses containment). The Alloy 690 tube material further reduces SGTR likelihood."
+    },
+    {
+      "id": "Q191",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "image_only",
+      "tonic_similarity": 5,
+      "mlflow_similarity": 4,
+      "mlflow_correctness": 3,
+      "allganize_correctness": 1,
+      "final_vote": "O",
+      "question": "Based on Figure 1.2-3 (NPM with secondary equipment) and Figure 5.4-1 (SG assembly), is the interface between primary and secondary systems adequately designed?",
+      "generated_answer": "Yes, the interface between the primary and secondary systems is adequately designed, as Figures 1.2-3 and 5.4-1 show that the steam generators are integral to the reactor pressure vessel with the pressure boundary and leakage detection features meeting regulatory requirements for integrity and radiological safety (nuscale_ch05_0020; nuscale_ch05_0007; nuscale_ch01_0510).",
+      "expected_answer": "Yes. Figure 1.2-3 shows the NPM connected to its turbine-generator and condenser via steam and feedwater piping. Figure 5.4-1 shows the helical coil SG inside the RPV where this energy transfer occurs. The interface is well-defined at the SG tube boundaries, maintaining primary/secondary separation within the containment boundary."
+    }
+  ]
+}
