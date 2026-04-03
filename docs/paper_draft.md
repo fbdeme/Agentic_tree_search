@@ -313,13 +313,23 @@
 
 ### 4.1 기존 벤치마크의 한계와 새 벤치마크의 필요성
 
-- 핵 도메인의 기존 벤치마크는 본 연구가 평가하고자 하는 멀티홉 규제 판단 능력을 측정할 수 없음:
-  | 벤치마크                                   | 한계                                                                               |
-  | ------------------------------------------ | ---------------------------------------------------------------------------------- |
-  | **NuclearQA** [Acharya et al., 2023] | 단일 hop 사실 추출 위주 (예: "원자로 열출력은?"), 멀티홉 추론·규제 판단 문항 없음 |
-  | **NQuAD**                            | 단순 질의응답, 복수 문서 교차 참조 문항 없음                                       |
-- **공통 결여 요소**: (1) cross_document 추론, (2) judgment 유형 문항 (규제 적합성 판단), (3) 멀티모달 (표·도면 활용) 문항, (4) ground_truth_evidence 표기
-- → 본 연구에서 새로운 벤치마크를 설계
+- 규제·기술 문서 QA 벤치마크는 다수 존재하나, 본 연구가 요구하는 **핵 규제 × 멀티홉 × 멀티모달 × 판단** 조합을 동시에 갖춘 벤치마크는 없음:
+
+  | 벤치마크 | 문서 유형 | 문항 | 멀티홉 | 표 | 도면 | 교차문서 | 판단 |
+  |----------|----------|:----:|:------:|:--:|:----:|:-------:|:----:|
+  | NuclearQA [Acharya et al., 2023] | 핵 도메인 지식 | 100 | ❌ | ❌ | ❌ | ❌ | ❌ |
+  | FDARxBench [2025, arXiv:2603.19539]⁺ | FDA 의약품 라벨 | 17K | ✅ | ✅ | △ | ❌ | ✅ |
+  | MMLongBench-Doc [2024, arXiv:2407.01523]⁺ | 장문 PDF 7개 도메인 | 1,062 | ✅ | ✅ | ✅ | ❌ | ❌ |
+  | M3DocVQA [2024, arXiv:2411.04952]⁺ | 다양한 PDF | 2,441 | ✅ | ✅ | ✅ | ✅ | ❌ |
+  | DesignQA [2024, arXiv:2404.07917]⁺ | 공학 문서 + CAD | ~수백 | ❌ | ✅ | ✅ | ✅ | △ |
+  | SEC-QA [2025, arXiv:2406.14394]⁺ | SEC 재무 보고서 | 333 | ✅ | ✅ | ❌ | ✅ | ❌ |
+  | TAT-QA [2021, arXiv:2105.07624] | 재무 보고서 (표+텍스트) | 16K | ✅ | ✅ | ❌ | ❌ | ❌ |
+  | **Ours** | **핵 FSAR** | **200** | **✅** | **✅** | **✅** | **✅** | **✅** |
+
+  - FDARxBench가 가장 유사 (규제 문서 + 멀티홉 + 판단)하나, 단일 문서·도면 없음
+  - MMLongBench-Doc, M3DocVQA가 멀티모달 장문서에 강하나, 규제 판단(judgment) 문항 유형 없음
+  - DesignQA가 공학 문서 + 규정 준수에 유사하나, 멀티홉 추론 미지원
+  - **본 벤치마크의 고유 기여**: 핵 규제 도메인에서 멀티홉 교차 문서 추론 + 멀티모달(표·도면) + 규제 적합성 판단(judgment)을 결합한 **최초의 벤치마크**
 
 ### 4.2 설계 원칙
 
@@ -772,8 +782,15 @@
 | [29] | Boiko, D., et al. (2023). Autonomous chemical research with large language models. *Nature* | ✅ |
 | [30] | Lee, Y.P. (2025). Mechanistic Interpretability of LoRA-Adapted Language Models for Nuclear Reactor Safety Applications. arXiv:2507.09931 | ✅ |
 | [31] | Sulc, A., et al. (2023). PACuna: Automated Fine-Tuning of Language Models for Particle Accelerators. arXiv:2310.19106 | ✅ |
+| [32] | FDARxBench (2025). arXiv:2603.19539 — FDA 의약품 라벨 규제 문서 QA 벤치마크 (17K 문항, 멀티홉) | ✅⁺ |
+| [33] | Ma, Y., et al. (2024). MMLongBench-Doc: Benchmarking Long-context Document Understanding with Visualizations. arXiv:2407.01523 | ✅⁺ |
+| [34] | Huang, J., et al. (2024). M3DocVQA / M3DocRAG: Multi-modal Multi-page Multi-document RAG. arXiv:2411.04952 | ✅⁺ |
+| [35] | Doris, Y., et al. (2024). DesignQA: A Multimodal Benchmark for Evaluating LLMs' Understanding of Engineering Documentation. arXiv:2404.07917 | ✅⁺ |
+| [36] | Zhu, F., et al. (2021). TAT-QA: A Question Answering Benchmark on a Hybrid of Tabular and Textual Content in Finance. arXiv:2105.07624 | ✅ |
+| [37] | Loukas, L., et al. (2025). SEC-QA: A Systematic Evaluation Corpus for Financial QA. arXiv:2406.14394 | ✅⁺ |
 
 > ⁺ 추가 검증 권장: Zheng et al. 2023 LLM-as-Judge (arXiv:2306.05685), Asai et al. 2024 Self-RAG (arXiv:2310.11511)
+> ⁺ [32]~[37]은 벤치마크 비교 목적으로 인용, 저자/제목 정밀 검증 필요
 
 ---
 
