@@ -530,48 +530,60 @@
 | **no_edges** | 엣지 추론 | 노드만 수집, 관계 추론(Transition) 전체 생략 |
 | **no_browse_first** | Browse-first | Hop 1에서 문서 구조(목차) 자동 주입 제거 |
 
-**전체 요약:**
+**전체 요약 (효율성 + 품질):**
 
-| Variant | 시간 | 홉 | 노드 | 엣지 | 토큰 | 비용/문항 |
-|---------|:----:|:--:|:----:|:----:|:----:|:---------:|
-| **full** | 101.6s | 3.6 | 14.5 | 49.0 | 88,251 | $0.215 |
-| no_vision | 93.6s | 3.7 | 13.4 | 41.9 | 72,021 | $0.179 (−17%) |
-| **no_edges** | **32.8s** | 3.5 | 12.1 | **0** | **27,073** | **$0.067 (−69%)** |
-| no_browse_first | 100.9s | 3.5 | 13.9 | 44.0 | 84,102 | $0.205 (−5%) |
+| Variant | Judge | Faith | AR | CR | FC | 시간 | 비용 |
+|---------|:-----:|:-----:|:--:|:--:|:--:|:----:|:----:|
+| **full** | **8/10** | **0.96** | **0.84** | **0.95** | **0.50** | 104s | $0.216 |
+| no_vision | 8/10 | 0.83 | 0.82 | 0.92 | 0.39 | 98s | $0.196 (−9%) |
+| no_edges | 8/10 | 0.93 | 0.84 | **1.00** | 0.48 | **34s** | **$0.073 (−66%)** |
+| no_browse_first | 8/10 | **0.97** | 0.79 | 0.94 | **0.57** | 91s | $0.180 (−17%) |
+
+**오답 분석 (Judge X):**
+
+| Variant | 오답 문항 | 패턴 |
+|---------|----------|------|
+| full | Q101, Q176 | Q176은 전 variant 공통 오답 (난이도 문제) |
+| no_vision | Q101, Q176 | full과 동일 — Vision이 이 문항들에 영향 없음 |
+| no_edges | **Q058**, Q176 | **Q058 추가 오답** — 엣지 없이 내진 scope boundary 판단 실패 |
+| no_browse_first | Q176, **Q191** | **Q191 추가 오답** — 목차 없이 image 문항 탐색 실패 |
 
 **핵심 발견:**
 
-1. **엣지 추론이 비용의 핵심 (69% 절감 시 제거)**:
-   - no_edges는 비용 $0.215 → $0.067 (69% 감소), 시간 101.6s → 32.8s (3.1× 빠름)
-   - 그러나 엣지 0개 = SATISFIES, SUPPORTS 등 관계 정보 전무 → 규제 판단 근거 추적 불가
-   - **trade-off**: 비용 절감 vs 추적 가능성 — 안전-임계 도메인에서는 추적 가능성이 우선
+1. **엣지 추론 제거: 비용 66% 절감, 그러나 규제 판단에서 실패**
+   - no_edges는 가장 저렴 ($0.073, 34초)이며 CR=1.00으로 증거 수집은 정상
+   - 그러나 **Q058 오답**: 엣지 없이는 내진 설계 적용 범위(scope exclusion)를 판단 못함
+     - full: VIOLATES 엣지로 "비안전 계통은 내진 요건 적용 범위 밖"을 명시적 추론 → Judge=O(4)
+     - no_edges: 노드만 나열, scope boundary 미식별 → Judge=X(3)
+   - Faith 0.96→0.93 소폭 하락 — 엣지 기반 KG context가 답변 grounding에 기여
+   - **결론**: 엣지 추론은 비용의 66%를 차지하지만, 규제 판단의 핵심이므로 안전-임계 도메인에서 제거 불가
 
-2. **Vision RAG 제거의 영향 (−17% 비용)**:
-   - 비용 소폭 절감이나 table/image 문항에서 정보 손실
-   - Q031(table): full은 구조화 표 데이터 직접 활용, no_vision은 텍스트 기반 추론만
-   - Q191(image): full은 6개 도면 렌더링, no_vision은 텍스트 참조만으로 답변
+2. **Vision RAG 제거: Faith −0.13, FC −0.11**
+   - Judge 정확도는 동일(8/10)이나 RAGAS 품질이 전반적으로 하락
+   - Faith: 0.96→0.83 — 표/도면 없이 답변의 근거가 약화
+   - **Q131(composite)**: Faith 1.00→0.00, CR 1.00→0.67 — Vision 없이 복합 증거 grounding 실패
+   - **Q101(table)**: Judge O→X, Faith 1.00→0.33 — 표 데이터 없이 비교 질문 답변 불가
+   - **결론**: Vision은 Judge 정확도보다 RAGAS 품질(grounding)에 더 큰 영향
 
-3. **Browse-first 제거의 영향 (−5% 비용, 탐색 패턴 변화)**:
-   - 비용 차이 미미하나 탐색 경로가 달라짐
-   - Q001(단순 factual): full 14s → no_browse 34s (2.4× 느림) — 목차 없이 검색부터 시작하면 방향 설정에 더 많은 hop 소요
-   - 복잡한 문항에서는 차이 줄어듦 — 다중 hop에서 누적 탐색이 부족분 보완
+3. **Browse-first 제거: Q191(image/judgment) 추가 오답**
+   - Judge O→X(score 4→1): 목차 없이 image_only × judgment × cross_document 탐색 실패
+   - 반면 FC가 오히려 상승(0.50→0.57) — 우연적 변동 (10문항 한계)
+   - **결론**: Browse-first는 복잡한 멀티모달 문항에서 탐색 방향 설정에 중요
 
-**문항별 상세 (시간, 엣지 수):**
+**문항별 Judge 상세:**
 
-| QID | 유형 | full | no_vision | no_edges | no_browse |
-|-----|------|:----:|:---------:|:--------:|:---------:|
-| Q001 | fact/single/text | 14s, 0e | 18s, 0e | 10s, 0e | 34s, 1e |
-| Q010 | fact/multi/text | 75s, 33e | 96s, 38e | 31s, 0e | 96s, 32e |
-| Q031 | fact/single/table | 119s, 51e | 104s, 39e | 33s, 0e | 101s, 49e |
-| Q058 | fact/cross/text | 115s, 62e | 145s, 71e | 37s, 0e | 152s, 78e |
-| Q071 | comp/single/text | 168s, 75e | 133s, 55e | 42s, 0e | 114s, 33e |
-| Q101 | comp/cross/table | 87s, 42e | 76s, 36e | 31s, 0e | 98s, 46e |
-| Q131 | comp/cross/comp | 77s, 36e | 76s, 35e | 33s, 0e | 78s, 27e |
-| Q161 | judg/multi/comp | 88s, 44e | 108s, 56e | 35s, 0e | 111s, 61e |
-| Q176 | judg/cross/text | 125s, 63e | 66s, 28e | 38s, 0e | 99s, 47e |
-| Q191 | judg/cross/image | 150s, 84e | 115s, 61e | 38s, 0e | 125s, 66e |
-
-> no_edges는 항상 0e이나 노드 수는 유사(avg 12.1 vs full 14.5) — 탐색 자체는 정상 수행, 관계 추론만 생략.
+| QID | 유형 | full | no_vis | no_edg | no_brw |
+|-----|------|:----:|:------:|:------:|:------:|
+| Q001 | fact/single | O(5) | O(5) | O(5) | O(5) |
+| Q010 | fact/multi | O(5) | O(5) | O(5) | O(5) |
+| Q031 | fact/single/table | O(5) | O(5) | O(5) | O(5) |
+| Q058 | fact/cross | O(4) | O(4) | **X(3)** | O(4) |
+| Q071 | comp/single | O(5) | O(4) | O(4) | O(5) |
+| Q101 | comp/cross/table | X(3) | **X(2)** | O(4) | O(4) |
+| Q131 | comp/cross/comp | O(4) | O(4) | O(4) | O(4) |
+| Q161 | judg/multi | O(4) | O(4) | O(4) | O(4) |
+| Q176 | judg/cross | X(3) | X(3) | X(3) | X(3) |
+| Q191 | judg/cross/image | O(4) | O(4) | O(4) | **X(1)** |
 
 **베이스라인 대비 기여 분리** (200문항 전체, GWM vs RAPTOR):
 
