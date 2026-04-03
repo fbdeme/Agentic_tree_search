@@ -18,14 +18,16 @@ Implements GWM's State-Action-Transition loop with **PageIndex** as the environm
 
 ### Baseline Comparison — LLM-as-Judge (200Q, NuScale FSAR Ch.01 + Ch.05)
 
-| Method | Overall | judgment | comparative | factual | multi_evidence | cross_document |
-|--------|:-------:|:--------:|:-----------:|:-------:|:--------------:|:--------------:|
-| **GWM v0.4.6** | **81.0%** (162/200) | **90.8%** | — | — | — | **81.3%** |
-| RAPTOR (Sarthi et al. 2024) | 75.5% (151/200) | 92.3% | 72.3% | 62.9% | 78.7% | 73.3% |
-| **Δ (GWM − RAPTOR)** | **+5.5%p** | −1.5%p | — | — | — | +8.0%p |
+| Method | Overall | judgment | comparative | factual | cross_document | table_only | composite |
+|--------|:-------:|:--------:|:-----------:|:-------:|:--------------:|:----------:|:---------:|
+| **GWM v0.4.6** | **81.0%** (162/200) | 90.8% | **78.5%** | **74.3%** | **81.3%** | **86.0%** | **85.0%** |
+| RAPTOR (Sarthi et al. 2024) | 75.5% (151/200) | **92.3%** | 72.3% | 62.9% | 73.3% | 68.0% | 72.5% |
+| HippoRAG (Gutierrez et al. 2024) | 69.0% (138/200) | 86.2% | 63.1% | 58.6% | 65.3% | 56.0% | 55.0% |
+| LightRAG (Guo et al. 2024) | 67.5% (135/200) | 75.4% | 66.2% | 61.4% | 69.3% | 60.0% | 65.0% |
+| GraphRAG (Edge et al. 2024) | 49.5% (99/200) | 61.5% | 49.2% | 38.6% | 37.3% | 42.0% | 47.5% |
 
 > Evaluator: 3-way majority vote — Tonic (GPT-4-turbo) · MLflow (GPT-4o) · Allganize (Claude Sonnet 4.5)
-> Full RAPTOR breakdown (question type · 9-cell matrix · evaluator detail) → [`baseline_experiment/README.md`](baseline_experiment/README.md)
+> Full breakdown → [`docs/baseline_comparison_results.md`](docs/baseline_comparison_results.md)
 
 ## Architecture
 
