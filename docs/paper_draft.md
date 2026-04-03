@@ -1,4 +1,4 @@
-# [초안] GWM 기반 멀티모달 규제 문서 탐색 에이전트
+# [초안] 벡터리스 에이전틱 탐색과 동적 Sub-KG를 통한 규제 문서 멀티홉 추론
 
 > **상태**: 초안 (개조식 흐름 정리용)
 > **작성일**: 2026-04-03
@@ -8,8 +8,9 @@
 
 ## 논문 제목 (후보)
 
-- **정식**: *GWM-based Multimodal Agent for Multi-hop Regulatory Document Exploration*
-- **대안**: *Dynamic Sub-KG Construction for Multi-hop Reasoning in Nuclear Regulatory Documents*
+- **정식**: *Vectorless Agentic Exploration with Dynamic Sub-KG for Multi-hop Regulatory Document Reasoning*
+- **대안 1**: *Agentic Document Exploration with Dynamic Knowledge Graph Construction for Nuclear Regulatory Review*
+- **대안 2**: *Beyond Static RAG: Vectorless Multi-hop Exploration Agent for Safety-Critical Regulatory Documents*
 
 ---
 
@@ -19,11 +20,12 @@
 - 기존 RAG 기반 시스템의 한계:
   - 단일 hop 검색 위주, 증거 분산 시 추론 실패
   - 사전 인덱싱(GraphRAG, LightRAG) 비용, 도메인 특화 구조 미반영
-- **제안**: GWM [Feng et al., 2025] State-Action-Transition 프레임워크에 PageIndex 계층 트리를 환경으로 결합한 벡터리스 에이전트
-  - 동적 Sub-Knowledge Graph(Sub-KG) 실시간 구성
-  - 2단계 엣지 추론(자유형 기술 → 온톨로지 레이블)
-  - Vision-augmented 최종 답변(GPT-4.1 vision)
-- **결과**: 200문항 멀티홉 벤치마크에서 LLM-as-Judge 81.0% — RAPTOR(75.5%), HippoRAG(69.0%), LightRAG(67.5%), GraphRAG(49.5%) 대비 최고 성능; RAGAs Faithfulness 0.93, Context Recall 0.93
+  - 임베딩 기반 검색의 불투명성 — 안전-임계 도메인의 추적 가능성 요건과 충돌
+- **제안**: 벡터리스 계층 트리 환경에서 LLM 에이전트가 능동적으로 문서를 탐색하며, 쿼리 목적별 Dynamic Sub-Knowledge Graph를 실시간 구축하는 아키텍처
+  - Tool 기반 문서 탐색 (browse/read/search + BM25) — 임베딩/청킹 없이 원본 문서 구조 보존
+  - 2단계 엣지 추론 (자유형 기술 → 도메인 온톨로지 매핑) — 규제 판단 관계(SATISFIES, VIOLATES) 명시화
+  - Vision-augmented 최종 답변 — PDF 원본 도면/표를 GPT-4.1 vision으로 직접 해석
+- **결과**: 200문항 멀티홉 벤치마크에서 LLM-as-Judge 81.0% — RAPTOR(75.5%), HippoRAG(69.0%), LightRAG(67.5%), GraphRAG(49.5%) 대비 최고 성능; RAGAS Faithfulness 0.93, Context Recall 0.93; Ablation에서 full system만 10/10 달성
 
 ---
 
@@ -103,30 +105,29 @@
   > **참고: "인덱싱 무비용"이 아닌 "경량 인덱싱"으로 표현한 이유**: 본 연구의 벡터리스 접근은 임베딩/청킹/KG 사전 구축이 불필요하나, PageIndex 트리 생성 시 LLM 기반 노드 요약이 포함되므로 인덱싱 비용이 완전히 0은 아님. 다만 GraphRAG(엔티티-관계 추출 + 커뮤니티 탐지)나 HippoRAG(OpenIE + PPR)에 비해 트리 구조 파싱 + 노드 요약만으로 구성되어 비용이 크게 절감됨. 정확한 비교는 Section 5.5에서 제시.
   >
 
-### [P5] 우리의 접근: 문서 탐색을 World Model 문제로 재정의
+### [P5] 우리의 접근: 검색에서 탐색으로, 나열에서 구조화로
 
-- **핵심 관찰**: P4의 요구사항을 만족시키려면, 검색(retrieval)을 수동적 1회성 조회에서 **환경과의 능동적 상호작용**으로 전환해야 함
+- **핵심 관찰**: P4의 요구사항을 만족시키려면 두 가지 패러다임 전환이 필요:
+  1. **검색(retrieval) → 탐색(exploration)**: 수동적 1회성 벡터 검색 대신, LLM이 문서 환경과 능동적으로 상호작용하며 증거를 수집
+  2. **증거 나열 → 관계 구조화**: 수집된 증거를 단순 나열하는 대신, 증거 간 논리 관계(SATISFIES, VIOLATES)를 명시적 그래프로 구축
 
-  - 인간 전문가가 FSAR를 검토하는 방식: 목차 파악 → 관련 섹션 드릴다운 → 교차 참조 추적 → 증거 평가 → 충분하면 판단
-  - 이는 ReAct [Yao et al., 2023]의 Reason-Act 인터리빙과 정확히 일치
+- **인간 전문가의 탐색 방식 모방**:
+  - 핵 규제 전문가가 FSAR를 검토하는 과정: 목차 파악 → 관련 섹션 드릴다운 → 교차 참조 추적 → 증거 평가 → 충분하면 판단
+  - 이는 ReAct [Yao et al., 2023]의 Reason-Act 인터리빙과 일치
   - 핵심 차이: 기존 RAG에서 LLM은 검색 결과의 **소비자** — 제안 접근에서 LLM은 탐색 과정의 **주체**
-- **World Model로의 프레이밍** [Ha & Schmidhuber, 2018]:
 
-  - World Model: 에이전트가 환경의 내부 표현을 유지하며 행동을 계획
-  - Graph World Model (GWM) [Feng et al., 2025, ICML 2025]: 비구조(텍스트) + 구조(그래프) 데이터를 통합 모델링
-  - GWM의 세 요소 → 규제 문서 탐색에의 대응:
+- **제안 아키텍처의 세 요소**:
 
-  | GWM 요소                         | 규제 문서 탐색 대응                                       |
-  | -------------------------------- | --------------------------------------------------------- |
-  | **State** (내부 표현)      | Dynamic Sub-KG — 수집된 증거 노드와 관계 엣지            |
-  | **Action** (환경 상호작용) | `browse` / `read` / `search` tool — 문서 트리 탐색 |
-  | **Transition** (상태 갱신) | 새 노드 KG 통합 + 2단계 엣지 추론으로 관계 명시화         |
+  | 요소 | 역할 | 구현 |
+  |------|------|------|
+  | **State** (단기 기억) | 수집된 증거와 관계를 구조적으로 표현 | Dynamic Sub-KG (NetworkX DiGraph) |
+  | **Action** (환경 탐색) | 문서 트리를 능동적으로 탐색하여 새 증거 수집 | `browse` / `read` / `search` tool + BM25 |
+  | **Transition** (지식 통합) | 새 증거를 KG에 통합하고 관계를 추론 | 2단계 엣지 추론 (자유형 기술 → 온톨로지 매핑) |
 
+  - State가 **그래프**여야 하는 이유: 규제 판단은 증거 간 관계(SATISFIES, CONTRADICTS)가 핵심 — 나열된 텍스트에서는 이 관계가 암묵적
+  - 에이전트는 매 홉마다 현재 KG 상태를 기반으로 다음 탐색을 계획하는 반복적 루프로 작동
 
-  - State가 **그래프**여야 하는 이유: 규제 판단은 증거 간 관계(SATISFIES, CONTRADICTS)가 핵심 — 텍스트 버퍼에서는 이 관계가 암묵적
-  - GWM 원논문은 RAG를 임베딩 유사도 기반 *비의도 행동(unintended action)*으로 분류 — 본 연구는 파일시스템형 tool 인터페이스로 *의도 행동(intended action)*으로 재정의
 - **에이전틱 탐색의 구체적 작동**:
-
   - `browse(doc, node)`: 목차처럼 계층 탐색 — 범위 파악 후 세부 진입
   - `read(doc, node)`: 특정 섹션 전체 내용 정밀 추출
   - `search(keyword)`: BM25 [Robertson & Zaragoza, 2009] 기반 키워드 검색
@@ -140,10 +141,8 @@
   - 각 트리 노드 = 문서의 한 섹션 (제목, 전문, 요약, 하위 노드 목록 포함)
   - RAPTOR [Sarthi et al., 2024]의 요약 트리와 구조적으로 유사하나, LLM 기반 사전 요약 인덱싱이 불필요하다는 점에서 차별화
   - 이 개념은 PageIndex 프레임워크 [Zhang & Tang, 2025]로 오픈소스 구현되어 있으며, 본 연구의 문서 트리 생성에 활용
-- **GWM의 Environment(World)로서의 적합성**:
-
-  - GWM에서 Environment는 에이전트가 행동을 통해 상호작용하는 **외부 세계**
-  - 벡터리스 문서 트리 = 에이전트가 탐색하는 **문서 세계**:
+- **에이전트의 탐색 환경(exploration environment)으로서의 적합성**:
+  - 벡터리스 문서 트리 = 에이전트가 능동적으로 탐색하는 **구조화된 문서 환경**:
     - 탐색 공간이 구조화됨(계층 트리) → 행동 공간 명확 (`browse` = 하위 목록, `read` = 노드 내용)
     - 세계의 상태(문서 내용)는 고정 → 에이전트의 내부 상태(KG)만 변화
     - 에이전트가 방문하지 않은 노드는 "아직 탐색되지 않은 세계"
@@ -158,10 +157,10 @@
 
 ### [P7] 본 연구의 기여
 
-- 위 요구사항(P4)을 충족하기 위해, 본 연구는 GWM의 State-Action-Transition 프레임워크에 벡터리스 문서 트리를 환경으로 결합한 에이전트를 제안
+- 위 요구사항(P4)을 충족하기 위해, 본 연구는 벡터리스 문서 트리 환경에서 LLM 에이전트가 능동적으로 탐색하며 동적 KG를 구축하는 아키텍처를 제안
 - 핵심 기여:
 
-1. **벡터리스 에이전틱 탐색**: PageIndex 계층 트리를 GWM의 Environment로 정의, BM25 기반 tool-use로 임베딩/청킹/KG 사전 구축 없이 능동적 문서 탐색 구현 (트리 생성 시 LLM 노드 요약 포함되나, 기존 대비 경량 인덱싱)
+1. **벡터리스 에이전틱 탐색**: 계층 트리를 에이전트의 탐색 환경으로 정의, BM25 기반 tool-use(browse/read/search)로 임베딩/청킹/KG 사전 구축 없이 능동적 문서 탐색 구현
 2. **규제 도메인 특화 Dynamic Sub-KG**: 탐색 과정에서 실시간 구축되는 쿼리 목적별 KG — 2티어 엣지 온톨로지(구조 + 의미)로 규제 판단 관계 명시화
 3. **Vision-Augmented 멀티모달 처리**: PDF 페이지 직접 렌더링 → GPT-4.1 vision으로 표/도면 완전 해석 (table_only +18%p vs. RAPTOR, composite +12.5%p)
 4. **완전 추적 가능한 추론 경로**: 탐색 궤적 + Sub-KG 전체 JSON 저장 — 안전-임계 도메인 감사 요건 충족, 에지 기술이 인간 가독 근거 제공
@@ -181,14 +180,17 @@
   - 본 연구의 PageIndex 트리와 구조적으로 유사하나 사전 인덱싱 필요, 동적 탐색 없음
 - **HippoRAG** [Gutierrez et al., 2024, arXiv:2405.14831]: 해마 기반 PPR 검색 (NeurIPS 2024)
 
-### 2.2 Graph World Models & Agent Frameworks
+### 2.2 Agent Frameworks & World Models
 
-- **Graph World Model (GWM)** [Feng et al., 2025, arXiv:2507.10539, ICML 2025]:
-  - 비구조(텍스트) + 구조(그래프) 데이터 통합 모델링
-  - State-Action-Transition 루프, 메시지 패싱 기반 액션 표현
-  - 본 연구는 이 프레임워크를 규제 문서 탐색 도메인에 적용
-- **Tool-using LLM Agents**: ReAct [Yao et al., 2023]⁺ — 이유(reason) + 행동(act) 인터리빙
+- **Tool-using LLM Agents**: ReAct [Yao et al., 2023] — 추론(reason)과 행동(act) 인터리빙
   - 본 연구의 browse/read/search tool 인터페이스와 개념적으로 일치
+  - Toolformer [Schick et al., 2024]: LLM 자율적 도구 호출 — 본 연구의 에이전틱 탐색 기반
+- **World Models**: Ha & Schmidhuber [2018] — 에이전트가 환경의 내부 표현을 유지하며 행동 계획
+  - 본 연구의 Dynamic Sub-KG가 탐색 과정의 내부 상태(단기 기억) 역할
+- **Graph World Model (GWM)** [Feng et al., 2025, arXiv:2507.10539, ICML 2025]:
+  - 비구조(텍스트) + 구조(그래프) 데이터를 통합 모델링하는 범용 프레임워크
+  - 임베딩 기반 암묵적 엣지와 메시지 패싱 기반 액션을 사용
+  - 본 연구와의 차이: GWM은 임베딩 공간에서 암묵적 관계를 모델링하는 반면, 본 연구는 LLM 추론으로 명시적 관계(SATISFIES, VIOLATES)를 생성 — 임베딩을 사용하지 않는 벡터리스 접근
 
 ### 2.3 Knowledge Graph for RAG
 
@@ -223,9 +225,9 @@
 
 ## 3. Method
 
-> **전체 파이프라인**: User Query → GWM Agent (State-Action-Transition, max 4 hops) → Vision-Augmented Answer
+> **전체 파이프라인**: User Query → Exploration Agent (State-Action-Transition loop, max 4 hops) → Vision-Augmented Answer
 
-### 3.1 Environment (World): PageIndex 기반 멀티모달 문서 트리
+### 3.1 Environment: 벡터리스 멀티모달 문서 트리
 
 - **표현**: JSON 계층 트리 — 장(chapter) → 절(section) → 단락(paragraph) 노드
 - **멀티모달 참조 링크**: 목록(LIST OF FIGURES/TABLES) 파싱 → 노드 텍스트 내 "Figure 5.1-1" 참조 탐지 → `references` 필드로 메타데이터 첨부
@@ -262,8 +264,7 @@
 
 ### 3.3 Action (탐색): Tool 기반 문서 네비게이션
 
-- **GWM 원논문 분류** [Feng et al., 2025]: RAG = 임베딩 유사도 기반 *비의도 행동*
-- **본 연구**: 파일시스템형 tool 인터페이스로 *의도 행동*으로 재정의
+- **기존 RAG와의 차이**: 임베딩 유사도 기반 수동 검색이 아닌, LLM이 tool을 선택·호출하는 능동적 탐색
 
   | Tool                        | 유추     | 기능                                   |
   | --------------------------- | -------- | -------------------------------------- |
@@ -291,9 +292,9 @@
 - **Stage 2 — 레이블 (Ontology Mapping)**:
   - Stage 1 기술을 2티어 온톨로지 레이블로 매핑
   - 매핑 불가 시 SEMANTIC으로 보존 → 관계 손실 없음
-- **GWM 임베딩 엣지의 벡터리스 대안**:
-  - GWM 원논문 [Feng et al., 2025]: 임베딩 공간의 암묵적 엣지 $E_m$
-  - 본 연구: LLM 추론으로 생성된 명시적 기술 → 설명 가능성 내재
+- **임베딩 기반 관계 추론의 벡터리스 대안**:
+  - 기존 접근(GraphRAG, GWM 등): 임베딩 공간의 유사도로 암묵적 관계 모델링
+  - 본 연구: LLM 추론으로 생성된 명시적 자연어 기술 → 인간이 검사 가능한 관계 표현
 
 ### 3.5 Vision-Augmented 최종 답변 생성
 
@@ -405,7 +406,7 @@
 - **인덱싱 LLM**: GPT-4.1
 - **임베딩**: text-embedding-3-small (1536d)
 - **Temperature**: 0, **max_tokens**: 300
-- **GWM 설정**: max_hops=4, top_k=2
+- **Agent 설정**: max_hops=4, top_k=2
 
 ### 5.2 베이스라인
 
@@ -420,13 +421,13 @@
 
 | 방법론               |     Overall     |    judgment    |   comparative   |     factual     |    cross_doc    |   table_only   |    composite    |
 | -------------------- | :-------------: | :-------------: | :-------------: | :-------------: | :-------------: | :-------------: | :-------------: |
-| **GWM (ours)** | **81.0%** |      90.8%      | **78.5%** | **74.3%** | **81.3%** | **86.0%** | **85.0%** |
+| **Ours** | **81.0%** |      90.8%      | **78.5%** | **74.3%** | **81.3%** | **86.0%** | **85.0%** |
 | RAPTOR               |      75.5%      | **92.3%** |      72.3%      |      62.9%      |      73.3%      |      68.0%      |      72.5%      |
 | HippoRAG             |      69.0%      |      86.2%      |      63.1%      |      58.6%      |      65.3%      |      56.0%      |      55.0%      |
 | LightRAG             |      67.5%      |      75.4%      |      66.2%      |      61.4%      |      69.3%      |      60.0%      |      65.0%      |
 | GraphRAG             |      49.5%      |      61.5%      |      49.2%      |      38.6%      |      37.3%      |      42.0%      |      47.5%      |
 
-### 5.4 RAGAS 결과 (GWM)
+### 5.4 RAGAS 결과 (Ours)
 
 | 메트릭              |    Overall    | factual |  comparative  |    judgment    |
 | ------------------- | :------------: | :-----: | :------------: | :------------: |
@@ -435,16 +436,16 @@
 | Context Recall      | **0.93** |  0.92  |      0.91      | **0.96** |
 | Factual Correctness |      0.42      |  0.35  | **0.49** |      0.41      |
 
-**RAGAS 비교 (GWM vs RAPTOR vs GraphRAG):**
+**RAGAS 비교 (Ours vs RAPTOR vs GraphRAG):**
 
-| 메트릭              | **GWM (ours)** | RAPTOR | GraphRAG |
+| 메트릭              | **Ours** | RAPTOR | GraphRAG |
 | ------------------- | :------------------: | :----: | :------: |
 | Faithfulness        |    **0.93**    |  0.74  |   0.28   |
 | Answer Relevancy    |    **0.84**    |  0.83  |   0.59   |
 | Context Recall      |    **0.93**    |  0.77  |   0.18   |
 | Factual Correctness |    **0.42**    |  0.40  |   0.32   |
 
-> GWM이 모든 RAGAS 메트릭에서 최고 성능. GraphRAG는 Faithfulness 0.28, Context Recall 0.18 — 커뮤니티 요약에서 구체적 사실이 손실되는 구조적 문제.
+> Ours가 모든 RAGAS 메트릭에서 최고 성능. GraphRAG는 Faithfulness 0.28, Context Recall 0.18 — 커뮤니티 요약에서 구체적 사실이 손실되는 구조적 문제.
 
 **RAGAS by question_type (RAPTOR / GraphRAG):**
 
@@ -461,7 +462,7 @@
 
 **인덱싱 비용 (실측):**
 
-|                |             **GWM**             | **RAPTOR** |     **LightRAG**     | **HippoRAG** |     **GraphRAG**     |
+|                |             **Ours**             | **RAPTOR** |     **LightRAG**     | **HippoRAG** |     **GraphRAG**     |
 | -------------- | :-----------------------------------: | :--------------: | :------------------------: | :----------------: | :-------------------------: |
 | 인덱싱 방식 | 트리 파싱 + LLM 노드 요약 | 재귀 요약 트리 | 엔티티-관계 추출 + 벡터 DB | OpenIE → KG + PPR | 엔티티-관계 + 커뮤니티 탐지 |
 | 인덱싱 시간 | **7.6–19.8분**¹ | ~43.5분² | 52.1분 | 29.1분 | 40.0분 |
@@ -470,12 +471,12 @@
 | API 호출 수 | 275 (Ch01: 235 + Ch05: 40) | — | — | — | — |
 | 임베딩/KG 구축 | 불필요 | 불필요 | 필요 | 필요 | 필요 |
 
-> ¹ GWM 인덱싱 실측: Ch.01(352p) 1,536K tokens/$3.75/17.7min + Ch.05(160p) 129K tokens/$0.31/2.1min. 시간 변동은 PageIndex TOC 파싱 retry 횟수에 의존 (retry 없이 7.6분, retry 포함 시 19.8분). 비용 $4.06은 GPT-4.1 기준($2/M input, $8/M output).
+> ¹ Ours 인덱싱 실측: Ch.01(352p) 1,536K tokens/$3.75/17.7min + Ch.05(160p) 129K tokens/$0.31/2.1min. 시간 변동은 PageIndex TOC 파싱 retry 횟수에 의존 (retry 없이 7.6분, retry 포함 시 19.8분). 비용 $4.06은 GPT-4.1 기준($2/M input, $8/M output).
 > ² RAPTOR는 다른 환경에서 실행, indexing_report 미생성. 기존 문서 기록 기반.
 
 **쿼리 비용 (5문항 샘플 실측 → 200문항 외삽):**
 
-|                 |                    **GWM**                    | **RAPTOR** | **GraphRAG** | HippoRAG | LightRAG |
+|                 |                    **Ours**                    | **RAPTOR** | **GraphRAG** | HippoRAG | LightRAG |
 | --------------- | :-------------------------------------------------: | :--------------: | :----------------: | :------: | :------: |
 | 문항당 시간     |                  **93.0초**                  | **1.8초** |  **3.8초**  |  미저장  |  미저장  |
 | 문항당 토큰     | **86,072** (prompt 79,861 + completion 6,210) |      미저장      |       4,953       |  미저장  |  미저장  |
@@ -484,7 +485,7 @@
 | 200문항 총 비용 |            **~$41.9** | — | ~$2.4            |        —        |         —         |          |          |
 | 200문항 총 시간 |               ~310분 (8× 병렬 ~39분)               |       ~6분       |       ~13분       |    —    |    —    |
 
-> GWM 토큰 측정: 5문항 샘플(Q001 factual/single, Q071 comparative/single, Q131 composite/cross, Q161 judgment/multi, Q191 image/cross) 실측 후 평균 외삽. GPT-4.1 가격 기준($2/M input, $8/M output).
+> 토큰 측정: 5문항 샘플(Q001 factual/single, Q071 comparative/single, Q131 composite/cross, Q161 judgment/multi, Q191 image/cross) 실측 후 평균 외삽. GPT-4.1 가격 기준($2/M input, $8/M output).
 
 **문항별 비용 변동 (5문항 샘플):**
 
@@ -500,7 +501,7 @@
 
 **인덱싱 + 쿼리 총합:**
 
-| | **GWM** | **RAPTOR** | **LightRAG** | **HippoRAG** | **GraphRAG** |
+| | **Ours** | **RAPTOR** | **LightRAG** | **HippoRAG** | **GraphRAG** |
 |--|:-:|:-:|:-:|:-:|:-:|
 | 인덱싱 시간 | 7.6–19.8분 | ~43.5분 | 52.1분 | 29.1분 | 40.0분 |
 | 인덱싱 비용 | **$4.06** | ~$1.4 | $$$ | $$ | $$$ |
@@ -509,9 +510,9 @@
 | **시간 총합** | **~318–330분** | **~50분** | — | — | **~53분** |
 | **비용 총합** | **~$46** | — | — | — | — |
 
-> GWM은 시간·비용 모두 가장 높지만, 인덱싱 비중이 시간의 2–6%, 비용의 9%에 불과. 문서 개정 시 인덱싱($4.06)만 재실행하면 되며, 쿼리 비용은 8× 병렬화로 시간 단축 가능.
+> Ours는 시간·비용 모두 가장 높지만, 인덱싱 비중이 시간의 2–6%, 비용의 9%에 불과. 문서 개정 시 인덱싱($4.06)만 재실행하면 되며, 쿼리 비용은 8× 병렬화로 시간 단축 가능.
 
-**KG 복잡도 (GWM, 200문항 전체):**
+**KG 복잡도 (Ours, 200문항 전체):**
 
 | 지표       | 평균 |  범위  |
 | ---------- | :--: | :----: |
@@ -595,13 +596,13 @@
 | Q176 | judg/cross | O | O | O | O |
 | Q191 | judg/cross/image | O | O | O | **X** |
 
-**베이스라인 대비 기여 분리** (200문항 전체, GWM vs RAPTOR):
+**베이스라인 대비 기여 분리** (200문항 전체, Ours vs RAPTOR):
 
 | 기여 요소 | 근거 | 효과 |
 |-----------|------|------|
-| Dynamic exploration | cross_document: GWM 81.3% vs RAPTOR 73.3% | **+8.0%p** |
-| Vision RAG (표) | table_only: GWM 86.0% vs RAPTOR 68.0% | **+18.0%p** |
-| Vision RAG (복합) | composite: GWM 85.0% vs RAPTOR 72.5% | **+12.5%p** |
+| Dynamic exploration | cross_document: Ours 81.3% vs RAPTOR 73.3% | **+8.0%p** |
+| Vision RAG (표) | table_only: Ours 86.0% vs RAPTOR 68.0% | **+18.0%p** |
+| Vision RAG (복합) | composite: Ours 85.0% vs RAPTOR 72.5% | **+12.5%p** |
 | 2티어 엣지 | judgment × cross_doc: 94.3% vs RAPTOR 88.6% | **+5.7%p** |
 | 경량 인덱싱 | 트리 빌드 7.6분 vs GraphRAG 40분 | **5.3× 빠름** |
 
@@ -687,7 +688,7 @@
 
 #### 시스템 한계
 
-- **text_only 열위**: GWM 76.2% vs RAPTOR 80.0% (−3.8%p) → RAPTOR의 재귀 요약이 긴 텍스트에서 효과적, 향후 요약 노드 추가 검토
+- **text_only 열위**: Ours 76.2% vs RAPTOR 80.0% (−3.8%p) → RAPTOR의 재귀 요약이 긴 텍스트에서 효과적, 향후 요약 노드 추가 검토
 - **문항당 비용**: 평균 $0.21/문항 (93초, 86K 토큰) vs RAPTOR ~$0.01/문항 (1.8초)
   - 동적 종료가 부분적으로 완화 (Q001: 1홉 $0.03 vs Q191: 4홉 $0.29)
   - 8× 병렬 실행 시 총 소요 ~39분으로 단축 가능
@@ -724,13 +725,13 @@
 
 ## 7. Conclusion
 
-- GWM [Feng et al., 2025]의 State-Action-Transition 프레임워크를 PageIndex 계층 트리 환경에 적용한 벡터리스 멀티홉 규제 문서 탐색 에이전트 제안
+- 벡터리스 문서 트리 환경에서 LLM 에이전트가 능동적으로 탐색하며 동적 Sub-KG를 실시간 구축하는 멀티홉 규제 문서 추론 아키텍처 제안
 - **핵심 설계 결정 3가지**:
-  1. RAG를 비의도 행동(임베딩)이 아닌 의도 행동(tool 인터페이스 + BM25)으로 구현
-  2. LightRAG [Guo et al., 2024]의 free-form 관계 추출을 채택하되 도메인 온톨로지 레이블 매핑 추가
+  1. 임베딩 기반 수동 검색 대신 tool 기반(browse/read/search + BM25) 능동적 탐색으로 전환
+  2. LightRAG [Guo et al., 2024]의 free-form 관계 추출을 채택하되 규제 도메인 온톨로지 레이블 매핑 추가 — 인간 가독 근거 경로 제공
   3. 멀티모달 처리를 최종 답변 단계에만 집중하여 비용 효율 달성
-- **200문항 멀티홉 벤치마크**: LLM-as-Judge 81.0%, RAGAS Faithfulness 0.93 — 4개 베이스라인 대비 최고
-- **안전-임계 도메인 적용 가능성**: 완전 추적 가능한 Sub-KG + 탐색 궤적으로 감사 요구 충족
+- **200문항 멀티홉 벤치마크**: LLM-as-Judge 81.0%, RAGAS Faithfulness 0.93 — 4개 베이스라인 대비 최고; Ablation에서 full system만 10/10 달성
+- **안전-임계 도메인 적용 가능성**: 완전 추적 가능한 Sub-KG + 탐색 궤적으로 10 CFR 50 App B의 독립적 검증 가능성 요건에 부합
 
 ---
 
@@ -780,7 +781,8 @@
 
 ### 논문 포지셔닝
 
-- **GWM [2]를 기반 프레임워크로 인용**: 본 연구는 적용(application) 논문, GWM 이론의 도메인 특화 구현
+- **독립 방법론으로 포지셔닝**: GWM은 Related Work에서 "그래프 구조 세계 모델의 선행 연구"로 인용하되, 본 연구의 핵심 기여(벡터리스 tool-based 탐색, LLM 기반 명시적 엣지, 도메인 온톨로지)는 GWM과 독립적인 방법론으로 서술
+- GWM의 S-A-T 개념은 차용하나 GWM의 실제 기술(임베딩, 메시지 패싱)은 사용하지 않음 → "GWM-based"가 아닌 "벡터리스 에이전틱 탐색"으로 자리매김
 
 ### 현재 논문의 약점 (리뷰어 예상 질문)
 
