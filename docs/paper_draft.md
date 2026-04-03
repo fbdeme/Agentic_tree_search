@@ -1,37 +1,35 @@
-# [초안] 벡터리스 에이전틱 탐색과 동적 Sub-KG를 통한 규제 문서 멀티홉 추론
+# [초안] LLM 기반 계획과 검증을 통한 규제 문서 멀티홉 탐색
 
-> **상태**: 초안 (개조식 흐름 정리용)
-> **작성일**: 2026-04-03
+> **상태**: 초안 (개조식 흐름 정리용)  
+> **작성일**: 2026-04-03  
+> **타겟**: LM4Plan @ ICML 2026 (마감 4/24)  
 > **검증된 인용만 사용** — 미확인 인용은 ⚠️ 표시
 
 ---
 
 ## 논문 제목 (후보)
 
-- **정식**: *Vectorless Agentic Exploration with Dynamic Sub-KG for Multi-hop Regulatory Document Reasoning*
-- **대안 1**: *Agentic Document Exploration with Dynamic Knowledge Graph Construction for Nuclear Regulatory Review*
-- **대안 2**: *Beyond Static RAG: Vectorless Multi-hop Exploration Agent for Safety-Critical Regulatory Documents*
+- **정식**: *LLM-Guided Planning for Multi-hop Regulatory Document Exploration and Verification*
+- **대안 1**: *Planning with LLMs for Information Gathering and Compliance Verification in Nuclear Regulatory Documents*
+- **대안 2**: *Document Exploration as Planning: Vectorless Multi-hop Reasoning with Dynamic Knowledge Graph Construction*
 
 ---
 
 ## Abstract (초안)
 
-- 핵발전소 안전 분석 보고서(FSAR)는 수만 페이지에 걸친 텍스트·표·도면의 복합 문서 → 규제 검토에 교차 참조(multi-hop reasoning) 필수
-- 기존 RAG 기반 시스템의 한계:
-  - 단일 hop 검색 위주, 증거 분산 시 추론 실패
-  - 사전 인덱싱(GraphRAG, LightRAG) 비용, 도메인 특화 구조 미반영
-  - 임베딩 기반 검색의 불투명성 — 안전-임계 도메인의 추적 가능성 요건과 충돌
-- **제안**: 벡터리스 계층 트리 환경에서 LLM 에이전트가 능동적으로 문서를 탐색하며, 쿼리 목적별 Dynamic Sub-Knowledge Graph를 실시간 구축하는 아키텍처
-  - Tool 기반 문서 탐색 (browse/read/search + BM25) — 임베딩/청킹 없이 원본 문서 구조 보존
-  - 2단계 엣지 추론 (자유형 기술 → 도메인 온톨로지 매핑) — 규제 판단 관계(SATISFIES, VIOLATES) 명시화
-  - Vision-augmented 최종 답변 — PDF 원본 도면/표를 GPT-4.1 vision으로 직접 해석
-- **결과**: 200문항 멀티홉 벤치마크에서 LLM-as-Judge 81.0% — RAPTOR(75.5%), HippoRAG(69.0%), LightRAG(67.5%), GraphRAG(49.5%) 대비 최고 성능; RAGAS Faithfulness 0.93, Context Recall 0.93; Ablation에서 full system만 10/10 달성
+- 핵발전소 안전 분석 보고서(FSAR) 심사는 수만 페이지에서 증거를 순차적으로 수집하고 규제 적합성을 판단하는 과정 → 본질적으로 **불확실한 정보 환경에서의 계획 문제(planning under uncertainty)**
+- 기존 RAG 기반 시스템은 이 과정을 수동적 1회성 검색으로 환원 → 단일 hop 한계, 구조 파괴, 판단 부재
+- **제안**: LLM이 문서 환경에서 **정보 수집을 계획(plan)**하고, 수집된 증거 간 규제 관계를 **검증(verify)**하는 아키텍처
+  - **Planning**: 벡터리스 문서 트리 환경에서 상태 평가 → 행동 선택 → 충분성 판단의 반복적 계획 루프 (browse/read/search + BM25, 동적 종료)
+  - **Verification**: 2단계 엣지 추론으로 증거 간 규제 관계(SATISFIES, VIOLATES) 명시화 — 계획 결과의 검증
+  - **Vision**: PDF 원본 도면/표를 GPT-4.1 vision으로 직접 해석
+- **결과**: 200문항 멀티홉 벤치마크에서 LLM-as-Judge 81.0% — RAPTOR(75.5%), HippoRAG(69.0%), LightRAG(67.5%), GraphRAG(49.5%) 대비 최고; RAGAS Faithfulness 0.93; Ablation에서 full system만 10/10 — 각 계획/검증 컴포넌트 제거 시 서로 다른 유형의 문항에서 실패
 
 ---
 
 ## 1. Introduction
 
-> **[작성 전략]** LLM 에이전트 범용 성공 → 과학 도메인 적용 시도 → 규제 문서에서 벽에 부딪힘 → 도메인 현실 → 투명성 요건 → 요구사항 → 해법. Osprey [Hellert et al., 2026] 참고.
+> **[작성 전략]** LLM 에이전트 범용 성공(planning 포함) → 과학 도메인 적용 시도 → 규제 문서에서 벽 → 도메인 현실(정보 수집 계획 문제) → 투명성 요건(검증 필요) → 요구사항 → 해법(planning + verification). Osprey [Hellert et al., 2026] 참고.
 
 ### [P1] LLM 에이전트의 범용적 성공과 과학 도메인으로의 확장
 
@@ -105,33 +103,38 @@
   > **참고: "인덱싱 무비용"이 아닌 "경량 인덱싱"으로 표현한 이유**: 본 연구의 벡터리스 접근은 임베딩/청킹/KG 사전 구축이 불필요하나, PageIndex 트리 생성 시 LLM 기반 노드 요약이 포함되므로 인덱싱 비용이 완전히 0은 아님. 다만 GraphRAG(엔티티-관계 추출 + 커뮤니티 탐지)나 HippoRAG(OpenIE + PPR)에 비해 트리 구조 파싱 + 노드 요약만으로 구성되어 비용이 크게 절감됨. 정확한 비교는 Section 5.5에서 제시.
   >
 
-### [P5] 우리의 접근: 검색에서 탐색으로, 나열에서 구조화로
+### [P5] 우리의 접근: 규제 문서 탐색을 계획 문제로 정의
 
-- **핵심 관찰**: P4의 요구사항을 만족시키려면 두 가지 패러다임 전환이 필요:
-  1. **검색(retrieval) → 탐색(exploration)**: 수동적 1회성 벡터 검색 대신, LLM이 문서 환경과 능동적으로 상호작용하며 증거를 수집
-  2. **증거 나열 → 관계 구조화**: 수집된 증거를 단순 나열하는 대신, 증거 간 논리 관계(SATISFIES, VIOLATES)를 명시적 그래프로 구축
+- **핵심 관찰**: P4의 요구사항을 다시 보면, 규제 문서 심사는 본질적으로 **계획 문제(planning problem)**:
+  - **목표(goal)**: 규제 질문에 대한 근거 있는 판단 도출
+  - **상태(state)**: 현재까지 수집된 증거와 그 관계
+  - **행동(action)**: 문서 트리에서 어떤 섹션을 탐색할지 선택
+  - **충분성 판단(goal test)**: 현재 증거로 답변 가능한가?
+  - **검증(verification)**: 수집된 증거가 규제 요건을 만족/위반하는가?
 
-- **인간 전문가의 탐색 방식 모방**:
-  - 핵 규제 전문가가 FSAR를 검토하는 과정: 목차 파악 → 관련 섹션 드릴다운 → 교차 참조 추적 → 증거 평가 → 충분하면 판단
-  - 이는 ReAct [Yao et al., 2023]의 Reason-Act 인터리빙과 일치
-  - 핵심 차이: 기존 RAG에서 LLM은 검색 결과의 **소비자** — 제안 접근에서 LLM은 탐색 과정의 **주체**
+- **인간 전문가의 심사 과정이 곧 계획**:
+  - 목차로 탐색 범위 파악 (환경 인식) → 관련 섹션 드릴다운 (행동 선택) → 교차 참조 추적 (계획 수정) → 증거 충분성 평가 (goal test) → 규제 적합성 판단 (검증)
+  - 이 과정은 ReAct [Yao et al., 2023]의 Reason-Act 인터리빙과 일치하며, 기존 RAG의 수동적 1회성 검색과 근본적으로 다름
+  - 기존 RAG에서 LLM은 검색 결과의 **소비자** — 본 연구에서 LLM은 계획의 **주체**
 
-- **제안 아키텍처의 세 요소**:
+- **제안 아키텍처: Planning + Verification 루프**
 
-  | 요소 | 역할 | 구현 |
-  |------|------|------|
-  | **State** (단기 기억) | 수집된 증거와 관계를 구조적으로 표현 | Dynamic Sub-KG (NetworkX DiGraph) |
-  | **Action** (환경 탐색) | 문서 트리를 능동적으로 탐색하여 새 증거 수집 | `browse` / `read` / `search` tool + BM25 |
-  | **Transition** (지식 통합) | 새 증거를 KG에 통합하고 관계를 추론 | 2단계 엣지 추론 (자유형 기술 → 온톨로지 매핑) |
+  | Planning 단계 | 역할 | 구현 |
+  |--------------|------|------|
+  | **State estimation** | 현재 증거와 관계를 구조적으로 평가 | Dynamic Sub-KG (NetworkX DiGraph) |
+  | **Action planning** | 다음에 어떤 문서 섹션을 탐색할지 결정 | LLM이 `browse`/`read`/`search` tool 선택 |
+  | **Plan execution** | 선택된 행동 실행, 새 증거 수집 | BM25 기반 검색 + 노드 읽기 |
+  | **Plan sufficiency** | 현재 증거로 답변 가능한지 판단 | LLM 기반 동적 종료 (avg 2.1–2.6 홉) |
+  | **Verification** | 증거 간 규제 관계 추론·검증 | 2단계 엣지 추론 → SATISFIES/VIOLATES |
 
-  - State가 **그래프**여야 하는 이유: 규제 판단은 증거 간 관계(SATISFIES, CONTRADICTS)가 핵심 — 나열된 텍스트에서는 이 관계가 암묵적
-  - 에이전트는 매 홉마다 현재 KG 상태를 기반으로 다음 탐색을 계획하는 반복적 루프로 작동
+  - State가 **그래프**여야 하는 이유: 규제 판단은 증거 간 관계(SATISFIES, CONTRADICTS)가 핵심 — 텍스트 버퍼에서는 이 관계가 암묵적이며 검증 불가
+  - Planning과 Verification이 매 홉마다 인터리빙: 새 증거 수집(planning) → 관계 추론(verification) → 충분성 판단 → 반복
 
-- **에이전틱 탐색의 구체적 작동**:
-  - `browse(doc, node)`: 목차처럼 계층 탐색 — 범위 파악 후 세부 진입
-  - `read(doc, node)`: 특정 섹션 전체 내용 정밀 추출
-  - `search(keyword)`: BM25 [Robertson & Zaragoza, 2009] 기반 키워드 검색
-  - 동적 종료: 매 홉 전 "현재 증거로 답변 가능한가?" 판단 → 평균 2.1–2.6 홉(최대 4)
+- **LM4Plan 토픽과의 대응**:
+  - "Planning directly with pre-trained LMs" → LLM이 매 홉마다 다음 탐색 행동을 계획
+  - "LMs for search guidance" → BM25 결과에서 LLM이 어떤 노드를 읽을지 선택, 검색 키워드 결정
+  - "LMs for validation and verification" → SATISFIES/VIOLATES 엣지로 규제 적합성 검증
+  - "LMs for generalization in planning" → 동적 종료가 문항 복잡도에 따라 계획 깊이를 자동 조절 (Q001: 1홉 vs Q191: 4홉)
 
 ### [P6] PageIndex: 벡터리스 문서 트리 인덱싱
 
@@ -157,13 +160,13 @@
 
 ### [P7] 본 연구의 기여
 
-- 위 요구사항(P4)을 충족하기 위해, 본 연구는 벡터리스 문서 트리 환경에서 LLM 에이전트가 능동적으로 탐색하며 동적 KG를 구축하는 아키텍처를 제안
+- 위 요구사항(P4)을 충족하기 위해, 규제 문서 탐색을 **LLM 기반 계획(planning) + 검증(verification) 문제**로 정의하고, 이를 해결하는 아키텍처를 제안
 - 핵심 기여:
 
-1. **벡터리스 에이전틱 탐색**: 계층 트리를 에이전트의 탐색 환경으로 정의, BM25 기반 tool-use(browse/read/search)로 임베딩/청킹/KG 사전 구축 없이 능동적 문서 탐색 구현
-2. **규제 도메인 특화 Dynamic Sub-KG**: 탐색 과정에서 실시간 구축되는 쿼리 목적별 KG — 2티어 엣지 온톨로지(구조 + 의미)로 규제 판단 관계 명시화
-3. **Vision-Augmented 멀티모달 처리**: PDF 페이지 직접 렌더링 → GPT-4.1 vision으로 표/도면 완전 해석 (table_only +18%p vs. RAPTOR, composite +12.5%p)
-4. **완전 추적 가능한 추론 경로**: 탐색 궤적 + Sub-KG 전체 JSON 저장 — 안전-임계 도메인 감사 요건 충족, 에지 기술이 인간 가독 근거 제공
+1. **문서 탐색의 계획 문제 정의**: 규제 문서 멀티홉 추론을 정보 수집 계획 문제로 모델링 — 상태 평가, 행동 선택, 충분성 판단, 동적 종료의 planning loop을 벡터리스 문서 트리 환경에서 구현
+2. **LLM 기반 규제 적합성 검증**: 수집된 증거 간 규제 관계를 2단계 엣지 추론(자유형 기술 → 도메인 온톨로지)으로 명시화 — SATISFIES/VIOLATES 관계를 통해 계획 결과를 검증
+3. **Vision-Augmented 멀티모달 처리**: PDF 페이지 직접 렌더링 → GPT-4.1 vision으로 표/도면 해석 (table_only +18%p vs. RAPTOR)
+4. **완전 추적 가능한 계획 경로**: 계획 궤적(trajectory) + Sub-KG 전체를 JSON으로 저장 — 매 계획 단계가 감사 가능, 안전-임계 도메인 요건 충족
 
 ---
 
@@ -180,17 +183,21 @@
   - 본 연구의 PageIndex 트리와 구조적으로 유사하나 사전 인덱싱 필요, 동적 탐색 없음
 - **HippoRAG** [Gutierrez et al., 2024, arXiv:2405.14831]: 해마 기반 PPR 검색 (NeurIPS 2024)
 
-### 2.2 Agent Frameworks & World Models
+### 2.2 LLM-based Planning & Agent Frameworks
 
-- **Tool-using LLM Agents**: ReAct [Yao et al., 2023] — 추론(reason)과 행동(act) 인터리빙
-  - 본 연구의 browse/read/search tool 인터페이스와 개념적으로 일치
-  - Toolformer [Schick et al., 2024]: LLM 자율적 도구 호출 — 본 연구의 에이전틱 탐색 기반
-- **World Models**: Ha & Schmidhuber [2018] — 에이전트가 환경의 내부 표현을 유지하며 행동 계획
-  - 본 연구의 Dynamic Sub-KG가 탐색 과정의 내부 상태(단기 기억) 역할
-- **Graph World Model (GWM)** [Feng et al., 2025, arXiv:2507.10539, ICML 2025]:
-  - 비구조(텍스트) + 구조(그래프) 데이터를 통합 모델링하는 범용 프레임워크
-  - 임베딩 기반 암묵적 엣지와 메시지 패싱 기반 액션을 사용
-  - 본 연구와의 차이: GWM은 임베딩 공간에서 암묵적 관계를 모델링하는 반면, 본 연구는 LLM 추론으로 명시적 관계(SATISFIES, VIOLATES)를 생성 — 임베딩을 사용하지 않는 벡터리스 접근
+- **LLM for Planning**: LLM을 계획 생성·평가에 활용하는 연구가 활발
+  - ReAct [Yao et al., 2023]: 추론(reason)과 행동(act) 인터리빙 — 본 연구의 planning loop과 개념적으로 일치
+  - Tree-of-Thought [Yao et al., 2024]⁺: 탐색 트리 기반 다단계 추론 — 본 연구의 문서 트리 탐색과 구조적 유사
+  - Toolformer [Schick et al., 2024]: LLM 자율적 도구 호출 — 본 연구의 browse/read/search 행동 선택 기반
+  - 본 연구의 차별점: 기존 LLM planning 연구가 PDDL/로봇/웹 환경에 집중하는 반면, **정보 환경(규제 문서)**에서의 계획 문제를 다룸
+
+- **World Models & State Representation**:
+  - Ha & Schmidhuber [2018]: 에이전트가 환경의 내부 표현을 유지하며 행동 계획
+  - GWM [Feng et al., 2025, ICML 2025]: 그래프 구조 상태 표현 + 메시지 패싱 기반 액션
+  - 본 연구는 Dynamic Sub-KG를 계획 과정의 내부 상태로 사용하되, 임베딩 대신 LLM 추론 기반 명시적 관계(SATISFIES, VIOLATES)를 생성하는 벡터리스 접근
+
+- **Verification with LLMs**: LLM을 계획/정책 검증에 사용
+  - 본 연구의 2단계 엣지 추론이 이 범주에 해당 — 수집된 증거가 규제 요건을 만족하는지 LLM이 검증
 
 ### 2.3 Knowledge Graph for RAG
 
@@ -225,7 +232,7 @@
 
 ## 3. Method
 
-> **전체 파이프라인**: User Query → Exploration Agent (State-Action-Transition loop, max 4 hops) → Vision-Augmented Answer
+> **전체 파이프라인**: User Query → Planning Loop (State estimation → Action planning → Execution → Verification, max 4 hops) → Vision-Augmented Answer
 
 ### 3.1 Environment: 벡터리스 멀티모달 문서 트리
 
@@ -262,9 +269,9 @@
   - 복합 멀티홉 판단 질문: 의미 엣지(SATISFIES, SUPPORTS) 출현 → 규제 준수 합성
   - 정답(O) vs 오답(X): SUPPORTS +6.8%p, SATISFIES +3.2%p in correct answers
 
-### 3.3 Action (탐색): Tool 기반 문서 네비게이션
+### 3.3 Action Planning: LLM 기반 도구 선택
 
-- **기존 RAG와의 차이**: 임베딩 유사도 기반 수동 검색이 아닌, LLM이 tool을 선택·호출하는 능동적 탐색
+- **기존 RAG와의 차이**: 임베딩 유사도 기반 수동 검색이 아닌, LLM이 현재 상태를 평가하고 다음 행동을 **계획**
 
   | Tool                        | 유추     | 기능                                   |
   | --------------------------- | -------- | -------------------------------------- |
@@ -277,24 +284,22 @@
 - **PRF (Pseudo-Relevance Feedback, RM3)**: 상위 3개 검색 결과에서 쿼리 자동 확장
 
   - 어휘 불일치(vocabulary mismatch) 해결, LLM 비용 0
-- **에이전트 메모리**: 검색 히스토리로 키워드 중복 방지
-- **동적 종료**: Hop 2부터 매 홉 전 LLM이 현재 KG로 충분한지 판단 → 조기 종료
+- **에이전트 메모리**: 검색 히스토리로 키워드 중복 방지 — 계획의 반복 회피
+- **Plan sufficiency (동적 종료)**: Hop 2부터 매 홉 전 LLM이 "현재 KG로 답변 가능한가?"를 판단 → 충분하면 조기 종료
+  - 이는 planning에서의 **goal test**에 해당 — 문항 복잡도에 따라 계획 깊이를 자동 조절
+  - 단순 factual (Q001): 1홉 17초 $0.03 / 복잡한 judgment (Q191): 4홉 140초 $0.29
+  - 평균 실제 홉 수: 2.1–2.6 (최대 4) — 불필요한 탐색을 자동으로 가지치기
 
-  - 평균 실제 홉 수: 2.1–2.6 (최대 4)
+### 3.4 Verification: 2단계 엣지 추론
 
-### 3.4 Transition (메모리 갱신): 2단계 엣지 추론
-
-- **상태 전이 함수**: $f_{tr}(s_t, a_t) \rightarrow s_{t+1}$ — 새 노드를 KG에 통합
-- **Stage 1 — 자유형 기술 (Description)**:
-  - LLM이 두 노드 간 관계를 자연어 1문장으로 기술 (분류 압력 없음)
+- **역할**: 계획 실행으로 수집된 증거가 규제 요건을 만족하는지 **검증** — 상태 전이 $f_{tr}(s_t, a_t) \rightarrow s_{t+1}$와 동시에 수행
+- **Stage 1 — 자유형 기술 (Description)**: LLM이 두 노드 간 관계를 자연어 1문장으로 기술 (분류 압력 없음)
   - LightRAG [Guo et al., 2024]의 free-form 관계 추출 방식 채택
   - 예: "ECCS의 3 RVV + 2 RRV 설계는 10 CFR 50.46의 수용 기준을 충족하도록 구성됨"
-- **Stage 2 — 레이블 (Ontology Mapping)**:
-  - Stage 1 기술을 2티어 온톨로지 레이블로 매핑
+- **Stage 2 — 레이블 (Ontology Mapping)**: Stage 1 기술을 규제 도메인 온톨로지(SATISFIES, VIOLATES 등)로 매핑
   - 매핑 불가 시 SEMANTIC으로 보존 → 관계 손실 없음
-- **임베딩 기반 관계 추론의 벡터리스 대안**:
-  - 기존 접근(GraphRAG, GWM 등): 임베딩 공간의 유사도로 암묵적 관계 모델링
-  - 본 연구: LLM 추론으로 생성된 명시적 자연어 기술 → 인간이 검사 가능한 관계 표현
+- **Planning과의 관계**: Verification은 planning과 분리된 후처리가 아니라, **매 홉마다 planning loop 내에서 인터리빙** — 새 증거 수집(planning) 직후 관계 추론(verification) 수행, 그 결과가 다음 홉의 plan sufficiency 판단에 반영
+- **기존 접근과의 차이**: 임베딩 기반 암묵적 관계(GraphRAG, GWM) 대신 LLM 추론 기반 명시적 자연어 기술 → 검증 결과가 인간이 검사 가능
 
 ### 3.5 Vision-Augmented 최종 답변 생성
 
@@ -735,13 +740,13 @@
 
 ## 7. Conclusion
 
-- 벡터리스 문서 트리 환경에서 LLM 에이전트가 능동적으로 탐색하며 동적 Sub-KG를 실시간 구축하는 멀티홉 규제 문서 추론 아키텍처 제안
-- **핵심 설계 결정 3가지**:
-  1. 임베딩 기반 수동 검색 대신 tool 기반(browse/read/search + BM25) 능동적 탐색으로 전환
-  2. LightRAG [Guo et al., 2024]의 free-form 관계 추출을 채택하되 규제 도메인 온톨로지 레이블 매핑 추가 — 인간 가독 근거 경로 제공
-  3. 멀티모달 처리를 최종 답변 단계에만 집중하여 비용 효율 달성
-- **200문항 멀티홉 벤치마크**: LLM-as-Judge 81.0%, RAGAS Faithfulness 0.93 — 4개 베이스라인 대비 최고; Ablation에서 full system만 10/10 달성
-- **안전-임계 도메인 적용 가능성**: 완전 추적 가능한 Sub-KG + 탐색 궤적으로 10 CFR 50 App B의 독립적 검증 가능성 요건에 부합
+- 규제 문서 멀티홉 추론을 **LLM 기반 계획(planning) + 검증(verification) 문제**로 정의하고, 벡터리스 문서 트리 환경에서 이를 해결하는 아키텍처를 제안
+- **핵심 기여**:
+  1. **Planning**: LLM이 문서 환경에서 증거 수집을 계획 — 상태 평가, 행동 선택(browse/read/search), plan sufficiency에 의한 동적 종료
+  2. **Verification**: 2단계 엣지 추론으로 수집된 증거 간 규제 관계(SATISFIES, VIOLATES)를 명시적으로 검증 — planning loop 내에서 인터리빙
+  3. **환경 설계**: 벡터리스 계층 트리로 문서 구조를 보존한 탐색 환경 구축 (경량 인덱싱 $4.06, 기존 대비 5–7× 빠름)
+- **결과**: 200문항 멀티홉 벤치마크에서 81.0% (4개 베이스라인 대비 최고), RAGAS Faithfulness 0.93; Ablation에서 full system만 10/10 — planning(동적 종료)과 verification(엣지 추론) 각각 제거 시 서로 다른 문항에서 실패
+- **LM4Plan 관점에서의 시사점**: LLM 기반 계획은 PDDL/로봇 환경뿐 아니라 **정보 환경(규제 문서)**에서도 유효하며, 계획 결과의 검증(verification)이 안전-임계 도메인에서 계획 품질을 보장하는 핵심 요소
 
 ---
 
@@ -798,8 +803,9 @@
 
 ### 논문 포지셔닝
 
-- **독립 방법론으로 포지셔닝**: GWM은 Related Work에서 "그래프 구조 세계 모델의 선행 연구"로 인용하되, 본 연구의 핵심 기여(벡터리스 tool-based 탐색, LLM 기반 명시적 엣지, 도메인 온톨로지)는 GWM과 독립적인 방법론으로 서술
-- GWM의 S-A-T 개념은 차용하나 GWM의 실제 기술(임베딩, 메시지 패싱)은 사용하지 않음 → "GWM-based"가 아닌 "벡터리스 에이전틱 탐색"으로 자리매김
+- **Planning + Verification 프레이밍**: 문서 탐색을 계획 문제로 정의, 엣지 추론을 검증으로 정의 → LM4Plan 토픽과 자연스럽게 정렬
+- GWM은 Related Work에서 비교 대상으로 인용 (임베딩 기반 vs 벡터리스)
+- 핵심 메시지: "LLM 기반 계획은 물리 환경뿐 아니라 정보 환경(문서)에서도 유효하며, 안전-임계 도메인에서는 계획 결과의 검증(verification)이 필수"
 
 ### 현재 논문의 약점 (리뷰어 예상 질문)
 
