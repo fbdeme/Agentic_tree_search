@@ -607,6 +607,68 @@ Three traditional IR methods were evaluated:
 
 ---
 
+## Baseline RAGAs Evaluation & Paper Draft — 2026-04-03
+
+### Baseline RAGAs 평가 실행
+
+RAPTOR, GraphRAG의 pred.json에 `retrieved_contexts`가 포함되어 있어 RAGAs 평가 실행.
+`experiments/evaluate_baseline.py` 신규 작성.
+
+| 메트릭 | **GWM** | RAPTOR | GraphRAG |
+|--------|:-------:|:------:|:--------:|
+| Faithfulness | **0.93** | 0.74 | 0.28 |
+| Answer Relevancy | **0.84** | 0.83 | 0.59 |
+| Context Recall | **0.93** | 0.77 | 0.18 |
+| Factual Correctness | **0.42** | 0.40 | 0.32 |
+
+- HippoRAG, LightRAG는 `retrieved_contexts` 미저장으로 RAGAs 실행 불가 (재수집 필요)
+- GraphRAG CR=0.18, Faith=0.28 — 커뮤니티 요약에서 구체적 사실 손실 확인
+
+### 논문 초안 작성 (`docs/paper_draft.md`)
+
+- 개조식 형태 논문 흐름 초안 작성
+- 인용 25개 검증 완료 (GWM arXiv:2507.10539 ICML 2025 확인, MAM-RAG 미출판)
+- Introduction: Osprey [Hellert et al., 2026] 스타일 Domain-first 서사 구조 채택
+- PageIndex: 학술 논문 없음 확인 → 오픈소스 프레임워크로 정직하게 표기, Lumer et al. [2025] 인용 추가
+
+### 비용 데이터 현황 및 한계
+
+논문 Section 5.5 (인덱싱 효율성) 작성 중 비용/시간 데이터의 불완전성 확인:
+
+**보유 데이터:**
+- GWM: `agent_sec` (avg 115.3s/문항), `kg_nodes`, `kg_edges`, `hops_used` — RAGAs eval에서 저장됨
+- RAPTOR: `retrieval_time_sec` (avg 0.19s), `generation_time_sec` (avg 1.63s)
+- GraphRAG: `retrieval_time_sec` (avg 3.78s), `total_tokens` (avg 4,953/문항, 총 990K)
+- 인덱싱: GraphRAG 2,400s, HippoRAG 1,745s, LightRAG 3,123s (`indexing_report.json`)
+
+**미보유 데이터:**
+- GWM 토큰 사용량: `gwm_agent.py`에 토큰 카운팅 미구현 → 200문항 전체 재실행 시 ~$25 + 6시간 소요로 비현실적
+- GWM 인덱싱 시간(PageIndex 트리 빌드): 측정 이력 없음
+- RAPTOR 인덱싱 시간: `indexing_report.json` 미생성
+- HippoRAG/LightRAG 문항당 시간: pred.json에 미저장 (다른 분이 실험)
+
+**실측 결과 (2026-04-03):**
+
+1. **GWM 토큰 사용량 (5문항 샘플 실측)**:
+   - 측정 스크립트: `experiments/measure_token_usage.py` (OpenAI API monkey-patch로 usage 수집)
+   - 샘플: Q001(factual/single), Q071(comparative/single), Q131(composite/cross), Q161(judgment/multi), Q191(image/cross)
+   - 결과: 평균 86,072 tokens/문항, 74.0 API calls/문항, $0.21/문항
+   - 200문항 외삽: ~$41.9 (기존 추정 $25보다 높음 — 추정치는 과소평가였음)
+   - Q001(1홉, $0.03) vs Q191(4홉, $0.29) — 동적 종료가 비용 최적화에 기여
+
+2. **PageIndex 트리 빌드 시간 (실측)**:
+   - Ch.01 (352p, 866 nodes): **332.1초 (5.5분)**
+   - Ch.05 (160p, 26 nodes): **122.6초 (2.0분)**
+   - 합계: **454.7초 (7.6분)** — 기존 대비 5.7×–6.9× 빠름
+   - 비용: LLM 노드 요약 포함하나 정확한 토큰 수는 미측정
+
+3. 결과 저장: `experiments/results/token_usage_sample.json`
+
+**"인덱싱 무비용" 주장 수정:**
+PageIndex 트리 생성에 `model="gpt-4.1"` + `if_add_node_summary="yes"` 사용 확인 → LLM 비용 발생. "인덱싱 무비용"은 부정확하며 "경량 인덱싱"으로 수정. 임베딩/KG 사전 구축은 불필요하나, 노드 요약 생성 비용은 존재함을 논문에 명시.
+
+---
+
 ## Known Issues (Unresolved)
 
 1. **FC structural ceiling ~0.5**: Agent uses different evidence nodes → different wording.

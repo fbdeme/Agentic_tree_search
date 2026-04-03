@@ -1,0 +1,91 @@
+{
+  "results": [
+    {
+      "id": "Q001",
+      "question_type": "text_only",
+      "reasoning_type": "factual",
+      "complexity": "single_evidence",
+      "time_sec": 17.0,
+      "hops_used": 1,
+      "kg_nodes": 4,
+      "kg_edges": 0,
+      "api_calls": 13,
+      "prompt_tokens": 8304,
+      "completion_tokens": 1091,
+      "total_tokens": 9395,
+      "estimated_cost_usd": 0.0253
+    },
+    {
+      "id": "Q071",
+      "question_type": "text_only",
+      "reasoning_type": "comparative",
+      "complexity": "single_evidence",
+      "time_sec": 126.1,
+      "hops_used": 4,
+      "kg_nodes": 19,
+      "kg_edges": 63,
+      "api_calls": 103,
+      "prompt_tokens": 115683,
+      "completion_tokens": 8581,
+      "total_tokens": 124264,
+      "estimated_cost_usd": 0.3
+    },
+    {
+      "id": "Q131",
+      "question_type": "composite",
+      "reasoning_type": "comparative",
+      "complexity": "cross_document",
+      "time_sec": 70.9,
+      "hops_used": 4,
+      "kg_nodes": 11,
+      "kg_edges": 34,
+      "api_calls": 55,
+      "prompt_tokens": 70180,
+      "completion_tokens": 5033,
+      "total_tokens": 75213,
+      "estimated_cost_usd": 0.1806
+    },
+    {
+      "id": "Q161",
+      "question_type": "composite",
+      "reasoning_type": "judgment",
+      "complexity": "multi_evidence",
+      "time_sec": 111.1,
+      "hops_used": 4,
+      "kg_nodes": 17,
+      "kg_edges": 65,
+      "api_calls": 90,
+      "prompt_tokens": 97117,
+      "completion_tokens": 7346,
+      "total_tokens": 104463,
+      "estimated_cost_usd": 0.253
+    },
+    {
+      "id": "Q191",
+      "question_type": "image_only",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "time_sec": 139.7,
+      "hops_used": 4,
+      "kg_nodes": 19,
+      "kg_edges": 81,
+      "api_calls": 109,
+      "prompt_tokens": 108022,
+      "completion_tokens": 9001,
+      "total_tokens": 117023,
+      "estimated_cost_usd": 0.2881
+    }
+  ],
+  "summary": {
+    "n_questions": 5,
+    "avg_tokens_per_question": 86072,
+    "avg_api_calls_per_question": 74.0,
+    "avg_cost_per_question_usd": 0.2094,
+    "avg_time_per_question_sec": 93.0,
+    "estimated_200q_total_cost_usd": 41.88,
+    "gpt41_pricing": {
+      "input_per_1M": 2,
+      "output_per_1M": 8
+    }
+  }
+}
