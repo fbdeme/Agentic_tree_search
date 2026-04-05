@@ -726,9 +726,82 @@ pred.json 변환 후 `benchmark/llm_judge.py`로 3-평가자 Judge 별도 실행
 
 ---
 
+## 200Q no_edges Ablation & 논문 리포지셔닝 — 2026-04-04~06
+
+### 200Q no_edges Ablation 실행
+
+10Q ablation에서 엣지 추론이 가장 비용이 크고(66%) 흥미로운 컴포넌트였으므로, 200Q 규모로 확대 실행하여 통계적 신뢰도 확보.
+
+**스크립트**: `experiments/ablation_no_edges_200q.py` (8× 병렬, 25Q씩)
+**평가**: 3-evaluator Judge (`benchmark/llm_judge.py`) + RAGAS (8× 병렬)
+
+### 200Q 결과: 엣지 추론이 정확도에 기여하지 않음
+
+| 메트릭 | full | no_edges | 차이 |
+|--------|:----:|:--------:|:----:|
+| 3-Judge 정확도 | 81.0% (162/200) | **81.5% (163/200)** | **+0.5%p** |
+| Faithfulness | **0.930** | 0.897 | −0.033 |
+| Context Recall | **0.930** | 0.919 | −0.011 |
+| Factual Correctness | 0.420 | 0.417 | −0.003 |
+| 비용/문항 | $0.215 | **$0.076** | −65% |
+| 시간/문항 | 115.3s | **47.5s** | −59% |
+| 토큰/문항 | 86,072 | **30,911** | −64% |
+
+**Head-to-head 분석:**
+- 공통 오답: 25문항
+- full만 오답 (엣지가 해침?): 13문항
+- no_edges만 오답 (엣지가 도움?): 12문항
+- → 거의 대칭 — 엣지의 정확도 기여는 실행 변동(run variance) 수준
+
+**SATISFIES 상관 분석:**
+- no_edges만 오답인 12문항 중 8문항(67%)이 full system에서 SATISFIES 엣지 보유
+- 하지만 상관관계 ≠ 인과관계. full 정답 문항 대부분도 SATISFIES 보유.
+
+**Q058(VIOLATES case) 미재현:**
+- 10Q ablation: full O, no_edges X → 200Q: full O, no_edges O (둘 다 정답)
+- 10Q에서의 Q058 오답이 엣지 부재가 아닌 실행 변동이었을 가능성
+
+### 이 결과의 의미
+
+**밝혀진 사실:**
+1. **Planning(도구 선택, 동적 종료, browse-first)이 정확도의 핵심 동인** — 엣지 없이도 81.5%로 4개 베이스라인 상회
+2. **엣지 추론(Verification)은 정확도에 기여하지 않음** — 비용만 2.8× 증가
+3. **엣지의 가치는 Faithfulness 소폭 개선(+0.033)과 추적 가능성(인간 가독 근거 경로)** — 정량적으로는 미미
+
+**10Q ablation 결과의 재해석:**
+- 10Q에서 full=10/10이었던 것은 샘플 크기 한계로 인한 우연
+- 200Q 규모에서 엣지 효과는 노이즈 수준
+- 다만 10Q ablation의 Vision(no_vision 8/10)과 Browse-first(no_browse 9/10) 결과는 여전히 유효 (다른 원인의 실패)
+
+**엣지 관련 주장의 범위 제한:**
+- 우리 실험이 보여주는 것: "검색 **후** 증거 간 관계를 추론하는 post-retrieval edge inference는 답변 정확도에 기여하지 않는다"
+- 우리 실험으로 말할 수 없는 것: "검색 **자체를 위한** 엣지(GraphRAG, LightRAG의 그래프 탐색)가 의미 없다" — 아키텍처가 다르므로 엣지의 역할이 다름
+
+### 논문 리포지셔닝 결정
+
+**Before**: Planning + Verification 동급 기여
+**After**: Planning이 핵심 기여, Verification(엣지)은 정직한 negative finding
+
+**수정 방향:**
+1. 제목에서 "Verification" 제거 또는 축소
+2. Abstract: Planning이 핵심, 엣지는 분석 결과로 보고
+3. P5: Planning 루프에서 Verification을 핵심→분석 대상으로 하향
+4. P7 기여: 엣지를 핵심 기여에서 "분석 결과"로 이동
+5. Section 6.1: 200Q no_edges ablation을 메인으로 격상
+6. Conclusion: "Planning이 정확도를 만들고, Verification은 추적 가능성을 제공하나 정확도에는 기여하지 않음"
+
+**이유:**
+- 데이터가 뒷받침하지 않는 주장(엣지가 정확도에 기여)을 제거
+- 데이터가 강하게 뒷받침하는 주장(Planning만으로 베이스라인 상회)에 집중
+- 정직한 negative result 보고로 리뷰어 신뢰 확보
+- LM4Plan 적합도 유지 (Planning이 핵심이면 더 자연스러운 핏)
+
+---
+
 ## Known Issues (Unresolved)
 
 1. **FC structural ceiling ~0.5**: Agent uses different evidence nodes → different wording.
 2. **Keyword Hit dropped**: 0.65→0.53 due to shorter answers.
 3. **VIOLATES rare (3/7391)**: FSAR is a compliance document.
 4. **RAGAs-Judge 33.8% disagreement**: Different aspects measured (grounding vs correctness).
+5. **Post-retrieval edge inference does not improve accuracy**: 200Q ablation confirmed. Value limited to faithfulness (+0.033) and traceability.

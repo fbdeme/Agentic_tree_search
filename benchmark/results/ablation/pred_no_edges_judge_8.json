@@ -1,0 +1,230 @@
+{
+  "method": "ablation_no_edges",
+  "results": [
+    {
+      "id": "Q176",
+      "question": "Is the integral SG design described in both Ch.01 and Ch.05 adequate for addressing steam generator tube rupture (SGTR) concerns?",
+      "generated_answer": "Yes, the integral steam generator (SG) design described in both Ch.01 and Ch.05 is adequate for addressing steam generator tube rupture (SGTR) concerns, as it features robust helical tube construction, validated support structures, and passive safety systems that ensure containment and radiological safety during SGTR events (nuscale_ch05_0020; nuscale_ch05_0021; nuscale_ch01_0021; nuscale_ch01_0662; Table 1.2-2; Figures 5.4-1, 5.4-2, 1.2-7).",
+      "expected_answer": "Yes. Ch.01 describes the integral SG within the RPV. Ch.05 confirms that because the SG is inside the RPV/containment, an SGTR does not release radioactive coolant outside containment (unlike conventional PWRs where SGTR bypasses containment). The Alloy 690 tube material further reduces SGTR likelihood.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "text_only"
+    },
+    {
+      "id": "Q177",
+      "question": "Does the NuScale design adequately address station blackout (SBO) given the Ch.01 passive design philosophy and Ch.05 safety system details?",
+      "generated_answer": "Yes, the NuScale design adequately addresses station blackout (SBO) by maintaining all safety-related functions for 72 hours without AC power using fully passive safety systems, including the Emergency Core Cooling System and Decay Heat Removal System, as detailed in Ch.01 and Ch.05 and illustrated in Figures 1.2-9 and 5.4-10 (nuscale_ch01_0275; nuscale_ch05_0022; nuscale_ch01_0024; Figures 1.2-9, 5.4-10).",
+      "expected_answer": "Yes. NuScale's passive safety systems are inherently SBO-resistant. Ch.01 states no AC power is needed for safety functions. Ch.05 confirms ECCS valves fail open, DHRS operates by natural circulation, and containment pressure suppression is passive. An SBO does not prevent any safety function from performing, eliminating SBO as a severe accident precursor.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "text_only"
+    },
+    {
+      "id": "Q178",
+      "question": "Is the NuScale Rankine cycle (Ch.01) appropriately matched to the SG secondary conditions described in Ch.05?",
+      "generated_answer": "Yes, the NuScale Rankine cycle described in Ch.01 is appropriately matched to the steam generator (SG) secondary conditions in Ch.05, with the Rankine cycle operating at SG outlet pressure of 500.1 psia and temperature of 584.4°F, consistent with the SG full-load thermal-hydraulic conditions specified in Table 5.4-1 and supporting system descriptions in Ch.05.  \n(Source: Table 5.4-1; nuscale_ch05_0020; nuscale_ch01_0439)",
+      "expected_answer": "Yes. Ch.01 describes a conventional Rankine cycle for power conversion. Ch.05 specifies the SG produces superheated steam at ~575 degrees F from ~300 degrees F feedwater, typical conditions for a Rankine cycle with moderate superheat. The conditions are well-matched for efficient turbine operation at the 50 MWe per module scale.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "text_only"
+    },
+    {
+      "id": "Q179",
+      "question": "Does the NuScale design adequately address the loss of ultimate heat sink scenario given the pool design (Ch.01) and DHRS design (Ch.05)?",
+      "generated_answer": "Yes, the NuScale design adequately addresses the loss of ultimate heat sink scenario by using a large, below-grade reactor pool with sufficient water inventory for passive heat removal and a Decay Heat Removal System (DHRS) that maintains the reactor coolant system temperature below 420°F within 36 hours without external power, as demonstrated in Figures 5.4-11 and 5.4-13 and described in nuscale_ch01_0043 and nuscale_ch05_0022.",
+      "expected_answer": "Yes. Ch.01 describes the large below-grade reactor pool as the UHS. Ch.05 shows DHRS transfers heat to this pool with the 140 degrees F limit. The pool's large thermal capacity provides extended coping time. Even with loss of pool makeup, the initial pool inventory provides days of heat absorption capability for all modules.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "text_only"
+    },
+    {
+      "id": "Q180",
+      "question": "Based on Table 1.3-1 and Table 5.1-2, is the NuScale thermal efficiency consistent between the overview and detailed data?",
+      "generated_answer": "Yes, the NuScale thermal efficiency is consistent between the overview and detailed data, with both Table 1.3-1 and Table 5.1-2 indicating a core thermal output of 160 MWt and a nominal gross electrical output of 50 MWe, resulting in a thermal efficiency of approximately 31% (50/160) in both tables (Table 1.3-1, Table 5.1-2).",
+      "expected_answer": "Yes. Table 1.3-1 shows 160 MWt producing 50 MWe (31.25% gross efficiency). Table 5.1-2 temperatures (THot=590.1 degrees F, TCold=496.6 degrees F) and secondary steam at ~575 degrees F are consistent with this efficiency for a Rankine cycle. The values are thermodynamically consistent.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "table_only"
+    },
+    {
+      "id": "Q181",
+      "question": "Based on Table 1.2-1 and Table 5.2-2, is the operating pressure adequately protected by the reactor safety valves?",
+      "generated_answer": "Yes, the operating pressure is adequately protected by the reactor safety valves, as the nominal operating pressure (2100 psia per Table 1.2-1) matches the reactor safety valve setpoints (2075 psia ±1% and 2100 psia ±1% per Table 5.2-2), ensuring overpressure protection.  \n(Source: Table 1.2-1, Table 5.2-2)",
+      "expected_answer": "Yes. Table 1.2-1 operating pressure is 1850 psia. Table 5.2-2 RSV setpoints are 2075/2100 psia with 63,360 lbm/hr capacity. The 225 psia margin between operating and first RSV setpoint accommodates normal transients, and the dual RSVs provide redundant overpressure protection before reaching design pressure.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "table_only"
+    },
+    {
+      "id": "Q182",
+      "question": "Is the NuScale RPV design pressure (Table 5.3-1) adequate for the operating conditions listed in Table 1.2-1?",
+      "generated_answer": "Yes, the NuScale RPV design pressure is 2100 psia (Table 5.3-1), which is greater than the maximum normal operating pressure of 1850 psia listed in Table 1.2-1, confirming adequacy for all listed operating conditions (Table 5.3-1; Table 1.2-1).",
+      "expected_answer": "Yes. Table 1.2-1 gives 1850 psia operating pressure. Table 5.3-1 gives 2100 psia design pressure. The 250 psia (13.5%) margin exceeds typical ASME Code requirements and provides adequate room for operational transients, pressure excursions, and instrument uncertainty.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "table_only"
+    },
+    {
+      "id": "Q183",
+      "question": "Based on Table 1.3-1 (37 assemblies) and Table 5.3-2 (beltline chemistry), is the reduced core size beneficial for RPV integrity?",
+      "generated_answer": "Yes, the reduced core size (37 assemblies per Table 1.3-1) is beneficial for RPV integrity because it results in lower neutron fluence and embrittlement rates at the beltline, as supported by the favorable beltline chemistry (low copper and nickel in Table 5.3-2), which together enhance long-term vessel integrity.  \n(Source: Table 1.3-1, Table 5.3-2)",
+      "expected_answer": "Yes. The smaller 37-assembly core (Table 1.3-1 vs 193 for PWR) produces lower neutron fluence on the RPV beltline. Combined with strict chemistry limits (Table 5.3-2: Cu<=0.06%, Ni<=0.85%), this results in significantly less irradiation embrittlement than conventional PWRs, supporting the 60-year design life.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "table_only"
+    },
+    {
+      "id": "Q184",
+      "question": "Based on Table 1.3-2 (eliminated systems) and Table 5.4-1 (SG/DHRS parameters), does the DHRS adequately replace the eliminated AFW system?",
+      "generated_answer": "Yes, the DHRS adequately replaces the eliminated AFW system by passively removing decay heat and ensuring the reactor coolant temperature drops below 420°F within 36 hours, maintaining safety limits as shown in Table 5.4-1 and Figure 5.4-13, with regulatory sections confirming the DHRS fulfills the AFW safety function (Table 1.3-2, nuscale_ch01_0448, nuscale_ch01_0454).",
+      "expected_answer": "Yes. Table 1.3-2 lists AFW as eliminated. Table 5.4-1 shows the DHRS parameters via the SG: 2100 psia design pressure, feedwater inlet ~300 degrees F. The DHRS uses the same SG for heat transfer but routes secondary flow to passive condensers instead of requiring pump-fed auxiliary feedwater, providing a more reliable alternative.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "table_only"
+    },
+    {
+      "id": "Q185",
+      "question": "Using Table 1.3-1 (design life 60 vs 40 years) and Table 5.3-3 (ART at 57 EFPY), is the longer NuScale design life justified?",
+      "generated_answer": "Yes, the longer 60-year NuScale design life is justified because the adjusted reference temperatures (ART) at 57 EFPY remain within regulatory limits (e.g., 92.2°F for the shell, 120.4°F for the weld, both below the 270–300°F screening criteria), supporting vessel integrity for the extended period (Table 1.3-1, Table 5.3-3, Table 5.3-8).",
+      "expected_answer": "Yes. Table 1.3-1 shows NuScale's 60-year life vs 40 for typical PWR. Table 5.3-3 ART at 57 EFPY (max 120.4 degrees F) is well below PTS criteria (270/300 degrees F), providing ~150 degrees F margin. This large margin confirms the vessel can safely operate for 60 years without approaching embrittlement limits.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "table_only"
+    },
+    {
+      "id": "Q186",
+      "question": "Based on Table 1.2-2 (vacuum CNV) and Table 5.2-4 (materials), does the material selection adequately support the containment design?",
+      "generated_answer": "Yes, the material selection in Table 5.2-4 (e.g., SA-965 Grade F304LN for CRDM components) meets ASME Boiler and Pressure Vessel Code standards and supports the vacuum containment design features in Table 1.2-2, ensuring integrity and corrosion resistance under subatmospheric conditions (sources: Table 1.2-2, Table 5.2-4, nuscale_ch05_0015, nuscale_ch01_0022).",
+      "expected_answer": "Yes. Table 1.2-2 identifies vacuum CNV as a safety feature. Table 5.2-4 materials (SA-508 Grade 3, SA-533 Type B for pressure boundary, stainless steel cladding) are proven for nuclear containment applications. The materials resist corrosion from the pool water on the outside and maintain integrity under vacuum and accident pressure conditions.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "table_only"
+    },
+    {
+      "id": "Q187",
+      "question": "Based on Table 1.3-1 operating parameters and Table 5.1-1 RCS volumes, is the NuScale coolant inventory adequate for the module's operating conditions?",
+      "generated_answer": "Yes, the NuScale coolant inventory is adequate for the module's operating conditions, as the RCS volumes and pressurizer capacity (568 ft³) in Table 1.3-1 and Table 5.1-1 support the specified thermal output (160 MWt) and pressure (1,850 psia), with Figures 5.4-11 to 5.4-13 demonstrating effective temperature control even under low inventory scenarios.  \n(Source: Table 1.3-1, Table 5.1-1, Figures 5.4-11, 5.4-12, 5.4-13)",
+      "expected_answer": "Yes. Table 1.3-1 gives 160 MWt at 1850 psia. Table 5.1-1 shows total RCS volume approximately 2500 ft³. The ratio of coolant inventory to thermal power is higher than many conventional PWRs (1800 ft³ PZR alone in PWR vs entire NuScale PZR of 578 ft³), providing adequate thermal inertia for the lower power density.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "table_only"
+    },
+    {
+      "id": "Q188",
+      "question": "Based on Table 1.2-1 (12 modules, 160 MWt each) and Table 5.4-1 (SG parameters), is the SG sizing adequate for full-power heat transfer?",
+      "generated_answer": "Yes, the steam generator (SG) sizing is adequate for full-power heat transfer, as each module is rated for 160 MWt (Table 1.2-1) and the SG full-load thermal-hydraulic operating condition is 159.13 MWt with a heat transfer area of 17,928 ft² (Table 5.4-1 and Table 5.4-2), matching the module rating.  \n(Source: Table 1.2-1, Table 5.4-1, Table 5.4-2)",
+      "expected_answer": "Yes. Table 1.2-1 shows each module at 160 MWt. Table 5.4-1 specifies ~71.4 lbm/sec per SG with steam at ~575 degrees F and FW at ~300 degrees F. The enthalpy rise across this temperature range at the specified flow rate, combined with the helical coil heat transfer enhancement, provides adequate thermal duty for 160 MWt removal.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "table_only"
+    },
+    {
+      "id": "Q189",
+      "question": "Based on Figure 1.2-1 (site layout) and Figure 5.4-7 (DHRS), is the reactor pool arrangement adequate for multi-module DHRS operation?",
+      "generated_answer": "Yes, the reactor pool arrangement is adequate for multi-module DHRS operation, as the common pool supports up to twelve modules with independent DHRS trains for each, ensuring passive decay heat removal for all modules simultaneously (see Figure 1.2-1 and Figure 5.4-7; nuscale_ch01_0034; nuscale_ch05_0022; nuscale_ch01_0044).",
+      "expected_answer": "Yes. Figure 1.2-1 shows the large reactor pool housing up to 12 modules with significant water volume. Figure 5.4-7 shows each module's DHRS condensers submerged in this pool. The large pool provides adequate thermal mass to absorb decay heat from multiple modules simultaneously while remaining below the 140 degrees F limit.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "image_only"
+    },
+    {
+      "id": "Q190",
+      "question": "Based on Figure 1.2-5 (cutaway) and Figure 5.1-2 (RCS diagram), is the vertical RPV arrangement adequate for establishing natural circulation?",
+      "generated_answer": "Yes, the vertical RPV arrangement is adequate for establishing natural circulation, as Figures 1.2-5 (cutaway) and 5.1-2 (RCS diagram) show a vertical configuration with the core below the steam generators, enabling natural convection flow from the core upward through the riser to the steam generators and down the annulus, as described in [nuscale_ch01_0019], [nuscale_ch05_0004], and illustrated in the referenced figures.",
+      "expected_answer": "Yes. Figure 1.2-5 cutaway shows the tall vertical RPV with core at bottom and SG near top, providing large elevation difference. Figure 5.1-2 shows the resulting circulation loop. The vertical arrangement maximizes buoyancy driving head between heat source and sink, which is the fundamental requirement for reliable natural circulation.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "image_only"
+    },
+    {
+      "id": "Q191",
+      "question": "Based on Figure 1.2-3 (NPM with secondary equipment) and Figure 5.4-1 (SG assembly), is the interface between primary and secondary systems adequately designed?",
+      "generated_answer": "Yes, the interface between the primary and secondary systems is adequately designed, as the steam generators are fully integrated within the reactor pressure vessel with clear separation and robust pressure boundaries, and the materials, operating conditions, and system configuration meet safety and performance requirements (Figure 1.2-3, Table 5.4-2, Table 5.4-3, nuscale_ch05_0019, nuscale_ch05_0020).",
+      "expected_answer": "Yes. Figure 1.2-3 shows the NPM connected to its turbine-generator and condenser via steam and feedwater piping. Figure 5.4-1 shows the helical coil SG inside the RPV where this energy transfer occurs. The interface is well-defined at the SG tube boundaries, maintaining primary/secondary separation within the containment boundary.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "image_only"
+    },
+    {
+      "id": "Q192",
+      "question": "Based on Figure 1.2-2 (functional boundaries) and Figure 5.1-3 (RCS schematic), are the NSSS boundaries appropriately defined for safety classification?",
+      "generated_answer": "Yes, the NSSS boundaries are appropriately defined for safety classification, as Figure 1.2-2 shows the certified design boundary encompassing all safety-significant systems and Figure 5.1-3 (RCS schematic) confirms that all Reactor Coolant System components are within containment and the certified design, consistent with regulatory requirements (nuscale_ch01_0033; nuscale_ch05_0004; Figure 1.2-2).",
+      "expected_answer": "Yes. Figure 1.2-2 delineates NSSS from balance of plant. Figure 5.1-3 shows the RCS schematic with all safety-related components within the NSSS boundary. The boundary is drawn at the containment penetrations (steam, feedwater, CVCS lines), ensuring all safety-significant RCS components are within the classified boundary.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "image_only"
+    },
+    {
+      "id": "Q193",
+      "question": "Based on Figure 1.2-6 (NPM cutaway) and Figure 5.3-1 (RPV cross section), is the annular gap between RPV and CNV adequate for the vacuum containment function?",
+      "generated_answer": "Yes, the annular gap between the RPV and CNV is adequate for the vacuum containment function, as Figures 1.2-6 and 5.3-1 show a continuous, unobstructed annulus that supports vacuum maintenance and leak detection, consistent with the design basis described in nuscale_ch01_0022 and nuscale_ch01_0023.  \n(Source: Figure 1.2-6, Figure 5.3-1, nuscale_ch01_0022, nuscale_ch01_0023)",
+      "expected_answer": "Yes. Figure 1.2-6 shows a substantial annular gap between the RPV and CNV. Figure 5.3-1 shows the RPV outer dimensions. The annular space provides adequate volume for steam condensation during a LOCA and maintains the vacuum insulation barrier during normal operation. The gap also allows for thermal expansion of the RPV without contacting the CNV.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "image_only"
+    },
+    {
+      "id": "Q194",
+      "question": "Is the NuScale overall safety case from Ch.01 adequately supported by the detailed engineering in Ch.05, considering both tabular data and diagrams?",
+      "generated_answer": "Yes, the NuScale overall safety case from Ch.01 is adequately supported by the detailed engineering in Ch.05, as evidenced by the alignment of safety features (e.g., passive systems, elimination of large-break LOCA per Table 1.2-2) with detailed system descriptions, material specifications (Tables 5.2-4, 5.4-3), inspection regimes (Tables 5.2-6 to 5.2-9), and supporting diagrams (Figures 5.1-1, 5.1-2, 5.2-1, 5.2-2, 5.2-3, 5.2-4).  \nSources: nuscale_ch01_0022, nuscale_ch05_0003, nuscale_ch05_0004, Table 1.2-2, Table 5.2-4, Figures 5.1-1 to 5.2-4.",
+      "expected_answer": "Yes. Ch.01 claims passive safety without AC power for a 12-module 570 MWe plant. Ch.05 provides quantitative support: Table 5.1-2 confirms adequate natural circulation (587 kg/s), Figure 5.4-7 shows passive DHRS, Table 5.3-3 confirms RPV integrity (ART well below limits), and text confirms all safety systems function without AC power. The detailed engineering validates the high-level safety claims.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "composite"
+    },
+    {
+      "id": "Q195",
+      "question": "Using Table 1.2-1 plant parameters, Table 5.3-1 RPV design, and Figure 5.3-1 cross section, is the RPV adequately designed for the stated operating conditions?",
+      "generated_answer": "Yes, the RPV is adequately designed for the stated operating conditions, as its design pressure (2100 psia) and temperature (650°F) in Table 5.3-1 meet or exceed the plant parameters in Table 1.2-1, and the pressure-temperature limits in Figure 5.3-1 remain within these design values.  \n(Source: Table 1.2-1, Table 5.3-1, Figure 5.3-1)",
+      "expected_answer": "Yes. Table 1.2-1 gives 160 MWt at 1850 psia. Table 5.3-1 specifies RPV design at 2100 psia, 650 degrees F, 778 inches height. Figure 5.3-1 shows adequate wall thickness with the stepped diameter design. The 250 psia margin and 60 degrees F temperature margin provide adequate design basis with ASME Section III code compliance.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "composite"
+    },
+    {
+      "id": "Q196",
+      "question": "Based on Table 1.3-1 comparison, Table 5.2-4 materials, and Figure 5.4-1 SG design, does the NuScale SG offer safety advantages over conventional PWR steam generators?",
+      "generated_answer": "Yes, the NuScale steam generator (SG) offers safety advantages over conventional PWR SGs by eliminating large external coolant loops and reactor coolant pumps, using a compact helical coil design fully integrated within the reactor vessel, and employing corrosion-resistant materials (e.g., Alloy 690, stainless steels), which together reduce accident risks such as large-break LOCA, water hammer, and tube failure; these features are supported by Table 1.3-1, Table 5.2-4, and Figure 5.4-1.  \n(Source: Table 1.3-1, Table 5.2-4, Figure 5.4-1, nuscale_ch01_0052, nuscale_ch05_0020)",
+      "expected_answer": "Yes. Table 1.3-1 shows the integral design vs conventional external SGs. Table 5.2-4 specifies Alloy 690 tubes (superior to Alloy 600). Figure 5.4-1 shows the helical coil design within the RPV. The integral location means SGTR does not bypass containment, Alloy 690 reduces tube degradation, and the compact design eliminates external SG piping failures.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "composite"
+    },
+    {
+      "id": "Q197",
+      "question": "Based on Table 1.2-2 safety features, Table 5.2-10 LTOP setpoints, and Ch.05 text on P-T limits, is the NuScale overpressure protection strategy adequate?",
+      "generated_answer": "The NuScale overpressure protection strategy is adequate because the LTOP setpoints in Table 5.2-10 (e.g., 380 psig at ≤193°F, 615.5 psig at 240°F, 850 psig at ≥277°F) are well below the pressure-temperature (P-T) limits shown in Figures 5.3-3 and 5.3-4, and the use of ASME code safety valves as described in Table 1.2-2 and Ch.05 ensures compliance with regulatory requirements for reactor coolant pressure boundary protection.  \n(Source: Table 1.2-2, Table 5.2-10, Figures 5.3-3/5.3-4, nuscale_ch05_0009, nuscale_ch05_0016)",
+      "expected_answer": "Yes. Table 1.2-2 lists passive safety features. Table 5.2-10 provides LTOP setpoints (380/615.5/850 psia) for low-temperature protection. Ch.05 text describes P-T limit curves that the LTOP protects against. Combined with RSV protection at operating temperatures, the multi-layer overpressure strategy provides adequate protection across all temperature ranges.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "composite"
+    },
+    {
+      "id": "Q198",
+      "question": "Does the NuScale approach to eliminating conventional safety systems (Table 1.3-2) with passive alternatives provide an adequate safety level, considering Ch.05 DHRS performance (Figure 5.4-7 and performance curves)?",
+      "generated_answer": "Yes, the NuScale approach of eliminating conventional active safety systems in favor of passive alternatives provides an adequate safety level, as the DHRS maintains primary coolant temperatures below 420°F within 36 hours (see Figures 5.4-13 and 5.4-15), meeting safety criteria without exceeding fuel or pressure boundary limits (nuscale_ch05_0022; Table 1.3-2; Figures 5.4-7, 5.4-13, 5.4-15).",
+      "expected_answer": "Yes. Table 1.3-2 lists RHR, SIS, RWST, AFW, and EDG as eliminated. Figure 5.4-7 shows the DHRS passive alternative with condensers in the pool. Figures 5.4-8-16 performance curves demonstrate the DHRS achieves safe cooldown. The passive approach eliminates failure modes of pumps, diesel generators, and active valves while achieving equivalent safety functions.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "composite"
+    },
+    {
+      "id": "Q199",
+      "question": "Based on Table 1.3-1 design life comparison, Table 5.3-3 ART projections, Table 5.3-8 PTS screening, and Ch.05 text on surveillance, is the NuScale 60-year RPV integrity case robust?",
+      "generated_answer": "Yes, the NuScale 60-year RPV integrity case is robust: ART projections at 57 EFPY remain well below PTS screening limits (e.g., 94.8°F vs. 270°F for shell, 125.9°F vs. 300°F for weld), surveillance is compliant with ASTM E185-82, and the design life is 60 years per Table 1.3-1 (Table 5.3-3, Table 5.3-8, Ch.05 text, Table 1.3-1).",
+      "expected_answer": "Yes. Table 1.3-1 claims 60 years vs 40 for PWR. Table 5.3-3 shows ART at 57 EFPY (max 120.4 degrees F). Table 5.3-8 confirms RTPTS well below 270/300 degrees F screening criteria with ~150 degrees F margin. Ch.05 text describes surveillance capsules and strict chemistry controls. The multi-faceted approach (materials + chemistry + surveillance + analysis) provides a robust integrity case.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "composite"
+    },
+    {
+      "id": "Q200",
+      "question": "Considering Ch.01 plant overview, Ch.05 Table 5.1-2 flow data, Figure 5.1-2 flow path, and Ch.05 text on natural circulation, does the overall NuScale thermal-hydraulic design provide adequate safety margins?",
+      "generated_answer": "Yes, the NuScale thermal-hydraulic design provides adequate safety margins by using natural circulation for core cooling, validated critical heat flux limits, and passive safety systems, as confirmed by flow data in Table 5.1-2, the flow path in Figure 5.1-2, and supporting text in Chapters 1 and 5 (nuscale_ch01_0735, nuscale_ch05_0003, nuscale_ch05_0004, nuscale_ch01_0056, nuscale_ch01_0732).",
+      "expected_answer": "Yes. Ch.01 describes a 160 MWt module with passive cooling. Table 5.1-2 shows 587 kg/s at 100% and 538.5 kg/s at minimum flow. Figure 5.1-2 shows the vertical loop maximizing buoyancy. Ch.05 text confirms the self-regulating natural circulation and the DHRS backup. Multiple defense-in-depth layers (normal operation, DHRS, ECCS) provide adequate safety margins at all power levels.",
+      "reasoning_type": "judgment",
+      "complexity": "cross_document",
+      "question_type": "composite"
+    }
+  ]
+}
