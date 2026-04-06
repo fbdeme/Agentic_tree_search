@@ -1,7 +1,7 @@
-# [초안] LLM 기반 계획과 검증을 통한 규제 문서 멀티홉 탐색
+# [초안] 규제 문서 멀티홉 탐색을 위한 LLM 기반 계획
 
 > **상태**: 초안 (개조식 흐름 정리용)  
-> **작성일**: 2026-04-03  
+> **작성일**: 2026-04-03 (최종 수정: 2026-04-06)  
 > **타겟**: LM4Plan @ ICML 2026 (마감 4/24)  
 > **검증된 인용만 사용** — 미확인 인용은 ⚠️ 표시
 
@@ -9,9 +9,9 @@
 
 ## 논문 제목 (후보)
 
-- **정식**: *LLM-Guided Planning for Multi-hop Regulatory Document Exploration and Verification*
-- **대안 1**: *Planning with LLMs for Information Gathering and Compliance Verification in Nuclear Regulatory Documents*
-- **대안 2**: *Document Exploration as Planning: Vectorless Multi-hop Reasoning with Dynamic Knowledge Graph Construction*
+- **정식**: *LLM-Guided Planning for Multi-hop Regulatory Document Exploration*
+- **대안 1**: *Document Exploration as Planning: LLM-Guided Information Gathering in Vectorless Tree Environments*
+- **대안 2**: *Planning with LLMs in Information Environments: Multi-hop Reasoning for Nuclear Regulatory Documents*
 
 ---
 
@@ -19,17 +19,18 @@
 
 - 핵발전소 안전 분석 보고서(FSAR) 심사는 수만 페이지에서 증거를 순차적으로 수집하고 규제 적합성을 판단하는 과정 → 본질적으로 **불확실한 정보 환경에서의 계획 문제(planning under uncertainty)**
 - 기존 RAG 기반 시스템은 이 과정을 수동적 1회성 검색으로 환원 → 단일 hop 한계, 구조 파괴, 판단 부재
-- **제안**: LLM이 문서 환경에서 **정보 수집을 계획(plan)**하고, 수집된 증거 간 규제 관계를 **검증(verify)**하는 아키텍처
-  - **Planning**: 벡터리스 문서 트리 환경에서 상태 평가 → 행동 선택 → 충분성 판단의 반복적 계획 루프 (browse/read/search + BM25, 동적 종료)
-  - **Verification**: 2단계 엣지 추론으로 증거 간 규제 관계(SATISFIES, VIOLATES) 명시화 — 계획 결과의 검증
+- **제안**: LLM이 벡터리스 문서 트리 환경에서 **정보 수집을 계획(plan)**하는 아키텍처
+  - **Planning loop**: 상태 평가(Dynamic Sub-KG) → 행동 선택(browse/read/search) → 충분성 판단(동적 종료)의 반복
+  - **모달리티 정렬**: 상태와 환경을 LLM의 네이티브 모달리티(텍스트)로 구축하여 계획 수립 가능하게 함
   - **Vision**: PDF 원본 도면/표를 GPT-4.1 vision으로 직접 해석
-- **결과**: 200문항 멀티홉 벤치마크에서 LLM-as-Judge 81.0% — RAPTOR(75.5%), HippoRAG(69.0%), LightRAG(67.5%), GraphRAG(49.5%) 대비 최고; RAGAS Faithfulness 0.93; Ablation에서 full system만 10/10 — 각 계획/검증 컴포넌트 제거 시 서로 다른 유형의 문항에서 실패
+- **결과**: 200문항 멀티홉 벤치마크에서 LLM-as-Judge 81.5% — RAPTOR(75.5%), HippoRAG(69.0%), LightRAG(67.5%), GraphRAG(49.5%) 대비 최고; RAGAS Faithfulness 0.90
+- **분석**: 200Q ablation에서 post-retrieval 엣지 추론(verification)은 정확도에 기여하지 않음(81.0%→81.5%) — planning(도구 선택, 동적 종료)이 정확도의 핵심 동인이며, 엣지는 추적 가능성만 제공
 
 ---
 
 ## 1. Introduction
 
-> **[작성 전략]** LLM 에이전트 범용 성공(planning 포함) → 과학 도메인 적용 시도 → 규제 문서에서 벽 → 도메인 현실(정보 수집 계획 문제) → 투명성 요건(검증 필요) → 요구사항 → 해법(planning + verification). Osprey [Hellert et al., 2026] 참고.
+> **[작성 전략]** LLM 에이전트 범용 성공(planning 포함) → 과학 도메인 적용 시도 → 규제 문서에서 벽 → 도메인 현실(정보 수집 계획 문제) → 요구사항 → 해법(planning in vectorless text environment). Osprey [Hellert et al., 2026] 참고.
 
 ### [P1] LLM 에이전트의 범용적 성공과 과학 도메인으로의 확장
 
@@ -117,24 +118,23 @@
   - 이 과정은 ReAct [Yao et al., 2023]의 Reason-Act 인터리빙과 일치하며, 기존 RAG의 수동적 1회성 검색과 근본적으로 다름
   - 기존 RAG에서 LLM은 검색 결과의 **소비자** — 본 연구에서 LLM은 계획의 **주체**
 
-- **제안 아키텍처: Planning + Verification 루프**
+- **제안 아키텍처: Planning loop**
 
   | Planning 단계 | 역할 | 구현 |
   |--------------|------|------|
-  | **State estimation** | 현재 증거와 관계를 구조적으로 평가 | Dynamic Sub-KG (NetworkX DiGraph) |
+  | **State estimation** | 현재 수집된 증거를 구조적으로 평가 | Dynamic Sub-KG (NetworkX DiGraph) |
   | **Action planning** | 다음에 어떤 문서 섹션을 탐색할지 결정 | LLM이 `browse`/`read`/`search` tool 선택 |
   | **Plan execution** | 선택된 행동 실행, 새 증거 수집 | BM25 기반 검색 + 노드 읽기 |
   | **Plan sufficiency** | 현재 증거로 답변 가능한지 판단 | LLM 기반 동적 종료 (avg 2.1–2.6 홉) |
-  | **Verification** | 증거 간 규제 관계 추론·검증 | 2단계 엣지 추론 → SATISFIES/VIOLATES |
 
-  - State가 **그래프**여야 하는 이유: 규제 판단은 증거 간 관계(SATISFIES, CONTRADICTS)가 핵심 — 텍스트 버퍼에서는 이 관계가 암묵적이며 검증 불가
-  - Planning과 Verification이 매 홉마다 인터리빙: 새 증거 수집(planning) → 관계 추론(verification) → 충분성 판단 → 반복
+  - 에이전트는 매 홉마다 현재 KG 상태를 기반으로 다음 탐색을 계획하는 반복적 루프로 작동
+  - 동적 종료가 문항 복잡도에 따라 계획 깊이를 자동 조절 (Q001: 1홉 $0.03 vs Q191: 4홉 $0.29)
 
-- **LM4Plan 토픽과의 대응**:
-  - "Planning directly with pre-trained LMs" → LLM이 매 홉마다 다음 탐색 행동을 계획
-  - "LMs for search guidance" → BM25 결과에서 LLM이 어떤 노드를 읽을지 선택, 검색 키워드 결정
-  - "LMs for validation and verification" → SATISFIES/VIOLATES 엣지로 규제 적합성 검증
-  - "LMs for generalization in planning" → 동적 종료가 문항 복잡도에 따라 계획 깊이를 자동 조절 (Q001: 1홉 vs Q191: 4홉)
+- **선택적 컴포넌트: Post-retrieval edge inference (Verification)**
+  - 수집된 증거 간 관계를 2단계 엣지 추론(자유형 기술 → SATISFIES/VIOLATES 온톨로지 매핑)으로 명시화
+  - 200Q ablation 결과, 이 컴포넌트는 **정확도에 기여하지 않음** (81.0% vs 81.5%) — 비용만 2.8× 증가
+  - 가치는 추적 가능성(인간 가독 근거 경로)과 Faithfulness 소폭 개선(+0.033)에 한정
+  - **핵심 발견: planning(도구 선택, 동적 종료)이 정확도의 핵심 동인이며, post-retrieval verification은 선택적**
 
 ### [P6] 왜 벡터리스인가: Planning Agent의 모달리티 정렬 원칙
 
@@ -172,14 +172,16 @@
 
 ### [P7] 본 연구의 기여
 
-- 위 요구사항(P4)을 충족하기 위해, 규제 문서 탐색을 **LLM 기반 계획(planning) + 검증(verification) 문제**로 정의하고, 상태와 환경을 LLM의 네이티브 모달리티(텍스트)에 정렬한 아키텍처를 제안
+- 위 요구사항(P4)을 충족하기 위해, 규제 문서 탐색을 **LLM 기반 계획 문제**로 정의하고, 상태와 환경을 LLM의 네이티브 모달리티(텍스트)에 정렬한 아키텍처를 제안
 - 핵심 기여:
 
-1. **문서 탐색의 계획 문제 정의**: 규제 문서 멀티홉 추론을 정보 수집 계획 문제로 모델링 — 상태 평가, 행동 선택, 충분성 판단, 동적 종료의 planning loop 구현
+1. **문서 탐색의 계획 문제 정의**: 규제 문서 멀티홉 추론을 정보 수집 계획 문제로 모델링 — 상태 평가, 행동 선택, 충분성 판단, 동적 종료의 planning loop 구현. 이것만으로 4개 RAG 베이스라인 상회 (81.5%)
 2. **모달리티 정렬 원칙에 기반한 벡터리스 설계**: LLM이 상태(KG)와 환경(문서 트리)을 직접 읽고 추론할 수 있도록 텍스트 기반으로 구축 — 임베딩 불투명성 제거, 계획 수립 가능하게 함
-3. **LLM 기반 규제 적합성 검증**: 2단계 엣지 추론(자유형 기술 → 도메인 온톨로지)으로 SATISFIES/VIOLATES 관계 명시화 — 계획 결과의 검증
-4. **Vision-Augmented 멀티모달 처리**: PDF 원본 도면/표를 GPT-4.1 vision으로 해석 (table_only +18%p vs. RAPTOR)
-5. **완전 추적 가능한 계획 경로**: 계획 궤적 + Sub-KG 전체를 JSON 저장 — 안전-임계 도메인 감사 요건 충족
+3. **Vision-Augmented 멀티모달 처리**: PDF 원본 도면/표를 GPT-4.1 vision으로 해석 (table_only +18%p vs. RAPTOR)
+4. **200Q 핵 규제 멀티홉 벤치마크**: 3축 직교 분류(reasoning × complexity × modality), 기존 벤치마크에 없는 judgment + cross_document + multimodal 조합
+
+- 분석적 기여:
+5. **Post-retrieval edge inference의 비용 대비 효과 분석**: 200Q ablation에서 엣지 추론이 정확도에 기여하지 않음을 발견 (81.0% vs 81.5%, 비용 2.8× 증가). Planning이 정확도의 핵심 동인이며, 엣지의 가치는 추적 가능성에 한정됨
 
 ---
 
@@ -303,9 +305,10 @@
   - 단순 factual (Q001): 1홉 17초 $0.03 / 복잡한 judgment (Q191): 4홉 140초 $0.29
   - 평균 실제 홉 수: 2.1–2.6 (최대 4) — 불필요한 탐색을 자동으로 가지치기
 
-### 3.4 Verification: 2단계 엣지 추론
+### 3.4 Post-retrieval Edge Inference (선택적 컴포넌트)
 
-- **역할**: 계획 실행으로 수집된 증거가 규제 요건을 만족하는지 **검증** — 상태 전이 $f_{tr}(s_t, a_t) \rightarrow s_{t+1}$와 동시에 수행
+- **역할**: 수집된 증거 간 관계를 명시화 — 상태 전이 $f_{tr}(s_t, a_t) \rightarrow s_{t+1}$와 동시에 수행
+- **참고**: 200Q ablation 결과, 이 컴포넌트는 정확도에 기여하지 않음 (Section 6.1 참조). 추적 가능성이 필요한 경우 선택적으로 활용
 - **Stage 1 — 자유형 기술 (Description)**: LLM이 두 노드 간 관계를 자연어 1문장으로 기술 (분류 압력 없음)
   - LightRAG [Guo et al., 2024]의 free-form 관계 추출 방식 채택
   - 예: "ECCS의 3 RVV + 2 RRV 설계는 10 CFR 50.46의 수용 기준을 충족하도록 구성됨"
@@ -449,8 +452,9 @@
 
 | 방법론               |     Overall     |    judgment    |   comparative   |     factual     |    cross_doc    |   table_only   |    composite    |
 | -------------------- | :-------------: | :-------------: | :-------------: | :-------------: | :-------------: | :-------------: | :-------------: |
-| **Ours** | **81.0%** |      90.8%      | **78.5%** | **74.3%** | **81.3%** | **86.0%** | **85.0%** |
-| RAPTOR               |      75.5%      | **92.3%** |      72.3%      |      62.9%      |      73.3%      |      68.0%      |      72.5%      |
+| **Ours (planning only)** | **81.5%** | **92.3%** | **80.0%** | **72.9%** | **84.0%** | **86.0%** | **77.5%** |
+| Ours (planning + edges) | 81.0% | 90.8% | 78.5% | 74.3% | 81.3% | 86.0% | 85.0% |
+| RAPTOR | 75.5% | 92.3% | 72.3% | 62.9% | 73.3% | 68.0% | 72.5% |
 | HippoRAG             |      69.0%      |      86.2%      |      63.1%      |      58.6%      |      65.3%      |      56.0%      |      55.0%      |
 | LightRAG             |      67.5%      |      75.4%      |      66.2%      |      61.4%      |      69.3%      |      60.0%      |      65.0%      |
 | GraphRAG             |      49.5%      |      61.5%      |      49.2%      |      38.6%      |      37.3%      |      42.0%      |      47.5%      |
@@ -552,7 +556,43 @@
 
 ## 6. Analysis
 
-### 6.1 Ablation Study (10문항 샘플, 4 variants)
+### 6.1 Ablation Study
+
+#### 6.1.1 Main Ablation: Edge Inference 제거 (200Q)
+
+**가장 비용이 큰 컴포넌트(65%)인 엣지 추론을 제거하고 200문항 전체에서 평가.**
+
+| 메트릭 | full (planning + edges) | no_edges (planning only) | 차이 |
+|--------|:----------------------:|:-----------------------:|:----:|
+| **3-Judge 정확도** | 81.0% (162/200) | **81.5% (163/200)** | +0.5%p |
+| Faithfulness | **0.930** | 0.897 | −0.033 |
+| Context Recall | **0.930** | 0.919 | −0.011 |
+| Factual Correctness | 0.420 | 0.417 | −0.003 |
+| 비용/문항 | $0.215 | **$0.076** | **−65%** |
+| 시간/문항 | 115.3s | **47.5s** | **−59%** |
+| 토큰/문항 | 86,072 | **30,911** | **−64%** |
+
+**핵심 발견: Planning이 정확도의 핵심 동인**
+- 엣지 추론을 완전히 제거해도 정확도가 유지됨 (오히려 +0.5%p)
+- **Planning만으로 4개 벡터 기반 RAG 베이스라인을 상회** (81.5% vs RAPTOR 75.5%)
+- 엣지 추론은 비용의 65%를 차지하지만 정확도 기여 없음
+
+**엣지가 제공하는 것과 제공하지 않는 것:**
+- ❌ 정확도 향상: 200Q에서 차이 없음
+- △ Faithfulness: +0.033 (방향 일관적이나 미미, 통계적 유의성 미검증)
+- ✅ 추적 가능성: "Section A SATISFIES Regulation B" 형태의 인간 가독 근거 경로
+
+**Head-to-head 분석:**
+- 공통 오답: 25문항 (두 시스템 모두 어려운 문항)
+- full만 오답: 13문항 / no_edges만 오답: 12문항 → 거의 대칭 (실행 변동 수준)
+
+**Post-retrieval vs retrieval-time edges:**
+- 본 결과는 **검색 후(post-retrieval)** 증거 간 관계를 추론하는 엣지가 정확도에 기여하지 않음을 보여줌
+- 이는 **검색 자체를 위한(retrieval-time)** 엣지(GraphRAG의 그래프 탐색, LightRAG의 이중 레벨 검색)에 대한 결론이 아님 — 역할이 근본적으로 다름
+
+#### 6.1.2 Component Ablation (10Q, 보조 분석)
+
+10문항에서 4개 variant를 비교하여 Vision, Browse-first의 기여를 확인.
 
 최종 시스템에서 핵심 컴포넌트를 하나씩 제거하여 각각의 기여를 측정. 10문항(3 reasoning_type × 3 complexity × 4 question_type 포괄)에 대해 4개 variant 실행.
 
@@ -753,13 +793,18 @@
 
 ## 7. Conclusion
 
-- 규제 문서 멀티홉 추론을 **LLM 기반 계획(planning) + 검증(verification) 문제**로 정의하고, 벡터리스 문서 트리 환경에서 이를 해결하는 아키텍처를 제안
-- **핵심 기여**:
-  1. **Planning**: LLM이 문서 환경에서 증거 수집을 계획 — 상태 평가, 행동 선택(browse/read/search), plan sufficiency에 의한 동적 종료
-  2. **Verification**: 2단계 엣지 추론으로 수집된 증거 간 규제 관계(SATISFIES, VIOLATES)를 명시적으로 검증 — planning loop 내에서 인터리빙
-  3. **환경 설계**: 벡터리스 계층 트리로 문서 구조를 보존한 탐색 환경 구축 (경량 인덱싱 $4.06, 기존 대비 5–7× 빠름)
-- **결과**: 200문항 멀티홉 벤치마크에서 81.0% (4개 베이스라인 대비 최고), RAGAS Faithfulness 0.93; Ablation에서 full system만 10/10 — planning(동적 종료)과 verification(엣지 추론) 각각 제거 시 서로 다른 문항에서 실패
-- **LM4Plan 관점에서의 시사점**: LLM 기반 계획은 PDDL/로봇 환경뿐 아니라 **정보 환경(규제 문서)**에서도 유효하며, 계획 결과의 검증(verification)이 안전-임계 도메인에서 계획 품질을 보장하는 핵심 요소
+- 규제 문서 멀티홉 추론을 **LLM 기반 계획 문제**로 정의하고, 벡터리스 문서 트리 환경에서 이를 해결하는 아키텍처를 제안
+
+- **핵심 발견**:
+  1. **Planning이 정확도의 핵심 동인**: LLM의 도구 선택, 동적 종료(plan sufficiency), browse-first 환경 인식만으로 81.5% 달성 — 4개 벡터 기반 RAG 베이스라인 상회
+  2. **모달리티 정렬 원칙의 유효성**: 상태(KG)와 환경(트리)을 LLM의 네이티브 모달리티(텍스트)로 구축 → 임베딩/청킹 없이도 경쟁력 있는 성능
+  3. **Post-retrieval edge inference는 정확도에 기여하지 않음**: 200Q ablation에서 엣지 추론 제거 시 정확도 유지(81.0%→81.5%), 비용 65% 절감. 엣지의 가치는 추적 가능성에 한정
+  4. **경량 인덱싱**: 벡터리스 트리 구축 $4.06, 기존 대비 5–7× 빠름
+
+- **LM4Plan 관점에서의 시사점**:
+  - LLM 기반 계획은 PDDL/로봇 환경뿐 아니라 **정보 환경(규제 문서)**에서도 유효
+  - 정보 환경에서의 planning은 검색(retrieval)을 대체하는 패러다임이 될 수 있음
+  - Post-retrieval verification(엣지 추론)은 정확도가 아닌 추적 가능성이 필요한 도메인에서 선택적으로 활용
 
 ---
 
@@ -816,25 +861,29 @@
 
 ### 논문 포지셔닝
 
-- **Planning + Verification 프레이밍**: 문서 탐색을 계획 문제로 정의, 엣지 추론을 검증으로 정의 → LM4Plan 토픽과 자연스럽게 정렬
+- **Planning 중심 프레이밍**: 문서 탐색을 계획 문제로 정의, planning이 정확도의 핵심 동인
+- 엣지 추론(verification)은 정직한 negative finding으로 보고 — 정확도 기여 없음, 추적 가능성만 제공
 - GWM은 Related Work에서 비교 대상으로 인용 (임베딩 기반 vs 벡터리스)
-- 핵심 메시지: "LLM 기반 계획은 물리 환경뿐 아니라 정보 환경(문서)에서도 유효하며, 안전-임계 도메인에서는 계획 결과의 검증(verification)이 필수"
+- 핵심 메시지: "LLM 기반 계획만으로 4개 벡터 기반 RAG 시스템을 상회하며, 정보 환경(문서)에서의 planning은 검색을 대체하는 새로운 패러다임"
 
 ### 현재 논문의 약점 (리뷰어 예상 질문)
 
-1. **Q. text_only에서 왜 RAPTOR보다 낮은가?** → 답: 요약 기반 검색이 길이 있는 텍스트에서 효과적, 향후 요약 노드 추가 검토
-2. **Q. 문항당 93초/$0.21은 실용적이지 않다** → 답: 동적 종료로 단순 질문은 $0.03(1홉), 병렬화로 39분/200문항, 인덱싱 7.6분(기존 대비 5~7× 빠름)으로 총합 경쟁력
-3. **Q. Factual Correctness 0.42가 낮지 않은가?** → 답: FC의 구조적 한계(예상 답변 표현 다양성), RAGAS 논문 자체도 FC는 wording-sensitive 메트릭으로 인정
-4. **Q. benchmark이 자체 제작이라 편향 가능성** → 답: 200문항의 3축 직교 설계, LLM-as-Judge 3인 다수결, 향후 외부 검증 필요
+1. **Q. text_only에서 왜 RAPTOR보다 낮은가?** → 답: 요약 기반 검색이 텍스트 전용에서 효과적, 향후 요약 노드 추가 검토
+2. **Q. 문항당 48초/$0.08(no_edges)은 여전히 비싸다** → 답: 동적 종료로 단순 질문 $0.03(1홉), 8× 병렬 ~20분/200Q, +6%p 정확도 향상(vs RAPTOR)의 trade-off
+3. **Q. Factual Correctness 0.42가 낮다** → 답: FC의 구조적 한계(예상 답변 표현 다양성), RAGAS 논문도 인정
+4. **Q. benchmark 자체 제작이라 편향** → 답: 3축 직교 설계, 3인 다수결, 7개 기존 벤치마크 대비 고유성 주장, 외부 검증은 향후
+5. **Q. 엣지가 의미 없으면 왜 넣었나?** → 답: 200Q ablation에서 발견한 정직한 결과. post-retrieval edge가 정확도에 기여하지 않는다는 것 자체가 발견. 추적 가능성이 필요한 도메인에서는 선택적 활용
 
 ### TODO (논문 완성 전)
 
-- [X] ~~RAPTOR, GraphRAG RAGAS 결과 추가~~ → Section 5.4 완성
-- [X] ~~GWM 토큰 비용 실측~~ → 5문항 샘플, avg $0.21/문항, 200Q ~$41.9
-- [X] ~~PageIndex 트리 빌드 시간 실측~~ → 7.6분 (Ch01 5.5 + Ch05 2.0)
-- [X] ~~"인덱싱 무비용" 수정~~ → "경량 인덱싱"으로 정정, 실측값 반영
-- [X] ~~NRC 투명성 주장 검증~~ → 10 CFR 50 App B Criterion III 기반, AI 특화 규제 부재 명시
-- [ ] HippoRAG, LightRAG retrieved_contexts 포함 재수집 → RAGAS 완전 비교
-- [X] ~~MAM-RAG 인용 처리~~ → 제거 완료 (미출판이므로 언급하지 않기로)
-- [x] ~~Ablation study~~ → 10문항 × 4 variants 실측 완료 (full/no_vision/no_edges/no_browse_first)
-- [x] ~~GWM 트리 빌드 토큰 비용 측정~~ → 1,665K tokens, $4.06 (Ch01 $3.75 + Ch05 $0.31)
+- [x] ~~RAPTOR, GraphRAG RAGAS 결과 추가~~
+- [x] ~~토큰 비용 실측~~
+- [x] ~~트리 빌드 시간/비용 실측~~
+- [x] ~~인덱싱 무비용 수정~~
+- [x] ~~NRC 투명성 주장 검증~~
+- [x] ~~MAM-RAG 제거~~
+- [x] ~~10Q Ablation (4 variants)~~
+- [x] ~~200Q no_edges ablation~~ → Planning이 핵심, 엣지 정확도 기여 없음
+- [x] ~~트리 빌드 토큰 비용 측정~~
+- [x] ~~논문 리포지셔닝: Planning 중심으로 전환~~
+- [ ] HippoRAG, LightRAG retrieved_contexts 재수집 → RAGAS 완전 비교
