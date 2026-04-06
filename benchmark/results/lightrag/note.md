@@ -26,24 +26,36 @@
 
 ## 답변 생성
 - system_prompt: 가이드 4.3절 동일
-- 검색 → gpt-4.1에 context 전달 → 답변 생성
-- 문항당 평균 ~7초
+- `aquery_data()` → 검색 context만 추출 (LLM 생성 분리) → gpt-4.1에 context 전달 → 답변 생성
+- context 구성: chunks + entity descriptions + relationship descriptions
+- 문항당 평균 ~5초
 
-## 결과
-- **LLM-as-Judge Accuracy: 67.5% (135/200)**
+## 결과 (재실험, aquery_data + retrieved_contexts 포함)
+- **LLM-as-Judge Accuracy: 73.0% (146/200)**
 - factual: 61.4% (43/70)
 - comparative: 66.1% (43/65)
-- judgment: 75.4% (49/65)
+- judgment: 92.3% (60/65)
 - single_evidence: 72.0% (36/50)
-- multi_evidence: 62.7% (47/75)
-- cross_document: 69.3% (52/75)
-- text_only: 71.2%, table_only: 60.0%, image_only: 73.3%, composite: 65.0%
+- multi_evidence: 70.7% (53/75)
+- cross_document: 76.0% (57/75)
+- text_only: 73.8%, table_only: 60.0%, image_only: 86.7%, composite: 67.5%
+
+### 이전 결과 (v1, aquery 사용 — 이중 LLM 생성 문제)
+- LLM-as-Judge Accuracy: 67.5% (135/200)
+- 원인: `aquery()`가 LightRAG 자체 LLM 답변을 반환 → 이를 다시 context로 gpt-4.1에 넣어 이중 생성
+- 수정: `aquery_data()`로 검색 결과만 가져와서 gpt-4.1로 직접 답변 생성
+
+## 변경사항 (재실험)
+- `aquery()` → `aquery_data()`로 변경: 검색과 생성 분리 (논문 원래 의도)
+- chunks, entities, relationships를 `retrieved_contexts`에 리스트로 저장
+- retrieved_contexts 저장으로 RAGAs 평가 가능
 
 ## 특이사항
 - `openai_complete_if_cache()`의 `model` 인자를 `functools.partial`로 positional binding 해야 함 (LightRAG 내부 호출 규약)
 - `ainsert()`는 문서를 enqueue만 하고 백그라운드 파이프라인에서 처리 — 스크립트 종료 전 파이프라인 완료 대기 필요
 - 엔티티 추출 후 관계 요약(LLMmrg) 단계가 오래 걸림 (엔티티 수천 개)
 - 인덱싱에 gpt-4.1 사용 시 비용이 상당 (LightRAG 방법론 특성)
+- `aquery_data()`로 변경 후 judgment 75.4% → 92.3%로 대폭 개선
 
 ## 스크립트
 - `experiments/run_lightrag.py` (인덱싱 + 답변 수집 통합)
