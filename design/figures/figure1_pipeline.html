@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Figure 1</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 48px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="720" viewBox="0 0 920 720"
+     font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+
+  <defs>
+    <!-- Arrowhead markers -->
+    <marker id="arrow" viewBox="0 0 10 7" refX="9" refY="3.5"
+            markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#555" />
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 7" refX="9" refY="3.5"
+            markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#4472C4" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 7" refX="9" refY="3.5"
+            markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#548235" />
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 7" refX="9" refY="3.5"
+            markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#C55A11" />
+    </marker>
+  </defs>
+
+  <!-- ============================================== -->
+  <!--  USER QUERY (top center)                       -->
+  <!-- ============================================== -->
+  <rect x="340" y="20" width="240" height="36" rx="3" ry="3"
+        fill="#4472C4" stroke="none" />
+  <text x="460" y="43" text-anchor="middle"
+        fill="#fff" font-size="13" font-weight="600">User Query</text>
+
+  <!-- Arrow: Query → Planning Loop -->
+  <line x1="460" y1="56" x2="460" y2="88" stroke="#555" stroke-width="1.2"
+        marker-end="url(#arrow)" />
+
+  <!-- ============================================== -->
+  <!--  PLANNING LOOP (center, dashed border)         -->
+  <!-- ============================================== -->
+  <rect x="290" y="92" width="400" height="310" rx="4" ry="4"
+        fill="none" stroke="#4472C4" stroke-width="1.8" stroke-dasharray="6,4" />
+
+  <!-- Loop label -->
+  <rect x="310" y="82" width="160" height="20" rx="2" fill="#fff" stroke="none" />
+  <text x="390" y="96" text-anchor="middle"
+        fill="#4472C4" font-size="11" font-weight="700" letter-spacing="0.5">
+    PLANNING LOOP (max 4 hops)
+  </text>
+
+  <!-- Step 1: State Estimation -->
+  <rect x="320" y="118" width="160" height="48" rx="3" ry="3"
+        fill="#D9E2F3" stroke="#4472C4" stroke-width="1.2" />
+  <text x="400" y="139" text-anchor="middle"
+        fill="#1F3864" font-size="12" font-weight="600">State Estimation</text>
+  <text x="400" y="155" text-anchor="middle"
+        fill="#4472C4" font-size="9.5">Evaluate Sub-KG G(t)</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="480" y1="142" x2="510" y2="142" stroke="#555" stroke-width="1.2"
+        marker-end="url(#arrow)" />
+
+  <!-- Step 2: Action Planning -->
+  <rect x="514" y="118" width="160" height="48" rx="3" ry="3"
+        fill="#D9E2F3" stroke="#4472C4" stroke-width="1.2" />
+  <text x="594" y="139" text-anchor="middle"
+        fill="#1F3864" font-size="12" font-weight="600">Action Planning</text>
+  <text x="594" y="155" text-anchor="middle"
+        fill="#4472C4" font-size="9.5">LLM selects tools + queries</text>
+
+  <!-- Arrow 2→3 (down) -->
+  <line x1="594" y1="166" x2="594" y2="192" stroke="#555" stroke-width="1.2"
+        marker-end="url(#arrow)" />
+
+  <!-- Step 3: Execution -->
+  <rect x="514" y="196" width="160" height="48" rx="3" ry="3"
+        fill="#E2EFDA" stroke="#548235" stroke-width="1.2" />
+  <text x="594" y="217" text-anchor="middle"
+        fill="#375623" font-size="12" font-weight="600">Execution</text>
+  <text x="594" y="233" text-anchor="middle"
+        fill="#548235" font-size="9.5">Navigate tree, BM25+PRF</text>
+
+  <!-- Arrow 3→4 (left) -->
+  <line x1="514" y1="220" x2="484" y2="220" stroke="#555" stroke-width="1.2"
+        marker-end="url(#arrow)" />
+
+  <!-- Step 4: Edge Inference -->
+  <rect x="320" y="196" width="160" height="48" rx="3" ry="3"
+        fill="#FCE4D6" stroke="#C55A11" stroke-width="1.2" />
+  <text x="400" y="217" text-anchor="middle"
+        fill="#833C0B" font-size="12" font-weight="600">Edge Inference</text>
+  <text x="400" y="233" text-anchor="middle"
+        fill="#C55A11" font-size="9.5">Two-stage relation (optional)</text>
+
+  <!-- Loop-back arrow: Step 4 → Step 1 (left side) -->
+  <path d="M 320 220 L 305 220 L 305 142 L 320 142"
+        fill="none" stroke="#C55A11" stroke-width="1.2"
+        marker-end="url(#arrow-orange)" />
+
+  <!-- ── Sufficiency Check (diamond) ── -->
+  <polygon points="490,290 540,268 590,290 540,312"
+           fill="#FFF2CC" stroke="#BF8F00" stroke-width="1.2" />
+  <text x="540" y="287" text-anchor="middle"
+        fill="#806000" font-size="10" font-weight="600">Sufficient</text>
+  <text x="540" y="300" text-anchor="middle"
+        fill="#806000" font-size="10" font-weight="600">?</text>
+
+  <!-- Arrow: Steps → Diamond -->
+  <line x1="400" y1="244" x2="400" y2="280" stroke="#555" stroke-width="1"
+        stroke-dasharray="4,3" />
+  <line x1="400" y1="280" x2="490" y2="290" stroke="#555" stroke-width="1"
+        stroke-dasharray="4,3" />
+
+  <!-- "No" label + arrow back up -->
+  <text x="612" y="278" fill="#C55A11" font-size="10" font-weight="600">No</text>
+  <path d="M 590 282 L 650 282 L 650 142 L 674 142"
+        fill="none" stroke="#C55A11" stroke-width="1.2" stroke-dasharray="4,3" />
+  <text x="660" y="215" fill="#C55A11" font-size="9"
+        transform="rotate(-90, 660, 215)">next hop</text>
+
+  <!-- "Yes" label + arrow down -->
+  <text x="545" y="330" text-anchor="middle"
+        fill="#548235" font-size="10" font-weight="600">Yes</text>
+  <line x1="540" y1="312" x2="540" y2="340" stroke="#548235" stroke-width="1.2" />
+
+  <!-- Arrow exit planning loop down -->
+  <line x1="540" y1="340" x2="540" y2="398" stroke="#548235" stroke-width="1.2"
+        marker-end="url(#arrow-green)" />
+
+  <!-- ============================================== -->
+  <!--  DOCUMENT TREE (left side)                     -->
+  <!-- ============================================== -->
+  <rect x="30" y="105" width="230" height="290" rx="4" ry="4"
+        fill="none" stroke="#548235" stroke-width="1.5" />
+
+  <!-- Header -->
+  <rect x="40" y="95" width="200" height="20" rx="2" fill="#fff" stroke="none" />
+  <text x="140" y="109" text-anchor="middle"
+        fill="#548235" font-size="11" font-weight="700" letter-spacing="0.5">
+    ENVIRONMENT: DOCUMENT TREE
+  </text>
+
+  <!-- Tree structure -->
+  <g fill="none" stroke="#999" stroke-width="0.8">
+    <!-- Ch.01 branches -->
+    <line x1="70" y1="142" x2="70" y2="250" />
+    <line x1="70" y1="150" x2="90" y2="150" />
+    <line x1="70" y1="178" x2="90" y2="178" />
+    <line x1="70" y1="206" x2="90" y2="206" />
+    <line x1="70" y1="234" x2="90" y2="234" />
+    <!-- Sub-branch -->
+    <line x1="115" y1="214" x2="115" y2="238" />
+    <line x1="115" y1="234" x2="130" y2="234" />
+    <!-- Ch.05 branches -->
+    <line x1="70" y1="290" x2="70" y2="345" />
+    <line x1="70" y1="300" x2="90" y2="300" />
+    <line x1="70" y1="330" x2="90" y2="330" />
+    <!-- sub -->
+    <line x1="115" y1="310" x2="115" y2="340" />
+    <line x1="115" y1="330" x2="130" y2="330" />
+  </g>
+
+  <!-- Chapter 01 -->
+  <rect x="48" y="124" width="105" height="22" rx="2"
+        fill="#E2EFDA" stroke="#548235" stroke-width="1" />
+  <text x="100" y="139" text-anchor="middle"
+        fill="#375623" font-size="10" font-weight="600">FSAR Ch.01</text>
+
+  <!-- Nodes Ch.01 -->
+  <rect x="92" y="148" width="140" height="16" rx="2"
+        fill="#fff" stroke="#999" stroke-width="0.8" />
+  <text x="100" y="159" fill="#333" font-size="9">1.0 Introduction</text>
+
+  <rect x="92" y="170" width="140" height="16" rx="2"
+        fill="#fff" stroke="#999" stroke-width="0.8" />
+  <text x="100" y="181" fill="#333" font-size="9">1.1 Facility Overview</text>
+
+  <!-- Highlighted (being read) -->
+  <rect x="92" y="198" width="140" height="16" rx="2"
+        fill="#D9E2F3" stroke="#4472C4" stroke-width="1.2" />
+  <text x="100" y="209" fill="#1F3864" font-size="9" font-weight="600">1.2.1 ECCS Design</text>
+  <text x="226" y="209" fill="#4472C4" font-size="7" font-weight="600">H2</text>
+
+  <rect x="132" y="226" width="110" height="16" rx="2"
+        fill="#fff" stroke="#999" stroke-width="0.8" />
+  <text x="140" y="237" fill="#333" font-size="8.5">1.2.1.1 RVV Config</text>
+
+  <!-- Ref badge -->
+  <rect x="192" y="244" width="50" height="13" rx="2"
+        fill="#FCE4D6" stroke="#C55A11" stroke-width="0.7" />
+  <text x="217" y="253" text-anchor="middle"
+        fill="#C55A11" font-size="7.5" font-weight="500">Fig 1.2-1</text>
+
+  <!-- Chapter 05 -->
+  <rect x="48" y="274" width="105" height="22" rx="2"
+        fill="#E2EFDA" stroke="#548235" stroke-width="1" />
+  <text x="100" y="289" text-anchor="middle"
+        fill="#375623" font-size="10" font-weight="600">FSAR Ch.05</text>
+
+  <rect x="92" y="298" width="140" height="16" rx="2"
+        fill="#D9E2F3" stroke="#4472C4" stroke-width="1.2" />
+  <text x="100" y="309" fill="#1F3864" font-size="9" font-weight="600">5.1 Acceptance Criteria</text>
+  <text x="226" y="309" fill="#4472C4" font-size="7" font-weight="600">H3</text>
+
+  <rect x="132" y="322" width="110" height="16" rx="2"
+        fill="#fff" stroke="#999" stroke-width="0.8" />
+  <text x="140" y="333" fill="#333" font-size="8.5">5.1.1 10 CFR 50.46</text>
+  <rect x="192" y="340" width="50" height="13" rx="2"
+        fill="#FCE4D6" stroke="#C55A11" stroke-width="0.7" />
+  <text x="217" y="349" text-anchor="middle"
+        fill="#C55A11" font-size="7.5" font-weight="500">Tbl 5.1-1</text>
+
+  <!-- Tools below tree -->
+  <text x="140" y="376" text-anchor="middle"
+        fill="#777" font-size="9" font-weight="500">
+    browse (ls)  ·  read (cat)  ·  search (grep)
+  </text>
+
+  <!-- Arrow: Tree → Planning Loop -->
+  <line x1="260" y1="200" x2="290" y2="200" stroke="#548235" stroke-width="1.2"
+        marker-end="url(#arrow-green)" />
+  <text x="275" y="194" text-anchor="middle"
+        fill="#548235" font-size="8">retrieve</text>
+
+  <!-- Arrow: Planning Loop → Tree (action) -->
+  <line x1="290" y1="240" x2="260" y2="240" stroke="#4472C4" stroke-width="1.2"
+        marker-end="url(#arrow-blue)" />
+  <text x="275" y="254" text-anchor="middle"
+        fill="#4472C4" font-size="8">action</text>
+
+  <!-- ============================================== -->
+  <!--  DYNAMIC SUB-KG (right side)                   -->
+  <!-- ============================================== -->
+  <rect x="720" y="105" width="180" height="290" rx="4" ry="4"
+        fill="none" stroke="#BF8F00" stroke-width="1.5" />
+  <rect x="730" y="95" width="160" height="20" rx="2" fill="#fff" stroke="none" />
+  <text x="810" y="109" text-anchor="middle"
+        fill="#BF8F00" font-size="11" font-weight="700" letter-spacing="0.5">
+    STATE: DYNAMIC SUB-KG
+  </text>
+
+  <!-- KG nodes (circles) -->
+  <!-- Node A: §1.0 -->
+  <circle cx="770" cy="155" r="22" fill="#D9E2F3" stroke="#4472C4" stroke-width="1.2" />
+  <text x="770" y="153" text-anchor="middle" fill="#1F3864" font-size="8" font-weight="600">§1.0</text>
+  <text x="770" y="163" text-anchor="middle" fill="#4472C4" font-size="7">Intro</text>
+
+  <!-- Node B: §1.2.1 -->
+  <circle cx="855" cy="195" r="22" fill="#D9E2F3" stroke="#4472C4" stroke-width="1.2" />
+  <text x="855" y="193" text-anchor="middle" fill="#1F3864" font-size="8" font-weight="600">§1.2.1</text>
+  <text x="855" y="203" text-anchor="middle" fill="#4472C4" font-size="7">ECCS</text>
+
+  <!-- Node C: §5.1 -->
+  <circle cx="770" cy="260" r="22" fill="#E2EFDA" stroke="#548235" stroke-width="1.2" />
+  <text x="770" y="258" text-anchor="middle" fill="#375623" font-size="8" font-weight="600">§5.1</text>
+  <text x="770" y="268" text-anchor="middle" fill="#548235" font-size="7">Criteria</text>
+
+  <!-- Node D: §5.1.1 -->
+  <circle cx="855" cy="310" r="22" fill="#E2EFDA" stroke="#548235" stroke-width="1.2" />
+  <text x="855" y="308" text-anchor="middle" fill="#375623" font-size="8" font-weight="600">§5.1.1</text>
+  <text x="855" y="318" text-anchor="middle" fill="#548235" font-size="7">50.46</text>
+
+  <!-- Node E: §1.3 -->
+  <circle cx="770" cy="355" r="18" fill="#D9E2F3" stroke="#4472C4" stroke-width="1" opacity="0.6" />
+  <text x="770" y="353" text-anchor="middle" fill="#4472C4" font-size="7.5" font-weight="500">§1.3</text>
+  <text x="770" y="362" text-anchor="middle" fill="#4472C4" font-size="6.5">Safety</text>
+
+  <!-- KG Edges -->
+  <g fill="none" stroke-width="1">
+    <!-- A→B: SPECIFIES -->
+    <line x1="790" y1="162" x2="835" y2="185" stroke="#4472C4" />
+    <!-- B→C: SATISFIES -->
+    <line x1="843" y1="215" x2="785" y2="245" stroke="#C55A11" />
+    <!-- C→D: REFERENCES -->
+    <line x1="790" y1="268" x2="835" y2="298" stroke="#4472C4" />
+    <!-- A→C: SUPPORTS -->
+    <line x1="770" y1="177" x2="770" y2="238" stroke="#C55A11" stroke-dasharray="3,2" />
+    <!-- B→D -->
+    <line x1="855" y1="217" x2="855" y2="288" stroke="#4472C4" stroke-dasharray="3,2" />
+  </g>
+
+  <!-- Edge labels -->
+  <text x="820" y="171" text-anchor="middle"
+        fill="#4472C4" font-size="7" font-weight="500" transform="rotate(-22,820,171)">SPECIFIES</text>
+  <text x="818" y="237" text-anchor="middle"
+        fill="#C55A11" font-size="7" font-weight="500" transform="rotate(22,818,237)">SATISFIES</text>
+  <text x="797" y="286" text-anchor="middle"
+        fill="#4472C4" font-size="7" font-weight="500" transform="rotate(-22,797,286)">REFERENCES</text>
+  <text x="757" y="212" text-anchor="middle"
+        fill="#C55A11" font-size="7" font-weight="500" transform="rotate(-90,757,212)">SUPPORTS</text>
+
+  <!-- Legend -->
+  <line x1="735" y1="385" x2="755" y2="385" stroke="#4472C4" stroke-width="1" />
+  <text x="760" y="388" fill="#555" font-size="8">Tier 1: Structural</text>
+  <line x1="830" y1="385" x2="850" y2="385" stroke="#C55A11" stroke-width="1" />
+  <text x="855" y="388" fill="#555" font-size="8">Tier 2: Semantic</text>
+
+  <!-- Arrow: Planning → KG -->
+  <line x1="690" y1="180" x2="720" y2="180" stroke="#BF8F00" stroke-width="1.2"
+        marker-end="url(#arrow)" />
+  <text x="705" y="174" text-anchor="middle"
+        fill="#BF8F00" font-size="8">update</text>
+
+  <!-- Arrow: KG → Planning (state feeds back) -->
+  <line x1="720" y1="300" x2="690" y2="300" stroke="#BF8F00" stroke-width="1.2"
+        marker-end="url(#arrow)" />
+  <text x="705" y="314" text-anchor="middle"
+        fill="#BF8F00" font-size="8">context</text>
+
+  <!-- ============================================== -->
+  <!--  VISION-AUGMENTED GENERATION (bottom)          -->
+  <!-- ============================================== -->
+  <rect x="320" y="415" width="380" height="50" rx="3" ry="3"
+        fill="#E8DAEF" stroke="#7B4EA3" stroke-width="1.2" />
+  <text x="510" y="438" text-anchor="middle"
+        fill="#4A235A" font-size="12" font-weight="600">Vision-Augmented Answer Generation</text>
+  <text x="510" y="454" text-anchor="middle"
+        fill="#7B4EA3" font-size="9">Fig/Table refs → PyMuPDF render → GPT-4.1 Vision API</text>
+
+  <!-- Arrow: Vision → Answer -->
+  <line x1="510" y1="465" x2="510" y2="498" stroke="#555" stroke-width="1.2"
+        marker-end="url(#arrow)" />
+
+  <!-- ============================================== -->
+  <!--  FINAL ANSWER (bottom)                         -->
+  <!-- ============================================== -->
+  <rect x="390" y="502" width="240" height="36" rx="3" ry="3"
+        fill="#548235" stroke="none" />
+  <text x="510" y="525" text-anchor="middle"
+        fill="#fff" font-size="13" font-weight="600">Final Answer + KG + Trajectory</text>
+
+  <!-- ============================================== -->
+  <!--  FIGURE CAPTION                                -->
+  <!-- ============================================== -->
+  <text x="460" y="575" text-anchor="middle" fill="#333" font-size="11">
+    <tspan font-weight="700">Figure 1.</tspan>
+    <tspan> Overview of the proposed LLM-based planning pipeline for regulatory document exploration.</tspan>
+  </text>
+  <text x="460" y="592" text-anchor="middle" fill="#555" font-size="10">
+    The agent iteratively plans tool actions on vectorless document trees (left), builds a Dynamic Sub-KG
+  </text>
+  <text x="460" y="607" text-anchor="middle" fill="#555" font-size="10">
+    with two-tier domain edges (right), and terminates when evidence is sufficient (avg 2.3 hops).
+  </text>
+  <text x="460" y="622" text-anchor="middle" fill="#555" font-size="10">
+    Vision augmentation is applied once at the final answer step for cost efficiency.
+  </text>
+
+</svg>
+
+</body>
+</html>

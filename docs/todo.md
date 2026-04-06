@@ -76,6 +76,12 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 ### Documentation
 - [x] ~~Update CLAUDE.md with current architecture~~ (done v0.2.2)
 - [ ] Add architecture diagram reflecting Vision RAG + reference linking
+  - [x] ~~Setup design pipeline: HTML/CSS → PNG via Playwright~~ (2026-04-06)
+  - [x] ~~Setup OpenPencil MCP for Claude Code~~ (2026-04-06, `design/setup_mcp.sh`)
+  - [ ] **Figure 1**: Overall pipeline diagram (methodology overview)
+  - [ ] **Figure 2**: Document tree + tool interaction
+  - [ ] **Figure 3**: Dynamic Sub-KG with 2-tier edge ontology
+  - [ ] **Figure 4**: Benchmark design (3-axis orthogonal)
 - [ ] Document evaluation setup and reproduction steps
 
 ### Future Extensions

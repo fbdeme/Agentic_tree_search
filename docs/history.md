@@ -798,6 +798,26 @@ pred.json 변환 후 `benchmark/llm_judge.py`로 3-평가자 Judge 별도 실행
 
 ---
 
+## Paper Figure Design Pipeline (2026-04-06)
+
+**Date**: 2026-04-06
+
+Setup for creating publication-quality methodology figures.
+
+### Design Decisions
+- **HTML/CSS → PNG pipeline**: Playwright headless Chromium for rendering. Prototyped Figure 1 (pipeline overview) but quality insufficient for top-tier venues.
+- **OpenPencil MCP**: Switched to AI-assisted design via `@open-pencil/mcp` (90+ tools). Each team member can use Claude Code to programmatically create/edit .fig files.
+- **Setup script**: `design/setup_mcp.sh` — one-command install (bun + MCP + patch + Claude Code registration).
+- **Patch required**: `@open-pencil/core` package has missing subpath exports (color-management, constants, etc.). Script auto-patches 150+ exports.
+- **Separate infra project**: OpenPencil server deployed at `github.com/fbdeme/openpencil-server` (Docker + Cloudflare Quick Tunnel) for web-based visual collaboration.
+
+### Files Added
+- `design/setup_mcp.sh` — MCP setup script for team
+- `design/figures/figure1_pipeline.html` — HTML/CSS prototype (reference)
+- `design/figures/figure1_pipeline.png` — Rendered PNG (reference)
+
+---
+
 ## Known Issues (Unresolved)
 
 1. **FC structural ceiling ~0.5**: Agent uses different evidence nodes → different wording.
