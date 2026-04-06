@@ -558,43 +558,9 @@
 
 ### 6.1 Ablation Study
 
-#### 6.1.1 Main Ablation: Edge Inference 제거 (200Q)
+#### 6.1.1 Component Ablation (10Q, 4 variants)
 
-**가장 비용이 큰 컴포넌트(65%)인 엣지 추론을 제거하고 200문항 전체에서 평가.**
-
-| 메트릭 | full (planning + edges) | no_edges (planning only) | 차이 |
-|--------|:----------------------:|:-----------------------:|:----:|
-| **3-Judge 정확도** | 81.0% (162/200) | **81.5% (163/200)** | +0.5%p |
-| Faithfulness | **0.930** | 0.897 | −0.033 |
-| Context Recall | **0.930** | 0.919 | −0.011 |
-| Factual Correctness | 0.420 | 0.417 | −0.003 |
-| 비용/문항 | $0.215 | **$0.076** | **−65%** |
-| 시간/문항 | 115.3s | **47.5s** | **−59%** |
-| 토큰/문항 | 86,072 | **30,911** | **−64%** |
-
-**핵심 발견: Planning이 정확도의 핵심 동인**
-- 엣지 추론을 완전히 제거해도 정확도가 유지됨 (오히려 +0.5%p)
-- **Planning만으로 4개 벡터 기반 RAG 베이스라인을 상회** (81.5% vs RAPTOR 75.5%)
-- 엣지 추론은 비용의 65%를 차지하지만 정확도 기여 없음
-
-**엣지가 제공하는 것과 제공하지 않는 것:**
-- ❌ 정확도 향상: 200Q에서 차이 없음
-- △ Faithfulness: +0.033 (방향 일관적이나 미미, 통계적 유의성 미검증)
-- ✅ 추적 가능성: "Section A SATISFIES Regulation B" 형태의 인간 가독 근거 경로
-
-**Head-to-head 분석:**
-- 공통 오답: 25문항 (두 시스템 모두 어려운 문항)
-- full만 오답: 13문항 / no_edges만 오답: 12문항 → 거의 대칭 (실행 변동 수준)
-
-**Post-retrieval vs retrieval-time edges:**
-- 본 결과는 **검색 후(post-retrieval)** 증거 간 관계를 추론하는 엣지가 정확도에 기여하지 않음을 보여줌
-- 이는 **검색 자체를 위한(retrieval-time)** 엣지(GraphRAG의 그래프 탐색, LightRAG의 이중 레벨 검색)에 대한 결론이 아님 — 역할이 근본적으로 다름
-
-#### 6.1.2 Component Ablation (10Q, 보조 분석)
-
-10문항에서 4개 variant를 비교하여 Vision, Browse-first의 기여를 확인.
-
-최종 시스템에서 핵심 컴포넌트를 하나씩 제거하여 각각의 기여를 측정. 10문항(3 reasoning_type × 3 complexity × 4 question_type 포괄)에 대해 4개 variant 실행.
+최종 시스템에서 핵심 컴포넌트를 하나씩 제거하여 각각의 기여를 탐색. 10문항(3 reasoning_type × 3 complexity × 4 question_type 포괄)에 대해 4개 variant 실행.
 
 **Variant 정의:**
 
@@ -673,6 +639,42 @@
 | Vision RAG (복합) | composite: Ours 85.0% vs RAPTOR 72.5% | **+12.5%p** |
 | 2티어 엣지 | judgment × cross_doc: 94.3% vs RAPTOR 88.6% | **+5.7%p** |
 | 경량 인덱싱 | 트리 빌드 7.6분 vs GraphRAG 40분 | **5.3× 빠름** |
+
+#### 6.1.2 Scale-up: Edge Inference 제거 (200Q)
+
+10Q ablation에서 엣지 추론이 가장 비용이 크고(65%), Q058(VIOLATES case)에서 흥미로운 결과를 보였으므로, **200문항 전체로 확대하여 통계적 신뢰도를 확보.**
+
+| 메트릭 | full (planning + edges) | no_edges (planning only) | 차이 |
+|--------|:----------------------:|:-----------------------:|:----:|
+| **3-Judge 정확도** | 81.0% (162/200) | **81.5% (163/200)** | +0.5%p |
+| Faithfulness | **0.930** | 0.897 | −0.033 |
+| Context Recall | **0.930** | 0.919 | −0.011 |
+| Factual Correctness | 0.420 | 0.417 | −0.003 |
+| 비용/문항 | $0.215 | **$0.076** | **−65%** |
+| 시간/문항 | 115.3s | **47.5s** | **−59%** |
+
+**10Q에서의 기대와 200Q 결과의 괴리:**
+- 10Q: full=10/10, no_edges=9/10 → 엣지가 중요해 보였음
+- 200Q: full=81.0%, no_edges=81.5% → **엣지 제거 시 정확도가 오히려 유지/소폭 상승**
+- 10Q의 Q058(VIOLATES case) 오답은 200Q에서 재현되지 않음 (둘 다 O) → 10Q 결과는 샘플 크기 한계로 인한 노이즈였을 가능성
+
+**핵심 발견: Planning이 정확도의 핵심 동인**
+- 엣지 추론을 완전히 제거해도 정확도가 유지됨
+- **Planning(도구 선택, 동적 종료, browse-first)만으로 4개 RAG 베이스라인 상회** (81.5% vs RAPTOR 75.5%)
+- 엣지 추론은 비용의 65%를 차지하지만 정확도 기여 없음
+
+**엣지가 제공하는 것과 제공하지 않는 것:**
+- ❌ 정확도 향상: 200Q에서 차이 없음
+- △ Faithfulness: +0.033 (방향 일관적이나 미미, 통계적 유의성 미검증)
+- ✅ 추적 가능성: "Section A SATISFIES Regulation B" 형태의 인간 가독 근거 경로
+
+**Head-to-head 분석:**
+- 공통 오답 25문항, full만 오답 13문항, no_edges만 오답 12문항 → 거의 대칭 (실행 변동 수준)
+
+**Post-retrieval vs retrieval-time edges:**
+- 본 결과는 **검색 후(post-retrieval)** 증거 간 관계를 추론하는 엣지가 정확도에 기여하지 않음을 보여줌
+- 이는 **검색 자체를 위한(retrieval-time)** 엣지(GraphRAG, LightRAG의 그래프 탐색)에 대한 결론이 아님 — 역할이 근본적으로 다름
+- LLM은 답변 생성 시 노드 내용만으로도 관계를 암묵적으로 추론할 수 있으며, 명시적 엣지 추론은 이를 중복하는 것으로 보임
 
 ### 6.2 엣지 분포 분석 (7,391 edges, 200문항)
 
