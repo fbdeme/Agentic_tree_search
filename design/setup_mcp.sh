@@ -1,23 +1,33 @@
 #!/bin/bash
 # OpenPencil MCP setup script for Claude Code
 # Usage: bash design/setup_mcp.sh
+#
+# This script:
+# 1. Installs bun (if missing)
+# 2. Installs @open-pencil/mcp in ~/.openpencil-mcp
+# 3. Patches missing exports in @open-pencil/core
+# 4. Starts MCP HTTP server on port 7600
+# 5. Registers with Claude Code (HTTP transport)
 
 set -e
+
+MCP_DIR="$HOME/.openpencil-mcp"
+MCP_PORT=7600
+MCP_WS_PORT=7601
 
 echo "=== OpenPencil MCP Setup ==="
 
 # 1. Check bun
 if ! command -v bun &> /dev/null; then
-    echo "[1/4] Installing bun..."
+    echo "[1/5] Installing bun..."
     curl -fsSL https://bun.sh/install | bash
     export PATH="$HOME/.bun/bin:$PATH"
 else
-    echo "[1/4] bun found: $(bun --version)"
+    echo "[1/5] bun found: $(bun --version)"
 fi
 
 # 2. Create local MCP workspace
-MCP_DIR="$HOME/.openpencil-mcp"
-echo "[2/4] Setting up MCP at $MCP_DIR..."
+echo "[2/5] Setting up MCP at $MCP_DIR..."
 
 mkdir -p "$MCP_DIR"
 cd "$MCP_DIR"
@@ -30,7 +40,7 @@ bun add @open-pencil/mcp > /dev/null 2>&1
 echo "  Installed @open-pencil/mcp"
 
 # 3. Patch missing exports in @open-pencil/core
-echo "[3/4] Patching @open-pencil/core exports..."
+echo "[3/5] Patching @open-pencil/core exports..."
 python3 -c "
 import json, os
 
@@ -68,17 +78,37 @@ with open('node_modules/@open-pencil/core/package.json', 'w') as f:
 print(f'  Patched {added} missing exports')
 "
 
-# 4. Register with Claude Code
-echo "[4/4] Registering MCP with Claude Code..."
-MCP_ENTRY="$MCP_DIR/node_modules/@open-pencil/mcp/dist/index.js"
+# 4. Start MCP server (kill existing if running)
+echo "[4/5] Starting MCP server on port $MCP_PORT..."
+lsof -ti:$MCP_PORT,$MCP_WS_PORT 2>/dev/null | xargs -r kill -9 2>/dev/null || true
+sleep 1
+
 BUN_PATH="$(which bun)"
+MCP_ENTRY="$MCP_DIR/node_modules/@open-pencil/mcp/dist/index.js"
+nohup "$BUN_PATH" "$MCP_ENTRY" > /tmp/openpencil-mcp.log 2>&1 &
+MCP_PID=$!
+sleep 2
 
-# Remove existing if any
+if kill -0 $MCP_PID 2>/dev/null; then
+    echo "  MCP server running (PID: $MCP_PID)"
+    echo "  HTTP: http://127.0.0.1:$MCP_PORT"
+    echo "  MCP:  http://127.0.0.1:$MCP_PORT/mcp"
+else
+    echo "  ERROR: MCP server failed to start. Check /tmp/openpencil-mcp.log"
+    exit 1
+fi
+
+# 5. Register with Claude Code (HTTP transport)
+echo "[5/5] Registering MCP with Claude Code..."
 claude mcp remove open-pencil 2>/dev/null || true
-
-claude mcp add --transport stdio open-pencil -- "$BUN_PATH" "$MCP_ENTRY"
+claude mcp add --transport http open-pencil "http://127.0.0.1:$MCP_PORT/mcp"
 
 echo ""
 echo "=== Setup complete! ==="
-echo "Restart Claude Code to use OpenPencil MCP."
-echo "Available tools: create_shape, set_fill, open_file, save_file, export, etc. (90+ tools)"
+echo ""
+echo "MCP server is running in background."
+echo "Restart Claude Code to use OpenPencil MCP (90+ design tools)."
+echo ""
+echo "To stop the server:  kill $MCP_PID"
+echo "To check logs:       cat /tmp/openpencil-mcp.log"
+echo "To restart server:   bash design/setup_mcp.sh"
