@@ -84,12 +84,14 @@ Agentic_tree_search/
 │       └── experiment_analysis.md
 │
 ├── research_paper/                    # [논문] 섹션별 원고 + 작성 관리
+│   ├── main.md                        # ★ 논문 전체 구조 인덱스 (핵심 주장, 수치, 라인 번호)
 │   ├── title_abstract.md, introduction.md, related_works.md, method.md
 │   ├── benchmark.md, experiment.md, conclusion.md, references.md
 │   └── docs/                          # 논문 작성 관점 관리 문서
 │       ├── concepts.md                # 핵심 컨셉, 포지셔닝, 메시지
 │       ├── current_status.md          # 섹션별 완성도
 │       ├── todo.md, issues.md, history.md
+│       └── supplementary/             # 리뷰 시뮬레이션 등 참고 자료
 │
 └── notebooks/                         # Jupyter notebooks
 ```
