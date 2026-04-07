@@ -33,7 +33,7 @@ Task tracking for the Multimodal Regulatory Document Exploration Agent.
 - [ ] Address edge explosion (judgment avg 48.7 edges) — consider selective pairing or max edge limits
 
 ### Benchmark Improvement
-- [ ] Request benchmark v3 with improvements (see docs/benchmark_feedback.md):
+- [ ] Request benchmark v3 with improvements (see docs/supplementary/benchmark_feedback.md):
   - Comprehensive expected_answers (multiple valid perspectives)
   - Source-pinned questions (reduce ambiguity)
   - 30%+ "No" judgment questions (test violation detection)

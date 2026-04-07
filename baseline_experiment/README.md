@@ -12,7 +12,7 @@ baseline_experiment/
 └── scripts/        # RAPTOR 실행 스크립트 (01_build_index, 02_run_inference, 03_run_judge)
 ```
 
-상세 가이드: `docs/baseline_experiment_guide.md`
+상세 가이드: `docs/supplementary/baseline_experiment_guide.md`
 
 ---
 
@@ -241,4 +241,4 @@ benchmark/results/raptor/
 
 - RAPTOR 논문: Sarthi et al. (2024) "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval"
 - 원 구현: https://github.com/parthsarthi03/raptor
-- 비교 가이드: `docs/baseline_experiment_guide.md`
+- 비교 가이드: `docs/supplementary/baseline_experiment_guide.md`

@@ -27,7 +27,7 @@ Implements a State-Action-Transition loop with **PageIndex** as the environment 
 | GraphRAG (Edge et al. 2024) | 49.5% (99/200) | 61.5% | 49.2% | 38.6% | 37.3% | 42.0% | 47.5% |
 
 > Evaluator: 3-way majority vote — Tonic (GPT-4-turbo) · MLflow (GPT-4o) · Allganize (Claude Sonnet 4.5)
-> Full breakdown → [`docs/baseline_comparison_results.md`](docs/baseline_comparison_results.md)
+> Full breakdown → [`docs/supplementary/baseline_comparison_results.md`](docs/supplementary/baseline_comparison_results.md)
 
 ## Architecture
 
@@ -216,9 +216,9 @@ print(f'Accuracy: {correct}/{len(results)} = {correct/len(results)*100:.1f}%')
 
 | File | Purpose |
 |------|---------|
-| `docs/experiment_analysis.md` | 3-axis analysis: benchmark types × evaluation frameworks × KG edges |
+| `docs/supplementary/experiment_analysis.md` | 3-axis analysis: benchmark types × evaluation frameworks × KG edges |
 | `docs/research_proposal.md` | Academic research proposal with methodology and results |
-| `docs/benchmark_feedback.md` | Benchmark improvement proposals based on evaluation findings |
+| `docs/supplementary/benchmark_feedback.md` | Benchmark improvement proposals based on evaluation findings |
 | `docs/history.md` | Version-by-version development log |
 | `docs/todo.md` | Prioritized task tracking |
 

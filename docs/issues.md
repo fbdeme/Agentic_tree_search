@@ -22,7 +22,7 @@
 
 ### ISS-004: baseline_comparison_results.md 데이터 구버전
 - **발견일**: 2026-04-07
-- **설명**: `docs/baseline_comparison_results.md`의 HippoRAG(69.0%), LightRAG(67.5%)가 v1 결과. v2에서 HippoRAG 70.5%, LightRAG 73.0%로 변경됨. RAGAs Section 9도 미완료 상태 그대로
+- **설명**: `docs/supplementary/baseline_comparison_results.md`의 HippoRAG(69.0%), LightRAG(67.5%)가 v1 결과. v2에서 HippoRAG 70.5%, LightRAG 73.0%로 변경됨. RAGAs Section 9도 미완료 상태 그대로
 - **영향**: 논문에 구버전 수치 사용 위험
 
 ### ISS-005: PageIndex baseline에 note.md 없음

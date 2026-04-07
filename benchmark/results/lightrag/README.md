@@ -8,4 +8,4 @@ judge.json      # or judge_1.json ~ judge_8.json
 note.md         # Implementation notes (recommended)
 ```
 
-See `docs/baseline_experiment_guide.md` for the full guide.
+See `docs/supplementary/baseline_experiment_guide.md` for the full guide.

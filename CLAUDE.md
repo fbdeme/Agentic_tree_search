@@ -71,14 +71,29 @@ Agentic_tree_search/
 │   └── trees/                         # Generated PageIndex trees with references
 │
 ├── pageindex_core/                    # PageIndex library (gitignored, clone: git clone https://github.com/VectifyAI/PageIndex.git pageindex_core)
-├── docs/
+├── docs/                              # [관리] 프로젝트 관리 문서
 │   ├── current_status.md              # 프로젝트 현재 상태 스냅샷
 │   ├── issues.md                      # 알려진 문제점과 기술 부채
 │   ├── todo.md                        # Prioritized task tracking
 │   ├── history.md                     # Development history and design decisions
 │   ├── research_proposal.md           # Academic research proposal
-│   ├── baseline_experiment_guide.md   # 베이스라인 실험 가이드 (팀원용)
-│   └── baseline_comparison_results.md # 베이스라인 비교 결과 통합
+│   └── supplementary/                 # 참고/분석 문서
+│       ├── baseline_experiment_guide.md
+│       ├── baseline_comparison_results.md
+│       ├── benchmark_feedback.md
+│       └── experiment_analysis.md
+│
+├── research_paper/                    # [논문] 섹션별 원고
+│   ├── title_abstract.md
+│   ├── introduction.md
+│   ├── related_works.md
+│   ├── method.md
+│   ├── benchmark.md
+│   ├── experiment.md                  # Section 5 + 6 (Analysis 포함)
+│   ├── conclusion.md
+│   ├── references.md
+│   └── notes.md                       # 작성 메모, 포지셔닝
+│
 └── notebooks/                         # Jupyter notebooks
 ```
 
@@ -130,6 +145,17 @@ PageIndex: `PyMuPDF` (fitz), `PyPDF2`, `tiktoken`, `pyyaml`.
 - `docs/todo.md` — 우선순위별 작업 목록 (High/Medium/Low/Completed). 완료 시 Completed로 이동.
 - `docs/history.md` — 버전별 개발 로그. 이슈 발견과 해결 포함. 유의미한 변경 후 업데이트.
 - `docs/research_proposal.md` — 학술 연구 제안서. 방법론 변경 시 업데이트.
+
+### Supplementary docs (참고용)
+
+- `docs/supplementary/baseline_experiment_guide.md` — 베이스라인 실험 가이드 (팀원용)
+- `docs/supplementary/baseline_comparison_results.md` — 베이스라인 비교 결과 통합
+- `docs/supplementary/benchmark_feedback.md` — 벤치마크 피드백
+- `docs/supplementary/experiment_analysis.md` — 실험 분석
+
+### Research paper (논문 원고)
+
+- `research_paper/` — 섹션별 논문 원고. README.md에 구조 설명.
 
 ### 업데이트 규칙
 

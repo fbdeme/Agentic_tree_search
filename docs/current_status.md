@@ -60,7 +60,7 @@
 ## 다음 단계 (우선순위 순)
 
 1. **[진행 중] RAGAs 평가 실행**: HippoRAG, LightRAG, PageIndex (스크립트: `benchmark/evaluate_ragas.py`)
-2. **[진행 중] 결과 파일 정리**: 가이드(`docs/baseline_experiment_guide.md` Section 5.5)대로 `benchmark/results/{method}/ragas.json`에 통일
+2. **[진행 중] 결과 파일 정리**: 가이드(`docs/supplementary/baseline_experiment_guide.md` Section 5.5)대로 `benchmark/results/{method}/ragas.json`에 통일
 3. **[대기] 효율성 비교**: 5문항 샘플 실측 → 문항당 시간/토큰/비용 측정 (베이스라인별)
 4. **[대기] 논문 업데이트**: Section 5.5 효율성 비교 테이블 채우기
 5. **[대기] Paper figures**: Figure 1~4 디자인 (design/figures/)
