@@ -26,8 +26,8 @@
 | 10Q Component Ablation | 완료 |
 | 200Q no_edges Ablation | 완료 |
 | 효율성 비교 (Ours) | 완료 (5문항 샘플 실측) |
-| 효율성 비교 (베이스라인) | **일부 누락** (HippoRAG/LightRAG 쿼리 비용) |
-| LightRAG/HippoRAG v2 축별 테이블 | **미반영** |
+| 효율성 비교 (베이스라인) | **일부 추정값** (HippoRAG ~3초, LightRAG ~5초는 note.md 기반) |
+| LightRAG/HippoRAG v2 축별 테이블 | 반영 완료 (2026-04-07 확인) |
 
 ## 다음 작업
 
