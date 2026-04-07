@@ -1,4 +1,24 @@
-# RAPTOR Baseline Experiment
+# Baseline Experiments
+
+비교 모델 구현 코드 디렉토리. 각 방법론별 인덱싱/추론 스크립트가 포함되어 있습니다.
+결과 파일은 `benchmark/results/{method}/`에 저장합니다 (가이드 Section 5.5 참조).
+
+```
+baseline_experiment/
+├── graphrag/       # GraphRAG (Edge et al. 2024) — run_graphrag.py, settings.yaml
+├── hipporag/       # HippoRAG (Gutierrez et al. 2024) — run_hipporag.py
+├── lightrag/       # LightRAG (Guo et al. 2024) — run_lightrag.py
+├── raptor/         # RAPTOR (Sarthi et al. 2024) — 알고리즘 구현 코드
+└── scripts/        # RAPTOR 실행 스크립트 (01_build_index, 02_run_inference, 03_run_judge)
+```
+
+상세 가이드: `docs/baseline_experiment_guide.md`
+
+---
+
+아래는 RAPTOR 관련 상세 설명입니다.
+
+## RAPTOR Baseline
 
 **RAPTOR** (Recursive Abstractive Processing for Tree-Organized Retrieval, Sarthi et al. 2024) baseline for the GWM benchmark comparison.
 

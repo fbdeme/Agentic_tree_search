@@ -52,16 +52,33 @@ Agentic_tree_search/
 │   └── results/                       # Output (PNG, JSON, eval reports)
 │       └── eval/                      # RAGAs evaluation results
 │
+├── benchmark/                         # [평가] 평가 스크립트 + 전 모델 결과 (정규 위치)
+│   ├── llm_judge.py                   # LLM-as-Judge 평가
+│   ├── evaluate_ragas.py              # 베이스라인 RAGAs 평가
+│   ├── aggregate_results.py           # 교차 비교 리포트
+│   └── results/{method}/              # pred.json, judge.json, ragas.json, note.md
+│
+├── baseline_experiment/               # [코드] 베이스라인 구현 코드 (결과는 benchmark/results/)
+│   ├── graphrag/                      # GraphRAG 실행 스크립트 + 설정
+│   ├── hipporag/                      # HippoRAG 실행 스크립트
+│   ├── lightrag/                      # LightRAG 실행 스크립트
+│   ├── raptor/                        # RAPTOR 알고리즘 구현
+│   └── scripts/                       # RAPTOR 실행 스크립트
+│
 ├── data/
 │   ├── documents/                     # Source PDFs (gitignored)
-│   ├── qa_dataset/                    # 100-question benchmark (EN + KR)
+│   ├── qa_dataset/                    # 200-question benchmark (multihop_qa_benchmark_v2.json)
 │   └── trees/                         # Generated PageIndex trees with references
 │
-├── pageindex_core/                    # PageIndex open-source library (cloned)
+├── pageindex_core/                    # PageIndex library (gitignored, clone: git clone https://github.com/VectifyAI/PageIndex.git pageindex_core)
 ├── docs/
-│   ├── research_proposal.md           # Research proposal (updated methodology)
+│   ├── current_status.md              # 프로젝트 현재 상태 스냅샷
+│   ├── issues.md                      # 알려진 문제점과 기술 부채
+│   ├── todo.md                        # Prioritized task tracking
 │   ├── history.md                     # Development history and design decisions
-│   └── todo.md                        # Prioritized task tracking
+│   ├── research_proposal.md           # Academic research proposal
+│   ├── baseline_experiment_guide.md   # 베이스라인 실험 가이드 (팀원용)
+│   └── baseline_comparison_results.md # 베이스라인 비교 결과 통합
 └── notebooks/                         # Jupyter notebooks
 ```
 
@@ -106,6 +123,17 @@ PageIndex: `PyMuPDF` (fitz), `PyPDF2`, `tiktoken`, `pyyaml`.
 
 ## Docs Convention
 
-- `docs/history.md` — Version-by-version development log with issues found and resolutions. Update after each significant change.
-- `docs/todo.md` — Prioritized task list (High/Medium/Low/Completed). Move items to Completed when done.
-- `docs/research_proposal.md` — Academic research proposal. Update when methodology changes.
+### Core docs (항상 최신 유지)
+
+- `docs/current_status.md` — 프로젝트 현재 상태 스냅샷. 작업 시작 전/후 업데이트. 포함: 각 컴포넌트 상태, 실험 진행률, 다음 단계.
+- `docs/issues.md` — 현재 알려진 문제점과 기술 부채. 발견 즉시 등록, 해결 시 해결일과 방법 기록. 구조: Open / Resolved 섹션.
+- `docs/todo.md` — 우선순위별 작업 목록 (High/Medium/Low/Completed). 완료 시 Completed로 이동.
+- `docs/history.md` — 버전별 개발 로그. 이슈 발견과 해결 포함. 유의미한 변경 후 업데이트.
+- `docs/research_proposal.md` — 학술 연구 제안서. 방법론 변경 시 업데이트.
+
+### 업데이트 규칙
+
+1. **작업 시작 전**: `current_status.md` 읽고 현재 상태 파악 → 작업 계획 수립
+2. **작업 중 이슈 발견**: `issues.md`에 즉시 등록 (제목, 설명, 발견 경위)
+3. **작업 완료 후**: `current_status.md` 업데이트, `todo.md`에서 완료 처리, 유의미한 변경이면 `history.md`에 기록
+4. **docs 간 참조**: 문서 간 중복 최소화, 상세 내용은 해당 문서에 두고 링크로 연결
