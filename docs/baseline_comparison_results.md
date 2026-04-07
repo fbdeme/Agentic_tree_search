@@ -1,8 +1,8 @@
-# GWM vs Baseline 비교 실험 결과 (통합)
+# Ours vs Baseline 비교 실험 결과 (통합)
 
 **최종 갱신**: 2026-03-31
 **원본 작성**: 김보경 (LightRAG, HippoRAG), RAPTOR/GraphRAG 브랜치 추가
-**프로젝트**: GWM-based Multimodal Regulatory Document Exploration Agent
+**프로젝트**: Multimodal Regulatory Document Exploration Agent
 
 ---
 
@@ -10,13 +10,13 @@
 
 ### 1.1 목적
 
-GWM Agent v0.4.6의 성능을 4개 베이스라인(RAPTOR, HippoRAG, LightRAG, GraphRAG)과 동일 벤치마크·동일 평가 프레임워크로 비교하여, GWM 방법론의 기여를 정량적으로 분리한다.
+Our agent v0.4.6의 성능을 4개 베이스라인(RAPTOR, HippoRAG, LightRAG, GraphRAG)과 동일 벤치마크·동일 평가 프레임워크로 비교하여, our method의 기여를 정량적으로 분리한다.
 
 ### 1.2 비교 대상
 
 | 방법론 | 논문 | 핵심 특징 |
 |--------|------|----------|
-| **GWM (ours)** | — | Vectorless, State-Action-Transition loop, Dynamic Sub-KG, Vision RAG |
+| **Ours** | — | Vectorless, State-Action-Transition loop, Dynamic Sub-KG, Vision RAG |
 | **RAPTOR** | Sarthi et al. (2024) | 재귀적 요약 트리 + collapse_tree 검색 |
 | **HippoRAG** | Gutierrez et al. (2024) | 해마 기반 연상 메모리 + KG + Personalized PageRank |
 | **LightRAG** | Guo et al. (2024) | 이중 레벨(entity + topic) 그래프 검색 + 벡터 DB |
@@ -40,7 +40,7 @@ GWM Agent v0.4.6의 성능을 4개 베이스라인(RAPTOR, HippoRAG, LightRAG, G
 
 ## 2. 실험 환경
 
-| 항목 | GWM | RAPTOR | LightRAG | HippoRAG | GraphRAG |
+| 항목 | Ours | RAPTOR | LightRAG | HippoRAG | GraphRAG |
 |------|-----|--------|----------|----------|----------|
 | 라이브러리 | (자체 구현) | 공식 레포 기반 | lightrag-hku v1.4.12 | hipporag 2.0.0a4 | graphrag 3.0.8 |
 | Python | 3.12 | 3.12 | 3.12 | 3.10 (별도 venv) | 3.13 (별도 venv) |
@@ -51,7 +51,7 @@ GWM Agent v0.4.6의 성능을 4개 베이스라인(RAPTOR, HippoRAG, LightRAG, G
 
 ## 3. 인덱싱 비용 비교
 
-| | **GWM** | **RAPTOR** | **LightRAG** | **HippoRAG** | **GraphRAG** |
+| | **Ours** | **RAPTOR** | **LightRAG** | **HippoRAG** | **GraphRAG** |
 |--|:-:|:-:|:-:|:-:|:-:|
 | 인덱싱 시간 | **0분** | 43.5분 | 52분 | 29분 | ~40분 |
 | 인덱싱 비용 | **$0** | ~$1.4 | $$$ | $$ | $$$ |
@@ -65,9 +65,9 @@ GWM Agent v0.4.6의 성능을 4개 베이스라인(RAPTOR, HippoRAG, LightRAG, G
 
 ### 4.1 Overall Accuracy (LLM-as-Judge)
 
-| 방법론 | Correct | Total | **Accuracy** | Δ vs GWM |
+| 방법론 | Correct | Total | **Accuracy** | Δ vs Ours |
 |--------|:-------:|:-----:|:------------:|:--------:|
-| **GWM (ours)** | **162** | 200 | **81.0%** | — |
+| **Ours** | **162** | 200 | **81.0%** | — |
 | RAPTOR | 151 | 200 | 75.5% | −5.5%p |
 | HippoRAG | 138 | 200 | 69.0% | −12.0%p |
 | LightRAG | 135 | 200 | 67.5% | −13.5%p |
@@ -79,33 +79,33 @@ GWM Agent v0.4.6의 성능을 4개 베이스라인(RAPTOR, HippoRAG, LightRAG, G
 
 ### 5.1 Reasoning Type별
 
-| Type (n) | **GWM** | **RAPTOR** | **HippoRAG** | **LightRAG** | **GraphRAG** |
+| Type (n) | **Ours** | **RAPTOR** | **HippoRAG** | **LightRAG** | **GraphRAG** |
 |----------|:-------:|:----------:|:------------:|:------------:|:------------:|
 | factual (70) | **74.3%** | 62.9% | 58.6% | 61.4% | 38.6% |
 | comparative (65) | **78.5%** | 72.3% | 63.1% | 66.2% | 49.2% |
 | judgment (65) | 90.8% | **92.3%** | 86.2% | 75.4% | 61.5% |
 
 **핵심 발견:**
-- **factual에서 GWM이 유일하게 70%+ 달성** — 동적 탐색이 구체적 수치/사실 검색에 효과적
-- **judgment에서 RAPTOR(92.3%)가 GWM(90.8%)을 근소하게 상회** — 재귀적 요약이 고수준 판단에 유리
+- **factual에서 Ours가 유일하게 70%+ 달성** — 동적 탐색이 구체적 수치/사실 검색에 효과적
+- **judgment에서 RAPTOR(92.3%)가 Ours(90.8%)를 근소하게 상회** — 재귀적 요약이 고수준 판단에 유리
 - **GraphRAG는 factual(38.6%)에서 최저** — 커뮤니티 요약 과정에서 구체적 수치가 손실
 
 ### 5.2 Complexity별
 
-| Level (n) | **GWM** | **RAPTOR** | **HippoRAG** | **LightRAG** | **GraphRAG** |
+| Level (n) | **Ours** | **RAPTOR** | **HippoRAG** | **LightRAG** | **GraphRAG** |
 |-----------|:-------:|:----------:|:------------:|:------------:|:------------:|
 | single_evidence (50) | **84.0%** | 74.0% | 70.0% | 72.0% | 50.0% |
 | multi_evidence (75) | **78.7%** | **78.7%** | 72.0% | 62.7% | 61.3% |
 | cross_document (75) | **81.3%** | 73.3% | 65.3% | 69.3% | 37.3% |
 
 **핵심 발견:**
-- **multi_evidence에서 GWM과 RAPTOR 동률(78.7%)**, GraphRAG(61.3%)도 선방
+- **multi_evidence에서 Ours와 RAPTOR 동률(78.7%)**, GraphRAG(61.3%)도 선방
 - **cross_document에서 GraphRAG(37.3%) 최저** — 커뮤니티 기반 검색이 문서 간 연결 추론에 취약
-- **GWM(81.3%)이 cross_document에서 차상위(RAPTOR 73.3%) 대비 +8.0%p**
+- **Ours(81.3%)가 cross_document에서 차상위(RAPTOR 73.3%) 대비 +8.0%p**
 
 ### 5.3 Question Type별
 
-| Type (n) | **GWM** | **RAPTOR** | **HippoRAG** | **LightRAG** | **GraphRAG** |
+| Type (n) | **Ours** | **RAPTOR** | **HippoRAG** | **LightRAG** | **GraphRAG** |
 |----------|:-------:|:----------:|:------------:|:------------:|:------------:|
 | text_only (80) | 76.2% | **80.0%** | 78.8% | 71.2% | 63.7% |
 | table_only (50) | **86.0%** | 68.0% | 56.0% | 60.0% | 42.0% |
@@ -114,15 +114,15 @@ GWM Agent v0.4.6의 성능을 4개 베이스라인(RAPTOR, HippoRAG, LightRAG, G
 
 **핵심 발견:**
 - **text_only에서 RAPTOR(80.0%) 1위** — 재귀 요약이 텍스트 전용 문항에서 유리
-- **table_only에서 GWM(86.0%) 압도적** — Vision RAG 효과 (+18~44%p vs 나머지)
+- **table_only에서 Ours(86.0%) 압도적** — Vision RAG 효과 (+18~44%p vs 나머지)
 - **image_only에서 GraphRAG(26.7%) 최저** — 텍스트 추출 기반이라 이미지 정보 완전 손실
-- **composite에서 GWM(85.0%) 압도적** — 멀티모달 + 멀티홉 조합에서 구조적 우위
+- **composite에서 Ours(85.0%) 압도적** — 멀티모달 + 멀티홉 조합에서 구조적 우위
 
 ---
 
 ## 6. 9-Cell Matrix (reasoning_type × complexity)
 
-### GWM
+### Ours
 
 | | single_evidence | multi_evidence | cross_document |
 |---|:-:|:-:|:-:|
@@ -163,11 +163,11 @@ GWM Agent v0.4.6의 성능을 4개 베이스라인(RAPTOR, HippoRAG, LightRAG, G
 | **judgment** | 80.0% | 76.0% | 48.6% |
 
 **9-Cell 핵심 발견:**
-- **GWM의 comparative × single_evidence = 100%** — 단일 증거 비교 문항 완벽 해결
-- **GWM의 judgment × cross_document = 94.3%** — 문서 간 교차 판단에서 압도적
+- **Ours의 comparative × single_evidence = 100%** — 단일 증거 비교 문항 완벽 해결
+- **Ours의 judgment × cross_document = 94.3%** — 문서 간 교차 판단에서 압도적
 - **RAPTOR의 judgment × multi_evidence = 96.0%** — 재귀 요약이 다중 증거 판단에 매우 효과적
 - **GraphRAG의 factual × cross_document = 26.7%** — 5개 방법론 중 최저 셀
-- **factual × cross_document**: 모든 방법론이 약점 (GWM 73.3% → GraphRAG 26.7%)
+- **factual × cross_document**: 모든 방법론이 약점 (Ours 73.3% → GraphRAG 26.7%)
 
 ---
 
@@ -188,21 +188,21 @@ GWM Agent v0.4.6의 성능을 4개 베이스라인(RAPTOR, HippoRAG, LightRAG, G
 - **15문항(7.5%)은 0/5 전원 오답** — 현재 RAG 기술의 공통 한계
 - 4/5 이상 = 115문항(57.5%) — 과반은 대부분의 방법론이 해결 가능
 
-### 7.2 GWM vs RAPTOR Head-to-Head
+### 7.2 Ours vs RAPTOR Head-to-Head
 
 | | 문항 수 |
 |--|:------:|
-| GWM 정답, RAPTOR 오답 | **25** |
-| RAPTOR 정답, GWM 오답 | 14 |
+| Ours 정답, RAPTOR 오답 | **25** |
+| RAPTOR 정답, Ours 오답 | 14 |
 | 동일 결과 | 161 |
 
-→ GWM이 RAPTOR보다 **net +11 문항 우위**
+→ Ours가 RAPTOR보다 **net +11 문항 우위**
 
 ---
 
 ## 8. 효율성 비교
 
-| | **GWM** | **RAPTOR** | **LightRAG** | **HippoRAG** | **GraphRAG** |
+| | **Ours** | **RAPTOR** | **LightRAG** | **HippoRAG** | **GraphRAG** |
 |--|:-:|:-:|:-:|:-:|:-:|
 | 사전 인덱싱 시간 | **0분** | 43.5분 | 52분 | 29분 | ~40분 |
 | 문항당 평균 시간 | ~100초 | ~2초 | ~7초 | ~3초 | ~5초 |
@@ -211,7 +211,7 @@ GWM Agent v0.4.6의 성능을 4개 베이스라인(RAPTOR, HippoRAG, LightRAG, G
 | 인덱싱 비용 | $0 | ~$1.4 | $$$ | $$ | $$$ |
 | 쿼리 비용 | ~$25 | — | — | — | ~$2.4 |
 
-GWM은 문항당 시간이 가장 길지만(동적 멀티홉 탐색), 사전 인덱싱이 없어 **문서 변경에 즉시 대응 가능**.
+Ours는 문항당 시간이 가장 길지만(동적 멀티홉 탐색), 사전 인덱싱이 없어 **문서 변경에 즉시 대응 가능**.
 
 ---
 
@@ -219,7 +219,7 @@ GWM은 문항당 시간이 가장 길지만(동적 멀티홉 탐색), 사전 인
 
 | 방법론 | retrieved_contexts | RAGAs 실행 | Faithfulness | Context Recall |
 |--------|:--:|:--:|:--:|:--:|
-| **GWM** | KG 기반 | 완료 | **0.93** | **0.93** |
+| **Ours** | KG 기반 | 완료 | **0.93** | **0.93** |
 | **RAPTOR** | 200/200 저장됨 | **실행 가능** | — | — |
 | **GraphRAG** | 200/200 저장됨 | **실행 가능** | — | — |
 | HippoRAG | 미저장 | 재실행 필요 | — | — |
@@ -230,17 +230,17 @@ GWM은 문항당 시간이 가장 길지만(동적 멀티홉 탐색), 사전 인
 
 ---
 
-## 10. GWM 방법론의 기여 분리
+## 10. Our method의 기여 분리
 
 | 기여 요소 | 근거 | 효과 |
 |-----------|------|------|
-| **Dynamic exploration** | cross_document: GWM 81.3% vs 차상위(RAPTOR) 73.3% | +8.0%p |
-| **Vision RAG (Table)** | table_only: GWM 86.0% vs 차상위(RAPTOR) 68.0% | +18.0%p |
-| **Vision RAG (Composite)** | composite: GWM 85.0% vs 차상위(RAPTOR) 72.5% | +12.5%p |
-| **Two-tier edge ontology** | judgment × cross_document: GWM 94.3% vs RAPTOR 88.6% | +5.7%p |
+| **Dynamic exploration** | cross_document: Ours 81.3% vs 차상위(RAPTOR) 73.3% | +8.0%p |
+| **Vision RAG (Table)** | table_only: Ours 86.0% vs 차상위(RAPTOR) 68.0% | +18.0%p |
+| **Vision RAG (Composite)** | composite: Ours 85.0% vs 차상위(RAPTOR) 72.5% | +12.5%p |
+| **Two-tier edge ontology** | judgment × cross_document: Ours 94.3% vs RAPTOR 88.6% | +5.7%p |
 | **Vectorless design** | 인덱싱 0분/$0 vs 29~52분/$$$ | 운영 비용 절감 |
 
-> text_only에서 RAPTOR(80.0%)가 GWM(76.2%)을 +3.8%p 상회 — GWM의 개선 여지.
+> text_only에서 RAPTOR(80.0%)가 Ours(76.2%)를 +3.8%p 상회 — Ours의 개선 여지.
 
 ---
 
@@ -250,13 +250,13 @@ GWM은 문항당 시간이 가장 길지만(동적 멀티홉 탐색), 사전 인
 
 | 순위 | 방법론 | Accuracy |
 |:----:|--------|:--------:|
-| 1 | **GWM (ours)** | **81.0%** |
+| 1 | **Ours** | **81.0%** |
 | 2 | RAPTOR | 75.5% |
 | 3 | HippoRAG | 69.0% |
 | 4 | LightRAG | 67.5% |
 | 5 | GraphRAG | 49.5% |
 
-**GWM이 차상위(RAPTOR) 대비 +5.5%p, 최하위(GraphRAG) 대비 +31.5%p 우위.**
+**Ours가 차상위(RAPTOR) 대비 +5.5%p, 최하위(GraphRAG) 대비 +31.5%p 우위.**
 
 핵심 기여:
 1. **멀티홉 교차 문서 검색**(cross_document +8.0%p vs RAPTOR) — State-Action-Transition 루프

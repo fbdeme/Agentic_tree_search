@@ -4,7 +4,7 @@
 
 ---
 
-## GWM Agent (v0.4.6) — 완료
+## Our Agent (v0.4.6) — 완료
 
 | 지표 | 값 |
 |------|-----|
@@ -28,14 +28,14 @@
 | **GraphRAG** | O | O | O | O |
 | **RAPTOR** | O | O | O | O |
 | **HippoRAG** | O (v2) | O (v2) | O | O |
-| **LightRAG** | O (v2) | O (v2) | **진행 중** | O |
-| **PageIndex** | O | O | **진행 중** | O |
+| **LightRAG** | O (v2) | O (v2) | O | O |
+| **PageIndex** | O | O | O | O |
 
 ### LLM-as-Judge 결과 비교
 
 | 방법론 | Accuracy | 데이터 버전 |
 |--------|:--------:|------------|
-| **GWM (ours)** | **81.0%** | main |
+| **Ours** | **81.0%** | main |
 | RAPTOR | 75.5% | main |
 | HippoRAG | 70.5% | v2 (baseline/lightrag 브랜치) |
 | LightRAG | 73.0% | v2 (baseline/lightrag 브랜치) |
@@ -48,12 +48,12 @@
 
 | 방법론 | Faithfulness | AR | CR | FC | 상태 |
 |--------|:-:|:-:|:-:|:-:|:---:|
-| GWM | 0.93 | — | 0.93 | 0.42 | 완료 |
+| Ours | 0.93 | — | 0.93 | 0.42 | 완료 |
 | GraphRAG | 0.28 | 0.59 | 0.18 | 0.32 | 완료 |
 | RAPTOR | 0.74 | 0.83 | 0.77 | 0.40 | 완료 |
 | HippoRAG | 0.76 | 0.83 | 0.76 | 0.37 | 완료 |
-| LightRAG | — | — | — | — | 진행 중 |
-| PageIndex | — | — | — | — | 진행 중 |
+| LightRAG | 0.89 | — | 0.76 | 0.37 | 완료 |
+| PageIndex | 0.58 | — | 0.44 | 0.28 | 완료 |
 
 ---
 

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-GWM (Graph World Model) based multimodal regulatory document exploration agent. Combines GPT-4.1 reasoning with PageIndex tree indexing to build dynamic knowledge graphs from NuScale FSAR documents. Uses a State-Action-Transition loop with dynamic termination and Vision-augmented answer generation.
+Multimodal regulatory document exploration agent. Combines GPT-4.1 reasoning with PageIndex tree indexing to build dynamic knowledge graphs from NuScale FSAR documents. Uses a State-Action-Transition loop with dynamic termination and Vision-augmented answer generation.
 
 ## Commands
 

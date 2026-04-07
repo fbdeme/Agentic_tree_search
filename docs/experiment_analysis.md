@@ -2,7 +2,7 @@
 
 **Date**: 2026-03-26
 **Version**: v0.4.6
-**Benchmark**: GWM Benchmark v2 (200 questions)
+**Benchmark**: Benchmark v2 (200 questions)
 
 ---
 

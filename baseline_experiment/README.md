@@ -20,7 +20,7 @@ baseline_experiment/
 
 ## RAPTOR Baseline
 
-**RAPTOR** (Recursive Abstractive Processing for Tree-Organized Retrieval, Sarthi et al. 2024) baseline for the GWM benchmark comparison.
+**RAPTOR** (Recursive Abstractive Processing for Tree-Organized Retrieval, Sarthi et al. 2024) baseline for the benchmark comparison.
 
 ---
 
@@ -36,7 +36,7 @@ NuScale FSAR Ch.01 + Ch.05 PDF를 RAPTOR 트리로 인덱싱한 후,
 | 생성 LLM | `gpt-4.1` |
 | Temperature | `0` |
 | max_tokens | `300` |
-| System prompt | GWM `generate_answer()`와 동일 |
+| System prompt | our agent `generate_answer()`와 동일 |
 
 ---
 
@@ -171,13 +171,13 @@ python baseline_experiment/scripts/03_run_judge.py --show-results
 
 | Method | Accuracy | n |
 |--------|:--------:|:-:|
-| **GWM v0.4.6** (비교) | **81.0%** | 200 |
+| **Ours** (비교) | **81.0%** | 200 |
 | **RAPTOR** | **75.5%** | 200 |
 | Δ | −5.5%p | |
 
 ### Reasoning Type별
 
-| reasoning_type | RAPTOR | GWM v0.4.6 |
+| reasoning_type | RAPTOR | Ours |
 |----------------|:------:|:----------:|
 | factual | 62.9% (44/70) | — |
 | comparative | 72.3% (47/65) | — |
@@ -185,7 +185,7 @@ python baseline_experiment/scripts/03_run_judge.py --show-results
 
 ### Complexity별
 
-| complexity | RAPTOR | GWM v0.4.6 |
+| complexity | RAPTOR | Ours |
 |------------|:------:|:----------:|
 | single_evidence | 74.0% (37/50) | — |
 | multi_evidence | 78.7% (59/75) | — |

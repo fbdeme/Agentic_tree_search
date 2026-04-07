@@ -31,7 +31,7 @@
     │  retriever.py  →  질문 임베딩 + collapse_tree 검색
     ▼
 [컨텍스트]  전 레벨 노드 코사인 유사도 정렬 → 2,000 token 예산까지 채움
-    │  gpt-4.1  system_prompt (GWM 동일)
+    │  gpt-4.1  system_prompt (our agent 동일)
     ▼
 [pred.json]  baseline_experiment/results/raptor/pred.json
 
@@ -59,7 +59,7 @@
 | 생성 LLM | **gpt-4.1** | 가이드 §4.1 필수 통일 항목 |
 | Temperature | **0** | 가이드 §4.1 |
 | max_tokens | **300** | 가이드 §4.1 |
-| System prompt | GWM `generate_answer()`와 동일 | 가이드 §4.3 |
+| System prompt | our agent `generate_answer()`와 동일 | 가이드 §4.3 |
 
 ---
 

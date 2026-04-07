@@ -1,12 +1,12 @@
 # Agentic Tree Search
 
-GWM (Graph World Model) based multimodal agent for multi-hop regulatory document exploration.
+Multimodal agent for multi-hop regulatory document exploration.
 
-Implements GWM's State-Action-Transition loop with **PageIndex** as the environment (World), dynamically constructing a knowledge graph from NuScale FSAR documents.
+Implements a State-Action-Transition loop with **PageIndex** as the environment (World), dynamically constructing a knowledge graph from NuScale FSAR documents.
 
 ## Results
 
-### GWM v0.4.6
+### Ours (v0.4.6)
 
 | Metric | Value |
 |--------|-------|
@@ -20,7 +20,7 @@ Implements GWM's State-Action-Transition loop with **PageIndex** as the environm
 
 | Method | Overall | judgment | comparative | factual | cross_document | table_only | composite |
 |--------|:-------:|:--------:|:-----------:|:-------:|:--------------:|:----------:|:---------:|
-| **GWM v0.4.6** | **81.0%** (162/200) | 90.8% | **78.5%** | **74.3%** | **81.3%** | **86.0%** | **85.0%** |
+| **Ours** | **81.0%** (162/200) | 90.8% | **78.5%** | **74.3%** | **81.3%** | **86.0%** | **85.0%** |
 | RAPTOR (Sarthi et al. 2024) | 75.5% (151/200) | **92.3%** | 72.3% | 62.9% | 73.3% | 68.0% | 72.5% |
 | HippoRAG (Gutierrez et al. 2024) | 69.0% (138/200) | 86.2% | 63.1% | 58.6% | 65.3% | 56.0% | 55.0% |
 | LightRAG (Guo et al. 2024) | 67.5% (135/200) | 75.4% | 66.2% | 61.4% | 69.3% | 60.0% | 65.0% |
@@ -34,7 +34,7 @@ Implements GWM's State-Action-Transition loop with **PageIndex** as the environm
 ```
 [User Query]
       ↓
-┌──────────────────────── GWM Agent ────────────────────────────┐
+┌──────────────────────── Our Agent ────────────────────────────┐
 │                                                                │
 │  State (Short-term Memory)       Action (Exploration)          │
 │  ┌─────────────────────┐         ┌───────────────────────────┐ │
@@ -87,7 +87,7 @@ Agentic_tree_search/
 │
 ├── benchmark/                     # LLM-as-Judge evaluation pipeline
 │   ├── config.py                  # Evaluator models, taxonomy, paths
-│   ├── run_baseline.py            # Answer collection (GWM agent or vanilla LLM)
+│   ├── run_baseline.py            # Answer collection (our agent or vanilla LLM)
 │   ├── llm_judge.py               # 3-evaluator majority vote (MAM-RAG Table 8)
 │   ├── aggregate_results.py       # Cross-model comparison tables
 │   ├── validate_dataset.py        # Dataset schema validation
@@ -138,7 +138,7 @@ PYTHONPATH=pageindex_core:$PYTHONPATH python experiments/build_trees.py
 #         data/trees/nuscale_ch05_structure.json (26 nodes, 29 figures, 30 tables)
 ```
 
-### Step 2: Collect GWM Agent Answers
+### Step 2: Collect Agent Answers
 
 ```bash
 # 8x parallel (25 questions each, ~40 min total)
@@ -224,7 +224,7 @@ print(f'Accuracy: {correct}/{len(results)} = {correct/len(results)*100:.1f}%')
 
 ## References
 
-- [Graph World Model (GWM)](https://arxiv.org/abs/2505.xxxxx) — State-Action-Transition framework
+- State-Action-Transition framework for agentic document exploration
 - [PageIndex](https://pageindex.ai/) — Vectorless reasoning-based RAG
 - [RAGAs](https://docs.ragas.io/) — RAG evaluation framework
 - [MAM-RAG](https://arxiv.org/) — LLM-as-Judge evaluation methodology

@@ -35,7 +35,7 @@
 - **설명**: 베이스라인 관련 파일이 3곳에 분산되어 있음
   - `baseline_experiment/` — RAPTOR 코드 + 스크립트 + 결과 (RAPTOR 전용)
   - `benchmark/` — 평가 스크립트 + 전 모델 결과 (가이드 기준 정규 위치)
-  - `experiments/` — GWM 전용 실행/평가 + GraphRAG/RAPTOR RAGAs 결과가 여기에도 있음
+  - `experiments/` — our agent 전용 실행/평가 + GraphRAG/RAPTOR RAGAs 결과가 여기에도 있음
 - **영향**: 결과 파일 찾기 어려움, 가이드와 실제 구조 불일치
 - **해결 방안**: 
   - 결과는 `benchmark/results/{method}/`로 통일 (가이드 기준)

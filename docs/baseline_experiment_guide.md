@@ -15,7 +15,7 @@
 
 ### 1.1 연구 개요
 
-이 프로젝트는 **GWM(Graph World Model) 기반 멀티모달 규제 문서 탐색 에이전트**입니다.
+이 프로젝트는 **멀티모달 규제 문서 탐색 에이전트**입니다.
 
 원자력 안전성 분석 보고서(FSAR)를 대상으로, 에이전트가 문서를 탐색하며 **동적 지식그래프(Dynamic Sub-KG)**를 구축하고, 이를 기반으로 규제 심사 질의에 답변합니다.
 
@@ -26,7 +26,7 @@
 - **Vision RAG**: 그림은 VLM 이미지로, 표는 구조화 텍스트로 처리
 - **Dual evaluation**: RAGAs + LLM-as-Judge 두 프레임워크로 평가
 
-### 1.2 현재 결과 (GWM Agent v0.4.6)
+### 1.2 현재 결과 (Our agent v0.4.6)
 
 | 지표 | 값 |
 |------|-----|
@@ -37,7 +37,7 @@
 
 ### 1.3 비교 실험의 목적
 
-동일한 벤치마크(200문항)와 동일한 평가 프레임워크로 **LightRAG, GraphRAG, RAPTOR, HippoRAG**의 성능을 측정하여, GWM 방법론의 기여를 분리합니다.
+동일한 벤치마크(200문항)와 동일한 평가 프레임워크로 **LightRAG, GraphRAG, RAPTOR, HippoRAG**의 성능을 측정하여, our method의 기여를 분리합니다.
 
 ---
 
@@ -123,7 +123,7 @@ ANTHROPIC_API_KEY=sk-ant-...   # Claude Sonnet 4.5 (Allganize 평가)
 | **공식 코드 사용** | 아래 4.4절 참조 | 자체 구현은 구현 차이가 결과를 오염시킴 |
 | **생성 LLM** | `gpt-4.1` | 모델 성능 차이가 방법론 비교를 오염시킴 |
 | **Temperature** | `0` 또는 `0.1` | 재현성 |
-| **답변 길이** | 1-2 문장 (max_tokens=300) | GWM과 동일 조건 |
+| **답변 길이** | 1-2 문장 (max_tokens=300) | our agent와 동일 조건 |
 | **데이터셋** | `multihop_qa_benchmark_v2.json` 전체 200문항 | 동일 벤치마크 |
 | **소스 문서** | 동일 PDF 2개 | 동일 정보 접근 |
 | **평가 프레임워크** | LLM-as-Judge + RAGAs 모두 | 이중 평가로 결과 신뢰도 확보 |
@@ -153,7 +153,7 @@ system_prompt = (
 )
 ```
 
-이 프롬프트는 GWM 에이전트의 `generate_answer()`와 동일합니다. 검색된 context를 user message에 포함하고, 위 system prompt로 답변을 생성하세요.
+이 프롬프트는 our agent의 `generate_answer()`와 동일합니다. 검색된 context를 user message에 포함하고, 위 system prompt로 답변을 생성하세요.
 
 ### 4.4 공식 코드/라이브러리 사용 규칙
 
@@ -245,7 +245,7 @@ system_prompt = (
 
 ```
 benchmark/results/
-  gwm/                    # GWM Agent (기존 결과)
+  gwm/                    # Our agent (기존 결과)
     pred_gwm_v046_*.json
     judge_gwm_v046_*.json
   lightrag/               # ← 여기에 저장
@@ -302,7 +302,7 @@ PYTHONPATH=pageindex_core:$PYTHONPATH python experiments/evaluate_baseline_ragas
 예상 시간: 200문항 × ~15초 = **~50분**
 예상 비용: ~$5
 
-> 기존 GWM용 `experiments/evaluate.py`는 에이전트를 실행하며 KG를 구축하므로 베이스라인에는 사용할 수 없습니다. 별도 스크립트 `experiments/evaluate_baseline_ragas.py`를 사용하세요.
+> 기존 our agent용 `experiments/evaluate.py`는 에이전트를 실행하며 KG를 구축하므로 베이스라인에는 사용할 수 없습니다. 별도 스크립트 `experiments/evaluate_baseline_ragas.py`를 사용하세요.
 
 ### 6.3 결과 확인
 
@@ -526,7 +526,7 @@ GitHub: https://github.com/OSU-NLP-Group/HippoRAG
 
 ## 9. 기록해야 하는 비용/효율 지표
 
-| 지표 | 설명 | GWM 참고값 |
+| 지표 | 설명 | Ours 참고값 |
 |------|------|-----------|
 | 사전 인덱싱 시간 | PDF → 인덱스 구축 | 0분 (vectorless) |
 | 사전 인덱싱 LLM 호출 | 인덱싱에 사용된 API 호출 수 | 0 |
@@ -540,7 +540,7 @@ GitHub: https://github.com/OSU-NLP-Group/HippoRAG
 ## 10. FAQ
 
 **Q: PDF에서 텍스트를 어떻게 추출하나요?**
-A: 각 방법론의 권장 방식을 사용하세요. 대부분 PyMuPDF, PyPDF2, 또는 자체 파서를 사용합니다. GWM은 PyMuPDF `page.get_text()`를 사용합니다.
+A: 각 방법론의 권장 방식을 사용하세요. 대부분 PyMuPDF, PyPDF2, 또는 자체 파서를 사용합니다. Our agent는 PyMuPDF `page.get_text()`를 사용합니다.
 
 **Q: 테이블과 이미지는 어떻게 처리하나요?**
 A: 각 방법론의 방식대로 처리하세요. 처리 못하는 경우 텍스트만으로 답변해도 됩니다. 어떻게 처리했는지 구현 노트에 기록해주세요.

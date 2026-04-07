@@ -1,6 +1,6 @@
 # TODO
 
-Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
+Task tracking for the Multimodal Regulatory Document Exploration Agent.
 
 ---
 
@@ -110,7 +110,7 @@ Task tracking for the GWM Multimodal Regulatory Document Exploration Agent.
 - [x] Exclude already-explored nodes in search
 - [x] Unified edge inference (new↔existing + new↔new pairs)
 - [x] Two-tier edge ontology (Structural + Semantic)
-- [x] GWM Intended/Unintended Action correction in research proposal
+- [x] Intended/Unintended Action correction in research proposal
 - [x] Dynamic termination condition (sufficient evidence → early stop)
 - [x] Summary-based KG context (fix content truncation issue)
 - [x] Research proposal with updated methodology (docs/research_proposal.md)

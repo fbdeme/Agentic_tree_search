@@ -67,7 +67,7 @@ generate_text_embeddings ✅  lancedb 벡터스토어
 | 인덱싱 비용 | **별도 기록 필요** (OpenAI 대시보드 확인 권장) |
 | 인덱싱 소요 시간 | 약 40분 (extract_graph + community_reports 포함) |
 
-> 참고: GWM은 인덱싱 시간 0분, 비용 $0 (vectorless BM25)
+> 참고: Ours는 인덱싱 시간 0분, 비용 $0 (vectorless BM25)
 
 ---
 
@@ -159,10 +159,10 @@ graphrag/
 | 지표 | 값 |
 |------|----|
 | **GraphRAG Accuracy** | **49.5%** (99/200) |
-| GWM v0.4.6 (비교) | 81.0% (162/200) |
+| Ours (비교) | 81.0% (162/200) |
 | LightRAG (비교) | 67.5% (135/200) |
 | RAPTOR (비교) | 75.5% (151/200) |
-| 차이 (vs GWM) | **-31.5%p** |
+| 차이 (vs Ours) | **-31.5%p** |
 
 ### Reasoning Type별
 
@@ -203,4 +203,4 @@ graphrag/
 - **cross_document 37.3%**: 커뮤니티 기반 검색이 문서 간 연결 추론에 취약
 - **image_only 26.7%**: 텍스트 추출 기반 인덱싱으로 이미지/그림 정보 손실
 - **judgment 61.5%**: 커뮤니티 요약이 고레벨 판단형 질문에는 상대적으로 유효
-- **인덱싱 비용 높음**: 사전 인덱싱에 LLM 다수 호출 필요 (GWM $0 대비 상당한 비용)
+- **인덱싱 비용 높음**: 사전 인덱싱에 LLM 다수 호출 필요 (Ours $0 대비 상당한 비용)
