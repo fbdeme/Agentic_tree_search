@@ -27,4 +27,6 @@
 - [x] ~~200Q no_edges ablation~~ → Planning이 핵심, 엣지 정확도 기여 없음
 - [x] ~~트리 빌드 토큰 비용 측정~~
 - [x] ~~논문 리포지셔닝: Planning 중심으로 전환~~
-- [ ] HippoRAG, LightRAG retrieved_contexts 재수집 → RAGAS 완전 비교
+- [x] ~~HippoRAG, LightRAG retrieved_contexts 재수집 → RAGAS 완전 비교~~ (2026-04-07, 6개 모델 전체 RAGAs 완료)
+- [ ] 효율성 비교 (Section 5.5): HippoRAG/LightRAG 쿼리 비용 데이터 보완
+- [ ] LightRAG v2(73.0%), HippoRAG v2(70.5%) 결과로 Section 5.3 세부 축별 테이블 업데이트

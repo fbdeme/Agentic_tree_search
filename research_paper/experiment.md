@@ -24,8 +24,8 @@
 | **Ours (planning only)** | **81.5%** | **92.3%** | **80.0%** | **72.9%** | **84.0%** | **86.0%** | **77.5%** |
 | Ours (planning + edges) | 81.0% | 90.8% | 78.5% | 74.3% | 81.3% | 86.0% | 85.0% |
 | RAPTOR | 75.5% | 92.3% | 72.3% | 62.9% | 73.3% | 68.0% | 72.5% |
-| HippoRAG             |      69.0%      |      86.2%      |      63.1%      |      58.6%      |      65.3%      |      56.0%      |      55.0%      |
-| LightRAG             |      67.5%      |      75.4%      |      66.2%      |      61.4%      |      69.3%      |      60.0%      |      65.0%      |
+| LightRAG             |      73.0%      |      92.3%      |      66.1%      |      61.4%      |      76.0%      |      60.0%      |      67.5%      |
+| HippoRAG             |      70.5%      |      86.2%      |      63.1%      |      62.9%      |      69.3%      |      64.0%      |      60.0%      |
 | GraphRAG             |      49.5%      |      61.5%      |      49.2%      |      38.6%      |      37.3%      |      42.0%      |      47.5%      |
 
 ### 5.4 RAGAS 결과 (Ours)
@@ -37,27 +37,29 @@
 | Context Recall      | **0.93** |  0.92  |      0.91      | **0.96** |
 | Factual Correctness |      0.42      |  0.35  | **0.49** |      0.41      |
 
-**RAGAS 비교 (Ours vs RAPTOR vs GraphRAG):**
+**RAGAS 비교 (전체 모델):**
 
-| 메트릭              | **Ours** | RAPTOR | GraphRAG |
-| ------------------- | :------------------: | :----: | :------: |
-| Faithfulness        |    **0.93**    |  0.74  |   0.28   |
-| Answer Relevancy    |    **0.84**    |  0.83  |   0.59   |
-| Context Recall      |    **0.93**    |  0.77  |   0.18   |
-| Factual Correctness |    **0.42**    |  0.40  |   0.32   |
+| 메트릭              | **Ours** | LightRAG | RAPTOR | HippoRAG | PageIndex | GraphRAG |
+| ------------------- | :------: | :------: | :----: | :------: | :-------: | :------: |
+| Faithfulness        | **0.93** |   0.89   |  0.74  |   0.76   |   0.58    |   0.28   |
+| Answer Relevancy    | **0.84** |   0.83   |  0.83  |   0.83   |   0.77    |   0.59   |
+| Context Recall      | **0.93** |   0.88   |  0.77  |   0.76   |   0.66    |   0.18   |
+| Factual Correctness |   0.42   |   0.36   |**0.40**|   0.37   |   0.30    |   0.32   |
 
-> Ours가 모든 RAGAS 메트릭에서 최고 성능. GraphRAG는 Faithfulness 0.28, Context Recall 0.18 — 커뮤니티 요약에서 구체적 사실이 손실되는 구조적 문제.
+> Ours가 Faithfulness(0.93), Context Recall(0.93)에서 압도적 1위. LightRAG가 Faith 0.89로 차상위 — hybrid 검색이 관련 context를 잘 가져옴. GraphRAG는 Faith 0.28, CR 0.18 — 커뮤니티 요약에서 구체적 사실 손실. PageIndex(retrieval only)는 Faith 0.58로 planning 없는 검색의 한계.
 
-**RAGAS by question_type (RAPTOR / GraphRAG):**
+**RAGAS by reasoning_type (전체 모델):**
 
-| Type       | RAPTOR Faith | RAPTOR CR | GraphRAG Faith | GraphRAG CR |
-| ---------- | :----------: | :-------: | :------------: | :---------: |
-| text_only  |     0.79     |   0.79   |      0.16      |    0.19    |
-| table_only |     0.77     |   0.66   |      0.38      |    0.09    |
-| image_only |     0.63     |   0.86   |      0.32      |    0.25    |
-| composite  |     0.71     |   0.79   |      0.36      |    0.20    |
+| reasoning_type | 메트릭 | **Ours** | LightRAG | RAPTOR | HippoRAG | PageIndex | GraphRAG |
+| -------------- | ------ | :------: | :------: | :----: | :------: | :-------: | :------: |
+| factual        | Faith  | **0.92** |   0.91   |  0.81  |   0.84   |   0.58    |   0.26   |
+| factual        | CR     | **0.92** |   0.86   |  0.75  |   0.79   |   0.57    |   0.11   |
+| comparative    | Faith  | **0.92** |   0.88   |  0.68  |   0.70   |   0.54    |   0.32   |
+| comparative    | CR     | **0.91** |   0.89   |  0.74  |   0.71   |   0.67    |   0.18   |
+| judgment       | Faith  | **0.97** |   0.89   |  0.74  |   0.74   |   0.63    |   0.27   |
+| judgment       | CR     | **0.96** |   0.91   |  0.82  |   0.76   |   0.76    |   0.25   |
 
-> RAPTOR image_only CR 0.86 (재귀 요약이 이미지 설명 포착). GraphRAG table_only CR **0.09** — 사실상 표 정보 검색 불가.
+> judgment에서 Ours Faith 0.97, CR 0.96 — planning loop이 규제 판단에 필요한 증거를 거의 완벽하게 수집. factual에서 GraphRAG CR 0.11 — 구체적 수치가 커뮤니티 요약 과정에서 소실.
 
 ### 5.5 효율성 비교
 
