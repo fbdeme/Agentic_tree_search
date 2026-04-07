@@ -56,12 +56,8 @@ Task tracking for the Multimodal Regulatory Document Exploration Agent.
 - [ ] Add image analysis to `summarize_node()` for figure-heavy nodes (cost-benefit analysis needed)
 
 ### Ablation Study
-- [ ] Implement baseline comparisons:
-  - [ ] Vanilla RAG (vector DB + chunking)
-  - [ ] GraphRAG baseline
-  - [ ] LightRAG baseline
-  - [ ] PageIndex without KG (retrieval only, no edge inference)
-- [ ] Compare cost (API calls, tokens, time) across methods
+- [x] ~~Implement baseline comparisons~~ — 완료 (2026-04-07): GraphRAG, LightRAG, HippoRAG, RAPTOR, PageIndex 전체 RAGAs + LLM-as-Judge + 효율성 비교
+- [x] ~~Compare cost across methods~~ — 완료 (2026-04-07): 5문항 샘플 tiktoken 추정으로 전 모델 비용 산출
 
 ---
 
