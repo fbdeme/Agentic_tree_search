@@ -14,8 +14,8 @@
 - **필요 조치**: BM25-only baseline 추가 (planning 없이 단순 top-k retrieval → generate)
 - **난이도**: 중 (run_baseline.py에 BM25-only 모드 추가)
 
-### PISS-011: 자체 벤치마크만 사용 (W2→W3)
-- **심각도**: Major
+### PISS-011: 자체 벤치마크만 사용 (W3)
+- **심각도**: Minor (Section 6.5에서 5가지 한계를 이미 상세히 인정, 외부 검증 부재 명시)
 - **문제**: 200문항 직접 제작/평가 → 편향 가능성. 공인 벤치마크(HotpotQA, MuSiQue) 결과 없음
 - **대응 옵션**:
   - (A) HotpotQA에서 실험 추가 — 시간 소요 큼
