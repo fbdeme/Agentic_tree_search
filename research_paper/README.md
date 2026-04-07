@@ -5,7 +5,7 @@
 **타겟**: LM4Plan @ ICML 2026 (마감 4/24)
 **상태**: 초안 (개조식 흐름 정리용)
 
-## 구조
+## 원고 섹션
 
 | 파일 | 섹션 | 설명 |
 |------|------|------|
@@ -17,7 +17,16 @@
 | experiment.md | Section 5-6 | Experiments + Analysis |
 | conclusion.md | Section 7 | Conclusion |
 | references.md | References | 인용 목록 |
-| notes.md | — | 작성 메모, 포지셔닝, 리뷰어 예상 Q&A |
+
+## 논문 작성 관리 (docs/)
+
+| 파일 | 역할 |
+|------|------|
+| docs/concepts.md | 핵심 컨셉, 포지셔닝, 타겟 학회, 핵심 메시지 |
+| docs/current_status.md | 각 섹션 완성도, 데이터 현황, 다음 작업 |
+| docs/todo.md | 논문 완성 전 할 일 (우선순위별) |
+| docs/issues.md | 약점, 리뷰어 예상 질문, 미해결 사항 |
+| docs/history.md | 논문 작성 이력 (포지셔닝 변경, 리비전 등) |
 
 ## 원본
 

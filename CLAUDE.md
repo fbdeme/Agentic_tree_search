@@ -83,16 +83,13 @@ Agentic_tree_search/
 │       ├── benchmark_feedback.md
 │       └── experiment_analysis.md
 │
-├── research_paper/                    # [논문] 섹션별 원고
-│   ├── title_abstract.md
-│   ├── introduction.md
-│   ├── related_works.md
-│   ├── method.md
-│   ├── benchmark.md
-│   ├── experiment.md                  # Section 5 + 6 (Analysis 포함)
-│   ├── conclusion.md
-│   ├── references.md
-│   └── notes.md                       # 작성 메모, 포지셔닝
+├── research_paper/                    # [논문] 섹션별 원고 + 작성 관리
+│   ├── title_abstract.md, introduction.md, related_works.md, method.md
+│   ├── benchmark.md, experiment.md, conclusion.md, references.md
+│   └── docs/                          # 논문 작성 관점 관리 문서
+│       ├── concepts.md                # 핵심 컨셉, 포지셔닝, 메시지
+│       ├── current_status.md          # 섹션별 완성도
+│       ├── todo.md, issues.md, history.md
 │
 └── notebooks/                         # Jupyter notebooks
 ```
@@ -153,9 +150,15 @@ PageIndex: `PyMuPDF` (fitz), `PyPDF2`, `tiktoken`, `pyyaml`.
 - `docs/supplementary/benchmark_feedback.md` — 벤치마크 피드백
 - `docs/supplementary/experiment_analysis.md` — 실험 분석
 
-### Research paper (논문 원고)
+### Research paper (논문 원고 + 작성 관리)
 
 - `research_paper/` — 섹션별 논문 원고. README.md에 구조 설명.
+- `research_paper/docs/` — 논문 작성 관점의 관리 문서. 프로젝트 docs/와 동일한 패턴(concepts, current_status, todo, issues, history) 적용.
+  - `concepts.md` — 논문 포지셔닝, 타겟 학회, 핵심 메시지. 방향 변경 시 업데이트.
+  - `current_status.md` — 섹션별 완성도, 데이터 현황. 작업 전후 업데이트.
+  - `todo.md` — 논문 완성 전 할 일. 완료 시 Completed로 이동.
+  - `issues.md` — 약점, 리뷰어 예상 질문. 대응 전략 포함.
+  - `history.md` — 포지셔닝 변경, 리비전 등 주요 작성 이력.
 
 ### 업데이트 규칙
 
