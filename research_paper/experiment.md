@@ -110,7 +110,9 @@ When pre-indexing and query costs are combined, our system has the highest total
 
 The per-question breakdown illustrates the dynamic termination effect concretely. A simple factual question (Q001) terminates in 1 hop at a cost of $0.03, comparable to baseline costs, while complex multi-hop questions (Q191) require 4 hops and cost $0.29. The majority of our system's cost is thus concentrated in genuinely complex queries.
 
-**Per-question cost breakdown for Ours (5-question sample):**
+**Per-question cost breakdown for Ours (5-question sample run):**
+
+> Token counts and costs below are from a dedicated profiling run on 5 representative questions. Node and edge counts may differ slightly from the main 200Q evaluation due to LLM non-determinism across runs.
 
 | QID  | Type                 | Hops | Nodes | Edges |    Tokens | Time |  Cost |
 | ---- | -------------------- | :-: | :--: | :--: | ------: | ---: | ----: |
@@ -197,7 +199,7 @@ To further decompose the gains of our full system relative to RAPTOR across the 
 | ------------------- | -------------------------------------------- | -------------------- |
 | Dynamic exploration | cross_document: Ours 81.3% vs RAPTOR 73.3%   | **+8.0%p**     |
 | Vision RAG (tables)     | table_only: Ours 86.0% vs RAPTOR 68.0%       | **+18.0%p**    |
-| Vision RAG (composite)   | composite: Ours 77.5% vs RAPTOR 72.5%        | **+5.0%p**    |
+| Planning + Vision (composite)   | composite: Ours 77.5% vs RAPTOR 72.5%        | **+5.0%p**    |
 | Two-tier edges          | judgment × cross_doc: 94.3% vs RAPTOR 88.6% | **+5.7%p**     |
 | Lightweight indexing         | Tree build 7.6 min vs GraphRAG 40 min             | **5.3× faster** |
 
@@ -275,7 +277,7 @@ The 29 cases where RAGAS rates highly but Judge rejects (RAGAS Good + Judge X) r
 
 #### System Limitations
 
-Our system underperforms RAPTOR on text-only questions (76.2% vs. 80.0%, −3.8%p), suggesting that RAPTOR's recursive summarization is more effective for long text passages; adding summary nodes to the tree is a potential improvement. The average per-query cost of $0.21 (93s, 86K tokens) is substantially higher than RAPTOR (~$0.01, 1.8s), though dynamic termination partially mitigates this (Q001: 1 hop/$0.03 vs. Q191: 4 hops/$0.29), and 8× parallelization reduces total query time to ~39 minutes. In the regulatory context, this cost should be weighed against the alternative: a human reviewer examining the same FSAR sections would require hours per question at substantially higher labor cost, and the system's 92.3% accuracy on the 35 judgment × cross-document questions — the core regulatory review task — suggests the cost premium is concentrated where it delivers the most value. A follow-reference tool for directly navigating "see Table 5.1-1" references remains unimplemented.
+Our system underperforms RAPTOR on text-only questions (76.2% vs. 80.0%, −3.8%p), suggesting that RAPTOR's recursive summarization is more effective for long text passages; adding summary nodes to the tree is a potential improvement. The average per-query cost of $0.21 (93s, 86K tokens) is substantially higher than RAPTOR (~$0.01, 1.8s), though dynamic termination partially mitigates this (Q001: 1 hop/$0.03 vs. Q191: 4 hops/$0.29), and 8× parallelization reduces total query time to ~39 minutes. In the regulatory context, this cost should be weighed against the alternative: a human reviewer examining the same FSAR sections would require hours per question at substantially higher labor cost, and the system's 92.3% accuracy on the 35 judgment × cross-document questions — the core regulatory review task — suggests the cost premium is concentrated where it delivers the most value. A follow-reference tool for directly navigating "see Table 5.1-1" references remains unimplemented. The current max_hops=4 ceiling is used by 67% of queries; whether increasing the budget (e.g., to 6 or 8 hops) would improve accuracy on the most complex questions, or whether 4 hops is empirically sufficient for this document scale (2 chapters, ~900 nodes), remains an open question for future investigation.
 
 #### Benchmark Limitations
 
