@@ -1,16 +1,9 @@
 ## 7. Conclusion
 
-- 규제 문서 멀티홉 추론을 **LLM 기반 계획 문제**로 정의하고, 벡터리스 문서 트리 환경에서 이를 해결하는 아키텍처를 제안
+This paper frames multi-hop reasoning over regulatory documents as an LLM-based planning problem and proposes an architecture that resolves it within a vector-free document tree environment. By treating document navigation as a sequence of planned actions rather than a retrieval task, our system achieves 81.5% accuracy on the NuScale FSAR benchmark, surpassing all four vector-based RAG baselines. This result demonstrates that LLM-driven tool selection, dynamic termination via plan sufficiency judgment, and browse-first environment design together constitute a sufficient and competitive approach — without reliance on embeddings or chunking. The modality alignment principle underlying our design — representing both state (knowledge graph) and environment (document tree) in LLM-native text form — proves effective in a domain where dense retrieval methods have previously been the default.
 
-- **핵심 발견**:
-  1. **Planning이 정확도의 핵심 동인**: LLM의 도구 선택, 동적 종료(plan sufficiency), browse-first 환경 인식만으로 81.5% 달성 — 4개 벡터 기반 RAG 베이스라인 상회
-  2. **모달리티 정렬 원칙의 유효성**: 상태(KG)와 환경(트리)을 LLM의 네이티브 모달리티(텍스트)로 구축 → 임베딩/청킹 없이도 경쟁력 있는 성능
-  3. **Post-retrieval edge inference는 정확도에 기여하지 않음**: 200Q ablation에서 엣지 추론 제거 시 정확도 유지(81.0%→81.5%), 비용 65% 절감. 엣지의 가치는 추적 가능성에 한정
-  4. **경량 인덱싱**: 벡터리스 트리 구축 $4.06, 기존 대비 5–7× 빠름
+Our ablation study over 200 questions reveals an important distinction between accuracy and interpretability in post-retrieval processing. Removing edge inference from the knowledge graph leaves accuracy essentially unchanged (81.0% → 81.5%) while reducing cost by 65%, indicating that semantic edge construction does not contribute to answer quality. The value of edge inference is therefore scoped to traceability: in domains requiring auditable reasoning chains, it remains a selective option, but it should not be treated as a universal component of agentic retrieval pipelines. Additionally, the vector-free tree indexing approach requires only $4.1 to construct and runs 5.3× faster than the slowest baseline (GraphRAG), lowering the barrier for deployment in resource-constrained regulatory settings.
 
-- **LM4Plan 관점에서의 시사점**:
-  - LLM 기반 계획은 PDDL/로봇 환경뿐 아니라 **정보 환경(규제 문서)**에서도 유효
-  - 정보 환경에서의 planning은 검색(retrieval)을 대체하는 패러다임이 될 수 있음
-  - Post-retrieval verification(엣지 추론)은 정확도가 아닌 추적 가능성이 필요한 도메인에서 선택적으로 활용
+From the perspective of LM4Plan, our findings extend the applicability of LLM-based planning beyond PDDL formulations and robotics environments to information-rich, structured document settings. Planning over regulatory corpora is not merely an augmentation of retrieval — it represents an alternative paradigm in which the LLM governs exploration strategy, determines sufficiency, and integrates evidence across hops. Although we validate this approach on nuclear regulatory documents — where deep hierarchy, dense cross-references, and compliance judgment create the strongest case for planning over retrieval — the core architecture (document-as-environment, action interfaces, KG state, dynamic termination) is domain-agnostic; only the edge ontology requires domain adaptation. We expect similar benefits in other structured document domains such as aviation certification (FAA), pharmaceutical regulation (FDA), and legal compliance, where the same structural conditions hold. We hope this work encourages further investigation into planning-centric architectures for knowledge-intensive tasks, particularly in high-stakes domains where document structure and cross-reference fidelity are critical.
 
 ---

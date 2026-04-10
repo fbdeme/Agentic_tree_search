@@ -1,51 +1,44 @@
 # Paper TODO
 
-마감: **2026-04-24 (17일 남음)**
+마감: **2026-04-24 (14일 남음)**
 리뷰 시뮬레이션 v3 기준 (7/10, Accept with Minor Revision)
 
 ---
 
-## 필수 (Minor Revision — 이것 없으면 reject 위험)
+## 남은 작업
 
-### 1. Related Work에 agentic retrieval 추가 (W2)
-- [ ] APEX-Searcher (arXiv:2603.13853) 조사 + 차별화
-- [ ] PRISM (arXiv:2510.14278) 조사 + 차별화
-- [ ] Game of Thought (arXiv:2602.01708) — LM4Plan @ ICAPS 2025 accepted
-- [ ] Related Work 2.2에 "Agentic Information Retrieval" 소절 추가 (2-3 paragraphs)
-- [ ] 차별점: Ours = 도메인 특화 + 벡터리스 + edge ontology + vision vs 이들 = 범용 + RL/SFT
+- [ ] Figure 1: Overall pipeline (planning loop) — 팀원(kimmbk) 진행 중
+- [ ] Figure 2: 최소 1개 추가 (tree/KG/benchmark 중 택1) — 팀원 진행 중
+- [ ] (선택) 리뷰어 시뮬레이션 v4 재평가
 
-### 2. Online planning 명시 (W3)
-- [ ] Method에 1-2문장 추가: online planning / closed-loop 임을 명시
-
-## 강력 권장 (accept 확률 높임)
-
-### 3. Planning 기여 논의 강화 (W1)
-- [ ] 기존 데이터로 planning contribution 분리 서술:
-  - browse-first: CR 0.45 → 0.89 (+0.44) — method.md:51
-  - 동적 종료: avg 2.1-2.6 hops (max 4) — method.md:58
-  - 10Q no_browse_first: 9/10 (Q191 실패) — experiment.md:127
-  - PageIndex only (43.5%): planning 도구는 있으나 KG 상태 평가 없음
-- [ ] (선택) BM25-only baseline 추가 실험
-
-### 4. 논문체 변환 + Figure (W4)
-- [ ] Introduction → 논문체
-- [ ] Method → 논문체
-- [ ] Experiment → 논문체
-- [ ] Related Work → 논문체
-- [ ] Conclusion → 논문체
-- [ ] Figure 1: Overall pipeline (planning loop)
-- [ ] Figure 2: 최소 1개 추가 (tree/KG/benchmark 중 택1)
-
-## Medium
-
-- [ ] 제목 최종 선택
-- [ ] References [32]-[37] 정밀 검증
-- [ ] Abstract의 81.5% → HippoRAG v2(70.5%), LightRAG v2(73.0%) 반영 확인
+---
 
 ## Completed
 
-- [x] RAGAs 전 모델 완료 (2026-04-07)
-- [x] 논문 리포지셔닝: Planning 중심 (2026-04-04)
-- [x] 리뷰어 시뮬레이션 v1→v2→v3 (2026-04-07)
-- [x] main.md 논문 구조 인덱스 작성 (2026-04-07)
-- [x] 벤치마크 한계 인정 → 6.5에서 5가지 (이미 완료)
+### Phase 1: 내용 보강 (2026-04-09)
+- [x] Related Work에 agentic retrieval 추가 (W2): Self-RAG, PRISM, Search-o1, APEX-Searcher, Game of Thought
+- [x] Online planning 명시 (W3): Method 3.3에 closed-loop online planning
+- [x] Planning 기여 논의 강화 (W1): planning 분리 테이블 + agentic retrieval 비교
+
+### Phase 2: 논문체 변환 (2026-04-09)
+- [x] Introduction, Method, Experiment, Related Work, Conclusion → English academic prose
+
+### Phase 3: Introduction 재구성 (2026-04-10)
+- [x] Introduction 테이블/이모지 제거 → 순수 prose 스타일
+- [x] Contribution 재구성: "Document as text-based environment for agentic exploration" 중심
+
+### Phase 4: 마무리 (2026-04-10)
+- [x] Benchmark (Section 4) 논문체 변환
+- [x] 제목 확정: "LLM-Guided Planning for Multi-hop Regulatory Document Exploration"
+- [x] Abstract 수치 검증 (HippoRAG 70.5%, LightRAG 73.0%, Faith 0.93)
+- [x] References [32]-[37] 검증 및 수정 (4건 저자/제목 오류)
+- [x] 전체 통독 교정 (9건 수치/cross-ref/인용 형식 수정)
+- [x] References 한국어/이모지 제거
+
+### Phase 5: 기여 포인트 정립 + 선행연구 보강 (2026-04-10)
+- [x] Document-as-environment 선행연구 검증 (PageIndex, DocAgent, ReadAgent, BookRAG)
+- [x] Related Work §2.2에 ReadAgent [43], DocAgent [44], BookRAG [45] 추가
+- [x] PageIndex와의 차별점 명시 (프롬프트 기반 단일패스 vs 환경 + 에이전트 루프)
+- [x] Contribution 1 재정의: document as scalable text-based environment + agentic online planning
+- [x] 도메인 범용성 포지셔닝 (Method §3.1 + Conclusion)
+- [x] PageIndex baseline을 §5.2-5.3에 추가 (43.5% → planning 기여 +38.0%p 분리)

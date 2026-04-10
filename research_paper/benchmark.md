@@ -1,98 +1,60 @@
 ## 4. Benchmark: Nuclear Regulatory Multi-hop QA
 
-### 4.1 기존 벤치마크의 한계와 새 벤치마크의 필요성
+### 4.1 Motivation
 
-- 규제·기술 문서 QA 벤치마크는 다수 존재하나, 본 연구가 요구하는 **핵 규제 × 멀티홉 × 멀티모달 × 판단** 조합을 동시에 갖춘 벤치마크는 없음:
+Numerous benchmarks exist for document-based question answering, but none combine the four dimensions required by this work: nuclear regulatory domain, multi-hop reasoning, multimodal evidence (tables and engineering drawings), and regulatory judgment. The table below surveys the most relevant existing benchmarks along these dimensions.
 
-  | 벤치마크 | 문서 유형 | 문항 | 멀티홉 | 표 | 도면 | 교차문서 | 판단 |
-  |----------|----------|:----:|:------:|:--:|:----:|:-------:|:----:|
-  | NuclearQA [Acharya et al., 2023] | 핵 도메인 지식 | 100 | ❌ | ❌ | ❌ | ❌ | ❌ |
-  | FDARxBench [2025, arXiv:2603.19539]⁺ | FDA 의약품 라벨 | 17K | ✅ | ✅ | △ | ❌ | ✅ |
-  | MMLongBench-Doc [2024, arXiv:2407.01523]⁺ | 장문 PDF 7개 도메인 | 1,062 | ✅ | ✅ | ✅ | ❌ | ❌ |
-  | M3DocVQA [2024, arXiv:2411.04952]⁺ | 다양한 PDF | 2,441 | ✅ | ✅ | ✅ | ✅ | ❌ |
-  | DesignQA [2024, arXiv:2404.07917]⁺ | 공학 문서 + CAD | ~수백 | ❌ | ✅ | ✅ | ✅ | △ |
-  | SEC-QA [2025, arXiv:2406.14394]⁺ | SEC 재무 보고서 | 333 | ✅ | ✅ | ❌ | ✅ | ❌ |
-  | TAT-QA [2021, arXiv:2105.07624] | 재무 보고서 (표+텍스트) | 16K | ✅ | ✅ | ❌ | ❌ | ❌ |
-  | **Ours** | **핵 FSAR** | **200** | **✅** | **✅** | **✅** | **✅** | **✅** |
+| Benchmark | Document Type | Questions | Multi-hop | Tables | Figures | Cross-doc | Judgment |
+|----------|----------|:----:|:------:|:--:|:----:|:-------:|:----:|
+| NuclearQA [Acharya et al., 2023] | Nuclear domain knowledge | 100 | -- | -- | -- | -- | -- |
+| FDARxBench [2025] | FDA drug labels | 17K | Yes | Yes | Partial | -- | Yes |
+| MMLongBench-Doc [2024] | Long PDFs, 7 domains | 1,062 | Yes | Yes | Yes | -- | -- |
+| M3DocVQA [2024] | Diverse PDFs | 2,441 | Yes | Yes | Yes | Yes | -- |
+| DesignQA [2024] | Engineering docs + CAD | ~hundreds | -- | Yes | Yes | Yes | Partial |
+| SEC-QA [2025] | SEC financial reports | 333 | Yes | Yes | -- | Yes | -- |
+| TAT-QA [2021] | Financial reports (table+text) | 16K | Yes | Yes | -- | -- | -- |
+| **Ours** | **Nuclear FSAR** | **200** | **Yes** | **Yes** | **Yes** | **Yes** | **Yes** |
 
-  - FDARxBench가 가장 유사 (규제 문서 + 멀티홉 + 판단)하나, 단일 문서·도면 없음
-  - MMLongBench-Doc, M3DocVQA가 멀티모달 장문서에 강하나, 규제 판단(judgment) 문항 유형 없음
-  - DesignQA가 공학 문서 + 규정 준수에 유사하나, 멀티홉 추론 미지원
-  - **본 벤치마크의 고유 기여**: 핵 규제 도메인에서 멀티홉 교차 문서 추론 + 멀티모달(표·도면) + 규제 적합성 판단(judgment)을 결합한 **최초의 벤치마크**
+FDARxBench is the most similar (regulatory documents with multi-hop reasoning and judgment), but covers only single documents without engineering drawings. MMLongBench-Doc and M3DocVQA support multimodal long-document understanding but lack regulatory judgment question types. DesignQA addresses engineering documentation and regulatory compliance but does not support multi-hop reasoning. Our benchmark is the first to combine nuclear regulatory multi-hop cross-document reasoning with multimodal evidence (tables and engineering drawings) and regulatory conformance judgment.
 
-### 4.2 설계 원칙
+### 4.2 Design Principles
 
-- **3축 직교 분류 체계**: 모든 문항이 reasoning_type × complexity × question_type 3축에 태깅
+The benchmark is organized around a three-axis orthogonal classification scheme, where every question is tagged along reasoning type, complexity, and question type. Unlike single-dimensional difficulty labels (e.g., "easy/medium/hard"), three independent axes enable precise diagnosis of system weaknesses — for example, identifying a system that fails specifically on "factual x cross_document x table_only" questions.
 
-  - 단일 차원 분류(예: "easy/medium/hard")가 아닌 독립 3축 → 특정 약점을 정밀 진단 가능
-  - 예: "factual × cross_document × table_only"에서만 약한 시스템 식별 가능
-- **규제 심사 과정 모방**:
+The three reasoning types mirror the regulatory review process. **Factual** questions require single-fact retrieval (e.g., "What is the RCS operating pressure?"), corresponding to baseline verification in regulatory review. **Comparative** questions require cross-referencing (e.g., "Do the design parameters in Ch.01 Table 1.3-1 match the RCS specifications in Ch.05 Table 5.1-1?"), corresponding to document consistency checks. **Judgment** questions require regulatory conformance determination (e.g., "Does the ECCS design satisfy 10 CFR 50.46(b)?"), corresponding to the core task of regulatory review. The judgment x cross_document cell (35 questions) receives the largest allocation, reflecting the centrality and difficulty of this task in actual review practice.
 
-  - **factual**: 단일 사실 조회 — "RCS 운전 압력은?" (심사 기초 확인)
-  - **comparative**: 교차 비교 — "Ch.01의 설계 개요와 Ch.05의 상세 사양이 일치하는가?" (문서 간 일관성 검증)
-  - **judgment**: 규제 적합성 판단 — "ECCS 설계가 10 CFR 50.46(b) 요건을 만족하는가?" (심사의 핵심)
-  - judgment × cross_document(35문항)에 가장 큰 비중 — 실제 심사의 핵심 업무를 반영
-- **멀티모달 증거 다양성**:
+Four question types capture multimodal evidence diversity: text_only (80 questions) requiring only narrative text, table_only (50) requiring interpretation of specification tables, image_only (30) requiring interpretation of engineering drawings (P&IDs, system diagrams), and composite (40) requiring combined use of text, tables, and drawings. Each question includes ground_truth_evidence annotations specifying the source document, page, source type (text/table/figure), and relevant text — enabling evaluation to distinguish "correct answer from wrong evidence" and "incorrect answer from correct evidence." The benchmark contains 357 total evidence items: 152 text, 125 table, and 80 figure.
 
-  - text_only(80): 서술 텍스트만으로 답변 가능
-  - table_only(50): 규격 표(설계 파라미터, 재료 물성) 해석 필요
-  - image_only(30): 공학 도면(P&ID, 계통도) 해석 필요
-  - composite(40): 텍스트 + 표 + 도면 복합 활용 필요
-- **ground_truth_evidence 표기**: 각 문항에 정답 근거의 소스 문서, 페이지, 소스 타입(text/table/figure), 관련 텍스트를 명시
+### 4.3 Benchmark Composition
 
-  - 평가 시 "맞혔지만 틀린 근거"와 "틀렸지만 맞는 근거"를 구분 가능
-  - 총 357개 증거 조각: text 152, table 125, figure 80
+The source documents are NuScale FSAR Chapter 01 (352 pages) and Chapter 05 (160 pages), publicly available from the NRC. The 200 questions are distributed across the three axes as follows:
 
-### 4.3 벤치마크 상세 구성
+**Reasoning type x complexity:**
 
-- **소스 문서**: NuScale FSAR Ch.01 (352p) + Ch.05 (160p) — NRC 공개 자료
-- **총 200문항**, 3축 교차 분포:
+|                            | single_evidence | multi_evidence | cross_document |
+| -------------------------- | :-------------: | :------------: | :------------: |
+| **factual** (70)     |       30       |       25       |       15       |
+| **comparative** (65) |       15       |       25       |       25       |
+| **judgment** (65)    |        5        |       25       |  **35**  |
 
-  **reasoning_type × complexity:**
+> The judgment x cross_document cell (35 questions) is the largest, reflecting the most frequent and challenging task in actual regulatory review.
 
-  |                            | single_evidence | multi_evidence | cross_document |
-  | -------------------------- | :-------------: | :------------: | :------------: |
-  | **factual** (70)     |       30       |       25       |       15       |
-  | **comparative** (65) |       15       |       25       |       25       |
-  | **judgment** (65)    |        5        |       25       |  **35**  |
+**Question type distribution:**
 
+| text_only | table_only | image_only | composite |
+| :-------: | :--------: | :--------: | :-------: |
+|    80    |     50     |     30     |    40    |
 
-  > judgment × cross_document(35문항)가 최대 셀 — 실제 규제 심사에서 가장 빈번하고 어려운 작업
-  >
+Representative examples include: "What is the total electric output of a 12-module NuScale plant?" (factual/single/text), "Compare the operating parameters in Ch.01 Table 1.3-1 with the RCS volumes in Ch.05 Table 5.1-1" (comparative/cross/table), and "Is the integrated SG design described in Ch.01 and Ch.05 adequate for SGTR concerns?" (judgment/cross/composite, Q176).
 
-  **question_type 분포:**
+### 4.4 Dual Evaluation Framework
 
-  | text_only | table_only | image_only | composite |
-  | :-------: | :--------: | :--------: | :-------: |
-  |    80    |     50     |     30     |    40    |
-- **문항 예시**:
+Recognizing the limitations of any single evaluation approach, we adopt a dual framework combining continuous-scale (RAGAS) and binary (LLM-as-Judge) evaluation.
 
-  | 유형                         | 예시                                                                      |
-  | ---------------------------- | ------------------------------------------------------------------------- |
-  | factual / single / text      | "NuScale 원전 12모듈 기준 총 전기 출력은?"                                |
-  | comparative / cross / table  | "Ch.01 Table 1.3-1 운전 파라미터와 Ch.05 Table 5.1-1 RCS 체적을 비교하라" |
-  | judgment / cross / composite | "Ch.01과 Ch.05에 기술된 일체형 SG 설계가 SGTR 우려에 적절한가?" (Q176)    |
+RAGAS [Es et al., 2024] measures grounding quality — whether the answer is faithful to the retrieved context — across four metrics: Faithfulness (fraction of answer claims supported by context, detecting hallucination), Answer Relevancy (alignment with question intent), Context Recall (fraction of expected answer sentences supported by context, measuring retrieval completeness), and Factual Correctness (factual accuracy against the expected answer, wording-sensitive).
 
-### 4.4 이중 평가 프레임워크
+The LLM-as-Judge component employs three independent evaluators with majority voting: Tonic (GPT-4-turbo, 5-point scale, pass at 4+), MLflow (GPT-4o, dual similarity-correctness assessment), and Allganize (Claude Sonnet 4.5, 5-point scale, pass at 4+). A question is judged correct when at least two of three evaluators agree.
 
-- 단일 평가 프레임워크의 한계를 인식, **연속형(RAGAS) + 이진형(LLM-as-Judge)** 이중 평가 채택
-
-  | 프레임워크                        | 측정 대상                                   | 스케일    | 장점                            | 한계                                     |
-  | --------------------------------- | ------------------------------------------- | --------- | ------------------------------- | ---------------------------------------- |
-  | **RAGAS** [Es et al., 2024] | Grounding (답변이 검색된 문맥에 근거하는가) | 연속 0–1 | 세밀한 품질 측정, 메트릭별 진단 | 검색 문맥 밖 지식으로 맞힌 경우 과소평가 |
-  | **LLM-as-Judge**            | Correctness (답변이 기대 답변과 일치하는가) | 이진 O/X  | 실질적 정확도, 해석 용이        | 표현 불일치 시 과소평가                  |
-- **RAGAS 4개 메트릭**:
-
-  - Faithfulness: 답변의 각 claim이 검색 문맥에 근거하는 비율 → 환각 탐지
-  - Answer Relevancy: 답변이 질문 의도에 부합하는 정도
-  - Context Recall: 기대 답변의 각 문장이 검색 문맥에 뒷받침되는 비율 → 검색 완전성
-  - Factual Correctness: 기대 답변 대비 사실적 정확도 → wording-sensitive
-- **LLM-as-Judge 3-평가자 다수결**:
-
-  - Tonic (GPT-4-turbo): 5점 척도, ≥4점 → O
-  - MLflow (GPT-4o): 유사도 + 정확도 이중 판정
-  - Allganize (Claude Sonnet 4.5): 5점 척도, ≥4점 → O
-  - 3인 중 2인 이상 O → 최종 O (다수결)
-- **이중 평가의 근거**: 본 연구 결과에서 RAGAS-Judge 일치율 66.2% — 34%의 불일치가 상호 보완적 정보 제공 (6.4절 상세 분석)
+The dual approach is empirically motivated: the RAGAS-Judge agreement rate in our experiments is 66.2%, with the 34% disagreement providing complementary information. RAGAS excels at measuring grounding fidelity but underpenalizes correct answers derived from knowledge beyond the retrieved context; the Judge captures practical correctness but may reject answers with valid content expressed differently. Full complementarity analysis is presented in Section 6.4.
 
 ---

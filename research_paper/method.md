@@ -1,84 +1,65 @@
 ## 3. Method
 
-> **전체 파이프라인**: User Query → Planning Loop (State estimation → Action planning → Execution → Verification, max 4 hops) → Vision-Augmented Answer
+> **Overall pipeline**: User Query → Planning Loop (State estimation → Action planning → Execution → Verification, max 4 hops) → Vision-Augmented Answer
 
-### 3.1 Environment: 벡터리스 멀티모달 문서 트리
+### 3.1 Environment: Vector-Free Multimodal Document Tree
 
-- **표현**: JSON 계층 트리 — 장(chapter) → 절(section) → 단락(paragraph) 노드
-- **멀티모달 참조 링크**: 목록(LIST OF FIGURES/TABLES) 파싱 → 노드 텍스트 내 "Figure 5.1-1" 참조 탐지 → `references` 필드로 메타데이터 첨부
-  - 해결 문제: "figure on different page" — 참조 텍스트와 실제 도면이 다른 페이지에 위치하는 포맷 문제
-- **벡터리스 설계**: 임베딩/청킹 없음 → BM25Okapi [Robertson & Zaragoza, 2009] 기반 키워드 검색
-  - title 가중치 3×, 문서 길이 정규화 → 짧고 집중된 리프 노드가 자연스럽게 상위 랭크
-- **스케일**: Ch.01 866 노드(34 figures, 19 tables), Ch.05 26 노드(29 figures, 30 tables)
+While the planning loop described in this section (state estimation, action selection, dynamic termination) is architecturally domain-agnostic — applicable to any hierarchically structured document corpus — regulatory documents such as FSARs present the conditions under which this approach is most advantageous over conventional RAG: deep hierarchical structure that chunking destroys, dense cross-references between sections and figures, multimodal evidence (specification tables, engineering drawings) that co-determines answers, and a review process that inherently requires multi-hop evidence gathering with sufficiency judgment. The domain-specific component is the edge ontology (Section 3.4), which encodes regulatory reasoning relations (SATISFIES, VIOLATES); the rest of the architecture transfers directly to other structured document domains.
 
-### 3.2 State (단기 기억): Dynamic Sub-KG와 2티어 엣지 온톨로지
+The environment is represented as a JSON hierarchical tree organized into chapter → section → paragraph nodes, preserving the native structure of regulatory documents without any chunking or embedding. To support multimodal reasoning, the system parses the LIST OF FIGURES/TABLES and detects in-text references such as "Figure 5.1-1," attaching figure and table metadata to the corresponding nodes via a `references` field. This directly addresses the "figure on different page" problem, wherein the referencing text and the actual diagram reside on different pages of the PDF.
 
-- **정의**: 시각 $t$의 에이전트 상태 $s_t$ = 동적 지식 그래프 $G_t = (V_t, E_t)$
+Rather than relying on dense vector retrieval, the system adopts a vector-free design using BM25Okapi [Robertson & Zaragoza, 2009] keyword search over the full document tree. Section titles receive a 3× weight boost, and document-length normalization naturally promotes short, focused leaf nodes to higher rankings. At the scale evaluated in this work, the tree spans Ch.01 with 866 nodes (34 figures, 19 tables) and Ch.05 with 26 nodes (29 figures, 30 tables).
 
-  - 노드 $V_t$: 탐색으로 수집된 문서 섹션(증거) + 연관 멀티모달 참조
-  - 엣지 $E_t$: 2티어 도메인 특화 온톨로지 (신뢰도 ≥ 0.4 필터링)
-- **Tier 1 — 구조 엣지** (탐색 경로 backbone):
+### 3.2 State (Short-Term Memory): Dynamic Sub-KG and Two-Tier Edge Ontology
 
-  | 엣지       | 학술적 기원                                     | 도메인 적용                 |
-  | ---------- | ----------------------------------------------- | --------------------------- |
-  | REFERENCES | 인용 네트워크 [Garfield, 1979]                  | 섹션 A가 섹션 B를 교차 참조 |
-  | SPECIFIES  | SysML `<<refine>>` [Friedenthal et al., 2014] | 상위 기술의 세부 사양 제공  |
-- **Tier 2 — 의미 엣지** (규제 판단 관계):
+The agent state at timestep $t$ is defined as a dynamic knowledge graph $G_t = (V_t, E_t)$. The node set $V_t$ comprises document sections (evidence nodes) collected through exploration along with their associated multimodal references. The edge set $E_t$ is governed by a domain-specific two-tier ontology, with edges retained only when confidence is ≥ 0.4.
 
-  | 엣지                   | 학술적 기원                                                                    | 도메인 적용                                 |
-  | ---------------------- | ------------------------------------------------------------------------------ | ------------------------------------------- |
-  | SATISFIES / VIOLATES   | SysML 요구사항 추적 [Friedenthal et al., 2014]; 건설 규제 [Zhong et al., 2012] | 설계 결과 노드가 규제 요건 노드를 만족/위반 |
-  | SUPPORTS / CONTRADICTS | 논증 마이닝 [Peldszus & Stede, 2013]; 텍스트 함의 [Cabrio & Villata, 2012]     | 복수 문서 증거 상호 검증                    |
-  | LEADS_TO               | 인과 KG [Hassanzadeh et al., 2019]                                             | 사고 분석 보고서의 원인-결과 추적           |
-  | IS_PREREQUISITE_OF     | 전제 관계 학습 [Pan et al., 2017]                                              | 선결 검토 조건 문서 연결                    |
-- **경험적 근거**:
+Tier 1 consists of structural edges that form the backbone of the exploration trajectory:
 
-  - 단일 홉 사실 질문: 구조 엣지(REFERENCES, SPECIFIES) 지배 → 탐색 경로 형성
-  - 복합 멀티홉 판단 질문: 의미 엣지(SATISFIES, SUPPORTS) 출현 → 규제 준수 합성
-  - 정답(O) vs 오답(X): SUPPORTS +6.8%p, SATISFIES +3.2%p in correct answers
+| Edge | Academic Origin | Domain Application |
+| --- | --- | --- |
+| REFERENCES | Citation networks [Garfield, 1979] | Section A cross-references Section B |
+| SPECIFIES | SysML `<<refine>>` [Friedenthal et al., 2014] | Provides detailed specifications for a higher-level description |
 
-### 3.3 Action Planning: LLM 기반 도구 선택
+Tier 2 consists of semantic edges that capture regulatory reasoning relationships:
 
-- **기존 RAG와의 차이**: 임베딩 유사도 기반 수동 검색이 아닌, LLM이 현재 상태를 평가하고 다음 행동을 **계획**
+| Edge | Academic Origin | Domain Application |
+| --- | --- | --- |
+| SATISFIES / VIOLATES | SysML requirements tracing [Friedenthal et al., 2014]; construction regulations [Zhong et al., 2012] | Design outcome node satisfies or violates a regulatory requirement node |
+| SUPPORTS / CONTRADICTS | Argumentation mining [Peldszus & Stede, 2013]; textual entailment [Cabrio & Villata, 2012] | Cross-validation of evidence across multiple documents |
+| LEADS_TO | Causal KG [Hassanzadeh et al., 2019] | Cause-effect tracing in incident analysis reports |
+| IS_PREREQUISITE_OF | Prerequisite relation learning [Pan et al., 2017] | Linking documents that must be reviewed as prior conditions |
 
-  | Tool                        | 유추     | 기능                                   |
-  | --------------------------- | -------- | -------------------------------------- |
-  | `browse(doc_id, node_id)` | `ls`   | 트리 노드 자식 목록 — 계층적 드릴다운 |
-  | `read(doc_id, node_id)`   | `cat`  | 특정 노드 전체 내용 추출               |
-  | `search(keyword)`         | `grep` | BM25 랭킹 키워드 검색 (전문서)         |
-- **Browse-first 패턴**: Hop 1에서 문서 구조(목차)를 자동 주입 → 에이전트가 검색 전 전체 지도 파악
+Empirically, structural edges (REFERENCES, SPECIFIES) dominate in single-hop factual queries by forming the exploration path, while semantic edges (SATISFIES, SUPPORTS) emerge in composite multi-hop judgment queries to support regulatory compliance synthesis. In correct answers relative to incorrect ones, SUPPORTS appears +6.8 percentage points more frequently and SATISFIES +3.2 percentage points more frequently.
 
-  - 효과: single_evidence CR 0.45 → 0.89 (v0.4.5)
-- **PRF (Pseudo-Relevance Feedback, RM3)**: 상위 3개 검색 결과에서 쿼리 자동 확장
+### 3.3 Action Planning: LLM-Based Tool Selection
 
-  - 어휘 불일치(vocabulary mismatch) 해결, LLM 비용 0
-- **에이전트 메모리**: 검색 히스토리로 키워드 중복 방지 — 계획의 반복 회피
-- **Plan sufficiency (동적 종료)**: Hop 2부터 매 홉 전 LLM이 "현재 KG로 답변 가능한가?"를 판단 → 충분하면 조기 종료
-  - 이는 planning에서의 **goal test**에 해당 — 문항 복잡도에 따라 계획 깊이를 자동 조절
-  - 단순 factual (Q001): 1홉 17초 $0.03 / 복잡한 judgment (Q191): 4홉 140초 $0.29
-  - 평균 실제 홉 수: 2.1–2.6 (최대 4) — 불필요한 탐색을 자동으로 가지치기
+Rather than precomputing a full retrieval plan offline, the system performs closed-loop online planning. At each hop, the agent observes the current KG state $s_t$ and decides the next action $a_{t+1}$, with environment feedback (retrieved results) immediately incorporated into the subsequent plan. This constitutes a state-based iterative decision-making structure, distinct from the plan-then-execute separation of APEX-Searcher [Chen et al., 2026] and the token-level reactive retrieval of Self-RAG [Asai et al., 2024]. Unlike passive embedding-similarity retrieval in conventional RAG, the LLM actively evaluates the current state and plans the next action.
 
-### 3.4 Post-retrieval Edge Inference (선택적 컴포넌트)
+The agent has access to three tools that mirror familiar filesystem operations:
 
-- **역할**: 수집된 증거 간 관계를 명시화 — 상태 전이 $f_{tr}(s_t, a_t) \rightarrow s_{t+1}$와 동시에 수행
-- **참고**: 200Q ablation 결과, 이 컴포넌트는 정확도에 기여하지 않음 (Section 6.1 참조). 추적 가능성이 필요한 경우 선택적으로 활용
-- **Stage 1 — 자유형 기술 (Description)**: LLM이 두 노드 간 관계를 자연어 1문장으로 기술 (분류 압력 없음)
-  - LightRAG [Guo et al., 2024]의 free-form 관계 추출 방식 채택
-  - 예: "ECCS의 3 RVV + 2 RRV 설계는 10 CFR 50.46의 수용 기준을 충족하도록 구성됨"
-- **Stage 2 — 레이블 (Ontology Mapping)**: Stage 1 기술을 규제 도메인 온톨로지(SATISFIES, VIOLATES 등)로 매핑
-  - 매핑 불가 시 SEMANTIC으로 보존 → 관계 손실 없음
-- **Planning과의 관계**: Verification은 planning과 분리된 후처리가 아니라, **매 홉마다 planning loop 내에서 인터리빙** — 새 증거 수집(planning) 직후 관계 추론(verification) 수행, 그 결과가 다음 홉의 plan sufficiency 판단에 반영
-- **기존 접근과의 차이**: 임베딩 기반 암묵적 관계(GraphRAG, GWM) 대신 LLM 추론 기반 명시적 자연어 기술 → 검증 결과가 인간이 검사 가능
+| Tool | Analogy | Function |
+| --- | --- | --- |
+| `browse(doc_id, node_id)` | `ls` | List child nodes of a tree node — hierarchical drill-down |
+| `read(doc_id, node_id)` | `cat` | Extract the full content of a specific node |
+| `search(keyword)` | `grep` | BM25-ranked keyword search across all documents |
 
-### 3.5 Vision-Augmented 최종 답변 생성
+A browse-first pattern is enforced at Hop 1, where the document structure (table of contents) is automatically injected so that the agent obtains a global map before searching. This intervention improved single-evidence Context Recall from 0.45 to 0.89. To address vocabulary mismatch, Pseudo-Relevance Feedback (PRF, RM3) automatically expands queries using the top-3 retrieved results at zero additional LLM cost. The agent also maintains a search history to prevent duplicate keyword queries across hops.
 
-- **비용 효율 설계**: 멀티모달 처리는 최종 답변 생성 1회에만 적용
-  - 중간 탐색(search, plan, infer) 전부 텍스트 전용
-- **구현**:
-  1. KG 전체 노드의 Figure/Table references 수집
-  2. PyMuPDF로 해당 PDF 페이지 → JPEG 렌더링
-  3. 텍스트 KG 문맥 + 이미지 → GPT-4.1 vision API
-- **표 처리**: PyMuPDF `find_tables()`로 행/열 구조 추출 → 구조화 텍스트로 직접 전달 (VLM 이미지 불필요)
-  - 결과: table_only 86.0% (vs RAPTOR 68.0%, +18%p)
+Dynamic termination is implemented as a plan sufficiency check beginning at Hop 2: before each hop, the LLM judges whether the current KG already contains sufficient evidence to answer the query. If so, the agent terminates early. This functions as a goal test within the planning loop, automatically calibrating exploration depth to query complexity. Simple factual queries (e.g., Q001) complete in 1 hop (17 s, $0.03), while complex judgment queries (e.g., Q191) require 4 hops (140 s, $0.29). The mean hop count across 200 questions is 3.6 (maximum 4); simple factual queries often terminate in 1–2 hops, demonstrating that unnecessary exploration is pruned automatically.
+
+### 3.4 Post-Retrieval Edge Inference (Optional Component)
+
+Edge inference makes explicit the relationships among collected evidence nodes and is performed concurrently with the state transition $f_{tr}(s_t, a_t) \rightarrow s_{t+1}$. It is worth noting that ablation experiments on the 200-question benchmark found this component does not contribute to answer accuracy (see Section 6.1.2); it is therefore offered as an optional module for use cases requiring traceability.
+
+Inference proceeds in two stages. In Stage 1 (Description), the LLM produces a single natural-language sentence describing the relationship between two nodes, without imposing any classification pressure. This follows the free-form relation extraction approach of LightRAG [Guo et al., 2024]; for example: "The ECCS design of 3 RVV + 2 RRV is configured to meet the acceptance criteria of 10 CFR 50.46." In Stage 2 (Ontology Mapping), the free-form description is mapped onto the regulatory domain ontology (SATISFIES, VIOLATES, etc.). When no mapping is applicable, the relationship is preserved as SEMANTIC, ensuring no relational information is discarded.
+
+Crucially, verification is not a post-processing step separated from planning. Instead, it is interleaved within the planning loop at every hop: immediately after new evidence is retrieved (planning), relationship inference is performed (verification), and the resulting enriched KG state informs the plan sufficiency judgment for the subsequent hop. This design differs from embedding-based implicit relations used in GraphRAG and GWM; by grounding relationships in explicit LLM-generated natural-language descriptions, the inference results remain human-inspectable.
+
+### 3.5 Vision-Augmented Final Answer Generation
+
+Multimodal processing is applied exclusively at the final answer generation step, with all intermediate operations (search, plan, infer) remaining text-only. This cost-efficient design avoids the expense of vision API calls during iterative exploration while still enabling visually grounded final answers.
+
+The implementation proceeds in three steps: (1) all Figure/Table references across KG nodes are collected; (2) the corresponding PDF pages are rendered to JPEG using PyMuPDF; and (3) the full text KG context together with the rendered images is passed to the GPT-4.1 vision API. For tables specifically, PyMuPDF's `find_tables()` function extracts row and column structure directly as structured text, making VLM image processing unnecessary. This approach achieves 86.0% accuracy on table-only questions, compared to 68.0% for RAPTOR (+18 percentage points).
 
 ---

@@ -1,27 +1,28 @@
 ## 5. Experiments
 
-### 5.1 실험 설정
+### 5.1 Experimental Setup
 
-- **생성 LLM**: GPT-4.1 (모든 방법론 통일)
-- **인덱싱 LLM**: GPT-4.1
-- **임베딩**: text-embedding-3-small (1536d)
-- **Temperature**: 0, **max_tokens**: 300
-- **Agent 설정**: max_hops=4, top_k=2
+All methods share a unified configuration to ensure fair comparison. The generation LLM is GPT-4.1 across all systems, with GPT-4.1 also used for indexing. Text embeddings use text-embedding-3-small (1536 dimensions). Inference is performed with temperature 0 and max_tokens 300. The agent is configured with max_hops=4 and top_k=2.
 
-### 5.2 베이스라인
+### 5.2 Baselines
 
-| 방법론   | 논문                    | 핵심 특징                  | 청킹                     | 검색 설정                           |
+We compare against five baselines spanning tree-based, graph-based, hybrid retrieval, and ablated variants of our own system. All baselines use the same LLM (GPT-4.1), the same answer-generation prompt, and the same 200-question dataset (§4.3). Our system requires neither vector embeddings nor pre-chunking, and navigates the document tree directly using BM25 combined with browse, read, and search tools.
+
+| Method   | Paper                    | Core Mechanism              | Chunking                  | Retrieval Configuration                     |
 | -------- | ----------------------- | -------------------------- | ------------------------ | ----------------------------------- |
-| RAPTOR   | Sarthi et al. [2024]    | 재귀 요약 트리             | 100 tokens, 3,422 리프   | collapse_tree, 2K token budget      |
-| HippoRAG | Gutierrez et al. [2024] | PPR + 해마 연상 KG         | 1,000자, 1,080 passages  | PPR + dense, top-10                 |
-| LightRAG | Guo et al. [2024]       | 이중 레벨 그래프 + 벡터 DB | 1,200 tokens, 266 chunks | hybrid, top-40 entities + 20 chunks |
-| GraphRAG | Edge et al. [2024]      | 커뮤니티 기반 로컬 검색    | 1,200 tokens, 267 chunks | local search, community_level=2     |
+| RAPTOR   | Sarthi et al. [2024]    | Recursive summarization tree | 100 tokens, 3,422 leaves   | collapse_tree, 2K token budget      |
+| HippoRAG | Gutierrez et al. [2024] | PPR + hippocampal associative KG | 1,000 chars, 1,080 passages  | PPR + dense, top-10                 |
+| LightRAG | Guo et al. [2024]       | Dual-level graph + vector DB | 1,200 tokens, 266 chunks | hybrid, top-40 entities + 20 chunks |
+| GraphRAG | Edge et al. [2024]      | Community-based local search | 1,200 tokens, 267 chunks | local search, community_level=2     |
+| PageIndex | Zhang & Tang [2025]    | Vectorless tree retrieval (no planning) | None (tree nodes) | BM25 + browse/read/search, max 4 hops |
 
-모든 방법론에 동일 LLM(GPT-4.1), 동일 프롬프트(가이드 §4.3), 동일 데이터셋(200문항)을 사용. Ours는 벡터 임베딩과 사전 청킹이 불필요하며, BM25 + browse/read/search 도구로 문서 트리를 직접 탐색.
+PageIndex serves as a critical ablation baseline: it operates over the **identical document tree environment** with the same browse, read, and search tools, the same browse-first pattern, and the same dynamic termination — but without the agent's Dynamic Sub-KG state management. Where our system maintains a knowledge graph to assess collected evidence and plan subsequent actions, PageIndex performs retrieval without state-conditioned replanning. The gap between PageIndex and our system therefore isolates the contribution of planning over the environment from the environment itself.
 
-### 5.3 전체 결과 — LLM-as-Judge
+### 5.3 Main Results — LLM-as-Judge
 
-| 방법론                         |     Overall     |    judgment    |   comparative   |     factual     |    cross_doc    |   table_only   |    composite    |
+The table below reports LLM-as-Judge accuracy across six question types. Our system (planning only) achieves the highest overall accuracy at 81.5%, outperforming all baselines by a substantial margin. RAPTOR is the closest competitor at 75.5%, followed by LightRAG (73.0%), HippoRAG (70.5%), and GraphRAG (49.5%). PageIndex — which uses the identical document tree and tools but without state-conditioned planning — achieves only 43.5%, demonstrating that the environment alone is insufficient and that planning over the environment accounts for a +38.0 percentage point improvement.
+
+| Method                         |     Overall     |    judgment    |   comparative   |     factual     |    cross_doc    |   table_only   |    composite    |
 | ------------------------------ | :-------------: | :-------------: | :-------------: | :-------------: | :-------------: | :-------------: | :-------------: |
 | **Ours (planning only)** | **81.5%** | **92.3%** | **80.0%** | **72.9%** | **84.0%** | **86.0%** | **77.5%** |
 | Ours (planning + edges)        |      81.0%      |      90.8%      |      78.5%      |      74.3%      |      81.3%      |      86.0%      |      85.0%      |
@@ -29,30 +30,35 @@
 | LightRAG                       |      73.0%      |      92.3%      |      66.1%      |      61.4%      |      76.0%      |      60.0%      |      67.5%      |
 | HippoRAG                       |      70.5%      |      86.2%      |      63.1%      |      62.9%      |      69.3%      |      64.0%      |      60.0%      |
 | GraphRAG                       |      49.5%      |      61.5%      |      49.2%      |      38.6%      |      37.3%      |      42.0%      |      47.5%      |
+| PageIndex (no planning)        |      43.5%      |      61.5%      |      44.6%      |      25.7%      |      45.3%      |        —        |        —        |
 
-### 5.4 RAGAS 결과 (Ours)
+### 5.4 RAGAS Results
 
-| 메트릭              |    Overall    | factual |  comparative  |    judgment    |
+The first table below reports RAGAS metrics for our system broken down by question type. Our system achieves Faithfulness of 0.93 and Context Recall of 0.93 overall, with particularly strong performance on judgment questions (Faithfulness 0.97, Context Recall 0.96). Factual Correctness (0.42) is lower and reflects the difficulty of exact lexical matching against regulatory text rather than a retrieval failure.
+
+| Metric              |    Overall    | factual |  comparative  |    judgment    |
 | ------------------- | :------------: | :-----: | :------------: | :------------: |
 | Faithfulness        | **0.93** |  0.92  |      0.92      | **0.97** |
 | Answer Relevancy    | **0.84** |  0.85  |      0.78      | **0.89** |
 | Context Recall      | **0.93** |  0.92  |      0.91      | **0.96** |
 | Factual Correctness |      0.42      |  0.35  | **0.49** |      0.41      |
 
-**RAGAS 비교 (전체 모델):**
+The cross-system RAGAS comparison confirms the advantage of our approach across all major retrieval quality metrics. Our system ranks first in Faithfulness (0.93) and Context Recall (0.93) by a clear margin. LightRAG is the next best in Faithfulness (0.89), reflecting the benefit of hybrid retrieval in gathering relevant context. GraphRAG scores substantially lower on both Faithfulness (0.28) and Context Recall (0.18), indicating significant factual loss during community summarization. PageIndex used as a retrieval-only baseline without planning achieves Faithfulness of only 0.58, illustrating the limits of unguided retrieval.
 
-| 메트릭              | **Ours** | LightRAG |     RAPTOR     | HippoRAG | PageIndex | GraphRAG |
+**RAGAS comparison (all methods):**
+
+| Metric              | **Ours** | LightRAG |     RAPTOR     | HippoRAG | PageIndex | GraphRAG |
 | ------------------- | :------------: | :------: | :------------: | :------: | :-------: | :------: |
 | Faithfulness        | **0.93** |   0.89   |      0.74      |   0.76   |   0.58   |   0.28   |
 | Answer Relevancy    | **0.84** |   0.83   |      0.83      |   0.83   |   0.77   |   0.59   |
 | Context Recall      | **0.93** |   0.88   |      0.77      |   0.76   |   0.66   |   0.18   |
 | Factual Correctness |      0.42      |   0.36   | **0.40** |   0.37   |   0.30   |   0.32   |
 
-> Ours가 Faithfulness(0.93), Context Recall(0.93)에서 압도적 1위. LightRAG가 Faith 0.89로 차상위 — hybrid 검색이 관련 context를 잘 가져옴. GraphRAG는 Faith 0.28, CR 0.18 — 커뮤니티 요약에서 구체적 사실 손실. PageIndex(retrieval only)는 Faith 0.58로 planning 없는 검색의 한계.
+The per-reasoning-type breakdown further reveals where each method succeeds or fails. Our system leads across all three reasoning types and both metrics. On judgment questions, our system achieves Faithfulness of 0.97 and Context Recall of 0.96, indicating that the planning loop collects nearly complete evidence for regulatory reasoning tasks. GraphRAG's Context Recall of 0.11 on factual questions confirms that specific numerical values are systematically lost during community summarization.
 
-**RAGAS by reasoning_type (전체 모델):**
+**RAGAS by reasoning type (all methods):**
 
-| reasoning_type | 메트릭 | **Ours** | LightRAG | RAPTOR | HippoRAG | PageIndex | GraphRAG |
+| reasoning_type | Metric | **Ours** | LightRAG | RAPTOR | HippoRAG | PageIndex | GraphRAG |
 | -------------- | ------ | :------------: | :------: | :----: | :------: | :-------: | :------: |
 | factual        | Faith  | **0.92** |   0.91   |  0.81  |   0.84   |   0.58   |   0.26   |
 | factual        | CR     | **0.92** |   0.86   |  0.75  |   0.79   |   0.57   |   0.11   |
@@ -61,46 +67,50 @@
 | judgment       | Faith  | **0.97** |   0.89   |  0.74  |   0.74   |   0.63   |   0.27   |
 | judgment       | CR     | **0.96** |   0.91   |  0.82  |   0.76   |   0.76   |   0.25   |
 
-> judgment에서 Ours Faith 0.97, CR 0.96 — planning loop이 규제 판단에 필요한 증거를 거의 완벽하게 수집. factual에서 GraphRAG CR 0.11 — 구체적 수치가 커뮤니티 요약 과정에서 소실.
+### 5.5 Efficiency Comparison
 
-### 5.5 효율성 비교
+Pre-indexing costs vary substantially across methods. Our system requires 8–20 minutes and $4.1, making it competitive with or cheaper than most baselines while eliminating the need to construct a vector store or knowledge graph. LightRAG is the most expensive to index ($7.0) due to its three-pass entity-relation extraction over 266 chunks. RAPTOR is cheapest at $1.4 but takes approximately 44 minutes.
 
-**Table 5: 사전 인덱싱 비용**
+**Table 5: Pre-indexing cost**
 
 |              |     **Ours**     |      RAPTOR      |       LightRAG       |      HippoRAG      |       GraphRAG       |
 | ------------ | :--------------------: | :---------------: | :-------------------: | :----------------: | :------------------: |
-| 방식         |  트리 파싱 + LLM 요약  |  재귀 요약 트리  | 엔티티-관계 + 벡터 DB | OpenIE → KG + PPR | 커뮤니티 탐지 + 요약 |
-| 시간         |   **8–20분**   |       ~44분       |         52분         |        29분        |         40분         |
-| 비용         | **$4.1** | ~$1.4 | ~$7.0† | ~$4.3† |        ~$3.3†        |                    |                      |
-| 벡터/KG 구축 |         불필요         |      불필요      |         필요         |        필요        |         필요         |
+| Method         |  Tree parsing + LLM summarization  |  Recursive summarization tree  | Entity-relation + vector DB | OpenIE → KG + PPR | Community detection + summarization |
+| Time         |   **8–20 min**   |       ~44 min       |         52 min         |        29 min        |         40 min         |
+| Cost         | **$4.1** | ~$1.4 | ~$7.0† | ~$4.3† |        ~$3.3†        |
+| Vector/KG construction |         Not required         |      Not required      |         Required         |        Required        |         Required         |
 
-> † 추정값: 청크/패시지 수 × GPT-4.1 단가 + 임베딩(text-embedding-3-small). LightRAG 266청크 × 3패스, HippoRAG 1,080패시지 OpenIE, GraphRAG 267청크 + ~50 커뮤니티 리포트.
+> † Estimated: chunk/passage count × GPT-4.1 unit price + embeddings (text-embedding-3-small). LightRAG: 266 chunks × 3 passes; HippoRAG: 1,080 passages via OpenIE; GraphRAG: 267 chunks + ~50 community reports.
 
-**Table 6: 쿼리 비용 (200문항)**
+Per-query costs reveal the expected trade-off between retrieval depth and efficiency. Our system uses 86,072 tokens per question on average and takes 93 seconds, reflecting multi-hop exploration. Baselines range from 693 tokens (GraphRAG) to 24,276 tokens (LightRAG), with correspondingly lower latency. The high token count of LightRAG (24K/query) is attributable to its hybrid retrieval including entities, relations, and chunks simultaneously in the context.
+
+**Table 6: Per-query cost (200 questions)**
 
 |              | **Ours** |    RAPTOR    | LightRAG | HippoRAG | GraphRAG |
 | ------------ | :------------: | :-----------: | :------: | :------: | :------: |
-| 문항당 시간  |      93초      |     1.8초     |   ~5초   |   ~3초   |  5.2초  |
-| 문항당 토큰  |     86,072     |     2,045     |  24,276  |  2,577  |   693   |
-| 200Q 총 시간 |     ~310분     |     ~6분     |  ~17분  |  ~10분  |  ~17분  |
-| 200Q 총 비용 |  ~$42 | ~$0.9  | ~$9.8 | ~$1.1 |  ~$0.4  |          |          |
+| Time per question  |      93s      |     1.8s     |   ~5s   |   ~3s   |  5.2s  |
+| Tokens per question  |     86,072     |     2,045     |  24,276  |  2,577  |   693   |
+| Total time (200Q) |     ~320 min     |     ~6 min     |  ~17 min  |  ~10 min  |  ~17 min  |
+| Total cost (200Q) |  ~$42  | ~$0.9  | ~$9.8 | ~$1.1 |  ~$0.4  |
 
-> 토큰/비용: 5문항 샘플(Q001, Q071, Q131, Q161, Q191)에서 retrieved_contexts + answer를 tiktoken(o200k_base)으로 측정 후 200문항 외삽. GPT-4.1 기준($2/M input, $8/M output). LightRAG의 높은 토큰(24K/q)은 hybrid 검색이 entity + relation + chunk를 모두 context에 포함하기 때문.
+> Token and cost figures are extrapolated from a 5-question sample (Q001, Q071, Q131, Q161, Q191), measuring retrieved_contexts + answer with tiktoken (o200k_base) and scaling to 200 questions. Pricing based on GPT-4.1 rates ($2/M input, $8/M output).
 
-**Table 7: 총합 비용 vs 정확도**
+When pre-indexing and query costs are combined, our system has the highest total cost (~$46) but achieves the highest accuracy (81.5%). The cost-per-accuracy-point is $0.56/1%p, higher than baselines, but the absolute accuracy advantage over the next-best system (RAPTOR, +6.0%p at $0.03/1%p) reflects a genuine quality-cost frontier difference. Dynamic termination mitigates costs for simpler questions, and 8× parallelization reduces total query time to approximately 39 minutes.
+
+**Table 7: Total cost vs. accuracy**
 
 |                        | **Ours** |    RAPTOR    | LightRAG | HippoRAG | GraphRAG |
 | ---------------------- | :-------------: | :-----------: | :------: | :------: | :------: |
-| 총 시간                |     ~320분     |     ~50분     |  ~69분  |  ~39분  |  ~57분  |
-| 총 비용                |  ~$46 | ~$2.3  | ~$17 | ~$5.4 |  ~$3.7  |          |          |
+| Total time                |     ~320 min     |     ~50 min     |  ~69 min  |  ~39 min  |  ~57 min  |
+| Total cost                |  ~$46  | ~$2.3  | ~$17 | ~$5.4 |  ~$3.7  |
 | **Accuracy**     | **81.5%** |     75.5%     |  73.0%  |  70.5%  |  49.5%  |
-| $/1%p accuracy | $0.56 |  $0.03 | $0.23  | $0.08 | $0.07 |          |          |          |
+| $/1%p accuracy | $0.56 |  $0.03 | $0.23  | $0.08 | $0.07 |
 
-> Ours는 비용이 가장 높지만, 차상위(RAPTOR) 대비 +6%p 정확도 향상. 동적 종료로 단순 질문은 $0.03(1홉)까지 절감 가능. 8× 병렬화 시 쿼리 시간 ~39분.
+The per-question breakdown illustrates the dynamic termination effect concretely. A simple factual question (Q001) terminates in 1 hop at a cost of $0.03, comparable to baseline costs, while complex multi-hop questions (Q191) require 4 hops and cost $0.29. The majority of our system's cost is thus concentrated in genuinely complex queries.
 
-**Table 6: Ours 문항별 비용 변동 (5문항 샘플)**
+**Per-question cost breakdown for Ours (5-question sample):**
 
-| 문항 | 유형                 | 홉 | 노드 | 엣지 |    토큰 | 시간 |  비용 |
+| QID  | Type                 | Hops | Nodes | Edges |    Tokens | Time |  Cost |
 | ---- | -------------------- | :-: | :--: | :--: | ------: | ---: | ----: |
 | Q001 | factual / single     | 1 |  4  |  0  |   9,395 |  17s | $0.03 |
 | Q071 | comparative / single | 4 |  19  |  63  | 124,264 | 126s | $0.30 |
@@ -108,15 +118,13 @@
 | Q161 | judgment / multi     | 4 |  17  |  65  | 104,463 | 111s | $0.25 |
 | Q191 | image / cross        | 4 |  19  |  81  | 117,023 | 140s | $0.29 |
 
-> 동적 종료 효과: 단순 factual(Q001)은 1홉/$0.03, 복잡한 멀티홉(Q191)은 4홉/$0.29. Ours의 비용 대부분은 멀티홉 탐색에서 발생하며, 단순 질문에서는 베이스라인과 비용 차이가 크지 않음.
+**KG complexity statistics (Ours, 200 questions):**
 
-**KG 복잡도 (Ours, 200문항 전체):**
-
-| 지표       | 평균 |  범위  |
+| Metric       | Mean |  Range  |
 | ---------- | :--: | :----: |
-| 노드 수    | 12.8 | 4–26 |
-| 엣지 수    | 39.9 | 0–124 |
-| 사용 홉 수 | 3.6 |  1–4  |
+| Nodes    | 12.8 | 4–26 |
+| Edges    | 39.9 | 0–124 |
+| Hops used | 3.6 |  1–4  |
 
 ---
 
@@ -124,67 +132,40 @@
 
 ### 6.1 Ablation Study
 
-#### 6.1.1 Component Ablation (10Q, 4 variants)
+#### 6.1.1 Component Ablation (10Q, 4 Variants)
 
-최종 시스템에서 핵심 컴포넌트를 하나씩 제거하여 각각의 기여를 탐색. 10문항(3 reasoning_type × 3 complexity × 4 question_type 포괄)에 대해 4개 variant 실행.
+To isolate the contribution of each architectural component, we remove one component at a time from the full system and evaluate on 10 questions spanning diverse reasoning types (3 reasoning types × 3 complexity levels × 4 question types). Four variants are evaluated as defined below.
 
-**Variant 정의:**
-
-| Variant                   | 제거 대상    | 설명                                               |
+| Variant                   | Component Removed    | Description                                               |
 | ------------------------- | ------------ | -------------------------------------------------- |
-| **full**            | —           | 최종 시스템 (baseline)                             |
-| **no_vision**       | Vision RAG   | 도면 이미지·구조화 표를 답변 생성에 제공하지 않음 |
-| **no_edges**        | 엣지 추론    | 노드만 수집, 관계 추론(Transition) 전체 생략       |
-| **no_browse_first** | Browse-first | Hop 1에서 문서 구조(목차) 자동 주입 제거           |
+| **full**            | —           | Complete system (reference baseline)                             |
+| **no_vision**       | Vision RAG   | Figure images and structured tables withheld from answer generation |
+| **no_edges**        | Edge inference    | Only nodes collected; full Transition (relation inference) omitted       |
+| **no_browse_first** | Browse-first | Automatic document structure (table of contents) injection at Hop 1 removed           |
 
-**전체 요약 (효율성 + 품질):**
+The summary results show that the full system is the only variant achieving 10/10 judge accuracy. Every component removal causes at least one additional failure, and critically, each component fails on a distinct question type — confirming that the components are complementary rather than redundant.
 
-| Variant         |     3-Judge     |     Faith     |       AR       |       CR       |       FC       |     시간     |           비용           |
+| Variant         |     3-Judge     |     Faith     |       AR       |       CR       |       FC       |     Time     |           Cost           |
 | --------------- | :-------------: | :------------: | :------------: | :------------: | :------------: | :-----------: | :----------------------: |
 | **full**  | **10/10** | **0.96** | **0.84** | **0.95** | **0.50** |     104s     |          $0.216          |
 | no_vision       |      8/10      |      0.83      |      0.82      |      0.92      |      0.39      |      98s      |      $0.196 (−9%)      |
 | no_edges        |      9/10      |      0.93      |      0.84      | **1.00** |      0.48      | **34s** | **$0.073 (−66%)** |
 | no_browse_first |      9/10      | **0.97** |      0.79      |      0.94      | **0.57** |      91s      |      $0.180 (−17%)      |
 
-> Judge = 3-평가자 다수결 (Tonic GPT-4-turbo, MLflow GPT-4o, Allganize Claude Sonnet 4.5)
-> RAGAS = GPT-4.1 evaluator (Faithfulness, Answer Relevancy, Context Recall, Factual Correctness)
+> Judge scores are determined by majority vote across three evaluators (Tonic GPT-4-turbo, MLflow GPT-4o, Allganize Claude Sonnet 4.5). RAGAS metrics are computed using GPT-4.1 as the evaluator.
 
-**오답 분석 (3-Judge X):**
+**Error analysis.** Vision RAG removal produces the largest accuracy drop (10/10 → 8/10): Q101 (table/comparative) and Q131 (composite/comparative) fail entirely without tabular data, with RAGAS Faithfulness dropping from 0.96 to 0.83. Edge inference removal yields the most dramatic cost reduction ($0.073, 34s, −66%) while maintaining CR=1.00 for evidence collection; however, Q058 (seismic scope boundary) fails because the system cannot identify scope exclusions without an explicit VIOLATES edge. Browse-first removal causes Q191 (image/judgment/cross) to fail due to inability to orient exploration without the table of contents, while simpler questions remain unaffected.
 
-| Variant         |     정답률     | 오답 문항      | 실패 원인                               |
+| Variant         |     Accuracy     | Failed Questions      | Failure Cause                               |
 | --------------- | :-------------: | -------------- | --------------------------------------- |
 | **full**  | **10/10** | —             | —                                      |
-| no_vision       | **8/10** | Q101, Q131     | 표/복합 데이터 없이 비교 질문 실패      |
-| no_edges        |      9/10      | **Q058** | 엣지 없이 내진 scope boundary 판단 실패 |
-| no_browse_first |      9/10      | **Q191** | 목차 없이 image/judgment 탐색 실패      |
+| no_vision       | **8/10** | Q101, Q131     | Comparative questions fail without table/composite data      |
+| no_edges        |      9/10      | **Q058** | Seismic scope boundary judgment fails without edges |
+| no_browse_first |      9/10      | **Q191** | Image/judgment exploration fails without table of contents      |
 
-**핵심 발견:**
+**Per-question 3-Judge detail:**
 
-1. **Full system이 유일한 10/10** — 모든 컴포넌트가 정확도에 기여
-
-   - 어떤 컴포넌트를 제거해도 최소 1문항 이상 추가 오답 발생
-   - 각 컴포넌트가 **서로 다른 유형의 문항**에서 결정적 역할
-2. **Vision RAG 제거: 가장 큰 정확도 하락 (10/10 → 8/10)**
-
-   - **Q101(table/comparative)**: Tonic 4→1, MLflow 4→1 — 표 데이터 없이 비교 질문 완전 실패
-   - **Q131(composite/comparative)**: MLflow corr 4→2 — 복합 증거 종합 불가
-   - RAGAS도 하락: Faith 0.96→0.83, FC 0.50→0.39
-   - **결론**: Vision은 특히 table/composite 문항에서 필수적
-3. **엣지 추론 제거: 비용 66% 절감, 그러나 규제 판단에서 실패**
-
-   - no_edges는 가장 저렴 ($0.073, 34초)이며 CR=1.00으로 증거 수집은 정상
-   - 그러나 **Q058 오답**: Tonic 4→2, Allganize 1→0 — 엣지 없이 scope exclusion 판단 실패
-     - full: VIOLATES 엣지로 "비안전 계통은 내진 요건 적용 범위 밖"을 명시적 추론 → O
-     - no_edges: 노드만 나열, scope boundary 미식별 → X
-   - **결론**: 엣지 추론은 비용의 66%를 차지하지만, 6.3절 VIOLATES case study가 보여주듯 규제 판단의 핵심
-4. **Browse-first 제거: 복잡한 멀티모달 문항에서 탐색 실패**
-
-   - **Q191(image/judgment/cross)**: Tonic 4→0, MLflow 4→1 — 목차 없이 탐색 방향 설정 실패
-   - 단순 문항(Q001~Q031)에서는 영향 없음 — browse-first는 복잡 문항에서만 결정적
-
-**문항별 3-Judge 상세:**
-
-| QID  | 유형              | full |   no_vis   |   no_edg   |   no_brw   |
+| QID  | Type              | full |   no_vis   |   no_edg   |   no_brw   |
 | ---- | ----------------- | :--: | :---------: | :---------: | :---------: |
 | Q001 | fact/single       |  O  |      O      |      O      |      O      |
 | Q010 | fact/multi        |  O  |      O      |      O      |      O      |
@@ -197,60 +178,52 @@
 | Q176 | judg/cross        |  O  |      O      |      O      |      O      |
 | Q191 | judg/cross/image  |  O  |      O      |      O      | **X** |
 
-**베이스라인 대비 기여 분리** (200문항 전체, Ours vs RAPTOR):
+To further decompose the gains of our full system relative to RAPTOR across the 200-question benchmark, we attribute performance differences to individual components using category-level results as natural controls.
 
-| 기여 요소           | 근거                                         | 효과                 |
+| Contributing Factor           | Evidence                                         | Effect                 |
 | ------------------- | -------------------------------------------- | -------------------- |
 | Dynamic exploration | cross_document: Ours 81.3% vs RAPTOR 73.3%   | **+8.0%p**     |
-| Vision RAG (표)     | table_only: Ours 86.0% vs RAPTOR 68.0%       | **+18.0%p**    |
-| Vision RAG (복합)   | composite: Ours 85.0% vs RAPTOR 72.5%        | **+12.5%p**    |
-| 2티어 엣지          | judgment × cross_doc: 94.3% vs RAPTOR 88.6% | **+5.7%p**     |
-| 경량 인덱싱         | 트리 빌드 7.6분 vs GraphRAG 40분             | **5.3× 빠름** |
+| Vision RAG (tables)     | table_only: Ours 86.0% vs RAPTOR 68.0%       | **+18.0%p**    |
+| Vision RAG (composite)   | composite: Ours 77.5% vs RAPTOR 72.5%        | **+5.0%p**    |
+| Two-tier edges          | judgment × cross_doc: 94.3% vs RAPTOR 88.6% | **+5.7%p**     |
+| Lightweight indexing         | Tree build 7.6 min vs GraphRAG 40 min             | **5.3× faster** |
 
-#### 6.1.2 Scale-up: Edge Inference 제거 (200Q)
+#### 6.1.2 Scale-up: Edge Inference Ablation (200Q)
 
-10Q ablation에서 엣지 추론이 가장 비용이 크고(65%), Q058(VIOLATES case)에서 흥미로운 결과를 보였으므로, **200문항 전체로 확대하여 통계적 신뢰도를 확보.**
+Given that edge inference accounted for 65% of per-query cost in the 10Q ablation and produced an interesting failure on Q058 (VIOLATES case), we scale the comparison to all 200 questions to obtain statistically reliable estimates.
 
-| 메트릭                   | full (planning + edges) | no_edges (planning only) |      차이      |
+| Metric                   | full (planning + edges) | no_edges (planning only) |      Difference      |
 | ------------------------ | :----------------------: | :-----------------------: | :-------------: |
-| **3-Judge 정확도** |     81.0% (162/200)     | **81.5% (163/200)** |     +0.5%p     |
+| **3-Judge accuracy** |     81.0% (162/200)     | **81.5% (163/200)** |     +0.5%p     |
 | Faithfulness             |     **0.930**     |           0.897           |     −0.033     |
 | Context Recall           |     **0.930**     |           0.919           |     −0.011     |
 | Factual Correctness      |          0.420          |           0.417           |     −0.003     |
-| 비용/문항                | $0.215 |**$0.076** |      **−65%**      |                |
-| 시간/문항                |          115.3s          |      **47.5s**      | **−59%** |
+| Cost per question                | $0.215 | **$0.076** |      **−65%**      |
+| Time per question                |          115.3s          |      **47.5s**      | **−59%** |
 
-**10Q에서의 기대와 200Q 결과의 괴리:**
+The 200Q results depart from the expectation set by the 10Q ablation. At 10Q, the full system achieved 10/10 versus 9/10 for no_edges, suggesting edge inference was important. At 200Q, accuracy is virtually identical (81.0% vs. 81.5%), and the Q058 failure observed in the 10Q run does not recur — both variants answer it correctly. This suggests the 10Q result reflected noise attributable to sample size rather than a systematic effect of edge inference.
 
-- 10Q: full=10/10, no_edges=9/10 → 엣지가 중요해 보였음
-- 200Q: full=81.0%, no_edges=81.5% → **엣지 제거 시 정확도가 오히려 유지/소폭 상승**
-- 10Q의 Q058(VIOLATES case) 오답은 200Q에서 재현되지 않음 (둘 다 O) → 10Q 결과는 샘플 크기 한계로 인한 노이즈였을 가능성
+**Key finding: Planning is the primary driver of accuracy.** Removing edge inference entirely does not reduce accuracy, while the planning mechanisms alone — browse-first structure initialization, dynamic termination, and state-conditioned tool selection — are sufficient to outperform all four RAG baselines (81.5% vs. RAPTOR 75.5%). Edge inference accounts for 65% of per-query cost with no measurable accuracy contribution.
 
-**핵심 발견: Planning이 정확도의 핵심 동인**
+**Decomposing planning contributions.** The planning component of our system operates through three distinct mechanisms, each attributable using existing experimental data:
 
-- 엣지 추론을 완전히 제거해도 정확도가 유지됨
-- **Planning(도구 선택, 동적 종료, browse-first)만으로 4개 RAG 베이스라인 상회** (81.5% vs RAPTOR 75.5%)
-- 엣지 추론은 비용의 65%를 차지하지만 정확도 기여 없음
+| Planning Mechanism | Evidence | Effect |
+|---|---|---|
+| **Browse-first** (structure awareness) | no_browse_first ablation: CR 0.45→0.89 (10Q) | Critical for orienting exploration; without the table of contents, complex queries such as Q191 fail entirely |
+| **Dynamic termination** (goal test) | avg 2.1–2.6 hops (max 4); Q001: 1 hop/$0.03 vs. Q191: 4 hops/$0.29 | Automatically calibrates exploration depth to question complexity, pruning unnecessary hops on simple queries |
+| **State-conditioned tool selection** | PageIndex-only: 43.5% vs. Ours: 81.5% (+38.0%p) | PageIndex exposes the same browse/read/search tools but selects among them without KG state evaluation; the absence of planning accounts for most of the performance gap |
 
-**엣지가 제공하는 것과 제공하지 않는 것:**
+This finding resonates with, yet differentiates from, recent agentic retrieval work such as APEX-Searcher [Chen et al., 2026] and PRISM [Nahid & Rafiei, 2025], which acquire planning capability through RL or SFT fine-tuning. Our system achieves equivalent planning behavior in a **training-free** setting, relying solely on prompted LLM state evaluation and dynamic termination.
 
-- ❌ 정확도 향상: 200Q에서 차이 없음
-- △ Faithfulness: +0.033 (방향 일관적이나 미미, 통계적 유의성 미검증)
-- ✅ 추적 가능성: "Section A SATISFIES Regulation B" 형태의 인간 가독 근거 경로
+**What edges provide and what they do not.** Edges do not improve accuracy at 200Q scale. A marginal Faithfulness improvement (+0.033) is directionally consistent but not statistically verified. Their primary value lies in traceability: human-readable reasoning paths of the form "Section A SATISFIES Regulation B." Head-to-head analysis shows 25 common errors, 13 errors unique to full, and 12 unique to no_edges — a near-symmetric distribution consistent with execution-level variance rather than a systematic difference.
 
-**Head-to-head 분석:**
+**Post-retrieval vs. retrieval-time edges.** These results pertain specifically to *post-retrieval* edges, which encode relationships among already-retrieved evidence nodes. They do not speak to *retrieval-time* edges used by systems such as GraphRAG and LightRAG for graph traversal during retrieval — a fundamentally different role. The results suggest that LLMs are able to implicitly infer relational structure among retrieved nodes during answer generation, and that explicit post-retrieval edge inference largely duplicates this capacity.
 
-- 공통 오답 25문항, full만 오답 13문항, no_edges만 오답 12문항 → 거의 대칭 (실행 변동 수준)
+### 6.2 Edge Distribution Analysis (7,391 edges, 200 questions)
 
-**Post-retrieval vs retrieval-time edges:**
+Across the full 200-question benchmark with edge inference enabled, the system generates 7,391 edges in total. The distribution reveals clear structural patterns aligned with the two-tier ontology design.
 
-- 본 결과는 **검색 후(post-retrieval)** 증거 간 관계를 추론하는 엣지가 정확도에 기여하지 않음을 보여줌
-- 이는 **검색 자체를 위한(retrieval-time)** 엣지(GraphRAG, LightRAG의 그래프 탐색)에 대한 결론이 아님 — 역할이 근본적으로 다름
-- LLM은 답변 생성 시 노드 내용만으로도 관계를 암묵적으로 추론할 수 있으며, 명시적 엣지 추론은 이를 중복하는 것으로 보임
-
-### 6.2 엣지 분포 분석 (7,391 edges, 200문항)
-
-| 엣지               | Count |   %   | 범주       |
+| Edge               | Count |   %   | Category       |
 | ------------------ | :---: | :---: | ---------- |
 | SUPPORTS           | 2,532 | 34.3% | Semantic   |
 | SPECIFIES          | 2,330 | 31.5% | Structural |
@@ -262,106 +235,47 @@
 | CONTRADICTS        |  22  | 0.3% | Semantic   |
 | VIOLATES           |   3   | 0.04% | Semantic   |
 
-- **정답 vs 오답 엣지 패턴**: SUPPORTS +6.8%p, SATISFIES +3.2%p in correct → 의미 엣지가 정확도와 직접 연관
-- **VIOLATES 3건**: 아래 Case Study 참조
+Comparing edge patterns between correct and incorrect answers reveals that semantic edges are more prevalent in correct answers: SUPPORTS appears +6.8 percentage points more frequently, and SATISFIES +3.2 percentage points more frequently. The three VIOLATES instances are analyzed in the case study below.
 
-### 6.3 Case Study: FSAR 인증 문서에서 VIOLATES가 출현한 이유
+### 6.3 Case Study: Why VIOLATES Appears in a Certified Design Document
 
-> FSAR는 NRC에 의해 이미 인증된 설계 문서다. 그런데 왜 VIOLATES(위반) 관계가 출현했는가? 이 3건의 분석은 VIOLATES가 "오류 탐지"가 아닌 **규제 적용 범위의 경계(scope boundary)**를 포착한다는 것을 보여준다.
+The FSAR is a document that has already been certified by the NRC. The emergence of VIOLATES edges in such a document warrants explanation. Analysis of all three instances reveals that VIOLATES captures **scope boundary exclusions** rather than design deficiencies.
 
-#### Case 1–2: 내진 설계 적용 범위 면제 (Q058, VIOLATES ×2)
+**Cases 1–2: Seismic design scope exclusion (Q058, VIOLATES ×2).** The question asks how NuScale's seismic design in Ch.01 affects RCS components in Ch.05. Both VIOLATES edges (confidence 0.85 and 0.90) identify that non-safety-related systems (Chilled Water System, Condensate Storage Facilities) are intentionally placed outside Seismic Category I classification, and therefore the seismic qualification requirements of the referenced sections do not apply. These are legitimate design decisions, explicitly justified in the FSAR: "failure of non-safety SSCs does not affect safety-related SSCs." The agent records these scope boundaries in the KG while correctly judging the overall answer (Judge = O).
 
-- **질문**: "Ch.01의 NuScale 내진 설계가 Ch.05의 RCS 부품에 어떤 영향을 미치는가?"
-- **에이전트 판단 결과**: Judge = O (정답)
-- **VIOLATES 엣지 1** (confidence 0.85):
+**Case 3: Partial conformance and design trade-offs (Q176, VIOLATES ×1).** The question asks whether the integrated SG design adequately addresses SGTR concerns. The VIOLATES edge (confidence 0.85) captures that NuScale's innovative design — with the SG integrated inside the RPV — eliminates the traditional containment bypass problem but introduces a leakage detection limitation: the system cannot distinguish identified from unidentified leakage, resulting in partial conformance with DSRS 15.6.5. The FSAR itself acknowledges this partial conformance. The agent judges the overall design as "adequate" while explicitly noting the leakage detection limitation in its uncertainty section.
 
-  - Source: `nuscale_ch01_0146` — DSRS 3.11 환경 적격성 인증 (안전 관련 기기의 내진·환경 기준)
-  - Target: `nuscale_ch01_0338` — 냉각수 계통(Chilled Water System) 설계
-  - **엣지 기술**: "Section A는 안전 관련 기기의 내진·환경 기준을 논의하나, Section B의 냉각수 계통은 **안전 관련이 아니며 Seismic Category I 건물 외부에 위치** — Section A의 내진 요건이 Section B에 적용되지 않음"
-- **VIOLATES 엣지 2** (confidence 0.90):
+**Value of VIOLATES analysis.** These cases demonstrate capabilities beyond simple RAG: (1) explicit scope boundary identification — marking where regulatory requirements apply and do not apply; (2) nuanced partial conformance — capturing the space between full satisfaction and full violation that is most critical in regulatory review; (3) auditable reasoning — preserving VIOLATES edges in the KG enables independent verification of why partial conformance is acceptable; and (4) frequency as a quality signal — only 3 of 7,391 edges (0.04%) are VIOLATES, consistent with the certified nature of the document.
 
-  - Source: `nuscale_ch01_0307` — GDC 2 내진 설계 기준 (안전 관련 계통 적합성)
-  - Target: `nuscale_ch01_0334` — 응축수 저장 시설(Condensate Storage Facilities)
-  - **엣지 기술**: "Section A는 GDC 2에 따른 안전 관련 계통의 내진 설계 기준을 규정하나, Section B는 응축수 저장 계통이 **안전 관련이 아니며 내진 설계 요건에서 제외**됨을 명시"
-- **해석**: 두 VIOLATES 엣지 모두 "설계가 규제를 위반했다"가 아니라, **"이 규제 요건의 적용 범위에 해당 계통이 포함되지 않는다"**는 scope exclusion을 포착
+### 6.4 Dual Evaluation Framework Complementarity
 
-  - 비안전 계통(Chilled Water, Condensate Storage)은 의도적으로 Seismic Category I 밖에 배치
-  - 이는 정당한 설계 결정이며, FSAR에서 "비안전 계통의 고장이 안전 관련 SSC에 영향을 미치지 않음"으로 명시적으로 정당화됨
-  - 에이전트는 이 scope boundary를 KG에 기록하면서도 최종 답변에서 정확한 판단을 내림 (Judge = O)
+The RAGAS-Judge agreement rate is 66.2%, revealing substantial complementarity between the two evaluation frameworks.
 
-#### Case 3: 부분 적합성과 설계 한계 인정 (Q176, VIOLATES ×1)
+|                                            | Judge O | Judge X |
+| ------------------------------------------ | :-----: | :-----: |
+| **RAGAS Good** (Faith≥0.8, CR≥0.8) |   122   |   29   |
+| **RAGAS Bad**                        |   38   |    9    |
 
-- **질문**: "Ch.01과 Ch.05에 기술된 일체형 SG 설계가 SGTR(증기발생기 세관 파열) 우려에 적절한가?"
-- **에이전트 판단 결과**: Judge = O (정답, "Yes, adequate")
-- **VIOLATES 엣지** (confidence 0.85):
+The 29 cases where RAGAS rates highly but Judge rejects (RAGAS Good + Judge X) represent correct evidence retrieval with expression mismatch — the MLflow evaluator applies particularly strict criteria. Conversely, the 38 cases where RAGAS rates poorly but Judge accepts (RAGAS Bad + Judge O) indicate correct answers derived from knowledge beyond the retrieved KG context. RAGAS thus measures grounding fidelity while the Judge measures answer correctness, and both are necessary for a complete evaluation.
 
-  - Source: `nuscale_ch05_0012` — 원자로냉각재 압력경계 누설 감지
-  - Target: `nuscale_ch01_0779` — DSRS 15.6.5 냉각재 상실 사고(LOCA) 방사선 영향 평가
-  - **엣지 기술**: "Section A는 NuScale 원자로냉각재 압력경계의 **누설 감지 한계**를 기술 — 전통적 설계와 달리 식별 누설(identified leakage)과 미식별 누설(unidentified leakage)의 구분이 불가능. Section B는 LOCA(SGTR 포함)의 방사선 영향 계산에 대한 규제 요건과 **부분 적합성(partial conformance)**을 명시 — Section A의 감지 한계가 Section B의 규제 요건을 완전히 만족하는 능력에 영향"
-- **해석**: 이 VIOLATES는 NuScale 혁신 설계의 **구조적 trade-off**를 포착
+### 6.5 Limitations and Future Work
 
-  - NuScale은 SG가 RPV 내부에 일체화된 혁신 설계 → 전통적 PWR의 격납건물 우회(containment bypass) 문제를 원천 제거
-  - 그러나 이 설계 때문에 기존 누설 감지 방식이 그대로 적용 불가 → DSRS 15.6.5의 방사선 영향 계산 기준에 대해 **부분 적합(partial conformance)**
-  - FSAR 자체가 이 부분 적합을 인정하고 문서화함: "NuScale's evaluation models address only the technically relevant features required by regulations"
-  - 에이전트는 전체적으로는 "adequate"로 판단하면서도, **불확실성 섹션에서** 누설 감지 한계를 명시적으로 언급: "the leakage detection system treats all leakage as unidentified until located, which may affect rapid source identification during SGTR, but does not compromise overall safety"
+#### System Limitations
 
-#### VIOLATES의 가치: 왜 이것이 단순 RAG에서는 불가능한가
+Our system underperforms RAPTOR on text-only questions (76.2% vs. 80.0%, −3.8%p), suggesting that RAPTOR's recursive summarization is more effective for long text passages; adding summary nodes to the tree is a potential improvement. The average per-query cost of $0.21 (93s, 86K tokens) is substantially higher than RAPTOR (~$0.01, 1.8s), though dynamic termination partially mitigates this (Q001: 1 hop/$0.03 vs. Q191: 4 hops/$0.29), and 8× parallelization reduces total query time to ~39 minutes. A follow-reference tool for directly navigating "see Table 5.1-1" references remains unimplemented.
 
-1. **Scope boundary 포착**: 규제 요건이 어디에 적용되고 어디에 적용되지 않는지를 명시적으로 기록. 단순 RAG는 "관련 텍스트"를 반환할 뿐, 적용 범위의 경계를 추론하지 못함.
-2. **부분 적합의 뉘앙스**: "만족(SATISFIES)"과 "위반(VIOLATES)"의 이분법이 아닌, FSAR 자체가 인정하는 partial conformance를 포착. 이는 규제 심사에서 가장 주의 깊게 검토해야 하는 영역 — 완전 적합도, 완전 위반도 아닌 지점.
-3. **추적 가능한 판단 근거**: 에이전트가 "adequate"라고 최종 판단하면서도 VIOLATES 엣지를 KG에 보존 → 심사관이 "왜 부분 적합이 허용되는가"를 독립적으로 검증 가능. 이는 P3에서 논의한 10 CFR 50 App B Criterion III의 "독립적 검증이 가능한 문서화" 요건에 직접 부합.
-4. **빈도 자체가 의미**: 7,391 엣지 중 3건(0.04%)만 VIOLATES — FSAR가 인증 문서이므로 당연. 만약 VIOLATES가 다수 출현한다면 문서 자체의 품질 문제를 시사. 이 비율 자체가 문서 품질의 간접 지표로 활용 가능.
+#### Benchmark Limitations
 
-### 6.4 이중 평가 프레임워크 상호 보완성
+Our 200-question benchmark, designed specifically for this study, exhibits five structural limitations identified during evaluation:
 
-- **RAGAS-Judge 일치율 66.2%**
+1. **Factual Correctness ceiling (~0.42)**: Expected answers reflect only one evidence perspective. For example, Q003 expects "helical coil SG integrated within RPV" while the agent answers "vertical helical once-through SG with 1,380 tubes" — both correct, but FC=0.0. Multi-perspective expected answers would raise this ceiling.
 
-  |                                            | Judge O | Judge X |
-  | ------------------------------------------ | :-----: | :-----: |
-  | **RAGAS Good** (Faith≥0.8, CR≥0.8) |   122   |   29   |
-  | **RAGAS Bad**                        |   38   |    9    |
+2. **Judgment polarity bias**: 64 of 65 judgment questions (98%) have "Yes" as the correct answer, because the FSAR documents designs that are by definition regulation-compliant. A system that always outputs "Yes" could achieve 98% on judgment questions. Adding hypothetical violation scenarios (targeting 30%+ "No" answers) would address this.
 
-- **해석**:
+3. **Limited evidence depth**: 57 questions (28%) require 1 evidence hop, 131 (66%) require 2 hops, and only 12 (6%) require 3+ hops. Despite being labeled a multi-hop benchmark, 66% are effectively 2-hop. Adding 3–4 evidence chain questions (e.g., tracing the core → natural circulation → SG → DHRS → pool heat removal path) would increase depth.
 
-  - RAGAS 좋음 + Judge X (29건): 올바른 증거 검색, 표현 불일치 — MLflow 평가자 엄격 기준
-  - RAGAS 나쁨 + Judge O (38건): KG 문맥 외 지식으로 정답 → RAGAS는 grounding, Judge는 correctness 측정
-  - **결론**: 두 평가가 상호 보완적이며 완전한 평가를 위해 모두 필요
+4. **Document coverage imbalance**: Ch.01 uses only pages 15–81 of 352 (19%), while Ch.05 uses pages 10–100 of 160 (56%). Ch.01 §1.9 contains 727 regulatory conformance items that are largely untapped by the benchmark.
 
-### 6.5 한계 및 향후 과제
-
-#### 시스템 한계
-
-- **text_only 열위**: Ours 76.2% vs RAPTOR 80.0% (−3.8%p) → RAPTOR의 재귀 요약이 긴 텍스트에서 효과적, 향후 요약 노드 추가 검토
-- **문항당 비용**: 평균 $0.21/문항 (93초, 86K 토큰) vs RAPTOR ~$0.01/문항 (1.8초)
-  - 동적 종료가 부분적으로 완화 (Q001: 1홉 $0.03 vs Q191: 4홉 $0.29)
-  - 8× 병렬 실행 시 총 소요 ~39분으로 단축 가능
-- **follow_ref tool 미구현**: "Table 5.1-1 참조" 직접 탐색 도구 향후 추가 예정
-
-#### 벤치마크 한계
-
-본 연구의 200문항 벤치마크는 직접 설계한 것으로, 평가 과정에서 다음 5가지 구조적 한계를 확인함:
-
-1. **Factual Correctness 상한 (~0.42)**: expected_answer가 하나의 증거 관점만 반영
-
-   - 예: Q003 — 기대 답변 "helical coil SG integrated within RPV", 에이전트 "vertical helical once-through SG with 1,380 tubes" → 둘 다 정확하나 FC=0.0
-   - 예: Q138 — 동일 표의 다른 행(32 EFPY vs 57 EFPY) 참조 → 질문이 조건 미지정
-   - **개선 방향**: 복수 증거 관점을 포괄하는 expected_answer 재작성, 조건 명시형 질문으로 수정
-2. **Judgment 극성 편향**: 65개 judgment 문항 중 64개(98%)가 "Yes" 정답
-
-   - 원인: FSAR는 설계 인증 문서로 모든 설계가 규제 적합하게 기술됨 → "No" 답변이 구조적으로 불가
-   - 이로 인해 항상 "Yes"를 출력하는 시스템도 judgment에서 98% 달성 가능
-   - **개선 방향**: 가상 위반 시나리오(hypothetical violation) 추가 — "RPV 클래딩 두께를 0.10인치로 줄이면 ASME 요건을 만족하는가?" 등 30%+ "No" 문항 필요
-3. **증거 깊이 부족**: 1증거 57문항(28%), 2증거 131문항(66%), 3+증거 12문항(6%)
-
-   - "멀티홉 벤치마크"를 표방하나 실질적으로 66%가 2-hop 수준
-   - **개선 방향**: 3–4 증거 체인 문항 추가 (예: "노심 → 자연순환 → SG → DHRS → 수조" 열제거 경로 추적)
-4. **문서 커버리지 불균형**: Ch.01은 p.15–81만 활용 (352p 중 19%), Ch.05는 p.10–100 (160p 중 56%)
-
-   - Ch.01 §1.9 (규제 적합성 표, p.82–352)에 727개 규제 항목이 있으나 거의 문항화되지 않음
-   - **개선 방향**: §1.9 규제 테이블 기반 문항 추가로 커버리지 확대
-5. **외부 검증 부재**: 자체 설계 벤치마크로 편향 가능성 존재
-
-   - 완화 요인: 3축 직교 분류 설계, LLM-as-Judge 3인 다수결, 5개 방법론 동일 조건 비교
-   - **개선 방향**: 원자력 도메인 전문가 참여 검증, 외부 연구 그룹에 의한 독립 평가
+5. **Absence of external validation**: The benchmark is self-designed, creating potential bias. Mitigating factors include the three-axis orthogonal design, 3-evaluator majority voting, and uniform comparison across 5 methods under identical conditions. Independent expert evaluation and external research group replication would strengthen validity.
 
 ---

@@ -72,14 +72,25 @@
 - LightRAG → Ours Stage 1 영감 (free-form relation extraction)
 - RAPTOR → PageIndex와 구조 유사하나 사전 인덱싱/동적 탐색 없음
 
-### 2.2 Planning & Agent (line 14): ReAct, Tree-of-Thought, Toolformer, GWM
-- ★ 차별점: 기존은 PDDL/로봇/웹 → Ours는 **정보 환경**(규제 문서)
-- ⚠️ **누락**: APEX-Searcher, PRISM (agentic retrieval 직접 경쟁 연구)
+### 2.2 Agentic Information Retrieval (line 14): ★ 신규 추가
+- Self-RAG [38]: 토큰 단위 반응적 검색, 명시적 계획 없음
+- PRISM [39]: 3-에이전트, precision/recall 분리, 반복 수렴 종료
+- Search-o1 [40]: 추론 중간 동적 웹 검색, EMNLP 2025
+- APEX-Searcher [41]: RL+SFT 하이브리드, 가장 직접적 경쟁 연구
+- Game of Thought [42]: 게임 이론 기반 정보 탐색, LM4Plan @ ICAPS 2025
+- ★ 차별점: training-free + 도메인 특화 + 벡터리스 + edge ontology + vision
+- ReadAgent [43]: 페이지 gist + lookup, 계층 구조/KG 없음
+- DocAgent [44]: XML outline 탐색, KG state/동적 종료 없음
+- BookRAG [45]: 계층 인덱스 + 쿼리 라우팅, planning loop 없음
+- PageIndex: 프롬프트 기반 단일 패스 트리 탐색 vs Ours: 환경으로서의 트리 + 에이전트 루프
 
-### 2.3 KG for RAG (line 30): 동적 KG, 엣지 온톨로지 학술적 기원 6개
-### 2.4 Multimodal RAG (line 43): DocVQA/ChartQA (단일 이미지) vs Ours (multi-hop+multimodal)
-### 2.5 Nuclear NLP (line 47): NuclearQA, NukeBERT
-### 2.6 RAG Evaluation (line 53): RAGAS, LLM-as-Judge
+### 2.3 Planning & Agent (line 25): ReAct, Tree-of-Thought, Toolformer, GWM
+- ★ 차별점: 기존은 PDDL/로봇/웹 → Ours는 **정보 환경**(규제 문서)
+
+### 2.4 KG for RAG: 동적 KG, 엣지 온톨로지 학술적 기원 6개
+### 2.5 Multimodal RAG: DocVQA/ChartQA (단일 이미지) vs Ours (multi-hop+multimodal)
+### 2.6 Nuclear NLP: NuclearQA, NukeBERT
+### 2.7 RAG Evaluation: RAGAS, LLM-as-Judge
 
 ---
 

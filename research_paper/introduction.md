@@ -1,156 +1,25 @@
 ## 1. Introduction
 
-> **[작성 전략]** LLM 에이전트 범용 성공(planning 포함) → 과학 도메인 적용 시도 → 규제 문서에서 벽 → 도메인 현실(정보 수집 계획 문제) → 요구사항 → 해법(planning in vectorless text environment). Osprey [Hellert et al., 2026] 참고.
+Large language model (LLM) based agents have achieved remarkable progress across general-purpose domains. Since ReAct [Yao et al., 2023] introduced the interleaving of reasoning and acting, agents have approached human-level performance in code generation, web navigation, and multi-step problem solving. Toolformer [Schick et al., 2024] demonstrated autonomous tool invocation, while in information retrieval the field has moved beyond standard RAG [Lewis et al., 2020] toward agentic paradigms including Self-RAG [Asai et al., 2024], GraphRAG [Edge et al., 2024], and LightRAG [Guo et al., 2024]. Encouraged by these successes, researchers have begun applying LLM agents to scientific and engineering domains: GAIA [Mayet, 2024] at the DESY particle accelerator, VISION [Mathur et al., 2025] for X-ray scattering beamlines, and ChemCrow [Bran et al., 2024] for autonomous chemistry. In the nuclear domain, NukeBERT [Jain et al., 2020] and NuclearQA [Acharya et al., 2023] have established domain-adapted models and benchmarks.
 
-### [P1] LLM 에이전트의 범용적 성공과 과학 도메인으로의 확장
+However, these efforts reveal that safety-critical regulatory domains differ fundamentally from general-purpose settings. Osprey [Hellert et al., 2026], deploying agentic AI on accelerator control systems, identifies the absence of "pre-visibility of planned actions, protocol-aware control access, and hardware write safeguards" in existing frameworks. Lee [2025] analyzes how the black-box nature of LLMs conflicts with 10 CFR 50 Appendix B quality assurance requirements for reactor safety. Nuclear regulatory document review — examining Final Safety Analysis Reports (FSARs) and rendering design conformance judgments — is where these challenges are most acute.
 
-- LLM 기반 에이전트는 범용 영역에서 놀라운 진전을 보이고 있음:
+Consider what FSAR review actually entails. The NuScale FSAR comprises Chapter 01 (352 pages, design overview) and Chapter 05 (160 pages, reactor coolant systems) — just two of seventeen chapters. Each chapter is hierarchically organized with text, specification tables, and engineering drawings interwoven throughout. A reviewer's core task is not simple fact retrieval, but regulatory conformance judgment through evidence chains: answering "Does the ECCS design satisfy 10 CFR 50.46(b)?" requires locating design specifications in Ch.05 \S5.4, cross-referencing regulatory requirements in Ch.01 \S1.9, verifying that PCT < 2200°F in the relevant table, and synthesizing a SATISFIES determination across these sources. This process demands multi-hop reasoning across documents and modalities, where errors have direct safety consequences. Much of the requisite knowledge resides in expert practice rather than formalized software — a labor-intensive, non-scalable dependency [Hellert et al., 2026].
 
-  - ReAct [Yao et al., 2023]가 추론(reason)과 행동(act)의 인터리빙을 제안한 이래, 에이전트는 코드 생성, 웹 탐색, 다단계 문제 해결에서 인간 수준에 근접
-  - Toolformer [Schick et al., 2024]가 LLM의 자율적 도구 호출 능력을 입증하며 단순 생성기 → 능동적 문제 해결자로 진화
-  - 정보 검색에서도 RAG [Lewis et al., 2020]를 넘어 Self-RAG [Asai et al., 2024]⁺, GraphRAG [Edge et al., 2024], LightRAG [Guo et al., 2024] 등 에이전틱 검색이 확산
-- 이 범용적 성공에 힘입어, **과학·공학 도메인에서도 LLM 에이전트를 적용하려는 시도**가 활발:
+Existing RAG methods are structurally ill-suited for this task. Fixed-size chunking severs cross-references — "see Table 5.1-1" and the actual table reside on different pages, and chunking destroys this connection [Gao et al., 2023]. Graph-based methods such as GraphRAG [Edge et al., 2024] and LightRAG [Guo et al., 2024] can aggregate relevant text but do not produce the SATISFIES/VIOLATES judgments that regulatory review requires. Furthermore, all these methods require large-scale offline indexing, while FSARs are revised continuously during NRC review — making repeated re-indexing impractical. Safety-critical domains impose additional constraints: 10 CFR 50 Appendix B, Criterion III requires that analyses be "documented in sufficient detail to permit independent verification." Embedding similarity scores provide no technical justification for why evidence supports a conclusion; a human-readable reasoning path — "Section 5.4.2 SPECIFIES \S5.4.1, and this result SATISFIES 10 CFR 50.46(b)(1)" — does.
 
-  - GAIA [Mayet, 2024, arXiv:2405.01359]는 DESY 입자 가속기에서 ReAct + 다중 전문가 RAG 기반 운영 보조 에이전트를 구현
-  - VISION [Mathur et al., 2025, arXiv:2412.18161]은 X선 산란 빔라인에서 음성 제어 실험 지원 에이전트를 시연
-  - 자율 실험실 분야에서는 ChemCrow [Bran et al., 2024, arXiv:2304.05376]가 화학 도구 통합, Boiko et al. [2023]이 자율 화학 연구를 Nature에 발표
-  - 핵 도메인에서도 NukeBERT [Jain et al., 2020]을 통한 도메인 특화 언어 모델, NuclearQA [Acharya et al., 2023]를 통한 벤치마크 구축, PACuna [Sulc et al., 2023, arXiv:2310.19106]의 가속기 문서 LoRA 파인튜닝 등 LLM 활용 기반이 형성되고 있음
-- **However**, 이러한 시도들은 과학·규제 도메인이 범용 QA나 웹 검색과 **근본적으로 다른 특성**을 가진다는 현실에 직면한다:
+Our key observation is that regulatory document review, when examined carefully, is a **planning problem**. The reviewer has a goal (a grounded regulatory judgment), maintains state (evidence collected so far and its relationships), selects actions (which document section to explore next), and applies a goal test (whether current evidence is sufficient). This mirrors the Reason-Act loop of ReAct [Yao et al., 2023], but in an information environment rather than the PDDL, robotic, or web settings typical of the LLM planning literature. Where conventional RAG treats the LLM as a passive consumer of retrieved results, we position it as the agent of planning.
 
-  - Osprey [Hellert et al., 2026]는 가속기 제어 시스템에 에이전틱 AI를 배치하면서, 기존 범용 에이전트 프레임워크가 "계획된 행동의 사전 가시성, 프로토콜 인식형 제어 접근, 하드웨어 쓰기 안전장치"를 결여하고 있음을 지적
-  - Lee [2025, arXiv:2507.09931]는 원자로 안전 분석에서 LLM의 블랙박스 특성이 10 CFR 50 Appendix B 품질보증 요건과 양립 불가함을 분석, 기계적 해석 가능성(mechanistic interpretability)을 대안으로 제시
-  - 핵 규제 문서 검토 — FSAR 심사, 설계 적합성 판단 — 은 이러한 도전이 가장 첨예하게 드러나는 영역임. 그 구체적 원인을 이해하려면 규제 문서라는 세계의 현실을 들여다볼 필요가 있다.
+We implement this insight by constructing the document as a **text-based environment** that an LLM agent can interact with through defined actions — browse (list children), read (extract content), and search (keyword retrieval) — rather than feeding tree structures into retrieval prompts as in PageIndex [Zhang & Tang, 2025] or routing queries through hierarchical indices as in BookRAG [Wang et al., 2024]. This environment-centric formulation enables closed-loop online planning: at each hop, the agent observes its current knowledge graph state, selects an action, executes it against the environment, and evaluates plan sufficiency — terminating when evidence is sufficient (mean 3.6 hops, maximum 4; simple queries often resolve in 1–2 hops). Both the agent state (knowledge graph) and the environment (document tree) are represented in text, so the LLM can directly read, reason over, and plan from its own representations. The system additionally includes an optional post-retrieval edge inference component that makes inter-evidence relationships explicit using a domain-specific ontology (SATISFIES, VIOLATES, etc.).
 
-### [P2] 규제 문서라는 세계: 왜 기존 RAG가 실패하는가
+This paper makes the following contributions:
 
-- 핵발전소 설계 인허가 과정에서 심사관은 수만 페이지에 달하는 최종안전분석보고서(FSAR)를 검토
+1. **Document as a text-based environment for agentic exploration.** We construct regulatory documents as scalable, text-native environments with defined action interfaces (browse/read/search), enabling LLM agents to perform closed-loop online planning with persistent state (Dynamic Sub-KG) and dynamic termination. Unlike prior approaches that feed document trees into prompts (PageIndex) or route queries through hierarchical indices (BookRAG, DocAgent), our formulation exposes the document as a formal environment that supports multi-hop state-conditioned replanning. This planning-only system achieves 81.5% accuracy, surpassing four RAG baselines (RAPTOR 75.5%, LightRAG 73.0%, HippoRAG 70.5%, GraphRAG 49.5%).
 
-  - NuScale FSAR: Ch.01(352p, 설계 개요) + Ch.05(160p, 원자로냉각재계통) — 이것이 전체 17개 장 중 단 2개
-  - 각 장 내부는 목차 기반 계층 구조: 장(Chapter) → 절(Section) → 항(Subsection) → 단락으로 구성
-  - 텍스트, 규격 표(설계 파라미터, 재료 물성), 공학 도면(P&ID, 계통도)이 한 문서 내에서 유기적으로 얽힘
-- 심사관의 핵심 업무는 단순 사실 조회가 아닌 **증거 연쇄를 통한 규제 적합성 판단**
+2. **Vision-augmented multimodal processing.** Engineering drawings and tables from source PDFs are interpreted via GPT-4.1 vision at the final answer step only, achieving +18 percentage points over RAPTOR on table-only questions while keeping intermediate exploration text-only for cost efficiency.
 
-  - 예: "비상노심냉각계통(ECCS) 설계가 10 CFR 50.46(b) 수용 기준을 만족하는가?"
-    → Ch.05 §5.4에서 ECCS 설계 사양 확인 → Ch.01 §1.9의 규제 요건 목록과 교차 → 해당 표에서 PCT < 2200°F 확인 → 세 증거를 종합해 만족(SATISFIES) 판단
-  - 이 과정은 복수 문서·복수 모달리티를 횡단하는 멀티홉 추론이며, 실수의 결과는 안전에 직결
-- 이 지식의 상당 부분은 형식화된 소프트웨어가 아닌 **전문가의 실무 경험**에 의존 — 노동 집약적이고 확장 불가
+3. **200-question nuclear regulatory benchmark.** We introduce a benchmark organized along three orthogonal axes (reasoning type, complexity, modality), covering judgment, cross-document, and multimodal combinations absent from existing benchmarks.
 
-  - (cf. Osprey [Hellert et al., 2026]가 가속기 운영에서 동일한 문제를 지적: "knowledge resides in expert practice rather than formalized software")
-- 이러한 도메인에서 기존 RAG 방법론은 **구조적으로** 부적합하다:
-
-  - **구조가 의미를 담는 문서에서 청킹이 치명적**: "Table 5.1-1 참조"라는 텍스트와 실제 표는 물리적으로 다른 페이지에 위치 — 고정 크기 청킹은 이 참조 관계를 단절시킴 [Gao et al., 2023]
-  - **증거 나열과 규제 판단은 다르다**: GraphRAG [Edge et al., 2024]의 커뮤니티 요약이나 LightRAG [Guo et al., 2024]의 엔티티-관계 추출은 관련 텍스트를 수집할 수 있지만, "이 설계가 이 규제 요건을 만족하는가?"라는 SATISFIES/VIOLATES 판단은 생성하지 못함
-  - **정적 사전 인덱스는 규제 환경과 양립 불가**: GraphRAG, LightRAG, HippoRAG [Gutierrez et al., 2024] 모두 대규모 사전 인덱싱을 필요로 하나, FSAR는 NRC 심사 과정에서 수시로 개정 — 매번 재인덱싱은 비현실적
-
-### [P3] 안전-임계 도메인의 고유 요건: 투명성과 감사 가능성
-
-- 규제 도메인의 기술적 난제에 더해, **안전-임계 도메인 고유의 품질보증 요건**이 기존 접근법을 더욱 부적합하게 만든다
-- 10 CFR 50, Appendix B, Criterion III (Design Control)는 안전 관련 분석이 "독립적 검증이 가능하도록 충분한 상세 수준으로 문서화"될 것을 요구 [10 CFR 50 App B]
-  - 이 일반적 품질보증 원칙을 AI 기반 검색 도구에 적용하면, 검색 결과와 안전 결론 사이의 기술적 근거(technical basis)가 추적 가능해야 함
-  - 임베딩 유사도 점수만으로는 이 문서화 요건을 충족하기 어려움 — 유사도 점수는 "왜 이 증거가 이 결론을 뒷받침하는가"에 대한 기술적 정당화를 제공하지 않기 때문
-  - 반면, "Section 5.4.2가 §5.4.1의 일반 기술을 세부화(SPECIFIES)하며, 이 결과가 10 CFR 50.46(b)(1)의 PCT 한계를 만족(SATISFIES)함"이라는 형태의 **인간 가독 근거 경로**는 독립적 검증이 가능한 기술적 정당화에 해당
-  - (참고: NRC는 AI/ML에 특화된 규제를 아직 제정하지 않았으나, 일반 QA 원칙의 적용은 Lee [2025]도 10 CFR 50 Appendix B의 AI 적용 맥락에서 논의)
-- 이러한 투명성 문제를 해결하기 위한 선행 연구가 존재:
-  - Osprey [Hellert et al., 2026]는 가속기 제어 시스템에서 plan-first 오케스트레이터(실행 전 계획 검토), 컨테이너화된 실행 환경, 하드웨어 쓰기 승인 체계로 투명성과 안전성을 확보 — 제어 시스템 도메인에서의 성공적 사례
-  - Lee [2025]는 원자로 안전 분야에서 LoRA 적응 모델의 기계적 해석 가능성(mechanistic interpretability)을 통해 블랙박스 문제에 접근
-  - 그러나 **규제 문서 검색**(수만 페이지 FSAR에서 멀티홉 증거를 찾아 규제 판단을 내리는 과정)의 투명성 문제는 아직 해결되지 않았으며, 임베딩 기반 검색의 불투명성은 이 요건과 근본적으로 충돌 — 검색의 패러다임 자체를 재정의해야 함
-
-### [P4] 요구사항 종합
-
-- P1에서 확인한 과학 도메인 적용 시도의 한계, P2의 규제 문서 구조적 난제, P3의 품질보증 요건을 종합하면, 규제 문서 탐색 에이전트는 다음 요건을 동시에 충족해야 함:
-
-  | 요건                  | 근거 (P1~P3)                                     | 기존 접근법의 실패                                            |
-  | --------------------- | ------------------------------------------------ | ------------------------------------------------------------- |
-  | **멀티홉 추론** | P2: ECCS 적합성 판단은 3개 이상 섹션 횡단 필요   | 단일 hop top-K 반환으로는 증거 연쇄 불가                      |
-  | **구조 보존**   | P2: "Table 5.1-1 참조"와 실제 표의 물리적 분리   | 청킹이 계층 구조·교차 참조 관계를 파괴                       |
-  | **멀티모달**    | P2: 텍스트·규격 표·공학 도면이 유기적으로 얽힘 | 텍스트 추출만으로 시각 정보(P&ID, 계통도) 손실                |
-  | **판단 생성**   | P2: SATISFIES/VIOLATES 판단은 검색이 아닌 추론   | 기존 RAG는 증거를 나열할 뿐 논리 관계 미생성                  |
-  | **추적 가능성** | P3: 10 CFR 50 App B — 분석의 독립적 검증 가능성 | 임베딩 유사도 점수는 기술적 정당화 미제공                     |
-  | **경량 인덱싱** | P2: FSAR는 심사 중 수시 개정 → 즉시 대응 필요   | GraphRAG/LightRAG 등의 대규모 사전 KG/벡터 DB 재구축 비현실적 |
-
-
-  - 이 요건들은 핵 규제에 특화되었으나, 항공(FAA), 의약품(FDA), 건설 규제 등 안전-임계 문서 검토 전반에 공통적으로 적용됨 (cf. [Zhong et al., 2012] — 건설 규제 온톨로지)
-
-  > **참고: "인덱싱 무비용"이 아닌 "경량 인덱싱"으로 표현한 이유**: 본 연구의 벡터리스 접근은 임베딩/청킹/KG 사전 구축이 불필요하나, PageIndex 트리 생성 시 LLM 기반 노드 요약이 포함되므로 인덱싱 비용이 완전히 0은 아님. 다만 GraphRAG(엔티티-관계 추출 + 커뮤니티 탐지)나 HippoRAG(OpenIE + PPR)에 비해 트리 구조 파싱 + 노드 요약만으로 구성되어 비용이 크게 절감됨. 정확한 비교는 Section 5.5에서 제시.
-  >
-
-### [P5] 우리의 접근: 규제 문서 탐색을 계획 문제로 정의
-
-- **핵심 관찰**: P4의 요구사항을 다시 보면, 규제 문서 심사는 본질적으로 **계획 문제(planning problem)**:
-  - **목표(goal)**: 규제 질문에 대한 근거 있는 판단 도출
-  - **상태(state)**: 현재까지 수집된 증거와 그 관계
-  - **행동(action)**: 문서 트리에서 어떤 섹션을 탐색할지 선택
-  - **충분성 판단(goal test)**: 현재 증거로 답변 가능한가?
-  - **검증(verification)**: 수집된 증거가 규제 요건을 만족/위반하는가?
-
-- **인간 전문가의 심사 과정이 곧 계획**:
-  - 목차로 탐색 범위 파악 (환경 인식) → 관련 섹션 드릴다운 (행동 선택) → 교차 참조 추적 (계획 수정) → 증거 충분성 평가 (goal test) → 규제 적합성 판단 (검증)
-  - 이 과정은 ReAct [Yao et al., 2023]의 Reason-Act 인터리빙과 일치하며, 기존 RAG의 수동적 1회성 검색과 근본적으로 다름
-  - 기존 RAG에서 LLM은 검색 결과의 **소비자** — 본 연구에서 LLM은 계획의 **주체**
-
-- **제안 아키텍처: Planning loop**
-
-  | Planning 단계 | 역할 | 구현 |
-  |--------------|------|------|
-  | **State estimation** | 현재 수집된 증거를 구조적으로 평가 | Dynamic Sub-KG (NetworkX DiGraph) |
-  | **Action planning** | 다음에 어떤 문서 섹션을 탐색할지 결정 | LLM이 `browse`/`read`/`search` tool 선택 |
-  | **Plan execution** | 선택된 행동 실행, 새 증거 수집 | BM25 기반 검색 + 노드 읽기 |
-  | **Plan sufficiency** | 현재 증거로 답변 가능한지 판단 | LLM 기반 동적 종료 (avg 2.1–2.6 홉) |
-
-  - 에이전트는 매 홉마다 현재 KG 상태를 기반으로 다음 탐색을 계획하는 반복적 루프로 작동
-  - 동적 종료가 문항 복잡도에 따라 계획 깊이를 자동 조절 (Q001: 1홉 $0.03 vs Q191: 4홉 $0.29)
-
-- **선택적 컴포넌트: Post-retrieval edge inference (Verification)**
-  - 수집된 증거 간 관계를 2단계 엣지 추론(자유형 기술 → SATISFIES/VIOLATES 온톨로지 매핑)으로 명시화
-  - 200Q ablation 결과, 이 컴포넌트는 **정확도에 기여하지 않음** (81.0% vs 81.5%) — 비용만 2.8× 증가
-  - 가치는 추적 가능성(인간 가독 근거 경로)과 Faithfulness 소폭 개선(+0.033)에 한정
-  - **핵심 발견: planning(도구 선택, 동적 종료)이 정확도의 핵심 동인이며, post-retrieval verification은 선택적**
-
-### [P6] 왜 벡터리스인가: Planning Agent의 모달리티 정렬 원칙
-
-- **설계 원칙: 상태와 환경을 에이전트의 네이티브 모달리티에 정렬**
-  - LLM 기반 planning agent의 네이티브 모달리티는 **텍스트**
-  - 에이전트가 효과적으로 계획을 수립하려면, 자신의 상태(State)와 환경(Environment)을 **직접 읽고 추론**할 수 있어야 함
-  - 임베딩/벡터 표현은 LLM에게 불투명 — "유사도 0.87"로는 "다음에 뭘 탐색해야 하는가?"를 추론할 수 없음
-  - 반면 텍스트 기반 표현은 LLM이 직접 해석 가능 — "현재 ECCS 설계 사양은 확보했으나 수용 기준이 미확인" → "규제 요건 테이블을 검색해야겠다"
-
-- **이 원칙이 KG(State)와 Environment 설계에 미치는 영향**:
-
-  | 요소 | 벡터 기반 표현 | 텍스트 기반 (ours) | LLM 계획 수립 가능? |
-  |------|--------------|-------------------|:------------------:|
-  | **KG 엣지** | 코사인 유사도 0.87 | "Section A SATISFIES Regulation B" | ❌ vs ✅ |
-  | **검색 결과** | [chunk_42, score=0.91] | [§5.4 ECCS Design, 키워드 매칭: "ECCS"] | ❌ vs ✅ |
-  | **환경 구조** | 평탄화된 청크 목록 | 계층 트리 (Ch.05 → §5.4 → §5.4.1) | ❌ vs ✅ |
-  | **현재 상태 평가** | 임베딩 벡터 집합 | "3개 노드, SPECIFIES 2개, SATISFIES 1개" | ❌ vs ✅ |
-
-  - **KG 엣지를 자연어로 기술**하는 이유: LLM이 현재 상태를 읽고 "어떤 관계가 부족한가"를 판단하기 위함 (cf. LightRAG [Guo et al., 2024]의 free-form 관계 추출도 동일 발상)
-  - **환경을 계층 트리로 구성**하는 이유: LLM이 목차를 읽고 "어디를 탐색할지" 계획하기 위함 — 벡터 DB에서는 불가능한 `browse`(구조 탐색) 행동이 가능
-
-- **"벡터 검색을 tool로 추가하면 안 되나?"에 대한 답변**:
-  - 본 연구의 핵심 주장은 "BM25가 벡터 검색보다 우월하다"가 아님
-  - 핵심은 **State(KG)와 Environment(트리)를 텍스트 기반으로 구축하여 LLM이 계획을 수립할 수 있게 한 아키텍처** — search tool의 구현(BM25/벡터)은 이 아키텍처와 직교적(orthogonal)
-  - 경험적으로 BM25 기반 현재 구현이 4개 벡터 기반 베이스라인(GraphRAG, LightRAG, HippoRAG, RAPTOR)을 상회 → 현재 선택의 타당성 뒷받침
-  - 벡터 검색 tool 추가 비교는 향후 연구로 남김
-
-- **벡터리스 문서 트리 구현**:
-  - 문서의 원본 계층 구조(목차)를 그대로 보존한 JSON 트리 인덱스 [Zhang & Tang, 2025, PageIndex]
-  - 각 트리 노드 = 문서의 한 섹션 (제목, 전문, LLM 요약, 하위 노드 목록)
-  - 멀티모달 참조 링크: LIST OF FIGURES/TABLES 파싱 → `references` 필드로 도면/표 메타데이터 첨부
-  - 경량 인덱싱: $4.06 / 7.6–19.8분 (기존 대비 5–7× 빠름)
-
-  > **⚠️ 인용 참고**: PageIndex는 학술 논문이 아닌 오픈소스 프레임워크. 벡터리스 RAG 개념에 대한 독립적 학술 분석으로는 Lumer et al. [2025, arXiv:2511.18177] 참조.
-
-### [P7] 본 연구의 기여
-
-- 위 요구사항(P4)을 충족하기 위해, 규제 문서 탐색을 **LLM 기반 계획 문제**로 정의하고, 상태와 환경을 LLM의 네이티브 모달리티(텍스트)에 정렬한 아키텍처를 제안
-- 핵심 기여:
-
-1. **문서 탐색의 계획 문제 정의**: 규제 문서 멀티홉 추론을 정보 수집 계획 문제로 모델링 — 상태 평가, 행동 선택, 충분성 판단, 동적 종료의 planning loop 구현. 이것만으로 4개 RAG 베이스라인 상회 (81.5%)
-2. **모달리티 정렬 원칙에 기반한 벡터리스 설계**: LLM이 상태(KG)와 환경(문서 트리)을 직접 읽고 추론할 수 있도록 텍스트 기반으로 구축 — 임베딩 불투명성 제거, 계획 수립 가능하게 함
-3. **Vision-Augmented 멀티모달 처리**: PDF 원본 도면/표를 GPT-4.1 vision으로 해석 (table_only +18%p vs. RAPTOR)
-4. **200Q 핵 규제 멀티홉 벤치마크**: 3축 직교 분류(reasoning × complexity × modality), 기존 벤치마크에 없는 judgment + cross_document + multimodal 조합
-
-- 분석적 기여:
-5. **Post-retrieval edge inference의 비용 대비 효과 분석**: 200Q ablation에서 엣지 추론이 정확도에 기여하지 않음을 발견 (81.0% vs 81.5%, 비용 2.8× 증가). Planning이 정확도의 핵심 동인이며, 엣지의 가치는 추적 가능성에 한정됨
+4. **Cost-accuracy analysis of post-retrieval edge inference.** A 200-question ablation reveals that edge inference does not improve accuracy (81.0% vs. 81.5%) while increasing cost by 2.8x, establishing planning as the primary accuracy driver and edge inference as a selectable traceability mechanism.
 
 ---
