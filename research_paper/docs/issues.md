@@ -41,8 +41,7 @@
 ### PISS-013: Planning 용어 정밀화 (W3) — 해결 (2026-04-09)
 - Method 3.3에 closed-loop online planning 명시
 
-### PISS-006: 논문 완성도 (W4) — 대부분 해결 (2026-04-10)
+### PISS-006: 논문 완성도 (W4) — 해결 (2026-04-10)
 - 전 섹션 English academic prose 변환 완료
-- Benchmark (Section 4) 논문체 변환 완료
 - Title/Abstract 확정
-- Figure 1-2는 팀원(kimmbk) 진행 중
+- Figure 4개 삽입 (submodule), hop 분포 추가, 비용 정당화 추가

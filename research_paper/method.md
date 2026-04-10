@@ -1,6 +1,6 @@
 ## 3. Method
 
-> **Overall pipeline**: User Query → Planning Loop (State estimation → Action planning → Execution → Verification, max 4 hops) → Vision-Augmented Answer
+![Figure 1: Overall architecture. The vectorless document tree (left) serves as the environment. The planning loop (center) iterates through state estimation, action planning, execution, and sufficiency checking. Post-retrieval edge inference and vision-augmented answer generation (right) are applied at the output stage.](figures/outputs/run_20260408_190632_a034ed/final_output.png)
 
 ### 3.1 Environment: Vector-Free Multimodal Document Tree
 
@@ -9,6 +9,8 @@ While the planning loop described in this section (state estimation, action sele
 The environment is represented as a JSON hierarchical tree organized into chapter → section → paragraph nodes, preserving the native structure of regulatory documents without any chunking or embedding. To support multimodal reasoning, the system parses the LIST OF FIGURES/TABLES and detects in-text references such as "Figure 5.1-1," attaching figure and table metadata to the corresponding nodes via a `references` field. This directly addresses the "figure on different page" problem, wherein the referencing text and the actual diagram reside on different pages of the PDF.
 
 Rather than relying on dense vector retrieval, the system adopts a vector-free design using BM25Okapi [Robertson & Zaragoza, 2009] keyword search over the full document tree. Section titles receive a 3× weight boost, and document-length normalization naturally promotes short, focused leaf nodes to higher rankings. At the scale evaluated in this work, the tree spans Ch.01 with 866 nodes (34 figures, 19 tables) and Ch.05 with 26 nodes (29 figures, 30 tables).
+
+![Figure 2: The FSAR hierarchical document tree environment (left), the three agent tools with their interfaces (right), and the multimodal reference resolution mechanism that links in-text references to actual figures on different pages (bottom).](figures/outputs/run_20260408_190632_f36a5b/final_output.png)
 
 ### 3.2 State (Short-Term Memory): Dynamic Sub-KG and Two-Tier Edge Ontology
 
@@ -32,6 +34,8 @@ Tier 2 consists of semantic edges that capture regulatory reasoning relationship
 
 Empirically, structural edges (REFERENCES, SPECIFIES) dominate in single-hop factual queries by forming the exploration path, while semantic edges (SATISFIES, SUPPORTS) emerge in composite multi-hop judgment queries to support regulatory compliance synthesis. In correct answers relative to incorrect ones, SUPPORTS appears +6.8 percentage points more frequently and SATISFIES +3.2 percentage points more frequently.
 
+![Figure 3: An example Dynamic Sub-Knowledge Graph showing five evidence nodes connected by structural (Tier 1) and semantic (Tier 2) edges. The edge distribution summary (right) shows the prevalence of each edge type across 7,391 edges from 200 questions.](figures/outputs/run_20260408_190632_afca44/final_output.png)
+
 ### 3.3 Action Planning: LLM-Based Tool Selection
 
 Rather than precomputing a full retrieval plan offline, the system performs closed-loop online planning. At each hop, the agent observes the current KG state $s_t$ and decides the next action $a_{t+1}$, with environment feedback (retrieved results) immediately incorporated into the subsequent plan. This constitutes a state-based iterative decision-making structure, distinct from the plan-then-execute separation of APEX-Searcher [Chen et al., 2026] and the token-level reactive retrieval of Self-RAG [Asai et al., 2024]. Unlike passive embedding-similarity retrieval in conventional RAG, the LLM actively evaluates the current state and plans the next action.
@@ -46,7 +50,7 @@ The agent has access to three tools that mirror familiar filesystem operations:
 
 A browse-first pattern is enforced at Hop 1, where the document structure (table of contents) is automatically injected so that the agent obtains a global map before searching. This intervention improved single-evidence Context Recall from 0.45 to 0.89. To address vocabulary mismatch, Pseudo-Relevance Feedback (PRF, RM3) automatically expands queries using the top-3 retrieved results at zero additional LLM cost. The agent also maintains a search history to prevent duplicate keyword queries across hops.
 
-Dynamic termination is implemented as a plan sufficiency check beginning at Hop 2: before each hop, the LLM judges whether the current KG already contains sufficient evidence to answer the query. If so, the agent terminates early. This functions as a goal test within the planning loop, automatically calibrating exploration depth to query complexity. Simple factual queries (e.g., Q001) complete in 1 hop (17 s, $0.03), while complex judgment queries (e.g., Q191) require 4 hops (140 s, $0.29). The mean hop count across 200 questions is 3.6 (maximum 4); simple factual queries often terminate in 1–2 hops, demonstrating that unnecessary exploration is pruned automatically.
+Dynamic termination is implemented as a plan sufficiency check beginning at Hop 2: before each hop, the LLM judges whether the current KG already contains sufficient evidence to answer the query. If so, the agent terminates early. This functions as a goal test within the planning loop, automatically calibrating exploration depth to query complexity. Simple factual queries (e.g., Q001) complete in 1 hop (17 s, $0.03), while complex judgment queries (e.g., Q191) require 4 hops (140 s, $0.29). Across 200 questions, 33% of queries terminate early at 1–3 hops (mean 3.4, maximum 4). The remaining 67% use the full 4-hop budget, reflecting the multi-hop complexity of regulatory reasoning. Simple factual queries (e.g., Q001) complete in 1 hop, while complex cross-document judgment queries consistently require the full budget.
 
 ### 3.4 Post-Retrieval Edge Inference (Optional Component)
 

@@ -7,9 +7,25 @@
 
 ## 남은 작업
 
-- [ ] Figure 1: Overall pipeline (planning loop) — 팀원(kimmbk) 진행 중
-- [ ] Figure 2: 최소 1개 추가 (tree/KG/benchmark 중 택1) — 팀원 진행 중
-- [ ] (선택) 리뷰어 시뮬레이션 v4 재평가
+- [ ] (선택) 리뷰어 시뮬레이션 v5 재평가
+- [ ] (선택) Cross-domain pilot
+
+## Completed (continued)
+
+### Phase 6: v4 리뷰어 피드백 반영 (2026-04-10)
+- [x] Figure 4개 삽입 (submodule: kimmbk/agentic_tree_search_figure)
+  - Figure 1: Overall pipeline → Method §3
+  - Figure 2: Document tree + tools → Method §3.1
+  - Figure 3: Dynamic Sub-KG + edges → Method §3.2
+  - Figure 4: Benchmark 3-axis → §4.4
+- [x] W2: PageIndex 행동 차이 명시 (§5.2, KG state 기반 계획 vs 즉석 판단)
+- [x] W4: Judgment polarity bias caveat (§5.3)
+- [x] Hop count 실측 데이터로 통일 (mean 3.4, 분포 테이블 추가)
+- [x] W1: 범용성 표현 완화 ("we hypothesize")
+- [x] W3: 비용 정당화 (§6.5, human reviewer 대비 논거)
+- [x] W5: Hop 분포 보고 (1hop 6%, 2hop 11%, 3hop 16%, 4hop 67%)
+- [x] PageIndex "—" 설명 추가
+- [x] 리뷰어 시뮬레이션 v4 기록
 
 ---
 

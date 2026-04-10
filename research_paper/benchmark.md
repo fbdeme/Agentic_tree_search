@@ -57,4 +57,6 @@ The LLM-as-Judge component employs three independent evaluators with majority vo
 
 The dual approach is empirically motivated: the RAGAS-Judge agreement rate in our experiments is 66.2%, with the 34% disagreement providing complementary information. RAGAS excels at measuring grounding fidelity but underpenalizes correct answers derived from knowledge beyond the retrieved context; the Judge captures practical correctness but may reject answers with valid content expressed differently. Full complementarity analysis is presented in Section 6.4.
 
+![Figure 4: Benchmark design overview. (A) Three-axis orthogonal taxonomy. (B) Reasoning x complexity distribution with judgment x cross_document as the largest cell. (C) Modality distribution and evidence piece counts. (D) Dual evaluation framework with RAGAS and LLM-as-Judge majority vote, showing 66.2% agreement rate.](figures/outputs/run_20260408_190632_ec3d1b/final_output.png)
+
 ---

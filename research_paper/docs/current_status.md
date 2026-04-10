@@ -34,9 +34,9 @@
 | W1. Planning 기여 분리 | Major | **해결** — PageIndex baseline(43.5% vs 81.5%) + planning 분리 테이블 |
 | W2. Agentic retrieval 누락 | Major | **해결** — 5편 + document navigation 3편 추가 |
 | W3. Online planning 명시 | Minor | **해결** — closed-loop online planning 명시 |
-| W4. 논문 완성도 | Minor | **대부분 해결** — 전 섹션 논문체, Figure는 팀원 진행 중 |
+| W4. 논문 완성도 | Minor | **해결** — 전 섹션 논문체 + Figure 4개 삽입 (submodule) |
 
 ## 다음 작업
 
-1. **Figure 제작**: 팀원(kimmbk) 담당, 별도 repo에서 진행 중
-2. (선택) 리뷰어 시뮬레이션 v4 — 현재 논문 상태로 재평가
+1. (선택) 리뷰어 시뮬레이션 v5 — v4 수정 반영 후 재평가
+2. (선택) Cross-domain pilot (새 실험)

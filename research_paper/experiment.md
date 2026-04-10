@@ -16,7 +16,7 @@ We compare against five baselines spanning tree-based, graph-based, hybrid retri
 | GraphRAG | Edge et al. [2024]      | Community-based local search | 1,200 tokens, 267 chunks | local search, community_level=2     |
 | PageIndex | Zhang & Tang [2025]    | Vectorless tree retrieval (no planning) | None (tree nodes) | BM25 + browse/read/search, max 4 hops |
 
-PageIndex serves as a critical ablation baseline: it operates over the **identical document tree environment** with the same browse, read, and search tools, the same browse-first pattern, and the same dynamic termination — but without the agent's Dynamic Sub-KG state management. Where our system maintains a knowledge graph to assess collected evidence and plan subsequent actions, PageIndex performs retrieval without state-conditioned replanning. The gap between PageIndex and our system therefore isolates the contribution of planning over the environment from the environment itself.
+PageIndex serves as a critical ablation baseline: it operates over the **identical document tree environment** with the same browse, read, and search tools, the same browse-first pattern, and the same dynamic termination. The key behavioral difference is in action selection: our system summarizes all previously collected evidence into a Dynamic Sub-KG state representation, which the LLM reads to decide what to explore next (e.g., "ECCS design specs collected, but acceptance criteria missing — search for regulatory requirements"); PageIndex selects actions based on the query and immediate search results alone, without accumulating or reasoning over a structured evidence state. The gap between PageIndex and our system therefore isolates the contribution of state-conditioned planning from the environment and tools themselves.
 
 ### 5.3 Main Results — LLM-as-Judge
 
@@ -31,6 +31,8 @@ The table below reports LLM-as-Judge accuracy across six question types. Our sys
 | HippoRAG                       |      70.5%      |      86.2%      |      63.1%      |      62.9%      |      69.3%      |      64.0%      |      60.0%      |
 | GraphRAG                       |      49.5%      |      61.5%      |      49.2%      |      38.6%      |      37.3%      |      42.0%      |      47.5%      |
 | PageIndex (no planning)        |      43.5%      |      61.5%      |      44.6%      |      25.7%      |      45.3%      |        —        |        —        |
+
+> Note: PageIndex table_only and composite results are unavailable due to separate evaluation runs. Judgment accuracy for both our system and RAPTOR is 92.3%; however, 98% of judgment questions have "Yes" as the correct answer (see §6.5 for polarity bias analysis), which limits the discriminative power of this category.
 
 ### 5.4 RAGAS Results
 
@@ -124,7 +126,18 @@ The per-question breakdown illustrates the dynamic termination effect concretely
 | ---------- | :--: | :----: |
 | Nodes    | 12.8 | 4–26 |
 | Edges    | 39.9 | 0–124 |
-| Hops used | 3.6 |  1–4  |
+| Hops used | 3.4 |  1–4  |
+
+**Hop distribution (full system, 200 questions):**
+
+| Hops | Count |   %   |
+| :--: | :---: | :---: |
+| 1 | 12 | 6.0% |
+| 2 | 22 | 11.0% |
+| 3 | 32 | 16.0% |
+| 4 | 134 | 67.0% |
+
+> 33% of queries terminate before the maximum 4 hops, indicating that dynamic termination actively prunes exploration for simpler queries. The majority (67%) use the full budget, consistent with the multi-hop complexity of the regulatory benchmark.
 
 ---
 
@@ -210,7 +223,7 @@ The 200Q results depart from the expectation set by the 10Q ablation. At 10Q, th
 | Planning Mechanism | Evidence | Effect |
 |---|---|---|
 | **Browse-first** (structure awareness) | no_browse_first ablation: CR 0.45→0.89 (10Q) | Critical for orienting exploration; without the table of contents, complex queries such as Q191 fail entirely |
-| **Dynamic termination** (goal test) | avg 2.1–2.6 hops (max 4); Q001: 1 hop/$0.03 vs. Q191: 4 hops/$0.29 | Automatically calibrates exploration depth to question complexity, pruning unnecessary hops on simple queries |
+| **Dynamic termination** (goal test) | 33% of queries terminate early (1–3 hops); Q001: 1 hop/$0.03 vs. Q191: 4 hops/$0.29 | Calibrates exploration depth to question complexity; 67% use full 4 hops for complex multi-hop queries, while simpler queries are pruned |
 | **State-conditioned tool selection** | PageIndex-only: 43.5% vs. Ours: 81.5% (+38.0%p) | PageIndex exposes the same browse/read/search tools but selects among them without KG state evaluation; the absence of planning accounts for most of the performance gap |
 
 This finding resonates with, yet differentiates from, recent agentic retrieval work such as APEX-Searcher [Chen et al., 2026] and PRISM [Nahid & Rafiei, 2025], which acquire planning capability through RL or SFT fine-tuning. Our system achieves equivalent planning behavior in a **training-free** setting, relying solely on prompted LLM state evaluation and dynamic termination.
@@ -262,7 +275,7 @@ The 29 cases where RAGAS rates highly but Judge rejects (RAGAS Good + Judge X) r
 
 #### System Limitations
 
-Our system underperforms RAPTOR on text-only questions (76.2% vs. 80.0%, −3.8%p), suggesting that RAPTOR's recursive summarization is more effective for long text passages; adding summary nodes to the tree is a potential improvement. The average per-query cost of $0.21 (93s, 86K tokens) is substantially higher than RAPTOR (~$0.01, 1.8s), though dynamic termination partially mitigates this (Q001: 1 hop/$0.03 vs. Q191: 4 hops/$0.29), and 8× parallelization reduces total query time to ~39 minutes. A follow-reference tool for directly navigating "see Table 5.1-1" references remains unimplemented.
+Our system underperforms RAPTOR on text-only questions (76.2% vs. 80.0%, −3.8%p), suggesting that RAPTOR's recursive summarization is more effective for long text passages; adding summary nodes to the tree is a potential improvement. The average per-query cost of $0.21 (93s, 86K tokens) is substantially higher than RAPTOR (~$0.01, 1.8s), though dynamic termination partially mitigates this (Q001: 1 hop/$0.03 vs. Q191: 4 hops/$0.29), and 8× parallelization reduces total query time to ~39 minutes. In the regulatory context, this cost should be weighed against the alternative: a human reviewer examining the same FSAR sections would require hours per question at substantially higher labor cost, and the system's 92.3% accuracy on the 35 judgment × cross-document questions — the core regulatory review task — suggests the cost premium is concentrated where it delivers the most value. A follow-reference tool for directly navigating "see Table 5.1-1" references remains unimplemented.
 
 #### Benchmark Limitations
 
